@@ -7,6 +7,8 @@ vowels_ = 'AEIOU'
 consonants = 'jklmnpstw'
 invalid_syllables = 'ji','ti','wo','wu'
 
+with file('rules.txt','rb') as f:
+    notes = f.read()
 
 def printTextsAccents():
     '''Print toki pona text with accents in volgals of first syllabes'''
@@ -22,12 +24,23 @@ def printTextsAccents():
     print(text_)
     return text_
 
+
+def representAccents(text, 'jklmnpstw'):
+    '''exchange consonants such as k -> g, p -> b, t->d and s->z'''
+    pass
+
+
 def consonantSyllables(consonant):
-    return [consonant+vowel for vowel in vowels if
+    if consonant =! 'j':
+        vowels_ = vowels + 'j'
+    syllables = [consonant+vowel for vowel in vowels_ if
             consonant+vowel not in invalid_syllables]
+    syllables += [syllable + 'n' for syllable in syllables]
+    return syllables
 
 
 def allConsonantSyllables():
+    # need to include the y. E.g. Enya, ijo.
     all_syllables = []
     for consonant in consonants:
         all_syllables += [consonantSyllables(consonant)]
@@ -47,6 +60,8 @@ def allTokiPonaPossibleWords(n=3):
         words_ = [word for word in words if len(word)/2 == n_]
         for word in words_:
             for syllable in allConsonantSyllables():
+                if word[-1] == syllable [-1] == 'j':
+                    continue
                 word_ = word+syllable
                 words += [word_]
         # c('finished words with {} syllables'.format(n_+1))
