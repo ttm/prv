@@ -1,0 +1,185 @@
+# each rule is a paragraph.
+# a new line denotes a new field for the rule
+# fields: name, explanation in English, comment, synatic representation, see also
+
+syllable-accent
+words have accents in first syllable.
+Therefore, assumed only up to three syllable words.
+
+words have multiple meaning and syntatic roles
+
+.3:
+there is no to be
+see li
+
+no plural and singula
+'as do japanese'
+
+there are no verb tenses
+
+subject clause is first.
+
+verb is second.
+
+li between subject and verb when subject not I (mi) or you (sina)
+IMHO li is a "to be". See rule .3:
+
+direct object separated by e and holds what action is done to
+action done by subject specified by verb name(s)
+
+the word after the noun/verb qualifies it
+adjectives, adverbs, possessives, coumpund nouns (and verbs?)
+
+basic structure: <subject> li <verb> e <object>
+li is ommited when subject is simple me (mi) or you (sina).
+
+lon, tawa and kepeken takes a complement and can be a direct verb:
+    http://tokipona.net/tp/janpije/okamasona6.php
+When action verb there is a direct object and therefore the e
+
+tawa can also be used as an adjective.
+
+sentences are split with 'e ni'
+
+kama can be used as an action verb, followed by tawa and with other verbs to
+give a sense of progression.
+
+kama can be used as an action verb, followed by tawa and with other verbs to
+give a sense of progression.
+
+kama can be used as an action verb, followed by tawa and with other verbs to
+give a sense of progression.
+
+anpa, insa, monsi e sewi are nouns.
+should be used with preposition (e.g. lon)
+
+ala negates by coming after the verb or noun.
+use plain 'ala' instead of 'ijo ala'
+
+ale means everything
+has alias ali
+
+gender is given through meli (female) and mije (male) qualifiers
+
+countries, religions, names are 'unofficial words' 
+out of the 124 words in dictionary. there is some convention to unnoficial words:
+    http://tokipona.net/tp/janpije/learn.php
+
+unofficial words are capitalized and adapted to toki pona phonetics
+
+unofficial words are used as adjectives.
+ma/ma tomo/jan/meli/mije Uwords = country/city/person/man/woman Uword
+
+o follows the name and is followed by a coma when calling someone.
+E.g. jan Tanel o, sina wile ala wile kama e sona?
+
+a follows o for emotional emphasis.
+E.g. jan Tasi o a!
+
+starts a command.
+E.g. o awen. jan Wiso o tawa tomo sina.
+
+interjections of one and two words are possible.
+E.g. mu. pona. ike. pakala. mi tawa. kama pona.
+
+any question can be done subsituting the missing pos by seme.
+E.g. jan seme li ni? Use ala for questions with yes/no answers.
+
+sin means another or more.
+might not fit here as a rule.
+
+pi indicates that the term ahead is qualified by the other terms before it
+qualifies the first term.
+should only be present if required by the meaning and can be used to denote
+possession of items (len pi jan Taj
+
+anu is or, en is and, taso is but or only.
+separate sentences for taso. Not clear if anu and an can be used for connecting
+verbs with same subject (and object), e.g. mi wile e ken lon e mi.
+
+pilin is used for sentations, feelings and thoughs.
+
+colors are expressed by jelo (yellow), laso (blue) and loje (red) as RGB.
+use pi when using anu or en with kule so both colors qualify the referece. E.g.
+len pi jelo anu laso
+
+living things imply no new sintatic structures, only semantic (soweli, kasi,
+kala, waso, akesi, moli)
+
+body parts have conventions of sike meli being women breasts, not buttchicks,
+while penis is palisa mije, not nena mije.
+For me the most intuitive would me to have lupa meli (vagina), nena mije (penis), nena
+meli (breasts), nena monsi (butt), lupa monsi (anus).
+
+counting is achieved by senquencing wan(1) tu(2) luka(5) mute(20) e ali(100).
+
+ordinals are achieved by using pi numpa <count>.
+
+
+ken la starts sentences meaning maybe.
+
+tenpo ... la starts sentence with temporal reference of duration or instant.
+
+
+consequential relations are expressed through a compound clause with la.
+E.g. mi kama sona e toki pona la mi toki e toki pona.
+
+
+comparisons are expressed through duplicated sentences with corresponding
+mute/lili.
+E.g.  suno li suli mute. mun li suli lili.
+
+jan ale li tawa ike nasin pi tenpo mute 
+jan li tawa ike ala, la jan ni li pona suli mute,
+linja la ona li jo e wawa pi sijelo ale sina nasin.
+
+sewi li pana ala e kon wawa ala,
+taso ona pana e kon pi wawa an olin an sona pali awen.
+
+mi wile kama sona e Jesu,
+e wawa tan moli weka ona,
+e pali lon pilin ike ona,
+linja la li sama e ona lon
+moli ona,
+tan la li kama jo e moli weka 
+
+nimi li mute la ike li lon,
+taso jan pi nasin nena uta li sona.
+
+nimi uta mi li pilin pona tawa sina,
+o kiwen mi an jan li kama jo mi tempo pi mute 
+
+=========
+
+sitelen pona tawa kama sona e sona nanpa ken:
+http://www.memrise.com/course/50045/probability-theory-and-statistics-introduction/
+
+==========
+
+
+
+
+
+
+
+
+- <(pro)noun> = <noun_> = <noun>|<pronoun>
+
+- structures:
+    <starting_clause> = (<(pro)noun> li)|(mi|sina) + <noun/verb/adjective>
+    <be_clause> =  (li + (wile) + <noun/verb/adjective>)*N1
+    <direct_o_clause> = (<e <noun/verb/abjective>>)*N2
+    sentence = <starting_clause> + <be_clause> + <direct_o_clause>
+
+- coumpund words have standard meanings (e.g. jan sewi = god):
+    http://tokipona.net/tp/janpije/okamasona5.php
+
+- possessives are like adjectives (just use the <(pro)noun>
+
+- adverbs follow the verbs
+
+- might be a good idea to look at the frequency of words in english
+and use it for translation precedence from toki pona to english.
+
+
+'''
