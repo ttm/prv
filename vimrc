@@ -1,16 +1,27 @@
-" basic settingS -------------------------------------------------------- {{{
+" basic settings -------------------------------------------------------- {{{
+set virtualedit=all
+colorscheme morning
+runtime! ftplugin/man.vim
 set nocompatible
+if $COLORTERM == 'gnome-terminal'
+    set t_Co=256
+endif
+set mouse=a
+call pathogen#infect()
 filetype plugin indent on
-syntax on
+syntax enable
+" syntax on
 set encoding=utf-8
 set scrolloff=3
 set autoindent
 set number
+set showcmd
 set wrap
 set spell spelllang=en_us
 set nospell
 set wildmenu
 set relativenumber
+" same as :set backspace=indent,eol,start
 set backspace=2
 set history=1000         " remember more commands and search history
 set undolevels=1000      " use many muchos levels of undo
@@ -21,7 +32,8 @@ set visualbell           " don't beep
 set ruler
 set list
 set listchars=tab:>-,trail:.,extends:#,nbsp:*,eol:$
-set clipboard=unnamedplus
+" useful if * and + registers don't work properly
+" set clipboard=unnamedplus
 " set clipboard=unnamed
 if $TMUX == ''
     set clipboard+=unnamedplus
@@ -29,6 +41,25 @@ endif
 set hlsearch incsearch
 let maplocalleader = "\\\\"
 let mapleader = "\\"
+augroup vimrcEx
+  au!
+  " restore-cursor, usr-05.txt
+  autocmd BufReadPost *
+    \ if line("'\"") >= 1 && line("'\"") <= line("$") |
+    \   exe "normal! g`\"" |
+    \ endif
+augroup END
+
+nnoremap <leader>z :call ExtremeFolding()<CR>
+function! ExtremeFolding()
+  if &foldopen == 'all'
+    set foldopen&
+    set foldclose&
+  else
+    set foldopen=all
+    set foldclose=all
+  endif
+endfunction
 " statusline --- {{{
 set laststatus=2                             " always show statusbar  
 set statusline=%-5.3n\                     " buffer number  
@@ -45,7 +76,14 @@ set statusline+=%-14(%l/%L,%P,%c%V%)               " line, character
 " Vimscript file settings ---------------------- {{{
 augroup filetype_vim
   autocmd!
-  autocmd FileType vim setlocal foldmethod=marker tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+  autocmd FileType vim setlocal foldmethod=marker softtabstop=2 shiftwidth=2 expandtab
+augroup END
+" }}}
+
+" Help file settings ---------------------- {{{
+augroup filetype_help
+  autocmd!
+  autocmd FileType help setlocal iskeyword+=-,.,(,)
 augroup END
 " }}}
 
@@ -53,18 +91,34 @@ augroup END
 augroup pythonaus
 " let python_highlight_all=1
   autocmd!
-  autocmd BufNewFile,BufRead *.py set tabstop=4 softtabstop=4 shiftwidth=4 textwidth=79 expandtab autoindent fileformat=unix
+  " TTM removed tabstop=4
+  autocmd BufNewFile,BufRead *.py set softtabstop=4 shiftwidth=4 textwidth=72 expandtab autoindent fileformat=unix
   autocmd BufNewFile,BufRead *.py nnoremap <buffer> cd /\<def\><CR>
   autocmd BufNewFile,BufRead *.py nnoremap <buffer> cD ?\<def\><CR> 
   autocmd BufNewFile,BufRead *.py nnoremap <buffer> cc /\<class\><CR>
   autocmd BufNewFile,BufRead *.py nnoremap <buffer> cC ?\<class\><CR>
-  autocmd FileType python :iabbrev <buffer> def def ():<CR>=<CR>return
+  autocmd FileType python :iabbrev <buffer> def def ():<CR>=<CR>return<ESC>?()<CR>hxi
   autocmd FileType python :iabbrev <buffer> class class:<CR>__id = 0<CR>def __init__(self):<CR>__id_ = 0<CR><BS><CR>def ():<CR>return
+  nnoremap <leader>R :call PythonShowRun()<CR>
+  " validade this (from usr_05.txt):
+  vnoremap _g y:exe "grep /" . escape(@", '\\/') . "/ *.py"<CR>
 augroup END
+
+function! PythonShowRun()
+  let pout = system("python3 " . bufname("%") . " 2>&1")
+
+  " Open a new split and set it up.
+  vsplit __Python_output__
+  normal! ggdG
+  setlocal buftype=nofile
+
+  " Insert the bytecode.
+  call append(0, split(pout, '\v\n'))
+endfunction
 " }}}
 " }}}
 
-" hacks --- {{{
+" hacks ------------------------------------ {{{
   " WWW navigation ------------------------------------ {{{
     function! ViewHtmlText(url)
       if !empty(a:url)
@@ -147,8 +201,10 @@ augroup END
 
 " mappings and abbrevs --- {{{
 " leader mappings ---------------------- {{{
+noremap <leader>x :execute getline('.')<CR>
+noremap <leader>X :execute getline('.')
+nnoremap <leader>r :redraw!<CR>
 nnoremap <leader>d :args ~/repos/percolation/**/*.py<CR>
-nnoremap <leader>R :!python3 %<CR>
 " nnoremap <leader>r :set shiftround!<CR>
 nnoremap <leader>J :jumps<CR>
 nnoremap <leader>j :s/=/ = /g<CR>
@@ -241,3 +297,4 @@ onoremap in{ :<c-u>normal! f{vi{<cr>
 onoremap iN{ :<c-u>normal! F}vi{<cr>
 " }}}
 " }}}
+set viminfo=%,!,'1000,:1000,n~/.vim/viminfo
