@@ -26,7 +26,7 @@ def printTextsAccents():
 
 
 def representAccents(text, 'jklmnpstw'):
-    '''exchange consonants such as k -> g, p -> b, t->d and s->z'''
+    '''exchange consonants such as k->g, p->b, t->d and s->z'''
     pass
 
 
@@ -76,7 +76,7 @@ def allTokiPonaPossibleWords(n=3):
     return words
 
 def allTokiPonaExistentWords():
-    return 
+    return
 
 if __name__ == '__main__':
     c('vowels:', vowels)

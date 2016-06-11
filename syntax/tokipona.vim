@@ -1,39 +1,48 @@
-if exists("b:current_syntax")
+" Vim syntax file
+" Language:	toki pona
+" Maintainer:	Renato Fabbri <fabbri@usp.br>
+" Last Change:	2016 Apr 30
+" Remark:	toki pona is a conlang, not a programming language
+
+ if exists("b:current_syntax")
     finish
 endif
 
-syntax keyword structureKeyword li e pi
-highlight link structureKeyword Keyword
+syntax clear
+syntax case ignore
+syntax keyword tokiponaStructure li e pi la
+highlight link tokiponaStructure Keyword
 
-syntax keyword prepositionWords lon tan tawa kepeken
-highlight link prepositionWords Function
+syntax keyword tokiponaPrepositions lon tan tawa kepeken
+highlight link tokiponaPrepositions Function
 
-syntax match textComment "\v#.*$"
-highlight link textComment Comment
+syntax match tokiponaComment "\v#.*$"
+highlight link tokiponaComment Comment
 
-syntax region externalString start=/\v"/ skip=/\v\\./ end=/\v"/
-syntax region externalString start=/\v'/ skip=/\v\\./ end=/\v'/
-highlight link externalString String
+syntax region tokiponaExternal start=/\v"/ skip=/\v\\./ end=/\v"/
+syntax region tokiponaExternal start=/\v'/ skip=/\v\\./ end=/\v'/
+highlight link tokiponaExternal String
 
-syntax match punctuationString "\v\="
-syntax match punctuationString "\v\:"
-syntax match punctuationString "\v\;"
-syntax match punctuationString "\v\,"
-syntax match punctuationString "\v\."
-syntax match punctuationString "\v\*"
-syntax match punctuationString "\v/"
-syntax match punctuationString "\v\+"
-syntax match punctuationString "\v-"
-syntax match punctuationString "\v\?"
-syntax match punctuationString "\v\!"
-syntax match punctuationString "\v\*\="
-syntax match punctuationString "\v/\="
-syntax match punctuationString "\v\+\="
-syntax match punctuationString "\v-\="
+syntax match tokiponaPunctuation "\v\="
+syntax match tokiponaPunctuation "\v\:"
+syntax match tokiponaPunctuation "\v\;"
+syntax match tokiponaPunctuation "\v\,"
+syntax match tokiponaPunctuation "\v\."
+syntax match tokiponaPunctuation "\v\*"
+syntax match tokiponaPunctuation "\v/"
+syntax match tokiponaPunctuation "\v\+"
+syntax match tokiponaPunctuation "\v-"
+syntax match tokiponaPunctuation "\v\?"
+syntax match tokiponaPunctuation "\v\!"
+syntax match tokiponaPunctuation "\v\*\="
+syntax match tokiponaPunctuation "\v/\="
+syntax match tokiponaPunctuation "\v\+\="
+syntax match tokiponaPunctuation "\v-\="
 
-highlight link punctuationString Operator
+highlight link tokiponaPunctuation Operator
 
-syntax match numericDigits "\v\d"
-highlight link numericDigits Number
+syntax match tokiponaNumber "\v\d"
+syntax keyword tokiponaNumber wan tu luke
+highlight link tokiponaNumber Number
 
 let b:current_syntax = "tokipona"
