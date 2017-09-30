@@ -1,4 +1,8 @@
 " basic settings -------------------------------------------------------- {{{
+set tw=0
+set timeoutlen=200
+let g:netrw_altv=1
+let g:netrw_preview=1
 set virtualedit=all
 colorscheme morning
 runtime! ftplugin/man.vim
@@ -30,7 +34,6 @@ set visualbell           " don't beep
 " set nobackup
 " set noswapfile
 set ruler
-set list
 set listchars=tab:>-,trail:.,extends:#,nbsp:*,eol:$
 " useful if * and + registers don't work properly
 " set clipboard=unnamedplus
@@ -92,13 +95,13 @@ augroup pythonaus
 " let python_highlight_all=1
   autocmd!
   " TTM removed tabstop=4
-  autocmd BufNewFile,BufRead *.py set softtabstop=4 shiftwidth=4 textwidth=72 expandtab autoindent fileformat=unix
+  autocmd BufNewFile,BufRead *.py set softtabstop=4 shiftwidth=4 textwidth=0 expandtab autoindent fileformat=unix
   autocmd BufNewFile,BufRead *.py nnoremap <buffer> cd /\<def\><CR>
   autocmd BufNewFile,BufRead *.py nnoremap <buffer> cD ?\<def\><CR> 
   autocmd BufNewFile,BufRead *.py nnoremap <buffer> cc /\<class\><CR>
   autocmd BufNewFile,BufRead *.py nnoremap <buffer> cC ?\<class\><CR>
-  autocmd FileType python :iabbrev <buffer> def def ():<CR>=<CR>return<ESC>?()<CR>hxi
-  autocmd FileType python :iabbrev <buffer> class class:<CR>__id = 0<CR>def __init__(self):<CR>__id_ = 0<CR><BS><CR>def ():<CR>return
+"  autocmd FileType python :iabbrev <buffer> def def ():<CR>=<CR>return<ESC>?()<CR>hxi
+"  autocmd FileType python :iabbrev <buffer> class class:<CR>__id = 0<CR>def __init__(self):<CR>__id_ = 0<CR><BS><CR>def ():<CR>return
   nnoremap <leader>R :call PythonShowRun()<CR>
   " validade this (from usr_05.txt):
   vnoremap _g y:exe "grep /" . escape(@", '\\/') . "/ *.py"<CR>
@@ -229,12 +232,15 @@ nnoremap / /\v
 nnoremap <leader>q :q<CR>
 vnoremap <leader>" <ESC>`>a"<ESC>`<i"<ESC>
 vnoremap <leader>' <ESC>`>a'<ESC>`<i'<ESC>
-nnoremap <localleader>' :s/"/'/g<CR>
 inoremap <C-B> <ESC>viW~i
 " }}}
 
 " localleader mappings ---------------------- {{{
-nnoremap <localleader>p ibanana<ESC>
+hi CursorLine   cterm=NONE ctermbg=235
+hi CursorColumn cterm=NONE ctermbg=235
+nnoremap <leader>c :set cursorline! cursorcolumn!<CR>
+
+nnoremap <localleader>' :s/"/'/g<CR>
 nnoremap <localleader>t :args /home/r/repos/tokipona/**/*.py<CR>
 nnoremap <localleader>S :vs $MYVIMRC<CR>
 nnoremap <localleader>b :execute 'rightbelow vs ' . bufname('#')<CR>
@@ -270,9 +276,9 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 nnoremap <space> za
 inoremap jj <ESC>
-inoremap kk <CR><UP>
-inoremap kj <ESC>kyypi
-inoremap jk <ESC>jyyPi
+" inoremap kk <CR><UP>
+" inoremap kj <ESC>kyypi
+" inoremap jk <ESC>jyyPi
 " inoremap  fd <ESC>
 " inoremap  df <ESC>
 " inoremakjp kj
