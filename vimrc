@@ -1,15 +1,18 @@
 " basic settings -------------------------------------------------------- {{{
+" reworked for usage with Vim 8 and tmux
+set nocompatible
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+set termguicolors
+set viminfo=%,!,'1000,:1000,n~/.vim/viminfo
 set tw=0
-set timeoutlen=200
+autocmd InsertEnter * set timeoutlen=200
+autocmd InsertLeave * set timeoutlen=1000
 let g:netrw_altv=1
 let g:netrw_preview=1
 set virtualedit=all
-colorscheme morning
 runtime! ftplugin/man.vim
 set nocompatible
-if $COLORTERM == 'gnome-terminal'
-    set t_Co=256
-endif
 set mouse=a
 call pathogen#infect()
 filetype plugin indent on
@@ -38,10 +41,9 @@ set listchars=tab:>-,trail:.,extends:#,nbsp:*,eol:$
 " useful if * and + registers don't work properly
 " set clipboard=unnamedplus
 " set clipboard=unnamed
-if $TMUX == ''
-    set clipboard+=unnamedplus
-endif
 set hlsearch incsearch
+set bg=dark
+colorscheme gruvbox
 let maplocalleader = "\\\\"
 let mapleader = "\\"
 augroup vimrcEx
@@ -64,7 +66,7 @@ function! ExtremeFolding()
   endif
 endfunction
 " statusline --- {{{
-set laststatus=2                             " always show statusbar  
+set laststatus=0                             " always show statusbar  
 set statusline=%-5.3n\                     " buffer number  
 set statusline+=%f\                          " filename   
 set statusline+=%h%m%r%w                     " status flags  
@@ -146,17 +148,19 @@ endfunction
     "  because of &verbose
     function! ToggleVerbose()
         if !&verbose
-            set verbosefile=~/.log/vim/verbose.log
+            set verbosefile=~/.vim/verbose.log
             set verbose=15
-        else
-            set verbose=0
-            set verbosefile=
+            :vs ~/.vim/verbose.log
+            :setlocal autoread
+            else
+                set verbose=0
+                set verbosefile=
         endif
     endfunction
-    nnoremap <localleader>l :call ToggleVerbose()<CR>
-    set verbosefile=~/.log/vim/verbose.log
-    set verbose=15
-    nnoremap <localleader>L :e~/.log/vim/verbose.log<CR>
+    " nnoremap <localleader>l :call ToggleVerbose()<CR>
+    set verbosefile=~/.vim/verbose.log
+    set verbose=0
+    nnoremap <localleader>L :call ToggleVerbose()<CR>
 " }}}
 
   " persistent undo, make /.vim/undo dir ----- {{{
@@ -167,7 +171,7 @@ endfunction
   " }}}
 
   " quickfix toogle ----- {{{
-    nnoremap <leader>i :call <SID>QuickfixToggle()<cr>
+    " nnoremap <leader>i :call <SID>QuickfixToggle()<cr>
     let g:quickfix_is_open = 0
     function! s:QuickfixToggle()
       if g:quickfix_is_open
@@ -204,52 +208,87 @@ endfunction
 
 " mappings and abbrevs --- {{{
 " leader mappings ---------------------- {{{
-noremap <leader>x :execute getline('.')<CR>
-noremap <leader>X :execute getline('.')
-nnoremap <leader>r :redraw!<CR>
+nnoremap <leader>" ea"<ESC>hbi"<ESC>lel<CR>
+vnoremap <leader>" <ESC>`>a"<ESC>`<i"<ESC>
+vnoremap <leader>' <ESC>`>a'<ESC>`<i'<ESC>
+nnoremap <leader>b :Sex<CR><C-W>T
+nnoremap <leader>B :Sex<CR>
+nnoremap <leader>c :<C-F>
 nnoremap <leader>d :args ~/repos/percolation/**/*.py<CR>
 " nnoremap <leader>r :set shiftround!<CR>
-nnoremap <leader>J :jumps<CR>
+nnoremap <leader>i :exec "normal i".nr2char(getchar())."\e"<CR>
+nnoremap <leader>I :call InsertBeforeAfter()<CR>
+nnoremap <leader>f :set hlsearch!<CR>
 nnoremap <leader>j :s/=/ = /g<CR>
-" nnoremap <leader>S :setlocal spell!<CR>
-nnoremap <leader>s :mapclear<CR> :source $MYVIMRC<CR>
-nnoremap <leader>S :source $MYVIMRC<CR>
-nnoremap <leader>N :set relativenumber!<CR>
-nnoremap <leader>n :set number!<CR>
+nnoremap <leader>J :jumps<CR>
 nnoremap <leader>k :s/,/, /g<CR>
-nnoremap <leader>b :Sex<CR><C-W>T
-nnoremap <leader>t :vs.<CR><C-W>T
-nnoremap <leader>B :Sex<CR>
-nnoremap <leader>T :vs.<CR>
 nnoremap <leader>l :ls<CR>
 nnoremap <leader>L :set list!<CR>
 " :bn to choose file n
-nnoremap <leader>c :<C-F>
+nnoremap <leader>n :set number!<CR>
+nnoremap <leader>N :set relativenumber!<CR>
 nnoremap <leader>p :reg<CR>
-nnoremap <leader>" ea"<ESC>hbi"<ESC>lel<CR>
-nnoremap <leader>w :w<CR>
-nnoremap / /\v
 nnoremap <leader>q :q<CR>
-vnoremap <leader>" <ESC>`>a"<ESC>`<i"<ESC>
-vnoremap <leader>' <ESC>`>a'<ESC>`<i'<ESC>
-inoremap <C-B> <ESC>viW~i
+nnoremap <leader>r :redraw!<CR>
+"-> nnoremap <leader>R :call PythonShowRun()<CR>
+nnoremap <leader>s :mapclear<CR> :source $MYVIMRC<CR>
+nnoremap <leader>S :source $MYVIMRC<CR>
+nnoremap <leader>t :vs.<CR><C-W>T
+nnoremap <leader>T :vs.<CR>
+nnoremap <leader>w :w<CR>
+noremap <leader>x :execute getline('.')<CR>
+noremap <leader>X :execute getline('.')
+"-> nnoremap <leader>z :call ExtremeFolding()<CR>
+function! InsertBeforeAfter()
+  let a = nr2char(getchar())
+  :exec "normal i".a."\e"
+  :exec "normal lli".a."\e"
+endfunction
 " }}}
 
 " localleader mappings ---------------------- {{{
 hi CursorLine   cterm=NONE ctermbg=235
 hi CursorColumn cterm=NONE ctermbg=235
-nnoremap <leader>c :set cursorline! cursorcolumn!<CR>
 
 nnoremap <localleader>' :s/"/'/g<CR>
-nnoremap <localleader>t :args /home/r/repos/tokipona/**/*.py<CR>
-nnoremap <localleader>S :vs $MYVIMRC<CR>
+nnoremap <localleader>c :set cursorline! cursorcolumn!<CR>
 nnoremap <localleader>b :execute 'rightbelow vs ' . bufname('#')<CR>
+nnoremap <localleader>B :call ToggleStatusbar()<CR>
+nnoremap <localleader>g :call ChangeBackground()<CR>
+" nnoremap <localleader>h :tabe<CR>:h 
+nnoremap <localleader>h :call Help()<CR>
+nnoremap <localleader>k :se keymap=accents<CR> 
+nnoremap <localleader>l :set invhlsearch \| set hlsearch?<CR>
+"-> nnoremap <localleader>L <CR>
+nnoremap <localleader>p :setlocal spell!<CR>
 nnoremap <localleader>s :e $MYVIMRC<CR>
-nnoremap <localleader>S :vs $MYVIMRC<CR>
+nnoremap <localleader>S :tabe $MYVIMRC<CR>
+nnoremap <localleader>t :args /home/r/repos/tokipona/**/*.py<CR>
 nnoremap <localleader>w :match Error /\v[ ]+$/<CR>
 nnoremap <localleader>W :match none<CR>
-nnoremap <localleader>h :tabe<CR>:h 
-nnoremap <localleader>H :set hlsearch!<CR>
+function! Help()
+  let token = input('what? ')
+  :tabe
+  exec ':h ' . token
+  execute "normal! \<C-W>\<C-J>"
+  :q
+endfunction
+function! ChangeBackground()
+  if &bg == 'dark'
+    set bg=light
+  else
+    set bg=dark
+  endif
+endfunction
+function! ToggleStatusbar()
+  if &ls == 2
+    set ls=0
+  else
+    set ls=2
+  endif
+endfunction
+" l and L are used for verbose
+
 " }}}
 
 " abbrev ---------------------- {{{
@@ -270,6 +309,7 @@ iabbrev pmain if __name__ == "__main__":<CR>
 vnoremap . :norm .<CR>
 " nnoremap ; :
 " nnoremap : ;
+inoremap <C-B> <ESC>viW~i
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
@@ -286,6 +326,7 @@ inoremap jj <ESC>
 " nnoremap <nowait> kj O<ESC>
 " nnoremap <ESC> ge
 nnoremap gr gT
+cnoremap S S<CR><CR>
 " }}}
 
 " experimental mappings ---------------------- {{{
@@ -294,7 +335,7 @@ nnoremap gr gT
 " nnoremap j gj
 " nnoremap k gk
 
-set autoread
+" set autoread
 onoremap in( :<c-u>normal! f(vi(<cr>
 onoremap iN( :<c-u>normal! F)vi(<cr>
 onoremap in[ :<c-u>normal! f[vi[<cr>
@@ -303,4 +344,3 @@ onoremap in{ :<c-u>normal! f{vi{<cr>
 onoremap iN{ :<c-u>normal! F}vi{<cr>
 " }}}
 " }}}
-set viminfo=%,!,'1000,:1000,n~/.vim/viminfo
