@@ -1,5 +1,5 @@
 " basic settings -------------------------------------------------------- {{{
-" reworked for usage with Vim 8 and tmux
+" reworked for usage with Vim 8, True Colors (24 bits) and tmux
 set nocompatible
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
