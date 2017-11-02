@@ -1,0 +1,206 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{hyperref} 	%% Use to fix Figure or Table: ex: \begin{table}[H]
+\hypersetup{
+	%pagebackref=true,
+	pdfcreator={LaTeX with abnTeX2},
+	pdfkeywords={abnt}{latex}{abntex}{USPSC}{trabalho acadêmico}, 
+	colorlinks=true,       		% false: boxed links; true: colored links
+	linkcolor=blue,          	% color of internal links
+	citecolor=blue,        		% color of links to bibliography
+	filecolor=magenta,      		% color of file links
+	urlcolor=blue,
+	allbordercolors=black,
+	bookmarksdepth=4
+}
+\usepackage[utf8]{inputenc}
+
+\begin{document}
+\title{On the Vim editor:\\
+vim features and tweaks after 10 years of usage}
+
+\author{Renato Fabbri\\
+\texttt{renato.fabbri@gmail.com}\\
+University of São Paulo,\\
+Institute of Mathematical and Computer Sciences\\
+São Carlos, SP, Brazil
+}
+\maketitle
+\begin{abstract}
+The Vim editor is very rich in capabilities
+and thus complex.
+This article is a description of the Vim text editor
+and a set of enhancements proposed for it.
+It is the result of more than ten years of experience
+in using Vim for writing and editing various types of documents,
+mostly:
+Python, C++, JavaScript, ChucK, etc, programs;
+and \LaTeX, Markdown, HTML, RDF, Make and other markup files;
+binary files.
+It is said that it takes about ten years to master this
+text editor, and I find that other experienced users
+have a different view of Vim and that they use a different
+set of tools.
+Therefore, this document exposes my insights in order
+to confront my usage with the praxis of the Vim users community
+and to make available a reference document with which new users
+can grasp an overview by reading it and the discussions that it may generate.
+Also, it should be useful for users of any degree of experience,
+including me, as a compendium of commands, namespaces and tweaks.
+Upon feedback, and maturing of my Vim usage,
+this document might be enhanced or receive additional
+material.
+\end{abstract}
+
+\section{Introduction}
+Vim is a very complex editor,
+considered by the Linux community to be
+matched only by Emacs.
+They both are the standard advanced text editors
+of the open source community
+and have beed developed for decades.
+This document describes the Vim editor
+and proposes a set of enhancements of the user
+experience which
+are implemented as Vim Plugins.
+The editor has a very mature documentation
+and the contents herein presented is a
+report on the overall understandings I
+have of Vim after a little bit more
+of ten years using it.
+The purposes of this document are:
+\begin{itemize}
+  \item to help new users in grasping Vim essentials
+  and convenient practices.
+  \item To record the view of the editor that
+  an user (me) has after $\approx 10$ years of usage.
+  \item To confront my usage with that of other experienced
+  users. This is helpful for me, but also for the other users
+  as they might benefit from this content and from discussions
+  that might arise from it.
+\end{itemize}
+
+I used other editors, e.g. Kate, gedit, and Notepad2.
+I used Vim for writting and editing computer code (Python, Javascript, C++, ChucK, bash, etc), markup languages (HTML, CSS, RDF, Markdown, \LaTeX, etc) and binary files.
+Eventually, I edited database files and other types os files.
+With Vim, I mostly write software (web and scientific),
+music, poems and short stories.
+It is very useful because:
+\begin{itemize}
+  \item it is meant to be a plain text (e.g. ascii, utf8) editor
+  and does not (by standard) insert special charaters (e.g. for formating, with binary instructions).
+  \item It has a powerful architecture and set of commands.
+  \item It is highly configurable and most often the users
+  has a set of commands.
+\end{itemize}
+
+The standard capabilities of the editor
+should become clear in Section~\ref{basics}.
+Vim is constantly evolving and there are many plugins,
+some of them very popular for both general and specific
+type of users.
+Accordingly, there are many possible enhancements,
+and Section~\ref{issues} report the most prominent of them
+for me and potential workarounds made available as plugins.
+
+\subsection{Historical note}
+Vim was first released publicly in 1991.
+It is a cross-platform GNU licensed free and open source extended clone of Bill Joy's vi text editor.
+
+% Current stable, alpha, beta and development version
+% no articles on Vim
+
+
+\section{Basics}\label{basics}
+Vim's interface is text-based.
+In the GUI mode (gVim),
+there are convenient menus and toolbars
+but all functionalities are still available though
+the command line mode.
+Vimscript is the internal language of Vim,
+and is often used for scripting by users
+although other languages might be used 
+(e.g. Python, Perl, Lua, Racker, Ruby and Tcl). 
+
+Vim has some basic modes of usage:
+\begin{itemize}
+  \item Navigation mode: used for changing
+  the position of the cursor or the text displayed
+  at the window.
+  A code goal of the navigation mode it to allow fast
+  navigation of the document while allowing
+  the typist to maintain its fingers on the home row
+  (i.e. on the center of the keyboard).
+  \item Insert mode:
+  \item Command mode:
+  \item Ex mode:
+\end{itemize}
+
+\subsection{Help commands, files, tutor, and usr\_toc}
+
+\subsection{Using Vim's modes}
+\subsubsection{Navigating}
+hjkl keys
+crtl+[dubf]
+jumps
+markers
+Most important help files on Netrw
+
+\subsubsection{Insertion}
+ctrl+o
+
+\subsection{Navigation + insertion}
+Commands that bridge from Navigation to Insertion:
+csrCSR
+Default, line and block visual selection:
+  and AiIcCdD
+
+\subsection{Netrw}
+No insert mode.
+
+Edit directory
+Sexplore
+Create and delete files and directories
+open files: on window, split, preview
+Change display of files
+Bookmarks
+Most important help files on Netrw
+
+
+\subsection{Standard configuration files and directories and My .vim/vimrc}
+\subsection{Spell and spelllang (en and pt\_br)}
+\subsection{Tabs, splits, buffers and namespaces}
+\& \% \$ and the following
+\subsection{Mappings and abbreviations}
+\subsection{Macros and registers for copy and paste}
+\subsection{History of commands}
+\subsection{List of markers}
+\subsection{Undo}
+\subsection{Scripting, Functions, Vimscript and Python}
+\subsection{Plugins}
+\subsubsection{Standard features}
+\subsubsection{Writting plugins}
+\subsubsection{Plugin systems: usage for using and writing plugins}
+\subsection{Colour}
+\subsubsection{Standard, 8 and 16 bits, and true color, Screen/Byobu}
+\subsubsection{Gruvebox, Solarize and other colourschemes}
+\subsection{Fonts}
+\subsubsection{Cools nd popular fonts}
+\subsubsection{How to set fonts in xterm, gnome-terminal and GVim.}
+\subsection{Verbosing, logs and possibilities of using it to study your own}
+\subsection{age (often used commands and typed sequences).}
+\subsection{Highlighting}
+\subsection{Bash and Vim commands}
+\subsection{Compiling, standard features and plugins}
+\subsection{Quickfix}
+\section{Issues and plugins}\label{issues}
+
+\section{Final words and further work}
+
+Potential enhancements to this document are:
+\begin{itemize}
+  \item The inclusion of reading emails and connecting over ssh.
+\end{itemize}
+
+\end{document}
