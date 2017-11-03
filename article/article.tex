@@ -1,7 +1,7 @@
 \documentclass{article}
 \usepackage{graphicx}
 \usepackage[usenames,dvipsnames]{xcolor}
-\usepackage{hyperref} 	%% Use to fix Figure or Table: ex: \begin{table}[H]
+\usepackage{hyperref}
 \hypersetup{
 	%pagebackref=true,
 	pdfcreator={LaTeX with abnTeX2},
@@ -45,7 +45,8 @@ set of tools.
 Therefore, this document exposes my insights in order
 to confront my usage with the praxis of the Vim users community
 and to make available a reference document with which new users
-can grasp an overview by reading it and the discussions that it may generate.
+can grasp a sound overview by reading it and the discussions that
+it might generate.
 Also, it should be useful for users of any degree of experience,
 including me, as a compendium of commands, namespaces and tweaks.
 Upon feedback, and maturing of my Vim usage,
@@ -59,7 +60,7 @@ considered by the Linux community to be
 matched only by Emacs.
 They both are the standard advanced text editors
 of the open source community
-and have beed developed for decades.
+and have been developed for decades.
 This document describes the Vim editor
 and proposes a set of enhancements of the user
 experience which
@@ -73,15 +74,16 @@ The purposes of this document are:
 \begin{itemize}
   \item to help new users in grasping Vim essentials
   and convenient practices.
+  \item To make a sound overview of the editor available.
   \item To record the view of the editor that
-  an user (me) has after $\approx 10$ years of usage.
+  an user (me) has after $10$ years of usage.
   \item To confront my usage with that of other experienced
   users. This is helpful for me, but also for the other users
   as they might benefit from this content and from discussions
   that might arise from it.
 \end{itemize}
 
-I used other editors, e.g. Kate, gedit, and Notepad2.
+I've had experience with other editors, e.g. Kate, gedit, and Notepad2.
 I used Vim for writting and editing computer code (Python, Javascript, C++, ChucK, bash, etc), markup languages (HTML, CSS, RDF, Markdown, \LaTeX, etc) and binary files.
 Eventually, I edited database files and other types os files.
 With Vim, I mostly write software (web and scientific),
@@ -104,13 +106,16 @@ Accordingly, there are many possible enhancements,
 and Section~\ref{issues} report the most prominent of them
 for me and potential workarounds made available as plugins.
 
+% Vi and Vim
 \subsection{Historical note}
 Vim was first released publicly in 1991.
 It is a cross-platform GNU licensed free and open source extended clone of Bill Joy's vi text editor.
-
-% Current stable, alpha, beta and development version
-% no articles on Vim
-
+Vim's development is coordinated (and performed) since the beginning
+mainly by Bram Moolenaar.
+Today, current stable version is reported with 8.0.1173
+in the commit messages but tagged with 8.0.1257.
+I found no explicit alpha or beta versions
+and found no scientific article on Vim (this might be the first one).
 
 \section{Basics}\label{basics}
 Vim's interface is text-based.
@@ -123,40 +128,171 @@ and is often used for scripting by users
 although other languages might be used 
 (e.g. Python, Perl, Lua, Racker, Ruby and Tcl). 
 
+\subsection{The bare minimum}\label{minimum}
+You open a file with Vim by executing
+the command: \texttt{vim <filename>}.
+Inside Vim, you start in the normal
+mode, and might want to move around using
+\texttt{h-j-k-l} for left-down-up-right.
+To insert characters, move your
+cursor to the desired location an press i,
+which puts Vim in the insert mode.
+Go back to normal mode by pressing
+\texttt{<ESC>}.
+You save the file by typing \texttt{:w<CR>},
+you exit vim by typing \texttt{:q<CR>}.
+
+\subsection{Vim help}
+You can find help for vim in various places.
+The standard resource is the Vim help resources.
+They are accessed by typing \texttt{:h <anything><CR>}
+in normal mode.
+Examples of such \texttt{<anything>} are:
+colour, navigation, :vs, vimtutor.
+Type 
+\texttt{:h usr\_toc<CR>}
+to access the official Vim User Manual,
+which is considerably lengthy and complex
+and is usually not read by users for a few years.
+In learning Vim, one
+might want to run the \texttt{vimtutor} command
+(outside Vim) to start the Vim Tutor.
+
+There are good resources on the Web for learning
+and tweaking Vim:
+\begin{itemize}
+  \item ``Vim Adventures'' is an online RPG game for practicing
+  and memorizing Vim commands while having fun.
+  This game is quite famous among Vim users.
+  \item There are official and semi-official Vim sites:
+  \url{www.vim.org}, \url{https://www.vi-improved.org} and
+  \url{http://vim.wikia.com/}.
+  \item Many hacks, understandings and general issues
+  (e.g. how to make such a move) are asked and answered
+  in online forums (e.g. Quora, Stack Overflow, Stack Exchange, Reddit).
+  One often finds these links through a search engine.
+  \item You can find many videos about Vim.
+  One traditional site is \url{http://vimcasts.org},
+  but you might find them by a search engine (e.g. \url{http://derekwyatt.org/vim/tutorials/}) or in Youtube and Vimeo.
+\end{itemize}
+
+There are mailing lists and IRC channels listed in these
+sites for getting help on Vim usage and development.
+
+% any other commands? files?
+
+\subsection{Using Vim's modes}
 Vim has some basic modes of usage:
 \begin{itemize}
-  \item Navigation mode: used for changing
+  \item Normal mode: used for changing
   the position of the cursor or the text displayed
   at the window.
-  A code goal of the navigation mode it to allow fast
+  A code goal of the normal mode it to allow fast
   navigation of the document while allowing
   the typist to maintain its fingers on the home row
   (i.e. on the center of the keyboard).
-  \item Insert mode:
-  \item Command mode:
-  \item Ex mode:
+  The mode is also used for manupulating text
+  (e.g. copy, paste, delete, change case).
+  \item Insert mode: for inserting text.
+  \item Command-line mode: for entering Ex commands.
+  \item Ex mode: similar to command-line mode,
+  but more specialized for running various Ex commands.
+  \item Visual mode: for making, manipulating and navigating
+  selections of texts.
+  \item Select mode: similar to visual mode but
+  favors CUA\footnote{IBM Common User Access: \url{https://en.wikipedia.org/wiki/IBM_Common_User_Access}.}.
 \end{itemize}
 
-\subsection{Help commands, files, tutor, and usr\_toc}
+There are seven additional modes which are mostly subordinate 
+to the basic modes and will be described when convenient.
+The manual page for Vim modes can be accessed by typing
+\texttt{:h vim-mode}.
 
-\subsection{Using Vim's modes}
-\subsubsection{Navigating}
-hjkl keys
-crtl+[dubf]
-jumps
-markers
-Most important help files on Netrw
+\subsubsection{Normal mode}
+Sometimes also called navigation or command mode,
+the normal mode is most powerful for
+navigating, manipulating texts and changing to other modes.
+
+The simplest of these three is changing to other modes:
+type any of these letters to change to insert mode:
+\texttt{iIaAoOsScC}. More on the transition between
+normal and insert mode on Section~\ref{navIn}.
+Type any of these characters to change to command-line mode:
+\texttt{:/?}.
+Type \texttt{Q} to enter Ex mode.
+Type \texttt{v}, \texttt{V}, \texttt{CTRL+V} to enter visual mode.
+
+For most basic and naive navigation, one should check Section~\ref{minimum}.
+Most often, one uses:
+\begin{itemize}
+  \item \texttt{Ctrl+(d,u,f,b)} for half-page down and up
+and whole page down and up, although these commands might
+be set to scroll a different number of lines.
+  \item \texttt{Ctrl+(e,y)} to move the window one line down or up.
+  \item \texttt{(w,b,e)} to move to the next, previous and end-of-next word. There motions iterate over sequences of characters separated
+    by special characters (e.g. punctuation and parenthesis) as
+    specified by the output of \texttt{:se iskeyword}.
+    To interate over space-separated tokens, use \texttt{W,B,E}).
+    To move to the end of last word, one might use \texttt{be}
+    or \texttt{ge}.
+  \item \texttt{(fX,tX)} to move to or just before any X character.
+  \item \texttt{\},\{} for moving to the next blank line.
+  \item Search with / or ?, although these are in truth command-line 
+  \item \texttt{CTRL+(o,i)} to move to an older or newer position in
+    jump list.
+  \item \texttt{'X,`X} to move the cursor to a mark bond to the alphanumeric character X: \texttt{`X} moves to the exact position while \texttt{'X} moves to
+    the first non-blank character of the line.
+    A mark is registered by the user in any cursor position
+    by typing \texttt{mX}, where X is any letter.
+    If X is lowercase, the mark is local to the buffer (the file),
+    if it is uppercase or numeric, it is global to the Vim session.
+\end{itemize}
+
+There are many more facilities to navigate Vim
+as explained in \texttt{:h navigation}.
+E.g. one might find useful the \texttt{),(} commands
+for iterating through sentences.
+
+For changing the text, usual commands include:
+\begin{itemize}
+  \item \texttt{d\{motion\}} to delete the characters
+    involved in the motion command.
+  \item \texttt{dd,D} to delete a line or from the cursor to the end of the line.
+  \item \texttt{x,X} to delete the character under or before the cursor  \item \texttt{~} to swap the case of a character.
+  \item \texttt{gu\{motion\},gU\{motion\},g~\{motion\}} to make lowercase, uppercase or switch the case of the characters involved in the motion.
+\end{itemize}
+
+There are way more commands to change the texts.
+Some of them are discussed in Section~\ref{navIn}
+because they involve a transition to the insertion mode.
+A thorough consideration of the commands in the command mode
+is found by executing \texttt{:h navigation} and 
+\texttt{:h change.txt}.
 
 \subsubsection{Insertion}
-ctrl+o
+Once in the insertion mode, the character keys
+input the characters at the cursor position.
+One can exit insert mode by pressing \texttt{<Esc>},
+and Vim will be put in normal mode.
+Most used commands in insert mode include:
+\begin{itemize}
+  \item \texttt{Ctrl+o} to execute one and only command in normal mode.
+  \item \texttt{asdjn}
+\end{itemize}
 
-\subsection{Navigation + insertion}
+
+\subsubsection{Command-line mode}
+% enter by typing :, ?, / in normal or visual modes.
+
+
+\subsection{Navigation + insertion}\label{navIn}
 Commands that bridge from Navigation to Insertion:
-csrCSR
+csrCSR, iws, etc
 Default, line and block visual selection:
   and AiIcCdD
 
 \subsection{Netrw}
+Most important help files on Netrw
 No insert mode.
 
 Edit directory
@@ -175,7 +311,9 @@ Most important help files on Netrw
 \subsection{Mappings and abbreviations}
 \subsection{Macros and registers for copy and paste}
 \subsection{History of commands}
-\subsection{List of markers}
+\subsection{Lists of Vim state variables}
+% of markers, jumps, registers, commands (hist)
+% :
 \subsection{Undo}
 \subsection{Scripting, Functions, Vimscript and Python}
 \subsection{Plugins}
@@ -194,6 +332,9 @@ Most important help files on Netrw
 \subsection{Bash and Vim commands}
 \subsection{Compiling, standard features and plugins}
 \subsection{Quickfix}
+\subsection{Persistence and vimrc}
+% markers, undo, buffers, registers, bookmarked directories,
+% vimrc for settings
 \section{Issues and plugins}\label{issues}
 
 \section{Final words and further work}
@@ -202,5 +343,24 @@ Potential enhancements to this document are:
 \begin{itemize}
   \item The inclusion of reading emails and connecting over ssh.
 \end{itemize}
+
+\appendix
+\section{Example of usage session}
+% open file, split, tab, find, replace char,
+% append to line, visual block, etc.
+\section{Key naming in Vim documentation}
+% CTRL, <C-X> <C-S-X>
+% Special chars..
+\section{My vimrc file}
+In this Appendix is my vimrc file.
+Although it has comments, one should
+look for the options that (s)he does
+not understand, as a thorough explanation
+of the file is tedious and out of the scope
+of this document.
+
+\section{Overview of my usage of Vim}
+% historical usage, other editors,
+% most often edited file types
 
 \end{document}
