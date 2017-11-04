@@ -81,10 +81,21 @@ The purposes of this document are:
   users. This is helpful for me, but also for the other users
   as they might benefit from this content and from discussions
   that might arise from it.
+  \item To propose some enhancements to Vim through simple plugins.
 \end{itemize}
 
+Advanced users might just focus on the proposed enhancements and
+in some of the basic topics, such as in using numerous terminals 
+(it works pretty well!) and using sessions (Section~\ref{sessions}).
+These make Vim very convenient e.g. for users that edit multiple files,
+run scripts and compile programs and latex files.
+I used for years multiple terminal abs and windows,
+and sometimes a byobu/screen terminal multiplexer.
+Nowadays I am using standard Vim windows as terminals
+such as described in Section~\ref{terminals}.
+
 I've had experience with other editors, e.g. Kate, gedit, and Notepad2.
-I used Vim for writting and editing computer code (Python, Javascript, C++, ChucK, bash, etc), markup languages (HTML, CSS, RDF, Markdown, \LaTeX, etc) and binary files.
+I used Vim for writing and editing computer code (Python, Javascript, C++, ChucK, bash, etc), markup languages (HTML, CSS, RDF, Markdown, \LaTeX, etc) and binary files.
 Eventually, I edited database files and other types os files.
 With Vim, I mostly write software (web and scientific),
 music, poems and short stories.
@@ -182,7 +193,7 @@ sites for getting help on Vim usage and development.
 % any other commands? files?
 
 \subsection{Using Vim's modes}
-Vim has some basic modes of usage:
+Vim has some basic and fully implemented modes of usage:
 \begin{itemize}
   \item Normal mode: used for changing
   the position of the cursor or the text displayed
@@ -202,6 +213,9 @@ Vim has some basic modes of usage:
   \item Select mode: similar to visual mode but
   favors CUA\footnote{IBM Common User Access: \url{https://en.wikipedia.org/wiki/IBM_Common_User_Access}.}.
 \end{itemize}
+
+There is another basic mode, but it is not fully implemented:
+the Terminal-Job mode.
 
 There are seven additional modes which are mostly subordinate 
 to the basic modes and will be described when convenient.
@@ -233,7 +247,7 @@ be set to scroll a different number of lines.
     by special characters (e.g. punctuation and parenthesis) as
     specified by the output of \texttt{:se iskeyword}.
     To interate over space-separated tokens, use \texttt{W,B,E}).
-    To move to the end of last word, one might use \texttt{be}
+    To move to the end of last word, one might bumba use \texttt{be}
     or \texttt{ge}.
   \item \texttt{(fX,tX)} to move to or just before any X character.
   \item \texttt{\},\{} for moving to the next blank line.
@@ -277,6 +291,7 @@ and Vim will be put in normal mode.
 Most used commands in insert mode include:
 \begin{itemize}
   \item \texttt{Ctrl+o} to execute one and only command in normal mode.
+	  This enter a secondary mode (see Section~\ref{modes})
   \item \texttt{asdjn}
 \end{itemize}
 
@@ -284,6 +299,7 @@ Most used commands in insert mode include:
 \subsubsection{Command-line mode}
 % enter by typing :, ?, / in normal or visual modes.
 
+\subsubsection{Terminal-Job mode}\label{terminal}
 
 \subsection{Navigation + insertion}\label{navIn}
 Commands that bridge from Navigation to Insertion:
@@ -333,9 +349,14 @@ Most important help files on Netrw
 \subsection{Compiling, standard features and plugins}
 \subsection{Quickfix}
 \subsection{Persistence and vimrc}
+\subsubsection{Sessions}\label{sessions}
 % markers, undo, buffers, registers, bookmarked directories,
 % vimrc for settings
 \section{Issues and plugins}\label{issues}
+\subsection{Sessions}
+\subsection{AA messages}
+\subsection{Slick Vim}
+% tab line and status line and ruler
 
 \section{Final words and further work}
 
@@ -351,7 +372,7 @@ Potential enhancements to this document are:
 \section{Key naming in Vim documentation}
 % CTRL, <C-X> <C-S-X>
 % Special chars..
-\section{My vimrc file}
+\section{My vimrc file and usage}
 In this Appendix is my vimrc file.
 Although it has comments, one should
 look for the options that (s)he does
@@ -359,7 +380,14 @@ not understand, as a thorough explanation
 of the file is tedious and out of the scope
 of this document.
 
+Mostly, I toggle the status line with \texttt{\\\\B}
+and the tab line with \texttt{\\\\T}.
+Save and close windows with \texttt{\\w} and \texttt{\\q}.
+
+
 \section{Overview of my usage of Vim}
+% sessions, terminal for ipython3 and evince
+% alternative with byobu or many terminals
 % historical usage, other editors,
 % most often edited file types
 
