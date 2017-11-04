@@ -1,9 +1,9 @@
 " basic settings -------------------------------------------------------- {{{
 " reworked for usage with Vim 8, True Colors (24 bits) and tmux
 set nocompatible
+set termguicolors
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-set termguicolors
 set viminfo=%,!,'1000,:1000,n~/.vim/viminfo
 set tw=0
 autocmd InsertEnter * set timeoutlen=200
@@ -12,7 +12,6 @@ let g:netrw_altv=1
 let g:netrw_preview=1
 set virtualedit=all
 runtime! ftplugin/man.vim
-set nocompatible
 set mouse=a
 call pathogen#infect()
 filetype plugin indent on
@@ -211,6 +210,7 @@ endfunction
 nnoremap <leader>" ea"<ESC>hbi"<ESC>lel<CR>
 vnoremap <leader>" <ESC>`>a"<ESC>`<i"<ESC>
 vnoremap <leader>' <ESC>`>a'<ESC>`<i'<ESC>
+nnoremap <leader>a :exec "normal li".nr2char(getchar())."\e"<CR>
 nnoremap <leader>b :Sex<CR><C-W>T
 nnoremap <leader>B :Sex<CR>
 nnoremap <leader>c :<C-F>
@@ -257,7 +257,9 @@ nnoremap <localleader>B :call ToggleStatusbar()<CR>
 nnoremap <localleader>g :call ChangeBackground()<CR>
 " nnoremap <localleader>h :tabe<CR>:h 
 nnoremap <localleader>h :call Help()<CR>
-nnoremap <localleader>k :se keymap=accents<CR> 
+nnoremap <localleader>i :call ShowImg()<CR>
+" keymap=
+nnoremap <localleader>k :se keymap=accents<CR>
 nnoremap <localleader>l :set invhlsearch \| set hlsearch?<CR>
 "-> nnoremap <localleader>L <CR>
 nnoremap <localleader>p :setlocal spell!<CR>
@@ -266,6 +268,11 @@ nnoremap <localleader>S :tabe $MYVIMRC<CR>
 nnoremap <localleader>t :args /home/r/repos/tokipona/**/*.py<CR>
 nnoremap <localleader>w :match Error /\v[ ]+$/<CR>
 nnoremap <localleader>W :match none<CR>
+function! ShowImg()
+  exec "normal! viWy"
+  silent exec '!eog -f ' getreg('0')
+  exec 'colorscheme gruvbox'
+endfunction
 function! Help()
   let token = input('what? ')
   :tabe
@@ -326,7 +333,6 @@ inoremap jj <ESC>
 " nnoremap <nowait> kj O<ESC>
 " nnoremap <ESC> ge
 nnoremap gr gT
-cnoremap S S<CR><CR>
 " }}}
 
 " experimental mappings ---------------------- {{{
@@ -344,3 +350,4 @@ onoremap in{ :<c-u>normal! f{vi{<cr>
 onoremap iN{ :<c-u>normal! F}vi{<cr>
 " }}}
 " }}}
+
