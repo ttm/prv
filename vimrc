@@ -6,6 +6,7 @@ let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 set viminfo=%,!,'1000,:1000,n~/.vim/viminfo
 set tw=0
+se noru
 autocmd InsertEnter * set timeoutlen=200
 autocmd InsertLeave * set timeoutlen=1000
 let g:netrw_altv=1
@@ -35,7 +36,6 @@ set wildignore=*.swp,*.bak,*.pyc,*.class
 set visualbell           " don't beep
 " set nobackup
 " set noswapfile
-set ruler
 set listchars=tab:>-,trail:.,extends:#,nbsp:*,eol:$
 " useful if * and + registers don't work properly
 " set clipboard=unnamedplus
@@ -71,8 +71,10 @@ set statusline+=%f\                          " filename
 set statusline+=%h%m%r%w                     " status flags  
 set statusline+=\[%{strlen(&ft)?&ft:'none'}] " file type  
 set statusline+=%=                           " right align remainder  
+set statusline+=%{strftime(\"%l:%M:%S,\ %a\ %b\ %d,\ %Y,\ \ \ \ \ \ \")}
 set statusline+=0x%-8B                       " character value  
 set statusline+=%-14(%l/%L,%P,%c%V%)               " line, character  
+" set statusline=%<%f%h%m%r%=%{strftime(\"%l:%M:%S\ \%p,\ %a\ %b\ %d,\ %Y\")}\ %{&ff}\ %l,%c%V\ %P
 " }}}
 " }}}
 
@@ -214,7 +216,12 @@ nnoremap <leader>a :exec "normal li".nr2char(getchar())."\e"<CR>
 nnoremap <leader>b :Sex<CR><C-W>T
 nnoremap <leader>B :Sex<CR>
 nnoremap <leader>c :<C-F>
-nnoremap <leader>d :args ~/repos/percolation/**/*.py<CR>
+nnoremap <leader>C :call ListSessions()<CR>
+" nnoremap <leader>d :args ~/repos/percolation/**/*.py<CR>
+nnoremap <leader>d :call SaveSession()<CR>
+nnoremap <leader>D :call SaveNewSession()<CR>
+nnoremap <leader>e :call LoadSession()<CR>
+nnoremap <leader>E :call InsertSession()<CR>
 " nnoremap <leader>r :set shiftround!<CR>
 nnoremap <leader>i :exec "normal i".nr2char(getchar())."\e"<CR>
 nnoremap <leader>I :call InsertBeforeAfter()<CR>
@@ -244,6 +251,39 @@ function! InsertBeforeAfter()
   :exec "normal i".a."\e"
   :exec "normal lli".a."\e"
 endfunction
+
+function! SaveSession()
+  if !exists("g:msession")
+    :call ListSessions()
+    let g:msession = input("Enter session name: ")
+  endif
+  execute 'mksession! ~/.vim/sessions/' . g:msession
+endfunction
+
+function! SaveNewSession()
+  :call ListSessions()
+  let g:msession = input("Enter session name: ")
+  execute 'mksession! ~/.vim/sessions/' . g:msession
+endfunction
+
+function! LoadSession()
+  :call ListSessions()
+  let g:msession = input("Enter session name: ")
+  execute 'only'
+  execute 'tabonly'
+  execute 'so ~/.vim/sessions/' . g:msession
+endfunction
+
+function! InsertSession()
+  :call ListSessions()
+  execute 'tabe'
+  let g:msession = input("Enter session name: ")
+  execute 'so ~/.vim/sessions/' . g:msession
+endfunction
+
+function! ListSessions()
+  execute '!ls ~/.vim/sessions/'
+endfunction
 " }}}
 
 " localleader mappings ---------------------- {{{
@@ -266,6 +306,7 @@ nnoremap <localleader>p :setlocal spell!<CR>
 nnoremap <localleader>s :e $MYVIMRC<CR>
 nnoremap <localleader>S :tabe $MYVIMRC<CR>
 nnoremap <localleader>t :args /home/r/repos/tokipona/**/*.py<CR>
+nnoremap <localleader>T :call ToggleTabLine()<CR>
 nnoremap <localleader>w :match Error /\v[ ]+$/<CR>
 nnoremap <localleader>W :match none<CR>
 function! ShowImg()
@@ -286,12 +327,21 @@ function! ChangeBackground()
   else
     set bg=dark
   endif
+
+
 endfunction
 function! ToggleStatusbar()
   if &ls == 2
     set ls=0
   else
     set ls=2
+  endif
+endfunction
+function! ToggleTabLine()
+  if &showtabline == 2
+    set showtabline=0
+  else
+    set showtabline=2
   endif
 endfunction
 " l and L are used for verbose
