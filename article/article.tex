@@ -15,11 +15,15 @@
 	bookmarksdepth=4
 }
 \usepackage[utf8]{inputenc}
+\newcommand{\ttt}[1] {
+	\texttt{<#1>}}
+\newcommand{\tttt}[1] {
+	\texttt{#1}}
 
 \begin{document}
-\title{On the Vim editor:\\
-vim features and tweaks after 10 years of usage}
-
+\title{An anthropological account of the Vim editor:\\
+ouroboros, features and tweaks after 10 years of usage}
+% Anthropological computation
 \author{Renato Fabbri\\
 \texttt{renato.fabbri@gmail.com}\\
 University of São Paulo,\\
@@ -34,16 +38,16 @@ This article is a description of the Vim text editor
 and a set of enhancements proposed for it.
 It is the result of more than ten years of experience
 in using Vim for writing and editing various types of documents,
-mostly:
-Python, C++, JavaScript, ChucK, etc, programs;
+e.g.:
+Python, C++, JavaScript, ChucK, programs;
 and \LaTeX, Markdown, HTML, RDF, Make and other markup files;
 binary files.
-It is said that it takes about ten years to master this
-text editor, and I find that other experienced users
+It is said that it takes about ten years to master (or start mastering)
+this text editor, and I find that other experienced users
 have a different view of Vim and that they use a different
 set of tools.
 Therefore, this document exposes my insights in order
-to confront my usage with the praxis of the Vim users community
+to confront my usage with that of other Vim users
 and to make available a reference document with which new users
 can grasp a sound overview by reading it and the discussions that
 it might generate.
@@ -59,7 +63,7 @@ Vim is a very complex editor,
 considered by the Linux community to be
 matched only by Emacs.
 They both are the standard advanced text editors
-of the open source community
+of the free software and open source communities
 and have been developed for decades.
 This document describes the Vim editor
 and proposes a set of enhancements of the user
@@ -74,9 +78,9 @@ The purposes of this document are:
 \begin{itemize}
   \item to help new users in grasping Vim essentials
   and convenient practices.
-  \item To make a sound overview of the editor available.
+  \item To attain a sound overall description of the editor.
   \item To record the view of the editor that
-  an user (me) has after $10$ years of usage.
+  a user (me) has after $10$ years of usage.
   \item To confront my usage with that of other experienced
   users. This is helpful for me, but also for the other users
   as they might benefit from this content and from discussions
@@ -84,15 +88,9 @@ The purposes of this document are:
   \item To propose some enhancements to Vim through simple plugins.
 \end{itemize}
 
-Advanced users might just focus on the proposed enhancements and
-in some of the basic topics, such as in using numerous terminals 
-(it works pretty well!) and using sessions (Section~\ref{sessions}).
-These make Vim very convenient e.g. for users that edit multiple files,
-run scripts and compile programs and latex files.
-I used for years multiple terminal abs and windows,
-and sometimes a byobu/screen terminal multiplexer.
-Nowadays I am using standard Vim windows as terminals
-such as described in Section~\ref{terminals}.
+Advanced users might just skim through the reference presented
+at the basic Section~\ref{basics},
+and focus on the proposed enhancements.
 
 I've had experience with other editors, e.g. Kate, gedit, and Notepad2.
 I used Vim for writing and editing computer code (Python, Javascript, C++, ChucK, bash, etc), markup languages (HTML, CSS, RDF, Markdown, \LaTeX, etc) and binary files.
@@ -105,7 +103,7 @@ It is very useful because:
   and does not (by standard) insert special charaters (e.g. for formating, with binary instructions).
   \item It has a powerful architecture and set of commands.
   \item It is highly configurable and most often the users
-  has a set of commands.
+  have a set of commands for standard settings and hacks kept in the vimrc and other configuration files.
 \end{itemize}
 
 The standard capabilities of the editor
@@ -117,16 +115,33 @@ Accordingly, there are many possible enhancements,
 and Section~\ref{issues} report the most prominent of them
 for me and potential workarounds made available as plugins.
 
+This document is written is a DRY KISS
+(Don't Repeat Yourself, Keep It Simple Stupid) style.
+Complex is to master the use of Vim
+and one finds sound
+references in help files and a nice vimrc.
+Therefore the following content should be kept
+as uncomplicated and original as possible.
+Also, because of Vim's complexity and entailed
+bond of this document to my usage,
+there is an anthropological component
+which is evdent in the use of the first person
+in sentences.
+This can be understood as anthropological computation
+or physics~\cite{anPh,anPh2} and observed to help
+in the technological groundwork of civil society.
+
+
 % Vi and Vim
 \subsection{Historical note}
 Vim was first released publicly in 1991.
 It is a cross-platform GNU licensed free and open source extended clone of Bill Joy's vi text editor.
 Vim's development is coordinated (and performed) since the beginning
 mainly by Bram Moolenaar.
-Today, current stable version is reported with 8.0.1173
-in the commit messages but tagged with 8.0.1257.
-I found no explicit alpha or beta versions
-and found no scientific article on Vim (this might be the first one).
+Today, current bleeding-edge version is 8.0.1257.
+I found no explicit stable, alpha or beta versions
+and found no scientific article on Vim 
+(this might be the first one).
 
 \section{Basics}\label{basics}
 Vim's interface is text-based.
@@ -138,6 +153,8 @@ Vimscript is the internal language of Vim,
 and is often used for scripting by users
 although other languages might be used 
 (e.g. Python, Perl, Lua, Racker, Ruby and Tcl). 
+Each line of a Vimscript is a command on the
+command-line mode.
 
 \subsection{The bare minimum}\label{minimum}
 You open a file with Vim by executing
@@ -149,7 +166,7 @@ To insert characters, move your
 cursor to the desired location an press i,
 which puts Vim in the insert mode.
 Go back to normal mode by pressing
-\texttt{<ESC>}.
+\texttt{<ESC>} for \texttt{<C-C}.
 You save the file by typing \texttt{:w<CR>},
 you exit vim by typing \texttt{:q<CR>}.
 
@@ -162,7 +179,7 @@ Examples of such \texttt{<anything>} are:
 colour, navigation, :vs, vimtutor.
 Type 
 \texttt{:h usr\_toc<CR>}
-to access the official Vim User Manual,
+to access the official User Manual,
 which is considerably lengthy and complex
 and is usually not read by users for a few years.
 In learning Vim, one
@@ -191,6 +208,156 @@ There are mailing lists and IRC channels listed in these
 sites for getting help on Vim usage and development.
 
 % any other commands? files?
+\subsection{Namespaces and state lists}
+Vim is a text editor ouroboros because
+text and writting alters text and writting.
+You have namespaces where tokens have scalar
+or complex values.
+In Vimscript, the colon commands (also Ex or command-line commands) are related through spaces, punctuations and keywords (see \texttt{:h script}.
+
+\subsubsection{Commands and mappinds}
+There are commands, typing sequences which trigger automated actions,
+for each mode:
+\begin{itemize}
+	\item in Normal mode all keys are mapped to commands.
+		There redundancy and additional commands
+		using Ctrl and Shift keys.
+		Some keys expect a second key,
+		and have available possibilities,
+		specially the z and g.
+	\item in the other modes, the sequences available for mappings are more obvious. One should look at \ttt{:h index} to know about all the mappings.
+\end{itemize}
+
+\ttt{C-\textbackslash} is always reserved for extensions,
+which make it a safe namespace to use (while there are no
+such extensions).
+
+A colon command can be written as a string
+and executed by the \tttt{:execute} colon command.
+E.g. \tttt{:execute 'vs afile.txt'}.
+As there are colon commands that execute commands in other
+modes, e.g. \tttt{:normal ?\^def },
+the \tttt{:execute} is the way to build commands in any mode:
+\tttt{:execute 'normal' tabn 'gt'}.
+
+
+\subsubsection{Variables}
+There are some types of variables in Vim:
+\begin{itemize}
+	\item Environment variables: names start with \$ an hold system
+		variables, such as \tttt{\$PATH} and \tttt{\$PWD}.
+	\item Option variables: names start with a \& and are meant to control the behavior of the editor.
+		One might change a value through set or let, e.g.
+		\tttt{:set bg=light} or \tttt{:let \&bg=light}.
+	\item Registers: start with @ and are meant for automation and transfer of texts (copy and paste).
+	\item Internal variables are created with let and preferably have a prefix:
+	\tttt{b:}, \tttt{w:}, \tttt{t:}, \tttt{l:}, \tttt{s:},
+		are local to the buffer, window, tab page, function, and
+		sourced Vim file, respectively.
+ \tttt{v:}, \tttt{g:} are global, the first are predefined by Vim.
+		\tttt{a:} is for function arguments.
+		If there is no prefix, the variable is global or internal to a function if occurring inside a function.
+		More about internal variables in \tttt{:h internal-variables}.
+	\item The values of variables can be scalars, strings, lists, dictionaries, function references, etc (\tttt{:h eval}).
+\end{itemize}
+You can echo any of such variables or use in expressions.
+Notice that you will only be able to echo a \tttt{b:} variable inside
+the buffer where it is defined.
+For all the Vimscript capabilities, including loops, conditionals,
+and builting functions, refer to \ttt{:h vim-script}.
+Rudimentary classes are possible through dictionaries,
+but the language is otherwise overall quite powerful in
+dealing this text and commands.
+
+
+\subsubsection{State lists}
+Vim keeps a number of lists which expresses the state of the editor.
+These are examples of useful lists:
+\begin{itemize}
+	\item The entered commands are accessed through \tttt{:hist a}. the tokens a / s : can be used for specific types of commands, such
+		are search and colon commands.
+	\item File buffers are kept with numeric ids. See buffers with \tttt{:ls} and load it to the window with \tttt{:b <num or token in file name>}.
+	\item The windows open are listed is \tttt{:ls} with markers and in \tttt{:tabs}.
+	\item Tabs list can be reached through \tttt{:tabs}.
+		It is usual both to show and hide the tabs bar (mapping in~\cite{vimrc}).
+	\item Jumps are available through \tttt{:jumps}.
+		One repositions the cursor at each jump position through \ttt{C-o} and \ttt{C-i}.
+	\item An undo list can be reached with \tttt{:changes}.
+	\item Quickfix and Location lists which are populated through \tttt{:make} and \tttt{:grep}.
+
+	\item Tags list
+	\item Argument list
+\end{itemize}
+
+A file with information about the state of the editor
+can be achieved through: \tttt{:source \$VIMRUNTIME/bugreport.vim},
+and the file has the commands to access various settings of Vim.
+Another good list of commands to know about Vim's state is kept on
+\url{http://vim.wikia.com/wiki/Displaying_the_current_Vim_environment}.
+I would specially highlight the \tttt{:syntax} command because
+it displays the tokens and related type of meanings when run
+inside e.g. a \tttt{.vim} or help file.
+
+You can keep track of states though commands and persistent visual
+cues, specially the tabs bar, the status line, and the line
+reserved for the command-line.
+For state persistense, one might keep an undo file for each file as
+in~\cite{vimrc}.
+Sessions are easy to manage, enabling one to save and load the
+editor's state, with the opened windows, tabs, buffers, etc.
+I use the mappings in~\cite{vimrc} because they keep the sessions
+in a reasonable directory and makes it easier to remember and tweak
+then the standard commands to deal with sessions.
+More information in \tttt{:h sessions}.
+One might use \tttt{:h views} to keep the state of one window,
+but sessions keep all the states from all windows.
+This entails a strategy to deal with Vim that is similar to
+the use of Byobu/Tmux/Screen.
+The main limitation I found to this approach is that
+Vim is not keeping track of the terminals opened.
+If you open a terminal inside Vim with the \tttt{:term}
+command, you will save the session as usual, but when loading
+you get dummy empty windows for them and an error message.
+Screen and Tmux are the most popular terminal multiplexers.
+Byobu, built on top of them, has awesome keyboard shortcuts
+for managing sessions, windows and splits of terminals.
+Byoby/Screen/Tmux keep the state for future load.
+
+Because browsing the interface in Vim is so fast,
+and it favors copy and paste of text,
+I tend to keeep a tab with some terminals:
+one with an IPython shell, another two for compiling latex
+and opening PDF files (e.g. with \tttt{\$ evince <filename.pdf>}).
+One enters normal mode in terminal with \tttt{C-W N}
+and it is very corfortable to copy and browse the bash history of the
+terminal.
+I found the mappings on~\cite{vimrc} very helpful for directing
+editor focus to splits (\ttt{C-hjkl}) and tabs (\tttt{gr}, \tttt{gt}),
+which I make available across terminal and normal modes.
+But I've been thinking on using \ttt{C-} commands also
+for tabs (not only for splits).
+
+A good strategy I find is to have selective visual cues of the state to make persistent or hide. A mapping to toggle each of them.
+Now I toggle byobu/screen/tmux bar with \ttt{F5},
+status line and tabs bar with \ttt{localleader-TB} according to script~\cite{vimrc}.
+I am mostly using the cleanest setting, toggling the tabs bar sometimes. Numbering is always there. I rarely turn them off but keep the mappings \ttt{leader-nN} just in case.
+Instead of keeping the status bar, I use \ttt{C-g} to know about the
+file and \ttt{gC-g} to know more and rarily.
+It seems not possible to remove the statusbar between splits.
+After asking around and and experiments, I realized that it seems
+reasonable to keep at least one line dividing the windows, so
+if it comes to it, I just \tttt{set statusline=-}.
+Unfortunatelly, as far as I could dig, one will need to enter
+Vim code to enable a horizontal split without losing a line.
+My ideal of this feature would be to have a visual cue of the
+first and/or last line of the windows in the splits in the number
+column, or complete the spaces and empty chars with \$\$\$\$ or so.
+
+
+
+
+
+
 
 \subsection{Using Vim's modes}
 Vim has some basic and fully implemented modes of usage:
@@ -325,6 +492,55 @@ Most important help files on Netrw
 \subsection{Tabs, splits, buffers and namespaces}
 \& \% \$ and the following
 \subsection{Mappings and abbreviations}
+\texttt{:h index} shows all the mappings.
+Every letter and character in the keyboard is used.
+In Normal mode: <TAB> is the same as <C-I>,
+<BS> and <C-H> is the same as h (<C-H> don't sowk here).
+<C-J> and <C-N> is the same as j.
+C-P is the same as k.
+Space is same as l
+CTRL-[ <Esc> are not used
+C-\ a-z reserved for extensions
+CTRL-\_ not used
+
+learn how to use filters ! and !!
+% .%#: registers
+\url{https://github.com/vim/vim/blob/master/runtime/doc/index.txt}.
+
+my usage of <C-(HJKL)> for jumping through windows.
+<C-L> is lost though, and require :redraw or :e
+
++ same as <CR> which is not that useful.
+
+Many ][ combinations are not used, e.g.
+with abhjklfg
+\_ might be used as a more powerful \^, leaving it free for mappings.
+
+Directions, home, end, page up and down, insert, all have mappings
+in more centraly located keys.
+unbounded: g,z,[]
+
+Del is same as x
+
+text objects: redundancy between a/i(),{},[],<>
+
+many entries available through the g commands
+z for folds, spell checking and some movements (mainly when wrap is set).
+
+\subsubsection{Insert mode}
+All standard char keys are used for entering chars on text.
+<C-G>jk can be achieved by <C-O>jk which is more powerful
+in moving through multiple lines.
+j-[ same as ESC
+		CTRL-\ a - z	reserved for extensions
+		CTRL-\ others	not used
+
+<C-J> and <C-M> are <CR>
+
+
+
+
+
 \subsection{Macros and registers for copy and paste}
 \subsection{History of commands}
 \subsection{Lists of Vim state variables}
@@ -365,12 +581,20 @@ Potential enhancements to this document are:
   \item The inclusion of reading emails and connecting over ssh.
 \end{itemize}
 
+Potential next steps in using Vim:
+\begin{itemize}
+  \item Measure the performance text mining routines in Vim against those implemented in C or Python.
+  \item Make a functionalities to list all the mappings available in each mode and the typing combinations which are available.
+\end{itemize}
+
+
+
 \appendix
 \section{Example of usage session}
 % open file, split, tab, find, replace char,
 % append to line, visual block, etc.
 \section{Key naming in Vim documentation}
-% CTRL, <C-X> <C-S-X>
+% CTRL, <C-X> <C-S-X>s 1250
 % Special chars..
 \section{My vimrc file and usage}
 In this Appendix is my vimrc file.
@@ -386,6 +610,16 @@ Save and close windows with \texttt{\\w} and \texttt{\\q}.
 
 
 \section{Overview of my usage of Vim}
+% move to usage appendix TTM
+in some of the basic topics, such as in using numerous terminals 
+(it works pretty well!) and using sessions (Section~\ref{sessions}).
+These make Vim very convenient e.g. for users that edit multiple files,
+run scripts and compile programs and latex files.
+I used for years multiple terminal abs and windows,
+and sometimes a byobu/screen terminal multiplexer.
+Nowadays I am using standard Vim windows as terminals
+such as described in Section~\ref{terminals}.
+
 % sessions, terminal for ipython3 and evince
 % alternative with byobu or many terminals
 % historical usage, other editors,
