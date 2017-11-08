@@ -71,7 +71,8 @@ set statusline+=%f\                          " filename
 set statusline+=%h%m%r%w                     " status flags  
 set statusline+=\[%{strlen(&ft)?&ft:'none'}] " file type  
 set statusline+=%=                           " right align remainder  
-set statusline+=%{strftime(\"%l:%M:%S,\ %a\ %b\ %d,\ %Y,\ \ \ \ \ \ \")}
+" uncomment to add time and date to statusline (disabled because using byobu)
+" set statusline+=%{strftime(\"%l:%M:%S,\ %a\ %b\ %d,\ %Y,\ \ \ \ \ \ \")}
 set statusline+=0x%-8B                       " character value  
 set statusline+=%-14(%l/%L,%P,%c%V%)               " line, character  
 " set statusline=%<%f%h%m%r%=%{strftime(\"%l:%M:%S\ \%p,\ %a\ %b\ %d,\ %Y\")}\ %{&ff}\ %l,%c%V\ %P
@@ -213,6 +214,7 @@ nnoremap <leader>" ea"<ESC>hbi"<ESC>lel<CR>
 vnoremap <leader>" <ESC>`>a"<ESC>`<i"<ESC>
 vnoremap <leader>' <ESC>`>a'<ESC>`<i'<ESC>
 nnoremap <leader>a :exec "normal li".nr2char(getchar())."\e"<CR>
+nnoremap <leader>A  :call InsertAfterAfter()<CR>
 nnoremap <leader>b :Sex<CR><C-W>T
 nnoremap <leader>B :Sex<CR>
 nnoremap <leader>c :<C-F>
@@ -220,6 +222,7 @@ nnoremap <leader>C :call ListSessions()<CR>
 " nnoremap <leader>d :args ~/repos/percolation/**/*.py<CR>
 nnoremap <leader>d :call SaveSession()<CR>
 nnoremap <leader>D :call SaveNewSession()<CR>
+" assert latest is saved as a user practice
 nnoremap <leader>e :call LoadSession()<CR>
 nnoremap <leader>E :call InsertSession()<CR>
 " nnoremap <leader>r :set shiftround!<CR>
@@ -235,6 +238,7 @@ nnoremap <leader>L :set list!<CR>
 nnoremap <leader>n :set number!<CR>
 nnoremap <leader>N :set relativenumber!<CR>
 nnoremap <leader>p :reg<CR>
+nnoremap <leader>P :vs ~/.vim/notes.md<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>r :redraw!<CR>
 "-> nnoremap <leader>R :call PythonShowRun()<CR>
@@ -250,6 +254,11 @@ function! InsertBeforeAfter()
   let a = nr2char(getchar())
   :exec "normal i".a."\e"
   :exec "normal lli".a."\e"
+endfunction
+function! InsertAfterAfter()
+  let a = nr2char(getchar())
+  :exec "normal a".a."\e"
+  :exec "normal lla".a."\e"
 endfunction
 
 function! SaveSession()
@@ -371,6 +380,10 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+tnoremap <C-J> <C-W><C-J>
+tnoremap <C-K> <C-W><C-K>
+tnoremap <C-L> <C-W><C-L>
+tnoremap <C-H> <C-W><C-H>
 nnoremap <space> za
 inoremap jj <ESC>
 " inoremap kk <CR><UP>
@@ -383,6 +396,9 @@ inoremap jj <ESC>
 " nnoremap <nowait> kj O<ESC>
 " nnoremap <ESC> ge
 nnoremap gr gT
+tnoremap gr <C-W>:tabp<CR>
+tnoremap gt <C-W>:tabn<CR>
+
 " }}}
 
 " experimental mappings ---------------------- {{{
@@ -401,3 +417,14 @@ onoremap iN{ :<c-u>normal! F}vi{<cr>
 " }}}
 " }}}
 
+" Useful commands which I might need to recall:
+" C-A, C-X to add and subtract from number
+" check on usage of bracket commands in Python
+" start using tags seriously (and find that video from Bram)
+" i_C-R to paste register
+" i_C-NP to next-previous word completion
+" i_C-UTY
+" C-W_orR
+" Review the '`commands
+" g#*<DIjks
+" zgGwWv
