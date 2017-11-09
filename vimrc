@@ -2,6 +2,7 @@
 " reworked for usage with Vim 8, True Colors (24 bits) and tmux
 set nocompatible
 set termguicolors
+" to enable true colors inside Byoby/Tmux
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 set viminfo=%,!,'1000,:1000,n~/.vim/viminfo
@@ -417,6 +418,17 @@ onoremap iN{ :<c-u>normal! F}vi{<cr>
 " }}}
 " }}}
 
+" autocommands --- {{{
+function! RotateRegisters()
+  let @h=@j
+  let @j=@k
+  let @k=@l
+  let @l=@.
+endfunction
+au InsertLeave * call RotateRegisters()
+
+" }}}
+
 " Useful commands which I might need to recall:
 " C-A, C-X to add and subtract from number
 " check on usage of bracket commands in Python
@@ -428,3 +440,4 @@ onoremap iN{ :<c-u>normal! F}vi{<cr>
 " Review the '`commands
 " g#*<DIjks
 " zgGwWv
+" :h pi_getscript.txt pi_vimball.txt
