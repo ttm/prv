@@ -586,7 +586,7 @@ This might be the least popular mode.
 One might use \tttt{q:,/,?} to have a window
 with colon or search command history to be edited normaly,
 and the chosen command can be run with \ttt{CR}.
-Vimscript was largerly based on the ex editor language~\cite{ex},
+Vimscript was largerly based on the ex editor~\cite{ex},
 and a more advanced user might use it for prototyping
 by defining mappings and settings and managing sessions and scripts
 propably in a \tttt{plugin/} folder of a directory in \tttt{:echo \&runtimepath}.
@@ -688,8 +688,8 @@ If using 8 or 16 bit colors, Vim uses the color pallete from the
 terminal, if using true colors each color is defined directly.
 Settings for using true colors inside Byobu/Tmux involve tweakings
 and are available in~\cite{vimrc}.
-Good color schemes to use with true colors are Gruvbox~\cite{gruv}
-and Solarize~\cite{sol}.
+Good color schemes to use with true colors are Gruvbox
+and Solarize.
 One might source syntax files at any time to change syntax, usually
 though linking tokens to syntax groups with
 \tttt{:syntax keyword <group\_name> <token1> <token2> <token3> ...}
@@ -802,7 +802,12 @@ to achieve the DRY KISS style described in Section~\ref{intro}.
         very appreciated.
         One can both obtain an ascii representation of a binary image (e.g. JPG, PNG),
         and can directly render ascii charts from data using cues such are shape, position
-        and color..
+        and color.
+      \item Redirecting the commands that usually show the results in a 'more' interface,
+        which cannot be searched nor copied,
+        to a parsed and linked quickfix or location window.
+        The basic idea is to use \tttt{:redir} command to redirect the output
+        of such commands with \tttt{:se nomore}.
       \item Slide presentations. I've been using some automation for browsing
         slides and opening figures and some Vim users asked for the settings and
         commands. They are very elementary use of registers being executed over
@@ -813,16 +818,43 @@ to achieve the DRY KISS style described in Section~\ref{intro}.
 \end{itemize}
 
 \subsection*{Acknowledgments}
-FAPESP, Vim developers and documentation maintainers,
+FAPESP (project 2017/05838-3); Vim developers and documentation maintainers;
 Vim user community. 
 
 \appendix
 \section{Example of usage session}
-% open file, split, tab, find, replace char,
-% append to line, visual block, etc.
-\section{Key naming in Vim documentation}
-% CTRL, <C-X> <C-S-X>s 1250
-% Special chars..
+I usually begin by opening a file or directory
+with \tttt{\$ vim <filename>}.
+The color scheme is alternated between
+blue and GruvBox with
+\tttt{:colo gruvbox} and \tttt{:colo blue}.
+I open an vertical split and then move
+the window to a new tab using
+\tttt{:vs} and \ttt{C-W\_T}.
+I then search tokens related to
+the enhancements I want to make or
+the knowledge I want to acquire.
+I go back to the previous tab with \tttt{gr}
+and make a global replace with
+\tttt{:\%s/<this>/<that/g}.
+On adding dots to sentences,
+I record in the \tttt{"q} register
+the sequence \tttt{jA.jj},
+using it as a macro 10 times by
+\tttt{10@q}.
+I move to the other tab with \tttt{gt}
+and open a terminal window with \tttt{:term}
+for compiling latex files.
+I start another terminal with \tttt{<C-W> :term}
+for opening the resulting PDFs with evince.
+If any new idea comes to mind and I have time,
+\tttt{\textbackslash\textbackslash s} opens 
+my vimrc~\cite{vimrc} for editing and \tttt{\textbackslash s}
+sources it.
+If there is e.g. code or notes in other projects I am working
+on, I reach them through \tttt{<Alt-arrows>} as other Vim instances
+in Byobu/Tmux sessions and windows.
+
 \section{My vimrc file and usage}
 In this Appendix is my vimrc file.
 Although it has comments, one should
@@ -831,73 +863,93 @@ not understand, as a thorough explanation
 of the file is tedious and out of the scope
 of this document.
 
-Mostly, I toggle the status line with \texttt{\\\\B}
-and the tab line with \texttt{\\\\T}.
-Save and close windows with \texttt{\\w} and \texttt{\\q}.
+In using Vim with my vimrc file~\cite{vimrc},
+I mostly toggle the status line with \texttt{\textbackslash\textbackslash B}
+and the tab line with \texttt{\textbackslash\textbackslash T}.
+Save and close windows with \texttt{\textbackslash w} and \texttt{\textbackslash q}.
+The mappings for transitioning through splits and tabs
+are also used constantly.
 
-\section{Example of notations on mappings}\label{notes}
-\texttt{:h index} shows all the mappings.
+\section{Example of notes on mappings}\label{notes}
+\texttt{:h index} shows all the default mappings
+while \tttt{:map} shows the user-defined mappings.
+By considering such information, one can make
+useful observations exemplified in this Appendix.
+
 \subsection{Normal mode}
 Every letter and character in the keyboard is used.
-In Normal mode: <TAB> is the same as <C-I>,
-<BS> and <C-H> is the same as h (<C-H> don't sowk here).
-<C-J> and <C-N> is the same as j.
-C-P is the same as k.
-Space is same as l
-CTRL-[ <Esc> are not used
-C-\ a-z reserved for extensions
-CTRL-\_ not used
+In Normal mode: \ttt{TAB} is the same as \ttt{C-I},
+\ttt{BS} and \ttt{C-H} is the same as h.
+\ttt{C-J} and \ttt{C-N} is the same as j.
+\ttt{C-P} is the same as k.
+Space is same as l.
+\ttt{C-[} and \ttt{Esc} are not used
+\tttt{<C-\textbackslash> a-z} is reserved for extensions
+\ttt{C-\_} not used.
+\tttt{+} is the same as \ttt{CR} and they are both not very useful.
+Del is same as x.
 
-learn how to use filters ! and !!
-% .%#: registers
-\url{https://github.com/vim/vim/blob/master/runtime/doc/index.txt}.
-
-my usage of <C-(HJKL)> for jumping through windows.
-<C-L> is lost though, and require :redraw or :e
-
-+ same as <CR> which is not that useful.
-
-Many ][ combinations are not used, e.g.
-with abhjklfg
-\_ might be used as a more powerful \^, leaving it free for mappings.
+Many \tttt{][} combinations are not used, e.g.
+with \tttt{abhjklfg}.
+The \tttt{\_} command might be used as a more powerful \tttt{\^},
+leaving it free for mappings.
 
 Directions, home, end, page up and down, insert, all have mappings
 in more centraly located keys.
 unbounded: g,z,[]
 
-Del is same as x
+The \ttt{C-(HJKL)} commands are redundant,
+with the exception of \ttt{C-L} which redraws the screen,
+so it is a reasonable choice to use them to move focus
+of the editor to splits in the \tttt{hjkl} directions.
 
-text objects: redundancy between a/i(),{},[],<>
-
-many entries available through the g commands
-z for folds, spell checking and some movements (mainly when wrap is set).
+Many key combinations are available for new mappings through the \tttt{g}
+and \tttt{z}, and \tttt{v} commands.
+They have typical uses, e.g. \tttt{z} for folds,
+spell checking and some movements (mainly when wrap is set).
 
 \subsection{Insert mode}
 All standard char keys are used for entering chars on text.
-<C-G>jk can be achieved by <C-O>jk which is more powerful
+\tttt{<C-G>(j,k)} can be achieved by \tttt{<C-O>(j,k)} which is more powerful
 in moving through multiple lines.
-j-[ same as ESC
-		CTRL-\ a - z	reserved for extensions
-		CTRL-\ others	not used
-
-<C-J> and <C-M> are <CR>
-
-\section{Overview of my usage of Vim}
-% move to usage appendix TTM
-in some of the basic topics, such as in using numerous terminals 
-(it works pretty well!) and using sessions (Section~\ref{sessions}).
-These make Vim very convenient e.g. for users that edit multiple files,
-run scripts and compile programs and latex files.
-I used for years multiple terminal abs and windows,
-and sometimes a byobu/screen terminal multiplexer.
-Nowadays I am using standard Vim windows as terminals
-such as described in Section~\ref{terminals}.
+\ttt{C-[} is the same as \ttt{ESC}.
+\ttt{C-J} and \ttt{C-M} are \ttt{CR}.
+\tttt{<C-\textbackslash> a-z} is reserved for extensions,
+other combinations with \ttt{C-\textbackslash} are not used.
 
 \section{My \tttt{:version}}
+I should keep the output of \tttt{:version} executed on the system
+in which I wrote this document in this link:
+\url{}.
+It was compiled with this Makefile~\cite{makefile}
+in a 16.04 LTS Ubuntu Linux,
+and is tagged as 8.0, Included Patches 1-1173.
 
-% sessions, terminal for ipython3 and evince
-% alternative with byobu or many terminals
-% historical usage, other editors,
-% most often edited file types
-
+\begin{thebibliography}{99}
+\fontsize{11}{0}\selectfont
+\bibitem{anPh}
+	Anthropological physics and social psychology in the critical research of networks. Complex Networks Digital Campus (CS-DC'15).
+	Available at \url{https://youtu.be/oeOKYc3-nbM}
+\bibitem{anPh2}
+	Fabbri, R. What are you and I? [anthropological physics fundamentals], 2015. Available at \url{https://www.academia.edu/10356773/What_are_you_and_I_anthropological_physics_fundamentals_}
+\bibitem{ouroWiki}
+  Ouroboros. (2017, November 2). In Wikipedia, The Free Encyclopedia. Retrieved 22:19, November 9, 2017, from \url{https://en.wikipedia.org/w/index.php?title=Ouroboros&oldid=808392809}
+\bibitem{vimrc}
+	Fabbri, R. (2017). A reasonable vimrc file. Available at \url{https://raw.githubusercontent.com/ttm/vim/master/vimrc} 
+\bibitem{ex}
+  Ex (text editor). (2017, March 22). In Wikipedia, The Free Encyclopedia. Retrieved 22:22, November 9, 2017, from \url{https://en.wikipedia.org/w/index.php?title=Ex_(text_editor)&oldid=771621020}
+\bibitem{tokipona}
+	Fabbri, R. (2017). A Toki Pona Python Package and Vim Syntax Highlighting. Available at \url{https://github.com/ttm/tokipona} 
+\bibitem{tpLang}
+	Lang, S. (2014). Toki Pona: the language of good. Tawhid Publishing.
+    ISBN-10: 0978292308, ISBN-13: 978-0978292300.
+\bibitem{aa1}
+	Fabbri, R., Fabbri, R., Vieira, V., Penalva, D., Shiga, D., Mendonça, M., Negrao, A., Zambianchi, L., \& Thumé, G. (2013). AA: The Algorithmic Autoregulation (Distributed Software Development) Methodology. RESI. From \url{https://arxiv.org/abs/1604.08255}
+\bibitem{aa2}
+	Fabbri, R. (2017).
+The Algorithmic-Autoregulation (AA) Methodology and Software:
+a collective focus on self-transparency. ENMC2017. From \url{https://github.com/ttm/ensaaio/raw/master/emc/article.pdf} 
+\bibitem{makefile}
+	Fabbri, R. (2017). The Makefile with which I compiled Vim for this article. Available at \url{https://raw.githubusercontent.com/ttm/vim/master/Makefile} 
+\end{thebibliography}
 \end{document}
