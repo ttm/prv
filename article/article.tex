@@ -17,8 +17,7 @@
 \usepackage[utf8]{inputenc}
 \newcommand{\ttt}[1] {
 	\texttt{<#1>}}
-\newcommand{\tttt}[1] {
-	\texttt{#1}}
+\newcommand{\tttt}[1]{\texttt{#1}}
 
 \begin{document}
 \title{An anthropological account of the Vim editor:\\
@@ -127,7 +126,7 @@ as uncomplicated and original as possible.
 Also, because of Vim's complexity and entailed
 bond of this document to my usage,
 there is an anthropological component
-which is evdent in the use of the first person
+which is evident in the use of the first person
 in sentences.
 This can be understood as anthropological computation
 or physics~\cite{anPh,anPh2} and observed to help
@@ -161,6 +160,8 @@ command-line mode.
 This section can be thought as a tutorial
 that focuses on the namespaces, i.e. sets of tokens
 that carry values or triggers procedures.
+One should see Appendix~\ref{keys}
+to understand the notation vim uses.
 
 \subsection{The bare minimum}\label{minimum}
 You open a file with Vim by executing
@@ -227,17 +228,17 @@ for each mode:
 		There is redundancy and additional commands
 		using Ctrl and Shift keys.
 		Some keys expect a second key,
-		and have available possibilities,
+    and have combinations not used (available for new mappings),
 		specially the z and g.
     See Section~\ref{normal} and Appendix~\ref{notes}
     for more insights into the commands available in the
     normal mode.
 	\item In the other modes, the sequences available for mappings are more obvious and abundant.
-		One should look at \ttt{:h index} to know about all the standard mappings
+		One should look at \tttt{:h index} to know about all the standard mappings
 		and use \tttt{:map} to list the user-defined mappings.
 \end{itemize}
 
-\ttt{C-\textbackslash} is always reserved for extensions,
+\ttt{C-\textbackslash} is often reserved for extensions,
 which makes it a safe namespace to use (while there are no
 such extensions).
 
@@ -254,9 +255,9 @@ e.g.
 \subsubsection{Variables}
 There are some types of variables in Vim:
 \begin{itemize}
-	\item Environment variables: names start with \$ an hold system
+	\item Environment variables: names start with \$ and hold system
 		variables, such as \tttt{\$PATH} and \tttt{\$PWD}.
-	\item Option variables: names start with a \& and are meant to control the behavior of the editor.
+	\item Option variables: names start with \& and are meant to control the behavior of the editor.
 		One might change a value through set or let, e.g.
 		\tttt{:set bg=light} or \tttt{:let \&bg=light}.
 	\item Registers: start with @ and are meant for automation and transfer of texts (copy and paste).
@@ -274,15 +275,14 @@ You can echo any of such variables or use in expressions.
 Notice that you will only be able to echo a \tttt{b:} variable inside
 the buffer where it is defined.
 For all the Vimscript capabilities, including loops, conditionals,
-and builting functions, refer to \ttt{:h vim-script}.
+and builtin functions, refer to \tttt{:h vim-script} and Section~\ref{script}.
 Classes are possible only in rudimentary forms, e.g. through dictionaries,
 but the language is otherwise overall quite powerful,
-specially in dealing with text and editor behavior, as expected
+specially in dealing with text and editor behavior, as expected.
 
 
 \subsubsection{State lists}\label{state}
-Vim keeps a number of lists which expresses the state of the editor.
-These are examples of useful lists:
+Vim keeps a number of useful lists which expresses the state of the editor:
 \begin{itemize}
 	\item The entered commands are accessed through \tttt{:hist a}. 
     The tokens a / s : can be used for specific types of commands, such
@@ -296,11 +296,16 @@ These are examples of useful lists:
   \item Registers are available through \tttt{:reg} command, as variables and through shortcuts in different modes.
     They also keep track or your copy, edition and deletion and are promptly defined
     by recording a typing sequence with the \tttt{q} normal command.
+    Vim keeps only the last edition, in register \tttt{".}.
+    An autocommand to keep the four latest inserts is in~\cite{vimrc}.
+    A hack to keep the latest deletions and copies in the standard register
+    might follow the same pattern, but use another \tttt{:h event} and
+    monitor register \tttt{""} (maybe also \tttt{"0}).
 	\item An undo list can be accessed with \tttt{:changes}.
 	\item A list with all the sourced scripts in a Vim instance is displayed through \tttt{:scriptnames}.
 	\item The markers defined are listed with the \tttt{:marks} command.
 		These are set by \tttt{mX} in normal mode, where X is the marker identifier.
-		Uppercase letters are cross buffer.
+		Uppercase letters are cross buffers.
 	\item Quickfix and Location lists which are populated through \tttt{:vim} and \tttt{:make}
 		and variations, such as \tttt{:grep}.
 		One might run \tttt{:vim /section/ \%} and then \tttt{:copen}
@@ -323,7 +328,7 @@ These are examples of useful lists:
 	or using commands (e.g. \tttt{:ar ./*}).
 		The file being edited is changed by \tttt{:n} and \tttt{:p} commands,
 		one might perform actions on each file in argument list using \tttt{:argdo}.
-		All files in argument list is also in the buffers list.
+		All files in argument list are also in the buffers list.
     For further information, see \tttt{:h arglist} and Section~\ref{netrw}.
 \end{itemize}
 
@@ -335,7 +340,7 @@ Another good list of commands to know about Vim's state is kept on
 \url{http://vim.wikia.com/wiki/Displaying_the_current_Vim_environment}.
 I would specially highlight the \tttt{:syntax} command because
 it displays the tokens and related type of meanings when run
-inside e.g. a \tttt{.vim} or help file.
+inside e.g. a \tttt{.py}, \tttt{.vim} or help file.
 
 \subsubsection{On the persistence of visual cues about the editor state}\label{visual1}
 
@@ -348,7 +353,7 @@ Sessions are easy to manage, enabling one to save and load the
 editor's state, with the opened windows, tabs, buffers, etc.
 I use the mappings in~\cite{vimrc} because they keep the sessions
 in a reasonable directory and makes it easier to remember and tweak
-then the standard commands to deal with sessions.
+the standard commands to deal with sessions.
 More information in \tttt{:h sessions}.
 One might use \tttt{:h views} to keep the state of one window,
 but sessions keep all the states from all windows.
@@ -374,11 +379,12 @@ and it is very corfortable to copy and browse the bash history of the
 terminal.
 I found the mappings on~\cite{vimrc} very helpful for directing
 editor focus to splits (\ttt{C-hjkl}) and tabs (\tttt{gr}, \tttt{gt}),
-which I make available across terminal and normal modes.
+which I make available across terminal-job and normal modes.
 But I've been thinking on using \ttt{C-} commands also
 for tabs (not only for splits).
 
-A good strategy I find is to have selective visual cues of the state to make persistent or hide. A mapping to toggle each of them.
+A good strategy I find is to have selective visual cues of the state to make persistent or hide
+and a mapping to toggle each of them.
 Now I toggle byobu/screen/tmux bar with \ttt{F5},
 status line and tabs bar with \ttt{localleader-T or B} according to script~\cite{vimrc}.
 I am mostly using the cleanest setting, toggling on the tabs bar and status line sometimes. Numbering is always there. I rarely turn them off but keep the mappings \ttt{leader-n or N} to toggle just in case.
@@ -453,7 +459,8 @@ Most often, one uses:
 and whole page down and up, although these commands might
 be set to scroll a different number of lines.
   \item \texttt{Ctrl+(e,y)} to move the window one line down or up.
-  \item \texttt{(w,b,e)} to move to the next, previous and end-of-next word. There motions iterate over sequences of characters separated
+  \item \texttt{(w,b,e)} to move to the next, previous and next end-of-word.
+    There are motions to iterate over sequences of characters separated
     by special characters (e.g. punctuation and parenthesis) as
     specified by the output of \texttt{:se iskeyword}.
     To iterate over space-separated tokens, use \texttt{W,B,E}).
@@ -471,7 +478,8 @@ The \texttt{),(} commands iterate through sentences,
     A mark is registered by the user in any cursor position
     by typing \texttt{mX}, where X is any letter.
     If X is lowercase, the mark is local to the buffer (the file),
-    if it is uppercase or numeric, it is global to the Vim session.
+    if it is uppercase or numeric, it is global to the Vim session
+    (cross buffers).
 \end{itemize}
 
 There are many more facilities to navigate Vim
@@ -501,15 +509,15 @@ One can exit insert mode by pressing \texttt{<Esc>},
 and Vim will be put in normal mode.
 Most useful commands in insert mode include:
 \begin{itemize}
-  \item \texttt{Ctrl+o} to execute one and only command in normal mode.
+  \item \ttt{C-O} to execute one and only command in normal mode.
 	  This enter a secondary mode (see Section~\ref{modes})
   \item \ttt{C-R} to paste a register (a variable starting with
     '@', defined, copied or recorded through a \tttt{q} command in
     normal mode and as covered in Section~\ref{state}).
   \item \ttt{C-T} to indent current line.
   \item \ttt{C-U,W} to delete all chars from cursor to the beginning of
-    the line, the previous word.
-  \item \ttt{C-N,P} to find next, pervious keywords that match the prefix at hand..
+    the line or to the previous word.
+  \item \ttt{C-N,P} to find next and previous keywords that match the prefix at hand..
   \item \ttt{C-X} commands for scrolling the window with multiple
     \ttt{C-E} and \ttt{C-Y} strokes and for some completion facilities.
 \end{itemize}
@@ -528,7 +536,7 @@ Most useful commands in this mode include:
 
 \subsubsection{Terminal-Job mode}\label{terminal}
 This mode is reported to not have reached a stable usage design
-(see \tttt{:h terminal}.
+(see \tttt{:h terminal}).
 I find that it works exceptionaly well and have used it to run
 scripts in an IPython shell, compile latex files, and even open PDFs and images.
 Vim browsing of windows and text manipulation is well developed,
@@ -550,10 +558,10 @@ for both normal and terminal-job modes, as in~\cite{vimrc}.
 Many commands bridge from Normal to Insertion modes:
 \tttt{csrCSR}, \tttt{iws}, etc.
 These make convenient the replacement of text and populates registers.
-The absence of a short command to insert one token is
+The absence of a short command to insert one char is
 a known issue in Vim.
-Reasonable mappings to insert and append a token to and around
-other tokens are in~\cite{vimrc}.
+Reasonable mappings to insert and append a char to and around
+other char are in~\cite{vimrc}.
 Vim commands are designed to couple operator and motion commands.
 There are many operator commands that take the editor from
 the normal mode to the insert mode, most of them
@@ -561,7 +569,7 @@ favoring deletion or change, as detailed in \tttt{:h operator}.
 Motion commands are described in \tttt{:h motion}.
 
 \subsubsection{Netrw}\label{netrw}
-The standard interface of Vim for browsing file trees in Netrw.
+The standard interface of Vim for browsing file trees is Netrw.
 It starts when you open a directory, such as with \tttt{:e .<CR>}.
 It has solid support for editing remote files (such as over ssh or
 ftp) and handy e.g. mappings to open the files as splits and tabs (specially \tttt{pot}).
@@ -571,19 +579,18 @@ Most useful commands in netrw include:
     \ttt{Delete} removes both.
   \item \tttt{mf} and \tttt{mb} for marking files and bookmarking directories.
   \item \tttt{gb} and \tttt{uU} are used to load directories
-    while marked files might be copied, moved, edited, greped, tagged and migrated
+    while marked files might be copied, moved, edited, grep-ed, tagged and migrated
     to and from the argslist as in \tttt{:h netrw-mf}.
 \end{itemize}
 Last notes:
 there is no insert mode in netrw interface;
 the commands in \tttt{:h netrw-explore} are
-handy for opening the directory of the
+convenient for opening the directory of the
 file being edited;
 further information in \tttt{:h netrw}.
 
 \subsubsection{Ex}
-This might be the least popular mode.
-One might use \tttt{q:,/,?} to have a window
+One might use the normal commands \tttt{q(:,/,?)} to have a window
 with colon or search command history to be edited normaly,
 and the chosen command can be run with \ttt{CR}.
 Vimscript was largerly based on the ex editor~\cite{ex},
@@ -597,7 +604,7 @@ follow documentation from \tttt{:h Ex-mode} for further information.
 \subsection{Standard configuration files and directories and my .vim/vimrc}
 You can check the scripts Vim loads by using the debug script mentioned
 in Section~\ref{state}.
-By default, \tttt{~/.vimrc} and \tttt{~/.vim/vimrc} files are run by Vim at the beginning of the startup.
+By default, \tttt{$\sim$/.vimrc} and \tttt{$\sim$/.vim/vimrc} files are run by Vim at the beginning of the startup.
 One might edit the vimrc file with \tttt{:e \$MYVIMRC}
 and reload it with \tttt{:source \$MYVIMRC}, but
 I use the mappings in~\cite{vimrc} to encourage a continuous enhancement of my settings.
@@ -612,7 +619,7 @@ scripts and sequence of them to be loaded.
 \subsection{Plugins and packages}
 One can see the list of standard plugins
 with \tttt{:h standard-plugin-list} command.
-Any \tttt{plugins/**/*.vim} file inside a directory
+Any \tttt{plugin/**/*.vim} file inside a directory
 listed by \tttt{:se runtimepath} will be loaded
 (e.g. \tttt{.vim/plugin/something/ascript.vim}).
 There are various ways to automate the installation
@@ -638,7 +645,7 @@ in \tttt{:h vimfiles} and are basically set by
 \tttt{:se runtimepath} and conventions inside
 each path therein, such as to look for \tttt{vimrc} files
 and \tttt{plugin/} or \tttt{pack/} directories.
-Vim scripts can be loaded conditionaly,
+Vim scripts can be loaded conditionally,
 e.g. only if a function is used as in \tttt{:h autoload-functions}.
 Example of such are filetype plugins (enabled by in a \tttt{ftplugin/<filetype>.vim} file,
 e.g. inside a plugin directory).
@@ -656,16 +663,16 @@ These are used so often that one might use shortcuts as in~\cite{vimrc}.
 Currently, Vim will download the files for a specific language if
 not found in system.
 
-\subsection{Scripting, Functions, Vimscript and other languages (e.g.  Python)}
+\subsection{Scripting, Functions, Vimscript and other languages (e.g.  Python)}\label{script}
 In Vimscript,
 the colon commands (also Ex or command-line commands) are related through spaces,
-punctuations and keywords (see \texttt{:h script}).
+punctuation and keywords (see \texttt{:h script}).
 Scripting the Vim editor can also be accomplished using other languages,
-as well documented e.g. in \tttt{:h python}.
+as well documented e.g. \tttt{:h python}.
 Functions are defined through colon commands and are called
 inside colon commands e.g. \tttt{:call MyFunction()}
 or \tttt{:echo MyFunction(4)}.
-Notice that functions are not commands but might be binded to them
+Notice that functions are not commands but might be bind to them
 through colon commands e.g. \tttt{nnoremap gF :call MyFunction()<CR>}.
 Executing source files is very straightforward with \tttt{:so
 <filename>.vim},
@@ -673,7 +680,7 @@ and one can always use the Ex mode for rapid scripting.
 
 At the same time, the \tttt{:term} and terminal-job mode make
 scripting other software more convenient, as output is
-proptly navigated and copied. The shell works well for generic use,
+promptly navigated and copied. The shell works well for generic use,
 such as opening images and PDFs through \tttt{\$ eog} and \tttt{\$ evince}.
 See Section~\ref{terminal} for further directions about the terminal.
 
@@ -883,8 +890,8 @@ In Normal mode: \ttt{TAB} is the same as \ttt{C-I},
 \ttt{C-J} and \ttt{C-N} is the same as j.
 \ttt{C-P} is the same as k.
 Space is same as l.
-\ttt{C-[} and \ttt{Esc} are not used
-\tttt{<C-\textbackslash> a-z} is reserved for extensions
+\ttt{C-[} and \ttt{Esc} are not used,
+\tttt{<C-\textbackslash> a-z} is reserved for extensions,
 \ttt{C-\_} not used.
 \tttt{+} is the same as \ttt{CR} and they are both not very useful.
 Del is same as x.
@@ -924,6 +931,36 @@ in which I wrote this document in this link:
 It was compiled with this Makefile~\cite{makefile}
 in a 16.04 LTS Ubuntu Linux,
 and is tagged as 8.0, Included Patches 1-1173.
+
+\section{Key notation and meaning for Vim}
+The tokens \ttt{C-X}, \ttt{S-X} and \ttt{M-X}
+mean \tttt{Ctrl+x}, \tttt{Shift+x} and \tttt{Alt+X}
+(or \tttt{Meta+x}).
+\ttt{A-X} is the same as \ttt{M-X} and refer to
+Alt or Meta keys.
+\ttt{C-X}, \ttt{C-S-X}, \ttt{C-S-x}  and \ttt{C-x} are the same,
+i.e. Vim does not distinguish lower and uppercase 
+letters in \ttt{C-} commands.
+The \ttt{M-x} and \ttt{M-X} (or \ttt{M-S-x} or \ttt{M-S-X})
+are different commands,
+and they are not used by Vim's builtin keys.
+Such \ttt{M-} key combinations are potentially conflicting
+with shortcuts of other programs (e.g. \ttt{M-F10} for a terminal menu),
+but are otherwise a large and safe set of combinations
+for one to use.
+
+In summary,
+one might choose for mappings to overwrite defaults key combinations,
+use combinations not used by Vim (e.g. some of the \tttt{g} and \tttt{z}
+normal commands, \ttt{C-} and \ttt{S-} commands, or any \ttt{M-} and
+\ttt{M-S-} command), or
+create new mappings using \tttt{<leader>} and \tttt{<localleader>}.
+More information about key notation in \tttt{:h key-notation}.
+Default mappings are in \tttt{:h index} and user-defined (and plugin-defined) mappings
+in \tttt{:map}.
+
+
+
 
 \begin{thebibliography}{99}
 \fontsize{11}{0}\selectfont
