@@ -4,9 +4,12 @@
 " Last Change:	2016 Apr 30
 " Remark:	toki pona is a conlang, not a programming language
 
+runtime! ftplugin/tokipona.vim
+
 if exists("b:current_syntax")
     finish
 endif
+let main_syntax = 'json'
 
 syntax clear
 syntax case ignore
@@ -31,4 +34,10 @@ syntax keyword tokiponaNUMBER tu
 highlight link tokiponaNUMBER Identifier
 
 syntax keyword tokiponaNOUN ma selo nimi esun noka sina ona mun lipu sitelen soweli kala mi sijelo jan meli pan mije pipi lukin akesi kulupu poki sike supa ko lupa sinpin len monsi kili insa kute telo kon kasi sewi nasin waso palisa nena luka linja kiwen lawa uta oko tenpo poka mama mani pilin suno tomo ilo ijo
-highlight link tokiponaNOUN Constant
+highlight link tokiponaNOUN Type
+" hi tokiponaNOUN  xxx ctermfg=175 guifg=#ffffff
+
+let b:current_syntax = "tokipona"
+if main_syntax == 'tokipona'
+  unlet main_syntax
+endif
