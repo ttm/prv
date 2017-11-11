@@ -150,10 +150,110 @@ should be followed by  another noun phrase,
 and require no particle. E.g.
 `toki tan jan Pije li pana e sona tawa mi'.
 
-Other particles are: a or kin, o, taso, anu, en, 
-nanpa, seme. mu?, 
+Other particles are:
+\begin{itemize}
+  \item a or kin, emphasis.
+  \item o, vocative or imperative ('jan lukin sitelen o, li wawa')
+  \item taso, means however or 'only' if adjective.
+  \item anu, en: 'or' and 'and'. Used for nouns in nous phrases.
+    For repetition of verbs, repeat li.
+    For object nouns, repeat e.
+    If the noun is complementing a preposition (tawa, lon),
+    one might repeat the preposition.
+    As Toki Pona is a recent language, and is able to cope with
+    variation due to its simplicity, I would advocate for
+    using en and anu wherever there is no ambiguity.
+  \item nanpa, denotes numbering.
+  \item seme, for questions, used next to the thing being asked for.
+    'Why?' might be expressed as
+    'seme la sina pana e moku lon sewi'.
+  \item mu, for animal noises. For me it is not a particle, as in the
+    official dictionary, but a noun.
+    I also like to use it as a verb:
+    'mi pakala e luka. mu mute.
+\end{itemize}
 
-Vocatives should have an o after the noun phase.
+The vocabulary specifies morphosyntactic classes:
+nouns, adjectives, verbs, pre-verbs, adverbs, particles, prepositions, and numbers.
+I find that they might help the user and newcomer, but
+it might also suggest a deviation from what I understand and read:
+the words might be used indistinctly to be the nouns
+(subjects, the predicate when there is no object, objects,
+and preposition complements),
+the adjectives (anything that does not start the noun phrase or follows a pi),
+verbs
+(follows mi or sina or li or a preposition),
+adverbs (follows the verb).
+The pre-verbs (wile, ken, awen, kama, lukin, sona),
+might follow a verb, but might also be understood
+as the verb qualified with the next word,
+which carries a very similar if not identical meaning.
+The pre-verbs are all also defined as other morphosyntactic classes,
+such as adjective, noun, verb.
+The only exception is wile, which is only a pre-verb.
+
+Thus, the classes given in the dictionary dictate little
+in practice:
+jan kala li lape lon ni.
+Where kala, lape and ni are in this phrase
+as adjective, verb and noun,
+and are in the dictionary as noun,
+adjective and adjective.
+
+As far as I can see, one should regard
+the particles li, e, pi, and la
+and punctuation.
+The other tokens of the vocabulary
+might be used in any of the remaining positions.
+Detection:
+\begin{itemize}
+  \item Noun: the first word in a noun phrase.
+    After an 'e' and after a pi,
+    The first word in the sentence if
+    sentence does not start by the verb.
+    Might be in the position of the verb
+    if the sentence has no object.
+  \item Adjective: second word on after an e and after
+    Second word on in the subject phrase if present.
+  \item Verb: after a li, mi or sina.
+    If there is no object, the verb position
+    is often a noun.
+  \item After a preposition,
+    there can be a noun phrase, a verb phrase
+    or nothing.
+  \item Notice that there is ambiguity in the structure
+    introduced by the omission of li after mi and sina.
+    Also, when there is no object, a noun or a verb
+    or an adjective might be in the verb position
+    if there is no object.
+    The prepositional complement is also not defined.
+    (mi moku tawa pali, tawa tomo).
+    So, these are sources of syntactic ambiguities
+    in Toki Pona.
+    They might be solved or minimized by using the semantics
+    of the words.
+    One preliminary effort in this direction might be
+    using the classes in the official dictionary to resolve
+    ambiguities whenever possible.
+    This solution is not optimal in correct POS tagging,
+    and does not solve all possible ambiguities
+    (there are words classified as nouns and adjectives,
+    adjectives and verbs, nouns and verbs, particle and verb).
+
+    Another source of ambiguity is the pre-verbs as described
+    in the literature~\cite{tpLang,pije}.
+    But I find it reasonable to understand them as verbs.
+
+\end{itemize}
+
+Also, the prepositional complement might
+be a noun or a verb.
+I could not come up with a sentence
+where it would be understood as an adjective.
+
+
+
+
 
 \subsection{Further notes}
 The only synonyms on Toki Pona are:
@@ -161,17 +261,12 @@ a and kin; lukin and oko;
 sin or kamako;
 ale or ali.
 
-toki e ni, wile e ni, etc.
-'e ni' can be omitted and : used by itself.
+In formations such as
+toki e ni:, wile e ni:, tan ni: etc.
+'(e) ni' can be omitted and : used alone.
 
 Names are by default transliterated,
-
-
-
-
-
-
-
+but might not be, as described in Section~\ref{mytoki}.
 
 
 % my view
@@ -187,12 +282,104 @@ Names are by default transliterated,
 \end{itemize}
 
 \section{Analysis and hacks for the language}\label{hacks}
+
+\section{Statistics of the vocabulary}
+In~\cite{pije} there is statistics about Toki Pona corpus.
+This section focuses on the statistics of the vocabulary
+and syntactic rules:
+the letters, phonemes, word sizes,
+possible combinations for words and sentences.
+The statistics are in Appendix~\cite{listings},
+and the next paragraph is an overview.
+Python scripts were used to obtain the measurements
+and are available at~\cite{tokipona}.
+
+As described in Section~\cite{basics},
+there is only 14 letters,
+and phonemes respect a few rules.
+There are 120 different words in the official vocabulary,
+4 of them having synonyms.
+A total of 124 tokens.
+Not counting proper nouns (names)
+and punctuation.
+They include X nouns, Y verbs, Z adjectives,
+W prepositions, Y particles, K pre-verbs.
+Of which one might distinguish only between
+the particles and the other J words that
+might be used anywhere a particle will not.
+
+Most often vowels,
+consonants, consonant vs vowel.
+Most often phonemes in general an specific positions..
+Possible phonemes given the rules.
+Comparison of the occurring against the possible.
+
+Syntactic structures:
+Possibilities on noun, verb and prepositional phrases
+and in sentences.
+Counting along the number of words.
+
+
+\section{Synthesis of text}
+The same package~\cite{tokipona}
+has capabilities for synthesizing text.
+Noun, verb and prepositional phrases,
+sentences.
+It also aims at making larger scale texts
+by keeping a record of the used words and structures (context)
+and using stylistic outlines for poems and short narratives.
+
 % number of possible syllables
 % number of possible words of size X (1, 2, 3, 4....).
-% syntax highlighting, change colors on the fly
-% analysis of the language
-% synthesis of sentences and texts
-% hacks from other ppl
+
+\section{Syntax highlighting}
+The same package~\cite{tokipona}
+has a Vim syntax highlighting plugin
+for Toki Pona.
+Instructions for installing and using
+the syntax highlighting is at~\cite{tokipona}.
+
+Basically, it distinguishes the words among the morphosyntactic
+classes according to the official dictionary.
+As a word often belongs to more than one class,
+The precedence of them might be set by the user.
+Also, some classes might be further refined or joined,
+such as by distinguishing only particles and the rest,
+or maybe particles and prepositions and the rest.
+The colors are also promptly changed according to~\cite{vimArt}
+and exemplified in the package documentation.
+
+Currently, the Python package synthesizes the
+syntax file.
+The user has control of class precedence and
+merging.
+The choice of precise coloring schemes
+might involve hacking the colorscheme being
+used in Vim (such as 'blue', 'elflord' and 'gruvbox'),
+and Vim's highlighting schemes as described in~\cite{vimArt}.
+In summary,
+the usage of the package and plugin might be performed
+through the following actions:
+\begin{itemize}
+  \item Installation of the plugin.
+  \item Tweak of the syntax file by hand.
+  \item Running the Python script to generate a new syntax file
+    according to other settings.
+  \item Write a file inside Vim using Toki Pona and save
+    the file with the .tokipona extension.
+    Reload the highlighting scheme whenever you
+    change the syntax file by hand or through the Python script.
+  \item Access the used highlighted groups with :syntax,
+    Access all the highlighting groups with :so \$VIMRUNTIME/syntax/hitest.vim.
+    Change the coloring of a set of terms by associating
+    a used group (e.g. tokiponaADJECTIVE) to an existing group (e.g. Visual):
+    :highlight link tokiponaADJECTIVE Visual.
+    The plugin comes with the :TokiStation command, which opens a window with
+    the files: ijositelen.tokipona, makevimSyntax.py, Highlight Test (created by hitest.vim above), syntax/tokipona.vim.
+    Another tab with shells: python to run over the makeVimSyntax.py and make new syntax/tokipona.vim files. Another with Readme, and PDF documentation. Another with an IPython.
+    Imported tokipona. It resets completely upon command :TokiClose, closing all created windows.
+\end{itemize}
+
 \subsection{Hacks from other people}
 The \url{tokipona.net} has a number of tools,
 just as to transliterate names into Toki Pona phonemes,
@@ -211,7 +398,30 @@ and search in corpus.
     speaker community and the documentation authors.
   \item Corpus-based analysis.
   \item Publication of original texts and translations.
+  \item Make an article written in Toki Pona.
+    I wrote Section~\ref{finalToki}, and believe that
+    a summary in both English and Toki Pona for
+    facilitating the acquisition of context,
+    a reasonable article on some scientific topics is
+    possible.
+    I first conceived something around complexity, statistics, physics, or computer science.
+    But one possibility is to write about linguistics, philosophy, literature
+    or psychology with the partners I write in English.
+    I can start a draft,
+    they might learn the language in a few hours (with or without my help),
+    to contribute, and we can write a short paper.
+  \item Enhance the synthesis of text to yield better contextualized text
+    and stylistic traces, such as for poems and short stories.
+    Give the user the ability to choose the sentences (generate randomly according to
+    previously written or given text,
+    some rules input by the user, the package and the language guidelines,
+    outputs to the screen and asks to keep and discard).
+  \item Enhance the syntax highlighting implementation described in Section~\ref{high}.
+    It uses only syntactic cues to choose POS tags,
+    which might be overcome by using n-grams and
+    further techniques from Natural Language Processing~\cite{POS}.
 \end{itemize}
+
 \subsection*{Acknowledgments}
 FAPESP (project 2017/05838-3); Vim developers and documentation maintainers;
 Vim user community. 
@@ -245,7 +455,69 @@ as happens often in scientific writing
 (kernel is a German word used in English,
 webpage is an English word used in Portuguese).
 
+Proposed notations for numbers seem numerous.
+I tend to think that one might indicate is two numbers
+are multiplying (pi) or are in different scales
+(such as in decimal or binary notations).
+For example, I take luka two to mean 52.
+Or it might not be taken to such level of strictidness,
+for 52 is a reasonable notation for a simple language.
+mi jo e jan sama nanpa 12.
+Or even:
+ona li lon e soweli 27.
 
+Remove the 'li'.
+I've been avoiding e ni: and using only :.
+'ve been omitting the subject if it is the
+same as in the last sentence.
+I've been avoiding also the li sometimes,
+and starting only a predicate + object phrase,
+or a whole phrase altogether.
+
+\input{pos}
+
+
+\section{Final words in Toki Pona}
+toki li nasin e lawa.
+li nasin tawa (pi) toki insa.
+
+% jan li ken toki li ken pali pona e toki pona.
+toki pona li pona e nasin tan ni:
+ona li jo e sitelen mute lili.
+ona li pona.
+pona kepeken weka 'p' li ona, a.
+
+o taso la toki pona li kalama li lukin pona.
+sitelen en nasin li open e sitelen suli\cite{tpLang,pije,fb1,fb2,tokisona,Wikipesija}.
+li sona. li nasin e toki e sona e lawa e lon.
+
+toki ni li wawa tawa jan mute nasin en toki.
+wawa tawa toki pi jan sona.
+pi ilo nanpa en nanpa nasin.
+taso tawa toki sona a.
+sitelen sona, sitelen musi.
+
+ilo lon linha~\ref{hacks} li pana e sitelen
+e sona tan sitelen,
+en nasin.
+linha~\ref{basics} li pana e nasin pi toki pona.
+e sitelen tawa kama sona.
+
+mi wile pali e sitelen lon toki pona.
+sitelen lon nasin, sitelen sona,
+sitelen musi.
+ante e toki pona la
+la ona li nasa.
+taso nasa li pona mute.
+li pona mute tawa lawa,
+tawa kama sona, tawa sitelen e toki.
+ante la toki pona o.
+toki e toki pona tawa sina.
+kama sona e toki pona sina.
+
+o pona tawa jan pi toki pona.
+jan Sonja, Birns-Sprage, Kipo, Pije,
+Siwejo, Malija, jan kulupu mute.
 
 \begin{thebibliography}{99}
 \fontsize{11}{0}\selectfont

@@ -1,3 +1,20 @@
+# Text syntax highlighting, analysis and synthesis for the Toki Pona Language
+
+For the syntax highlighting, one should copy the
+ftdetect/, ftplugin/ and syntax/ directories to ~/.vim/plugin/tokipona/
+or
+  $ git clone https://github.com/ttm/tokipona ~/.vim/plugin/
+You might need to copy the syntax/tokipona.vim file to
+~/.vim/syntax/.
+
+If you change the syntax file,
+a file with highlighted text (in Toki Pona)
+will have the highlighting updated upon
+reload (:e<CR> in Vim).
+For more information in using the plugin,
+see the [article on article/ directory](https://github.com/ttm/tokipona/raw/master/article/article.pdf).
+
+text 
 Vim syntax highlighting for the toki pona constructed language
 Maintainer:	Renato Fabbri <fabbri@usp.br>
 License:	This file is placed in the public domain.

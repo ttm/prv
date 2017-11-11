@@ -4,40 +4,31 @@
 " Last Change:	2016 Apr 30
 " Remark:	toki pona is a conlang, not a programming language
 
-runtime! ftplugin/tokipona.vim
-
 if exists("b:current_syntax")
     finish
 endif
-let main_syntax = 'json'
 
 syntax clear
 syntax case ignore
 
 
-syntax keyword tokiponaPREPOSITION lon tawa kepeken tan
-highlight link tokiponaPREPOSITION Type
-
-syntax keyword tokiponaVERB utala unpa pali sona kalama moku jo alasa open toki pana olin
-highlight link tokiponaVERB Special
-
-syntax keyword tokiponaPRE ken wile
-highlight link tokiponaPRE PreProc
-
-syntax keyword tokiponaPARTICLE e en taso anu kin la li pi seme o a mu nanpa
-highlight link tokiponaPARTICLE Statement
-
-syntax keyword tokiponaADJECTIVE ni seli ike walo ante loje lili weka namako ali anpa jelo moli pimeja pakala suli mute pini suwi awen sama kule lape nasa pona wawa sin kama musi ale pu ala lete laso jaki wan
+syntax keyword tokiponaADJECTIVE anpa nasa jaki ale pu namako pimeja ala taso moli musi laso ike lape suli pakala walo sewi pilin weka seli pona awen wan ken mute sike sin kule pini kama suwi ali jelo loje ante ni lete sama lili tawa wawa
 highlight link tokiponaADJECTIVE Comment
 
-syntax keyword tokiponaNUMBER tu
+syntax keyword tokiponaPRE oko ken lukin wile kama sona awen
+highlight link tokiponaPRE PreProc
+
+syntax keyword tokiponaNUMBER ale wan ali luka tu
 highlight link tokiponaNUMBER Identifier
 
-syntax keyword tokiponaNOUN ma selo nimi esun noka sina ona mun lipu sitelen soweli kala mi sijelo jan meli pan mije pipi lukin akesi kulupu poki sike supa ko lupa sinpin len monsi kili insa kute telo kon kasi sewi nasin waso palisa nena luka linja kiwen lawa uta oko tenpo poka mama mani pilin suno tomo ilo ijo
-highlight link tokiponaNOUN Type
-" hi tokiponaNOUN  xxx ctermfg=175 guifg=#ffffff
+syntax keyword tokiponaPREPOSITION tan kepeken sama lon tawa
+highlight link tokiponaPREPOSITION Type
 
-let b:current_syntax = "tokipona"
-if main_syntax == 'tokipona'
-  unlet main_syntax
-endif
+syntax keyword tokiponaPARTICLE pi nanpa en kin seme li a la o mu anu e taso
+highlight link tokiponaPARTICLE Statement
+
+syntax keyword tokiponaVERB open pana lawa kalama oko olin toki ken lukin moku wile pali unpa jo utala alasa kama sona kute
+highlight link tokiponaVERB Special
+
+syntax keyword tokiponaNOUN kon uta poki ale nena ona selo esun poka len kiwen mun telo sitelen palisa meli nimi mi ko sina kili sewi linja pilin akesi nanpa noka waso kute suno sijelo lawa monsi lipu mute sike tomo kala pipi ilo kulupu insa ali mije tenpo pan ijo luka oko mama nasin ma sinpin lukin kasi jan soweli mani supa lupa
+highlight link tokiponaNOUN Constant
