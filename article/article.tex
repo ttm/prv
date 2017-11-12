@@ -840,6 +840,14 @@ to achieve the DRY KISS style described in Section~\ref{intro}.
         one normal mode command.
       \item For keeping track of the usage and making analysis
         for optimizing the usage, as described in~\cite{http://www.drbunsen.org/vim-croquet/}. Usage analytics.
+      \item Colorschemes for true color (gui).
+        The standard colors (e.g. blue, elflord) loose some of the distinctions,
+        e.g. SpellBad tokens are not highlighted on these colorschemes
+        it you have a functioning \tttt{se termguicolors} (standard GUI mode
+        and available in terminals since recent versions of Vim 8, see Section~\ref{visual2}). In~\cite{vimrc} are some lines that make such colorschemes after over
+        \tttt{:colorscheme blue}.
+        This design of color schemes over the standard color schemes might be
+        a very simple and effective way to make new color schemes.
     \end{itemize}
 \end{itemize}
 
