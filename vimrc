@@ -241,7 +241,7 @@ nnoremap <leader>N :set relativenumber!<CR>
 nnoremap <leader>p :reg<CR>
 nnoremap <leader>P :vs ~/.vim/notes.md<CR>
 nnoremap <leader>q :q<CR>
-nnoremap <leader>r :redraw!<CR>
+nnoremap <leader>r :we %<CR>
 "-> nnoremap <leader>R :call PythonShowRun()<CR>
 nnoremap <leader>s :mapclear<CR> :source $MYVIMRC<CR>
 nnoremap <leader>S :source $MYVIMRC<CR>
@@ -427,6 +427,9 @@ function! RotateRegisters()
 endfunction
 au InsertLeave * call RotateRegisters()
 
+autocmd CmdwinEnter * map <buffer> <C-D> <CR>q:
+autocmd CmdwinEnter * map <buffer> <C-E> <CR> input("")q:
+
 " }}}
 
 " Useful commands which I might need to recall:
@@ -441,3 +444,6 @@ au InsertLeave * call RotateRegisters()
 " g#*<DIjks
 " zgGwWv
 " :h pi_getscript.txt pi_vimball.txt
+" highlight SpellBad
+" highlight Normal
+" highlight SpellBad term=reverse ctermbg=9 gui=undercurl guisp=Red guifg=red guibg=darkBlue
