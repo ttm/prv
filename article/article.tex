@@ -205,12 +205,15 @@ but the language allows for considerable allophonic
 variation.
 For example, /p t k s l/ might be pronounced
 [p t k s l] or [b d g z \textipa{\!R}].
+Especially for poetry, one might consider
+j and w to be compound vowels
+(e.g. j is 'i' and w is 'u'),
+or as consonants.
 
 Syllables are of the form (C)V(N):
 an optional consonant, a vowel and an optional nasal consonant.
 Non word-initial syllables must follow the pattern CV(N).
-The following sequences are forbidden: ji, wu, wo, ti, mn, nm, mm,
-nn.
+The following sequences are forbidden: ji, wu, wo, ti, nm, nn.
 
 \subsection{Syntax}
 \subsubsection{Fundamental notions}
@@ -452,7 +455,7 @@ Toki Pona words.
 Corpus analysis was already found in~\cite{}.
 
 \subsection{Statistics of the vocabulary}
-In~\cite{pije} there is statistics about Toki Pona corpus.
+In~\cite{pije} are statistics about Toki Pona corpus.
 This section focuses on the statistics of the vocabulary
 and syntactic rules:
 the letters, phonemes, word sizes,
@@ -470,27 +473,54 @@ There are 120 different words in the official vocabulary,
 A total of 124 tokens.
 Not counting proper nouns (names)
 and punctuation.
-They include X nouns, Y verbs, Z adjectives,
-W prepositions, Y particles, K pre-verbs.
-Of which one might distinguish only between
-the particles and the other J words that
-might be used anywhere a particle will not.
+Table~\ref{tab:pos} shows the number of words
+related to each POS tag specified in the dictionary.
 
-Most often vowels,
-consonants, consonant vs vowel.
-Most often phonemes in general an specific positions..
-Possible phonemes given the rules.
-Comparison of the occurring against the possible.
+\input{pos}
 
-Syntactic structures:
+Vowel frequencies are as shown in Table~\ref{tab:vowels}
+for starting, end and internal position.
+Consonants are shown in Table~\ref{tab:cons}
+for meaningful values.
+Comparison of vowels agains consonant is in Table~\ref{tab:vcon}.
+The high incidences of 'l' and 'a' favor
+the naturalness of the language prosody
+as it resembles lallation.
+
+Most often phonemes are in
+Table~\ref{tab:phon}.
+A toolbox for obtaining such statistics and sets
+of words is in~\cite{tokipona}.
+
+Given the rules given in Section~\ref{phonology}
+(of 15 letters, 5 vowels, (C)V(N) phonemes,
+forbidden ji, wu, wo, ti, nn, nm),
+X words are possible with 1 syllable,
+Y with 2 syllables, Z with 3 syllables
+and W with 4 syllables.
+These are shown in Table~\ref{tab:pw}
+with fraction of the space actually used in Toki Pona.
+
+Possible syntactic structures are quantified
+in Table~\ref{tab:syn} for
 Possibilities on noun, verb and prepositional phrases
 and in sentences.
-Counting along the number of words.
+(Counting along the number of words.)
 
+% number of possible syllables
+% number of possible words of size X (1, 2, 3, 4....).
 
 \subsection{Synthesis of text}
-number of elisoes
+Such counting exercise is also useful
+for (semi-)automate writing through scripting.
+The syntax organizes the words in larger structures.
+The rhymes are restricted,
+the ending is as a tonality in music.
 
+There are some specific tasks for achieving texts,
+such as finding the number of syllables considering the elisoes,
+or handling interaction of the writer with the script
+to choose sentences or verses or stanzas.
 
 The same package~\cite{tokipona}
 has capabilities for synthesizing text.
@@ -500,8 +530,9 @@ It also aims at making larger scale texts
 by keeping a record of the used words and structures (context)
 and using stylistic outlines for poems and short narratives.
 
-% number of possible syllables
-% number of possible words of size X (1, 2, 3, 4....).
+Figure~\ref{fig:syn} holds some synthesized texts
+with different coloring schemes for syntax highlighting,
+as presented in the next section.
 
 \subsection{Syntax highlighting}
 The same package~\cite{tokipona}
