@@ -435,7 +435,7 @@ but might not be, as described in Section~\ref{mytoki}.
 % my view
 % considerations about the official book and jan Pije
 % pictorial forms
-\section{Software for analysis and synthesis and for syntax highlighting}\label{hacks}
+\section{Software for analysis, synthesis, and syntax highlighting}\label{hacks}
 In this section,
 we describe software, natural language, audiovisual and numeric results
 on four directions:
@@ -466,17 +466,39 @@ Python scripts were used to obtain the measurements
 and are available at~\cite{tokipona}.
 
 As described in Section~\cite{basics},
-there is only 14 letters,
+there are only 14 letters,
 and phonemes respect a few rules.
 There are 120 different words in the official vocabulary,
 4 of them having synonyms.
-A total of 124 tokens.
-Not counting proper nouns (names)
+A total of 124 tokens,
+not counting proper nouns (names)
 and punctuation.
 Table~\ref{tab:pos} shows the number of words
 related to each POS tag specified in the dictionary.
 
 \input{pos}
+
+From the official 124 words, 
+26 of them (20.97\%)
+have only one syllable,
+85 (68.55\%) have two syllables,
+and 13 (10.48\%) have three syllables.
+No official words has four or more syllables.
+Of all the 235 syllables of the official words,
+li, la, ka, na, and pa are the most often (with 5.53\%,
+4.26\%, 3.83\%,  3.83\%, 3.83\%).
+On the first syllable of each word,
+a, o, pi, ka, and la are the most often
+(with 6.45\%, 4.03\%, 4.03\%, 3.23\%, 3.23\%).
+On the last syllable of each word,
+li, lo, na, la, and ma are the most often
+(with 8.06\%, 4.84\%, 4.84\%, 4.03\%, 4.03\%).
+Middle-word syllables only occur 13 times,
+and are all different, with the exception of `la',
+which occurs twice.
+For the frequencies of all syllables in every position,
+run \tttt{makeStatistics.py} in~\cite{tokipona}.
+
 
 Vowel frequencies are as shown in Table~\ref{tab:vowels}
 for starting, end and internal position.
@@ -486,6 +508,8 @@ Comparison of vowels agains consonant is in Table~\ref{tab:vcon}.
 The high incidences of 'l' and 'a' favor
 the naturalness of the language prosody
 as it resembles lallation.
+
+\input{vowels}
 
 Most often phonemes are in
 Table~\ref{tab:phon}.

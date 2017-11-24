@@ -185,11 +185,11 @@ consonants = 'jklmnpstw'
 vowels_ = ''.join(v for v in tpwords_ if v in vowels)
 consonants_ = ''.join(v for v in tpwords_ if v in consonants)
 
-fracv = (tpwords_.count(i)/len(tpwords_) for i in vowels)
-fracv_ = (vowels_.count(i)/len(vowels_) for i in vowels)
+fracv =  [100*tpwords_.count(i)/len(tpwords_) for i in vowels]
+fracv_ = [100*vowels_.count(i)/len(vowels_) for i in vowels]
 
-fracc = (tpwords_.count(i)/len(tpwords_) for i in consonants)
-fracc_ = (consonants_.count(i)/len(consonants_) for i in consonants)
+fracc =  [100*tpwords_.count(i)/len(tpwords_) for i in consonants]
+fracc_ = [100*consonants_.count(i)/len(consonants_) for i in consonants]
 # overall, only vowels, only consonants, begin, end, middle
 
 firstl = ''.join(i[0] for i in tpwords)
@@ -216,9 +216,6 @@ all_data = []
 for ls in letter_sets:
     data = statMe(ls)
     all_data += data
-
-labels = vowels + consonants
-labels = [i for i in labels]
 
 def firstSyllable(token):
     if len(token) <= 2:
@@ -268,7 +265,9 @@ def histSyl(syllables_):
     syllables__.sort(key=len)
 
     freq_syl = [100*syllables_.count(i)/len(syllables_) for i in syllables__]
-    return list(zip(syllables__, freq_syl))
+    aa = list(zip(syllables__, freq_syl))
+    bb = sorted(aa, key=lambda t: -t[1])
+    return bb
 
 syls = [syllables_, syllables_0, syllables_1, syllables_i]
 hsyls = [histSyl(i) for i in syls]
@@ -279,6 +278,21 @@ hlsyl_ = [lsyl.count(i) for i in (1, 2, 3)]
 hlsyl__ = [[w for w in tpwords if len(getSyllables(w)) == i] for i in (1, 2, 3)]
 
 
+def v(syl):
+    for i in syl:
+        if i in 'aeiou':
+            return i
+labels = vowels + consonants
+labels = [i for i in labels]
+fracv0_ = [v(i) for i in syllables_0]
+fracv1_ = [v(i) for i in syllables_1]
+p.mediaRendering.tables.writeTex(
+        p.mediaRendering.tables.encapsulateTable(
+            p.mediaRendering.tables.makeTabular(
+                ["Vowel"]+[i for i in vowels], 
+                [[i] for i in ["freq"]+fracv_], True),
+            """Frequency of vowels in Toki Pona."""),
+        "../article/vowels.tex")
 
 # words without a
 # with most and less vowels
