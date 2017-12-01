@@ -362,20 +362,20 @@ p.mediaRendering.tables.doubleLines("../article/syls.tex",
 syllables_possible = set()
 for c in consonants:
     for v in vowels:
-        syllables_possible.append(c+v)
-        syllables_possible.append(c+v+'n')
+        syllables_possible.add(c+v)
+        syllables_possible.add(c+v+'n')
 forbiden = ['ji', 'wu', 'wo', 'ti', 'nn', 'nm']
 for i in forbiden[:-2]:
     syllables_possible.remove(i)
 
-syllables_start = [i for i in vowels] + [i+'n' for i in vowels] + syllables_possible
+syllables_start = set([i for i in vowels]) | set([i+'n' for i in vowels]) | syllables_possible
 
 words1 = syllables_start
-words2 = []
+words2 = set()
 for i in words1:
     for j in syllables_possible:
-        words2.append(i+j)
-words2_ = words2[:]
+        words2.add(i+j)
+words2_ = words2.copy()
 for i in forbiden:
     for j in words2:
         if i in j:
@@ -383,11 +383,11 @@ for i in forbiden:
             if j in words2_:
                 words2_.remove(j)
 
-words3 = []
+words3 = set()
 for i in words2:
     for j in syllables_possible:
-        words3.append(i+j)
-words3_ = words3[:]
+        words3.add(i+j)
+words3_ = words3.copy()
 for i in forbiden:
     for j in words3:
         if i in j:
