@@ -14,7 +14,7 @@ reload (:e<CR> in Vim).
 For more information in using the plugin,
 see the [article on article/ directory](https://github.com/ttm/tokipona/raw/master/article/article.pdf).
 
-text 
+text j
 Vim syntax highlighting for the toki pona constructed language
 Maintainer:	Renato Fabbri <fabbri@usp.br>
 License:	This file is placed in the public domain.
@@ -28,6 +28,8 @@ ToDo:
 * Make a Vimball with the files tructure of this
 plugins because it needs files inside plugin/ and syntax/
 directories.
+* Send to Chandra and Cristina for possible enhancements.
+Look for TTM in .tex and mention such marks to them.
 
 Artigo de Toki Pona
 * Procurar nas anotacoes (rascunhao, ttm)

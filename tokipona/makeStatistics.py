@@ -219,6 +219,43 @@ for ls in letter_sets:
     data = statMe(ls)
     all_data += data
 
+l0 = ['freq', 'v', 'c', 'freq\\_I', 'v', 'c', 'freq\\_L', 'v', 'c', 'freq\\_M', 'v', 'c']
+l_ = [[i[j] for i in all_data] for j in range(14)]
+ll = [l0]+l_
+p.mediaRendering.tables.writeTex(
+        p.mediaRendering.tables.encapsulateTable(
+            p.mediaRendering.tables.makeTabular(
+                ["letter"]+[i for i in vowels]+[i for i in consonants], 
+                ll,
+                True),
+            """Frequency of letters in Toki Pona.
+            freq, freq\\_I, freq\\_L and freq\\_M are
+            the frequencies of the letters in any, initial, last and middle
+            positions.
+            The columns 'v' and 'c' that follow them are frequencies
+            considering only vowels and consonants.
+            The most frequent vowel is 'a' in any position,
+            although it is more salient among words starting with a vowel
+            and among the last letter of the words.
+            For starting, ending and middle positions, the second most frequent
+            vowel varies.
+            Among the consonants, 'n' is the most frequent because it is
+            the only consonant allowed in the last position and because
+            almost 20\\% of the words end with 'n'.
+            On the initial position, 's' is the most frequent consonant,
+            while in middle position 'l' is the most frequent consonant.
+            Many other conclusions can be drawn from this table and are
+            useful e.g. for exploring sonorities in poems.""",
+            'freqLet'),
+        "../article/vowels.tex")
+p.mediaRendering.tables.fontSize("../article/vowels.tex", write=1)
+p.mediaRendering.tables.doubleLines("../article/vowels.tex",
+        hlines=[], vlines=[], hlines_=[0,2,3,4,5,7,8,10,11,13,14,15],
+        vlines_=[0,2,3,5,6,8,9,11,12,13])
+
+##########################
+# Syllables
+
 def firstSyllable(token):
     if len(token) <= 2:
         sy = token
@@ -257,18 +294,19 @@ def getSyllables(token):
 
 syllables = [getSyllables(i) for i in tpwords]
 syllables_ = [j for i in syllables for j in i]
+
+syllables__ = list(set(syllables_))
+syllables__.sort()
+syllables__.sort(key=len)
+
 syllables_0 = [i[0] for i in syllables]
 syllables_1 = [i[-1] for i in syllables]
 syllables_i = [i[1] for i in syllables if len(i) == 3]
 
 def histSyl(syllables_):
-    syllables__ = list(set(syllables_))
-    syllables__.sort()
-    syllables__.sort(key=len)
-
-    freq_syl = [100*syllables_.count(i)/len(syllables_) for i in syllables__]
-    aa = list(zip(syllables__, freq_syl))
-    bb = sorted(aa, key=lambda t: -t[1])
+    freq_syl = [(i, 100*syllables_.count(i)/len(syllables_), syllables_.count(i)) for i in syllables__]
+    # aa = list(zip(syllables__, freq_syl))
+    bb = sorted(freq_syl, key=lambda t: -t[1])
     return bb
 
 syls = [syllables_, syllables_0, syllables_1, syllables_i]
@@ -278,50 +316,85 @@ lsyl = [len(i) for i in syllables]
 hlsyl = [100*lsyl.count(i)/len(lsyl) for i in (1, 2, 3)]
 hlsyl_ = [lsyl.count(i) for i in (1, 2, 3)]
 hlsyl__ = [[w for w in tpwords if len(getSyllables(w)) == i] for i in (1, 2, 3)]
-
+[i.sort() for i in hlsyl__]
+[i.sort(key=len) for i in hlsyl__]
 
 def v(syl):
     for i in syl:
         if i in 'aeiou':
             return i
-labels = vowels + consonants
-labels = [i for i in labels]
 fracv0_ = [v(i) for i in syllables_0]
 fracv1_ = [v(i) for i in syllables_1]
-l0 = ['freq', 'v', 'c', 'freq\\_I', 'v', 'c', 'freq\\_L', 'v', 'c', 'freq\\_M', 'v', 'c']
-l_ = [[i[j] for i in all_data] for j in range(14)]
+
+def format_(syl):
+    syl_ = '{} ({}, {:.2f}\\%)'.format(syl[0], syl[2], syl[1])
+    return syl_
+l0 = ['all', 'first', 'last', 'middle']
+l_ = [[format_(i[j]) for i in hsyls] for j in range(10)]
 ll = [l0]+l_
+
 p.mediaRendering.tables.writeTex(
         p.mediaRendering.tables.encapsulateTable(
             p.mediaRendering.tables.makeTabular(
-                ["letter"]+[i for i in vowels]+[i for i in consonants], 
+                ['rank']+[str(i+1) for i in range(10)], 
                 ll,
                 True),
-            """Frequency of letters in Toki Pona.
-            freq, freq\\_I, freq\\_L and freq\\_M are
-            the frequencies of the letters in any, initial, last and middle
-            positions.
-            The columns 'v' and 'c' that follow them are frequencies
-            considering only vowels and consonants.
-            The most frequent vowel is 'a' in any position,
-            although it is more salient among words starting with a vowel
-            and among the last letter of the words.
-            For starting, ending and middle positions, the second most frequent
-            vowel varies.
-            Among the consonants, 'n' is the most frequent because it is
-            the only consonant allowed in the last position and because
-            almost 20\\% of the words end with 'n'.
-            On the initial position, 's' is the most frequent consonant,
-            while in middle position 'l' is the most frequent consonant.
-            Many other conclusions can be drawn from this table and are
-            useful e.g. for exploring sonorities in poems.""",
-            'freqLet'),
-        "../article/vowels.tex")
-p.mediaRendering.tables.fontSize("../article/vowels.tex", write=1)
-p.mediaRendering.tables.doubleLines("../article/vowels.tex",
-        hlines=[], vlines=[], hlines_=[0,2,3,4,5,7,8,10,11,13,14,15],
-        vlines_=[0,2,3,5,6,8,9,11,12,13])
+            """Frequency of syllables in Toki Pona
+            considering all 235 syllables of the 124 tokens,
+            only the first or last syllables or only the middle
+            syllable.
+            In parenthesis are the count and percentage of the
+            corresponding syllable. For more information and a
+            complete list of syllables, see Section~\\ref{sec:stat}.
+            """,
+            'freqSyl'),
+        "../article/syls.tex")
 
+p.mediaRendering.tables.doubleLines("../article/syls.tex",
+        hlines=[], vlines=[], hlines_=[0,2,3,4,5,6,7,8,9,10,11],
+        vlines_=[0,2,3,4,5])
+# length of words in characters
+
+
+#############################
+## words possible
+
+syllables_possible = set()
+for c in consonants:
+    for v in vowels:
+        syllables_possible.append(c+v)
+        syllables_possible.append(c+v+'n')
+forbiden = ['ji', 'wu', 'wo', 'ti', 'nn', 'nm']
+for i in forbiden[:-2]:
+    syllables_possible.remove(i)
+
+syllables_start = [i for i in vowels] + [i+'n' for i in vowels] + syllables_possible
+
+words1 = syllables_start
+words2 = []
+for i in words1:
+    for j in syllables_possible:
+        words2.append(i+j)
+words2_ = words2[:]
+for i in forbiden:
+    for j in words2:
+        if i in j:
+            # it might have been removed because of another restriction
+            if j in words2_:
+                words2_.remove(j)
+
+words3 = []
+for i in words2:
+    for j in syllables_possible:
+        words3.append(i+j)
+words3_ = words3[:]
+for i in forbiden:
+    for j in words3:
+        if i in j:
+            # it might have been removed because of another restriction
+            if j in words3_:
+                words3_.remove(j)
+nwords = [len(i) for i in (words1, words2, words3)]
 # words without a
 # with most and less vowels
 # largest in letters

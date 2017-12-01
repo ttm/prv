@@ -453,7 +453,7 @@ initial considerations about the WordNet of
 Toki Pona words.
 Corpus analysis was already found in~\cite{}.
 
-\subsection{Statistics of the vocabulary}
+\subsection{Statistics of the vocabulary}\label{sec:stat}
 In~\cite{pije} are statistics about Toki Pona corpus.
 This section focuses on the statistics of the vocabulary
 and syntactic rules:
@@ -499,28 +499,37 @@ For the frequencies of all syllables in every position,
 run \tttt{makeStatistics.py} in~\cite{tokipona}.
 
 
-Vowel frequencies are as shown in Table~\ref{freqLet}
+Vowel and consonant frequencies are as shown in Table~\ref{freqLet}
 for starting, end and internal position.
-Consonants are shown in Table~\ref{tab:cons}
-for meaningful values.
-Comparison of vowels agains consonant is in Table~\ref{tab:vcon}.
-The high incidences of 'l' and 'a' favor
+Comparison of vowels against consonant is in Table~\ref{tab:vcon}.
+The high incidences e.g. of 'l' and 'a' favor
 the naturalness of the language prosody
-as it resembles lallation.
+as it resembles child speech.
 
 \input{vowels}
 
-Most often phonemes are in
-Table~\ref{tab:phon}.
-A toolbox for obtaining such statistics and sets
-of words is in~\cite{tokipona}.
+26, 85 and 13 words have one, two and three syllables
+(20.96, 68.54 and 10.48\% of all 124 tokens).
+No official word have more than three syllables
+(although proper names may be of any size).
+In all the 124 tokens, there are 235 syllables (68 different).
+Most often syllables are in
+Table~\ref{syl}.
+A complete list of the syllables and their frequencies (in different
+positions) is in the \tttt{hsyls} variable of the \tttt{makeStatistics.py}
+script.
+A list of all words, grouped by their size in syllables,
+and ordered alphabetically and by the number of letters,
+is in \tttt{hlsyl\_\_}.
+
+\input{syls}
 
 Given the rules given in Section~\ref{phonology}
-(of 15 letters, 5 vowels, (C)V(N) phonemes,
+(of 14 letters, 5 vowels, (C)V(N) phonemes,
 forbidden ji, wu, wo, ti, nn, nm),
-X words are possible with 1 syllable,
-Y with 2 syllables, Z with 3 syllables
-and W with 4 syllables.
+46 words are possible with 1 syllable,
+1886 with 2 syllables, 77326 with 3 syllables.
+No middle syllable end with the nasal consonant 'n'.
 These are shown in Table~\ref{tab:pw}
 with fraction of the space actually used in Toki Pona.
 
@@ -529,6 +538,9 @@ in Table~\ref{tab:syn} for
 Possibilities on noun, verb and prepositional phrases
 and in sentences.
 (Counting along the number of words.)
+
+A toolbox for obtaining such statistics and sets
+of words is in~\cite{tokipona}.
 
 % number of possible syllables
 % number of possible words of size X (1, 2, 3, 4....).
