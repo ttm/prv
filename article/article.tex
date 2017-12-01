@@ -183,7 +183,7 @@ words and sentences in the Toki Pona language.
 It should enable a newcomer to grasp the essentials
 of the language and the experienced to
 acquire new insights.
-Furthermore, it is a solid reference of the syntax and phonological
+Furthermore, it is a solid reference of the phonological and syntax
 rules.
 
 \subsection{Phonology}
@@ -194,9 +194,9 @@ Words in Toki Pona are written using only 14 letters:
   \item Consonants j, k, l, m, n, p, s, t, w:
     \begin{itemize}
       \item Nasal: m (labial), n (coronal).
-      \item Plosive: k (dorsal), p (labial), t (coronal).
+      \item Plosive: p (labial), t (coronal), k (dorsal).
       \item Fricative: s (coronal).
-      \item Approximant: j (dorsal), l (coronal), w (labial).
+      \item Approximant: w (labial), l (coronal), j (dorsal).
     \end{itemize}
 \end{itemize}
 
@@ -206,9 +206,8 @@ variation.
 For example, /p t k s l/ might be pronounced
 [p t k s l] or [b d g z \textipa{\!R}].
 Especially for poetry, one might consider
-j and w to be compound vowels
-(e.g. j is 'i' and w is 'u'),
-or as consonants.
+j and w to be vowels
+(e.g. j as 'i' and w as 'u').
 
 Syllables are of the form (C)V(N):
 an optional consonant, a vowel and an optional nasal consonant.
@@ -500,7 +499,7 @@ For the frequencies of all syllables in every position,
 run \tttt{makeStatistics.py} in~\cite{tokipona}.
 
 
-Vowel frequencies are as shown in Table~\ref{tab:vowels}
+Vowel frequencies are as shown in Table~\ref{freqLet}
 for starting, end and internal position.
 Consonants are shown in Table~\ref{tab:cons}
 for meaningful values.
@@ -558,7 +557,7 @@ Figure~\ref{fig:syn} holds some synthesized texts
 with different coloring schemes for syntax highlighting,
 as presented in the next section.
 
-\subsection{Syntax highlighting}
+\subsection{Syntax highlighting}\label{shigh}
 The same package~\cite{tokipona}
 has a Vim syntax highlighting plugin
 for Toki Pona.
@@ -739,6 +738,9 @@ and search in corpus.
 
 \section{Conclusions and further work}\label{conc}
 \begin{itemize}
+  \item Make a syntax highlighting that colors the tokens with respect
+    to the syntatic position and function, and not in a fixed manner
+    as is implemented and exposed in Section~\ref{shigh}.
   \item Relate Toki Pona to Wordnet: should one Toki Pona word
     be related to more then one synset of the English language?
     An immediate implementation would be linking each Toki Pona word

@@ -48,6 +48,8 @@ word_classes = {}
 for row in table:
     # Better choose the class
     classes = [i for i in row[1].split() if i.isupper() and i not in ("I,","O!")]
+    classes = ["PRE" if "PRE-VERB" in i else i for i in classes]
+    print(classes)
     if precedence=="first":
         class_ = classes[0]
     else:
@@ -286,13 +288,39 @@ labels = vowels + consonants
 labels = [i for i in labels]
 fracv0_ = [v(i) for i in syllables_0]
 fracv1_ = [v(i) for i in syllables_1]
+l0 = ['freq', 'v', 'c', 'freq\\_I', 'v', 'c', 'freq\\_L', 'v', 'c', 'freq\\_M', 'v', 'c']
+l_ = [[i[j] for i in all_data] for j in range(14)]
+ll = [l0]+l_
 p.mediaRendering.tables.writeTex(
         p.mediaRendering.tables.encapsulateTable(
             p.mediaRendering.tables.makeTabular(
-                ["Vowel"]+[i for i in vowels], 
-                [[i] for i in ["freq"]+fracv_], True),
-            """Frequency of vowels in Toki Pona."""),
+                ["letter"]+[i for i in vowels]+[i for i in consonants], 
+                ll,
+                True),
+            """Frequency of letters in Toki Pona.
+            freq, freq\\_I, freq\\_L and freq\\_M are
+            the frequencies of the letters in any, initial, last and middle
+            positions.
+            The columns 'v' and 'c' that follow them are frequencies
+            considering only vowels and consonants.
+            The most frequent vowel is 'a' in any position,
+            although it is more salient among words starting with a vowel
+            and among the last letter of the words.
+            For starting, ending and middle positions, the second most frequent
+            vowel varies.
+            Among the consonants, 'n' is the most frequent because it is
+            the only consonant allowed in the last position and because
+            almost 20\\% of the words end with 'n'.
+            On the initial position, 's' is the most frequent consonant,
+            while in middle position 'l' is the most frequent consonant.
+            Many other conclusions can be drawn from this table and are
+            useful e.g. for exploring sonorities in poems.""",
+            'freqLet'),
         "../article/vowels.tex")
+p.mediaRendering.tables.fontSize("../article/vowels.tex", write=1)
+p.mediaRendering.tables.doubleLines("../article/vowels.tex",
+        hlines=[], vlines=[], hlines_=[0,2,3,4,5,7,8,10,11,13,14,15],
+        vlines_=[0,2,3,5,6,8,9,11,12,13])
 
 # words without a
 # with most and less vowels
