@@ -214,7 +214,7 @@ an optional consonant, a vowel and an optional nasal consonant.
 Non word-initial syllables must follow the pattern CV(N).
 The following sequences are forbidden: ji, wu, wo, ti, nm, nn.
 
-\subsection{Syntax}
+\subsection{Syntax}\label{syntax}
 \subsubsection{Fundamental notions}
 As in other natural languages, 
 colloquial Toki Pona might have
@@ -453,6 +453,13 @@ initial considerations about the WordNet of
 Toki Pona words.
 Corpus analysis was already found in~\cite{}.
 
+The Python scripts (or the toolbox)
+for obtaining all the results in this sections,
+and more, is publicly available in~\cite{tokipona},
+to facilitate both the inspection of the results and the
+generation of derivatives by other interested parties.
+
+
 \subsection{Statistics of the vocabulary}\label{sec:stat}
 In~\cite{pije} are statistics about Toki Pona corpus.
 This section focuses on the statistics of the vocabulary
@@ -461,8 +468,11 @@ the letters, phonemes, word sizes,
 possible combinations for words and sentences.
 The statistics are in Appendix~\cite{listings},
 and the next paragraph is an overview.
-Python scripts were used to obtain the measurements
-and are available at~\cite{tokipona}.
+The script \tttt{makeStatistics.py}
+was used to obtain the all the measurements and tables
+discussed herein,
+and hold some other measurements and sets of words
+which were regarded as less suitable for this exposition.
 
 As described in Section~\cite{basics},
 there are only 14 letters,
@@ -496,8 +506,7 @@ Middle-word syllables only occur 13 times,
 and are all different, with the exception of `la',
 which occurs twice.
 For the frequencies of all syllables in every position,
-run \tttt{makeStatistics.py} in~\cite{tokipona}.
-
+run the script \tttt{makeStatistics.py} in~\cite{tokipona}.
 
 Vowel and consonant frequencies are as shown in Table~\ref{freqLet}
 for starting, end and internal position.
@@ -528,38 +537,56 @@ Given the rules given in Section~\ref{phonology}
 (of 14 letters, 5 vowels, (C)V(N) phonemes,
 forbidden ji, wu, wo, ti, nn, nm),
 96 words are possible with 1 syllable,
- 96, 8256, 710016
 8256 with 2 syllables, 710016 with 3 syllables.
 No middle syllable end with the nasal consonant 'n'.
-These are shown in Table~\ref{tab:pw}
-with fraction of the space actually used in Toki Pona.
 
-Possible syntactic structures are quantified
-in Table~\ref{tab:syn} for
-Possibilities on noun, verb and prepositional phrases
-and in sentences.
-(Counting along the number of words.)
+Possible syntactic structures are unlimited.
+For a noun or verb phrase, one might quantify the possibilities
+by considering all words but the particles that are nothing else
+(i.e. li, e, la, pi, a, o, anu, en, seme, mu).
+This yields $120-10=110 words$.
+As discussed in Section~\ref{syntax},
+I advocate that, although such words are classified in the dictionary,
+they might be used indistinctly as nouns, adjectives,
+verbs and adverbs.
+Thus, one have 110 possibilities of noun and verb phrases with
+one word, $110^2=12100$ possibilities with two words,
+$110^3=1331000$ with three words and so on.
+Be $n$, $v$, $o$, and $p$ the number of words in the subject (noun), predicate
+(verb), object (noun) and prepositional (noun or verb) phrases of a sentence,
+and assume that the sentence has at most one prepositional phrase,
+one might quantify the possibilities using the formula:
+$\delta = 110^n\times 110^v\times 10^o \times 5\times 110^p$,
+where $5$ stands for the possible prepositions.
+To account for the particles, one possibility is
+to assume for simplicity that one might use none or one particle
+(not li, e, la, pi, resulting in $8$ particles and $9$ possibilities)
+at each phrase, yielding:
+$\delta = 110^n\times 110^v\times 110^o \times 5\times 110^p\times 9^4$.
+For example, assume $n=v=p=o=1$, then
+$\delta=110^1\times 110^1\times 110^1 \times 5\times 110^1\times 9^4=
+4.80298^{12}$
+i.e. almost 5 trillion possible
+sentences with single word phrases (i.e. no adjectives or adverbs),
+while allowing only one particle per phrase
+and only one predicate phrase 
+(e.g. 'ona li moku e soweli lon supa').
+The general case is implemented as a function
+in the script \tttt{makeStatistics.py}~\cite{tokipona}
 
-A toolbox for obtaining such statistics and sets
-of words is in~\cite{tokipona}.
-
-% number of possible syllables
-% number of possible words of size X (1, 2, 3, 4....).
-
-\subsection{Synthesis of text}
-Such counting exercise is also useful
-for (semi-)automate writing through scripting.
+\subsection{Synthesis of text}\label{synth}
+Such counting exercises is also useful
+for (semi-)automated writing through scripting.
 The syntax organizes the words in larger structures.
-The rhymes are restricted,
-the ending is as a tonality in music.
-
+The rhymes are restricted and sonorities are
+restricted by the small vocabulary and simple syntax.
 There are some specific tasks for achieving texts,
-such as finding the number of syllables considering the elisoes,
+such as finding the number of syllables considering the elisions,
 or handling interaction of the writer with the script
 to choose sentences or verses or stanzas.
 
 The same package~\cite{tokipona}
-has capabilities for synthesizing text.
+has capabilities for synthesizing Toki Pona text.
 Noun, verb and prepositional phrases,
 sentences.
 It also aims at making larger scale texts
@@ -569,6 +596,9 @@ and using stylistic outlines for poems and short narratives.
 Figure~\ref{fig:syn} holds some synthesized texts
 with different coloring schemes for syntax highlighting,
 as presented in the next section.
+The textual synthesis described here,
+and implemented in \tttt{makeTexts.py}
+might be enhanced as described in Section~\ref{conc}.
 
 \subsection{Syntax highlighting}\label{shigh}
 The same package~\cite{tokipona}
@@ -751,6 +781,9 @@ and search in corpus.
 
 \section{Conclusions and further work}\label{conc}
 \begin{itemize}
+  \item Further develop the text synthesis facilities described in
+    Section~\ref{synth} might be enhanced by further employing e.g.
+    rhythm, meter, rhyme and form techniques~\cite{wikipPoetry}.
   \item Make a syntax highlighting that colors the tokens with respect
     to the syntatic position and function, and not in a fixed manner
     as is implemented and exposed in Section~\ref{shigh}.
@@ -999,5 +1032,9 @@ a collective focus on self-transparency. ENMC2017. From \url{https://github.com/
     \url{http://tokipona.wikia.com}
 \bibitem{conlanWikip}
   Constructed language. (2017, November 1). In Wikipedia, The Free Encyclopedia. Retrieved 10:22, November 18, 2017, from \url{https://en.wikipedia.org/w/index.php?title=Constructed_language&oldid=808264974}
+\bibitem{wikiPoetry}
+Poetry. (2017, November 19). In Wikipedia, The Free Encyclopedia.
+    Retrieved 19:46, December 3, 2017, from
+    \url{https://en.wikipedia.org/w/index.php?title=Poetry&oldid=811036139}
 \end{thebibliography}
 \end{document}

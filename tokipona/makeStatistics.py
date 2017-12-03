@@ -400,3 +400,14 @@ nwords = [len(i) for i in (words1, words2, words3)]
 # largest in letters
 # walk through levenshtein distance
 # 
+##########################################
+# Possible sentences
+
+def possibleSentences(n, v, o, p=[1], nparticles=1):
+    p_ = 1
+    for pp in p:
+        p_ *= 5 * 110**pp
+
+    delta = 110**n * 110**v * 110**o * p_ * 10^3
+    return delta 
+
