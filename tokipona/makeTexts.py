@@ -114,7 +114,8 @@ def getSyllables(token):
         syl.append(sy)
     return syl
 
-def createPhrase(nsy=0):
+forbiden = ['li', 'e', 'la', 'pi', 'a', 'o', 'anu', 'en', 'seme', 'mu', 'kepeken', 'lon', 'tan']
+def createPhrase(nsy=0, vowel=False):
     """
     Create a Toki Pona phrase.
 
@@ -126,11 +127,16 @@ def createPhrase(nsy=0):
     nsy : integer
         The number of syllables of the phrase.
         If nsy=0, the phrase will have a random number of syllables
+    vowel : boolean
 
     Returns
     -------
     ph : string
-        A phrase of words in Toki Pona.
+        A phrase in Toki Pona.
+
+    See Also
+    --------
+    createSentence : creates a sentence in Toki Pona.
 
     Notes
     -----
@@ -150,8 +156,55 @@ def createPhrase(nsy=0):
         w = n.random.choice(plain_words)
         s = getSyllables(w)
         l = len(s)
+        if w[0] in vowels and vowel:  # elision
+            l -= 1
         if nsy_+l > nsy:
+            continue
+        if w in forbiden:
+            print(w)
             continue
         nsy_ += l
         phrase += w + ' '
+        if w[-1] in vowels:
+            vowel = 1
+        else:
+            vowel = 0
     return phrase[:-1]
+
+
+def createSentence(nsy=0, prep=1, n=0, v=0, o=0, p=0):
+    """
+    Create a Toki Pona sentence.
+
+    Such phrase will always have a subject, predicate
+    and object. Preposition is optional.
+
+    Parameters
+    ----------
+    nsy : integer
+        The number of syllables of the sentence.
+        If nsy=0, the phrase will have a random number of syllables
+
+    Returns
+    -------
+    se : string
+        A sentence in Toki Pona.
+
+    See Also
+    --------
+    createPhrase : creates a phrase in Toki Pona.
+
+    Notes
+    -----
+    See createPhrase to understand how the phrases are created.
+
+    References
+    ----------
+    .. [1] Fabbri, Renato, et al. "Basic concepts and tools for the Toki Pona minimalist language: Wordnet synsets; analysis, synthesis and syntax highlighting of texts." arXiv preprint arXiv:abs/XXX.XXXX (2017)
+
+    """
+    if nsy == 0:
+        nsy = n.random.randint(5,20)
+    nsy_ = 0
+    phrase = ''
+    while nsy_ < nsy:
