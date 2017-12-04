@@ -330,6 +330,8 @@ Vim keeps a number of useful lists which expresses the state of the editor:
 		one might perform actions on each file in argument list using \tttt{:argdo}.
 		All files in argument list are also in the buffers list.
     For further information, see \tttt{:h arglist} and Section~\ref{netrw}.
+  \item All the autocommands might be accessed through \tttt{:au}.
+    They are event-triggered actions Vim performs.
 \end{itemize}
 
 A file with information about the state of the editor
@@ -848,6 +850,11 @@ to achieve the DRY KISS style described in Section~\ref{intro}.
         \tttt{:colorscheme blue}.
         This design of color schemes over the standard color schemes might be
         a very simple and effective way to make new color schemes.
+      \item Opening the editor status listings such as in Section~\ref{}
+        in a quickfix or location window where they might be searched, edited
+        and used as wanted.
+        These windows open in a more-like interface that is very restricted in what
+        they allow (e.g. no search, no persistence).
     \end{itemize}
 \end{itemize}
 

@@ -2,6 +2,8 @@
 " reworked for usage with Vim 8, True Colors (24 bits) and tmux
 set nocompatible
 set termguicolors
+" :se t_Co should give 256, otherwise uncomment:
+" se t_Co=256
 " to enable true colors inside Byoby/Tmux
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
@@ -227,6 +229,9 @@ nnoremap <leader>D :call SaveNewSession()<CR>
 nnoremap <leader>e :call LoadSession()<CR>
 nnoremap <leader>E :call InsertSession()<CR>
 " nnoremap <leader>r :set shiftround!<CR>
+" make the f mappings usable by using the paths correctly
+nnoremap <leader>f :term ++hidden ++close pdflatex %
+nnoremap <leader>F :term ++hidden ++open pdflatex %
 nnoremap <leader>i :exec "normal i".nr2char(getchar())."\e"<CR>
 nnoremap <leader>I :call InsertBeforeAfter()<CR>
 nnoremap <leader>f :set hlsearch!<CR>
@@ -447,3 +452,86 @@ autocmd CmdwinEnter * map <buffer> <C-E> <CR> input("")q:
 " highlight SpellBad
 " highlight Normal
 " highlight SpellBad term=reverse ctermbg=9 gui=undercurl guisp=Red guifg=red guibg=darkBlue
+" highlight Normal ctermfg=11 ctermbg=4 guifg=lightyellow guibg=Blue
+" colorscheme torte
+" highlight Normal ctermfg=11 ctermbg=4 guifg=white  guibg=darkGreen
+" highlight SpellBad term=reverse ctermbg=9 gui=undercurl guisp=Red guifg=red guibg=darkGreen
+" autocommand for saving and compiling tex file when exiting insert mode.
+" au InsertLeave * :!pdflatex %<CR><CR>
+" ensure the autocommands are loaded only once or removed before being added again.
+
+
+
+" Highlighting notes   ------------------   {{{
+"
+" :echo synIDattr(synIDtrans(synID(line("."),col("."),1)),"name")
+" should give you the highlighting group you need to change
+" to change the colors of the char in cursor position.
+" hi <name_of_group><CR> 
+" will output the settings, which can be changed by appending to the same command
+" highlight, syntax and colorcheme
+"
+" 
+" found in:
+" http://vim.wikia.com/wiki/Identify_the_syntax_highlighting_group_used_at_the_cursor
+" map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '>
+" trans<'
+" \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+" \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
+" }}}
+"
+" Spell bad and other groups are bot being shown
+"
+" Make a mapping for saving current highlighting settings. Just redir
+"
+" :redir @a
+" :set all
+" :redir END
+
+function! TabMessage(cmd)
+  " use like :TabMessage highlight
+  redir => message
+  silent execute a:cmd
+  redir END
+  if empty(message)
+    echoerr "no output"
+  else
+    " use "new" instead of "tabnew" below if you prefer split windows instead of tabs
+    tabnew
+    setlocal buftype=nofile bufhidden=wipe noswapfile nobuflisted nomodified
+    silent put=message
+  endif
+endfunction
+command! -nargs=+ -complete=command Tab call TabMessage(<q-args>)
+
+function! OutputSplitWindow(...)
+  " this function output the result of the Ex command into a split scratch buffer
+  let cmd = join(a:000, ' ')
+  let temp_reg = @"
+  redir @"
+  silent! execute cmd
+  redir END
+  let output = copy(@")
+  let @" = temp_reg
+  if empty(output)
+    echoerr "no output"
+  else
+    new
+    setlocal buftype=nofile bufhidden=wipe noswapfile nobuflisted
+    put! =output
+  endif
+endfunction
+command! -nargs=+ -complete=command Split call OutputSplitWindow(<f-args>)
+
+function! HiFile()
+  " run to hightlight the buffer with the highlight output
+  " e.g. after :Split sy or :Split hi
+    let i = 1
+    while i <= line("$")
+        if strlen(getline(i)) > 0 && len(split(getline(i))) > 2
+            let w = split(getline(i))[0]
+            exe "syn match " . w . " /\\(" . w . "\\s\\+\\)\\@<=xxx/"
+        endif
+        let i += 1
+    endwhile
+endfunction
