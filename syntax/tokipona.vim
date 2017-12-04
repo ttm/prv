@@ -32,3 +32,6 @@ highlight link tokiponaVERB Special
 
 syntax keyword tokiponaNOUN kon uta poki ale nena ona selo esun poka len kiwen mun telo sitelen palisa meli nimi mi ko sina kili sewi linja pilin akesi nanpa noka waso kute suno sijelo lawa monsi lipu mute sike tomo kala pipi ilo kulupu insa ali mije tenpo pan ijo luka oko mama nasin ma sinpin lukin kasi jan soweli mani supa lupa
 highlight link tokiponaNOUN Constant
+
+syntax keyword tokiponaComment match /#.*$/
+highlight link tokiponaComment Comment

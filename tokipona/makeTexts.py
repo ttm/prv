@@ -76,6 +76,7 @@ for row in table:
 
 # use variables words and word_classes to synthesize texts
 plain_words = list(word_classes.keys())
+prepositions = list(words['PREPOSITION'])
 
 # functions repeated from makeStatistics, join them into a utils.py or similar
 def firstSyllable(token):
@@ -115,7 +116,10 @@ def getSyllables(token):
     return syl
 
 forbiden = ['li', 'e', 'la', 'pi', 'a', 'o', 'anu', 'en', 'seme', 'mu', 'kepeken', 'lon', 'tan']
-def createPhrase(nsy=0, vowel=False):
+for f in forbiden:
+    plain_words.remove(f)
+
+def createPhrase(nsy=0, nwords=0, vowel=False):
     """
     Create a Toki Pona phrase.
 
@@ -127,6 +131,9 @@ def createPhrase(nsy=0, vowel=False):
     nsy : integer
         The number of syllables of the phrase.
         If nsy=0, the phrase will have a random number of syllables
+    nwords : integer
+        The number of words in the phrase.
+        If nwords != 0, nsy is ignored.
     vowel : boolean
 
     Returns
@@ -145,45 +152,58 @@ def createPhrase(nsy=0, vowel=False):
 
     References
     ----------
-    .. [1] Fabbri, Renato, et al. "Basic concepts and tools for the Toki Pona minimalist language: Wordnet synsets; analysis, synthesis and syntax highlighting of texts." arXiv preprint arXiv:abs/XXX.XXXX (2017)
+    .. [1] Fabbri, Renato, "Basic concepts and tools for the Toki Pona minimalist language: Wordnet synsets; analysis, synthesis and syntax highlighting of texts." arXiv preprint arXiv:abs/XXX.XXXX (2017)
 
     """
-    if nsy == 0:
-        nsy = n.random.randint(1,11)
-    nsy_ = 0
     phrase = ''
-    while nsy_ < nsy:
-        w = n.random.choice(plain_words)
-        s = getSyllables(w)
-        l = len(s)
-        if w[0] in vowels and vowel:  # elision
-            l -= 1
-        if nsy_+l > nsy:
-            continue
-        if w in forbiden:
-            print(w)
-            continue
-        nsy_ += l
-        phrase += w + ' '
-        if w[-1] in vowels:
-            vowel = 1
-        else:
-            vowel = 0
+    if nwords:
+        for i in range(nwords):
+            w = n.random.choice(plain_words)
+            phrase += w + ' '
+    else:
+        if nsy == 0:
+            nsy = n.random.randint(1,11)
+        nsy_ = 0
+        while nsy_ < nsy:
+            w = n.random.choice(plain_words)
+            s = getSyllables(w)
+            l = len(s)
+            if w[0] in vowels and vowel:  # elision
+                l -= 1
+            if nsy_+l > nsy:
+                continue
+            nsy_ += l
+            phrase += w + ' '
+            if w[-1] in vowels:
+                vowel = 1
+            else:
+                vowel = 0
     return phrase[:-1]
 
 
-def createSentence(nsy=0, prep=1, n=0, v=0, o=0, p=0):
+def createSentence(n=0, v=0, o=0, p=0,prep=True):
     """
     Create a Toki Pona sentence.
 
     Such phrase will always have a subject, predicate
     and object. Preposition is optional.
 
+    If any of n, v, o, p is 0, it will be replaced by a random
+    value in [1,4].
+
     Parameters
     ----------
-    nsy : integer
-        The number of syllables of the sentence.
-        If nsy=0, the phrase will have a random number of syllables
+    n : integer
+        The number of words in the subject phrase.
+    v : integer
+        The number of words in the predicate phrase.
+    o : integer
+        The number of words in the object phrase.
+    p : integer
+        The number of words in the prepositional phrase.
+    prep : boolean
+        If True, the sentence will have a prepositional phrase,
+        else it will not have a prepositional phrase.
 
     Returns
     -------
@@ -200,11 +220,82 @@ def createSentence(nsy=0, prep=1, n=0, v=0, o=0, p=0):
 
     References
     ----------
-    .. [1] Fabbri, Renato, et al. "Basic concepts and tools for the Toki Pona minimalist language: Wordnet synsets; analysis, synthesis and syntax highlighting of texts." arXiv preprint arXiv:abs/XXX.XXXX (2017)
+    .. [1] Fabbri, Renato, "Basic concepts and tools for the Toki Pona minimalist language: Wordnet synsets; analysis, synthesis and syntax highlighting of texts." arXiv preprint arXiv:abs/XXX.XXXX (2017)
 
     """
-    if nsy == 0:
-        nsy = n.random.randint(5,20)
-    nsy_ = 0
-    phrase = ''
-    while nsy_ < nsy:
+    sentence = ''
+    if not n:
+        n = n.random.randint(1, 5)
+    if not v:
+        v = n.random.randint(1, 5)
+    if not o:
+        o = n.random.randint(1, 5)
+    sentence += createPhrase(nwords=n) + ' '
+    if sentence[:-1] not in ('mi', 'sina'):
+        sentence += 'li '
+    sentence += createPhrase(nwords=v) + ' e '
+    sentence += createPhrase(nwords=o)
+    if prep:
+        if not p:
+            p = n.random.randint(1, 5)
+        sentence += ' ' + createPhrase(nwords=p)
+    return sentence
+
+def createPoem(nsyl=10, lstan=4, nstan=6, rhyme=True):
+    """
+    Create a Toki Pona poem.
+
+    Parameters
+    ----------
+    nsy : integer
+        The number of syllables of the verses.
+        If nsy=0, the verses will have a random number of syllables
+    lstan : integer
+        The number of verses in an stanza.
+        lstan is always considered to be 4,
+        other values for lstan are not implemented.
+    nstan : integer
+        The number of stanzas.
+
+
+    Returns
+    -------
+    poem : string
+        The resulting poem.
+
+    References
+    ----------
+    .. [1] Fabbri, Renato, "Basic concepts and tools for the Toki Pona minimalist language: Wordnet synsets; analysis, synthesis and syntax highlighting of texts." arXiv preprint arXiv:abs/XXX.XXXX (2017)
+
+    """
+    if nsyl < 5:
+        return 'nsyl must be >= 5'
+    # more then one sentence section per verse
+    stanzas = []
+    for i in range(nstan):
+        stanza = ''
+        for j in (0, 1):
+            nsyl0 = nsyl1 = nsyl//2
+            if nsyl%2 == 0:
+                nsyl1 -= 1
+            s = createPhrase(nsyl0)
+            v = createPhrase(nsyl1, vowel=True)
+            o = createPhrase(nsyl1, vowel=True)
+            p = n.random.choice(prepositions)
+            while len(getSyllables(p)) >= nsyl1:
+                p = n.random.choice(prepositions)
+            if o[-1] in vowels and p[0] in vowels:
+                elision = 1
+            else:
+                elision = 0
+            nsyl_ = nsyl - (nsyl1 + 1) - len(getSyllables(p)) + elision
+            p_ = createPhrase(nsyl_, vowel=p[-1] in vowels)
+            stanza += s + ' li ' + v
+            stanza += '\ne ' + o + (' %s %s\n' % (p, p_))
+        stanzas.append(stanza[:-1])
+    poem = "\n\n".join(stanzas)
+    return poem
+
+
+
+
