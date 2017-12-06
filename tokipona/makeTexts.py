@@ -115,9 +115,29 @@ def getSyllables(token):
         syl.append(sy)
     return syl
 
+def countSyllables(token):
+    t = token.split(' ')
+    nsy = 0
+    vowel = 0
+    for i in t:
+        nsy += len(getSyllables(i))
+        if i[0] in vowels and vowel:
+            nsy -= 1
+        if i[-1] in vowels:
+            vowel = 1
+        else:
+            vowel = 0
+    return nsy
+
 forbiden = ['li', 'e', 'la', 'pi', 'a', 'o', 'anu', 'en', 'seme', 'mu', 'kepeken', 'lon', 'tan']
 for f in forbiden:
     plain_words.remove(f)
+
+words_nsy = [
+        [i for i in plain_words if len(getSyllables(i)) == 1],
+        [i for i in plain_words if len(getSyllables(i)) == 2],
+        [i for i in plain_words if len(getSyllables(i)) == 3]
+        ]
 
 def createPhrase(nsy=0, nwords=0, vowel=False):
     """
@@ -162,7 +182,7 @@ def createPhrase(nsy=0, nwords=0, vowel=False):
             phrase += w + ' '
     else:
         if nsy == 0:
-            nsy = n.random.randint(1,11)
+            nsy = n.random.randint(1,7)
         nsy_ = 0
         while nsy_ < nsy:
             w = n.random.choice(plain_words)
@@ -178,9 +198,32 @@ def createPhrase(nsy=0, nwords=0, vowel=False):
                 vowel = 1
             else:
                 vowel = 0
-    return phrase[:-1]
+    p = phrase[:-1]
+    p_ = p.split()
+    nsy_ = sum([len(getSyllables(i)) for i in p_])
+    if len(p_) > 2 and nsy_ > 4:
+        if n.random.random() < .2:  # use pi in 1/5 of sentences
+            print('\n', p, countSyllables(p))
+            where = n.random.randint(len(p_)-2)
+            p_.insert(where+1, 'pi')
+            if p_[where+2][0] not in vowels or (p_[where+2][0] in vowels and p_[where][-1] in vowels):
+                # choose a words with two or three syllables
+                # and make them one syllable shorter
+                p__ = ' '.join(p_)
+                while countSyllables(p__) != countSyllables(p):
+                    sy__ = n.array([len(getSyllables(i)) for i in p_])
+                    ok = (sy__ > 1).nonzero()[0]
+                    chosen = n.random.choice(ok)
+                    size = sy__[chosen]
+                    w = n.random.choice(words_nsy[size-2])
+                    p_[chosen] = w
+                    p__ = ' '.join(p_)
+            print(' '.join(p_), countSyllables(' '.join(p_)))
+    pp = ' '.join(p_)
 
+    return pp
 
+np = n
 def createSentence(n=0, v=0, o=0, p=0,prep=True):
     """
     Create a Toki Pona sentence.
@@ -225,11 +268,11 @@ def createSentence(n=0, v=0, o=0, p=0,prep=True):
     """
     sentence = ''
     if not n:
-        n = n.random.randint(1, 5)
+        n = np.random.randint(1, 5)
     if not v:
-        v = n.random.randint(1, 5)
+        v = np.random.randint(1, 5)
     if not o:
-        o = n.random.randint(1, 5)
+        o = np.random.randint(1, 5)
     sentence += createPhrase(nwords=n) + ' '
     if sentence[:-1] not in ('mi', 'sina'):
         sentence += 'li '
@@ -237,7 +280,7 @@ def createSentence(n=0, v=0, o=0, p=0,prep=True):
     sentence += createPhrase(nwords=o)
     if prep:
         if not p:
-            p = n.random.randint(1, 5)
+            p = np.random.randint(1, 5)
         sentence += ' ' + createPhrase(nwords=p)
     return sentence
 
@@ -295,6 +338,54 @@ def createPoem(nsyl=10, lstan=4, nstan=6, rhyme=True):
         stanzas.append(stanza[:-1])
     poem = "\n\n".join(stanzas)
     return poem
+
+def createParagraph(nsentences=0, words=[]):
+    """
+    Synthesizes a paragraph in Toki Pona.
+
+    Might not have all words if nsentences < len(words).
+    Discards Toki Pona words not recognized.
+    """
+    ww = []
+    for w in words:
+        w_ = w.lower()
+        if w_ in plain_words:
+            ww.append(w_)
+    words = ww
+    if not nsentences:
+        nsentences = n.random.randint(3,10)
+    sentences = []
+    for i in range(nsentences):
+        sentences.append(createSentence(prep=n.random.randint(0,2)))
+
+    w = set()
+    s1 = []
+    s2 = []
+    for s in sentences:
+        have_word = 0
+        for ww in words:
+            if ww in s:
+                w.add(ww)
+                have_word = 1
+        if have_word:
+            s1.append(s)
+        else:
+            s2.append(s)
+    w2 = set(words)
+    w_ = w2.difference(w)
+    while s2 and w_:
+        ss = createSentence(prep=n.random.randint(0,2))
+        for w in w_:
+            if w in ss:
+                s1.append(ss)
+                s2.pop()
+                w_.remove(w)
+    paragraph = ". ".join(s1+s2)
+    return paragraph
+
+
+            
+
 
 
 

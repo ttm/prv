@@ -576,8 +576,8 @@ The general case is implemented as a function
 in the script \tttt{makeStatistics.py}~\cite{tokipona}
 
 \subsection{Synthesis of text}\label{synth}
-Such counting exercises is also useful
-for (semi-)automated writing through scripting.
+Such counting exercises are also useful
+for facilitating (semi-)automated writing through scripting.
 The syntax organizes the words in larger structures.
 The rhymes are restricted and sonorities are
 restricted by the small vocabulary and simple syntax.
@@ -588,9 +588,10 @@ to choose sentences or verses or stanzas.
 
 The same package~\cite{tokipona}
 has capabilities for synthesizing Toki Pona text.
-Noun, verb and prepositional phrases,
+On its most basic level, the routines yield
+noun, verb and prepositional phrases,
 sentences.
-It also aims at making larger scale texts
+They also aim at making larger scale texts
 by keeping a record of the used words and structures (context)
 and using stylistic outlines for poems and short narratives.
 
@@ -603,8 +604,26 @@ might be enhanced as described in Section~\ref{conc}.
 
 Automatic and randomic synthesis of texts in Toki Pona are
 useful because of the reduced vocabulary: ideas often make
-sense in unexpected way, and yields a way to 
+sense in unexpected way, and yield a way to 
 explore the semantic field possible by Toki Pona.
+Each words is related to a broad semantic field,
+thus the randomized selection of words are more likely
+to make sense.
+One might object that the resulting texts are unusual 
+and even consider that they often hold insubstantial or unsound meaning.
+We advocate that these unexpected formations are desirable
+for exploring the possibilities of the language and of thought,
+and for artistic endeavors.
+Also, to obtain texts which one finds usual or satisfactory
+in more strict or personal terms, such a person might just write
+them normally.
+
+% phrase
+% sentence
+% poem
+% text
+% each with a different color scheme
+
 
 \subsection{Syntax highlighting}\label{shigh}
 The same package~\cite{tokipona}
@@ -672,6 +691,8 @@ See \tttt{:h gui-colors} and \tttt{:h highlight}
 for the way you might edit colors directly.
 Useful commands are given as commented lines
 in the end of the syntax file.
+
+% :TOhtml command
 
 \subsubsection{Advanced syntax highlighting considerations}
 Standard guidelines for syntax highlighting
