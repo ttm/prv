@@ -281,7 +281,7 @@ def createSentence(n=0, v=0, o=0, p=0,prep=True):
     if prep:
         if not p:
             p = np.random.randint(1, 5)
-        sentence += ' ' + createPhrase(nwords=p)
+        sentence += ' ' + np.random.choice(prepositions) + ' ' + createPhrase(nwords=p)
     return sentence
 
 def createPoem(nsyl=10, lstan=4, nstan=6, rhyme=True):
@@ -356,7 +356,7 @@ def createParagraph(nsentences=0, words=[]):
         nsentences = n.random.randint(3,10)
     sentences = []
     for i in range(nsentences):
-        sentences.append(createSentence(prep=n.random.randint(0,2)))
+        sentences.append(createSentence(1,1,1,1,prep=n.random.randint(0,2)))
 
     w = set()
     s1 = []
@@ -375,18 +375,11 @@ def createParagraph(nsentences=0, words=[]):
     w_ = w2.difference(w)
     while s2 and w_:
         ss = createSentence(prep=n.random.randint(0,2))
-        for w in w_:
+        w__ = w_.copy()
+        for w in w__:
             if w in ss:
                 s1.append(ss)
                 s2.pop()
                 w_.remove(w)
     paragraph = ". ".join(s1+s2)
     return paragraph
-
-
-            
-
-
-
-
-
