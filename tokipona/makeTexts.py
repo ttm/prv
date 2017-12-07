@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as n
 import os
 # from makeStatistics import getSyllables
+ri = n.random.randint
 
 vowels = 'aeiou'
 consonants = 'jklmnpstw'
@@ -356,7 +357,7 @@ def createParagraph(nsentences=0, words=[]):
         nsentences = n.random.randint(3,10)
     sentences = []
     for i in range(nsentences):
-        sentences.append(createSentence(1,1,1,1,prep=n.random.randint(0,2)))
+        sentences.append(createSentence(ri(1,4),ri(1,4),ri(1,4),ri(1,4),prep=n.random.randint(0,2)))
 
     w = set()
     s1 = []

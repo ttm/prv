@@ -24,6 +24,7 @@
 % \newcommand{\ttt}[1] {
 % 	\texttt{<#1>}}
 % \newcommand{\tttt}[1]{\texttt{#1}}
+\usepackage{subcaption}
 
 \begin{document}
 \title{Basic concepts and tools for the Toki Pona minimalist language:
@@ -602,7 +603,36 @@ The textual synthesis described here,
 and implemented in \tttt{makeTexts.py}
 might be enhanced as described in Section~\ref{conc}.
 
-Automatic and randomic synthesis of texts in Toki Pona are
+\begin{figure}
+  \begin{subfigure}{.5\textwidth}
+    \centering
+        \includegraphics[width=.8\linewidth]{figs/phrase_}
+          \caption{1a}
+            \label{fig:sfig1}
+  \end{subfigure}%
+  \begin{subfigure}{.5\textwidth}
+    \centering
+        \includegraphics[width=.8\linewidth]{figs/sentence_}
+          \caption{1b}
+            \label{fig:sfig2}
+  \end{subfigure}
+  \begin{subfigure}{.5\textwidth}
+    \centering
+        \includegraphics[width=.8\linewidth]{figs/paragraph_}
+          \caption{1b}
+            \label{fig:sfig2}
+  \end{subfigure}
+  \begin{subfigure}{.5\textwidth}
+    \centering
+        \includegraphics[width=.8\linewidth]{figs/poem_}
+          \caption{1b}
+            \label{fig:sfig2}
+  \end{subfigure}
+  \caption{plots of....}
+  \label{fig:fig}
+\end{figure}
+
+Automatic and randomized synthesis of texts in Toki Pona are
 useful because of the reduced vocabulary: ideas often make
 sense in unexpected way, and yield a way to 
 explore the semantic field possible by Toki Pona.
@@ -624,6 +654,11 @@ them normally.
 % text
 % each with a different color scheme
 
+% nanpa followed by numbers
+% pu, taso, kin/namako
+% particles
+% rhymes 
+% modes in which the words are only used as specified in the dictionary
 
 \subsection{Syntax highlighting}\label{shigh}
 The same package~\cite{tokipona}
