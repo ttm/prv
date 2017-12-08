@@ -346,6 +346,7 @@ def createParagraph(nsentences=0, words=[]):
 
     Might not have all words if nsentences < len(words).
     Discards Toki Pona words not recognized.
+
     """
     ww = []
     for w in words:

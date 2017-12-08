@@ -1,1 +1,1 @@
-autocmd BufNewFile,BufRead *.tokipona setfiletype tokipona
+autocmd BufNewFile,BufRead *.tokipona,*.tp setfiletype tokipona

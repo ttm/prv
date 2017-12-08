@@ -187,7 +187,7 @@ acquire new insights.
 Furthermore, it is a solid reference of the phonological and syntax
 rules.
 
-\subsection{Phonology}
+\subsection{Phonology}\label{phonology}
 Words in Toki Pona are written using only 14 letters:
 \begin{itemize}
   \item Vowels a (open), e (mid front), o (mid back), i (close front),
@@ -587,6 +587,45 @@ such as finding the number of syllables considering the elisions,
 or handling interaction of the writer with the script
 to choose sentences or verses or stanzas.
 
+\begin{figure}     \center
+  \begin{subfigure}{.5\textwidth}
+    \centering
+        \includegraphics[width=.8\linewidth]{figs/phrase_}\vspace{-0.15cm}
+          \caption{Synthesized phrase.}
+            \label{fig:sfig1}
+  \end{subfigure}\\\vspace{0.3cm}
+  \begin{subfigure}{.9\textwidth}
+    \centering
+        \includegraphics[width=1.2\linewidth]{figs/sentence_}\vspace{-0.15cm}
+          \caption{Synthesized sentence.}
+            \label{fig:sfig2}
+  \end{subfigure}\\\vspace{0.3cm}
+  \begin{subfigure}{.8\textwidth}
+    \centering
+        \includegraphics[width=1.2\linewidth]{figs/paragraph_}\vspace{-0.15cm}
+          \caption{Synthesized paragraph.}
+            \label{fig:sfig2}
+  \end{subfigure}\\\vspace{0.3cm}
+  \begin{subfigure}{.7\textwidth}
+    \centering
+        \includegraphics[width=.8\linewidth]{figs/poem_}\vspace{-0.15cm}
+          \caption{Synthesized poem.}
+            \label{fig:sfig2}
+  \end{subfigure}
+  \caption{Toki Pona texts synthesized by the scripts
+  in~\cite{tokipona}: (a) a phrase, (b) a sentence, (c) a paragraph,
+  and (d) a poem.
+  The unusual formations are convenient for exploring semantic
+  possibilities.
+  A user might obtain many of such structures to select those
+  he/she finds fit for the intended employment.
+  For more information, see Section~\ref{synth}.
+  The words are colored in accordance to the considerations
+  of Section~\ref{shigh}.}
+  \label{fig:syn}
+\end{figure}
+
+
 The same package~\cite{tokipona}
 has capabilities for synthesizing Toki Pona text.
 On its most basic level, the routines yield
@@ -602,35 +641,6 @@ as presented in the next section.
 The textual synthesis described here,
 and implemented in \tttt{makeTexts.py}
 might be enhanced as described in Section~\ref{conc}.
-
-\begin{figure}
-  \begin{subfigure}{.5\textwidth}
-    \centering
-        \includegraphics[width=.8\linewidth]{figs/phrase_}
-          \caption{1a}
-            \label{fig:sfig1}
-  \end{subfigure}%
-  \begin{subfigure}{.5\textwidth}
-    \centering
-        \includegraphics[width=.8\linewidth]{figs/sentence_}
-          \caption{1b}
-            \label{fig:sfig2}
-  \end{subfigure}
-  \begin{subfigure}{.5\textwidth}
-    \centering
-        \includegraphics[width=.8\linewidth]{figs/paragraph_}
-          \caption{1b}
-            \label{fig:sfig2}
-  \end{subfigure}
-  \begin{subfigure}{.5\textwidth}
-    \centering
-        \includegraphics[width=.8\linewidth]{figs/poem_}
-          \caption{1b}
-            \label{fig:sfig2}
-  \end{subfigure}
-  \caption{plots of....}
-  \label{fig:fig}
-\end{figure}
 
 Automatic and randomized synthesis of texts in Toki Pona are
 useful because of the reduced vocabulary: ideas often make
@@ -660,29 +670,34 @@ them normally.
 % rhymes 
 % modes in which the words are only used as specified in the dictionary
 
+\clearpage
 \subsection{Syntax highlighting}\label{shigh}
 The same package~\cite{tokipona}
-has a Vim syntax highlighting plugin
-for Toki Pona.
-Instructions for installing and using
-the syntax highlighting is at~\cite{tokipona}.
+has a Vim~\cite{vim} syntax highlighting plugin
+for Toki Pona,
+routines to arrange the coloring schemes
+(i.e. to yield the text files with the specifications for which tokens
+to relate to which coloring groups),
+and instructions for installing and using
+the resulting syntax highlighting for Toki Pona texts~\cite{tokipona}.
 
 Basically, it distinguishes the words among the morphosyntactic
-classes according to the official dictionary.
-As a word often belongs to more than one class,
-The precedence of them might be set by the user.
-Also, some classes might be further refined or joined,
-such as by distinguishing only particles and the rest,
-or maybe particles and prepositions and the rest.
+classes according to the official dictionary as given in
+Table~\ref{foobar}.
+A word often belongs to more than one class,
+thus the precedence of them might be set by the user.
+Also, some classes might be further refined (e.g. words beginning with
+vowels) or joined (e.g. distinguishing only particles and the rest,
+or particles and prepositions and the rest).
 The colors are also promptly changed according to~\cite{vimArt}
 and exemplified in the package documentation.
 
 Currently, the Python package synthesizes the
-syntax file.
+syntax file through the\\ \tttt{makeVimSyntax.py} script.
 The user has control of class precedence and
-merging.
+merging and further details through tweaking such routine.
 The choice of precise coloring schemes
-might involve hacking the colorscheme being
+involves fine tuning the color scheme being
 used in Vim (such as 'blue', 'elflord' and 'gruvbox'),
 and Vim's highlighting schemes as described in~\cite{vimArt}.
 In summary,
@@ -690,22 +705,20 @@ the usage of the package and plugin might be performed
 through the following actions:
 \begin{itemize}
   \item Installation of the plugin.
-  \item Tweak of the syntax file by hand.
-  \item Running the Python script to generate a new syntax file
+  \item Tweaking of the syntax file by hand.
+  \item Running the \tttt{makeVimSyntax.py}
+    Python script to generate a new syntax file
     according to other settings.
-  \item Write a file inside Vim using Toki Pona and save
-    the file with the .tokipona extension.
-    Reload the highlighting scheme whenever you
+  \item Write a file names with the \tttt{.tokipona} or \tttt{.tp} extension
+    (inside Vim) using Toki Pona words.
+    Reload the highlighting scheme using \tttt{:e} whenever you
     change the syntax file by hand or through the Python script.
   \item Access the used highlighted groups with :syntax,
-    Access all the highlighting groups with :so \$VIMRUNTIME/syntax/hitest.vim.
+    Access all the highlighting groups with \tttt{:so
+    \$VIMRUNTIME/syntax/hitest.vim} or \tttt{:hi}.
     Change the coloring of a set of terms by associating
-    a used group (e.g. tokiponaADJECTIVE) to an existing group (e.g. Visual):
-    :highlight link tokiponaADJECTIVE Visual.
-    The plugin comes with the :TokiStation command, which opens a window with
-    the files: ijositelen.tokipona, makevimSyntax.py, Highlight Test (created by hitest.vim above), syntax/tokipona.vim.
-    Another tab with shells: python to run over the makeVimSyntax.py and make new syntax/tokipona.vim files. Another with Readme, and PDF documentation. Another with an IPython.
-    Imported tokipona. It resets completely upon command :TokiClose, closing all created windows.
+    a used group (e.g. tokiponaADJECTIVE) to an existing group (e.g.
+    Visual) such as in \tttt{:highlight link tokiponaADJECTIVE Visual}.
 \end{itemize}
 
 The tokipona.vim syntax file has an association of toki pona
@@ -714,10 +727,10 @@ It also holds association of these groups to other groups
 to use their color settings.
 Therefore, one is able to use various color schemes
 with syntax-highlighted Toki Pona texts.
-A Vim user might run \tttt{:colorscheme blue},
-\tttt{:colorscheme solarize}, \tttt{:colorscheme gruvbox}
+A Vim user might run e.g. \tttt{:colorscheme blue},
+\tttt{:colorscheme solarize}, \tttt{:colorscheme gruvbox} or
 \tttt{:colorscheme elflord} to see the same text colored
-with different colorschemes.
+with different color schemes (association of colors to sets of tokens).
 To interfere directly on the colors chosen,
 \tttt{:highlight Normal guifg=\#00000 guibg=\#0000ff}
 will change the standard foreground (text) color to pure black
@@ -726,68 +739,88 @@ See \tttt{:h gui-colors} and \tttt{:h highlight}
 for the way you might edit colors directly.
 Useful commands are given as commented lines
 in the end of the syntax file.
-
-% :TOhtml command
+One might obtain an HTML file with the colored Toki Pona text
+by using the \tttt{:TOhtml} command.
 
 \subsubsection{Advanced syntax highlighting considerations}
 Standard guidelines for syntax highlighting
 depend heavily on cultural and use factors
-(https://softwareengineering.stackexchange.com/questions/89936/syntax-highlighting-color-scheme-studies),
-although there are projects such as Solarized~\cite{solazired}
-(http://ethanschoonover.com/solarized)
-which try to give general solutions for some contexts.
-Standards guidelines for syntax highlighting were not found,
-and might be driven from data visualization considerations.
-Most evident examples of such guidelines are:
+and have scarce scientific studies~\cite{stack}.
+There are informed projects such as Solarized~\cite{solazired},
+which present solutions for some contexts.
+Strikingly, standard guidelines for syntax highlighting were not found.
+Therefore, we considered current data visualization
+theory~\cite{dv1,dv2,dv3,dv4} to glimpse at the potential guidelines:
 \begin{itemize}
   \item The use of blue and other high frequency colors for
   background.
   This is extended to other high frequency (small wavelength)
   colors such as violet.
-  \item The avoidance of colors of blue and other high frequency
-  colors in small objects, such as letters and words.
+  \item The avoidance of blue and other high frequency
+  colors to fill small objects, such as letters and words.
   \item Explore simplicity and elegance through the use of discrete
   coloring schemes. Most of the tokens should be preferably of
   the same color.
-  One might use a power-law to mimic natural occurring phenomena
-  and perception. Or an exponential to map parameters to perceptual
-  stimuli.
-  \item You might always wish to maximize contrast,
-  although taste and less consative combinations might
-  also dictate choices.
+  One might use a power-law to mimic natural occurring phenomena.
+
+  Unfortunately, the dictionary classification of words are not in a
+    power-law distribution and might be better described by a half-normal or by
+overlapping normal distributions over the three peaks ($\sim35-58,
+12-18, 1-5 occurrences$).
+  \item Physical stimuli might be related to perceptual stimuli both 
+    through a power-law or an exponential law (respectively known
+    as Steven's law and Weber-Fechner's law).
+  \item One usually wishes to maximize contrast,
+  although taste and less wearing combinations might
+  also dictate the coloring choices.
   \item Stipulate axes of parameters with which to set colors.
   Wavelength or frequency is an obvious axis given the considerations
   above.
   Other parameters are hue, transparency etc.
-
-  two types of colorschemes: those with dark background,
-  which are more commode at first; and those with a light background,
+  \item One might consider two types of color schemes: those with a dark background,
+  which are more comfortable at first; and those with a light background,
   which are usually impressive (and even annoying) at first,
   but the eye gets used to it and it keeps you more stimulated.
-  The blue color seems to be specially related to physiological
-  stimulation of the body by color~\cite{blue,blue}.
+\item The blue color is specially related to physiological
+  stimulation of the body~\cite{blue,blue2},
+    and programmers often report that a blue background keeps them
+    awake and more concentrated.
+    I found no evidence of this in the scientific literature,
+    and one might simply take my word that programmers say so
+    since I now have programmed daily for more than 10 years.
   \item Consider that the user might stay many hours (and we often do)
   at a text editor, and that the colors and formats involved are
   prone to entail a considerable effect in the body and mental
-  activity.
+  activity and thus in the quality of life and work of a programmer.
   \item Syntax sonification: consider mapping the textual structures
-  to sound (e.g. counting of tokens or context as inside a function or
-  class or over or around a variable of conditional or loop.
-  E.g. through MASSA.
-  \item Mode for tuning syntax highlighting with keyboard shortcuts
-  are used to tune individual colors from background and foreground
-  colors and groups.
-  \item How would these techniques be used for coloring Toki Pona?
-  Coloring of keywords that reflects the dictionary classification
-  of words are not in a power law distribution.
-  Maybe better described by a half-normal or by
-  overlapping normal distributions over the three peaks ($\sim35-58,
-  12-18, 1-5 occurrences$).
-  \item Coloring for poems: division by syllables, words, POS tag,
-    total number of syllables or letters of words.
+  to sound (i.e. parametrize the synthesis of sounds e.g. 
+    by the counting of specific tokens inside a script, a function or
+    class or around a variable of conditional or
+    loop)~\cite{mass}.
+  \item Ideally, one should have facilities for tuning 
+    the syntax highlighting (e.g. through keyboard shortcuts)
+  as envisioned in~\cite{vimArt}.
 \end{itemize}
 
-\url{http://pygments.org/docs/}
+On the consideration of writing and of Toki Pona,
+the considerable irrelevance of the morphsyntactic classes as
+described in Section~\ref{} suggest that a appropriate coloring should
+consider the syntax to identify the nouns, verbs, adjectives, adverbs,
+prepositions and particles.
+Also, the coloring for poems might be more appealing if considered
+e.g. the counting of syllables or repeated vowels and ending
+syllables.
+Insights might be obtained through the observation of the
+choices made and advocated in software packages such as text editors
+(e.g. Vim, Emacs, Sublime, etc.),
+software dedicated to syntax highlighting (e.g.
+pigments \footnote{\url{http://pygments.org/docs/}} and 
+highlight.js \footnote{\url{https://highlightjs.org/}},
+other software (e.g. Linux terminals such as Xterm and gnome-terminal).
+Finally, the careful choice of fonts is known to have
+a relevant impact in comfort and productivity~\cite{fonts},
+e.g. sans-sheriff fonts are more promptly read and yield a cleaner
+text than a fot with sheriff.
 
 \subsection{Wordnet Toki Pona}\label{wn}
 exception: jan (people)
@@ -906,6 +939,7 @@ and search in corpus.
     scientific writings, creative writing
     (exploring the thinking process).
     Different modes that might be specified by a section header or tag.
+  \item The plugin comes with the :TokiStation command, which opens a window with the files: ijositelen.tokipona, makevimSyntax.py, Highlight Test (created by hitest.vim above), syntax/tokipona.vim.  Another tab with shells: python to run over the makeVimSyntax.py and make new syntax/tokipona.vim files. Another with Readme, and PDF documentation. Another with an IPython. Imported tokipona. It resets completely upon command :TokiClose, closing all created windows.
 \end{itemize}
 
 \subsection*{Acknowledgments}
@@ -1098,5 +1132,12 @@ a collective focus on self-transparency. ENMC2017. From \url{https://github.com/
 Poetry. (2017, November 19). In Wikipedia, The Free Encyclopedia.
     Retrieved 19:46, December 3, 2017, from
     \url{https://en.wikipedia.org/w/index.php?title=Poetry&oldid=811036139}
+\bibitem{stack}
+  Various authors, 2011-2016. Syntax-highlighting color scheme studies.
+    Software Engineering in Stack Exchange. Available at
+    \url{https://en.wikipedia.org/w/index.php?title=Poetry&oldid=811036139}
+\bibitem{solarized}
+  Schoonover, E. Solarized color scheme. Available at
+  \url{http://ethanschoonover.com/solarized}
 \end{thebibliography}
 \end{document}
