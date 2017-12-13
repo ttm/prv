@@ -23,7 +23,9 @@ for row in table:
         class_ = [i for i in pos.split() if i.isupper() and i not in ("I,","O!")][0]
         en_words = [i for i in pos.replace(" or ", ' ').split() if i.islower() or i in ("I,","O!")]
         for enw in en_words:
-            w = enw.replace(";", "").replace(',', '')
+            if enw in ('to','a','of','and','in','take','on','form','at','for'):
+                continue
+            w = enw.replace(";", "").replace(',', '').replace('(', '').replace(')', '').replace('?', '')
             lemma_pos.append( (w, class_) )
 
     words_ = row[0].split()
@@ -36,7 +38,7 @@ pos = {'NOUN': 'n',
         'VERB': 'v',
         'PRE-VERB': 'v', # pre-verbs are also verbs
         'ADJECTIVE': 'asr', # adjectives are also adverbs and satellite adjectives
-        'NUMBER': 'asr'
+        'NUMBER': 'asr' # numbers are qualifiers
         }
 
 import nltk as k

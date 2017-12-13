@@ -742,6 +742,8 @@ in the end of the syntax file.
 One might obtain an HTML file with the colored Toki Pona text
 by using the \tttt{:TOhtml} command.
 
+% reference to figure of the texts.
+
 \subsubsection{Advanced syntax highlighting considerations}
 Standard guidelines for syntax highlighting
 depend heavily on cultural and use factors
@@ -820,17 +822,10 @@ other software (e.g. Linux terminals such as Xterm and gnome-terminal).
 Finally, the careful choice of fonts is known to have
 a relevant impact in comfort and productivity~\cite{fonts},
 e.g. sans-sheriff fonts are more promptly read and yield a cleaner
-text than a fot with sheriff.
+text than a for with sheriff.
 
 \subsection{Wordnet Toki Pona}\label{wn}
-exception: jan (people)
-is a hyponym of soweli (mammal),
-kili is hyponym of kasi,
-(walo, pimeja, jelo, loje, laso) are hyponyms of kule.
-But otherwise such relations hold:
-e.g. luka (as hand) is e meronym of sijelo (body).
-
-For a first achievement of a Toki Pona Wordnet,
+For the achievement of a first Toki Pona Wordnet,
 each of the Toki Pona words in the dictionary
 were related to Wordnet synsets
 through the English lemmas.
@@ -838,41 +833,66 @@ All synsets related to the lemma with the POS tag
 given in the dictionary are added.
 Another immediate possibility would be to
 relate each Toki Pona word to the synsets
-related to all the words bounded by a semicolon.
-Another possibility, which I find more consistent
+simultaneously associated to all the English
+words bounded by a semicolon in the dictionary.
+Yet another possibility, which I find more consistent
 but also more controversial,
-is to choose all synsets related to the Wnglish
+is to choose all synsets related to the English
 words given that the Toki Pona words can be used
 in many roles.
-WordNet only contains nouns, adjectives, verbs, and adverbs.
+Wordnet only contains nouns, adjectives, verbs, and adverbs.
 Thus, particles and prepositions were not considered.
 Numbers were considered adjectives.
 Words presented as adjectives in the dictionary
-were considered adjectives and adverbs.
+were considered adjectives and adverbs.~\cite{wordnet}
 
-The total number of different synsets is 2493 in a very conservative
+The total number of different synsets is $2493$ in a very conservative
 counting: discarding prepositions and particles,
-only considering the synsets which have the POS tag
+and only considering the synsets which have the POS tag
 given in the dictionary.
 If all the synsets (that have any POS tag)
 related to a lemma are considered, 
-then Toki Pona vocabulary reaches 3961 synsets.
-The prepositions are particularly missing in these
+then Toki Pona vocabulary reaches $3961$ synsets.
+The prepositions are particularly missing in such
 countings because e.g. tawa or lon are used also
 as ordinary words.
 If synsets for them are considered those of the English
-lemmas with any POS tag, the vocabulary reaches 4052
+lemmas with any POS tag, the vocabulary reaches $4052$
 synsets.
-The total number of synsets in Wordnet is X.
-Total number of synsets counting neighbors.
-Depth of TP synsets.
-Using such features to devise other conlangs.
+The total number of synsets in Wordnet is $117659$.
+Total number of synsets counting neighbors is Y.
+Depth of TP synsets is .
+We envision the usage of such features to guide creation
+of other conlangs.
 
+The \tttt{makeWordnet.py} script, available in~\cite{tokipona},
+makes available such a tentative Wordnet in the simplest form:
+the Toki Pona words are keys in a dictionary that returns the
+corresponding synsets.
+Three of such dictionaries are implemented:
+one where all synsets related to the lemma is
+returned; another as such but excluding the prepositions;
+one that returns only the synsets
+registered in Wordnet with the same POS tag as the lemma
+is in the official dictionary. 
 
-\subsection{Hacks from other people}
-The \url{tokipona.net} has a number of tools,
-just as to transliterate names into Toki Pona phonemes,
-and search in corpus.
+It is worth mentioning that Toki Pona words are very general
+and each of them might mean many things.
+Thus, the words are not very easily related e.g. by hyponymy
+or meronymy.
+Exceptions: jan (people) is a hyponym of soweli (mammal);
+kili is an hyponym of kasi;
+walo, pimeja, jelo, loje, laso
+are hyponyms of kule;
+luka (as hand) is a meronym of sijelo (as body).
+
+\subsection{Hacks and resources from other people}
+A number of tools and other resources for dealing with Toki Pona
+were developed by the community.
+The most complete list is supposedly~\cite{gdoc} and includes
+videos, musical pieces, artistic texts, reference documents (e.g.
+a Toki Pona - Esperanto dictionary), journalistic articles,
+and software tools.
 
 \section{Conclusions and further work}\label{conc}
 \begin{itemize}
