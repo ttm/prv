@@ -39,80 +39,82 @@ São Carlos, SP, Brazil
 \maketitle
 \begin{abstract}
   A minimalist constructed language (conlang)
-  is useful for experiments and is comfortable for making tools.
-  The Toki Pona conlang is minimalist both in the vocabulary
-  (only 14 letters, X phonemes, and 120 words + 4 synonyms)
+  is useful for experiments and comfortable for making tools.
+  The Toki Pona (TP) conlang is minimalist both in the vocabulary
+  (with only 14 letters and 124 words)
   and in the $\approx10$ syntax rules.
   The language is useful for being a used and somewhat established
-  minimalist conlang with at least hundreds of speakers.
+  minimalist conlang with at least hundreds of fluent speakers.
   In this article, we describe current concepts and resources
-  for Toki Pona,
+  for TP,
   and make available Python scripted routines for
-  analysis and synthesis of texts and the specification of syntax highlighting schemes.
+  the analysis of the language,
+  the synthesis of texts, the specification of syntax highlighting
+  schemes, and the achievement of a preliminary TP
+  Wordnet~\cite{wordnet}.
   We focus on the analysis of the basic vocabulary,
   as corpus analyses were found in~\cite{corpus}.
-  The synthesis is based on the basic sentence template,
+  The synthesis is based on sentence templates,
   relates to context by keeping track of used words,
   and renders larger texts by using a fixed number of phonemes (e.g. for poems)
   and number of sentences, words and letters (e.g. for paragraphs).
-  Syntax highlighting is performed in 24bit true colors, currently only
-  with the Vim text editor.
-  Word colors reflect morphosyntactic classes given in the official dictionary
-  and different solutions to necessary and arbitrary choices are described and implemented.
+  Syntax highlighting 
+  reflects morphosyntactic classes given in the official dictionary
+  and different solutions are described and implemented
+  using 24bit true colors in the well-established Vim text editor~\cite{vim}.
+  The tentative TP Wordnet is made available in three forms that
+  reflect the choices of the synsets related to each word.
   In summary, this text holds potentially novel conceptualizations about,
   and tools and results in analyzing, synthesizing or syntax highlighting the
-  Toki Pona language.
+  TP language.
   % subj (li), obj (e), prepositions, qualification (word concatenation), 
   % sent (la), particles, mi-sina, pi, punctuation is freestyle, pre-verb,
 \end{abstract}
-{\bf keywords:} Natural Language Processing, Textual synthesis, Syntax highlighting, Wordnet, Toki Pona
+{\bf keywords:} Constructed languages, Natural Language Processing, Syntax highlighting, Wordnet, Toki Pona
 
 \section{Introduction}\label{intro}
-Toki Pona is a minimalist conlang (constructed language)
+Toki Pona (TP) is a minimalist conlang (constructed language)
 with only 124 words (120 without the synonyms).
 Therefore, the concepts are usually very general and different,
 and, without context, the words are rarely related through
 meronymy and hyponymy.
 Such a linguistic setting is desired because of the simplicity
 which entails easier e.g. learning and tool making.
-Another reason why the minimalistic language design is compelling
+Another reason why the minimalist language design is compelling
 is the study and harnessing of the strong and weak forms of
 the Sapir-Whorf hypothesis (linguistic relativity),
-i.e. that language influences or dictates ones thought
-and world experience.
+i.e. that language influences or dictates thought
+and world experience~\cite{sapWho}.
 Accordingly, one uses a conlang as a thinking tool (or platform)
 or to make experiments about the influence language has on
 the thoughts of the `speaker' (also writer and reader).
 Toki Pona is often described as a tool to meditate,
 to simplify the thinking processes, and as a way to modify
-the mood and impressions about the world.~\cite{tp1,tp2,tp3,tp4}
+the mood and impressions about the world.~\cite{tpLang,kama,tp3,tp4}
 In~\cite{interview}, Sonja Lang (the creator of Toki Pona),
-describes that she has seen the language been used successfuly
+describes that she has seen the language been used successfully
 in the context of management, creation of texts, legal texts,
 etc.
 
 In this article, we present a conceptual overview of the language,
-which is fit both to the newcomer and to the expert.
-We also summarize
-texts and software gadgets
-for Toki Pona that
-were developed by us and by other Toki Pona users.
-Most importantly, the conceptual overview is considerably different
-from what we found in the literature~\cite{pu,pije,memrise},
-with emphasis on simplicity and flexibility,
-and the software routines yield analyses, syntheses
-and highlighting Toki Pona what was thought to be complementary
-to the software currently available.
+which is fit both to the newcomer and to the expert
+for being considerably different
+from what we found in the literature~\cite{tpLang,kama,memrise},
+with emphasis on simplicity and flexibility.
+We also present novel software routines for analysis, synthesis,
+syntax highlighting, and the achievement of a tentative TP
+Wordnet~\cite{wordnet}.
 
 Next subsections hold a description of the general resources available,
 a historical note, and some words about natural and constructed languages.
-Section~\ref{basic} describes Toki Pona's phonology and syntax.
+Section~\ref{basics} describes TP's phonology and syntax.
 Section~\ref{hacks} presents the software routines we made available
 and immediate results, such as listings and statistics of words,
-poems and short stories, and coloring schemes.
+poems and short stories, coloring schemes, and preliminary TP Wordnet
+versions.
 Conclusions and further work are in Section~\ref{conc}.
 Appendix~\ref{mytoki} holds considerations about my usage of Toki Pona,
-with thoughts of rule breaking and potentially new conlangs.
+with thoughts about rule breaking and potentially new conlangs.
 Appendix~\ref{ftp} holds final words in Toki Pona.
 
 % definition, historic, status (groups, speakers, etc).
@@ -120,62 +122,67 @@ Appendix~\ref{ftp} holds final words in Toki Pona.
 \subsection{Resources on Toki Pona}
 One might organize current resources for the Toki Pona
 language in: references and learning material, corpus,
-websites, interaction groups (here users talk a post texts and comments), and software gadgets.
+websites, interaction groups
+(where users talk a post texts and comments), and software gadgets.
 The main references of the language are:
-  the official book ``Toki Pona: The Language of Good'',
+  the official book ``Toki Pona: The Language of Good''~\cite{tpLang},
     authored by Sonja Lang, the creator of the language;
-the online book ``o kama sona e toki pona!'',
+and the online book ``o kama sona e toki pona!'',
 from jan Pije~\cite{kama}.
+A number of tools and other resources for dealing with Toki Pona
+were developed by the community.
+The most complete list is supposedly~\cite{gdoc} and includes
+videos, musical pieces, artistic texts, reference documents (e.g.
+a Toki Pona - Esperanto dictionary), journalistic articles,
+and software tools.
 For a more comprehensive view of the resources available
 for the user, we suggest following the links 
-from~\cite{wikiToki}.
-Section~\cite{third} holds a summary of what we found in software
-gadgets related to Toki Pona.
+in~\cite{gdoc,wikiToki}.
 
 \subsection{Historical note}
-Toki Pona was developed as an internal and personal language
+TP was developed as an internal and personal language
 by Sonja Lang~\cite{interview}.
 It was released as a draft in 2001 and in 2007 some documents
 reported it to have a few hundred speakers.
-The English official book~\cite{lipu} was released only in 2014.
+The English official book~\cite{tpLang} was released only in 2014.
 In 2016, a version of the official book was released in French.
-Nowadays, one finds a number of texts about Toki Pona and written
-in it, and uses of Toki Pona for artificial intelligence~\cite{roila}
-and software tools~\cite{tptoll1,tptool2,tptool3},
-in social platforms such as Facebook groups~\cite{fbtp,fbtpt},
-microblogging~\cite{tokilili}, Telegram~\cite{telegram} and IRC~\cite{irc}.
+Nowadays, one finds a number of texts about TP and written
+in it
+(e.g. in social platforms such as Facebook groups,
+microblogging, Telegram and
+IRC), and other diverse uses of TP e.g. for artificial intelligence and software tools~\cite{gdoc}. 
 
 \subsection{Natural and constructed and artificial languages}
 A language one uses (or might use) to communicate by speaking
 and writing is called `natural language'.
-A `constructed language' is a natural language built by someone or
+A `constructed language' (also planned or invented language) is a natural language built by someone or
 a group, such as Esperanto, Toki Pona, and Lojban.
 An artificial language is a language yield by artificial agents,
-such as in AI routines, and might be considered
-within `cultural evolution' studies.
+such as by AI routines, or by humans in controlled experiments,
+and are considered e.g. within `cultural evolution' studies.
 Formal languages are defined by tokens and rules to
 operate them, they span from computer programming languages
 to math and formal models for natural languages.
-Lojban is a constructed language with the purpose of being
-an artificial language because it is more axiomatic.
 
 Constructed languages are in some traditions called artificial
-languages, but creators most often prefer to use the term `standardized'
+languages, but creators most often prefer to use the term
+`standardized', 'constructed'
 or 'planned' language with the argument that the conlang
-is rooted on natural languages, and 'artificial' is misleading~\cite{conlanWikip}.
-The preferred terms seem to be planned or constructed languages
-or conlang.
+is rooted on natural languages,
+and 'artificial' is misleading.
+The preferred terms seem to be planned or constructed language
+or simply conlang.
 The construction of languages is called glossopoeia.
-Toki Pona is a conlang which might be classified
+TP is a conlang which might be classified
 as engineered for experiments, meditation and philosophy;
-and suitable for auxiliary international language and
-as an artistic language. 
+and suitable for use as an auxiliary international language and
+as an artistic language.~\cite{conlanWikip,artlanWikip}
 % taxonomy, vocabulary, ontology, terminology, 
 
 % conlangs, natural langs, programming langs, Lojban as an
 % intermediary
 % non-verbal languages, musical corporal language, 
-% non-verbal languages confront Sapir-Whorf hypothesis.
+% non-verbal languages confront the strong form of the Sapir-Whorf hypothesis.
 
 
 \section{Overview of the language}\label{basics}
@@ -185,7 +192,8 @@ It should enable a newcomer to grasp the essentials
 of the language and the experienced to
 acquire new insights.
 Furthermore, it is a solid reference of the phonological and syntax
-rules.
+rules, and enables one to understand and modify the software presented
+in Section~\ref{hacks}.
 
 \subsection{Phonology}\label{phonology}
 Words in Toki Pona are written using only 14 letters:
@@ -210,15 +218,16 @@ Especially for poetry, one might consider
 j and w to be vowels
 (e.g. j as 'i' and w as 'u').
 
-Syllables are of the form (C)V(N):
-an optional consonant, a vowel and an optional nasal consonant.
+Syllables are of the form (C)V(n):
+an optional consonant, a vowel and an optional coronal nasal consonant
+(n).
 Non word-initial syllables must follow the pattern CV(N).
-The following sequences are forbidden: ji, wu, wo, ti, nm, nn.
+These sequences are forbidden: ji, wu, wo, ti, nm, nn.
 
 \subsection{Syntax}\label{syntax}
 \subsubsection{Fundamental notions}
 As in other natural languages, 
-colloquial Toki Pona might have
+colloquial TP might have
 incomplete sentences and deviate from the
 norm.
 The basic structure of sentences is:
@@ -226,25 +235,24 @@ The basic structure of sentences is:
 The li might be repeated to associate more than
 one predicate to the subject.
 The particle li is omitted if the subject is a simple mi (I or us)
-or sina (you). A discussion about issues (problems)
-yield by this rule
+or sina (you). A discussion about issues (potential problems)
+yield by this last rule
 and how I deal with them is in Appendix~\ref{mytoki}.
-
 The e might be repeated to associate more than
 one object to a predicate.
-Sentences might be related though la,
+Sentences might be related through la,
 'sentence' la 'sentence', where the second sentence is
 the main sentence, and the first sentence is a condition
-to the first.
+to the second.
 Multiple la-s are not described in literature,
-but I assume that one might assume the last sentence
-being a conditional to the next,
+but one might assume that the last sentence
+is a conditional to the next,
 except in cases where the context strongly suggests
 otherwise.
 
 Noun and verb phrases are (usually) built with the non-particle words.
 The first word is the noun or verb and subsequent words
-qualify the noun or verb.
+qualify the noun or verb (i.e. are adjectives and adverbs).
 The pi particle might be used to separate sequences of words
 to be evaluated before the relation yield by pi.
 As pi is often ill understood and used,
@@ -261,54 +269,53 @@ or:
     word $\leftarrow$5 [word 1 word] 2 word $\leftarrow$4 word 3  word.
 \end{itemize}
 
-Notes on the usage of pi:
+\noindent Further notes on the usage of pi:
 \begin{itemize}
   \item In a sequence of words, without pi, the second word qualifies
     the first, the third word qualifies the phrase yield by the first
-    two words, the fourth word qualifies the noun yield by the first
+    two words, the fourth word qualifies the phrase yield by the first
     three words and so on.
   \item It is redundant to use pi before the last word in a noun or
-    verb phrase if there is no other pi, reason why it is most often
+    verb phrase, reason why it is most often
     omitted.
-    Its use in this case is regarded as wrong~\cite{lipu,pije},
+    Its use in this case is considered an error~\cite{tpLang,kama},
     but, as one might notice, it does not add (much) information
-    through syntax (order of qualifies is conserved).
+    through syntax because the order of qualifications is conserved.
     It adds as an emphasis because of greater length of the written segment, as a preparation: 'jan lili pi mama' (mommy's child).
     Also used in~\cite{akesiWawa}.
   \item The book by jan Pije~\cite{kama} describes another use for pi:
     after li to mean possession, e.g. `soweli li pi sina' (your pet).
-    This employment of pi might be regarded as correct, but are promptly written
+    This employment of pi might be regarded as correct, but is promptly written
     as a noun phrase (e.g. `soweli sina') and is not mentioned
-    by the official book~\cite{tpLabg}.
+    by the official book~\cite{tpLang}.
 \end{itemize}
 
-All the words except the structural particles (li, e, la, pi)
+All the words except the particles (li, e, la, pi, a, o, anu, en, seme, mu)
+and the words classified solely as
+prepositions (kepeken, lon, tan)
 are usable in any position in noun and verb phrases,
-(i.e. 116 words).
-Notice that the phrase expresses a noun in a noun phrase (subject or
-object) or a verb (in the predicate).
+(i.e. 107 words discarding synonyms).
+Notice that the phrase expresses a noun (in a subject or
+object) or a verb (in a predicate).
 And that the first word of the phrase is the noun or verb,
 and that subsequent words are adjectives or adverbs.
-The pi and other particles restarts the phrase to
-first word being a noun.
+The pi precedes a noun or a verb to be qualified and then qualify
+the phrase that comes before it.
 
 At this point, the only missing syntax rule is related to
 the prepositions: kepeken, lon, sama, tan, tawa.
-They might appear at the end of phrases,
+They might appear at the end of a phrase,
 should be followed by another phrase,
 and require no particle. E.g.
 `toki *tan* jan Pije li pana e sona *tawa* mi'.
 Because prepositions can be used as adjectives
-or nouns or verbs, adverbs, etc, and what follows
-a preposition complement might also be of any morphosyntactic class,
-they are core sources of ambiguity.
-three:
-* preposition
-* absence of li on sina and mi
-* Incomplete sentences
-(ona li) tawa lon kon e ilo pi suli mute
+or nouns or verbs or adverbs, etc, and might follow
+anu noun or verb phrase,
+they are one of the three main sources of ambiguity:
+prepositions; absence of li after sina and mi; incomplete sentences.
+E.g. '(mi [li]) pana tawa kon e ilo pi suli mute'.
 
-\subsubsection{Particles}
+\subsubsection{Particles}\label{sec:par}
 Beyond the structural particles (li, e, la, pi) presented
 in last section, other particles are:
 
@@ -316,45 +323,47 @@ in last section, other particles are:
   \item a or kin, emphasis.
   \item o, vocative or imperative ('jan lukin sitelen o, li wawa')
   \item taso, means however as sentence or 'only' if adjective.
-  \item anu, en: 'or' and 'and'. Used for nouns in nous phrases.
-    For repetition of verbs, repeat li.
+  \item anu, en: 'or' and 'and'. Used for nouns in noun phrases.
+    For verbs, repeat li.
     For object nouns, repeat e.
-    If the noun is complementing a preposition (tawa, lon),
+    If the noun is complementing a preposition (e.g. tawa, lon),
     one might repeat the preposition.
-    As Toki Pona is a recent language, and is able to cope with
+    As TP is a recent language, and is particularly able to cope with
     variation due to its simplicity, I would advocate for
     using en and anu wherever there is no ambiguity.
-    E.g.: 'mi tawa anu moku lon tenpo lili?'
+    E.g.: 'mi tawa mute anu moku lon tenpo lili'
     In the official documentation that is not described and
-    might be regarded as wrong in strict canonical.
+    might be regarded as wrong in strict canonical TP.
   \item nanpa, denotes numbering.
   \item seme, for questions, used next to the thing being asked for.
-    'Why?' might be expressed as
-    'seme la sina pana e moku lon sewi'.
+    'tan seme la sina pana e sike?'.
   \item mu, for animal noises. For me it is not a particle, as in the
     official dictionary, but a noun.
     I also like to use it as a verb:
-    'mi pakala e luka. mu mute.'
+    'mi pakala e luka. mi mu mute.'
 \end{itemize}
 
-The vocabulary specifies morphosyntactic classes:
-nouns, adjectives, verbs, pre-verbs, adverbs, particles, prepositions, and numbers.
-I find that they might help the user and newcomer, but
+The vocabulary specifies these morphosyntactic classes:
+nouns, adjectives, verbs, pre-verbs, adverbs, prepositions, particles, and numbers.
+I find that it might help the speaker, specially the newcomer, but
 it might also suggest a deviation from what I understand and read:
-the words might be used indistinctly to be the nouns
-(subjects, the predicate when there is no object, objects,
-and preposition complements),
-the adjectives (anything that does not start the noun phrase or follows a pi),
-verbs
-(follows mi or sina or li or a preposition),
-adverbs (follows the verb).
+the words might be used indistinctly to be a noun
+(the first word of: a subject, a predicate when there is no object, an object,
+or a prepositional complement),
+an adjective (anything that follows an noun and is not a particle or a
+preposition),
+a verb (follows mi or sina or li),
+or an adverbs (follows a verb).
 The pre-verbs (wile, ken, awen, kama, lukin, sona),
-might follow a verb, but might also be understood
-as the verb qualified with the next word,
-which carries a very similar if not identical meaning.
-The pre-verbs are all also defined as other morphosyntactic classes,
-such as adjective, noun, verb.
-The only exception is wile, which is only a pre-verb.
+might be followed by a verb, but might also be understood
+as a verb qualified by the next word,
+which carries a very similar if not identical meaning
+('wile moku' might be understood both as a pre-verb followed
+by a verb and as a verb followed by an adverb).
+The pre-verb words are all also specified in the official dictionary
+to have other morphosyntactic classes,
+such as adjective, noun, and verb.
+The only exception is wile, which is specified to be only a pre-verb.
 
 Thus, the classes given in the dictionary dictate little
 in practice:
@@ -364,127 +373,134 @@ as adjective, verb and noun,
 and are in the dictionary as noun,
 adjective and adjective.
 
-As far as I can see, one should regard
-the particles li, e, pi, and la
-and punctuation.
-The other tokens of the vocabulary
-might be used in any of the remaining positions.
-
-\subsubsection{Convention for recognizing POS tags by speaker and machine}
-
+\subsubsection{Recognizing POS tags by speaker and machine}
+One might perform a POS tagging by following these rules:
 \begin{itemize}
   \item Noun: the first word in a noun phrase.
-    After an 'e' and after a pi,
-    The first word in the sentence if
-    sentence does not start by the verb.
-    Might be in the position of the verb
+    Starting a sentence if it is complete,
+    after an 'e', after a pi, and after a preposition.
+    The predicate is often a noun
     if the sentence has no object.
   \item Adjective: second word on after an e and after
-    Second word on in the subject phrase if present.
+    second word on in the subject phrase if present.
   \item Verb: after a li, mi or sina.
-    If there is no object, the verb position
-    is often a noun.
+    If there is no object, the predicate
+    might be a noun or a verb.
   \item After a preposition,
-    there can be a noun phrase, a verb phrase
-    or nothing.
+    there is a noun phrase.
   \item Notice that there is ambiguity in the structure
     introduced by the omission of li after mi and sina.
     Also, when there is no object, a noun or a verb
-    or an adjective might be in the verb position
-    if there is no object.
-    The prepositional complement is also not defined.
-    (mi moku tawa pali, tawa tomo).
-    So, these are sources of syntactic ambiguities
-    in Toki Pona.
-    They might be solved or minimized by using the semantics
+    or an adjective might be in the verb position.
+    % The prepositional complement is also not defined.
+    % (mi moku tawa pali, tawa tomo). % TTM
+    These are sources of syntactic ambiguities
+    in TP.
+    They might be resolved or minimized by using the semantics
     of the words.
-    One preliminary effort in this direction might be
+    An initial effort in this direction might be
     using the classes in the official dictionary to resolve
     ambiguities whenever possible.
-    This solution is not optimal in correct POS tagging,
+    This solution is not optimal for correct POS tagging,
     and does not solve all possible ambiguities
-    (there are words classified as nouns and adjectives,
-    adjectives and verbs, nouns and verbs, particle and verb).
-
+    (there are words classified as noun and adjective,
+    adjective and verb, noun and verb, particle and verb).
     Another source of ambiguity is the pre-verbs as described
-    in the literature~\cite{tpLang,pije}.
-    But I find it reasonable to understand them as verbs.
-
+    in the literature~\cite{tpLang,kama}.
+    But I find it reasonable to understand them as verbs,
+    as described in the end of Section~\ref{sec:par}.
+  \item If there is no object, the predicate might be parsed
+as being a hybrid of noun, verb and adjective.
+  \item The prepositional phrase might also be taken to be a hybrid
+    of noun, verb and adjective.
 \end{itemize}
 
-Also, the prepositional complement might
-be a noun or a verb.
-I could not come up with a sentence
-where it would be understood as an adjective.
+% Also, the prepositional complement might
+% be a noun or a verb.
+% I could not come up with a sentence
+% where it would be understood as an adjective. TTM
 
-
-\subsubsection{Further notes}
+\subsubsection{Additional notes}
+John Clifford (a notable ``toki-ponist'', a.k.a. jan Kipo)
+states that there are not noun, verb or prepositional
+phrases in TP, but only phrases in a structure
+yield by particles and content words~\cite{janKipo}.
 The only synonyms on Toki Pona are:
-a and kin; lukin and oko;
-sin or kamako;
+a and kin; lukin and oko; sin or kamako;
 ale or ali.
-
 In formations such as
-toki e ni:, wile e ni:, tan ni: etc.
-'(e) ni' can be omitted and : used alone.
-
+toki e ni:, wile e ni:, tan ni: etc.,
+'(e) ni' might be omitted and : used alone.
 Names are by default transliterated,
-but might not be, as described in Section~\ref{mytoki}.
-
+but might not be.
+These and other issues are further described in Appendix~\ref{mytoki}.
 
 % my view
+Many other considerations might be made about the language,
+such as additional (deprecated and new) words,
+situations where li is used and avoided,
+canonical and alternative employment of pi,
+counting systems,
+associations of TP word sequences to words in English,
+usage of images to represent TP words and sentences,
+and best practices in writing TP texts or for translation.
+For these and other matters, visit~\cite{tpLang,kama,gdoc,tp4}.
+
 % considerations about the official book and jan Pije
 % pictorial forms
 \section{Software for analysis, synthesis, and syntax highlighting}\label{hacks}
 In this section,
-we describe software, natural language, audiovisual and numeric results
-on four directions:
+we describe software, statistic, natural language processing,
+and visualization results:
 1)
 the analysis of the Toki Pona language through statistics
-obtained by processing the dictionary;
+of the vocabulary obtained by processing the official dictionary;
 2)
-the synthesis of sentences, poems and short stories
+the synthesis of sentences, poems and paragraphs (e.g. short stories)
 in Toki Pona;
 3)
 syntax highlighting for Toki Pona,
 including fine-tuning and theoretical
 considerations;
 4)
-initial considerations about the WordNet of
+an initial Wordnet~\cite{wordnet} of
 Toki Pona words.
-Corpus analysis was already found in~\cite{}.
-
+Corpus analysis was already found in~\cite{corpus}.
 The Python scripts (or the toolbox)
 for obtaining all the results in this sections,
 and more, is publicly available in~\cite{tokipona},
 to facilitate both the inspection of the results and the
 generation of derivatives by other interested parties.
+Such scripts were made very friendly for one to understand and alter
+at will.
 
 
 \subsection{Statistics of the vocabulary}\label{sec:stat}
-In~\cite{pije} are statistics about Toki Pona corpus.
+In~\cite{corpus} are statistics about a Toki Pona corpus.
 This section focuses on the statistics of the vocabulary
-and syntactic rules:
+and of the syntactic rules:
 the letters, phonemes, word sizes,
 possible combinations for words and sentences.
-The statistics are in Appendix~\cite{listings},
-and the next paragraph is an overview.
+% The statistics are in Appendix~\cite{listings},
+% and the next paragraph is an overview. TTM
 The script \tttt{makeStatistics.py}
 was used to obtain the all the measurements and tables
 discussed herein,
-and hold some other measurements and sets of words
-which were regarded as less suitable for this exposition.
+and hold further measurements and sets of words
+which were regarded as less suitable for this exposition,
+but is useful for a deeper investigation.
 
-As described in Section~\cite{basics},
+As described in Section~\ref{basics},
 there are only 14 letters,
-and phonemes respect a few rules.
+and phonemes are also very restricted.
 There are 120 different words in the official vocabulary,
 4 of them having synonyms.
-A total of 124 tokens,
+A total of 124 tokens (or lemmas),
 not counting proper nouns (names)
 and punctuation.
-Table~\ref{tab:pos} shows the number of words
-related to each POS tag specified in the dictionary.
+Table~\ref{foobar} shows the number of words
+related to each POS tag (or morphosyntactic class)
+specified in the dictionary.
 
 \input{pos}
 
@@ -493,67 +509,55 @@ From the official 124 words,
 have only one syllable,
 85 (68.55\%) have two syllables,
 and 13 (10.48\%) have three syllables.
-No official words has four or more syllables.
-Of all the 235 syllables of the official words,
-li, la, ka, na, and pa are the most often (with 5.53\%,
-4.26\%, 3.83\%,  3.83\%, 3.83\%).
-On the first syllable of each word,
-a, o, pi, ka, and la are the most often
-(with 6.45\%, 4.03\%, 4.03\%, 3.23\%, 3.23\%).
-On the last syllable of each word,
-li, lo, na, la, and ma are the most often
-(with 8.06\%, 4.84\%, 4.84\%, 4.03\%, 4.03\%).
+No official word has four or more syllables.
+In all the 124 tokens, there are 235 syllables (68 different),
+and Table~\ref{tab:freqsy} exhibits the 10 most frequent
+syllables in the first, last, middle and all positions.
 Middle-word syllables only occur 13 times,
-and are all different, with the exception of `la',
+and are all different, with the exception of 'la'
 which occurs twice.
-For the frequencies of all syllables in every position,
-run the script \tttt{makeStatistics.py} in~\cite{tokipona}.
-
-Vowel and consonant frequencies are as shown in Table~\ref{freqLet}
-for starting, end and internal position.
-Comparison of vowels against consonant is in Table~\ref{tab:vcon}.
-The high incidences e.g. of 'l' and 'a' favor
-the naturalness of the language prosody
-as it resembles child speech.
-
-\input{vowels}
-
-26, 85 and 13 words have one, two and three syllables
-(20.96, 68.54 and 10.48\% of all 124 tokens).
-No official word have more than three syllables
-(although proper names may be of any size).
-In all the 124 tokens, there are 235 syllables (68 different).
-Most often syllables are in
-Table~\ref{syl}.
 A complete list of the syllables and their frequencies (in different
 positions) is in the \tttt{hsyls} variable of the \tttt{makeStatistics.py}
 script.
 A list of all words, grouped by their size in syllables,
 and ordered alphabetically and by the number of letters,
-is in \tttt{hlsyl\_\_}.
+is in the \tttt{hlsyl\_\_} variable.
 
 \input{syls}
 
+Vowel and consonant frequencies,
+and comparisons of vowels against consonants,
+are as shown in Table~\ref{freqLet}
+for starting, end and internal position.
+The limited number of consonants favors
+the naturalness of the language prosody
+as it resembles babbling.
+
+\input{vowels}
+
 Given the rules given in Section~\ref{phonology}
-(of 14 letters, 5 vowels, (C)V(N) phonemes,
+(of 14 letters, 5 vowels, (C)V(n) phonemes,
 forbidden ji, wu, wo, ti, nn, nm),
 96 words are possible with 1 syllable,
 8256 with 2 syllables, 710016 with 3 syllables.
-No middle syllable end with the nasal consonant 'n'.
+In the incident words of the official dictionary,
+no middle syllable end with the nasal consonant 'n'.
 
-Possible syntactic structures are unlimited.
+Possible sentence structures are unlimited.
 For a noun or verb phrase, one might quantify the possibilities
-by considering all words but the particles that are nothing else
+by considering all words but the particles that are not classified
+also as something else
 (i.e. li, e, la, pi, a, o, anu, en, seme, mu)
-and the presotions that are nothing else (i.e. kepeken, lon, tan).
+and the prepositions that are not classified also as something
+else (i.e. kepeken, lon, tan).
 This yields $120-13=107 words$.
 As discussed in Section~\ref{syntax},
 I advocate that, although such words are classified in the dictionary,
 they might be used indistinctly as nouns, adjectives,
 verbs and adverbs.
-Thus, one have 107 possibilities of noun and verb phrases with
-one word, $107^2=11449$ possibilities with two words,
-$107^3=1225043$ with three words and so on.
+Thus, one has 107 possibilities of noun and verb phrases with
+one word, $107^2=11,449$ possibilities with two words,
+$107^3=1,225,043$ with three words and so on.
 Be $n$, $v$, $o$, and $p$ the number of words in the subject (noun), predicate
 (verb), object (noun) and prepositional (noun or verb) phrases of a sentence,
 and assume that the sentence has at most one prepositional phrase,
@@ -567,25 +571,35 @@ at each phrase, yielding:
 $\delta = 107^n\times 107^v\times 107^o \times 5\times 107^p\times 9^4$.
 For example, assume $n=v=o=p=1$, then
 $\delta=107^1\times 107^1\times 107^1 \times 5\times 107^1\times 9^4=
- 4.300066\times 10^+12$
+ 4.300066\times 10^+12$,
 i.e. more then 4 trillion possible
 sentences with single word phrases (i.e. no adjectives or adverbs),
 while allowing only one particle per phrase
-and only one predicate phrase 
+and only one predicate phrase
 (e.g. 'ona li moku e soweli lon supa').
 The general case is implemented as a function
-in the script \tttt{makeStatistics.py}~\cite{tokipona}
+in the script \tttt{makeStatistics.py}~\cite{tokipona}.
 
 \subsection{Synthesis of text}\label{synth}
 Such counting exercises are also useful
 for facilitating (semi-)automated writing through scripting.
 The syntax organizes the words in larger structures.
-The rhymes are restricted and sonorities are
-restricted by the small vocabulary and simple syntax.
+The rhymes are very restricted and sonorities are
+bounded by the small vocabulary and simple syntax.
 There are some specific tasks for achieving texts,
 such as finding the number of syllables considering the elisions,
 or handling interaction of the writer with the script
 to choose sentences or verses or stanzas.
+The same package~\cite{tokipona}
+has capabilities for synthesizing TP text.
+On its most basic level, these routines yield
+noun, verb and prepositional phrases,
+and sentences.
+They also aim at making larger scale texts
+by assuring the use of specific words (to entail context),
+e.g. to assist the creation of short narratives,
+and by employing stylistic outlines for poems.
+
 
 \begin{figure}     \center
   \begin{subfigure}{.5\textwidth}
@@ -612,46 +626,36 @@ to choose sentences or verses or stanzas.
           \caption{Synthesized poem.}
             \label{fig:sfig2}
   \end{subfigure}
-  \caption{Toki Pona texts synthesized by the scripts
+  \caption{Toki Pona texts synthesized by the \tttt{makeTexts.py} script
   in~\cite{tokipona}: (a) a phrase, (b) a sentence, (c) a paragraph,
   and (d) a poem.
-  The unusual formations are convenient for exploring semantic
+  The unusual word combinations are convenient for exploring semantic
   possibilities.
-  A user might obtain many of such structures to select those
-  he/she finds fit for the intended employment.
+  One might obtain many of such texts to select the excerpts
+  he/she finds fit for the intended use.
   For more information, see Section~\ref{synth}.
   The words are colored in accordance to the considerations
-  of Section~\ref{shigh}.}
+  in Section~\ref{shigh}.}
   \label{fig:syn}
 \end{figure}
 
-
-The same package~\cite{tokipona}
-has capabilities for synthesizing Toki Pona text.
-On its most basic level, the routines yield
-noun, verb and prepositional phrases,
-sentences.
-They also aim at making larger scale texts
-by keeping a record of the used words and structures (context)
-and using stylistic outlines for poems and short narratives.
-
 Figure~\ref{fig:syn} holds some synthesized texts
-with different coloring schemes for syntax highlighting,
+with different color schemes for the syntax highlighting,
 as presented in the next section.
 The textual synthesis described here,
-and implemented in \tttt{makeTexts.py}
-might be enhanced as described in Section~\ref{conc}.
+and implemented in \tttt{makeTexts.py},
+might be enhanced in countless ways,
+e.g. as described in Section~\ref{conc}.
 
-Automatic and randomized synthesis of texts in Toki Pona are
-useful because of the reduced vocabulary: ideas often make
-sense in unexpected way, and yield a way to 
-explore the semantic field possible by Toki Pona.
-Each words is related to a broad semantic field,
-thus the randomized selection of words are more likely
-to make sense.
+Automatic and randomized synthesis of texts in TP is particularly
+useful because of the reduced vocabulary where each word is related
+to a broad semantic field.
+Ideas often make sense in unexpected ways, and thus
+the synthesis yields a procedure to 
+explore the semantic possibilities within TP.
 One might object that the resulting texts are unusual 
 and even consider that they often hold insubstantial or unsound meaning.
-We advocate that these unexpected formations are desirable
+I advocate that these unexpected formations are desirable
 for exploring the possibilities of the language and of thought,
 and for artistic endeavors.
 Also, to obtain texts which one finds usual or satisfactory
@@ -670,7 +674,7 @@ them normally.
 % rhymes 
 % modes in which the words are only used as specified in the dictionary
 
-\clearpage
+% \clearpage
 \subsection{Syntax highlighting}\label{shigh}
 The same package~\cite{tokipona}
 has a Vim~\cite{vim} syntax highlighting plugin
@@ -680,8 +684,17 @@ routines to arrange the coloring schemes
 to relate to which coloring groups),
 and instructions for installing and using
 the resulting syntax highlighting for Toki Pona texts~\cite{tokipona}.
+An online syntax highlighting gadget is found at~\cite{tpNetSH},
+and the solution here described presents a number of enhancements:
+it is capable of coloring all morphosyntactic classes;
+it might be fine-tuned in the colors and their relations to sets of
+tokens; it is designed to be used within Vim
+and might be exported as HTML; the highlighting scheme is promptly
+rendered by a script; the resulting script might be used with
+many color schemes.
 
-Basically, it distinguishes the words among the morphosyntactic
+Basically, the resulting syntax highlighting
+distinguishes the words among the morphosyntactic
 classes according to the official dictionary as given in
 Table~\ref{foobar}.
 A word often belongs to more than one class,
@@ -689,7 +702,7 @@ thus the precedence of them might be set by the user.
 Also, some classes might be further refined (e.g. words beginning with
 vowels) or joined (e.g. distinguishing only particles and the rest,
 or particles and prepositions and the rest).
-The colors are also promptly changed according to~\cite{vimArt}
+The colors are also promptly changed according to~\cite{vim}
 and exemplified in the package documentation.
 
 Currently, the Python package synthesizes the
@@ -699,7 +712,7 @@ merging and further details through tweaking such routine.
 The choice of precise coloring schemes
 involves fine tuning the color scheme being
 used in Vim (such as 'blue', 'elflord' and 'gruvbox'),
-and Vim's highlighting schemes as described in~\cite{vimArt}.
+and Vim's highlighting schemes as described in~\cite{vim}.
 In summary,
 the usage of the package and plugin might be performed
 through the following actions:
@@ -707,13 +720,13 @@ through the following actions:
   \item Installation of the plugin.
   \item Tweaking of the syntax file by hand.
   \item Running the \tttt{makeVimSyntax.py}
-    Python script to generate a new syntax file
+    Python script to generate a new \tttt{tokipona.vim} syntax file
     according to other settings.
-  \item Write a file names with the \tttt{.tokipona} or \tttt{.tp} extension
+  \item Write a file with the \tttt{.tokipona} or \tttt{.tp} extension
     (inside Vim) using Toki Pona words.
     Reload the highlighting scheme using \tttt{:e} whenever you
     change the syntax file by hand or through the Python script.
-  \item Access the used highlighted groups with :syntax,
+  \item Access the used highlighted groups with \tttt{:syntax}.
     Access all the highlighting groups with \tttt{:so
     \$VIMRUNTIME/syntax/hitest.vim} or \tttt{:hi}.
     Change the coloring of a set of terms by associating
@@ -721,12 +734,12 @@ through the following actions:
     Visual) such as in \tttt{:highlight link tokiponaADJECTIVE Visual}.
 \end{itemize}
 
-The tokipona.vim syntax file has an association of toki pona
+The syntax file has an association of TP
 words with highlighting groups.
-It also holds association of these groups to other groups
+It also holds associations of these groups to other groups
 to use their color settings.
 Therefore, one is able to use various color schemes
-with syntax-highlighted Toki Pona texts.
+in syntax-highlighted TP texts, such as in Figure~\ref{fig:syn}.
 A Vim user might run e.g. \tttt{:colorscheme blue},
 \tttt{:colorscheme solarize}, \tttt{:colorscheme gruvbox} or
 \tttt{:colorscheme elflord} to see the same text colored
@@ -738,8 +751,8 @@ and background to pure blue.
 See \tttt{:h gui-colors} and \tttt{:h highlight}
 for the way you might edit colors directly.
 Useful commands are given as commented lines
-in the end of the syntax file.
-One might obtain an HTML file with the colored Toki Pona text
+in the end of the syntax file. % TTM
+One might obtain an HTML file with the colored TP text
 by using the \tttt{:TOhtml} command.
 
 % reference to figure of the texts.
@@ -754,31 +767,33 @@ Strikingly, standard guidelines for syntax highlighting were not found.
 Therefore, we considered current data visualization
 theory~\cite{dv1,dv2,dv3,dv4} to glimpse at the potential guidelines:
 \begin{itemize}
-  \item The use of blue and other high frequency colors for
-  background.
-  This is extended to other high frequency (small wavelength)
-  colors such as violet.
+  \item The use of blue and other high frequency colors (such as
+    violet) for the background.
   \item The avoidance of blue and other high frequency
   colors to fill small objects, such as letters and words.
   \item Explore simplicity and elegance through the use of discrete
   coloring schemes. Most of the tokens should be preferably of
   the same color.
-  One might use a power-law to mimic natural occurring phenomena.
-
-  Unfortunately, the dictionary classification of words are not in a
+    One might use only a small number of colors to achieve a clean
+    visualization of texts.
+  Also, a power-law distribution of tokens among colors might be
+    well-suited to mimic natural occurring phenomena.
+    (Unfortunately, the TP dictionary classification of words are not in a
     power-law distribution and might be better described by a half-normal or by
-overlapping normal distributions over the three peaks ($\sim35-58,
+overlapping normal distributions over the three peaks: $\sim35-58,
 12-18, 1-5 occurrences$).
   \item Physical stimuli might be related to perceptual stimuli both 
     through a power-law or an exponential law (respectively known
     as Steven's law and Weber-Fechner's law).
+    This might be useful e.g. for coloring sets of tokens in
+    a way that their similarity is considered.
   \item One usually wishes to maximize contrast,
   although taste and less wearing combinations might
   also dictate the coloring choices.
   \item Stipulate axes of parameters with which to set colors.
   Wavelength or frequency is an obvious axis given the considerations
   above.
-  Other parameters are hue, transparency etc.
+  Other evident parameters are hue, transparency etc.
   \item One might consider two types of color schemes: those with a dark background,
   which are more comfortable at first; and those with a light background,
   which are usually impressive (and even annoying) at first,
@@ -786,190 +801,220 @@ overlapping normal distributions over the three peaks ($\sim35-58,
 \item The blue color is specially related to physiological
   stimulation of the body~\cite{blue,blue2},
     and programmers often report that a blue background keeps them
-    awake and more concentrated.
-    I found no evidence of this in the scientific literature,
-    and one might simply take my word that programmers say so
-    since I now have programmed daily for more than 10 years.
-  \item Consider that the user might stay many hours (and we often do)
-  at a text editor, and that the colors and formats involved are
+    awake and more concentrated (I also notice such effect,
+    and I have programmed daily for more than 10 years).
+  \item Colors have been associated to enhancements in specific tasks,
+    e.g. blue and red are respectively associated to enhanced
+    creativity and detail-oriented tasks in~\cite{blue}.
+  \item It is important to consider that the user might 
+    stay many hours
+  at a text editor (and we very often do),
+    and that the colors and formats involved are
   prone to entail a considerable effect in the body and mental
-  activity and thus in the quality of life and work of a programmer.
-  \item Syntax sonification: consider mapping the textual structures
-  to sound (i.e. parametrize the synthesis of sounds e.g. 
-    by the counting of specific tokens inside a script, a function or
-    class or around a variable of conditional or
-    loop)~\cite{mass}.
+    activity and thus in the quality of life and work of a writer
+    (e.g. a programmer).
   \item Ideally, one should have facilities for tuning 
     the syntax highlighting (e.g. through keyboard shortcuts)
-  as envisioned in~\cite{vimArt}.
+  as envisioned in~\cite{vim}.
 \end{itemize}
 
-On the consideration of writing and of Toki Pona,
-the considerable irrelevance of the morphsyntactic classes as
-described in Section~\ref{} suggest that a appropriate coloring should
-consider the syntax to identify the nouns, verbs, adjectives, adverbs,
+The considerable irrelevance of the morphosyntactic classes as
+described in Section~\ref{syntax} suggests that an appropriate coloring
+of words should
+either distinguish only between particles, prepositions and the rest,
+or consider the syntax to identify the nouns, verbs, adjectives, adverbs,
 prepositions and particles.
 Also, the coloring for poems might be more appealing if considered
-e.g. the counting of syllables or repeated vowels and ending
-syllables.
+e.g. the counting of syllables, the repeated letters or syllables,
+and the ending syllables.
 Insights might be obtained through the observation of the
-choices made and advocated in software packages such as text editors
-(e.g. Vim, Emacs, Sublime, etc.),
-software dedicated to syntax highlighting (e.g.
-pigments \footnote{\url{http://pygments.org/docs/}} and 
-highlight.js \footnote{\url{https://highlightjs.org/}},
+choices made and advocated in software such as text editors
+(e.g. Vim, Emacs, Sublime),
+packages dedicated to syntax highlighting (e.g.
+pigments\footnote{\url{http://pygments.org/docs/}} and 
+highlight.js\footnote{\url{https://highlightjs.org/}},
+and
 other software (e.g. Linux terminals such as Xterm and gnome-terminal).
 Finally, the careful choice of fonts is known to have
 a relevant impact in comfort and productivity~\cite{fonts},
 e.g. sans-sheriff fonts are more promptly read and yield a cleaner
-text than a for with sheriff.
+text than a serif font, and the same applies to a monospaced font
+which is more likely to yield a cleaner text, at least for programming.
 
-\subsection{Wordnet Toki Pona}\label{wn}
+One might also 
+consider the mapping the textual structures
+to sound~\cite{mass} (i.e. parametrize the synthesis of sounds e.g. 
+by the counting of specific tokens inside a script, a function or
+class or around a variable of conditional or
+loop), which might be called ``syntax sonification''.
+
+\subsection{Toki Pona Wordnet}\label{wn}
 For the achievement of a first Toki Pona Wordnet,
-each of the Toki Pona words in the dictionary
-were related to Wordnet synsets
+each of the TP words in the dictionary
+was related to Wordnet synsets~\cite{wordnet}
 through the English lemmas.
-All synsets related to the lemma with the POS tag
-given in the dictionary are added.
-Another immediate possibility would be to
-relate each Toki Pona word to the synsets
-simultaneously associated to all the English
-words bounded by a semicolon in the dictionary.
-Yet another possibility, which I find more consistent
-but also more controversial,
-is to choose all synsets related to the English
-words given that the Toki Pona words can be used
-in many roles.
-Wordnet only contains nouns, adjectives, verbs, and adverbs.
+The most canonical (i.e. Princeton) Wordnet only contains nouns,
+adjectives, verbs, and adverbs.
 Thus, particles and prepositions were not considered.
 Numbers were considered adjectives.
 Words presented as adjectives in the dictionary
-were considered adjectives and adverbs.~\cite{wordnet}
-
-The total number of different synsets is $2493$ in a very conservative
-counting: discarding prepositions and particles,
-and only considering the synsets which have the POS tag
-given in the dictionary.
-If all the synsets (that have any POS tag)
-related to a lemma are considered, 
-then Toki Pona vocabulary reaches $3961$ synsets.
-The prepositions are particularly missing in such
-countings because e.g. tawa or lon are used also
-as ordinary words.
-If synsets for them are considered those of the English
-lemmas with any POS tag, the vocabulary reaches $4052$
-synsets.
-The total number of synsets in Wordnet is $117659$.
-Total number of synsets counting neighbors is Y.
-Depth of TP synsets is .
-We envision the usage of such features to guide creation
-of other conlangs.
+were considered both as adjectives and adverbs.~\cite{wordnet}
 
 The \tttt{makeWordnet.py} script, available in~\cite{tokipona},
-makes available such a tentative Wordnet in the simplest form:
-the Toki Pona words are keys in a dictionary that returns the
+makes available such tentative TP Wordnets in the simplest form:
+the TP words are keys in a dictionary that returns the
 corresponding synsets.
 Three of such dictionaries are implemented:
 one where all synsets related to the lemma is
-returned; another as such but excluding the prepositions;
-one that returns only the synsets
+returned (the version most consistent
+with the expositions in Section~\ref{basics}),
+with 4,052 synsets;
+another as such but excluding the prepositions,
+with 3,961 synsets;
+a last one that returns only the synsets
 registered in Wordnet with the same POS tag as the lemma
-is in the official dictionary. 
+is in the official dictionary,
+with 2,493 synsets. 
+Another immediate possibility, not implemented,
+would be to relate each Toki Pona word to the synsets
+simultaneously associated to all the English
+words bounded by a semicolon in the dictionary.
+Such collection of synsets, and its relation to the whole
+Wordnet
+(the total number of synsets in Wordnet is $117,659$),
+might guide creation of other conlangs
+(e.g. one might seek to use lemmas related to synsets that
+are very far apart, or that has the most complete neighborhood
+possible).
+% Total number of synsets counting neighbors is Y. TTM
+% Depth of TP synsets is .
 
-It is worth mentioning that Toki Pona words are very general
+It is worth mentioning that TP words are very general
 and each of them might mean many things.
 Thus, the words are not very easily related e.g. by hyponymy
 or meronymy.
 Exceptions: jan (people) is a hyponym of soweli (mammal);
 kili is an hyponym of kasi;
 walo, pimeja, jelo, loje, laso
-are hyponyms of kule;
+are hyponyms of kule.
+There is at least one caveat:
+if a particular meaning of each word is chosen,
+then there might be many other of such relations,
+e.g. 
 luka (as hand) is a meronym of sijelo (as body).
 
-\subsection{Hacks and resources from other people}
-A number of tools and other resources for dealing with Toki Pona
-were developed by the community.
-The most complete list is supposedly~\cite{gdoc} and includes
-videos, musical pieces, artistic texts, reference documents (e.g.
-a Toki Pona - Esperanto dictionary), journalistic articles,
-and software tools.
-
 \section{Conclusions and further work}\label{conc}
+This document presented a potentially novel description of Toki Pona (TP)
+language in Section~\ref{basics}, and innovative and useful software routines for dealing with
+the language in Section~\ref{hacks}.
+As a minimalist conlang, TP is very convenient for cognitive
+experiments
+through linguistic semantics and
+for devising tools for analysis, creation and visualization.
+Other conlangs, and even non-planned languages might benefit from
+TP and the content presented here in many ways, e.g. one might
+synthesize TP texts and translate them as convenient,
+adapt the routines to obtain statistics of the vocabulary,
+or take advantage of the language description to devise new conlangs
+or stilistic guidelines for any language.
+
+Possible next steps are numerous:
 \begin{itemize}
   \item Further develop the text synthesis facilities described in
     Section~\ref{synth} might be enhanced by further employing e.g.
-    rhythm, meter, rhyme and form techniques~\cite{wikipPoetry}.
+    rhythm, meter, rhyme and form techniques~\cite{wikiPoetry}.
   \item Make a syntax highlighting that colors the tokens with respect
     to the syntatic position and function, and not in a fixed manner
     as is implemented and exposed in Section~\ref{shigh}.
-  \item Relate Toki Pona to Wordnet: should one Toki Pona word
-    be related to more then one synset of the English language?
-    An immediate implementation would be linking each Toki Pona word
-    to the English words in the official vocabulary.
-    A Toki Pona synset would be related to all the synsets of each English
-    words regarded as lemmas (sequence of characters or sound).
-  \item Translators. This Toki Pona Wordnet would be useful e.g. for naive translators
-    of words and text.
-    Enhancements of such translators would use POS tagging and templates
-    in English and Toki Pona and/or corpus and further statistical methods.
-    An efficiency of Toki Pona can be studied in terms of the coverage of
-    the Wordnet cloud.
-  \item Conlanging. In fact, I plan to use Wordnet for making new conlangs
-    (conlanging), and insights derived from Toki Pona might be used for that end.
-  \item Understand how the corpus is gathered in \url{tokipona.net}.
-  \item Know about previously existing words that were used for Toki Pona
+    This might be implemented by using n-grams and
+    further techniques from Natural Language Processing
+  \item Enhance and study the TP Wordnet described in Section~\ref{wn}:
+    implement a NLTK-like Wordnet interface; check if each synset
+    is correctly associated to the TP words; seek further synsets
+    that were not found by the English lemmas in the official
+    dictionary; implement the most restricted version described in
+    Section~\ref{wn}, which relates each TP word only to the synsets
+    that are related to all the English words not separated by a
+    semicolon; find out the neighborhood of the synsets of the TP
+    Wordnet in the English Wordnet; explore the possibilities for
+    devising new conlangs by means of criteria related to Wordnet.
+%   \item Translators.
+%    This Toki Pona Wordnet would be useful e.g. for naive translators
+%    of words and text.
+%    Enhancements of such translators would use POS tagging and templates
+%    in English and Toki Pona and/or corpus and further statistical methods.
+%    An efficiency of Toki Pona can be studied in terms of the coverage of
+%    the Wordnet cloud.
+  \item Conlanging: use Wordnet for making new conlangs;
+    use insights derived from TP.
+    Maybe create conlangs for specific uses:
+    describing data, programs,
+    scientific writings, creative writing
+    (exploring the thinking process).
+    A conlang might have different modes that might 
+    be specified by a section header or tag. 
+  \item Understand how the corpus was gathered in \url{tokipona.net}.
+  \item Know about previously existing words that were used for TP
     (e.g. suno and suwi might come from sun and sweet),
-    and about the reasons that lead Sonja (and maybe other people)
+    and about the reasons that led Sonja (and maybe other people)
     to choose the 14 letters and the syllable structure.
     This might require a dedicated communication with the
-    speaker community and the documentation authors.
+    speaker community and the documentation keepers.
   \item Corpus-based analysis.
-  \item Publication of original texts and translations.
-  \item Make an article written in Toki Pona.
-    I wrote Section~\ref{finalToki}, and believe that
-    a summary in both English and Toki Pona for
+  \item Publication of original TP texts and translations.
+  \item Make an article written in TP
+    (extending Section~\ref{finalToki} which might be the
+    first section of a scientific document written in TP).
+    The outline might be:
+    a summary in both English and Toki Pona, for
     facilitating the acquisition of context,
-    a reasonable article on some scientific topics is
-    possible.
+    and a article in a canonical structure
+    (introduction and related work, materials and methods,
+    results and discussion, conclusions and further work),
+    with an Appendix explaining the content and context in English.
     I first conceived something around complexity, statistics, physics, or computer science.
     But one possibility is to write about linguistics, philosophy, literature
     or psychology with the partners I write in English.
     I can start a draft,
-    qhey might learn the language in a few hours (with or without my help),
+    they might learn the language in a few hours or weeks
+    (with or without my help),
     to contribute, and we can write a short paper.
   \item Enhance the synthesis of text to yield better contextualized text
-    and stylistic traces, such as for poems and short stories.
-    Give the user the ability to choose the sentences (generate randomly according to
+    and stylistic traces.
+    Give the user the ability to choose the sentences:
+    generate a sentence randomly according to
     previously written or given text,
-    some rules input by the user, the package and the language guidelines,
-    outputs to the screen and asks to keep and discard).
-  \item Enhance the syntax highlighting implementation described in Section~\ref{high}.
-    It uses only syntactic cues to choose POS tags,
-    which might be overcome by using n-grams and
-    further techniques from Natural Language Processing~\cite{POS}.
+    to some rules input by the user,
+    to the package and the language guidelines.
+    Should output to the screen and asks to keep and discard.
   \item We are particularly interested in software tools,
     and one possibility is to use a conlang to describe software
     routines.
     In this sense, it seems profitable
     to understand what `non-ambiguous' means in Lojban,
     and in what sense one is able to compile and parse Lojban.
-    This study will probably yield considerations about
-    parsing Toki Pona files.
-  \item Conlang idealized for describing data, programs,
-    scientific writings, creative writing
-    (exploring the thinking process).
-    Different modes that might be specified by a section header or tag.
-  \item The plugin comes with the :TokiStation command, which opens a window with the files: ijositelen.tokipona, makevimSyntax.py, Highlight Test (created by hitest.vim above), syntax/tokipona.vim.  Another tab with shells: python to run over the makeVimSyntax.py and make new syntax/tokipona.vim files. Another with Readme, and PDF documentation. Another with an IPython. Imported tokipona. It resets completely upon command :TokiClose, closing all created windows.
+    Such study will probably entail considerations about
+    parsing TP.
+%  \item The plugin comes with the :TokiStation command, which opens a
+    %  window with the files: ijositelen.tokipona, makevimSyntax.py,
+    %  Highlight Test (created by hitest.vim above),
+    %  syntax/tokipona.vim.  Another tab with shells: python to run
+    %  over the makeVimSyntax.py and make new syntax/tokipona.vim
+    %  files. Another with Readme, and PDF documentation. Another with
+    %  an IPython. Imported tokipona. It resets completely upon
+    %  command :TokiClose, closing all created windows. TTM
 \end{itemize}
 
 \subsection*{Acknowledgments}
 FAPESP (project 2017/05838-3);
-Vim, Python, and Toki Pona authors, developers and literature maintainers;
-user and speaker communities. 
+Toki Pona, Python and Vim authors, developers and literature maintainers;
+Toki Pona user and speaker communities. 
+I thank Mario Alzate for introducing me to Toki Pona,
+and Silverio Guazzelli Donatti for the stimulus that resulted
+from the usage of Toki Pona for chatting.
 
 \appendix
 \section{My usage of Toki Pona}\label{mytoki}
-
 I use the standard sounds, but often use [z] for s.
 I often translate texts to Toki Pona (e.g. biblical excepts)
 and create new texts as poems and short stories.
@@ -1074,7 +1119,7 @@ as in 'o awen, sina pali mute, lape lili'.
 % \input{pos}
 
 
-\section{Final words in Toki Pona}
+\section{Final words in Toki Pona}\label{ftp}
 toki li nasin e lawa.
 li nasin tawa (pi) toki insa.
 
@@ -1118,28 +1163,30 @@ Siwejo, Malija, jan kulupu mute.
 
 \begin{thebibliography}{99}
 \fontsize{11}{0}\selectfont
-\bibitem{anPh}
-	Anthropological physics and social psychology in the critical research of networks. Complex Networks Digital Campus (CS-DC'15).
-	Available at \url{https://youtu.be/oeOKYc3-nbM}
-\bibitem{anPh2}
-	Fabbri, R. What are you and I? [anthropological physics fundamentals], 2015. Available at \url{https://www.academia.edu/10356773/What_are_you_and_I_anthropological_physics_fundamentals_}
-\bibitem{ouroWiki}
-  Ouroboros. (2017, November 2). In Wikipedia, The Free Encyclopedia. Retrieved 22:19, November 9, 2017, from \url{https://en.wikipedia.org/w/index.php?title=Ouroboros&oldid=808392809}
-\bibitem{vimrc}
-	Fabbri, R. (2017). A reasonable vimrc file. Available at \url{https://raw.githubusercontent.com/ttm/vim/master/vimrc} 
-\bibitem{ex}
-  Ex (text editor). (2017, March 22). In Wikipedia, The Free Encyclopedia. Retrieved 22:22, November 9, 2017, from \url{https://en.wikipedia.org/w/index.php?title=Ex_(text_editor)&oldid=771621020}
+\bibitem{wordnet}
+  Fellbaum, C. (1998). WordNet. John Wiley \& Sons, Inc..
+\bibitem{corpus}
+    Henry, J. lipu pi toki pona pi jan Jakopo. Available at         
+    \url{http://jimhenry.conlang.org/conlang/tokipona/tokipona.htm} 
+\bibitem{vim}
+    Fabbri, R. An anthropological account of the Vim editor:
+features and tweaks after 10 years of usage. Available at         
+    \url{https://github.com/ttm/vim/raw/master/article/article.pdf} 
+\bibitem{sapWho}
+  O'Neill, S. P. (2015). Sapir–Whorf Hypothesis. The International
+    Encyclopedia of Language and Social Interaction.
+\bibitem{gdoc}
+  Toki Pona Community (2017). toki pona central hub preparation.
+    Available at
+    \url{https://docs.google.com/document/d/1Dzs-imNeZ8TMgdHUiiungJ4Yf97CJk9ylhQPXjWLsJU}
 \bibitem{tokipona}
 	Fabbri, R. (2017). A Toki Pona Python Package and Vim Syntax Highlighting. Available at \url{https://github.com/ttm/tokipona} 
 \bibitem{tpLang}
 	Lang, S. (2014). Toki Pona: the language of good. Tawhid Publishing.
     ISBN-10: 0978292308, ISBN-13: 978-0978292300.
-\bibitem{aa1}
-	Fabbri, R., Fabbri, R., Vieira, V., Penalva, D., Shiga, D., Mendonça, M., Negrao, A., Zambianchi, L., \& Thumé, G. (2013). AA: The Algorithmic Autoregulation (Distributed Software Development) Methodology. RESI. From \url{https://arxiv.org/abs/1604.08255}
-\bibitem{aa2}
-	Fabbri, R. (2017).
-The Algorithmic-Autoregulation (AA) Methodology and Software:
-a collective focus on self-transparency. ENMC2017. From \url{https://github.com/ttm/ensaaio/raw/master/emc/article.pdf} 
+\bibitem{tp3}
+  Blahuš, M. (2011). Toki pona–eine minimalistische Plansprache.
+    Spracherfindung und ihre Ziele. Beiträge der, 20, 51-56.
 \bibitem{kama}
   Knight, B. (2017) o kama sona e toki pona! Available at:
     \url{http://tokipona.net/tp/janpije/okamasona.php}
@@ -1155,9 +1202,53 @@ Poetry. (2017, November 19). In Wikipedia, The Free Encyclopedia.
 \bibitem{stack}
   Various authors, 2011-2016. Syntax-highlighting color scheme studies.
     Software Engineering in Stack Exchange. Available at
-    \url{https://en.wikipedia.org/w/index.php?title=Poetry&oldid=811036139}
+    \url{https://softwareengineering.stackexchange.com/questions/89936/syntax-highlighting-color-scheme-studies}
 \bibitem{solarized}
   Schoonover, E. Solarized color scheme. Available at
   \url{http://ethanschoonover.com/solarized}
+\bibitem{tp4}
+  Schneider, S. (2017). nasin toki pi toki pona. Available at
+  \url{https://github.com/stefichjo/toki-pona}
+\bibitem{interview}
+  Lang, S. and Broholm, K. AFP 20 – Sonja Lang: Toki Pona, Conlanging
+    and the meaning of life (Sonja Lang interview). Available at
+    \url{https://actualfluency.com/afp-20-sonja-lang-toki-pona-conlanging-meaning-life/}
+\bibitem{memrise}
+  Toki Pona Community. (2017). Various Memrise courses on Toki Pona.
+    \url{https://www.memrise.com/courses/english/?q=toki+pona}
+\bibitem{wikiToki}
+  Toki Pona. (2017, December 11). In Wikipedia, The Free Encyclopedia.
+    Retrieved 22:48, December 14, 2017, from
+    \url{https://en.wikipedia.org/w/index.php?title=Toki_Pona&oldid=814813420}
+\bibitem{artlanWikip}
+  Artificial language. (2017, November 26). In Wikipedia, The Free
+  Encyclopedia. Retrieved 23:00, December 14, 2017, from
+  \url{https://en.wikipedia.org/w/index.php?title=Artificial_language&oldid=812127746}
+\bibitem{akesiWawa}
+  Fabbri, R. (2017, November 6). o awen, akesi wawa.
+  In the group toki pona taso. Available at
+  \url{https://www.facebook.com/groups/tokiponataso/permalink/1895942817391318/}
+\bibitem{janKipo}
+  Clifford, J. (2017, December 15). Considerations about Toki Pona
+  phrases.
+  In the Facebook group 'toki pona'. Available at
+  \url{https://www.facebook.com/groups/sitelen/permalink/1597077093680003/}
+\bibitem{tpNetSH}
+  Knight, B. (2017). Online gadget for syntax highlighting Toki Pona
+  texts. . Available at
+  \url{http://tokipona.net/tp/DisplayText.aspx}
+\bibitem{blue}
+  Mehta, R., \& Zhu, R. J. (2009). Blue or red? Exploring the effect of
+  color on cognitive task performances. Science, 323(5918), 1226-1229.
+\bibitem{blue2}
+  Viola, A. U., James, L. M., Schlangen, L. J., \& Dijk, D. J. (2008).
+  Blue-enriched white light in the workplace improves self-reported
+  alertness, performance and sleep quality. Scandinavian journal of
+  work, environment \& health, 297-306.
+\bibitem{fonts}
+  Spolsky, A. J. (2008). User interface design for programmers.
+  Apress.
+\bibitem{mass}
+	Fabbri, R., Vieira, V. , Pessotti, A. C. S., Corrêa, D. C., Oliveira Jr, O. N. O. Musical elements in the discrete-time representation of sound (2017). arXiv preprint arXiv:1412.6853. Available at \url{https://github.com/ttm/mass/raw/master/doc/article.pdf}
 \end{thebibliography}
 \end{document}
