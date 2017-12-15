@@ -460,6 +460,11 @@ autocmd CmdwinEnter * map <buffer> <C-E> <CR> input("")q:
 " au InsertLeave * :!pdflatex %<CR><CR>
 " ensure the autocommands are loaded only once or removed before being added again.
 
+" :runtime syntax/hitest.vim
+" :so $VIMRUNTIME/syntax/hitest.vim 
+
+" :exec getline('.')
+" Y:@"
 
 
 " Highlighting notes   ------------------   {{{
@@ -535,3 +540,7 @@ function! HiFile()
         let i += 1
     endwhile
 endfunction
+
+" :colo koehler
+" :highlight SpellBad term=reverse ctermbg=9 gui=undercurl guisp=Red guifg=blue guibg=yellow
+" :highlight Normal term=reverse ctermbg=9 gui=undercurl guisp=Red guifg=black guibg=red

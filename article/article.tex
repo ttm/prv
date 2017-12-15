@@ -21,7 +21,7 @@
 
 \begin{document}
 \title{An anthropological account of the Vim editor:\\
-ouroboros, features and tweaks after 10 years of usage}
+features and tweaks after 10 years of usage}
 % Anthropological computation
 \author{Renato Fabbri\\
 \texttt{renato.fabbri@gmail.com}\\
@@ -829,7 +829,11 @@ to achieve the DRY KISS style described in Section~\ref{intro}.
         slides and opening figures and some Vim users asked for the settings and
         commands. They are very elementary use of registers being executed over
         arbitrary but consistent textual patterns.
-      \item Changing the color scheme an highlighting scheme incrementally
+      \item To facilitate the tweaking of syntax highlighting.
+        This should include ways to easily access and change the
+        syntax highlighting scheme and dump it to a file (dumpung
+        current highlighting scheme is currently not supported).
+        Should also include changing the color scheme an highlighting scheme incrementally
         and selectively using the features described in Section~\ref{visual2}.
       \item For bringing back all the splits after an \tttt{:only}.
         Also for bringing back the tabs after a \tttt{:tabo}.
