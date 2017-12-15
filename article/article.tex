@@ -987,6 +987,14 @@ Possible next steps are numerous:
     to some rules input by the user,
     to the package and the language guidelines.
     Should output to the screen and asks to keep and discard.
+  \item Make TP variations where each TP word is replaced by a word in
+    a language with a large speaker population. 
+For example,
+suno might be sun in an English variant,
+and sol in a Portuguese variant.
+A naive version might be obtained through
+choosing the first word in the description of
+an official vocabulary, as they already exist in English and French.
   \item We are particularly interested in software tools,
     and one possibility is to use a conlang to describe software
     routines.
@@ -1018,16 +1026,18 @@ from the usage of Toki Pona for chatting.
 I use the standard sounds, but often use [z] for s.
 I often translate texts to Toki Pona (e.g. biblical excepts)
 and create new texts as poems and short stories.
-Most of them are in~\cite{tokisona}.
+Most of them are in~\cite{tokisona}
+and/or published in the TP Facebook groups.
 I omit the li particle after subjects sina and mi,
 in accordance with the norm,
 but sometimes I use them when there are many predicates.
 E.g. sina li wawa li pimeja li lukin pona li moku e kasi mute.
 In such cases, the first li is sometimes omitted.
-Also, sometimes I use li before mi and sina where I find
+Also, sometimes I use li after mi and sina where I find
 that there is unwanted ambiguity, e.g.
-sina moku pona e jan 
-(might be sina li moku pona e jan or sina moku li pona e jan).
+sina moku pona 
+which 
+might be 'sina li moku pona' or 'sina moku pona (li jo e sike)'.
 
 Names are by default transliterated,
 but I advocate that, as in other languages,
@@ -1037,87 +1047,66 @@ E.g. the name Erdös is used in
 English and Portuguese although the standard
 alphabet does not contain ö in such languages.
 I also tend to legitimate the use of English (or German) words
-in Toki Pona texts if it is the case,
+in TP texts if it is the case,
 as happens often in scientific writing
 (kernel is a German word used in English,
-webpage is an English word used in Portuguese).
+webpage and software are English words used in Portuguese).
 
 Proposed notations for numbers seem numerous.
-I tend to think that one might indicate is two numbers
-are multiplying (pi) or are in different scales
+I tend to think that one might indicate if two numbers
+are being multiplied (pi) or are in different scales
 (such as in decimal or binary notations).
-For example, I take luka two to mean 52.
-Or it might not be taken to such level of strictidness,
-for 52 is a reasonable notation for a simple language.
-mi jo e jan sama nanpa 12.
-Or even:
-ona li lon e soweli 27.
+For example, luka (pi) two might mean 52.
+Most importantly,
+52 is a reasonable notation for a simple language.
+E.g.
+'mi jo e jan sama nanpa 12',
+or
+'ona li lon e soweli 27'.
 
-Remove the 'li'.
+Avoiding needless words...
 I've been avoiding e ni: and using only :.
-'ve been omitting the subject if it is the
+I've been omitting the subject (sometimes also the li)
+if it is the
 same as in the last sentence.
-I've been avoiding also the li sometimes,
-and starting only a predicate + object phrase,
-or a whole phrase altogether.
-
-pali moku is addiction.
-noka and ampa; luka, suno, sike and lawa;
-I tend to group these things, as pali and pana.
+I tend to group these words:
+noka and anpa; luka, suno, sike and lawa; pali and pana.
 These clusters of meaning hint me that an even simpler
 language is possible and maybe more optimized to the
-core goals of Toki Pona.
+core goals of TP.
+
 Also, ambiguities introduced by omission of li
 and absence of a token to denote preposition,
-suggest to me the possibility of a syntax that is uniquely
-parsed.
+suggest to me the possibility of a syntax that is always uniquely
+parsed (or at least less ambiguous).
 
-I am tending to think on a language with the same syntax of toki pona:
-<sentence> la <sentence = subject + predicate + object + preposition complement>
-but always using the syntax separators,
-repeating them when the function in performed in the smallest scale:
-'(toki pi toki pona) pi jan sona' (language in toki pona and of intellectuals) vs
-'toki pi (toki pona pi pi jan sona)' (language in toki pona of intelectuals).
-The keyword for preposition complement is the catch.
-An 'a' seems good, but it is taken in Toki Pona.
-Maybe use it as the preposition particle and use ha or he
-instead of Toki Pona a.
+I have been inclined to conceive a language with the same syntax of TP:
+<sentence> la <sentence = subject + predicate + object (each term with
+a possible preposition complement)>
+but always using particles to bound the sentence sections,
+repeating them when the function is performed in the smallest scale:
+'toki pi toki pona pi jan sona' meaning
+language in toki pona and of intellectuals vs
+'toki pi toki pona pi pi jan sona'
+meaning language in [toki pona of intelectuals].
+About the keyword for initiating a preposition complement 
+might be 'a', but it is already taken in TP.
+Maybe use 'a' before a preposition and use 'ha' or 'he'
+instead of TP a.
 In such a setting,
 one might enable pi li e a (concept-qualifier, subject-predicate,
-predicate-object, concept-predicate)
-in any of the terms of the template:
-<sentence> la <sentence = subject + predicate + object + preposition complement>
+predicate-object, concept-preposition)
+in any slot of the template:
+<sentence> la <sentence = subject + predicate + object (each term with
+a possible preposition complement)>
 Between sentences one would use:
-la pi, la li, la e, la a, and la la as normally.
+la pi, la li, la e, la a, and la la.
 This is a very fractal conlang proposal.
-Maybe have a way to distinct between noun, qualifiers (adjectives/adverbs) and verb terms,
-and accept any of them for subject, predicate, object, predicate,
-slots. Or assume a part of speech for template slot or for first word in slot.
-
-Because toki pona's vocabulary is so small,
-one might make variations of it for languages
-in specific.
-For example,
-suno might be sun in an English variant,
-and sol in a Portuguese variant.
-In Appendix~\ref{enPo} are an English and Portuguese
-proposition of such variants.
-A naive version might be obtained through
-choosing the first word in the description of
-an official vocabulary, as they exist in English and French.
-
-
-
-mute, mute ike,
-something can be good, numbered,
-or numbered in a bad way, too much,
-as in 'o awen, sina pali mute, lape lili'.
-
-
-
-
-% \input{pos}
-
+Maybe also have a way to discern between a noun,
+a qualifier (adjectives/adverbs) and a verb,
+and accept any of them for the subject, predicate, object, preposition,
+slots. Or assume a part of speech as default for a slot or for the
+first word in a slot.
 
 \section{Final words in Toki Pona}\label{ftp}
 toki li nasin e lawa.
@@ -1125,12 +1114,13 @@ li nasin tawa (pi) toki insa.
 
 % jan li ken toki li ken pali pona e toki pona.
 toki pona li pona e nasin tan ni:
-ona li jo e sitelen mute lili.
+ona li jo e nimi nanpa lili.
 ona li pona.
 pona kepeken weka 'p' li ona, a.
 
 o taso la toki pona li kalama li lukin pona.
-sitelen en nasin li open e sitelen suli\cite{tpLang,pije,fb1,fb2,tokisona,Wikipesija}.
+sitelen en nasin li open e sitelen
+suli\cite{tpLang,kama,akesiWawa,gdoc,tokisona,Wikipesija}.
 li sona. li nasin e toki e sona e lawa e lon.
 
 toki ni li wawa tawa jan mute nasin en toki.
@@ -1139,16 +1129,16 @@ pi ilo nanpa en nanpa nasin.
 taso tawa toki sona a.
 sitelen sona, sitelen musi.
 
-ilo lon linha~\ref{hacks} li pana e sitelen
+ilo lon Poki~\ref{hacks} li pana e sitelen
 e sona tan sitelen,
 en nasin.
-linha~\ref{basics} li pana e nasin pi toki pona.
+Poki~\ref{basics} li pana e nasin pi toki pona.
 e sitelen tawa kama sona.
 
 mi wile pali e sitelen lon toki pona.
 sitelen lon nasin, sitelen sona,
 sitelen musi.
-ante e toki pona la
+ante e toki pona
 la ona li nasa.
 taso nasa li pona mute.
 li pona mute tawa lawa,
@@ -1158,8 +1148,8 @@ toki e toki pona tawa sina.
 kama sona e toki pona sina.
 
 o pona tawa jan pi toki pona.
-jan Sonja, Birns-Sprage, Kipo, Pije,
-Siwejo, Malija, jan kulupu mute.
+tawa jan Sonja, Birns-Sprage, Kipo, Pije,
+Siwejo, Malija, Tepan, jan kulupu mute.
 
 \begin{thebibliography}{99}
 \fontsize{11}{0}\selectfont
@@ -1250,5 +1240,8 @@ Poetry. (2017, November 19). In Wikipedia, The Free Encyclopedia.
   Apress.
 \bibitem{mass}
 	Fabbri, R., Vieira, V. , Pessotti, A. C. S., Corrêa, D. C., Oliveira Jr, O. N. O. Musical elements in the discrete-time representation of sound (2017). arXiv preprint arXiv:1412.6853. Available at \url{https://github.com/ttm/mass/raw/master/doc/article.pdf}
+\bibitem{tokisona}
+  Fabbri, R. Toki Sona (a blog dedicated to Toki Pona) (2015-7).
+  Available at \url{http://tokisona.github.io/}
 \end{thebibliography}
 \end{document}
