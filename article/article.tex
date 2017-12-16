@@ -27,8 +27,9 @@
 \usepackage{subcaption}
 
 \begin{document}
-\title{Basic concepts and tools for the Toki Pona minimalist language:
-Wordnet synsets; analysis, synthesis and syntax highlighting of texts}
+\title{Basic concepts and tools for the Toki Pona minimalist and
+constructed language:
+Wordnet synsets; analysis of the vocabulary; synthesis and syntax highlighting of texts}
 % Anthropological computation
 \author{Renato Fabbri\\
 \texttt{renato.fabbri@gmail.com}\\
@@ -38,35 +39,35 @@ São Carlos, SP, Brazil
 }
 \maketitle
 \begin{abstract}
-  A minimalist constructed language (conlang)
-  is useful for experiments and comfortable for making tools.
-  The Toki Pona (TP) conlang is minimalist both in the vocabulary
-  (with only 14 letters and 124 words)
-  and in the $\approx10$ syntax rules.
-  The language is useful for being a used and somewhat established
-  minimalist conlang with at least hundreds of fluent speakers.
-  In this article, we describe current concepts and resources
-  for TP,
-  and make available Python scripted routines for
-  the analysis of the language,
-  the synthesis of texts, the specification of syntax highlighting
-  schemes, and the achievement of a preliminary TP
-  Wordnet~\cite{wordnet}.
-  We focus on the analysis of the basic vocabulary,
-  as corpus analyses were found in~\cite{corpus}.
-  The synthesis is based on sentence templates,
-  relates to context by keeping track of used words,
-  and renders larger texts by using a fixed number of phonemes (e.g. for poems)
-  and number of sentences, words and letters (e.g. for paragraphs).
-  Syntax highlighting 
-  reflects morphosyntactic classes given in the official dictionary
-  and different solutions are described and implemented
-  using 24bit true colors in the well-established Vim text editor~\cite{vim}.
-  The tentative TP Wordnet is made available in three forms that
-  reflect the choices of the synsets related to each word.
-  In summary, this text holds potentially novel conceptualizations about,
-  and tools and results in analyzing, synthesizing or syntax highlighting the
-  TP language.
+A minimalist constructed language (conlang)
+is useful for experiments and comfortable for making tools.
+The Toki Pona (TP) conlang is minimalist both in the vocabulary
+(with only 14 letters and 124 words)
+and in the $\approx10$ syntax rules.
+The language is useful for being a used and somewhat established
+minimalist conlang with at least hundreds of fluent speakers.
+In this article, we describe current concepts and resources
+for TP,
+and make available Python scripted routines for
+the analysis of the language,
+the synthesis of texts, the specification of syntax highlighting
+schemes, and the achievement of a preliminary TP
+Wordnet~\cite{wordnet}.
+We focus on the analysis of the basic vocabulary,
+as corpus analyses were found in~\cite{corpus}.
+The synthesis is based on sentence templates,
+relates to context by keeping track of used words,
+and renders larger texts by using a fixed number of phonemes (e.g. for poems)
+and number of sentences, words and letters (e.g. for paragraphs).
+Syntax highlighting 
+reflects morphosyntactic classes given in the official dictionary
+and different solutions are described and implemented
+in the well-established Vim text editor~\cite{vim}.
+The tentative TP Wordnet is made available in three forms that
+reflect the choices of the synsets related to each word.
+In summary, this text holds potentially novel conceptualizations about,
+and tools and results in analyzing, synthesizing or syntax highlighting the
+TP language.
   % subj (li), obj (e), prepositions, qualification (word concatenation), 
   % sent (la), particles, mi-sina, pi, punctuation is freestyle, pre-verb,
 \end{abstract}
@@ -293,7 +294,7 @@ or:
 All the words except the particles (li, e, la, pi, a, o, anu, en, seme, mu)
 and the words classified solely as
 prepositions (kepeken, lon, tan)
-are usable in any position in noun and verb phrases,
+are usable after any noun or verb phrase,
 (i.e. 107 words discarding synonyms).
 Notice that the phrase expresses a noun (in a subject or
 object) or a verb (in a predicate).
@@ -310,7 +311,7 @@ and require no particle. E.g.
 `toki *tan* jan Pije li pana e sona *tawa* mi'.
 Because prepositions can be used as adjectives
 or nouns or verbs or adverbs, etc, and might follow
-anu noun or verb phrase,
+any noun or verb phrase,
 they are one of the three main sources of ambiguity:
 prepositions; absence of li after sina and mi; incomplete sentences.
 E.g. '(mi [li]) pana tawa kon e ilo pi suli mute'.
@@ -330,7 +331,7 @@ in last section, other particles are:
     one might repeat the preposition.
     As TP is a recent language, and is particularly able to cope with
     variation due to its simplicity, I would advocate for
-    using en and anu wherever there is no ambiguity.
+    using en and anu/en wherever there is no ambiguity.
     E.g.: 'mi tawa mute anu moku lon tenpo lili'
     In the official documentation that is not described and
     might be regarded as wrong in strict canonical TP.
@@ -373,12 +374,12 @@ as adjective, verb and noun,
 and are in the dictionary as noun,
 adjective and adjective.
 
-\subsubsection{Recognizing POS tags by speaker and machine}
+\subsubsection{Recognizing POS tags by speaker and machine}\label{sec:rec}
 One might perform a POS tagging by following these rules:
 \begin{itemize}
   \item Noun: the first word in a noun phrase.
     Starting a sentence if it is complete,
-    after an 'e', after a pi, and after a preposition.
+    after an 'e', after a pi.
     The predicate is often a noun
     if the sentence has no object.
   \item Adjective: second word on after an e and after
@@ -386,8 +387,9 @@ One might perform a POS tagging by following these rules:
   \item Verb: after a li, mi or sina.
     If there is no object, the predicate
     might be a noun or a verb.
-  \item After a preposition,
-    there is a noun phrase.
+  \item After a preposition, one might consider that what follows is 1) always
+    a noun, or that 2) it can be a noun, adjective or verb,
+    or that 3) it is a hybrid of noun, verb and adjective.~\cite{janKipo}
   \item Notice that there is ambiguity in the structure
     introduced by the omission of li after mi and sina.
     Also, when there is no object, a noun or a verb
@@ -411,8 +413,6 @@ One might perform a POS tagging by following these rules:
     as described in the end of Section~\ref{sec:par}.
   \item If there is no object, the predicate might be parsed
 as being a hybrid of noun, verb and adjective.
-  \item The prepositional phrase might also be taken to be a hybrid
-    of noun, verb and adjective.
 \end{itemize}
 
 % Also, the prepositional complement might
@@ -420,13 +420,13 @@ as being a hybrid of noun, verb and adjective.
 % I could not come up with a sentence
 % where it would be understood as an adjective. TTM
 
-\subsubsection{Additional notes}
+\subsubsection{Additional notes}\label{sec:add}
 John Clifford (a notable ``toki-ponist'', a.k.a. jan Kipo)
-states that there are not noun, verb or prepositional
+states that there are not noun, verb, adjective (or even prepositional)
 phrases in TP, but only phrases in a structure
 yield by particles and content words~\cite{janKipo}.
 The only synonyms on Toki Pona are:
-a and kin; lukin and oko; sin or kamako;
+a and kin; lukin and oko; sin or namako;
 ale or ali.
 In formations such as
 toki e ni:, wile e ni:, tan ni: etc.,
@@ -559,7 +559,7 @@ Thus, one has 107 possibilities of noun and verb phrases with
 one word, $107^2=11,449$ possibilities with two words,
 $107^3=1,225,043$ with three words and so on.
 Be $n$, $v$, $o$, and $p$ the number of words in the subject (noun), predicate
-(verb), object (noun) and prepositional (noun or verb) phrases of a sentence,
+(verb), object (noun) and prepositional (see Sections~\ref{sec:rec} and~\ref{sec:add}) phrases of a sentence,
 and assume that the sentence has at most one prepositional phrase,
 one might quantify the possibilities using the formula:
 $\delta = 107^n\times 107^v\times 10^o \times 5\times 107^p$,
@@ -1081,8 +1081,8 @@ suggest to me the possibility of a syntax that is always uniquely
 parsed (or at least less ambiguous).
 
 I have been inclined to conceive a language with the same syntax of TP:
-<sentence> la <sentence = subject + predicate + object (each term with
-a possible preposition complement)>
+'sentence' la 'sentence = subject + predicate + object (each term with
+a possible preposition complement).
 but always using particles to bound the sentence sections,
 repeating them when the function is performed in the smallest scale:
 'toki pi toki pona pi jan sona' meaning
@@ -1097,8 +1097,8 @@ In such a setting,
 one might enable pi li e a (concept-qualifier, subject-predicate,
 predicate-object, concept-preposition)
 in any slot of the template:
-<sentence> la <sentence = subject + predicate + object (each term with
-a possible preposition complement)>
+'sentence' la 'sentence = subject + predicate + object (each term with
+a possible preposition complement)'
 Between sentences one would use:
 la pi, la li, la e, la a, and la la.
 This is a very fractal conlang proposal.
@@ -1120,7 +1120,7 @@ pona kepeken weka 'p' li ona, a.
 
 o taso la toki pona li kalama li lukin pona.
 sitelen en nasin li open e sitelen
-suli\cite{tpLang,kama,akesiWawa,gdoc,tokisona,Wikipesija}.
+suli~\cite{tpLang,kama,akesiWawa,gdoc,tokisona,Wikipesija}.
 li sona. li nasin e toki e sona e lawa e lon.
 
 toki ni li wawa tawa jan mute nasin en toki.
@@ -1203,7 +1203,7 @@ features and tweaks after 10 years of usage. Available at
   In the group toki pona taso. Available at
   \url{https://www.facebook.com/groups/tokiponataso/permalink/1895942817391318/}
 \bibitem{janKipo}
-  Clifford, J. (2017, December 15). Considerations about Toki Pona
+  Clifford, J. et al. (2017, December 15). Considerations about Toki Pona
   phrases.
   In the Facebook group 'toki pona'. Available at
   \url{https://www.facebook.com/groups/sitelen/permalink/1597077093680003/}
