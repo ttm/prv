@@ -605,12 +605,17 @@ Most useful commands in the terminal-Job mode include:
 for both Normal and Terminal-Job modes, as in~\cite{vimrc}.
 
 Because browsing the interface in Vim is fast,
-and it favors copy and paste of text,
+and it is very comfortable to copy the terminal lines
+in the Terminal-Normal mode,
 it is often handy to keep (e.g. a tab with) some terminals:
-one with an IPython shell, another two for compiling \LaTeX
+e.g. one with an IPython shell, another two for compiling \LaTeX\
 and opening PDF files (e.g. with \tttt{\$ evince <filename.pdf>}).
-It is very comfortable to copy and browse the terminal lines
-in the Terminal-Normal mode.
+There are even more convenient ways to use the terminal inside Vim.
+For example, 
+one might use \tttt{:term} with the \tttt{++hidden} and \tttt{++close}
+options to compile a \LaTeX\ file in the background without needing to further manage the
+terminal and in a non-blocking manner: \tttt{:term ++hidden pdflatex
+\% \#}.
 I found the mappings on~\cite{vimrc} very helpful for directing
 editor focus to splits (\ttt{C-hjkl}) and tabs (\tttt{gr}, \tttt{gt}),
 which I make available across Terminal-Job and Normal modes.
@@ -622,8 +627,9 @@ Insert and Terminal modes.
 \subsection{Netrw}\label{netrw}
 The standard interface of Vim for browsing file trees is Netrw.
 It starts when you open a directory, such as with \tttt{:e .<CR>}.
-It has solid support for editing remote files (such as over ssh or
-ftp) and handy e.g. mappings to open the files as splits and tabs (specially \tttt{pot}).
+It has solid support for browsing remote file trees (such as over ssh or
+ftp) and handy e.g. mappings to open the files as splits and tabs
+(specially \tttt{pot}).
 Most useful commands in netrw include:
 \begin{itemize}
   \item \tttt{d} and \tttt{\%} for creating directories and files.
@@ -633,20 +639,23 @@ Most useful commands in netrw include:
     while marked files might be copied, moved, edited, grep-ed, tagged and migrated
     to and from the argslist as in \tttt{:h netrw-mf}.
 \end{itemize}
-Last notes:
-there is no insert mode in netrw interface;
+
+There is no insert mode in netrw interface;
 the commands in \tttt{:h netrw-explore} are
 convenient for opening the directory of the
 file being edited;
-further information in \tttt{:h netrw}.
+further information is in \tttt{:h netrw}.
 
 \subsection{Standard configuration files and directories and my .vim/vimrc}
 You can check the scripts Vim loads by using the debug script mentioned
 in Section~\ref{state}.
 By default, \tttt{$\sim$/.vimrc} and \tttt{$\sim$/.vim/vimrc} files are run by Vim at the beginning of the startup.
 One might edit the vimrc file with \tttt{:e \$MYVIMRC}
-and reload it with \tttt{:source \$MYVIMRC}, but
-I use the mappings in~\cite{vimrc} to encourage a continuous enhancement of my settings.
+and reload it with \tttt{:source \$MYVIMRC}.
+Mappings in~\cite{vimrc} include such commands
+to encourage a continuous enhancement of Vim settings
+(they have helped me to improve my settings without unnecessary 
+hassle and fast).
 Any other file might be included to run at startup by
 adding a line \tttt{:source <afile.vim>} in vimrc.
 In fact, it is on vimrc that one usually specifies the plugins
@@ -654,19 +663,24 @@ and plugin managers they use.
 Use an \tttt{after/} folder of a directory in \tttt{:se runtimepath}
 or follow some patterns described on the next section to change the
 scripts and sequence of them to be loaded.
+The vimrc from other users are most useful for one to comprehend
+and pick convenient practices and settings.
+In fact, a vimrc file is most often a collage of excerpts of vimrc
+files from other users.
 
 \subsection{Plugins and packages}
-One can see the list of standard plugins
+One can see the list of the standard plugins
 with \tttt{:h standard-plugin-list} command.
 Any \tttt{plugin/**/*.vim} file inside a directory
-listed by \tttt{:se runtimepath} will be loaded
+listed in \tttt{:se runtimepath} will be loaded
 (e.g. \tttt{.vim/plugin/something/ascript.vim}).
 There are various ways to automate the installation
-and enhnace the management of plugins.
+and enhance the management of plugins.
 By default, one has the GETSCRIPT interface (see \tttt{:h getscript}),
-that downloads latest scripts from sourceforge as specified in \tttt{:h getscript-data},
-and the Vimball interface, which creates and loads a Vimball for a plugin
-with \tttt{:[range]MkVimball <filename> path}, where range specifies lines
+that downloads latest scripts from Sourceforge as specified in \tttt{:h getscript-data},
+and the Vimball interface, which creates and loads a Vimball for a
+plugin.
+Such a Vimball may be created with \tttt{:[range]MkVimball <filename> path}, where range specifies lines
 that hold paths to files to be included in the \tttt{<filename>.vba} Vimball.
 The Vimball can be installed in a system by \tttt{:source <filename>.vba}
 or loading it at Vim startup with \tttt{\$ vim <filename>.vba}.
@@ -682,11 +696,11 @@ at startup, the plugins found at
 All directories Vim looks for scripts are described
 in \tttt{:h vimfiles} and are basically set by
 \tttt{:se runtimepath} and conventions inside
-each path therein, such as to look for \tttt{vimrc} files
+each directory therein, such as to look for \tttt{vimrc} files
 and \tttt{plugin/} or \tttt{pack/} directories.
 Vim scripts can be loaded conditionally,
 e.g. only if a function is used as in \tttt{:h autoload-functions}.
-Example of such are filetype plugins (enabled by in a \tttt{ftplugin/<filetype>.vim} file,
+Example of such are filetype plugins (enabled by a \tttt{ftplugin/<filetype>.vim} file,
 e.g. inside a plugin directory).
 There is a number of plugin managers for Vim.
 Pathogen and Vundle seem to be the most popular,
@@ -698,53 +712,53 @@ colon commands.
 One might set the spelling language with\\ \tttt{:se spelllang=en\_us}
 or \tttt{:se spelllang=pt\_br}
 and toggle spell checking with \tttt{:setl spell!}.
-These are used so often that one might use shortcuts as in~\cite{vimrc}.
+Depending on the activities being performed,
+these commands are used so often that one might use mappings as in~\cite{vimrc}.
 Currently, Vim will download the files for a specific language if
 not found in system.
 
 \subsection{Scripting, Functions, Vimscript and other languages (e.g.  Python)}\label{script}
 In Vimscript,
-the colon commands (also Ex or command-line commands) are related through spaces,
+the colon commands (also Ex commands or command-line commands) are related through spaces,
 punctuation and keywords (see \texttt{:h script}).
 Scripting the Vim editor can also be accomplished using other languages,
-as well documented e.g. \tttt{:h python}.
+as well documented e.g. in \tttt{:h python}.
 Functions are defined through colon commands and are called
 inside colon commands e.g. \tttt{:call MyFunction()}
 or \tttt{:echo MyFunction(4)}.
 Notice that functions are not commands but might be bind to them
 through colon commands e.g. \tttt{nnoremap gF :call MyFunction()<CR>}.
-Executing source files is very straightforward with \tttt{:so
-<filename>.vim},
+Executing source files is very straightforward with
+\tttt{:so <filename>.vim},
 and one can always use the Ex mode for rapid scripting.
-
 At the same time, the \tttt{:term} and terminal-job mode make
 scripting other software more convenient, as output is
-promptly navigated and copied. The shell works well for generic use,
-such as opening images and PDFs through \tttt{\$ eog} and \tttt{\$ evince}.
-See Section~\ref{terminal} for further directions about the terminal.
+promptly navigated and copied (as discussed in Section~\ref{terminal}).
 
 \subsection{Color}\label{visual2}
-Newer versions of Vim support 24 bit true color (aka 16 million colors)
-in terminal Vim (not only in GVim).
+Newer versions of Vim support 24-bit true color (aka 16 million colors)
+in terminal Vim (in gVim true color received support earlier).
 The terminal must support true color, and tests are available e.g. in
 \url{https://gist.github.com/XVilka/8346728}.
 Then Vim needs to be set to use true colors with
 \tttt{:set termguicolors}.
-If using 8 or 16 bit colors, Vim uses the color pallete from the
-terminal, if using true colors each color is defined directly.
-Settings for using true colors inside Byobu/Tmux involve tweakings
+If using 8 or 16 bit colors, Vim uses the color palette from the
+terminal, if using true color each color is defined directly.
+Settings for using true color inside Byobu/Tmux involve tweaking
 and are available in~\cite{vimrc}.
-Good color schemes to use with true colors are Gruvbox
+Good color schemes to use with true color are Gruvbox
 and Solarize.
 One might source syntax files at any time to change syntax, usually
-though linking tokens to syntax groups with
-\tttt{:syntax keyword <group\_name> <token1> <token2> <token3> ...}
-and then relating the group to another group 
+though linking tokens to syntax groups as in
+\tttt{:syntax keyword <group\_name> <token1> <token2> <token3> ...},
+or
+\tttt{:syntax match <group\_name>	<pattern>},
+and then relating the group to another group: 
 \tttt{:highlight link <group\_name> <group\_name2>}
-or by specifying the group characteristics directly:
+or to group characteristics directly:
 \tttt{highlight <group\_name> guifg=\#ffffff}.
 If you change a syntax file, reloading a file with with \tttt{:e<CR>}
-updates the highlighting on the window with the corresponding filetype.
+updates the highlighting on the window with the corresponding file type.
 A complete syntax highlighting support typically involves at least three files:
 \begin{itemize}
   \item \tttt{ftdetect/<filetype>.vim}, where the file type is
@@ -758,27 +772,29 @@ A complete syntax highlighting support typically involves at least three files:
     tokens and highlighting groups; and highlighting group definitions.
 \end{itemize}
 
-This very scheme is implemented very straightforward in this
+This scheme is implemented very straightforward in this
 plugin~\cite{tokipona}
-for highlighting text in the Toki-Pona language~\cite{tpLang}.
-Syntax highlighting plugins are as filetype plugins,
+for highlighting text in the Toki Pona language~\cite{tpLang}.
+Syntax highlighting plugins are as file type plugins,
 but also have a \tttt{syntax/<filetype>.vim} file
-relating keywords to highlighting groups. 
+relating keywords, matches and regions to highlighting groups. 
 One might see every highlighting group, and their final visual results,
-with the command
-\tttt{:so \$VIMRUNTIME/syntax/hitest.vim}.
-In my system, the \tttt{ftdetect/} and \tttt{ftplugin/} folders load as expected in the \tttt{plugin/}
-directory, but \tttt{syntax/} files had to be moved to \tttt{$\sim$/.vim/syntax/}.
+with the commands
+\tttt{:so \$VIMRUNTIME/syntax/hitest.vim}
+or \tttt{:so hi}.
+The \tttt{ftdetect/} and \tttt{ftplugin/} folders load as expected in the \tttt{plugin/}
+directory, but \tttt{syntax/} files has to be moved to
+\tttt{$\sim$/.vim/syntax/}, unfortunately.
 
 \subsection{Fonts}
-The fonts are defined by your terminal or inside GVim.
+The fonts are defined by your terminal or inside gVim.
 \ttt{C-+} and \ttt{C--} can be used to change font size.
 Some settings for fonts, such as boldface, might be set using
 the syntax highlighting facilities described in the previous section.
 
 \section{Conclusions and further work}\label{conc}
 This document seems reasonable as an overall reference of the Vim editor,
-at least for my usage and proficiency.
+at least for my usage and level of proficiency.
 Given the folkloric milestone of using Vim for 10 years,
 this article might serve as a benchmark for one to relate
 it's current use and understandings.
@@ -788,54 +804,58 @@ especially in Section~\ref{namespaces},
 and the reference to the standard Vim documentation
 to achieve the DRY KISS style described in Section~\ref{intro}.
 
-\noindent {\bf Potential enhancements} to this document are:
+\noindent {\bf Potential enhancements} to this document include:
 \begin{itemize}
-  \item The inclusion of facilities such as reading emails and connecting over ssh.
+  \item The discussion of facilities such as reading emails and connecting over ssh.
     There is a working hack in~\cite{vimrc} for browsing over the WWW,
     but such aspect of Vim usage might receive more attention
-    given that it is confortable to use the navigation and editing facilities
+    given that it is comfortable to navigate and edit in Vim
     and the resulting integrated environment.
   \item Updating of the information I can find about the issues discussed,
     such as about status lines in Section~\ref{visual1}.
   \item Include a discussion about Neovim.
     I have never used it, but it seems to be reaching a considerable user base
-    and it might be feasable to give an account of Vim and Neovim
-    after some tests and researching the official and user base documentation.
+    and it might be feasible to give an account of Vim and Neovim
+    after some tests and researching the official and unofficial documentation.
   \item Better cite documentation, plugins and Vim authors.
-    I prefered to keep the references inline through \tttt{:h} commands
+    I preferred to keep the references inline through \tttt{:h} commands
     and URLs, more in accordance with the style of Vim documentation,
     but bibliographical items constitute a valuable asset for academic literature,
-    and some authors might find their work more pretiged if more
+    and some authors might find their work more respected if more
     thoroughly cited.
   \item An analysis of my usage, e.g. according to \url{http://www.drbunsen.org/vim-croquet/}.
     This undertake might benefit from data from many users,
     which favors the potential plugin for usage analytics described in the next bullet list.
 \end{itemize}
 
-\noindent {\bf Potential next steps} in using Vim:
+\noindent {\bf Potential next steps} in using Vim include:
 \begin{itemize}
-  \item Measure the performance of text mining routines in Vim against those implemented in C or Python.
+  \item Measure the performance of text mining routines in Vimscript against those implemented in C or Python.
   \item Enhance the HTTP browsing capabilities of~\cite{vimrc}.
   \item Better integrate Python and Vimscript, especially for data visualization
-    and syntax highlighting management.
-    In accordance with the visualization issues described in
+    and syntax highlighting management,
+    in accordance with the visualization issues described in
     Sections~\ref{visual1} and~\ref{visual2}.
 \end{itemize}
-\noindent Many of the next steps might entail plugins.
-This is a selection of the issues that are more prominent for me:
+
+\noindent This is a selection of the issues that might entail
+plugins and that are more prominent for me:
     \begin{itemize}
       \item listing all the mappings available in each mode and the typing combinations which are available
         for new mappings.
+        Maybe already group possibilities by criteria such as length
+        of sequence and how central are the keys.
       \item Sessions, as described in Section~\ref{visual1}.
       \item AA messages (shouts): to keep track, document and share of working sessions
         as in~\cite{aa1,aa2}, with capabilities to manage AA sessions,
         send visual or sonic cues for temporal marks, use Vim state to build AA shouts,
         relate AA sessions to other media, such as software repositories,
         screencasts and images, interact with IRC channels and other social platforms.
-      \item Slick Vim: a collection of the settings, mappings and plugins I use.
+      \item Slick Vim: a collection of the settings and mappings I use.
         Enhancements such as using \ttt{C-} commands also to browse tabs,
         shortcuts to join a window into a tab,
-        and dummy minimal plugins as simplest, file type and syntax highlighting,
+        and dummy minimal plugins as simplest possible, then file type
+        and then syntax highlighting,
         Some more elaborate tweaks should also be present, such
         as breaking lines in sensible places for natural language texts
         while respecting e.g. \tttt{:se textwidth}.
@@ -849,53 +869,59 @@ This is a selection of the issues that are more prominent for me:
         These are useful for using Vim in presentations
         or achieving a textual representation when it is mandatory,
         such as to comply with the limitations of a platform (e.g. Vim editor). 
-        but also hold stylistic merits as ascii art is often
+        but also hold stylistic merits as ASCII art is often
         very appreciated.
-        One can both obtain an ascii representation of a binary image (e.g. JPG, PNG),
-        and can directly render ascii charts from data using cues such are shape, position
+        One can both obtain an ASCII representation of a binary image (e.g. JPG, PNG),
+        and can directly render ASCII charts from data using cues such are shape, position
         and color.
-      \item Redirecting the commands that usually show the results in a 'more' interface,
-        which cannot be searched nor copied,
-        to a parsed and linked quickfix or location window.
+      \item Redirecting the commands that usually show the results in
+        a 'more' interface (e.g. status listings such as in
+        Section~\ref{state}),
+        which cannot be searched nor copied nor persists if one
+        returns to editing a file.
+        Ideally, it should parsed and linked quickfix or location
+        window, and the syntax highlighting maintained.
         The basic idea is to use \tttt{:redir} command to redirect the output
         of such commands with \tttt{:se nomore}.
         Reasonable functions (and convenient commands) for having the
         output of such commands in a standard Vim window are
         in~\cite{vimrc}.
       \item Slide presentations. I've been using some automation for browsing
-        slides and opening figures and some Vim users asked for the settings and
-        commands. They are very elementary use of registers being executed over
+        slides and opening figures. Some Vim users asked for the settings and
+        commands. They are very elementary use of registers which are executed over
         arbitrary but consistent textual patterns.
-      \item To facilitate the tweaking of syntax highlighting.
-        This should include ways to easily access and change the
-        syntax highlighting scheme and dump it to a file (dumpung
-        current highlighting scheme is currently not supported).
-        Should also include changing the color scheme an highlighting scheme incrementally
-        and selectively using the features described in Section~\ref{visual2}.
       \item For bringing back all the splits after an \tttt{:only}.
         Also for bringing back the tabs after a \tttt{:tabo}.
-      \item Run Python excepts from file in an IPython shell. 
+      \item Run Python excerpts from a file being edited in an IPython shell. 
         The buffer number of the terminal window should be stored,
         and than any selected lines should be run on that instance.
-        Mappings should make available all movements to catch the excepts,
-        execution of registers, remain on script or in the IPython shell.
-        Also, terminal mode can use some improvements, such as \ttt{C-O} for
-        one normal mode command.
+        Mappings should make available all movements to fetch the
+        excerpts, execute registers, remain on script or in the IPython shell.
+        Also, current Terminal-Job mode can be improved easily with
+        mappings, such as \ttt{C-O} for one normal mode command.
       \item For keeping track of the usage and making analysis
-        for optimizing the usage, as described in~\cite{http://www.drbunsen.org/vim-croquet/}. Usage analytics.
-      \item Colorschemes for true color (gui).
+        for optimizing the usage, as described in~\cite{http://www.drbunsen.org/vim-croquet/}.
+        Usage analytics.
+      \item To facilitate the tweaking of syntax highlighting.
+        This should include ways to easily access and change the
+        syntax highlighting scheme and dump it to a file (dumping
+        current highlighting scheme to a working Vimscript file
+        is currently not supported by Vim!).
+        Should also include changing the color scheme and highlighting scheme incrementally
+        and selectively using the features described in Section~\ref{visual2}
+        and in~\cite{tokipona}.
+      \item Color schemes for true color.
         The standard colors (e.g. blue, elflord) loose some of the distinctions,
-        e.g. SpellBad tokens are not highlighted on these colorschemes
-        it you have a functioning \tttt{se termguicolors} (standard GUI mode
-        and available in terminals since recent versions of Vim 8, see Section~\ref{visual2}). In~\cite{vimrc} are some lines that make such colorschemes after over
+        e.g. SpellBad tokens are not highlighted on these color schemes
+        if you have a functioning \tttt{se termguicolors} (standard GUI mode
+        and available in terminals since recent versions of Vim 8,
+        see Section~\ref{visual2}).
+        In~\cite{vimrc} are some lines that make such color schemes over
         \tttt{:colorscheme blue}.
         This design of color schemes over the standard color schemes might be
         a very simple and effective way to make new color schemes.
-      \item Opening the editor status listings such as in Section~\ref{}
-        in a quickfix or location window where they might be searched, edited
-        and used as wanted.
-        These windows open in a more-like interface that is very restricted in what
-        they allow (e.g. no search, no persistence).
+        Such color schemes should also make use of the discussions
+        in~\cite{tokipona}.
     \end{itemize}
 
 \subsection*{Acknowledgments}
@@ -909,19 +935,19 @@ with \tttt{\$ vim <filename>}.
 The color scheme is alternated between
 blue and GruvBox with
 \tttt{:colo gruvbox} and \tttt{:colo blue}.
-I open an vertical split and then move
+I open a vertical split and then move
 the window to a new tab using
 \tttt{:vs} and \ttt{C-W\_T}.
-I then search tokens related to
+I then search for tokens related to
 the enhancements I want to make or
 the knowledge I want to acquire.
 I go back to the previous tab with \tttt{gr}
 and make a global replace with
-\tttt{:\%s/<this>/<that/g}.
+\tttt{:\%s/<this>/<that>/g}.
 On adding dots to sentences,
 I record in the \tttt{"q} register
 the sequence \tttt{jA.jj},
-using it as a macro 10 times by
+and use it as a macro 10 times by
 \tttt{10@q}.
 I move to the other tab with \tttt{gt}
 and open a terminal window with \tttt{:term}
@@ -933,23 +959,29 @@ If any new idea comes to mind and I have time,
 my vimrc~\cite{vimrc} for editing and \tttt{\textbackslash s}
 sources it.
 If there is e.g. code or notes in other projects I am working
-on, I reach them through \tttt{<Alt-arrows>} as other Vim instances
+on, I reach them through \tttt{<Alt-arrows>} because they
+are in separate Vim instances
 in Byobu/Tmux sessions and windows.
+Because I stay for hours editing (\LaTeX and Python
+scripts), I change the background to red, and eventually to green.
+Because the blue color scheme does not highlight the spelling errors
+if using true color, I run
+\tttt{:hi SpellBad guifg=red guibg=lightblue}
+to see the words found wrong by the spell checker.
 
 \section{My vimrc file and usage}
-In this Appendix is my vimrc file.
-Although it has comments, one should
-look for the options that (s)he does
-not understand, as a thorough explanation
-of the file is tedious and out of the scope
-of this document.
-
 In using Vim with my vimrc file~\cite{vimrc},
 I mostly toggle the status line with \texttt{\textbackslash\textbackslash B}
 and the tab line with \texttt{\textbackslash\textbackslash T}.
 Save and close windows with \texttt{\textbackslash w} and \texttt{\textbackslash q}.
 The mappings for transitioning through splits and tabs
 are also used constantly.
+Although the file is commented, one should
+look for the help pages on the options that (s)he does
+not understand, as a thorough explanation
+of the file is tedious and out of the scope
+of this document.
+
 
 \section{Example notes on mappings}\label{notes}
 \texttt{:h index} shows all the default mappings
@@ -960,15 +992,15 @@ useful observations exemplified in this Appendix.
 \subsection{Normal mode}
 Every letter and character in the keyboard is used.
 In Normal mode: \ttt{TAB} is the same as \ttt{C-I},
-\ttt{BS} and \ttt{C-H} is the same as h.
-\ttt{C-J} and \ttt{C-N} is the same as j.
+\ttt{BS} and \ttt{C-H} are the same as h.
+\ttt{C-J} and \ttt{C-N} are the same as j.
 \ttt{C-P} is the same as k.
-Space is same as l.
+Space is the same as l.
 \ttt{C-[} and \ttt{Esc} are not used,
-\tttt{<C-\textbackslash> a-z} is reserved for extensions,
-\ttt{C-\_} not used.
+\tttt{<C-\textbackslash> a-z} are reserved for extensions,
+and \ttt{C-\_} is not used.
 \tttt{+} is the same as \ttt{CR} and they are both not very useful.
-Del is same as x.
+Del is the same as x.
 
 Many \tttt{][} combinations are not used, e.g.
 with \tttt{abhjklfg}.
@@ -977,7 +1009,8 @@ leaving it free for mappings.
 
 Directions, home, end, page up and down, insert, all have mappings
 in more centraly located keys.
-unbounded: g,z,[]
+The letters beggin unbounded mappings (require another character to
+trigger an action without having to wait for \tttt{:se timeoutlen}): g,z,[].
 
 The \ttt{C-(HJKL)} commands are redundant,
 with the exception of \ttt{C-L} which redraws the screen,
@@ -990,12 +1023,12 @@ They have typical uses, e.g. \tttt{z} for folds,
 spell checking and some movements (mainly when wrap is set).
 
 \subsection{Insert mode}
-All standard char keys are used for entering chars on text.
+All standard character keys are used for entering text.
 \tttt{<C-G>(j,k)} can be achieved by \tttt{<C-O>(j,k)} which is more powerful
 in moving through multiple lines.
-\ttt{C-[} is the same as \ttt{ESC}.
+\ttt{C-$[$} is the same as \ttt{ESC}.
 \ttt{C-J} and \ttt{C-M} are \ttt{CR}.
-\tttt{<C-\textbackslash> a-z} is reserved for extensions,
+\tttt{<C-\textbackslash> a-z} are reserved for extensions,
 other combinations with \ttt{C-\textbackslash} are not used.
 
 \section{My \tttt{:version}}
