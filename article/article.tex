@@ -170,7 +170,7 @@ command-line mode.
 This section may be considered a tutorial
 that focuses on the namespaces, i.e. sets of tokens
 that carry values or triggers procedures.
-One should see Appendix~\ref{keys}
+One should see Appendix~\ref{sec:not}
 to understand the notation Vim uses.
 
 \subsection{The bare minimum}\label{minimum}
@@ -900,7 +900,7 @@ plugins and that are more prominent for me:
         Also, current Terminal-Job mode can be improved easily with
         mappings, such as \ttt{C-O} for one normal mode command.
       \item For keeping track of the usage and making analysis
-        for optimizing the usage, as described in~\cite{http://www.drbunsen.org/vim-croquet/}.
+        for optimizing the usage, as described in~\url{http://www.drbunsen.org/vim-croquet/}.
         Usage analytics.
       \item To facilitate the tweaking of syntax highlighting.
         This should include ways to easily access and change the
@@ -1034,39 +1034,37 @@ other combinations with \ttt{C-\textbackslash} are not used.
 \section{My \tttt{:version}}
 I should keep the output of \tttt{:version} executed on the system
 in which I wrote this document in this link:
-\url{}.
+\url{https://github.com/ttm/vim/raw/master/version.txt}.
 It was compiled with this Makefile~\cite{makefile}
 in a 16.04 LTS Ubuntu Linux,
 and is tagged as 8.0, Included Patches 1-1173.
 
-\section{Key notation and meaning for Vim}
+\section{Key notation and meaning for Vim}\label{sec:not}
 The tokens \ttt{C-X}, \ttt{S-X} and \ttt{M-X}
 mean \tttt{Ctrl+x}, \tttt{Shift+x} and \tttt{Alt+X}
 (or \tttt{Meta+x}).
 \ttt{A-X} is the same as \ttt{M-X} and refer to
 Alt or Meta keys.
-\ttt{C-X}, \ttt{C-S-X}, \ttt{C-S-x}  and \ttt{C-x} are the same,
-i.e. Vim does not distinguish lower and uppercase 
+\ttt{C-X}, \ttt{C-S-X}, \ttt{C-S-x} and \ttt{C-x} are the same,
+i.e. Vim does not distinguish between lower and uppercase 
 letters in \ttt{C-} commands.
 The \ttt{M-x} and \ttt{M-X} (or \ttt{M-S-x} or \ttt{M-S-X})
 are different commands,
 and they are not used by Vim's builtin keys.
-Such \ttt{M-} key combinations are potentially conflicting
+Such \ttt{M-} key combinations potentially conflict
 with shortcuts of other programs (e.g. \ttt{M-F10} for a terminal menu),
 but are otherwise a large and safe set of combinations
 for one to use.
 
 In summary,
-one might choose for mappings to overwrite defaults key combinations,
+one might choose mappings that overwrite default key combinations,
 use combinations not used by Vim (e.g. some of the \tttt{g} and \tttt{z}
 normal commands, \ttt{C-} and \ttt{S-} commands, or any \ttt{M-} and
 \ttt{M-S-} command), or
 create new mappings using \tttt{<leader>} and \tttt{<localleader>}.
-More information about key notation in \tttt{:h key-notation}.
+More information about key notation is in \tttt{:h key-notation}.
 Default mappings are in \tttt{:h index} and user-defined (and plugin-defined) mappings
 in \tttt{:map}.
-
-
 
 
 \begin{thebibliography}{99}
