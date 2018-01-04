@@ -232,6 +232,8 @@ nnoremap <leader>E :call InsertSession()<CR>
 " make the f mappings usable by using the paths correctly
 nnoremap <leader>f :term ++hidden ++close pdflatex %
 nnoremap <leader>F :term ++hidden ++open pdflatex %
+nnoremap <leader>g :source %<CR>
+nnoremap <leader>G :echo "BANANA"<CR>
 nnoremap <leader>i :exec "normal i".nr2char(getchar())."\e"<CR>
 nnoremap <leader>I :call InsertBeforeAfter()<CR>
 nnoremap <leader>f :set hlsearch!<CR>
@@ -548,142 +550,7 @@ endfunction
 " :highlight Normal term=reverse ctermbg=9 gui=undercurl guisp=Red guifg=black guibg=red
 " https://en.wikipedia.org/wiki/Blood_red and http://rgb.to/color/2845/blood-red
 "
-" Show syntax highlighting groups for word under cursor
-nmap <leader>Z :call <SID>SynStack()<CR>
-function! <SID>SynStack()
-  if !exists("*synstack")
-    return
-  endif
-  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
-endfunc
-
-" starting syntax highlighting facilities
-" 1) change the color of the char under cursor to black
-" This mkBlacl function and \z mapping is the main syntax highlighting debugger
-let stack = map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
-nmap <leader>z :call <SID>MkBlack()<CR>
-function! <SID>MkBlack()
-"  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
-
-  let stack = map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
-  let stack_ = synstack(line('.'), col('.'))
-  let stack__ = map(synstack(line('.'), col('.')), 'synIDattr(v:val, "fg")')
-  echo stack
-  if len(stack) == 0
-    let name1 = 'Normal'
-  else
-    let name1 = stack[-1]
-  endif
-
-  let stack2 = map(synstack(line('.'), col('.')), 'synIDattr(synIDtrans(v:val), "name")')
-  let stack2_ = map(synstack(line('.'), col('.')), 'synIDtrans(v:val)')
-  let stack2__ = map(synstack(line('.'), col('.')), 'synIDattr(synIDtrans(v:val), "fg")')
-  echo stack2
-  if len(stack2) == 0
-    let name2 = 'Normal'
-  else
-    let name2 = stack[-1]
-  endif
-
-  execute 'hi' name2
-  execute 'hi' name2 'guibg=white'
-  echo 'hi' name2 'guibg=white'
-  echo 'hi' name1 'guibg=white'
-  colo
-  let g:you = l:
-endfunc
-
-nmap <leader>x :call <SID>ChgColor()<CR>
-function! <SID>ChgColor()
-  let name = map(synstack(line('.'), col('.')), 'synIDattr(synIDtrans(v:val), "name")')[-1]
-
-  let fg = map(synstack(line('.'), col('.')), 'synIDattr(synIDtrans(v:val), "fg")')[-1]
-  let rgb = [fg[1:2], fg[3:4], fg[5:6]]
-  let rgb_ = map(rgb, 'str2nr(v:val, "16")')
-
-  let bg = map(synstack(line('.'), col('.')), 'synIDattr(synIDtrans(v:val), "bg")')[-1]
-  let rgbb = [bg[1:2], bg[3:4], bg[5:6]]
-  let rgbb_ = map(rgbb, 'str2nr(v:val, "16")')
-
-  let c = 'foo'
-  let who = 'fg'
-  while c != 'q'
-			let c = nr2char(getchar())
-      if c == 'j'
-        let who = 'bg'
-      elif c == 'h'
-        let rgb__ = rgb
-        let rgb = rgbb
-        let rgbb = rgb__
-      elif who == 'fg'
-        if c == 'r'
-          let rgb_[0] = (16 + rgb_[0]) % 256
-        elseif c == 'g'
-          let rgb_[1] = (16 + rgb_[1]) % 256
-        elseif c == 'b'
-          let rgb_[2] = (16 + rgb_[2]) % 256
-        let fg_ = printf('#%02x%02x%02x', rgb_[0], rgb_[1], rgb_[2])
-        let mcmd = 'hi' name 'guifb=' . fg_
-      elif who == 'bg'
-        if c == 'r'
-          let rgbb_[0] = (16 + rgbb_[0]) % 256
-        elseif c == 'g'
-          let rgbb_[1] = (16 + rgbb_[1]) % 256
-        elseif c == 'b'
-          let rgbb_[2] = (16 + rgbb_[2]) % 256
-        let bg_ = printf('#%02x%02x%02x', rgbb_[0], rgbb_[1], rgbb_[2])
-        let mcmd = 'hi' name 'guifb=' . bg_
-      endif
-      execute mcmd
-      redraw
-      " echo fg_
-      " echo 'hi' name 'guifg=' . fg_
-  endwhile
-
-  let g:me = l:
-endfunc
-" syntax change undo
-" increment/decrement rgb
-" in the char under cursor
-
-" start a function that receives
-" the modifications throug the
-" keys RGB and before it (rewq, gfds, bvcx).
-" for backgound, press j and use the same keys.
-" uppercase is used for more resolution.
-
-" q quits.
-
-" Another functionality:
-" Makes a color pallete from the special colors
-" or other palletes that are special or
-" that are derived from a color or set of colors.
-
-" Another functionality:
-" swap two colors grabed from cursor.
-" rotate all the colors maintaining the background
-" or not.
-
-" find make tests with synID trans false and true
-" We have the syngroups givem by synstack
-" and the effectively used one, given
-" by synIDtrans
-
-" their name might be found with
-" synIDattr
-
-" If set hi group from synstack,
-" the link used beforehand is lost.
-" e.g.  :hi vimHiGuiFgBg guifg=#000000
-" Makes you loose the link to gruvboxYellow
-
-
-
-
-
-
-
-
 """"""""""""""""""""""""""""
 " End of vimrc, last commands
 se verbose=2
+let g:vimscript_vars = s:
