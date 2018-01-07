@@ -1,12 +1,94 @@
+" Script standard documentation
+" most advanced run: 
+" basic run: \z to create color variables based on the cursor position
+" and \x to change color under cursor.
+" MakeColorsWindow dont match colors in the window made by running colors.vim
+
+
+" Color many of the substitute patterns.
+" Color the @" and @. registers.
+
+" Make colorscheme with X11 colors:
+" :echo filter(copy(colors_all['named1']), 'v:val[0:2]=="X11"')
+
+" SynStack(): shows the name of the syn groups under cursor \Z
+" MkBlack(): 
+" TickColor(timer): 
+" StartTick(): 
+" GetColors(default): 
+" IncrementColor(c,: 
+" InitializeColors(): 
+" GetAll(): 
+" StartMappings(): 
+" SwitchGround(): 
+" RefreshColors(): 
+" ChgColor(): 
+" StandardColorsOrig(rgb_fb): 
+" MakeColorsWindow(colors): (3,4) for new wintow with all colors
+" StandardColors(rgb_fb): 
+
+" References
+" /usr/local/share/vim/vim80/doc/syntax.txt
+" * For the preferred and minor groups
+
+
+" ToDo
+" * Integrate Python & vim to convert freq to RGB
+" make exercises with each of the vim's python-related functions
+" * Write to list or report bug to Vim git: spellbad is lost in colorscheme blue (and other standard colorschemes) when set termguicolors in terminal because no cterm=undercurl or gui(fg/bg).
+" * A function that analyses the current file and outputs
+" a window with each of the colors used and their hi group and
+" specifications.
+" It should also allow then that the user toggles the original file
+" between normal text view and another with each char substituted with
+" the corresponding FG colors and their numbers and another
+" with the BG colors and their numbers.
+"
+" * Commands to add new syntax group, match words and patterns,
+" associate with other colors.
+" Grab words and patterns under cursor, e.g. to add or remove
+" words to a group, or use the same color settings
+"
+" * Think about making a mode to ease the syntax highlighting
+" modifications
+
+" * hlsearch and spellbad should one be bold and underline to avoid
+" collision with programming language colors.
+" * hlsearch and spellbad should use two of the cues: color, bold, underline.
+" (italics?)
+
+" * syntime report to get the syntax highlighting scheme being used
+" 
+
+
 " Show syntax highlighting groups for word under cursor
-nmap <leader>z :call InitializeColors()<CR>
-nmap <leader>Z :call SynStack()<CR>
+nmap <leader>z :w<CR>:so %<CR>:call InitializeColors()<CR><CR>
+nmap <leader>Z :echo SynStack()<CR>
 " nmap <leader>z :call MkBlack()<CR>
 function! SynStack()
+  " last item should be the group last considered, i.e. the most relevant.
+  " If it is linked to some other group, you might find it with 
+  " synIDtrans
   if !exists("*synstack")
     return
   endif
-  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+  let a = map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+  " intermediaries
+  let b = map(synstack(line('.'), col('.')), 'synIDattr(synIDtrans(v:val), "name")')
+  let c = []
+  let i = 0
+  while i < len(a)
+    if a[i] != b[i]
+      call add(c, [a[i], b[i]])
+    else
+      call add(c, a[i])
+    endif
+    let i += 1
+  endwhile
+  if len(c) == 0
+    let c = ['Normal']
+  endif
+  return c
 endfunc
 
 " starting syntax highlighting facilities
@@ -58,7 +140,7 @@ function! StartTick()
 endfunction
 
 function! GetColors(default)
-  " Starts a global dictionary with the colors on current position
+  " Starts the dictionaries in this script's namespace with the colors on current position
   " default=1 sets the default/main fg/bg colors for the colorscheme in s:colorsd
   " default=0 sets last managed colorscheme in s:dcolorsd
   let name = map(synstack(line('.'), col('.')), 'synIDattr(synIDtrans(v:val), "name")')[-1]
@@ -105,21 +187,38 @@ function! IncrementColor(c, g)
 endfunction
 
 function! InitializeColors()
+  cal timer_stopall()
   let s:cs = g:colors_name
   let s:ground = 'fg'
   " creates the dictionary with colors on foreground and background
   " default, temporary and buffer in s:dcoulorsd, s:tcolorsd and s:colors
-  call GetColors(0)
-  call GetColors(1)
-  call GetColors(2)
+  cal GetColors(0)
+  cal GetColors(1)
+  cal GetColors(2)
   " initialize mappings
-  call StartMappings()
+  cal StartMappings()
   " to keep track of the tickers___:
   let s:tickerids = []
-  echo '---> default color:' s:dcolorsd
-  echo '===> buffer color:' s:colors
-  echo ':::> temp color:' s:tcolorsd
-endfunction
+  ec '---> default color:' s:dcolorsd
+  ec '===> buffer color:' s:colors
+  ec ':::> temp color:' s:tcolorsd
+  " make named0 and named1 with the name of the colors:
+  " 0: from documentation :h gui-colors
+  " 1: from $VIMRUNTIME/rgb.txt
+  cal StandardColors()
+
+  cal StandardColorSchemes()
+  let s:timers = []
+  let s:counters = range(10)
+  let s:ncounters = 0
+  let s:patterns = {}
+  let s:mpatterns = {'wave': 'call WavePattern()', 'std': 'call StandardPattern()', 'wobble': 'call Wobble()', 'silence': 'call BypassPattern'}
+  " get all variables to the g:colors_all (new)
+  " and g:colors_all_ (new) global variables
+  cal GetAll()
+  ec "type \\x to change color under cursor"
+  ec " should be integrated to the mode <C-\ c>"
+endf
 
 function! GetAll()
   let g:colors_all = s:
@@ -131,6 +230,11 @@ endfunction
 
 
 function! StartMappings()
+  " use <C-\ c> (press control and \, release, press c).
+  " to start the color mode.
+  " use <C-\ a> for audiovisual or aa, <C-\ m> for music
+  " Because it is C-\ it should work in any mode because it is reserved.
+  " checkout how to start a mode
   " start mappings of functions to g, z and leader keys
   " for normal and insert mode
   " try also command mode
@@ -156,6 +260,7 @@ function! StartMappings()
 endfunction
 
 function! SwitchGround()
+  " To keep a record in our color server
   if s:ground == 'fg'
     s:ground = 'bg'
   else
@@ -164,19 +269,26 @@ function! SwitchGround()
 endfunction
 
 function! RefreshColors()
-   let c = s:colors
-   let g = s:ground
-   let fg_ = printf('#%02x%02x%02x', c[g]['r'], c[g]['g'], c[g]['b'])
+  " to do what???
+  let c = s:colors
+  let g = s:ground
+  let fg_ = printf('#%02x%02x%02x', c[g]['r'], c[g]['g'], c[g]['b'])
 endfunction
 
 nmap <leader>x :call ChgColor()<CR>
 function! ChgColor()
+  " should integrate bold italics and underline (strikeout?) TTM
   let name = map(synstack(line('.'), col('.')), 'synIDattr(synIDtrans(v:val), "name")')[-1]
 
   let fg = map(synstack(line('.'), col('.')), 'synIDattr(synIDtrans(v:val), "fg")')[-1]
   if fg == ''
     let fg = "#FFFFFF"
-  endif
+  en
+  let isnamed = index(s:names1, fg)
+  if isnamed >= 0  " fg in s:named1
+    let fg_named = fg
+    let fg = s:named1_[isnamed]
+  end
   let rgb = [fg[1:2], fg[3:4], fg[5:6]]
   let rgb_ = map(rgb, 'str2nr(v:val, "16")')
 
@@ -235,7 +347,7 @@ function! ChgColor()
 endfunc
 
 
-function! StandardColorsOrig(rgb_fb)
+function! StandardColorsOrig()
   " To use, save this file and type ":so %"
   " Optional: First enter ":let g:rgb_fg=1" to highlight foreground only.
   " Restore normal highlighting by typing ":call clearmatches()"
@@ -251,7 +363,7 @@ function! StandardColorsOrig(rgb_fb)
   0read $VIMRUNTIME/rgb.txt
   let find_color = '^\s*\(\d\+\s*\)\{3}\zs\w*$'
   silent execute 'v/'.find_color.'/d'
-  silent g/grey/d
+  " silent g/grey/d
   let namedcolors=[]
   1
   while search(find_color, 'W') > 0
@@ -286,7 +398,7 @@ function! MakeColorsWindow(colors)
   new
   setlocal buftype=nofile bufhidden=hide noswapfile
   0read $VIMRUNTIME/rgb.txt
-  silent g/grey/d
+  " silent g/grey/d
   1
   for w in l:nc
       " default bg against color in fg,
@@ -320,7 +432,24 @@ function! MakeColorsWindow(colors)
   let g:banana = l:
 endfun
 
-function! StandardColors(rgb_fb)
+fu! StandardColorSchemes()
+  let s:scs = {'desc': 'dictionary for all color schemes'}
+  let s:scs['Monochromatic'] = {'desc': 'one color shades'}
+  let s:scs['LGray'] = {'desc': 'linear grayscale colorschemes'}
+  let s:scs['LRGB'] = {'desc': 'linear maximum distance RGB colorschemes'}
+  let s:scs['ERGB'] = {'desc': 'exponential maximum distance RGB colorschemes'}
+  let s:scs['ERGB'] = {'desc2': 'Weber-Fechner laws'}
+  let s:scs['PRGB'] = {'desc': 'power-law maximum distance RGB colorschemes'}
+  let s:scs['PRGB'] = {'desc2': "Steven's laws"}
+  let s:scs['PRGB'] = {'desc2': "Steven's laws"}
+  " LF, EF, EF Frequency-related colorschemes (translate with wlrgb)
+  " using harmonic series
+  " how is rgb related to final frequency of the light?
+  " RRGB randomic coloschemes
+  " EERGB PPRGB Double Web-Fech and Stev laws
+  " Arbitrary series or rgb or final frequency
+endf
+function! StandardColors()
   " Run :call StandardColors(1) for a more lightweight version
   " This function gets all the names of the all the colors on the system
   " See MakeColorsWindow(0) to display all named colors
@@ -345,18 +474,251 @@ function! StandardColors(rgb_fb)
   setlocal buftype=nofile bufhidden=hide noswapfile
   0read $VIMRUNTIME/rgb.txt
   let find_color = '^\s*\(\d\+\s*\)\{3}\zs\w*$'
-  silent execute 'v/'.find_color.'/d'
-  silent g/grey/d
+  " silent execute 'v/'.find_color.'/d'
+  " silent g/grey/d
   let named=[]
   1
   while search(find_color, 'W') > 0
       let w = expand('<cword>')
       call add(named, w)
   endwhile
+
+  let named1__ = {}
+  for nam in named
+      0read $VIMRUNTIME/rgb.txt
+      1
+      let @a = ''
+      " execute "g/\v[\s\d]{3}\s[\s\d]{3}\s[\s\d]{3}\s*". nam ."/y A"
+      " execute "/call search(".*[\s\d][\s\d].*blue")\v[\s\d]{3}\s[\s\d]{3}\s[\s\d]{3}\s*". nam ."/y A"
+      normal qaq
+      let mstr = "g/\<" . nam . "\>$/y A"
+      echo ['=====================>', mstr]
+      execute mstr
+
+      echo @a
+      let named1__[nam] = {}
+
+      let r = str2nr(@a[0:2]) 
+      let g = str2nr(@a[4:6]) 
+      let b = str2nr(@a[8:10])
+      echo [r,g,b,@a]
+
+      let named1__[nam]['r'] = r
+      let named1__[nam]['g'] = g
+      let named1__[nam]['b'] = b
+      let named1__[nam]['hex'] = '#' . printf("%x%x%x", r,g,b)
+  endfor
+  let s:named1__ = named1__
+
   let s:named1 = named
   let s:std = l:
   q
 endfunc
+
+""""""""""""""""""" {{{ Minimal Patterner
+func! MyHandler(timer)
+  echo 'Handler called' s:i
+  let s:i += 1
+endfunc
+func! MyTimer(repeat, period)
+  let s:i = 0
+  let timer = timer_start(a:period, 'MyHandler',
+        \ {'repeat': a:repeat})
+  call add(s:timers, timer)
+endfu
+" }}}
+
+"""""""""""" Don't Know {{{
+" make a rhythm on numbers by updating a variable with list
+" of numbers or patterns
+"
+" one calls the other to repeat n times.
+" displacement/offset might be performed with repeat=1, period=silence)
+" pattern(offset=2000, repeat=4, period=500)
+func! MyHandler2(offset, timer, makeoffset)
+  echo 'Handler called' s:counters
+  if a:makeoffset == 1
+    call MyHandler2(a:offset, 1, )
+  let s:counters[i] += 1
+endfunc
+
+func! MyTimer2(offset, repeat, period)
+  let timer = timer_start(a:period, 'MyHandler2',
+        \ {'repeat': a:repeat, 'offset': a:offset, 'makeOffset': 1})
+  call add(s:timers, timer)
+endfu
+" let s:pattern = s:MyTimer2
+" }}}
+
+""""""""""""""""""" {{{ Z-Patterner
+fu! StandardPattern()
+  let s:counters[s:ncounters] += s:ncounters
+  let s:ncounters = (s:ncounters + 1) % len(s:counters)
+endf
+
+fu! BypassPattern()
+  " for silence
+  let foo = 'bar'
+endf
+
+fu! Pattern1(value)
+  let s:counters[a:value] += a:value
+endf
+
+fu! WavePattern()
+  call Voice(100, 20, 'std')
+  call Voice(1, 1000, 'silence')
+  call Voice(100, 20, 'std')
+endf
+
+function! Wobble(nlines)
+  " Make curent line and next ones wobble
+  let i = 0
+  let mstart = system("echo $RANDOM")
+  while i < nlines
+    exec line('.')+i . 'center' 30+(i*1+mstart)%80
+    let i += 1
+  endwhile
+endfunc
+
+fu! PWobble()
+  " let timer = timer_start(500, 'Wobble')
+  " let timer = timer_start(500, 'Wobble',
+  "      			\ {'repeat': a:repeat})
+  call Voice(3, 200, 'Wobble(5)')
+endf
+
+fu! OverallPattern()
+  call Voice(-1, 2000, 'PWobble')
+endf
+
+
+fu! MyHandler3(timerID)
+  " a:timer is the number of repeats.
+  " the duration is set by MyTimer3(timer=a:timer, duration=XXX)
+  let foo = copy(s:counters)
+  if !has_key(s:patterns, a:timerID)
+    " call StandardPattern()
+    cal BypassPattern()
+  el
+    exe s:patterns[a:timerID]
+  en
+  " let rand = system("echo $RANDOM")%len(s:counters)
+  " echo [rand, len(s:counters)]
+  " let s:counters[rand] += rand
+  let bar = [s:ncounters, len(s:counters)]
+  " echo bar 'Handler called' foo
+  "     \ '\nHandler finished' s:counters ' ' a:timer
+  ec bar 'Handler called' foo
+      \ '\nHandler finished' s:counters ' ' a:timerID
+endf
+
+func! MyTimer3(repeats, duration, value)
+  " timer is number of subsequent timer onsets
+  " duration is period in ms
+  " value is simpy not being used
+  let timerID_ = timer_start(a:duration, 'MyHandler3',
+        \ {'repeat': a:repeats})
+  echo timerID_
+  let s:patterns[timerID_] = "call Pattern1(". a:value .")"
+  call add(s:timers, timerID_)
+endfu
+" let s:pattern = s:MyTimer3
+"
+"
+" }}}
+
+""""""""""""""""""" {{{ Z-Patterner2
+fu! SporkVoice(timerID)
+  " a:timer is the number of repeats.
+  " the duration is set by MyTimer3(timer=a:timer, duration=XXX)
+  let foo = copy(s:counters)
+  if !has_key(s:patterns, a:timerID)
+    " call StandardPattern()
+    cal BypassPattern()
+  el
+    exe s:patterns[a:timerID]
+  en
+  " let rand = system("echo $RANDOM")%len(s:counters)
+  " echo [rand, len(s:counters)]
+  " let s:counters[rand] += rand
+  let bar = [s:ncounters, len(s:counters)]
+  " echo bar 'Handler called' foo
+  "     \ '\nHandler finished' s:counters ' ' a:timer
+  ec bar 'Handler called' foo
+      \ '\nHandler finished' s:counters ' ' a:timerID
+endf
+
+fu! Voice(repeats, duration, patternID)
+  " timer is number of subsequent timer onsets
+  " duration is period in ms
+  " value is simpy not being used
+  let timerID_ = timer_start(a:duration, 'SporkVoice',
+        \ {'repeat': a:repeats})
+  echo timerID_
+  if type(a:patternID) == 0
+    let s:patterns[timerID_] = "call Pattern1(". a:value .")"
+  elsei has_key(s:mpatterns, a:patternID)
+    let s:patterns[timerID_] = s:mpatterns[a:patternID]
+  else
+    let s:patterns[timerID_] = 'call' a:patternID
+  en
+  call add(s:timers, timerID_)
+endfu
+" let s:pattern = s:MyTimer3
+"
+"
+" }}}
+
+" TTM {{{
+" function! StandardColors()
+" endfunc
+" To use, save this file and type ":so %"
+" Optional: First enter ":let g:rgb_fg=1" to highlight foreground only.
+" Restore normal highlighting by typing ":call clearmatches()"
+"
+" Create a new scratch buffer:
+" - Read file $VIMRUNTIME/rgb.txt
+" - Delete lines where color name is not a single word (duplicates).
+" - Delete "grey" lines (duplicate "gray"; there are a few more "gray").
+" Add matches so each color name is highlighted in its color.
+" call clearmatches()
+" new
+" setlocal buftype=nofile bufhidden=hide noswapfile
+" 0read $VIMRUNTIME/rgb.txt
+" let find_color = '^\s*\(\d\+\s*\)\{3}\zs\w*$'
+" silent execute 'v/'.find_color.'/d'
+" silent g/grey/d
+" let namedcolors=[]
+" 1
+" while search(find_color, 'W') > 0
+"     let w = expand('<cword>')
+"     call add(namedcolors, w)
+" endwhile
+" 
+" for w in namedcolors
+"     execute 'hi col_'.w.' guifg=black guibg='.w
+"     execute 'hi col_'.w.'_fg guifg='.w.' guibg=NONE'
+"     execute '%s/\<'.w.'\>/'.printf("%-36s%s", w, w).'/g'
+" 
+"     call matchadd('col_'.w, '\<'.w.'\>', -1)
+"     " determine second string by that with large # of spaces before it
+"     call matchadd('col_'.w.'_fg', ' \{10,}\<'.w.'\>', -1)
+" endfor
+" 1
+" nohlsearch
+" 
+" " TTM }}}
+
+
+
+
+
+
+
+
+
+
 " syntax change undo
 " increment/decrement rgb
 " in the char under cursor
@@ -397,3 +759,7 @@ endfunc
 "   return matchstr(expand('<sfile>'), '<SNR>\zs\d\+\ze_SID$')
 " endfun
 " let s:mysid = s___:SID()
+"
+"  "/usr/local/share/vim/vim80/rgb.txt" "/usr/local/share/vim/vim80/rgb.txt"
+"  782L, 17780CPress ENTER or type command to continue 
+"
