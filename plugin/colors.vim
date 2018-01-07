@@ -33,9 +33,10 @@
 
 
 " ToDo
+" * tradutor de verbose de syntax highlighting para colorscheme
 " * Integrate Python & vim to convert freq to RGB
 " make exercises with each of the vim's python-related functions
-" * Write to list or report bug to Vim git: spellbad is lost in colorscheme blue (and other standard colorschemes) when set termguicolors in terminal because no cterm=undercurl or gui(fg/bg).
+" g Write to list or report bug to Vim git: spellbad is lost in colorscheme blue (and other standard colorschemes) when set termguicolors in terminal because no cterm=undercurl or gui(fg/bg).
 " * A function that analyses the current file and outputs
 " a window with each of the colors used and their hi group and
 " specifications.
@@ -96,7 +97,10 @@ endfunc
 " This mkBlacl function and \z mapping is the main syntax highlighting debugger
 let stack = map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 function! MkBlack()
-"  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+  " Debugger facility.
+  " Only changes the color of the syntax group under cursor to black
+  " and prints and creates useful variables
+  " Reload color scheme to undo. E.g.: :colo blue
 
   let stack = map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
   let stack_ = synstack(line('.'), col('.'))
@@ -129,6 +133,9 @@ endfunc
 function! TickColor(timer)
   let s:anum = 0
   let s:tick = 1
+  " default:
+  " change some of the colors (of text and bg)
+  " at the window in some patterns
   while s:tick == 1
     echo "banana =" s:anum
     let s:anum += 1
@@ -207,6 +214,7 @@ function! InitializeColors()
   " 1: from $VIMRUNTIME/rgb.txt
   cal StandardColors()
 
+  let s:cs = {}
   cal StandardColorSchemes()
   let s:timers = []
   let s:counters = range(10)
@@ -278,23 +286,35 @@ endfunction
 nmap <leader>x :call ChgColor()<CR>
 function! ChgColor()
   " should integrate bold italics and underline (strikeout?) TTM
-  let name = map(synstack(line('.'), col('.')), 'synIDattr(synIDtrans(v:val), "name")')[-1]
-
-  let fg = map(synstack(line('.'), col('.')), 'synIDattr(synIDtrans(v:val), "fg")')[-1]
-  if fg == ''
-    let fg = "#FFFFFF"
-  en
-  let isnamed = index(s:names1, fg)
-  if isnamed >= 0  " fg in s:named1
+  let sid = hlID('Normal')
+  let sfg = synIDattr(synIDtrans(sid), "fg")
+  let sbg = synIDattr(synIDtrans(sid), "bg")
+  let name = map(synstack(line('.'), col('.')), 'synIDattr(synIDtrans(v:val), "name")')
+  if len(name) > 0
+    let name = name[-1]
+    let fg = map(synstack(line('.'), col('.')), 'synIDattr(synIDtrans(v:val), "fg")')[-1]
+    if fg == ''
+      let fg = sfg
+    en
+    let bg = map(synstack(line('.'), col('.')), 'synIDattr(synIDtrans(v:val), "bg")')[-1]
+    if bg == ''
+      let bg = sbg
+    endif
+  elseif
+    let name = Normal
+    let fg = sfg
+    let bg = sbg
+  endif
+  if has_key(s:named_colors, tolower(fg))
     let fg_named = fg
-    let fg = s:named1_[isnamed]
+    let fg = s:named_colors[tolower(fg)]['hex']
   end
   let rgb = [fg[1:2], fg[3:4], fg[5:6]]
   let rgb_ = map(rgb, 'str2nr(v:val, "16")')
 
-  let bg = map(synstack(line('.'), col('.')), 'synIDattr(synIDtrans(v:val), "bg")')[-1]
-  if bg == ''
-    let bg = "#FFFFFF"
+  if has_key(s:named_colors, tolower(bg))
+    let bg_named = bg
+    let bg = s:named_colors[tolower(bg)]['hex']
   endif
   let rgbb = [bg[1:2], bg[3:4], bg[5:6]]
   let rgbb_ = map(rgbb, 'str2nr(v:val, "16")')
@@ -305,10 +325,16 @@ function! ChgColor()
   echo 'initial colors are fg, bs:' fg bg
   call getchar(1)
   while c != 'q'
+      let mex = 1
 			let c = nr2char(getchar())
       if c == 'j'
-        let who = 'bg'
-        let mcmd = 'echo "on the background color"'
+        if who == 'fg'
+          let who = 'bg'
+          let mcmd = 'echo "on the background color"'
+        else
+          let who = 'fg'
+          let mcmd = 'echo "on the background color"'
+        endif
       elseif c == 'h'
         let [rgb_, rgbb_] = [rgbb_, rgb_]
         let mcmd = 'echo "colors inverted"'
@@ -336,10 +362,14 @@ function! ChgColor()
         endif
         let bg_ = printf('#%02x%02x%02x', rgbb_[0], rgbb_[1], rgbb_[2])
         let mcmd = printf('hi %s guibg=%s', name, bg_)
+      else
+        let mex = 0
       endif
-      execute mcmd
-      redraw
-      echo fg_ bg_
+      if mex
+        execute mcmd
+        redraw
+        echo fg_ bg_
+      endif
       " echo 'hi' name 'guifg=' . fg_
   endwhile
 
@@ -442,6 +472,8 @@ fu! StandardColorSchemes()
   let s:scs['PRGB'] = {'desc': 'power-law maximum distance RGB colorschemes'}
   let s:scs['PRGB'] = {'desc2': "Steven's laws"}
   let s:scs['PRGB'] = {'desc2': "Steven's laws"}
+  " Linear distance maximization
+  cal MakeLRGBD()
   " LF, EF, EF Frequency-related colorschemes (translate with wlrgb)
   " using harmonic series
   " how is rgb related to final frequency of the light?
@@ -449,6 +481,7 @@ fu! StandardColorSchemes()
   " EERGB PPRGB Double Web-Fech and Stev laws
   " Arbitrary series or rgb or final frequency
 endf
+
 function! StandardColors()
   " Run :call StandardColors(1) for a more lightweight version
   " This function gets all the names of the all the colors on the system
@@ -458,60 +491,35 @@ function! StandardColors()
 
   " these names are from from :h gui-colors in Jan/05/2018
   let s:named0 = ['Red', 'LightRed', 'DarkRed', 'Green', 'LightGreen', 'DarkGreen', 'SeaGreen', 'Blue', 'LightBlue', 'DarkBlue', 'SlateBlue', 'Cyan', 'LightCyan', 'DarkCyan', 'Magenta', 'LightMagenta', 'DarkMagenta', 'Yellow', 'LightYellow', 'BrownsDarkYellow', 'Gray', 'LightGray', 'DarkGray', 'Black', 'White', 'Orange', 'PurplesViolet']
-  " how to determine the rgb value of the default colors?
-  " parse $VIMRUNTIME/rgb.txt
-  " To use, save this file and type ":so %"
-  " Optional: First enter ":let g:rgb_fg=1" to highlight foreground only.
-  " Restore normal highlighting by typing ":call clearmatches()"
-  "
-  " Create a new scratch buffer:
-  " - Read file $VIMRUNTIME/rgb.txt
-  " - Delete lines where color name is not a single word (duplicates).
-  " - Delete "grey" lines (duplicate "gray"; there are a few more "gray").
-  " Add matches so each color name is highlighted in its color.
   call clearmatches()
   new
   setlocal buftype=nofile bufhidden=hide noswapfile
   0read $VIMRUNTIME/rgb.txt
-  let find_color = '^\s*\(\d\+\s*\)\{3}\zs\w*$'
-  " silent execute 'v/'.find_color.'/d'
-  " silent g/grey/d
-  let named=[]
-  1
-  while search(find_color, 'W') > 0
-      let w = expand('<cword>')
-      call add(named, w)
+  " - Delete lines where color name is not a single word (duplicates).
+  " - Delete "grey" lines (duplicate "gray"; there are a few more "gray").
+  "   TTM ??
+  let tline = 1
+  let mline = line('$')
+  let named_colors = {}
+  while tline <=  mline
+    exec tline
+    normal yy
+    if @" == ''
+      let tline += 1
+      continue
+    endif
+    let [r, g, b, name] = [@"[0:2], @"[4:6], @"[8:10], @"[13:-2]]
+    "  str2nr(@a[0:2])
+    let tempdict = {'r'   :   str2nr(r),
+                  \ 'g'   :   str2nr(g),
+                  \ 'b'   :   str2nr(b),
+                  \ 'hex' :   printf("%02x%02x%02x", r,g,b)}
+    let named_colors[tolower(name)] = tempdict
+    let tline += 1
   endwhile
-
-  let named1__ = {}
-  for nam in named
-      0read $VIMRUNTIME/rgb.txt
-      1
-      let @a = ''
-      " execute "g/\v[\s\d]{3}\s[\s\d]{3}\s[\s\d]{3}\s*". nam ."/y A"
-      " execute "/call search(".*[\s\d][\s\d].*blue")\v[\s\d]{3}\s[\s\d]{3}\s[\s\d]{3}\s*". nam ."/y A"
-      normal qaq
-      let mstr = "g/\<" . nam . "\>$/y A"
-      echo ['=====================>', mstr]
-      execute mstr
-
-      echo @a
-      let named1__[nam] = {}
-
-      let r = str2nr(@a[0:2]) 
-      let g = str2nr(@a[4:6]) 
-      let b = str2nr(@a[8:10])
-      echo [r,g,b,@a]
-
-      let named1__[nam]['r'] = r
-      let named1__[nam]['g'] = g
-      let named1__[nam]['b'] = b
-      let named1__[nam]['hex'] = '#' . printf("%x%x%x", r,g,b)
-  endfor
-  let s:named1__ = named1__
-
-  let s:named1 = named
-  let s:std = l:
+  let g:chicrute=55
+  unlet named_colors['']  " find out why I am getting this 000 '' color...
+  let s:named_colors = named_colors
   q
 endfunc
 
@@ -763,3 +771,59 @@ endfu
 "  "/usr/local/share/vim/vim80/rgb.txt" "/usr/local/share/vim/vim80/rgb.txt"
 "  782L, 17780CPress ENTER or type command to continue 
 "
+"  ---- Color Schmems {{{
+fu! Hex(c)
+ return printf("#%02x%02x%02x", a:c[0], a:c[1], a:c[2])
+endf
+
+fu! AppyCS(cs)
+  let c = a:cs
+  exec "hi Normal     guibg=" . Hex(c[0]) . " guifg=" . Hex(c[1])
+  exec "hi Comment    guifg=" . Hex(c[2])
+  exec "hi Constant   guifg=" . Hex(c[3])
+  exec "hi Identifier guifg=" . Hex(c[4])
+  exec "hi Statement  guifg=" . Hex(c[5])
+  exec "hi PreProc    guifg=" . Hex(c[6])
+  exec "hi Type       guifg=" . Hex(c[7])
+  exec "hi Special    guifg=" . Hex(c[8])
+
+  hi Underlined gui=underline
+  hi Error gui=reverse
+  hi Todo guifg=black guibg=white
+endf
+fu! MakeLRGBD()
+  let mean_colors = [[255, 128, 0],
+                   \ [0, 255, 128],
+                   \ [128, 0, 255],
+                   \ [0, 128, 255],
+                   \ [255, 0, 128],
+                   \ [128, 255, 0]]
+  let l = []
+  let bwg = [[0,0,0],[255,255,255],[128,128,128]]
+  for c in mean_colors
+    let cs_ = MkRotationFlipCS(c) + bwg
+    call add(l, cs_)
+  endfor
+  let s:cs['lmean_doc'] = 'has bw and colors in between. should have precedence given by the bg'
+  let s:cs['lmean'] = l
+endfu
+
+fu! Warp(where, distortion)
+  " Make cs more white or black or gray or tend
+  " to a specific color
+endf
+fu! MkRotationFlipCS(color)
+  let c = a:color
+  let f = [255 - c[0], 255 - c[1], 255 - c[2]]
+  let cs =   [c,
+           \ [c[2], c[0], c[1]],
+           \ [c[1], c[2], c[0]],
+           \  f,
+           \ [f[2], f[0], f[1]],
+           \ [f[1], f[2], f[0]]
+           \ ]
+  return cs
+endf
+"  }}}
+
+
