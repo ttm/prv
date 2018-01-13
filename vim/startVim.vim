@@ -13,12 +13,15 @@ fu! Start() " {{{
 endfu " }}}
 
 call Start()
-Description select a block of code an write  to run it
+" select a block of code an write  to run it
 let @r = ":@*\<CR>"
-Description when inside a function, look for function limits and run it
+" when inside a function, look for function limits and run it
 let @f = "mf?^fu\<CR>V/^endf\<CR>:@*\<CR>`f"
-Description run current line
-let @l = "Y:@\"" . "\<CR>"
+" run current line (Not working!)
+let @l = "Y:@\"\<CR>"
+
+Todo understand double quotes for defining strings
+Todo make prv vars persistent
 
 fu! StartNotes() " {{{
   " Or recover them from somewhere (load from txt files?)
@@ -29,6 +32,7 @@ fu! StartNotes() " {{{
     echo c_ c
     exec 'com! -nargs=1' c_ 'call RegisterNote("<args>","' . c . '")'
   endfor
+  let g:last_noteid = v:none
 endfu " }}}
 
 fu! RegisterNote(msg, nname) " {{{
@@ -55,12 +59,13 @@ fu! RegisterNote(msg, nname) " {{{
   let g:[a:nname . 's'][noteid . '_user'] = g:user
   let g:[a:nname . '_counter'] += 1
   let context = []
-  for c in g:note_classes
-    if has_key(g:, c . 's_')
-      call add(context, g:[c . 's_'][-1])
-    endif
-  endfor
-  let g:[a:nname . 's'][noteid . '_last'] = context
+  " for c in g:note_classes
+  "   if has_key(g:, c . 's_')
+  "     call add(context, g:[c . 's_'][-1])
+  "   endif
+  " endfor
+  let g:[a:nname . 's'][noteid . '_last'] = g:last_noteid
+  let g:last_noteid = noteid
 endfu " }}}
 
 fu! ResetAll() " {{{
@@ -90,7 +95,7 @@ fu! AllNotes() " {{{
       let fstring .= "------> " . c . "s:" . "\n"
       let n = c . 's'
       for note in g:[c . 's_']
-        let fstring .= g:[n][note] . ' ' . string(g:[n][note . '_context']) . "\n"
+        let fstring .= g:[n][note] . ' || before:' . string(g:[n][note . '_last']) . "\n"
         echo type(g:[n][note .  '_datetime'] )
         echo type(g:[n][note . '_user'])
         let fstring .= g:[n][note .  '_datetime'] . ' ' . g:[n][note . '_user'] . "\n\n"
@@ -99,7 +104,9 @@ fu! AllNotes() " {{{
     endif
   endfor
   let g:fstring = fstring
-  Split echo g:fstring
+  vs foo
+  setlocal buftype=nofile bufhidden=wipe noswapfile nobuflisted
+  put! =fstring
 endfu " }}}
 
 """""" Notes {{{
@@ -180,3 +187,55 @@ let found = FindVar('aa', v:, g:, s:, v:none , w:, b:)  " :l
 " }}}
 
 
+fu! PersistVars() " {{{
+  let g:ALL = g:
+  let g:Allasdpoi = g:
+  let g:Anum = 5
+  call SaveNewSession()
+endfu " }}}
+
+Todo make data.world connection to this data as the way to make it persistent
+
+function! SaveVariable(var, file)
+    call writefile([string(a:var)], a:file)
+endfun
+function! ReadVariable(file)
+    let recover = readfile(a:file)[0]
+    " it is so far just a string, make it what it should be:
+    execute "let result = " . recover
+    return result
+endfun
+" use with:
+" call SaveVariable(anyvar, "safe.vimData")
+" let restore = ReadVariable("safe.vimdata")
+"
+let god_names = ['deus', 'god', 'mavutsinim', 'zeus', 'krishna', 'olorum', 'universo', 'tudo']
+
+fu! StartChatter() " {{{
+  let curdir = expand("%:p:h")
+  echo curdir
+  echo curdir . '/VimChatBot'
+  if !isdirectory(curdir . '/VimChatBot')
+    let acom = '!git clone https://github.com/ttm/VimChatBot.git ' .  curdir . '/VimChatBot'
+    exec acom
+  endif
+  exec 'source ' . curdir . '/VimChatBot/plugin/VimChatBot.vim'
+endfu " }}}
+Note uma música pode ser baseada em 1 ou 3 palavras repetidas (indígena iawanawá etc), frases inteiras (xamanismo gideon), estrofes com ou sem refrão (música pop e de igreja e santo daime), ou apenas materiais de ritmo, melodia e harmonia (e.g. fuga, prelúdio, ou compostos (canon, hickup, etc). Quais equivalências cíclicas ou contínuas são mantidas com que parâmetros da música é uma forma de definir a música.
+
+Note - e.g.: ruído com freq central em random walk,
+o ciclo é tanto 1 (a cada iteração ele repete o passo aleatório)
+quanto infinito pois se deixar para sempre, não será encontrado
+padrão que permaneça por suficientes períodos de si próprio.
+
+
+Note markdown/RDF, não só rdf p prv
+
+Todo suíte shenkeriana: começa com 3 notas: T D T, q viram acordes, que vão sendo expandidos com notas e estruturas de passagem, mais e mais.
+Vira rondó, depois dança de suíte barroca: T D :][: D T :]. Vira sonata e tvz preludio.
+
+Todo apenas uma peça de material. Aí uma penca de noturnos, prelúdios, suítes, fugas, sobre a peça. Isso chega a 1 album simples ou duplo.
+
+Todo peça em homenagem a algum compositor ou pesquisador em física ou matemática ou computação.
+
+Todo alg que usa +- a estrutura em https://youtu.be/Mnh3YWarFVE?t=10m39s e permite setar a diversidade e ciclos em diferentes escalas.

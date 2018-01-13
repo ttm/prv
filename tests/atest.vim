@@ -11,7 +11,7 @@
 " endfun
 " 
 " fun! TestTwo(reg,bang,qty,args)
-"   echo "TestTwo(reg<".a:reg.">,bang=".a:bang." qty=".a:qty." q-args=".a:args.")"
+"sd\q   echo "TestTwo(reg<".a:reg.">,bang=".a:bang." qty=".a:qty." q-args=".a:args.")"
 "   echo "TestTwo"
 " endfun
 " 
