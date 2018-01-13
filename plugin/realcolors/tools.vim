@@ -65,25 +65,50 @@ endfunc " }}}
 
 function! GetColors(which) " {{{
   " Populates the s:colors dictionary with default (which=2), temp (1) and buffer (0) colors
-  let name = map(synstack(line('.'), col('.')), 'synIDattr(synIDtrans(v:val), "name")')[-1]
-
-  let fg = map(synstack(line('.'), col('.')), 'synIDattr(synIDtrans(v:val), "fg")')[-1]
-  if fg == ''
-    let sid = hlID('Normal')
+  let sid = hlID('Normal')
+  let sfg = synIDattr(synIDtrans(sid), "fg")
+  let sbg = synIDattr(synIDtrans(sid), "bg")
+  let name = map(synstack(line('.'), col('.')), 'synIDattr(synIDtrans(v:val), "name")')
+  if len(name) > 0
+    let name = name[-1]
+  else
+    let name = 'Normal'
+  endif
+  let fg = map(synstack(line('.'), col('.')), 'synIDattr(synIDtrans(v:val), "fg")')
+  if fg == []
     let name = synIDattr(synIDtrans(sid), "name")
-    let fg = synIDattr(synIDtrans(sid), "fg")
+    let fg = sfg
     " let fg = "#FFFFFF"
+  else
+    let fg = fg[-1]
+  endif
+  if has_key(s:named_colors, tolower(fg))
+    let fg_named = fg
+    let fg = s:named_colors[tolower(fg)]['hex']
+    ec fg_named
+  endif
+  if fg[0] != '#'
+    let fg = "#" . fg
   endif
   echo 'fg:' fg
   let rgb = [fg[1:2], fg[3:4], fg[5:6]]
   let rgb_ = map(rgb, 'str2nr(v:val, "16")')
 
-  let bg = map(synstack(line('.'), col('.')), 'synIDattr(synIDtrans(v:val), "bg")')[-1]
-  if bg == ''
-    let sid = hlID('Normal')
+  let bg = map(synstack(line('.'), col('.')), 'synIDattr(synIDtrans(v:val), "bg")')
+  if bg == []
     let namebg = synIDattr(synIDtrans(sid), "name")
-    let bg = synIDattr(synIDtrans(sid), "bg")
+    let bg = sbg
     " let bg = "#FFFFFF"
+  else
+    let bg = bg[-1]
+  endif
+  if has_key(s:named_colors, tolower(bg))
+    let bg_named = bg
+    let bg = s:named_colors[tolower(bg)]['hex']
+    echo bg_named
+  endif
+  if bg[0] != '#'
+    let bg = "#" . bg
   endif
   echo 'bg:' bg
   let rgbb = [bg[1:2], bg[3:4], bg[5:6]]
@@ -110,6 +135,7 @@ function! InitializeColors() " {{{
   " Should initialize the whole coloring system.
   " If not only changing the color under cursor, should be used
   let s:ground = 'fg'
+  cal StandardColors()
   " creates the dictionary with colors on foreground and background
   " default, temporary and buffer in s:dcoulorsd, s:tcolorsd and s:colors
   let s:colors = {}
@@ -123,7 +149,6 @@ function! InitializeColors() " {{{
   " make named_colors0 and named_colors with the name of the colors:
   " 0: from documentation :h gui-colors
   " : from $VIMRUNTIME/rgb.txt
-  cal StandardColors()
 
   let s:cs = {'standard': g:colors_name}
   let s:timers = []
@@ -161,8 +186,90 @@ function! RefreshColors() " {{{
   " apply c to current colorscheme
   let c = s:colors
   let g = s:ground
-  let fg_ = Hex(c[g]['r'], c[g]['g'], c[g]['b'])
+  let fg_ = Hex(c[g],0,0)
 endfunction " }}}
+
+fu! IncRGB(co, ch) " {{{
+  let co = a:co
+  let c = a:ch
+
+  if c == '1' " 0
+    let [co[0], co[1]] = [co[1], co[0]]
+  elseif c == '2'
+    let [co[1], co[2]] = [co[2], co[1]]
+  elseif c == '3'
+    let [co[0], co[2]] = [co[2], co[0]]
+  elseif c == '4'
+    let co = [co[2], co[0], co[1]]
+  elseif c == '5'
+    let co = [co[1], co[2], co[0]]
+  elseif c == 't'
+    let co[0] = 255 - co[0]
+    let co[1] = 255 - co[1]
+    let co[2] = 255 - co[2]
+  elseif c == 'r' " 1
+    let co[0] = (16 + co[0]) % 256
+  elseif c == 'g'
+    let co[1] = (16 + co[1]) % 256
+  elseif c == 'b'
+    let co[2] = (16 + co[2]) % 256
+  elseif c == 'R'
+    let co[0] = (240 + co[0]) % 256
+  elseif c == 'G'
+    let co[1] = (240 + co[1]) % 256
+  elseif c == 'B'
+    let co[2] = (240 + co[2]) % 256
+  elseif c == 'w' " 2
+    let co[0] = (1 + co[0]) % 256
+  elseif c == 'd'
+    let co[1] = (1 + co[1]) % 256
+  elseif c == 'c'
+    let co[2] = (1 + co[2]) % 256
+  elseif c == 'W'
+    let co[0] = (255 + co[0]) % 256
+  elseif c == 'D'
+    let co[1] = (255 + co[1]) % 256
+  elseif c == 'C'
+    let co[2] = (255 + co[2]) % 256
+  elseif c == 'e' " 3
+    let co[1] = (16 + co[1]) % 256
+    let co[2] = (16 + co[2]) % 256
+  elseif c == 'f'
+    let co[0] = (16 + co[0]) % 256
+    let co[2] = (16 + co[2]) % 256
+  elseif c == 'v'
+    let co[0] = (16 + co[0]) % 256
+    let co[1] = (16 + co[1]) % 256
+  elseif c == 'E'
+    let co[1] = (240 + co[1]) % 256
+    let co[2] = (240 + co[2]) % 256
+  elseif c == 'F'
+    let co[0] = (240 + co[0]) % 256
+    let co[2] = (240 + co[2]) % 256
+  elseif c == 'V'
+    let co[0] = (240 + co[0]) % 256
+    let co[1] = (240 + co[1]) % 256
+  elseif c == 'q' " 4
+    let co[1] = (1 + co[1]) % 256
+    let co[2] = (1 + co[2]) % 256
+  elseif c == 's'
+    let co[0] = (1 + co[0]) % 256
+    let co[2] = (1 + co[2]) % 256
+  elseif c == 'x'
+    let co[0] = (1 + co[0]) % 256
+    let co[1] = (1 + co[1]) % 256
+  elseif c == 'Q'
+    let co[1] = (255 + co[1]) % 256
+    let co[2] = (255 + co[2]) % 256
+  elseif c == 'S'
+    let co[0] = (255 + co[0]) % 256
+    let co[2] = (255 + co[2]) % 256
+  elseif c == 'X'
+    let co[0] = (255 + co[0]) % 256
+    let co[1] = (255 + co[1]) % 256
+  endif
+  return co
+endfu " }}}
 
 function! ChgColor() " {{{
   " should integrate bold italics and underline (strikeout?) TTM
@@ -181,7 +288,7 @@ function! ChgColor() " {{{
       let bg = sbg
     endif
   else
-    let name = Normal
+    let name = 'Normal'
     let fg = sfg
     let bg = sbg
   endif
@@ -211,7 +318,9 @@ function! ChgColor() " {{{
   let who = 'fg'
   echo 'initial colors are fg, bs:' fg bg
   call getchar(1)
-  while c != 'q'
+  let emphn = 0
+  let emph = ['bold', 'underline', 'bold,underline', 'NONE']
+  while c != 'n'
       let mex = 1
 			let c = nr2char(getchar())
       if c == 'j'
@@ -229,27 +338,21 @@ function! ChgColor() " {{{
         execute 'hi' name 'guifg=' . fg_
         let bg_ = Hex(rgbb_[0], rgbb_[1], rgbb_[2])
         execute 'hi' name 'guibg=' . bg_
+      elseif c == 'p' " power, preeminence, prominance
+        let emphn  = ( emphn + 1 ) % len(emph)
+        execute 'hi' name 'cterm=' . emph[emphn]
+        let mcmd = ''
+      elseif c == 'P' " power, preeminence, prominance
+        let emphn  = ( emphn + 3 ) % len(emph)
+        execute 'hi' name 'cterm=' . emph[emphn]
+        let mcmd = ''
       elseif who == 'fg'
-        if c == 'r'
-          let rgb_[0] = (16 + rgb_[0]) % 256
-        elseif c == 'g'
-          let rgb_[1] = (16 + rgb_[1]) % 256
-        elseif c == 'b'
-          let rgb_[2] = (16 + rgb_[2]) % 256
-        endif
-        let fg_ = Hex(rgb_[0], rgb_[1], rgb_[2])
-        echo rgb_
-        echo fg_
+        let rgb_ = IncRGB(rgb_, c)
+        let fg_ = Hex(rgb_,0,0)
         let mcmd = printf('hi %s guifg=%s', name, fg_)
       elseif who == 'bg'
-        if c == 'r'
-          let rgbb_[0] = (16 + rgbb_[0]) % 256
-        elseif c == 'g'
-          let rgbb_[1] = (16 + rgbb_[1]) % 256
-        elseif c == 'b'
-          let rgbb_[2] = (16 + rgbb_[2]) % 256
-        endif
-        let bg_ = Hex(rgbb_[0], rgbb_[1], rgbb_[2])
+        let rgbb_ = IncRGB(rgbb_, c)
+        let bg_ = Hex(rgbb_,0,0)
         let mcmd = printf('hi %s guibg=%s', name, bg_)
       else
         let mex = 0
@@ -257,11 +360,10 @@ function! ChgColor() " {{{
       if mex
         execute mcmd
         redraw
-        echo fg_ bg_
+        echo fg_ bg_ '(rewqgfdsbvcxhjp to change, n to quit)'
       endif
       " echo 'hi' name 'guifg=' . fg_
   endwhile
-
   let s:me = l:
 endfunc " }}}
 
@@ -371,12 +473,12 @@ function! ColorsNotFound() " {{{
     endif
   endfor
   let s:cnotf = cnotf
-  s:named_colors['lightred']  = '#ff8b8b'
-  s:named_colors_['LightRed'] = '#ff8b8b'
-  s:named_colors['lightmagenta']  = '#ff8bff'
-  s:named_colors_['LightMagenta'] = '#ff8bff'
-  s:named_colors['darkyellow']  = '#8b8b00'
-  s:named_colors_['DarkYellow'] = '#8b8b00'
+  let s:named_colors['lightred']  = '#ff8b8b'
+  let s:named_colors_['LightRed'] = '#ff8b8b'
+  let s:named_colors['lightmagenta']  = '#ff8bff'
+  let s:named_colors_['LightMagenta'] = '#ff8bff'
+  let s:named_colors['darkyellow']  = '#8b8b00'
+  let s:named_colors_['DarkYellow'] = '#8b8b00'
 endfu " }}}
 
 function! StandardColors() " {{{
@@ -407,9 +509,10 @@ function! StandardColors() " {{{
     endif
     let [r, g, b, name] = [str2nr(@"[0:2]), str2nr(@"[4:6]), str2nr(@"[8:10]), @"[13:-2]]
     let mhex = Hex(r,g,b)
-    if name =~ 'gray'
-      echo r g b mhex
-    endif
+    " if name =~ 'gray'
+    "   echo r g b mhex name
+    " endif
+    " echo r g b mhex name
     let tempdict = {'r'   :   r,
                   \ 'g'   :   g,
                   \ 'b'   :   b,
@@ -427,11 +530,10 @@ function! StandardColors() " {{{
   q
 endfunc " }}}
 
-function! SpecialColors()
+function! SpecialColors() " {{{
   " blood reds, blues, etcsss
   let snamed_colors = {}
   " from https://en.wikipedia.org/wiki/Blood_red
   let snamed_colors['blood'] = ['#660000', '#aa0000', '#af111c', '#830303', '#7e3517']
   let most10 = ['#3f5d7d', '#279b61', '#008ab8', '#993333', '#a3e496', '#95cae4', '#cc3333', '#ffcc33', '#ffff7a', '#cc6699']
-  let pallete1 = [
-endfu
+endfu " }}}

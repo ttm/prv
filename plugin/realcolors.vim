@@ -137,3 +137,5 @@
 " endfun
 " let s:mysid = s:SID()
 " }}}
+let g:loaded_colorsPlugin = 'v01'
+

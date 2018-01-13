@@ -1,5 +1,70 @@
 let g:cstatus = 'started loading color schemes'
 
+fu! ParseOrixas() " {{{
+  let f = readfile(expand('%:p:h') . '/data/orixas1.txt')
+  let os = []
+  let infos = {}
+  for o in f[1:]
+    if o =~ '.*:'
+      let name = tolower(substitute(o, ':.*', '', ''))
+      let info = substitute(o, '.*:', '', '')
+      let info_ = substitute(info, '\s\{2,\}', ' ', 'g')
+      call add(os, name)
+      if !has_key(infos, name)
+        let infos[name] = []
+      endif
+      call add(infos[name], info_)
+    endif
+  endfor
+  let g:f = f
+  let os_ = filter(copy(os), 'index(os, v:val, v:key+1)==-1')
+  let g:os = sort(os_)
+  let g:infos = infos
+  return os
+endfu " }}}
+
+fu! AfricanCS() " {{{
+  " https://www.pinterest.com/pin/456974693425216689/
+  let synon = {'osanha': 'ossain', 'xapanã': 'xapana',
+        \ 'oxaguiã': 'oxaguia', 'omulu': 'umulu',
+        \ 'yansa': 'iansa'}
+  " let allnames = ParseOrixas()
+  let allnames = ['cosme', 'exu', 'ibeji', 'obaluaie', 'ogum', 'oxala', 'oxum', 'oxossi', 'pomba gira', 'preto velho', 'xango', 'xapana', 'yansa', 'yemanja', 'yori', 'yorima']
+  let morenames = ['umulu', 'nana', 'olorum', 'ossain', 'oxaguia', 'oxumare', 'oba', 'ewa', 'logun ede', 'iroko']
+  let palletes = {}
+  let palletes.exu = ['redblood', 'black', 'yellow']
+  let palletes.exu_ = MkPallte12(palletes.exu)
+  let cs = {}
+  let cs.exu = MkCS(palletes.exu_)
+  " call ApplyCS(cs.exu
+endfu " }}}
+
+fu! MkPallte12(pallete) " {{{
+  " return a 12 colors pallete from what comes
+  let colors = []
+  for color in pallete
+    let color_ = rgb[color]
+    call add(colors, color_)
+  endfor
+  while len(colors) < 12
+    let acolor = MaxDiff(colors)
+    call add(colors, acolor)
+  endwhile
+  return colors
+endfu " }}}
+fu! MaxDiff(colors) " {{{
+  " Return a color that is maximally different from all the colors given
+
+
+endfu " }}}
+fu! MkCS(pallete) " {{{
+  " Return a CS relating each basic group to a color
+endfu " }}}
+
+fu! ApplyCS(pallete) " {{{
+  " Apply a CS which should relate colors to groups
+endfu " }}}
+
 fu! StandardColorSchemes() " {{{
   let s:scs = {'desc': 'dictionary for all color schemes'}
   let s:scs['Monochromatic'] = {'desc': 'one color shades'}
@@ -7,7 +72,8 @@ fu! StandardColorSchemes() " {{{
   let s:scs['LGray'] = {'desc': 'linear grayscale colorschemes'}
   " print(["%x" % ((i*255)//(N-1),) for i in range(N)])
   let s:scs['LGray']['2bit'] = ['#000000', '#ffffff', '#555555', '#aaaaaa']
-  let s:scs['LGray']['4bit'] = ['#'+i for i in ['0', '24', '48', '6d', '91', 'b6', 'da', 'ff']]
+  let vals4b = ['0', '24', '48', '6d', '91', 'b6', 'da', 'ff']
+  let s:scs['LGray']['4bit'] = map(vals4b, '"#" . v:val . v:val  . v:val')
   let s:scs['LRGB'] = {'desc': 'linear maximum distance RGB colorschemes'}
   let s:scs['ERGB'] = {'desc': 'exponential maximum distance RGB colorschemes'}
   let s:scs['ERGB'] = {'desc2': 'Weber-Fechner laws'}
