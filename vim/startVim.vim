@@ -26,7 +26,7 @@ Todo make prv vars persistent
 fu! StartNotes() " {{{
   " Or recover them from somewhere (load from txt files?)
   let g:user = 'hybrid'
-  let g:note_classes = ['note', 'todo', 'cnote', 'idea', 'aa', 'synonym', 'curproj', 'description', 'question']
+  let g:note_classes = ['note', 'todo', 'cnote', 'idea', 'aa', 'synonym', 'curproj', 'description', 'question', 'music']
   for c in g:note_classes
     let c_ = toupper(c[0]) . c[1:]
     echo c_ c
@@ -107,6 +107,11 @@ fu! AllNotes() " {{{
   vs foo
   setlocal buftype=nofile bufhidden=wipe noswapfile nobuflisted
   put! =fstring
+endfu " }}}
+
+fu! DumpNotes() " {{{
+  " write them to data/<name>.prv
+  " just source them to read
 endfu " }}}
 
 """""" Notes {{{
@@ -221,21 +226,31 @@ fu! StartChatter() " {{{
   endif
   exec 'source ' . curdir . '/VimChatBot/plugin/VimChatBot.vim'
 endfu " }}}
+
+" Notes {{{
 Note uma música pode ser baseada em 1 ou 3 palavras repetidas (indígena iawanawá etc), frases inteiras (xamanismo gideon), estrofes com ou sem refrão (música pop e de igreja e santo daime), ou apenas materiais de ritmo, melodia e harmonia (e.g. fuga, prelúdio, ou compostos (canon, hickup, etc). Quais equivalências cíclicas ou contínuas são mantidas com que parâmetros da música é uma forma de definir a música.
 
 Note - e.g.: ruído com freq central em random walk,
-o ciclo é tanto 1 (a cada iteração ele repete o passo aleatório)
-quanto infinito pois se deixar para sempre, não será encontrado
-padrão que permaneça por suficientes períodos de si próprio.
+      \ o ciclo é tanto 1 (a cada iteração ele repete o passo aleatório)
+      \ quanto infinito pois se deixar para sempre, não será encontrado
+      \ padrão que permaneça por suficientes períodos de si próprio.
 
 
 Note markdown/RDF, não só rdf p prv
 
-Todo suíte shenkeriana: começa com 3 notas: T D T, q viram acordes, que vão sendo expandidos com notas e estruturas de passagem, mais e mais.
-Vira rondó, depois dança de suíte barroca: T D :][: D T :]. Vira sonata e tvz preludio.
+Todo suíte shenkeriana: começa com 3 notas: T D T, q viram acordes, que vão sendo expandidos com notas e estruturas de passagem, mais e mais. Vira rondó, depois dança de suíte barroca: T D :][: D T :]. Vira sonata e tvz preludio.
 
 Todo apenas uma peça de material. Aí uma penca de noturnos, prelúdios, suítes, fugas, sobre a peça. Isso chega a 1 album simples ou duplo.
 
 Todo peça em homenagem a algum compositor ou pesquisador em física ou matemática ou computação.
 
 Todo alg que usa +- a estrutura em https://youtu.be/Mnh3YWarFVE?t=10m39s e permite setar a diversidade e ciclos em diferentes escalas.
+
+Todo find out why ChgColor set out of loop all the sudden
+
+Cnote r !date +\%d/\%h/\%y,\ \%H:\%\M:\%S
+
+Todo exercises in vim for the newbie: repeat commands for doing stuff, copy scripts, then do their own.
+
+Music hrvatsky
+" }}}
