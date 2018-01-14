@@ -28,6 +28,10 @@ noremap <C-\>g0 :call GetColors(0)<CR>
 noremap <C-\>g1 :call GetColors(1)<CR>
 noremap <C-\>g2 :call GetColors(2)<CR>
 
+" Recover
+noremap <C-\>r :colo blue<CR>
+noremap <C-\>R :colo gruvbox<CR>
+
 " use <C-\ c> (press control and \, release, press c).
 " to start the color mode.
 " use <C-\ a> for audiovisual or aa, <C-\ m> for music

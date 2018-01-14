@@ -52,18 +52,68 @@ fu! MkPallte12(pallete) " {{{
   endwhile
   return colors
 endfu " }}}
+
 fu! MaxDiff(colors) " {{{
   " Return a color that is maximally different from all the colors given
-
-
 endfu " }}}
+
 fu! MkCS(pallete) " {{{
   " Return a CS relating each basic group to a color
 endfu " }}}
 
-fu! ApplyCS(pallete) " {{{
+fu! ApplyCS(cs_pallete, method) " {{{
   " Apply a CS which should relate colors to groups
+  " if a:method == 'commands'
+    " let coms = a:cs_pallete.commands
+  if a:method =~ "^c.*"
+    let coms = a:cs_pallete
+    if type(a:cs_pallete) == 0
+      let coms = ['colo blue', 'hi Normal  guifg=#0fffe0 guibg=#03800b']
+    endif
+    for c in coms
+      exec c
+    endfor
+  endif
 endfu " }}}
+
+fu! CommandColorSchemes() " {{{
+  let cs = {}
+  let cs.green1 = ['colo blue', 'hi Normal  guifg=#0fffe0 guibg=#03800b']
+  let cs.green2 = ['colo torte', 'highlight Normal guifg=white  guibg=darkGreen']
+  
+  let cs.red1 = ['colo koehler', 'hi Normal  guibg=#800000']
+  let cs.red1b = ['colo koehler', 'hi Normal  guibg=#900000']
+  let cs.red2 = ['colo koehler', 'hi Normal  guibg=#ff0000']
+  let cs.red3 = ['colo koehler', 'hi Normal  guibg=#ff0000']
+  let cs.red4 = ['colo koehler', 
+        \ 'highlight Normal guifg=black guibg=red', 
+        \ 'highlight Comment guifg=black guibg=red gui=bold']
+  let cs.red4 = ['colo koehler', 
+        \ 'highlight Normal guifg=black guibg=red', 
+        \ 'highlight Comment guifg=black guibg=red gui=bold',
+        \ 'hi Constant guifg=#004444 cterm=NONE']
+  let cs.red4 = ['colo torte',
+        \ 'hi Folded guibg=#702020 guifg=#000000 cterm=bold',
+        \ 'hi Comment ctermfg=12 guifg=#d0808f',
+        \ 'hi Constant guifg=#ff0000',
+        \ 'hi Identifier cterm=bold guifg=#e00f4f',
+        \ 'hi Normal guifg=#ac3c3c guibg=Black',
+        \ 'hi vimIsCommand cterm=bold guifg=#9c3c00',
+        \ 'hi vimFunction guifg=#bcbc0c',
+        \ 'hi vimOperParen cterm=bold guifg=#fc2c2c']
+
+  let cs.exu1 = cs.red4
+
+  let cs.blue1 = ['colo blue', 'hi Normal guibg=#0000ff']
+  
+  let cs._notes = {}
+  let cs._notes.red1_4 = '~mythologically related to exu through yellow and red'
+  let g:ccs = cs
+endfu " }}}
+
+" use
+" call CommandColorSchemes()
+" call ApplyCS(g:ccs['green1'], 'c')
 
 fu! StandardColorSchemes() " {{{
   let s:scs = {'desc': 'dictionary for all color schemes'}
@@ -88,9 +138,9 @@ fu! StandardColorSchemes() " {{{
   " RRGB randomic coloschemes
   " EERGB PPRGB Double Web-Fech and Stev laws
   " Arbitrary series or rgb or final frequency
-endf " }}}
+endfu " }}}
 
-fu! AppyCS(cs) " {{{
+fu! AppyCS2(cs) " {{{
   " Most basic: 1 bg + 8fg + 3fg = 12 colors
   " Basic grouping of them?
   " Basic partitioning of them?
@@ -108,7 +158,7 @@ fu! AppyCS(cs) " {{{
   hi Underlined gui=underline
   hi Error gui=reverse
   hi Todo guifg=black guibg=white
-endf " }}}
+endfu " }}}
 
 fu! MakeLRGBD() " {{{
   let mean_colors = [[255, 128, 0],
@@ -130,7 +180,7 @@ endfu " }}}
 fu! Warp(where, distortion) " {{{
   " Make cs more white or black or gray or tend
   " to a specific color
-endf " }}}
+endfu " }}}
 
 fu! MkRotationFlipCS(color) " {{{
   let c = a:color
@@ -143,7 +193,7 @@ fu! MkRotationFlipCS(color) " {{{
            \ [f[1], f[2], f[0]]
            \ ]
   return cs
-endf " }}}
+endfu " }}}
 
 let g:cs_set = v:true
 let g:cstatus = 'ended loading color schemes'
