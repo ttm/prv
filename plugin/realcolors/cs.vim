@@ -81,10 +81,12 @@ fu! CommandColorSchemes() " {{{
   let cs.green1 = ['colo blue', 'hi Normal  guifg=#0fffe0 guibg=#03800b']
   let cs.green2 = ['colo torte', 'highlight Normal guifg=white  guibg=darkGreen']
   
-  let cs.red1 = ['colo koehler', 'hi Normal  guibg=#800000']
-  let cs.red1b = ['colo koehler', 'hi Normal  guibg=#900000']
-  let cs.red2 = ['colo koehler', 'hi Normal  guibg=#ff0000']
-  let cs.red3 = ['colo koehler', 'hi Normal  guibg=#ff0000']
+  let cs.yellow1 = ['colo morning', 'hi Normal guibg=#ffff00', 'hi Constant cterm=bold guifg=#a0a010 guibg=NONE']
+
+  let cs.red1 = ['colo koehler', 'hi Normal guibg=#800000']
+  let cs.red1b = ['colo koehler', 'hi Normal guibg=#900000']
+  let cs.red2 = ['colo koehler', 'hi Normal guibg=#ff0000']
+  let cs.red3 = ['colo koehler', 'hi Normal guibg=#ff0000']
   let cs.red4 = ['colo koehler', 
         \ 'highlight Normal guifg=black guibg=red', 
         \ 'highlight Comment guifg=black guibg=red gui=bold']
@@ -195,5 +197,29 @@ fu! MkRotationFlipCS(color) " {{{
   return cs
 endfu " }}}
 
+fu! GetShade(color, factor) " {{{
+  " new intensity = current intensity * (1 – shade factor)
+  " factor = 1 => black
+  let f = 1 - a:factor
+  let c = map(a:color, "v:val*f")
+  return c
+endfu " }}}
+
+fu! GetTint(color, factor) " {{{
+  " new intensity = current intensity + (255 – current intensity) * tint factor
+  " factor = 1 => white
+  let c = map(a:color, "v:val + (255 - v:val) * a:factor")
+  return c
+endfu " }}}
+
+fu! GetTone(color, factor) " {{{
+  " Algorithm made as whished... TODO: find out the canonic routine
+  " factor = 1 => gray
+  let value = (a:color[0] + a:color[1] + a:color[2])/3
+  let c = map(a:color, "v:val + (value - v:val) * a:factor")
+  return c
+endfu " }}}
+
+Todo: make cs using tints, shades and tones
 let g:cs_set = v:true
 let g:cstatus = 'ended loading color schemes'
