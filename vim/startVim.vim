@@ -108,11 +108,35 @@ fu! AllNotes() " {{{
   setlocal buftype=nofile bufhidden=wipe noswapfile nobuflisted
   put! =fstring
 endfu " }}}
-
+let g:prv_vimpath = expand('%:p:h')
 fu! DumpNotes() " {{{
   " write them to data/<name>.prv
   " just source them to read
+  for c in g:note_classes
+    if has_key(g:, c . 's')
+      " unlet g:[]
+      " write g:[c . 's'] to data/c . 's.prv'
+      let tline = "let g:" . c . 's = ' . string(g:[c . 's'])
+      let tfile = g:prv_vimpath . '/data/' . c . 's.prv'
+      call writefile([tline], tfile, 'as')
+    endif
+  endfor
 endfu " }}}
+
+fu! LoadNotes()
+  " Just read the last line of each existing file in ./data/*
+  " that match a name in g:color_classes or whatnot
+  " for now that is it.
+  for c in g:note_classes
+    let tfile = g:prv_vimpath . '/data/' . c . 's.prv'
+    if filereadable(tfile)
+      echo tfile
+      let g:tline = readfile(tfile, '', -1)
+      let g:c = c
+      exec substitute(g:tline[0], c, c . 'ABAB', '')
+    endif
+  endfor
+endfu
 
 """""" Notes {{{
 Note musical instrument to play with hands like the hand 
@@ -253,4 +277,12 @@ Cnote r !date +\%d/\%h/\%y,\ \%H:\%\M:\%S
 Todo exercises in vim for the newbie: repeat commands for doing stuff, copy scripts, then do their own.
 
 Music hrvatsky
+"
+Todo use L_ V__ VS__ and other advanced sound functions to make notes. A Timbre (or intrument or preset) should vary along durations of the note and along the pitch. Make the oscilations have peaks along the note to make a dubstep and or trap bass.
+
+Todo make python function to run just the header, and maybe all import statements
+
+Todo: make cs using tints, shades and tones
+
+Todo: show new aa shouts to the user. Make the connection with data.world
 " }}}
