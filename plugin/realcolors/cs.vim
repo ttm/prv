@@ -41,15 +41,37 @@ endfu " }}}
 
 fu! MkPallte12(pallete) " {{{
   " return a 12 colors pallete from what comes
+  " assuming pallete is a sequence of lists with three
+  " values in [0,255] for rgb.
+  let nder = 12.0/len(a:pallete)
   let colors = []
-  for color in pallete
-    let color_ = rgb[color]
-    call add(colors, color_)
+  for color in a:pallete
+    let sum = 0
+    for c in color
+      let sum += c
+    endfor
+    let sum = sum/3
+    let c_ = [color]
+    let nder_ = 1
+    if sum > 128 " closer to white
+      while nder_ < nder
+        let color = GetShade(color, 0.5)
+        call add(c_, color)
+        let nder_ += 1
+      endwhile
+    else
+      while nder_ < nder
+        let color = GetTint(color, 0.5)
+        call add(c_, color)
+        let nder_ += 1
+      endwhile
+    endif
+    call extend(colors, c_)
   endfor
-  while len(colors) < 12
-    let acolor = MaxDiff(colors)
-    call add(colors, acolor)
-  endwhile
+  " while len(colors) < 12
+  "   let acolor = MaxDiff(colors)
+  "   call add(colors, acolor)
+  " endwhile
   return colors
 endfu " }}}
 
@@ -84,17 +106,21 @@ fu! CommandColorSchemes() " {{{
   let cs.yellow1 = ['colo morning', 'hi Normal guibg=#ffff00', 'hi Constant cterm=bold guifg=#a0a010 guibg=NONE']
 
   let cs.red1 = ['colo koehler', 'hi Normal guibg=#800000']
+  let cs.red1c = ['colo koehler', 'hi Normal guibg=#800000', 'hi Folded guifg=cyan guibg=#bb0000']
   let cs.red1b = ['colo koehler', 'hi Normal guibg=#900000']
   let cs.red2 = ['colo koehler', 'hi Normal guibg=#ff0000']
-  let cs.red3 = ['colo koehler', 'hi Normal guibg=#ff0000']
+  let cs.red3 = ['colo koehler', 'hi Normal guibg=#ff8833']
   let cs.red4 = ['colo koehler', 
         \ 'highlight Normal guifg=black guibg=red', 
         \ 'highlight Comment guifg=black guibg=red gui=bold']
   let cs.red4 = ['colo koehler', 
         \ 'highlight Normal guifg=black guibg=red', 
         \ 'highlight Comment guifg=black guibg=red gui=bold',
-        \ 'hi Constant guifg=#004444 cterm=NONE']
-  let cs.red4 = ['colo torte',
+        \ 'hi Constant guifg=#004444 cterm=NONE',
+        \ 'hi Constant cterm=bold guifg=#900000',
+        \ 'hi Comment cterm=bold guifg=#606000',
+        \ 'hi Type guifg=#600060']
+  let cs.red5 = ['colo torte',
         \ 'hi Folded guibg=#702020 guifg=#000000 cterm=bold',
         \ 'hi Comment ctermfg=12 guifg=#d0808f',
         \ 'hi Constant guifg=#ff0000',
@@ -103,10 +129,18 @@ fu! CommandColorSchemes() " {{{
         \ 'hi vimIsCommand cterm=bold guifg=#9c3c00',
         \ 'hi vimFunction guifg=#bcbc0c',
         \ 'hi vimOperParen cterm=bold guifg=#fc2c2c']
-
+  let cs.redblackl = ['colo koehler', 'hi Normal guibg=#800000']
+  let cs.passivepink1 = ['colo koehler', 'hi Normal guibg=#ff91af', 'hi Comment guifg=#888888', 'hi Identifier guifg=#bb7777', 'hi Constant guifg=#ffcccc']
+  
+  
   let cs.exu1 = cs.red4
 
+  " Holy spirit: (many colors, each with a specific simbolism, look for them)
+
   let cs.blue1 = ['colo blue', 'hi Normal guibg=#0000ff']
+  let cs.blue2 = ['colo blue', 'hi Normal guibg=#444488']
+
+  let cs.blue2 = ['colo blue', 'hi Normal guibg=#444488']
   
   let cs._notes = {}
   let cs._notes.red1_4 = '~mythologically related to exu through yellow and red'
@@ -202,14 +236,16 @@ fu! GetShade(color, factor) " {{{
   " factor = 1 => black
   let f = 1 - a:factor
   let c = map(a:color, "v:val*f")
-  return c
+  let c_ = CheckColor(c) " to enable the use of negative factor
+  return c_
 endfu " }}}
 
 fu! GetTint(color, factor) " {{{
   " new intensity = current intensity + (255 – current intensity) * tint factor
   " factor = 1 => white
   let c = map(a:color, "v:val + (255 - v:val) * a:factor")
-  return c
+  let c_ = CheckColor(c) " to enable the use of negative factor
+  return c_
 endfu " }}}
 
 fu! GetTone(color, factor) " {{{
@@ -217,9 +253,25 @@ fu! GetTone(color, factor) " {{{
   " factor = 1 => gray
   let value = (a:color[0] + a:color[1] + a:color[2])/3
   let c = map(a:color, "v:val + (value - v:val) * a:factor")
+  let c_ = CheckColor(c) " to enable the use of negative factor
+  return c_
+endfu " }}}
+
+fu! CheckColor(c) " {{{
+  let c = copy(a:c)
+  for i in range(len(c))
+    if c[i] > 255
+      let c[i] = 255
+    elseif c[i] < 0
+      let c[i] = 0
+    endif
+  endfor
   return c
 endfu " }}}
 
-Todo: make cs using tints, shades and tones
+" Anti-Shade Tint and Tone: away from black, white or gray
+" Anti-shade is a tint? an anti-tint is a shade?
+" An anti-tone is a what?
+
 let g:cs_set = v:true
 let g:cstatus = 'ended loading color schemes'
