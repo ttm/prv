@@ -123,7 +123,26 @@ fu! DumpNotes() " {{{
   endfor
 endfu " }}}
 
-fu! LoadNotes()
+fu! UpNotes() " {{{
+  " write them to the cloud.
+  " For now a mongodb
+  py3 import pymongo
+  py3 client = pymongo.MongoClient("mongodb://labmacambira:macambira00@ds153577.mlab.com:53577/prv")
+  for c in g:note_classes
+    if has_key(g:, c . 's')
+      " unlet g:[]
+      " write g:[c . 's'] to data/c . 's.prv'
+      " client.prv.notes.insert({"time":now,"nick":nick,"shout":shout})
+      py3 client.prv.notes.insert({"note_class": vim.eval("c . 's'"), "note": vim.bindeval('g:[c . "s"]')})
+          
+      " let tline = "let g:" . c . 's = ' . string(g:[c . 's'])
+      " let tfile = g:prv_vimpath . '/data/' . c . 's.prv'
+      " call writefile([tline], tfile, 'as')
+    endif
+  endfor
+endfu " }}}
+
+fu! LoadNotes() " {{{
   " Just read the last line of each existing file in ./data/*
   " that match a name in g:color_classes or whatnot
   " for now that is it.
@@ -136,7 +155,7 @@ fu! LoadNotes()
       exec substitute(g:tline[0], c, c . 'ABAB', '')
     endif
   endfor
-endfu
+endfu " }}}
 
 """""" Notes {{{
 Note musical instrument to play with hands like the hand 
@@ -238,7 +257,7 @@ endfun
 " call SaveVariable(anyvar, "safe.vimData")
 " let restore = ReadVariable("safe.vimdata")
 "
-let god_names = ['deus', 'god', 'mavutsinim', 'zeus', 'krishna', 'olorum', 'universo', 'tudo']
+let god_names = ['deus', 'god', 'mavutsinim', 'zeus', 'krishna', 'olorum', 'universo', 'tudo', 'papai do céu', 'senhor', 'pai supermo', 'mãe criadora']
 
 fu! StartChatter() " {{{
   let curdir = expand("%:p:h")
@@ -252,37 +271,80 @@ fu! StartChatter() " {{{
 endfu " }}}
 
 " Notes {{{
-Note uma música pode ser baseada em 1 ou 3 palavras repetidas (indígena iawanawá etc), frases inteiras (xamanismo gideon), estrofes com ou sem refrão (música pop e de igreja e santo daime), ou apenas materiais de ritmo, melodia e harmonia (e.g. fuga, prelúdio, ou compostos (canon, hickup, etc). Quais equivalências cíclicas ou contínuas são mantidas com que parâmetros da música é uma forma de definir a música.
+" :Note uma música pode ser baseada em 1 ou 3 palavras repetidas (indígena iawanawá etc), frases inteiras (xamanismo gideon), estrofes com ou sem refrão (música pop e de igreja e santo daime), ou apenas materiais de ritmo, melodia e harmonia (e.g. fuga, prelúdio, ou compostos (canon, hickup, etc). Quais equivalências cíclicas ou contínuas são mantidas com que parâmetros da música é uma forma de definir a música.
+" :
+" :Note - e.g.: ruído com freq central em random walk,
+" :      \ o ciclo é tanto 1 (a cada iteração ele repete o passo aleatório)
+" :      \ quanto infinito pois se deixar para sempre, não será encontrado
+" :      \ padrão que permaneça por suficientes períodos de si próprio.
+" :
+" :
+" :Note markdown/RDF, não só rdf p prv
+" :
+" :Todo suíte shenkeriana: começa com 3 notas: T D T, q viram acordes, que vão sendo expandidos com notas e estruturas de passagem, mais e mais. Vira rondó, depois dança de suíte barroca: T D :][: D T :]. Vira sonata e tvz preludio.
+" :
+" :Todo apenas uma peça de material. Aí uma penca de noturnos, prelúdios, suítes, fugas, sobre a peça. Isso chega a 1 album simples ou duplo.
+" :
+" :Todo peça em homenagem a algum compositor ou pesquisador em física ou matemática ou computação.
+" :
+" :Todo alg que usa +- a estrutura em https://youtu.be/Mnh3YWarFVE?t=10m39s e permite setar a diversidade e ciclos em diferentes escalas.
+" :
+" :Todo find out why ChgColor set out of loop all the sudden
+" :
+" :Cnote r !date +\%d/\%h/\%y,\ \%H:\%\M:\%S
+" :
+" :Todo exercises in vim for the newbie: repeat commands for doing stuff, copy scripts, then do their own.
+" :
+" :Music hrvatsky
+" :"
+" :Todo use L_ V__ VS__ and other advanced sound functions to make notes. A Timbre (or intrument or preset) should vary along durations of the note and along the pitch. Make the oscilations have peaks along the note to make a dubstep and or trap bass.
+" :
+" :Todo make python function to run just the header, and maybe all import statements
+" :
+" :Todo: make cs using tints, shades and tones
+" :
+" :Todo: show new aa shouts to the user. Make the connection with data.world
+" :
+" :Todo: treinar o bot com palavras e sentencas.  Depois fazer aprendizado por reforco nos paragrafos. Depois em textos completos com texto e assinatura. Generos: narrativa, cronica, carta?
+" :
+" :Todo: escrever p Cristina.  Contar do esquema de cores e rotina q estou mantendo.
+" :
+" :Note consider the von Restorff effect (isoletion effect)
+" :
+" :Note ppl prefer palletes with similar colors but like things best when in contrasting accent colors?
+" :http://www.sciencedirect.com/science/article/pii/S1057740810000793
+" :https://link.springer.com/article/10.3758%2Fs13414-010-0027-0
+" :
+" :Todo prv chat rooms (or communication channels) by colors: yellow channel, blue etc... To enable ppl to develop ideas around that color and express in accordance.
+" :
+" :Todo give fancy names to the colors https://www.helpscout.net/blog/psychology-of-color/ http://onlinelibrary.wiley.com/doi/10.1002/mar.20142/abstract
+" :
+" :Todo use passive bubblegum pink cs to calm down http://www.nytimes.com/1982/10/19/science/color-has-a-powerful-effect-on-behavior-researchers-assert.html?pagewanted=all
+" :
+" :Todo look for passive pink and for photobiology and chromoterapy and Faber Birren and Alexander Schauss and Harold Wohlfarth
+" :
+" :Todo ver jung e cores
+" :
+" :Todo fazer cs com cores ouro e outras com core prata
+" :
+" :Todo make +- stimulant button going from warm red to cold blue or green 
+" :Let the user choose which tone is more relaxing: green or blue and in which tone.
+" :And the more stimulant: orange, red or yellow and in which tone.
+" :
+" :Note o borogoto eh mais redondo e a borotega eh mais esticada. Sao brinquedos sexuais d@ prv
+" :
+" :Todo conseguir um fone fmz (caaso?)
+" :
+" :Todo: see psychopy to make experiments
+" :
+" :Todo see the argyll and dispcalgui for monitor calibration, see dynare for economic models, power-calibrate for processors
+" :
+" :Note prv é perva. Ela interage com tudo e gera cria sempre. Ela tb mistura esperma de vários interagentes, de várias interações, para gerar crias híbridas.
+" :
+" :Todo cs que usa os bastonetes (rods) nao os cones.
+" :
+" :Todo cs on human skin tones: https://en.wikipedia.org/wiki/Color_wheel#/media/File:Human_Color_Wheel_by_Neil_Harbisson.jpg
+" :
+" :Cnote :earlier, <C-X> p decrementar numero, :.!date p data na mesma linha
 
-Note - e.g.: ruído com freq central em random walk,
-      \ o ciclo é tanto 1 (a cada iteração ele repete o passo aleatório)
-      \ quanto infinito pois se deixar para sempre, não será encontrado
-      \ padrão que permaneça por suficientes períodos de si próprio.
-
-
-Note markdown/RDF, não só rdf p prv
-
-Todo suíte shenkeriana: começa com 3 notas: T D T, q viram acordes, que vão sendo expandidos com notas e estruturas de passagem, mais e mais. Vira rondó, depois dança de suíte barroca: T D :][: D T :]. Vira sonata e tvz preludio.
-
-Todo apenas uma peça de material. Aí uma penca de noturnos, prelúdios, suítes, fugas, sobre a peça. Isso chega a 1 album simples ou duplo.
-
-Todo peça em homenagem a algum compositor ou pesquisador em física ou matemática ou computação.
-
-Todo alg que usa +- a estrutura em https://youtu.be/Mnh3YWarFVE?t=10m39s e permite setar a diversidade e ciclos em diferentes escalas.
-
-Todo find out why ChgColor set out of loop all the sudden
-
-Cnote r !date +\%d/\%h/\%y,\ \%H:\%\M:\%S
-
-Todo exercises in vim for the newbie: repeat commands for doing stuff, copy scripts, then do their own.
-
-Music hrvatsky
-"
-Todo use L_ V__ VS__ and other advanced sound functions to make notes. A Timbre (or intrument or preset) should vary along durations of the note and along the pitch. Make the oscilations have peaks along the note to make a dubstep and or trap bass.
-
-Todo make python function to run just the header, and maybe all import statements
-
-Todo: make cs using tints, shades and tones
-
-Todo: show new aa shouts to the user. Make the connection with data.world
 " }}}
