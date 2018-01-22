@@ -133,7 +133,13 @@ fu! UpNotes() " {{{
       " unlet g:[]
       " write g:[c . 's'] to data/c . 's.prv'
       " client.prv.notes.insert({"time":now,"nick":nick,"shout":shout})
-      py3 client.prv.notes.insert({"note_class": vim.eval("c . 's'"), "note": vim.bindeval('g:[c . "s"]')})
+      py3 dd = {'note_class' : vim.eval("c . 's'")}
+      for kk in keys(g:[c . 's'])
+        let aval = g:[c . 's'][kk]
+        py3 dd[vim.eval('kk')] = vim.eval('aval')
+      endfor
+      " py3 client.prv.notes.insert({"note_class": vim.eval("c . 's'"), "note": vim.bindeval('g:[c . "s"]')})
+      py3 client.prv.notes.insert(dd)
           
       " let tline = "let g:" . c . 's = ' . string(g:[c . 's'])
       " let tfile = g:prv_vimpath . '/data/' . c . 's.prv'
