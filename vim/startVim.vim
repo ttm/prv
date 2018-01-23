@@ -51,21 +51,24 @@ fu! RegisterNote(msg, nname) " {{{
     let g:[a:nname . 's_'] = []
     let g:[a:nname . '_counter'] = 0
   endif
-  let noteid = printf("%s%05d", a:nname, g:[a:nname . '_counter'])
-
-  let g:[a:nname . 's'][noteid] = a:msg
-  call add(g:[a:nname . 's_'], noteid)
-  let g:[a:nname . 's'][noteid . '_datetime'] = strftime("%c")
-  let g:[a:nname . 's'][noteid . '_user'] = g:user
-  let g:[a:nname . '_counter'] += 1
-  let context = []
+  let ndict = {}
+  let ndict['datetime'] = strftime("%c")
+  let ndict['user'] = g:user
+  let ndict['msg'] = a:msg
+  let ndict['last'] = g:last_noteid
+  " let context = []
   " for c in g:note_classes
   "   if has_key(g:, c . 's_')
   "     call add(context, g:[c . 's_'][-1])
   "   endif
   " endfor
-  let g:[a:nname . 's'][noteid . '_last'] = g:last_noteid
-  let g:last_noteid = noteid
+
+  let noteid = printf("%05d", g:[a:nname . '_counter'])
+  let g:[a:nname . '_counter'] += 1
+
+  let g:last_noteid = a:nname . noteid
+  let g:[a:nname . 's'][noteid] = ndict
+  call add(g:[a:nname . 's_'], noteid)
 endfu " }}}
 
 fu! ResetAll() " {{{
@@ -123,6 +126,16 @@ fu! DumpNotes() " {{{
   endfor
 endfu " }}}
 
+fu! DownNotes() " {{{
+  py3 import pymongo
+  py3 client = pymongo.MongoClient("mongodb://labmacambira:macambira00@ds153577.mlab.com:53577/prv")
+  " py3 notes = client.aaserver.shouts.find({}, {"_id": 0}).sort([(u'_id', -1), ])
+  py3 notes = client.prv.notes.find({}, {"_id": 0}).sort([(u'_id', -1), ])
+  let g:ad = {}
+  py3 d = vim.bindeval('g:ad')
+  py3 d['all'] = notes
+endfu " }}}
+
 fu! UpNotes() " {{{
   " write them to the cloud.
   " For now a mongodb
@@ -139,6 +152,8 @@ fu! UpNotes() " {{{
         py3 dd[vim.eval('kk')] = vim.eval('aval')
       endfor
       " py3 client.prv.notes.insert({"note_class": vim.eval("c . 's'"), "note": vim.bindeval('g:[c . "s"]')})
+      " translate the dict to RDF?
+      " Or send each note through SparQL?
       py3 client.prv.notes.insert(dd)
           
       " let tline = "let g:" . c . 's = ' . string(g:[c . 's'])
@@ -352,5 +367,13 @@ endfu " }}}
 " :Todo cs on human skin tones: https://en.wikipedia.org/wiki/Color_wheel#/media/File:Human_Color_Wheel_by_Neil_Harbisson.jpg
 " :
 " :Cnote :earlier, <C-X> p decrementar numero, :.!date p data na mesma linha
+"
+" :Todo study https://cloud.ontotext.com to see if really we might
+" have a SparQL endpoint with IO and how
+
+" :Todo make a backup scheme to download the mongodb database or at
+" least the entries related to the user.
+"
+"
 
 " }}}
