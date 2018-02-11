@@ -31,8 +31,8 @@
 constructed language:
 Wordnet synsets; analysis of the vocabulary; synthesis and syntax highlighting of texts}
 % Anthropological computation
-\author{Renato Fabbri\\
-\texttt{renato.fabbri@gmail.com}\\
+\author{Renato Fabbri, \texttt{renato.fabbri@gmail.com}\\
+Maria Cristina Ferreira de Oliveira, \texttt{cristina@icmc.usp.br}\vspace{0.2cm}\\
 University of São Paulo,\\
 Institute of Mathematical and Computer Sciences\\
 São Carlos, SP, Brazil
@@ -54,7 +54,7 @@ the synthesis of texts, the specification of syntax highlighting
 schemes, and the achievement of a preliminary TP
 Wordnet~\cite{wordnet}.
 We focus on the analysis of the basic vocabulary,
-as corpus analyses were found in~\cite{corpus}.
+as corpus analyses were found~\cite{corpus}.
 The synthesis is based on sentence templates,
 relates to context by keeping track of used words,
 and renders larger texts by using a fixed number of phonemes (e.g. for poems)
@@ -476,7 +476,6 @@ at will.
 
 
 \subsection{Statistics of the vocabulary}\label{sec:stat}
-In~\cite{corpus} are statistics about a Toki Pona corpus.
 This section focuses on the statistics of the vocabulary
 and of the syntactic rules:
 the letters, phonemes, word sizes,
@@ -484,10 +483,10 @@ possible combinations for words and sentences.
 % The statistics are in Appendix~\cite{listings},
 % and the next paragraph is an overview. TTM
 The script \tttt{makeStatistics.py}
-was used to obtain the all the measurements and tables
+was used to obtain all the measurements and tables
 discussed herein,
 and hold further measurements and sets of words
-which were regarded as less suitable for this exposition,
+regarded as less suitable for this exposition,
 but is useful for a deeper investigation.
 
 As described in Section~\ref{basics},
@@ -528,14 +527,14 @@ is in the \tttt{hlsyl\_\_} variable.
 Vowel and consonant frequencies,
 and comparisons of vowels against consonants,
 are as shown in Table~\ref{freqLet}
-for starting, end and internal position.
+for start, end and internal position.
 The limited number of consonants favors
 the naturalness of the language prosody
 as it resembles babbling.
 
 \input{vowels}
 
-Given the rules given in Section~\ref{phonology}
+Given the rules in Section~\ref{phonology}
 (of 14 letters, 5 vowels, (C)V(n) phonemes,
 forbidden ji, wu, wo, ti, nn, nm),
 96 words are possible with 1 syllable,
@@ -582,7 +581,7 @@ in the script \tttt{makeStatistics.py}~\cite{tokipona}.
 
 \subsection{Synthesis of text}\label{synth}
 Such counting exercises are also useful
-for facilitating (semi-)automated writing through scripting.
+for (semi-)automated writing through scripting.
 The syntax organizes the words in larger structures.
 The rhymes are very restricted and sonorities are
 bounded by the small vocabulary and simple syntax.
@@ -631,10 +630,10 @@ and by employing stylistic outlines for poems.
   and (d) a poem.
   The unusual word combinations are convenient for exploring semantic
   possibilities.
-  One might obtain many of such texts to select the excerpts
-  he/she finds fit for the intended use.
+  One might obtain many texts to select the excerpts
+  she finds fit for the intended use.
   For more information, see Section~\ref{synth}.
-  The words are colored in accordance to the considerations
+  The words are colored in accordance with the considerations
   in Section~\ref{shigh}.}
   \label{fig:syn}
 \end{figure}
@@ -690,15 +689,15 @@ it is capable of coloring all morphosyntactic classes;
 it might be fine-tuned in the colors and their relations to sets of
 tokens; it is designed to be used within Vim
 and might be exported as HTML; the highlighting scheme is promptly
-rendered by a script; the resulting script might be used with
-many color schemes.
+rendered by a script; the resulting script might be used in combination
+with virtually any color scheme.
 
 Basically, the resulting syntax highlighting
 distinguishes the words among the morphosyntactic
 classes according to the official dictionary as given in
 Table~\ref{foobar}.
 A word often belongs to more than one class,
-thus the precedence of them might be set by the user.
+thus precedence might be set by the user.
 Also, some classes might be further refined (e.g. words beginning with
 vowels) or joined (e.g. distinguishing only particles and the rest,
 or particles and prepositions and the rest).
@@ -753,7 +752,7 @@ for the way you might edit colors directly.
 Useful commands are given as commented lines
 in the end of the syntax file. % TTM
 One might obtain an HTML file with the colored TP text
-by using the \tttt{:TOhtml} command.
+using the \tttt{:TOhtml} command.
 
 % reference to figure of the texts.
 
@@ -772,7 +771,7 @@ theory~\cite{dv1,dv2,dv3,dv4} to glimpse at the potential guidelines:
   \item The avoidance of blue and other high frequency
   colors to fill small objects, such as letters and words.
   \item Explore simplicity and elegance through the use of discrete
-  coloring schemes. Most of the tokens should be preferably of
+  coloring schemes. Most tokens should be preferably of
   the same color.
     One might use only a small number of colors to achieve a clean
     visualization of texts.
@@ -781,19 +780,20 @@ theory~\cite{dv1,dv2,dv3,dv4} to glimpse at the potential guidelines:
     (Unfortunately, the TP dictionary classification of words are not in a
     power-law distribution and might be better described by a half-normal or by
 overlapping normal distributions over the three peaks: $\sim35-58,
-12-18, 1-5 occurrences$).
+12-18, 1-5$ occurrences).
   \item Physical stimuli might be related to perceptual stimuli both 
     through a power-law or an exponential law (respectively known
     as Steven's law and Weber-Fechner's law).
-    This might be useful e.g. for coloring sets of tokens in
-    a way that their similarity is considered.
+    This might be useful e.g. for coloring sets of tokens
+    considering their similarity.
   \item One usually wishes to maximize contrast,
   although taste and less wearing combinations might
   also dictate the coloring choices.
-  \item Stipulate axes of parameters with which to set colors.
+  \item Stipulate axes of parameters to set colors.
   Wavelength or frequency is an obvious axis given the considerations
-  above.
-  Other evident parameters are hue, transparency etc.
+    previously exposed, but they are not perceptually uniform.
+    Considering perceptually uniform color spaces in making
+    choices may be relevant.
   \item One might consider two types of color schemes: those with a dark background,
   which are more comfortable at first; and those with a light background,
   which are usually impressive (and even annoying) at first,
@@ -827,7 +827,7 @@ prepositions and particles.
 Also, the coloring for poems might be more appealing if considered
 e.g. the counting of syllables, the repeated letters or syllables,
 and the ending syllables.
-Insights might be obtained through the observation of the
+Insights might be obtained through the
 choices made and advocated in software such as text editors
 (e.g. Vim, Emacs, Sublime),
 packages dedicated to syntax highlighting (e.g.
@@ -849,9 +849,9 @@ class or around a variable of conditional or
 loop), which might be called ``syntax sonification''.
 
 \subsection{Toki Pona Wordnet}\label{wn}
-For the achievement of a first Toki Pona Wordnet,
-each of the TP words in the dictionary
-was related to Wordnet synsets~\cite{wordnet}
+A first Toki Pona Wordnet was constructed
+relating each of the TP words in the dictionary
+to English Wordnet synsets~\cite{wordnet}
 through the English lemmas.
 The most canonical (i.e. Princeton) Wordnet only contains nouns,
 adjectives, verbs, and adverbs.
