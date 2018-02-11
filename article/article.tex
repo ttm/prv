@@ -20,8 +20,8 @@
 \newcommand{\tttt}[1]{\texttt{#1}}
 
 \begin{document}
-\title{An anthropological account of the Vim text editor:\\
-features and tweaks after 10 years of usage}
+\title{An anthropological account of the\\ Vim text editor:\\
+features and tweaks\\ after 10 years of ouroboros}
 % Anthropological computation
 \author{Renato Fabbri\\
 \texttt{renato.fabbri@gmail.com}\\
@@ -38,7 +38,7 @@ and a set of considerations about its usage and design.
 It results from more than ten years of experience
 in using Vim for writing and editing various types of documents,
 e.g. Python, C++, JavaScript, ChucK programs;
-\LaTeX, Markdown, HTML, RDF, Make and other markup files;  % TTM
+\LaTeX, Markdown, HTML, RDF and other markup-like files;  % TTM
 binary files.
 It is commonplace, in the Vim users and developers communities,
 to say that it takes about ten years to master (or start mastering)
@@ -51,16 +51,17 @@ Another goal is
 to make available a reference document with which new users
 can grasp a sound overview by reading it and the discussions that
 it might generate.
-Also, it should be useful for users of any degree of experience,
+Also, the preliminary versions of this document already proved itself
+useful for users of any degree of experience,
 including me, as a compendium of commands, namespaces and tweaks.
-Upon feedback, and maturing of my Vim usage,
-this document might be enhanced and expanded.
+This document might be enhanced and expanded
+upon feedback, maturing of my Vim usage, or derivatives potentially
+yield by or with other users.
 \end{abstract}
-{\bf keywords:} Vim, Text editor, Anthropological computer science,
-HCI, Tutorial
+{\bf keywords:} Vim, Text editor, HCI, Tutorial, Anthropological computer science
 
 \section{Introduction}\label{intro}
-Vim is a very complex editor,
+Vim is a very complex text editor,
 most often considered to be
 matched only by Emacs.
 They both are the standard advanced text editors
@@ -135,9 +136,10 @@ in the technological groundwork of the civil society.
 Accordingly, here are some notes about my experience:
 I've had experience with other editors, e.g. Kate, gedit, and Notepad2.
 I used Vim for writing and editing computer code 
-(Python, Javascript, C++, ChucK, bash, etc), markup languages  % TTM
+(Python, Javascript, C++, ChucK, bash, etc), markup-like content
 (HTML, CSS, RDF, Markdown, \LaTeX, etc) and binary files.
-Eventually, I edited database files and other types of files.
+Eventually, I edited other types of files, such as database files with
+dozens of gigabytes.
 Within Vim, I mostly write (web and scientific) software,
 scientific articles, music, poems and short stories.
 
@@ -150,8 +152,8 @@ Vi was written in 1976 as a hard link to ex: a shorthand
 to start ex in visual mode, i.e. vi is ex.
 Vim's development is coordinated (and performed) since the beginning
 mainly by Bram Moolenaar.
-Today, current bleeding-edge version is 8.0.1401.
-I found no explicit stable, alpha or beta versions.
+Today, bleeding-edge version is 8.0.1497.
+There seems to be no official or explicit stable, alpha or beta releases~\cite{noOfficial}.
 I found no scientific article on Vim 
 (this might be the first one), although there are
 books, software and third-party documentation on the
@@ -161,19 +163,26 @@ web.~\cite{wikiVim}
 Vim's interface is text-based.
 In the GUI (gVim),
 there are convenient menus and toolbars
-but all functionalities are still available though
-the command line mode.
-Vimscript is the internal language of Vim,
+but all functionalities are still available through
+the command-line mode.
+VimL (a.k.a. VimScript, Vim script, Vim language)
+is the internal language of Vim,
 and is often used for scripting by users
 although other languages might be used 
 (e.g. Python, Perl, Lua, Racker, Ruby and Tcl). 
-Each line of a Vimscript is a command on the
+VimL is preferred among other names for the language
+because it is shorter and less ambiguous then the alternatives,
+although there seems to be no official name and the manual
+uses the terms \emph{Vim script language} and \emph{Vim script}
+(see e.g. \tttt{:h usr\_41}).
+Each line of a VimL script is a command on the
 command-line mode.
 This section may be considered a tutorial
 that focuses on the namespaces, i.e. sets of tokens
-that carry values or triggers procedures.
+that carry values or trigger procedures.
 One should see Appendix~\ref{sec:not}
-to understand the notation Vim uses.
+to understand the notation Vim uses to represent key combinations
+(e.g. \ttt{C-[}).
 
 \subsection{The bare minimum}\label{minimum}
 You open a file at Vim startup by executing
@@ -700,7 +709,7 @@ in \tttt{:h vimfiles} and are basically set by
 \tttt{:se runtimepath} and conventions inside
 each directory therein, such as to look for \tttt{vimrc} files
 and \tttt{plugin/} or \tttt{pack/} directories.
-Vim scripts can be loaded conditionally,
+VimL scripts can be loaded conditionally,
 e.g. only if a function is used as in \tttt{:h autoload-functions}.
 Example of such are filetype plugins (enabled by a \tttt{ftplugin/<filetype>.vim} file,
 e.g. inside a plugin directory).
@@ -1076,6 +1085,8 @@ in \tttt{:map}.
 	Available at \url{https://youtu.be/oeOKYc3-nbM}
 \bibitem{anPh2}
 	Fabbri, R. What are you and I? [anthropological physics fundamentals], 2015. Available at \url{https://www.academia.edu/10356773/What_are_you_and_I_anthropological_physics_fundamentals_}
+\bibitem{noOfficial}
+  Vim users email list. "Vim versions. (No explicit or official stable, alpha or beta versions of Vim)" Available at \url{https://groups.google.com/forum/#!msg/vim_use/ULCa_2Cxnl0/RmvGij8YCgAJ} 
 \bibitem{wikiVim}
   Vim (text editor). (2017, December 4). In Wikipedia, The Free
     Encyclopedia. Retrieved 07:08, December 16, 2017, from
