@@ -132,24 +132,42 @@ lines = []
 for class_ in words:
     words_ = ' '.join(words[class_])
     group = colors[class_]
-    lines.append('\nsyntax keyword '+'tokipona'+class_+' '+words_)
+    if class_ != 'tokiponaComment':
+        lines.append('\nsyntax keyword '+'tokipona'+class_+' '+words_)
+    else:
+        lines.append('\nsyntax match '+'tokipona'+class_+' '+words_)
     lines.append('highlight link '+'tokipona'+class_+' '+group)
 
 coloring = '\n'.join(lines)
 header = '''" Vim syntax file
-" Language:	toki pona
-" Maintainer:	Renato Fabbri <fabbri@usp.br>
-" Last Change:	2016 Apr 30
-" Remark:	toki pona is a conlang, not a programming language
+" Language:     toki pona
+" Maintainer:   Renato Fabbri <renato.fabbri@gmail.com>
+" Last Change:  2018 Fev 11
+" URL:          https://github.com/ttm/tokipona
+" Remark:       toki pona is a conlang, not a programming language
 
 if exists("b:current_syntax")
     finish
 endif
 
+" define here so loaded files might test for it (unlet at the end)
+if !exists("main_syntax")
+  let main_syntax = 'tokipona'
+endif
+
 syntax clear
 syntax case ignore\n\n'''
+footer = '''
+
+syntax match tokiponaComment /#.*$/
+highlight link tokiponaComment StatusLine
+
+let b:current_syntax = "tokipona"
+if main_syntax == 'tokipona'
+  unlet main_syntax
+endif'''
 with open('../syntax/tokipona.vim','w') as f:
-    f.write(header+coloring)
+    f.write(header+coloring+footer)
 
 # class_count has the number of occurrences of each pos tag.
 # each of them in the chosen form and in any of the classifications
