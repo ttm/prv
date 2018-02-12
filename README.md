@@ -128,17 +128,17 @@ in this repository.
 ##### Screenshots of the syntax highlighting (in Vim)
 
 A simple text:
-https://imgur.com/xTLGVjE
+![Toki Pona text highlighted in Vim](https://imgur.com/xTLGVjE)
 
 Some texts with another color scheme:
-https://imgur.com/6OGc5bT
+![Some Toki Pona texts highlighted in Vim](https://imgur.com/6OGc5bT)
 
 And yet in another color scheme:
-https://imgur.com/fj4hQkt
+![Some Toki Pona texts highlighted in Vim (in a dfferent color scheme)](https://imgur.com/fj4hQkt)
 
 And an HTML export (through :TOhtml Vim command)
 of the syntax coloring:
-https://imgur.com/v7a3hME
+![And an HTML export (through :TOhtml Vim command) of the syntax coloring:](https://imgur.com/v7a3hME)
 
 #### Making the Vimball for sharing this plugins and derivatives
 
