@@ -10,7 +10,8 @@ although:
 - the Vim plugin, among other things, is proposed to also bring the
   tokipona Python package into the Vim editor.
 
-- [Python and Vim utilities for the Toki Pona minimalist conlang](#python-and-vim-utilities-for-the-toki-pona-minimalist-conlang)
+### Table of Contents
+- Items / Sections / Headers
   * [Overall description and installation](#overall-description-and-installation)
     + [Of the tokipona Python package](#of-the-tokipona-python-package)
   * [Usage example of the Python package](#usage-example-of-the-python-package)
