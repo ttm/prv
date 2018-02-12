@@ -1,74 +1,79 @@
-# Text syntax highlighting, analysis and synthesis for the Toki Pona Language
+## Python utilities for the Toki Pona minimalist conlang
 
-For the syntax highlighting, one should copy the
-ftdetect/, ftplugin/ and syntax/ directories to ~/.vim/plugin/tokipona/
-or
-  $ git clone https://github.com/ttm/tokipona ~/.vim/plugin/
-You might need to copy the syntax/tokipona.vim file to
-~/.vim/syntax/.
+This package contains routines to:
+- analyze the official Toki Pona vocabulary
+- synthesize phrases. sentences, paragraphs, short stories and poems in Toki Pona
+- the achievement of (very preliminary) Toki Pona wordnets
+- synthesize Vim syntax files for the Toki Pona language
+
+Such facilities are implemented in accordance with the [Toki Pona article],
+of which the Latex and PDF files are in the article/ directory
+of this repository (ttm/tokipona)
+
+### Syntax highlighting
+This repository also holds a [Toki Pona Vim plugin].
+
+To install it by hand, one might copy:
+- the plugin/ directory to ~/.vim/plugin/
+- the syntax/ directory to ~/.vim/syntax/
+
+or clone the repository to a directory in your :echo &runtimepath.
+For example:
+
+  $ git clone https://github.com/ttm/tokipona ~/.vim/
 
 If you change the syntax file,
 a file with highlighted text (in Toki Pona)
 will have the highlighting updated upon
 reload (:e<CR> in Vim).
 For more information in using the plugin,
-see the [article on article/ directory](https://github.com/ttm/tokipona/raw/master/article/article.pdf).
+see the vim.org page for the [Toki Pona Vim plugin].
 
-text j
-Vim syntax highlighting for the toki pona constructed language
-Maintainer:	Renato Fabbri <fabbri@usp.br>
-License:	This file is placed in the public domain.
+Also, check the [Toki Pona article] because it is a carefully built
+document that contextualizes and describes the routines available
+in this repository.
 
-You might want to place files in this directory inside
-e.g. .vim/plugins/tokipona/
+##### Screen shots of the syntax highlighting (in Vim)
 
-And syntax/tokipona.vim inside .vim/syntax/
+[one text in imgur]
 
-ToDo:
-* Make a Vimball with the files tructure of this
-plugins because it needs files inside plugin/ and syntax/
-directories.
-* Send to Chandra and Cristina for possible enhancements.
-Look for TTM in .tex and mention such marks to them.
+[another with various texts in another color scheme]
 
-Artigo de Toki Pona
-* Procurar nas anotacoes (rascunhao, ttm)
-* O que Toki Pona é: definição,
-histórico, estado da arte, grupos do fb telegram
-* Minha explicação da linguagem: li e la pi
-
-No pi, word word word:
-word <- (qualifies 1) word <- (qualifies 2)  word
-
-One pi, word pi word word
-word <- (qualifies 2) [ word <- (qualifies 1)  word ]
-
-Two pi: word pi word word word pi word word
-word <-5 word 3 word 2 word <-4 word 1  word
-or:
-word <-5 word 2 word 1 word <-4 word 3  word
-
-You can mix the number of words in each noun term separated by pi
-and maybe extend it to the prepositions.
-
-Make considerations about the official book
-in contrast with the way I summarize the language.
-
-==========
-Most usual letters, in the beginning and end,
-and sequences of letters.
-Distribution of word sizes,
-smallest and largest words.
-Maybe scrape toki-pona sites
-and see the distribution of the
-words.
-
-==========
-Syntax highlighting,
-automated construction of sentences.
-Acknowledge the hacks already available (e.g. translation of names)
-and the spreadsheet with all the resources.
+[one HTML rendering of a buffer or window]
 
 
+### Usage example of the Python package
 
 
+```python
+### Basic usage
+import tokipona as t
+
+### the main functionalities are:
+
+# 1 - make a syntax highlighting file for Vim
+
+# 2 - analyze the official Toki Pona vocabulary
+
+# 3 - obtain (very preliminary) Toki Pona wordnet synsets
+
+# 4 - synthesize texts in Toki Pona
+
+```
+
+
+### TODO:
+For now:
+- check issues in this repository
+- check the vim.org page for the [Toki Pona Vim plugin].
+
+### Further notes
+This Python package is intended to help in answering these (types of) questions:
+- What are the most usual letters, in the beginning and end,and sequences of letters?
+- What is the distribution of word sizes, smallest and largest words?
+- What is the basic statistics obtained if one scrapes toki pona sites?
+
+### Most important links
+
+[Toki Pona article]: https://arxiv.org/abs/1712.09359
+[Toki Pona Vim plugin]: https://vim.sourceforge.io/scripts/script.php?script_id=5656
