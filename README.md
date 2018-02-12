@@ -131,14 +131,14 @@ A simple text:
 ![Toki Pona text highlighted in Vim](https://imgur.com/xTLGVjE.jpg)
 
 Some texts with another color scheme:
-![Some Toki Pona texts highlighted in Vim](https://imgur.com/6OGc5bT)
+![Some Toki Pona texts highlighted in Vim](https://imgur.com/6OGc5bT.jpg)
 
 And yet in another color scheme:
-![Some Toki Pona texts highlighted in Vim (in a dfferent color scheme)](https://imgur.com/fj4hQkt)
+![Some Toki Pona texts highlighted in Vim (in a dfferent color scheme)](https://imgur.com/fj4hQkt.jpg)
 
 And an HTML export (through :TOhtml Vim command)
 of the syntax coloring:
-![And an HTML export (through :TOhtml Vim command) of the syntax coloring:](https://imgur.com/v7a3hME)
+![And an HTML export (through :TOhtml Vim command) of the syntax coloring:](https://imgur.com/v7a3hME.jpg)
 
 #### Making the Vimball for sharing this plugins and derivatives
 
