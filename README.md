@@ -11,7 +11,7 @@ although:
   tokipona Python package into the Vim editor.
 
 ### Table of Contents
-- Items / Sections / Headers
+Items / Sections / Headers:
   * [Overall description and installation](#overall-description-and-installation)
     + [Of the tokipona Python package](#of-the-tokipona-python-package)
   * [Usage example of the Python package](#usage-example-of-the-python-package)
