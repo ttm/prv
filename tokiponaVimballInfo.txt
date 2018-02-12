@@ -9,7 +9,7 @@ function! MkTokiponaVimball() " {{{
   " Then run it while in this buffer with:
   " :call MkRealcolorsVimball()
   " to create the vimball
-  1,5MkVimball! tokipona
+  1,4MkVimball! tokipona
   echo 'Vimball for the Toki Pona plugin has been written at current directory'
 endfu " }}}
 
