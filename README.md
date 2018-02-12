@@ -54,6 +54,8 @@ This install method is especially useful when reloading the modified module in s
 
 
 ```python
+# to import changes made in local package files,
+# e.g. if installed with pip3 install -e ~/repos/tokipona/
 import sys
 keys=tuple(sys.modules.keys())
 for key in keys:
@@ -77,7 +79,10 @@ wn = t.wordnet()
 # 4 - synthesize texts in Toki Pona
 sy = t.synthesis()
 
-# make something with sy.*
+print( sy.createParagraph() )
+print( sy.createPhrase() )
+print( sy.createPoem() )
+print( sy.createSentence() )
 
 # sh, st, wn, sy have objects related to each of the
 # functions as further described in this README.
