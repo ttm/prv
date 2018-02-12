@@ -145,9 +145,19 @@ And an HTML export (through :TOhtml Vim command)
 of the syntax coloring:
 ![And an HTML export (through :TOhtml Vim command) of the syntax coloring:](https://imgur.com/v7a3hME.jpg)
 
-#### Making the Vimball for sharing this plugins and derivatives
+### deployment
 
-Instructions in file ./tokiponaVimballInfo.txt
+#### of Python package to PyPI
+This package іs delivered by running:
+  $ python3 setup.py sdist
+  $ python3 setup.py bdist\_wheel
+  $ twine upload dist/
+
+Maybe use "python setup.py sdist upload -r pypi" ?
+
+#### of the Vim plugin to vim.org
+For making the Vimball for sharing this plugins and derivatives,
+check the instructions in file ./tokiponaVimballInfo.txt
 
 ### TODO:
 For now:
