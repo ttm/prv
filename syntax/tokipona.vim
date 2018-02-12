@@ -18,26 +18,26 @@ syntax clear
 syntax case ignore
 
 
-syntax keyword tokiponaADJECTIVE taso mute sewi pu sin ante kule sike loje pona ike suli ken laso tawa pimeja ala jelo sama anpa jaki moli ale musi lete pilin wan ali wawa seli pini ni nasa lili weka pakala lape suwi namako wile walo kama awen
-highlight link tokiponaADJECTIVE Comment
-
-syntax keyword tokiponaNUMBER ali tu ale luka wan
-highlight link tokiponaNUMBER Identifier
-
-syntax keyword tokiponaNOUN kala mute pan ilo lipu sewi sina telo kasi ko lawa tomo sike akesi lupa mani nanpa soweli noka ma insa tenpo kulupu luka poki suno mi uta selo poka len kiwen ale linja palisa mun ona kili nasin kon pilin esun ali mama kute sijelo meli nena jan supa lukin nimi pipi waso oko sitelen sinpin monsi ijo mije
-highlight link tokiponaNOUN Constant
-
-syntax keyword tokiponaVERB jo lukin pali kalama sona unpa open alasa lawa oko olin pana utala kute moku toki
-highlight link tokiponaVERB Special
-
-syntax keyword tokiponaPARTICLE taso mu o a e kin anu en li pi la seme nanpa
+syntax keyword tokiponaPARTICLE e kin nanpa pi taso anu seme li la o en mu a
 highlight link tokiponaPARTICLE Statement
 
-syntax keyword tokiponaPREPOSITION tawa kepeken sama tan lon
+syntax keyword tokiponaPREPOSITION sama tawa tan lon kepeken
 highlight link tokiponaPREPOSITION Type
 
-syntax keyword tokiponaPRE lukin sona oko wile kama awen ken
+syntax keyword tokiponaNUMBER luka ale wan ali tu
+highlight link tokiponaNUMBER Identifier
+
+syntax keyword tokiponaADJECTIVE lape tawa walo taso moli pu anpa ken sike loje ale laso ali jaki musi kule lili weka awen pini pakala sewi lete pimeja namako wile wawa mute kama wan ala pona sin ante pilin sama ike ni suli suwi seli jelo nasa
+highlight link tokiponaADJECTIVE Comment
+
+syntax keyword tokiponaPRE lukin oko wile sona awen ken kama
 highlight link tokiponaPRE PreProc
+
+syntax keyword tokiponaVERB moku unpa lukin olin oko alasa open lawa sona utala jo pali kute kalama toki pana
+highlight link tokiponaVERB Special
+
+syntax keyword tokiponaNOUN mi sina lukin nanpa ma lawa mama meli sinpin sike kala nasin akesi waso ale ali tenpo luka lipu uta lupa telo kili sewi kute kon selo mute pipi ijo kasi kulupu mani esun nena suno pan mun poka tomo sitelen soweli nimi sijelo supa oko monsi poki linja kiwen ona noka pilin len ko mije palisa jan ilo insa
+highlight link tokiponaNOUN Constant
 
 syntax match tokiponaComment /#.*$/
 highlight link tokiponaComment StatusLine

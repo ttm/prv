@@ -1,17 +1,109 @@
-## Python utilities for the Toki Pona minimalist conlang
+## Python and Vim utilities for the Toki Pona minimalist conlang
 
+This repository holds both:
+- the tokipona Python package (with tools to deal with Toki Pona); and
+- the tokipona Vim plugin (mainly with syntax file and some advanced capabilities for coloring
+
+They might be used and installed independently,
+although:
+- the Python package, among other things, synthesizes the Vim syntax files;
+- the Vim plugin, among other things, is proposed to also bring the
+  tokipona Python package into the Vim editor.
+
+- [Python and Vim utilities for the Toki Pona minimalist conlang](#python-and-vim-utilities-for-the-toki-pona-minimalist-conlang)
+  * [Overall description and installation](#overall-description-and-installation)
+    + [Of the tokipona Python package](#of-the-tokipona-python-package)
+  * [Usage example of the Python package](#usage-example-of-the-python-package)
+    + [Of the tokipona Vim plugin](#of-the-tokipona-vim-plugin)
+      - [Screenshots of the syntax highlighting (in Vim)](#screenshots-of-the-syntax-highlighting--in-vim-)
+    + [Making the Vimball for sharing this plugins and derivatives](#making-the-vimball-for-sharing-this-plugins-and-derivatives)
+  * [TODO:](#todo-)
+  * [Further notes](#further-notes)
+  * [Most important links](#most-important-links)
+
+### Overall description and installation
+For the Python package and the Vim plugin.
+
+#### Of the tokipona Python package
 This package contains routines to:
 - analyze the official Toki Pona vocabulary
 - synthesize phrases. sentences, paragraphs, short stories and poems in Toki Pona
 - the achievement of (very preliminary) Toki Pona wordnets
 - synthesize Vim syntax files for the Toki Pona language
+- maybe something more
 
 Such facilities are implemented in accordance with the [Toki Pona article],
 of which the Latex and PDF files are in the article/ directory
-of this repository (ttm/tokipona)
+of this repository (ttm/tokipona).
 
-### Syntax highlighting
-This repository also holds a [Toki Pona Vim plugin].
+Install with:
+
+    $ pip install tokipona
+or
+
+    $ python setup.py tokipona
+
+For customization ease, hacking and debugging, clone the repository and install with 'pip3 install -e':
+
+    $ git clone https://github.com/ttm/tokipona.git
+    $ pip3 install -e <path_to_repo>
+
+This install method is especially useful when reloading the modified module in subsequent runs.
+
+### Usage example of the Python package
+
+
+```python
+import sys
+keys=tuple(sys.modules.keys())
+for key in keys:
+    if "tokipona" in key:
+        del sys.modules[key]
+
+### Basic usage
+import tokipona as t
+
+### the main functionalities are:
+
+# 1 - make a syntax highlighting file for Vim
+sh = t.syntax()
+
+# 2 - analyze the official Toki Pona vocabulary
+st = t.stats()
+
+# 3 - obtain (very preliminary) Toki Pona wordnet synsets
+wn = t.wordnet()
+
+# 4 - synthesize texts in Toki Pona
+sy = t.synthesis()
+
+# make something with sy.*
+
+# sh, st, wn, sy have objects related to each of the
+# functions as further described in this README.
+
+# 5 - further routines and variables in utils:
+v, c = t.utils.vowels, t.utils.consonants
+str_ = "TP vowels are: {}; TP consonants are: {}".format(v, c)
+print(str_)
+
+possible_words = t.utils.allTokiPonaPossibleWords(n=2)
+print("all possible words with two syllables given the TP rules are {}".format(possible_words))
+
+##############################################
+### check files in tokipona/
+# for many other functionalities and convenient variables.
+
+# Tweak at will.
+##############################################
+
+```
+
+
+#### Of the tokipona Vim plugin
+To avoid redundancy upkeep, please visit
+the [Toki Pona Vim plugin] page for an overview of the
+implemented facilities.
 
 To install it by hand, one might copy:
 - the plugin/ directory to ~/.vim/plugin/
@@ -33,34 +125,24 @@ Also, check the [Toki Pona article] because it is a carefully built
 document that contextualizes and describes the routines available
 in this repository.
 
-##### Screen shots of the syntax highlighting (in Vim)
+##### Screenshots of the syntax highlighting (in Vim)
 
-[one text in imgur]
+A simple text:
+https://imgur.com/xTLGVjE
 
-[another with various texts in another color scheme]
+Some texts with another color scheme:
+https://imgur.com/6OGc5bT
 
-[one HTML rendering of a buffer or window]
+And yet in another color scheme:
+https://imgur.com/fj4hQkt
 
+And an HTML export (through :TOhtml Vim command)
+of the syntax coloring:
+https://imgur.com/v7a3hME
 
-### Usage example of the Python package
+#### Making the Vimball for sharing this plugins and derivatives
 
-
-```python
-### Basic usage
-import tokipona as t
-
-### the main functionalities are:
-
-# 1 - make a syntax highlighting file for Vim
-
-# 2 - analyze the official Toki Pona vocabulary
-
-# 3 - obtain (very preliminary) Toki Pona wordnet synsets
-
-# 4 - synthesize texts in Toki Pona
-
-```
-
+Instructions in file ./tokiponaVimballInfo.txt
 
 ### TODO:
 For now:

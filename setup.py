@@ -46,7 +46,7 @@ setup(
         'Intended Audience :: Religion',
         'Intended Audience :: Other Audience',
         'License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)',
-        'Natural Language :: English'…
+        'Natural Language :: English',
         'Natural Language :: Toki Pona',
         'Operating System :: Unix',
         'Topic :: Documentation',
@@ -114,7 +114,7 @@ setup(
     # requirements files see:
     # https://packaging.python.org/en/latest/requirements.html
     # TODO: test with virtualenv to know the dependencies
-    install_requires=['numpy', 'scipy', 'nltk'],
+    install_requires=['numpy', 'scipy', 'nltk', 'percolation'],
 
     # List additional groups of dependencies here (e.g. development dependencies).
     # You can install these using the following syntax, for example:

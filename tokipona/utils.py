@@ -1,5 +1,7 @@
-import nltk as k
+import nltk as k, os
 from percolation.rdf import c
+
+__doc__ = """Utilitiy variables and functions"""
 
 
 vowels = 'aeiou'
@@ -7,31 +9,48 @@ vowels_ = 'AEIOU'
 consonants = 'jklmnpstw'
 invalid_syllables = 'ji','ti','wo','wu'
 
-with file('rules.txt','rb') as f:
+tpath = os.path.abspath(__file__).replace(os.path.basename(__file__), '')
+
+with open(tpath + 'rules.txt','rb') as f:
     notes = f.read()
 
-def printTextsAccents():
+def printTextsAccents(text):
     '''Print toki pona text with accents in volgals of first syllabes'''
-    tokens = k.wordpunt_tokenize(text)
-    for token in i:
+    tokens = k.wordpunct_tokenize(text)
+    tokens_ = []
+    for token in tokens:
         if token[0] in vowels:
             token = vowels_[vowels.index(token[0])]+token[1:]
         else:
-            token = token[0]+vowels_[vowels.index(token[1])] +\
-                    token[2:]
+            token = token[0]+vowels_[vowels.index(token[1])] + token[2:]
         tokens_ += [token]
-    text_ = ' '.join(token_)
+    text_ = ' '.join(tokens_)
     print(text_)
     return text_
 
 
-def representAccents(text, 'jklmnpstw'):
-    '''exchange consonants such as k->g, p->b, t->d and s->z'''
+def representAccents(text):
+    '''Exchange consonants such as k->g, p->b, t->d and s->z
+    
+    Note
+    ----
+    Not implemented
+    
+    '''
     pass
 
 
 def consonantSyllables(consonant):
-    if consonant =! 'j':
+    '''Return all the syllables given the initial consonant.
+    
+    Notes
+    -----
+    TODO:
+    Needs revision. lj is not prohibited, but should it be allowed?
+    Send issues to discussion groups.
+    '''
+    global vowels_
+    if consonant != 'j':
         vowels_ = vowels + 'j'
     syllables = [consonant+vowel for vowel in vowels_ if
             consonant+vowel not in invalid_syllables]
@@ -40,6 +59,14 @@ def consonantSyllables(consonant):
 
 
 def allConsonantSyllables():
+    '''Return all possible syllables given the rules.
+
+    Notes
+    -----
+    TODO:
+    send syllables list to discussion groups.
+
+    '''
     # need to include the y. E.g. Enya, ijo.
     all_syllables = []
     for consonant in consonants:
@@ -49,11 +76,22 @@ def allConsonantSyllables():
 
 
 def allTokiPonaPossibleWords(n=3):
-    # each syllable has a consonant, a vogal and an optional n
-    # first syllabe can contain no consonant
-    # considering words up to n syllables
-    # words stating with vowels
+    '''Returns all possible Toki Pona words with at most n syllables.
 
+    Parameters
+    ----------
+    n : integer
+        The maximum number of syllables in a word.
+
+    Notes
+    -----
+    Syllables have the general form (C)V(N).
+    I.e. each syllable has a consonant, a vowel and an optional n.
+    First syllable of word can have no consonant, i.e. a
+    word might start with a vowel.
+    The other syllables must start with a consonant.
+
+    '''
     n_ = 1
     words = allConsonantSyllables()
     while n_ < n:
@@ -76,7 +114,8 @@ def allTokiPonaPossibleWords(n=3):
     return words
 
 def allTokiPonaExistentWords():
-    return
+    from . import makeStatistics as stats
+    return stats
 
 if __name__ == '__main__':
     c('vowels:', vowels)
