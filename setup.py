@@ -16,7 +16,7 @@ setup(
     # https://packaging.python.org/en/latest/single_source_version.html
     # version='0.1.dev0',
     # according to https://semver.org/
-    version='0.01b',
+    version='0.1b1',
 
     description='A package for dealing with toki pona: vim syntax highlighting, tokipona wordnets, analysis of the vocabulary, synthesis of texts',
     long_description=long_description,
@@ -47,7 +47,6 @@ setup(
         'Intended Audience :: Other Audience',
         'License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)',
         'Natural Language :: English',
-        'Natural Language :: Toki Pona',
         'Operating System :: Unix',
         'Topic :: Documentation',
         'Topic :: Documentation :: Sphinx',

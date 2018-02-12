@@ -1,4 +1,8 @@
 ## Python and Vim utilities for the Toki Pona minimalist conlang
+(
+This README.md document is well formatted in:
+https://github.com/ttm/tokipona
+)
 
 This repository holds both:
 - the tokipona Python package (with tools to deal with Toki Pona); and
@@ -172,6 +176,10 @@ This Python package is intended to help in answering these (types of) questions:
 - What are the most usual letters, in the beginning and end,and sequences of letters?
 - What is the distribution of word sizes, smallest and largest words?
 - What is the basic statistics obtained if one scrapes toki pona sites?
+
+#### Acknowledgements
+This work is sponsored by FAPESP (project 2017/05838-3) in a project lead by 
+Profa. Dra. Maria Cristina Ferreira de Oliveira at VICG/ICMC/USP, São Carlos, Brazil.
 
 ### Most important links
 
