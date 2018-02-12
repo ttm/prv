@@ -128,7 +128,7 @@ in this repository.
 ##### Screenshots of the syntax highlighting (in Vim)
 
 A simple text:
-![Toki Pona text highlighted in Vim](https://imgur.com/xTLGVjE)
+![Toki Pona text highlighted in Vim](https://imgur.com/xTLGVjE.jpg)
 
 Some texts with another color scheme:
 ![Some Toki Pona texts highlighted in Vim](https://imgur.com/6OGc5bT)
