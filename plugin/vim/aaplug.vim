@@ -60,8 +60,8 @@ endfu " }}}
 " timer_start(400, TickColor(), {'repeat': 3}) )
 "
 " com -nargs=1 Question let g:banana='for you'
-Question how do behave the function arguments? In all the cases of having bang or not, receiving range, etc
-Todo check glaive
-Note Maj.Min.Pat-(a,b,rc)XXXYYY pattern for software releases, as in https://semver.org/
-Cnote exists(), tempname()
-Todo look for chatter bot in vim
+" Question how do behave the function arguments? In all the cases of having bang or not, receiving range, etc
+" Todo check glaive
+" Note Maj.Min.Pat-(a,b,rc)XXXYYY pattern for software releases, as in https://semver.org/
+" Cnote exists(), tempname()
+" Todo look for chatter bot in vim
