@@ -77,6 +77,8 @@ inoremap s <ESC>:up<CR>:source %<CR>a
 nnoremap S :up<CR>:source $MYVIMRC<CR>
 inoremap S <ESC>:up<CR>:source %<CR>l
 
+nnoremap W :w<CR>
+inoremap W <ESC>:w<CR>a
 nnoremap w :up<CR>
 inoremap w <ESC>:up<CR>a
 nnoremap q :q<CR>

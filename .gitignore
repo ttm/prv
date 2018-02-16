@@ -110,3 +110,11 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+ftplugin/vimwikiTrue.vim
+ftplugin/vimwiki.vim
+*/vimwikiTrue.vim
+*/vimwiki.vim
+vimwiki.vim
+**/*vimwiki*
+**/*vimwiki*
