@@ -15,3 +15,4 @@ make install
 # Make a compiling routine with all GTK, GTK2, kde, motif athena GUIs to test
 # sizeof_int etc ok
 
+# build in jan/06/2018

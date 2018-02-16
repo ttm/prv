@@ -1,0 +1,131 @@
+plugin/realcolors.vim
+plugin/realcolors/cs.vim
+plugin/realcolors/dynamic.vim
+plugin/realcolors/mappings.vim
+plugin/realcolors/tools.vim
+plugin/realcolors/utils.vim
+plugin/realcolors/data/realcolorsVimballInfo.txt
+
+function! MkRealcolorsVimball() " {{{
+  " Load this function by visually selecting it, then
+  " :@*
+  " Then run it while in this buffer with:
+  " :call MkRealcolorsVimball()
+  " to create the vimball
+  1,7MkVimball! realcolors
+  echo 'Vimball for the Realcolors plugin has been written at current directory'
+endfu " }}}
+
+===========
+
+" texts for uploading the plugin to vim.org:
+
+version 0.01b
+
+summary:
+Utilities for tweaking and creating 24-bit true color schemes for Vim at runtime
+
+** detailed description **
+THIS IS A VERY PRELIMINARY RELEASE TO UNDERSTAND vim.org
+AND START SHARING SOME ROUTINES
+
+FORECAST: I should upload a more organized version in a couple of hours
+or few days (max).
+(these are scripts I and only I am using)
+
+Realcolors is a plugin to help you tweak and create color schemes.
+This is useful for a number of reasons:
+* Colors influence how well you perform is different tasts [1].
+* There seems to be no serious study of using color palletes for syntax highlighting [2].
+* Each person has a unique sensibility and tolerance to the colors (e.g. red, blue...) [3].
+* Different contexts entail different color characteristics that are more suitable [3]. E.g. if you are presenting code you might want a more pleasant combination whereas if you are coding for many hours, you might want more stimulant color characteristics. If you are just skimming though files to know their content, you might want a color scheme that makes the content very evident.
+* One might want to experiment with the coloring possibilities.
+* One might want to create color schemes for private use or for sharing with others.
+* One might want to tweak favorite color schemes to fit their taste and/or achieve a greater clarity.
+
+[1]: Mehta, R., & Zhu, R. J. (2009). Blue or red? Exploring the effect of
+color on cognitive task performances. Science, 323(5918), 1226-1229.)
+[2]: https://softwareengineering.stackexchange.com/questions/89936/syntax-highlighting-color-scheme-studies
+[3]: Ware, Colin. Information visualization: perception for design. Elsevier, 2012.
+
+
+Please visit the repository: https://github.com/ttm/vim
+specially the plugin and plugin/realcolors/ directories.
+
+The following functionalities are implemented (you might need to start
+Realcolors with <C-/>i as explained below):
+* Change the Foreground and/or Background colors of the char under cursor:
+<C-/>c
+* Get the name of the syntax groups related to the char under cursor
+(these groups are related to colors, bold and underline):
+<C-/>s
+* Load a number of color schemes with the ApplyCS function.
+Choose any XX color scheme in keys(ccs), then
+:call ApplyCS(ccs.XX, 'c')
+* Make a detailed windows with the colors defined for your Vim,
+against your default colors (related to the Normal syntax group),
+with:
+<C-/>ww, <C-/>w1, <C-/>w2 or <C-/>w3,
+* Start/Restart your coloring scheme with:
+<C-/>i or <C-/>I
+(the last reloads configuration scripts before restartin realcolors
+with:
+noremap <C-\>I :w<CR>:runtime **/*.vim<CR>:call InitializeColors()<CR><CR>
+
+Other functionalities are skecthed in the realcolor Vim files.
+See realcolors/mappings.vim and the other files for a complete
+overview.
+Add new color schemes to the functions in realcolors/cs.vim
+
+The following articles might help one to grasp and tweak
+the Realcolors plugin:
+* "An anthropological account of the Vim text editor: features and
+tweaks after 10 years of usage":
+https://arxiv.org/abs/1712.06933
+* "Basic concepts and tools for the Toki Pona minimalist and
+  constructed language: Wordnet synsets; analysis of the vocabulary;
+  synthesis and syntax highlighting of texts":
+  https://arxiv.org/abs/1712.09359
+
+== A word about 24 bit true color ==
+This plugins relies in using 24 bit true color (each color defined by
+8 bits, i.e. in [0,255] or [00,ff].
+As far as I know, gVim uses true color by default.
+In terminal Vim (which I use) I achieve true color by setting:
+set termguicolors
+in my vimrc.
+Because I also use Byobu (screen) I also had to put these lines
+in the vimrc:
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+
+
+Acknowledgements
+----------------
+This work is sponsored by FAPESP () in a project lead by
+Profa. Dra. Maria Cristina Ferreira de Oliveira
+at ICMC/USP, São Carlos, Brazil.
+
+** install details **
+Download the Vimball.
+
+Install with:
+$ vim realcolors.vmb
+
+(it will place the files e.g. in .vim/plugins/
+and next time you start Vim, it will have the
+realcolors plugin installed)
+
+You might also install realcolors with by visiting
+https://github.com/ttm/vim
+and copying these files:
+plugin/realcolors.vim
+plugin/realcolors/cs.vim
+plugin/realcolors/dynamic.vim
+plugin/realcolors/mappings.vim
+plugin/realcolors/tools.vim
+plugin/realcolors/utils.vim
+plugin/realcolors/data/realcolorsVimballInfo.txt
+
+to your .vim/ or anywhere in you runtimepath.
+
