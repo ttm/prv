@@ -1,17 +1,20 @@
 " basic settings -------------------------------------------------------- {{{
 " reworked for usage with Vim 8, True Colors (24 bits) and tmux
 set nocompatible
+let g:prv_dir = expand("<sfile>:h") . '/'
+
 set termguicolors
-" this file should be read out of the box, but I need to source it (bug??)
-let mysyntaxfile = '~/.vim/syntax/mysyntaxfileTTM.vim'
-py3 import random
-se digraph
 " :se t_Co should give 256, otherwise uncomment:
 " se t_Co=256
 " to enable true colors inside Byoby/Tmux
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+
 set viminfo=%,!,'1000,:1000,n~/.vim/aux/viminfo
+" this file should be read out of the box, but I need to source it (bug??)
+let mysyntaxfile = '~/.vim/syntax/mysyntaxfileTTM.vim'
+py3 import random
+se digraph
 set tw=0
 se noru
 " se autowrite does not work... using update again on mappings
@@ -23,7 +26,7 @@ set mouse=a
 " call pathogen#infect()
 filetype plugin indent on
 
-let g:vimwiki_list = [{'path': '~/.vim/vimwiki/', 'syntax': 'markdown', 'ext': '.wiki'}]
+let g:vimwiki_list = [{'path': '~/.vim/aux/vimwiki/', 'syntax': 'markdown', 'ext': '.wiki'}]
 
 syntax enable
 " syntax on
@@ -235,13 +238,7 @@ let g:vimscript_vars = s:
 " au! Syntax * so ~/.vim/syntax/mysyntaxfileTTM.vim
 " gq gw
 " recovering mappings from plugins...
-if exists("g:mmapclear")
-  unlet! g:mmapclear
-  unlet! g:loaded_vimwiki
-  so /home/renato/.vim/pack/plugins/start/vimwiki/plugin/vimwiki.vim
-  " Shout put all plugins here I assume...
-  " or find a way to source them all again
-endif
+
 " Solve the navigation issue. True C-HJKL in all?
 " Problem: move i_<C-K> to another combination.
 " It helps ut to enter :dig.

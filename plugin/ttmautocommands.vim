@@ -19,7 +19,7 @@ au CmdwinEnter * map <buffer> <C-E> <CR> input("")q:
 " Vimscript file settings ---------------------- {{{
 aug filetype_vim
   au!
-  au FileType vim setlocal foldmethod=marker softtabstop=2 shiftwidth=2 expandtab
+  au FileType vim setl foldmethod=marker softtabstop=2 shiftwidth=2 expandtab
 aug END
 " }}}
 
@@ -34,7 +34,7 @@ aug END
 aug pythonaus
   au!
   " TTM removed tabstop=4
-  au BufNewFile,BufRead *.py set softtabstop=4 shiftwidth=4 textwidth=0 expandtab autoindent fileformat=unix
+  au BufNewFile,BufRead *.py setl softtabstop=4 shiftwidth=4 textwidth=0 expandtab autoindent fileformat=unix
   au BufNewFile,BufRead *.py nnoremap <buffer> cd /\<def\><CR>
   au BufNewFile,BufRead *.py nnoremap <buffer> cD ?\<def\><CR> 
   au BufNewFile,BufRead *.py nnoremap <buffer> cc /\<class\><CR>

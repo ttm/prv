@@ -38,8 +38,8 @@ nnoremap E <C-L>
 inoremap E <ESC><C-L>:e<CR>a
 
 " should run functions, for now just VimL
-nnoremap f mf?^fu^MV/^endf^M:@*^M`f
-inoremap f <ESC>mf?^fu^MV/^endf^M:@*^M`fa
+nnoremap f mf?^fu<CR>V/^endf<CR>:@*<CR>`f
+inoremap f <ESC>mf?^fu<CR>V/^endf<CR>:@*<CR>`fa
 
 " find files
 nnoremap FF :Split echo globpath('/home/renato/repos/', "**/percolation*/**")

@@ -204,5 +204,38 @@ fu! PushPRV(amsg) " {{{1
   " add -f vimwiki
   " commit -am '
   " decrypt all msgs
+  let g:tcmd = 'vs ' . g:prv_dir . 'aux/vimwiki/'
+  exe g:tcmd
+  normal /" =====
+  normal j
+  let tlinen = line('.')
+  let visdirs = 0
+  while 1
+    let tline = getline('.')
+    if tline != '../' && tline != './'
+      normal \<CR>
+      if &ft == 'vimwiki'
+        exe "normal e"
+        setl key=
+        exe "normal e:w\<CR>\<C-^>"
+      elseif &ft != 'netrw'
+        normal \<C-^>
+      endif
+    else
+      let visdirs += 0.5
+    endif
+    normal j
+    if line('.') != tlinen
+      let tlinen = line('.')
+    else
+      normal -
+      let visdirs -= 1
+      if visdirs < 0.9
+        break
+      endif
+      normal j
+      let tlinen = line('.')
+    endif
+  endwhile
 endfu
 
