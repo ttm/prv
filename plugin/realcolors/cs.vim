@@ -103,7 +103,9 @@ fu! CommandColorSchemes() " {{{
   let cs.green1 = ['colo blue', 'hi Normal  guifg=#0fffe0 guibg=#03800b']
   let cs.green2 = ['colo torte', 'highlight Normal guifg=white  guibg=darkGreen']
   
-  let cs.yellow1 = ['colo morning', 'hi Normal guibg=#ffff00', 'hi Constant cterm=bold guifg=#a0a010 guibg=NONE']
+  let cs.yellow1 = ['colo morning', 'hi Normal guibg=#ffff00',
+        \ 'hi Constant cterm=bold guifg=#a0a010 guibg=NONE',
+        \ 'hi Search guibg=lightblue']
 
   let cs.red1 = ['colo koehler', 'hi Normal guibg=#800000']
   let cs.red1c = ['colo koehler', 'hi Normal guibg=#800000', 'hi Folded guifg=cyan guibg=#bb0000']

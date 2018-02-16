@@ -159,7 +159,7 @@ I found no scientific article on Vim
 books, software and third-party documentation on the
 web.~\cite{wikiVim}
 
-\section{Basics}\label{basics}
+\section{An overview of the basics}\label{basics}
 Vim's interface is text-based.
 In the GUI (gVim),
 there are convenient menus and toolbars
@@ -263,8 +263,10 @@ for each mode:
 \ttt{C-\textbackslash} is often reserved for extensions,
 which makes it a safe namespace to use (while there are no
 such extensions).
+   `E 
+   $ `E $
 
-A colon command can be written as a string
+AAOA colon command can be written as a string
 and executed by the \tttt{:execute} colon command.
 E.g. \tttt{:execute 'vs afile.txt'} executes the \tttt{:vs afile.txt}
 colon command..
@@ -275,7 +277,7 @@ e.g. \tttt{:execute 'normal i'.string(atan(bufnr('\%'))).'<ESC>'}.
 
 
 \subsubsection{Variables}
-There are some types of variables in Vim:
+TThere are some types of variables in Vim:
 \begin{itemize}
 	\item Environment variables: names start with \$ and hold system
 		variables, such as \tttt{\$PATH} and \tttt{\$PWD}.
@@ -305,7 +307,7 @@ but the language is otherwise overall quite powerful,
 specially in dealing with text and editor behavior, as expected.
 
 \subsubsection{State lists}\label{state}
-Vim keeps a number of useful lists which expresses the state of the editor:
+rVoVVim keeps a number of useful lists which expresses the state of the editor:
 \begin{itemize}
 	\item All the entered commands are accessed through \tttt{:hist a}. 
     The tokens ``\tttt{a / e : i d}'' may be used for specific types of commands, such
@@ -820,6 +822,263 @@ The fonts are defined by the terminal or inside gVim.
 Some settings for fonts, such as boldface, might be set using
 the syntax highlighting facilities described in the previous section,
 and are conveniently available through the mentioned plugin in Section~\ref{realcolors}.
+
+\section{Results and discussion}\label{res}
+The framework presented on the previous section yields
+diverse results which are exemplified in this section
+though selected examples.
+Moreover, there are resulting effects in my performance
+for research and development in Universities, public, private and
+unregulated instances.
+These include:
+\begin{itemize}
+  \item Fast and comfortable browsing and edition of diverse types text files.
+  \item Continuous personalization of the Vim editor by means of configuration and scripting.
+  \item Convenient and proper integration of text editing with other languages and the operational system (in my case, an Ubuntu GNU/Linux).
+  \item Assimilation of advanced text processing techniques.
+  \item Contributing to the Vim community by participation in online discussions and by making software available (e.g. Vim plugins).
+\end{itemize}
+
+Most importantly, true to the title and core purpose of the present document,
+this section reports on scientific
+and techological results which I am able to state after
+10 years using Vim.
+
+\subsection{The overview on the titanic Vim text editor}
+In truth, this result is herein achieved by an orchestration of
+all Sections~\ref{intro},~\ref{basics},~\ref{res}, and~\ref{conc}.
+The benefits aimed for, and style used, are scattered in all the text,
+but emphasis should be given so that this result is not overlooked.
+
+If a programmer undertakes the endeavor
+of learning Vim, and the learning curve is
+as steep as is reported by both this document
+the the Vim folklore,
+it is of interest to know what kind of abilities,
+knowledge, and framework at hand to expect in medium and long
+terms.
+The thorough consideration of the understand I have of
+Vim features, all contained in the four sections of this article,
+is very likely to help is such a complicated forecast.
+
+Additionaly,
+the ways to use Vim, and the capabilities one might achieve,
+are blurry even for most advanced users.
+This document is my attempt, \emph{after the emblematic milestone of using Vim for more then 10 years}, to make things nitid.
+A newcommer or intermeddiate-level user
+will need to read manual pages, use web search engines,
+and use Vim for large periods, in order to develop
+fluency with the concept and usage of Vim.
+And an advanced user will most likely still maintain
+a handmade vimrc and suitable collection of notes and scripts.
+Nevertheless, they might benefit in numerous ways from the collections of
+e.g. insights, technical notes, scripts;
+reported in a culturaly elaborated,
+and seemingly scientifically sound, milestone.
+This yields context that entails e.g. the scope of experience
+and fluency,
+and the cost and benefit ratio given by the power
+and use dificulty of the editor.
+
+A less obvious merit of this undertake,
+at least for me,
+is that it might be of use to more advanced
+HCI research, specially for text editors.
+This seems to be the first scientific article on Vim,
+and it might trigger other studies e.g. with user analytics,
+or in comparing reports such as this.
+Needless to say, The use of text editors is obviously very widespread.
+
+There are even less trivial potentially relevant merits.
+For example, the anthropological physics concept already received
+some attention from the scientific community~\cite{anPhy,anPhy2,thesis}.
+While still on the initial versions of this article,
+I received a feedback from an previsouly unknown very experienced
+researcher and software developer, which mentioned having
+more then 20 years using, and made appointments accordingly.
+He gave emphasis on the ``anthropological computer science''
+concept here introduced, with remarks on the suitability of the
+approach, that the term should have been coined earlier,
+and that he intended to make an ``anthropological computer science account of C++''.
+
+\subsection{Syntax highlighting experiments}\label{visual3}
+By being configurable and scriptable, one is able not
+only to load default or installed color schemes,
+but to access and change individual colors arbitrarily.
+This control over the colors are very timidly harnessed,
+given 1) the effect color is believed to have,
+and has been reported to have~\cite{}, on our performance;
+2) the obliterated mechanisms by which one changes colorschemes
+and individual colors in Vim; and 3) the large spans of time
+a researcher or a programmer uses a text editor potentially every day.
+
+Counterintuitively, the color scheme explorations are scarce,
+and the available options most often resort to very standard settings.
+For example, there is no colorscheme with a red background
+among the builting Vim colorschemes (e.g. zellner, blue, etc)
+nor among the usable colorschemes available online,
+at least among the ones I found.
+Also, there seems not to be dedicated scientific documents
+with appropriate best practices or guidelines for syntax highlighting.
+We have been gathering theoretical notes from visual perception, design,
+and data visualization literatures, which we useful for
+deriving at least an initial account of color schemes
+for syntax highlighting.
+These considerations should be systematized and sent
+to a peer-reviewed journal soon.
+
+
+conclusions: intend to write an article about all the SH issues.
+
+\subsubsection{The Realcolors Vim plugin}
+One outcome of such considerations about color schemes
+and syntax highlighting is a plugin dedicated
+to loading, tweaking and experimenting with color schemes in Vim.
+With this plugin, it is easy to 1) load special and experimental color schemes, such as the ones prioritizing passive pink, or blood red, or a bright blue, which hold empirical or historical evidence of having an effect e.g. on mood or performance; 2) inspect the syntax groups of the token under the cursor; 3) access and change the foreground or background color of the prevailing syntax group of the token under the cursor, change bold and italic.
+More information about the realcolors plugin might be found at
+Vim.org~\footnote{\url{http://www.vim.org/scripts/script.php?script_id=5650}} and the public online Git repository~\footnote{https://github.com/ttm/vim}.
+
+\subsection{The tokipona Vim plugin and Python package}
+The first use of the syntax highlighting capabilities of Vim
+though scripting was for studying and appreciating
+the Toki Pona minimalist conlang~\cite{tpBook}.
+Such developments lead to the development
+of the tokipona Python package~\footnote{}
+and the tokipona Vim plugin~\footnote{}.
+The Python package
+holds a number of routines for dealing with Toki Pona,
+which includes the synthesis of Vim syntax files from
+statistical analyses and the official Toki Pona dictionary.
+The Vim plugin enables syntax highlighting for Toki Pona texts
+and further accesses routines in the Python package.
+Figure~\ref{fig:tp} exhibits an example of
+syntax highlighting performed in Toki Pona text
+thought the tokipona Python package and Vim plugin,
+and contextualizes it with other sections of this document.
+
+\subsection{Considerations about the keys available for mappings}
+As expressed in Sections~\ref{map} and~\ref{exmapapendix},
+
+Bram uses \_ and says that we don't use them.
+I find it more comfortable then \^.
+Also, \_ is more powerful: it does the same as \^,
+but might receive a number N before, and jump to
+the first char N-1 lines below.
+
+\subsection{Experiments with VimL and the PRV Vim plugin}
+PRV stands for Python, RDF, and Vim.
+It is an attempt to account for my workflow through
+writing text files in Vim.
+It mingles with vimrc and usage manners described in next subsection.
+By using Python to extend Vim's scripting capabilities, and RDF
+to represent data and state as most convenient,
+the thesis is that Vim will suffice as my platform for research and
+development.
+It is a somewhat usual problem, to which I visited and used a number
+of solutions,
+with care to incorporate suitable routines and design strategies.
+Vimwiki\footnote{https://vimwiki.github.io/} is being most useful,
+and might render \LaTeX and PDF files with pandoc.
+This is of crucial importance, for tying notes and final documents,
+such as articles fit for peer-review, is a recognized benefit and
+often-pursued goal in worldwide Academic and general scientific
+development.
+
+After preliminary implementations for taking arbitrary types of notes,
+and storing them as standalone binaries, RDF, custom plain text, and
+database files (e.g. mongoDB),
+current implementation is taking shape.
+To render notes to share in the cloud, the ideal format is RDF.
+To keep local notes of diverse types and formats,
+it seems sufficient to have 1) one command for one string notes,
+e.g. \tttt{:N todo make a banana cake colorscheme for Realcolors
+plugin};
+2) an efficient file-based solution, such as achieved though Vimwiki.
+
+Such a tree of notes and related documents should have a facilitated
+backup, being all in one directory tree. (vimwiki)
+To avoid sharing unwanted material, one should add
+\tttt{:se cm=blowfish2} and an autocommand to set a key
+whenever the file is to be encripted.
+Or, a less defensive solution, one just types \tttt{:se
+key=aPhraseyouRemember} whenever there is sensitive content.
+As Vimwiki maintains a source tree for all .wiki (and other) files,
+it suffices to add a \tttt{ftplugin/<filetype>.vim} directive
+to set the key. E.g. \tttt{set key=aPhraseyouRemmember} inside
+\tttt{~/.vim/ftplugin/wiki.vim} should enable encryption for all
+\tttt{*.wiki} files.
+
+Another feature of PRV is a bot to enable a number of interaction
+dynamics.
+For example, the bot might learn the sentence structures in the
+notes and synthesize sentences in general or given some reference
+texts.
+A user then might request sentences for some words or files which
+have current research focus, or to help the researcher interconnect
+the concepts which have received notes or are at least in the
+vocabulary.
+Current PRV bot include just returning Fortunes as made available by
+Bram Moolinaar~\footnote{},
+and rudimentary chat with user.
+It is a variant of this very simple bot~\footnote{}, made available
+online by xx in 2006.
+
+A comparison of VimL against other languages
+will need to be addressed PRV to work it 
+This entails that system-specific measurements of 
+e.g. text-mining routines in both VimL and Python
+will have to be made available.
+It seems a honest inquiry: to find out which, if any,
+of the natural language routines of NLTK (Python)
+might perform better using VimL.
+Furthermore,
+VimL seems quite powerful for object oriented
+programming with funcrefs, partials, lambda functions and closures.
+What are the limits and overall drawbacks of maintaining
+methods and variables in dictionary key-values pairs?
+The usual inheritance techniques are very trivial with dictionaries.
+In this sense, dict.key access to attributes
+seems to already be a convenience big enough to
+supervene e.g. Python object oriented facilities.
+What are the limitations inconveniences 
+of VimL for object oriented programming?
+Might one be able to compare VimL and Python to
+C and C++?
+
+In Python, \_xx and \_\_xx attributes are like
+any other to the interpreter.
+By convention, they are protected and private attributes of a class.
+I advocate the same usage for object-like Vim dictionaries.
+
+TODO: I will ask on the list if there is anything like that in VimL.
+
+let job = job\_start(["evince", " ", "~/repos/vim/ttmvim/article/article.pdf"]) 
+jobs, channels, timers, etc etc
+
+
+TODO:
+find smallest available tokens in each namespace:
+latex, javascript, vim, python.
+Propose a technique based on making often made operations
+for them with these tokens.
+
+make a system to load files and directories with
+globpath(g:mydirs, tokipona)
+
+make a decent menu to choose the colorschemes, categorized by:
+realcolors
+builtin
+third party
+
+show normal background and foreground colors and optionally other main
+colors, open the syntax file with a mapping, etc.
+Implement this with the colorpicker shared by v1z
+
+
+\subsection{Usage manners}
+  * also put massetes such as :@*<CR> in a visual selection
+
+\subsection{Potential enhancements to Vim UX}
 
 \section{Conclusions and further work}\label{conc}
 This document seems reasonable as an overall reference of the Vim editor,

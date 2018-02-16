@@ -138,4 +138,5 @@
 " let s:mysid = s:SID()
 " }}}
 let g:loaded_colorsPlugin = 'v01'
-
+" GetLatestVimScripts: 5650 1 :AutoInstall: Realcolors
+"
