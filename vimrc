@@ -22,8 +22,10 @@ let g:netrw_preview=1
 set virtualedit=all
 runtime! ftplugin/man.vim
 set mouse=a
-call pathogen#infect()
+" call pathogen#infect()
 filetype plugin indent on
+
+let g:vimwiki_list = [{'path': '~/.vim/vimwiki/', 'syntax': 'markdown', 'ext': '.wiki'}]
 
 syntax enable
 " syntax on
@@ -37,7 +39,7 @@ set spell spelllang=en_us
 set nospell
 set wildmenu
 set relativenumber
-so ~/.vim/aux/rfencript.vim
+" so ~/.vim/aux/rfencript.vim
 
 " same as :set backspace=indent,eol,start
 set backspace=2
@@ -52,7 +54,7 @@ set listchars=tab:>-,trail:.,extends:#,nbsp:*,eol:$
 " set clipboard=unnamed
 set hlsearch incsearch
 set bg=dark
-au Colorscheme * so ~/.vim/syntax/mysyntaxfileTTM.vim
+au Colorscheme * so ~/.vim/aux/underlineSpellBad.vim
 " colorscheme gruvbox
 colo blue
 let maplocalleader = "\\\\"
@@ -334,7 +336,7 @@ nnoremap <leader>L :set list!<CR>
 nnoremap <leader>n :set number!<CR>
 nnoremap <leader>N :set relativenumber!<CR>
 nnoremap <leader>p :reg<CR>
-nnoremap <leader>P :vs /home/renato/vimwiki/blergh.wiki<CR>
+
 nnoremap <leader>q :q<CR>
 " next command is only to remember how to do stuff
 nnoremap <leader>r ?^\n<CR>V/^\n<CR>:py3 exec(vim.eval("@*"))<CR>/W<CR>f'lvt'y:!aplay <C-R>"
@@ -348,10 +350,17 @@ nnoremap <leader>x :execute getline('.')<CR>
 nnoremap <leader>X :execute getline('.')
 
 " Vimwiki
-nnoremap <leader>wA :vs ~/vimwiki/achievements.wiki<CR>
-nnoremap <leader>wT :vs ~/vimwiki/todo.wiki<CR>
-nnoremap <leader>wD :vs ~/vimwiki/daily/tasks.wiki<CR>
-nnoremap <leader>wW :vs ~/vimwiki/weekly/wtasks.wiki<CR>
+fu! VWFileNMapping(mapping, fpath)
+  let tpath = g:vimwiki_list[0].path . a:fpath
+  let tcmd = ' :vs ' . tpath
+  let tcmd2 = 'nnoremap ' . a:mapping . l:tcmd . '<CR>'
+  exec l:tcmd2
+endfu
+call VWFileNMapping("<leader>wA", "achievements.wiki")
+call VWFileNMapping("<leader>wT", "todo.wiki")
+call VWFileNMapping("<leader>wD", "daily/tasks.wiki")
+call VWFileNMapping("<leader>wW", "weekly/wtasks.wiki")
+call VWFileNMapping("<leader>wN", "blergh.wiki")
 
 "-> nnoremap <leader>z :call ExtremeFolding()<CR>
 function! InsertBeforeAfter()

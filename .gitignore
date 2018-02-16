@@ -1,5 +1,11 @@
 # Vim
+*vimwiki.vim
 *.swp
+pack/plugins/*
+pack/ttm/start/tokipona
+undo/
+viminfo
+vimwiki/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
