@@ -1,8 +1,10 @@
 # Vim
 *.swp
+aux/trash/
 pack/plugins/*
 pack/ttm/start/tokipona
 undo/
+spell/
 viminfo
 # vimwiki/
 .netrw*

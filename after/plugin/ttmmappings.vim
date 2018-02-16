@@ -34,8 +34,8 @@ cnoremap d <ESC><C-W>:tabn<CR>l<c-w>:
 
 nnoremap e :e<CR>
 inoremap e <ESC>:e<CR>a
-nnoremap e <C-L>
-inoremap e <ESC><C-L>:e<CR>a
+nnoremap E <C-L>
+inoremap E <ESC><C-L>:e<CR>a
 
 " should run functions, for now just VimL
 nnoremap f mf?^fu^MV/^endf^M:@*^M`f
@@ -81,6 +81,8 @@ nnoremap s :up<CR>:source $MYVIMRC<CR>:runtime! plugin/**/*.vim<CR>
 inoremap s <ESC>:up<CR>:source %<CR>a
 nnoremap S :up<CR>:source $MYVIMRC<CR>
 inoremap S <ESC>:up<CR>:source %<CR>l
+
+nnoremap U :call PushPRV("Auto updating PRV")
 
 nnoremap W :w<CR>
 inoremap W <ESC>:w<CR>a
@@ -128,7 +130,6 @@ nnoremap <leader>p :reg<CR>
 nnoremap <leader>q :q<CR>
 " next command is only to remember how to do stuff
 nnoremap <leader>r ?^\n<CR>V/^\n<CR>:py3 exec(vim.eval("@*"))<CR>/W<CR>f'lvt'y:!aplay <C-R>"
-"-> nnoremap <leader>R :call PythonShowRun()<CR>
 nnoremap <leader>s :up<CR>:source $MYVIMRC<CR>
 nnoremap <leader>S :up<CR>:let g:mmapclear=1<CR>:mapclear<CR> :source $MYVIMRC<CR>
 nnoremap <leader>t :vs.<CR><C-W>T

@@ -2,17 +2,17 @@ if !exists("g:pdfjobs")
   let g:pdfjobs = []
 endif
 
-fu! ExtremeFolding() " {{{
-  if &foldopen == 'all'
+fu! ExtremeFolding() " {{{1
+  if &nctionfoldopen == 'all'
     set foldopen&
     set foldclose&
   else
     set foldopen=all
     set foldclose=all
   endif
-endfu " }}}
+endfu
 
-fu! PythonShowRun() " {{{
+fu! PythonShowRun() " {{{1
   " Move this function to +PRV? TTM
   let pout = system("python3 " . bufname("%") . " 2>&1")
   " Open a new split and set it up.
@@ -21,10 +21,9 @@ fu! PythonShowRun() " {{{
   setlocal buftype=nofile
   " Insert the bytecode.
   call append(0, split(pout, '\v\n'))
-endfu " }}}
+endfu
 
-" WWW navigation ------------------------------------ {{{
-fu! ViewHtmlText(url)
+fu! ViewHtmlText(url) " WWW navigation {{{1
   if !empty(a:url)
     new
     setlocal buftype=nofile bufhidden=hide noswapfile
@@ -33,10 +32,8 @@ fu! ViewHtmlText(url)
     1d
   endif
 endfu
-" }}}
 
-" verbose vim usage for hacking ------------------------------------ {{{
-function! ToggleVerbose()
+fu! ToggleVerbose() " {{{1
     if !&verbose
         set verbosefile=~/.vim/aux/verbose.log
         set verbose=15
@@ -46,17 +43,16 @@ function! ToggleVerbose()
         set verbose=0
         set verbosefile=
     endif
-endfunction
-" }}}
+endfu
 
-fu! VWFileNMapping(mapping, fpath) " {{{
+fu! VWFileNMapping(mapping, fpath) " {{{1
   let tpath = g:vimwiki_list[0].path . a:fpath
   let tcmd = ' :vs ' . tpath
   let tcmd2 = 'nnoremap ' . a:mapping . l:tcmd . '<CR>'
   exec l:tcmd2
-endfu " }}}
+endfu
 
-" insert one char {{{
+" insert one char {{{1
 function! InsertBeforeAfter()
   let a = nr2char(getchar())
   :exec "normal i".a."\e"
@@ -67,9 +63,8 @@ function! InsertAfterAfter()
   :exec "normal a".a."\e"
   :exec "normal lla".a."\e"
 endfunction
-" }}}
 
-" sessions {{{
+" sessions {{{1
 set sessionoptions+=globals
 function! SaveSession()
   if !exists("g:msession")
@@ -103,9 +98,8 @@ endfunction
 function! ListSessions()
   execute '!ls ~/.vim/sessions/'
 endfunction
-" }}}
 
-" visual functions {{{
+" visual functions {{{1
 function! ShowImg()
   exec "normal! viWy"
   silent exec '!eog -f ' getreg('0')
@@ -132,9 +126,8 @@ function! ToggleTabLine()
     set showtabline=2
   endif
 endfunction
-" }}}
 
-function! TabMessage(cmd) " {{{
+fu! TabMessage(cmd) " {{{1
   " use like :TabMessage highlight
   redir => message
   silent execute a:cmd
@@ -147,9 +140,9 @@ function! TabMessage(cmd) " {{{
     setlocal buftype=nofile bufhidden=wipe noswapfile nobuflisted nomodified
     silent put=message
   endif
-endfunction " }}}
+endfu
 
-function! SplitMessage(...) " {{{
+fu! SplitMessage(...) " {{{1
   " this function output the result of the Ex command into a split scratch buffer
   let cmd = join(a:000, ' ')
   let temp_reg = @"
@@ -165,9 +158,9 @@ function! SplitMessage(...) " {{{
     setlocal buftype=nofile bufhidden=wipe noswapfile nobuflisted
     put! =output
   endif
-endfunction " }}}
+endfu
 
-function! HiFile() " {{{
+fu! HiFile() " {{{1
   " Does a bad job... But the idea is good, enhance it! TTM
   " run to hightlight the buffer with the highlight output
   " e.g. after :Split sy or :Split hi
@@ -179,9 +172,9 @@ function! HiFile() " {{{
         endif
         let i += 1
     endwhile
-endfunction " }}}
+endfu
 
-fu! OpenPDF() " {{{
+fu! OpenPDF() " {{{1
   let l:tfname = expand("%:r") . '.pdf'
   let l:tcmd = 'evince ' . l:tfname
   if !filereadable(l:tfname)
@@ -190,11 +183,26 @@ fu! OpenPDF() " {{{
   else
     call add( g:pdfjobs, job_start(["/bin/bash", "-c", l:tcmd]))
   endif
-endfu " }}}
+endfu
 
-fu! CompileLatex() " {{{
+fu! CompileLatex() " {{{1
   let l:tfname = expand("%")
   let l:tdname = expand("%:h")
   let l:tcmd = 'pdflatex -output-directory=' . l:tdname . '/ ' . l:tfname
   call job_start(["/bin/bash", "-c", l:tcmd])
-endfu " }}}
+endfu
+
+fu! RotateRegisters() " {{{1
+  let @h=@j
+  let @j=@k
+  let @k=@l
+  let @l=@.
+endfu
+
+fu! PushPRV(amsg) " {{{1
+  " encrypt all vimwiki messages
+  " add -f vimwiki
+  " commit -am '
+  " decrypt all msgs
+endfu
+

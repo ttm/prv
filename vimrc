@@ -11,12 +11,10 @@ se digraph
 " to enable true colors inside Byoby/Tmux
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-set viminfo=%,!,'1000,:1000,n~/.vim/viminfo
+set viminfo=%,!,'1000,:1000,n~/.vim/aux/viminfo
 set tw=0
 se noru
 " se autowrite does not work... using update again on mappings
-autocmd InsertEnter * set timeoutlen=200
-autocmd InsertLeave * set timeoutlen=1000
 let g:netrw_altv=1
 let g:netrw_preview=1
 set virtualedit=all
@@ -54,23 +52,13 @@ set listchars=tab:>-,trail:.,extends:#,nbsp:*,eol:$
 " set clipboard=unnamed
 set hlsearch incsearch
 set bg=dark
-au Colorscheme * so ~/.vim/aux/underlineSpellBad.vim
 " colorscheme gruvbox
 colo blue
 let maplocalleader = "\\\\"
 let mapleader = "\\"
-augroup vimrcEx
-  au!
-  " restore-cursor, usr-05.txt
-  autocmd BufReadPost *
-    \ if line("'\"") >= 1 && line("'\"") <= line("$") |
-    \   exe "normal! g`\"" |
-    \ endif
-augroup END
-
   " persistent undo, make /.vim/undo dir ----- {{{
     set undofile
-    set undodir=$HOME/.vim/undo
+    set undodir=$HOME/.vim/aux/undo
     set undolevels=1000
     set undoreload=10000
   " }}}
@@ -87,36 +75,6 @@ set statusline+=%=                           " right align remainder
 set statusline+=0x%-8B                       " character value  
 set statusline+=%-14(%l/%L,%P,%c%V%)               " line, character  
 " set statusline=%<%f%h%m%r%=%{strftime(\"%l:%M:%S\ \%p,\ %a\ %b\ %d,\ %Y\")}\ %{&ff}\ %l,%c%V\ %P
-" }}}
-" }}}
-
-" filetype settings --- {{{
-" Vimscript file settings ---------------------- {{{
-augroup filetype_vim
-  autocmd!
-  autocmd FileType vim setlocal foldmethod=marker softtabstop=2 shiftwidth=2 expandtab
-augroup END
-" }}}
-
-" Help file settings ---------------------- {{{
-augroup filetype_help
-  autocmd!
-  autocmd FileType help setlocal iskeyword+=-,.,(,)
-augroup END
-" }}}
-
-" Python file settings ---------------------- {{{
-augroup pythonaus
-  autocmd!
-  " TTM removed tabstop=4
-  autocmd BufNewFile,BufRead *.py set softtabstop=4 shiftwidth=4 textwidth=0 expandtab autoindent fileformat=unix
-  autocmd BufNewFile,BufRead *.py nnoremap <buffer> cd /\<def\><CR>
-  autocmd BufNewFile,BufRead *.py nnoremap <buffer> cD ?\<def\><CR> 
-  autocmd BufNewFile,BufRead *.py nnoremap <buffer> cc /\<class\><CR>
-  autocmd BufNewFile,BufRead *.py nnoremap <buffer> cC ?\<class\><CR>
-  " validade this (from usr_05.txt):
-  vnoremap _g y:exe "grep /" . escape(@", '\\/') . "/ *.py"<CR>
-augroup END
 " }}}
 " }}}
 
@@ -208,20 +166,6 @@ onoremap iN[ :<c-u>normal! F]vi[<cr>
 onoremap in{ :<c-u>normal! f{vi{<cr>
 onoremap iN{ :<c-u>normal! F}vi{<cr>
 " }}}
-" }}}
-
-" autocommands --- {{{
-function! RotateRegisters()
-  let @h=@j
-  let @j=@k
-  let @k=@l
-  let @l=@.
-endfunction
-au InsertLeave * call RotateRegisters()
-
-autocmd CmdwinEnter * map <buffer> <C-D> <CR>q:
-autocmd CmdwinEnter * map <buffer> <C-E> <CR> input("")q:
-
 " }}}
 
 let @f = 'mf?^fu^MV/^endf^M:@*^M`f'
