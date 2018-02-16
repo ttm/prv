@@ -1,1 +1,3 @@
-VimCrypt~03!`mvÅÂEmÛ‹„q¬ûVŞbñŒ.ScàiSBOTœ¦¸Ç¶Yãºèï6•×Ø0s/‹jY!êDM+Ö0’K@Ä®’¡z„âKĞ»²óš\Î-6¿“åÏ
+setl cm=blowfish2
+setl key=eusomuitogei
+let b:rfVimwikiDecrypt=v:true
