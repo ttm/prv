@@ -1,11 +1,13 @@
 # Vim
-*vimwiki.vim
 *.swp
+ftplugin/vimwikiTrue.vim
+ftplugin/vimwiki.vim
 pack/plugins/*
 pack/ttm/start/tokipona
 undo/
 viminfo
 vimwiki/
+.netrw*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
