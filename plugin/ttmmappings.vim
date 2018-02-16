@@ -32,6 +32,11 @@ tnoremap d <C-W>:tabn<CR>
 inoremap d <ESC><C-W>:tabn<CR>l<C-W>:startinsert<CR>
 cnoremap d <ESC><C-W>:tabn<CR>l<c-w>:
 
+nnoremap e :e<CR>
+inoremap e <ESC>:e<CR>a
+nnoremap e <C-L>
+inoremap e <ESC><C-L>:e<CR>a
+
 " should run functions, for now just VimL
 nnoremap f mf?^fu^MV/^endf^M:@*^M`f
 inoremap f <ESC>mf?^fu^MV/^endf^M:@*^M`fa

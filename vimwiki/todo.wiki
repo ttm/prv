@@ -1,0 +1,20 @@
+(send finished items to [[achievements]] \wa)
+
+Ter Fev 13 04:27:03 -02 2018
+- send Vim and tokipona articles for publishing
+  * make results section in Vim article
+  * upload Vim article to arXiv
+  * review tokipona article
+  * upload tokipona article to arXiv
+  * send Vim artice for publication
+  * send tokipona article for publication
+- send inequality and losd articles to arXiv, to force me to take some measures about these stuck documents.
+
+Vim
+- see last commits to understando what has been integrated into Vim.
+- Ask list about current milestone in Vim? Bram is commiting daily, so is there a version?
+- install with ruby to use notmutch for reading email:
+  * https://github.com/felipec/notmuch-vim
+* study [[encription]]:
+  * make autocommands to autoencrypt .wiki files with blowfish2, c13, zip in some strange sequences and keys.
+* Create a mapping that creates the necessary directories (with :!mkdir) and opens the new file (with :e <cfile><CR>) given any filepath under cursor.

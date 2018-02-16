@@ -1,0 +1,180 @@
+how to organize teh presentation?
+* use Vimwiki pages for the slides?
+* Should I use another wiki or might I be able to open a new directory?
+
+
+I should tackle all that i have been doing,
+with emphasis on the data visualization tt5 project.
+
+So, topics:
+* Who am I?
+  - A research associate at ICMC/USP.
+  - Background:
+    * Finished doc in first half of 2017 (IFSC-USP)
+      - Computational, applied, statistical physics
+      - Topological stability and textual differentiation in human interaction networks: statistical analysis, visualization and linked data
+    * Worked with many non-academic partners:
+      - for software development
+      - for art (mainly music and technology, I have a bachelor in muщ comp)
+      - Example partners:
+        * ONU, SGPR, MinC, MEC...
+        * labMacambira.sourceforge.net, CDTL, juntaDados.org, Nós Digitais...
+      - Last achievements:
+        * published at arXiv the articles about:
+          - tokipona (a minimalist conland: analysis, synthesis, syntax highlighting, more?),
+          - about Vim (a report after 10 years of usage, an overview that is sound and simple through the namespaces (of commands, functions, mappings, logs, configurations, etc).
+        * published the music half-shape suite (6 movements, almost 20 minutes, all python, symmetries, group theory, synthesis with control at sample level, extreme fidelity to the mathematical models..)
+        * published the Vim plugin realcolors (to tweak color schemes and access special cases: passive pink; red, blue, gray, brighter and darker, more and less contrast etc etc etc etc)
+        * agreed in how to document Python-heavy projects with the Numpy and Scipy communities (Sphinx + PyPI + github.io or readthedocs.org + github)
+        * Finished all chapters of the first section (of three) of a book about statistical machine learning
+        * maintained routine since beggining of January:
+          - slot = 2h dedication + 30m planning + 1h resting or whatever
+          - routine = (4 * slot)/day
+          - each slot of one day is dedicated to a different subject
+        * published music package in pypi
+      - Current goals:
+        - send writings ﬅo peer-reviewed journals
+        - better understand color perception
+        - contribute to syntax highlighting using understandings about colors
+        - make contributions to visualization of social networks (complex networks and written language) and of soundscapes (signal processing).
+        - enhance analyses, e.g. by the achievement of meaningful statistics and the incorporation of ml techniques.
+
+* TT5 research project overview
+  - visit PDF from cristina and my tt5 project
+* SNA
+  - network layouts for visualization (ccnetviz)
+  - versinus
+  - multilevel strategies for network (specially bipartite networks)
+  - text visualization       
+    * text highlighting
+    * kolm-sminov-related tables
+    * PCA of simple statistics
+  - LOSD
+    * article, brief description
+  - colors
+    * books by goethe...
+    * perception for design
+    * realcolors plugin
+  - visualizations derived from the thesis
+    * erdos histogram and timelines
+    * pca components
+    * temporal and circular/directional statistics
+    * distances between sets of textual measurements
+*     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+E = k.ln (s/s_0)
+se s' = 2*s
+E' = kln2 + ln(s/s_0)
+
+Ou seja, um passo geometrico de
+frequencia implica em um passo aritmetico de altura.
+
+E é altura ou volume, ou seja, Estímulo.
+e.g.:
+
+
+email para o Poco:
+
+Hi Poco, thanks for the nice conversation.
+
+I hope you have a pleasant stay.
+If you need or want something, write me here or wapp:
+16 98107 7222.
+I try to check messages often,
+but I almost always leave it
+silent if not expecting a call.
+
+It looks like Tsallis has a unification of power-laws
+and exponentials that might help with the confluence of
+Weber-Fechner and Steven's laws that I mentioned to you.
+
+Here are some notes about our conversation
+and some thoughts about sensors for urban soundscapes.
+
+:::
+
+You, about color schemes for syntax highlighting:
+* Psychometric for color
+* CS color blindness (acessibilidade)
+  * matlab matplotlib cs p daltonismo
+  * Perceptually uniform sequential colormaps
+  * Just Noticeable difference***
+  * Image and painting-inspired color schemes for syntax highlighting
+    * image given by user, or presets
+  * User-fine tuning and creation of cs
+* crowd-sourced experiments 
+
+Things you are interested in:
+* eng reversa de imagens
+* interp de redes neurais por visualização
+  * Mandar trab de wavelets p int de red neurais
+  * tb este video: https://www.youtube.com/watch?v=ghEmQSxT6tw
+* visualizacao dentro de data science:
+  * Talvez você goste de conhecer: https://github.com/ttm/aavo/
+* urban soundscapes
+  * NYC soundscapes - event identification and localization through multiple microphones
+  * mingle with VICG
+  * social participation
+  * Some thoughts about follows this list.
+
+arduino nano ou raspberry, pendrive, mic condensador
+(omni ou direcional, o q tiver melhor custo/benefício).
+
+condensador precisa de alimentação 5V (chama phantom),
+arduino ou raspberry não sei a alimentação mas acho que pode ser 5V.
+
+Deixar nas casas em perdizes,
+distribuir no condomínio onde moro, etc.
+Tudo voluntário.
+Distribuir na USP? ICMC?
+
+TODO:
+* adicionar colores claras para ambientes claros segundo a cristina.
+  achar referência
+  
+* syntax sonification: speech or sing each word with charachteristics
+  that follow their morphosyntactic class 
+  
+* tirar nome da cristina do artigo de toki pona 
+
+* sessao toki pona
+
+
+

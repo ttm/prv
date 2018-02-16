@@ -1,12 +1,10 @@
 # Vim
 *.swp
-ftplugin/vimwikiTrue.vim
-ftplugin/vimwiki.vim
 pack/plugins/*
 pack/ttm/start/tokipona
 undo/
 viminfo
-vimwiki/
+# vimwiki/
 .netrw*
 
 # Byte-compiled / optimized / DLL files
@@ -110,11 +108,3 @@ ENV/
 
 # mypy
 .mypy_cache/
-
-ftplugin/vimwikiTrue.vim
-ftplugin/vimwiki.vim
-*/vimwikiTrue.vim
-*/vimwiki.vim
-vimwiki.vim
-**/*vimwiki*
-**/*vimwiki*
