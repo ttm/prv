@@ -132,7 +132,7 @@ fu! TabMessage(cmd) " {{{1
   redir => message
   silent execute a:cmd
   redir END
-  if empty(message)
+  if empty(l:message)
     echoerr "no output"
   else
     " use "new" instead of "tabnew" below if you prefer split windows instead of tabs
@@ -199,43 +199,108 @@ fu! RotateRegisters() " {{{1
   let @l=@.
 endfu
 
-fu! PushPRV(amsg) " {{{1
+fu! DecryptVimwiki() " {{{1
   " encrypt all vimwiki messages
   " add -f vimwiki
   " commit -am '
   " decrypt all msgs
   let g:tcmd = 'vs ' . g:prv_dir . 'aux/vimwiki/'
   exe g:tcmd
-  normal /" =====
+  " normal /^" =====.*\n[^"]\<CR>
+  silent g|=.*\n.[^ ]
   normal j
-  let tlinen = line('.')
-  let visdirs = 0
+  let l:tlinen = line('.')
+  let l:visdirs = 0
+  let g:cmls = []
+  let g:visited = []
   while 1
     let tline = getline('.')
-    if tline != '../' && tline != './'
-      normal \<CR>
-      if &ft == 'vimwiki'
-        exe "normal e"
-        setl key=
-        exe "normal e:w\<CR>\<C-^>"
-      elseif &ft != 'netrw'
-        normal \<C-^>
+    echo l:tlinen tline
+    if l:tline != "../" && l:tline != "./"
+      echo 'not ..'
+      let fname = expand("<cfile>:p")
+      if index(g:visited, fname) >= 0
+        " file or dir already visited..
+        let l:alinen = line('.')
+        normal j
+        if l:alinen == line('.')
+          normal -
+          let g:visdirs -= 1
+        else
+          let l:tlinen = line('.')
+          continue
+        endif
+        
       endif
+      silent exec "normal \<CR>"
+      " silent exec "normal gf"
+      if &ft == 'vimwiki'
+        "ec 'found vimwiki'
+        " call input('1 Press any key to continue')
+        e
+        " call input('3 Press any key to continue')
+        setl key=
+        " call input('4 Press any key to continue')
+        exe "normal :w\<CR>"
+        call add(g:cmls, getcmdline())
+        " call input('5 Press any key to continue')
+        " exe "normal :w!\<CR>\<C-^>"
+        exe "normal \<C-^>"
+        " call input('6 Press any key to continue')
+      elseif &ft != 'netrw'
+        "ec 'found spurious'
+        exe "normal \<C-^>"
+      else
+        "ec "entered a directory"
+        silent g|=.*\n.[^ ]
+        normal j
+        let l:tlinen = line('.')
+        continue
+      endif
+      call add(g:visited, l:fname)
     else
-      let visdirs += 0.5
+      echo "yes .."
+      "ec 'dir half count'
+      let l:visdirs += 0.5
     endif
     normal j
-    if line('.') != tlinen
-      let tlinen = line('.')
-    else
-      normal -
-      let visdirs -= 1
-      if visdirs < 0.9
-        break
+    if line('.') == l:tlinen
+      if exists("l:entdict")
+        let banana=6
+      else
+        "ec 'got to the same line. Up a dir'
+        let stuck = 1
+        while stuck
+          normal -
+          let l:visdirs -= 1
+          if l:visdirs < 0.9
+            break
+          endif
+          let l:alinen = line('.')
+          normal j
+          if l:alinen == line('.')
+            " got up a dir to the bottom of the list
+            " will loop again
+          else
+            let stuck = 0
+          endif
+        endwhile
       endif
-      normal j
-      let tlinen = line('.')
     endif
+    let l:tlinen = line('.')
   endwhile
 endfu
 
+fu! SearchFilenameRTP()
+  let a = expand("<cword>")
+  let b = '**/' . g:a . '*'
+  let c = ':Split echo globpath(&rtp, "' . g:b . '")'
+  normal c
+endfu
+
+fu! SetRegisters()
+  let @g = expand("<cword>")
+  let b = '**/' . g:a . '*'
+  let c = ':Split echo globpath(&rtp, "' . g:b . '")'
+  normal c
+endfu

@@ -1,6 +1,11 @@
-au InsertEnter * set timeoutlen=200
-au InsertLeave * set timeoutlen=1000
+" for mapping of letters in insert mode {{{ 
+" (test with <Space> to replicate normal commands)
+" au InsertEnter * set timeoutlen=200
+" au InsertLeave * set timeoutlen=1000
+" }}}
+
 au Colorscheme * runtime ~/.vim/aux/underlineSpellBad.vim
+" What is this for?? TTM
 aug vimrcEx
   au!
   " restore-cursor, usr-05.txt

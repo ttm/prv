@@ -1,3 +1,5 @@
+nnoremap : q:i
+nnoremap q: :
 nnoremap <leader>z :call ExtremeFolding()<CR>
 nnoremap <leader>R :call PythonShowRun()<CR>
 
@@ -18,9 +20,27 @@ inoremap a <ESC><C-W>:tabp<CR>l<C-W>:startinsert<CR>
 cnoremap a <ESC><C-W>:tabp<CR>l<c-w>:
 tnoremap a <C-W>:tabp<CR>
 
+" AA mappings
+nnoremap Aa :A 
+nnoremap AA :exec "vs " . g:aa_file<CR>
+nnoremap As :exec "vs " . g:aa_file<CR>Go<ESC>o<ESC>:.!date<CR>:put =g:aa_separator<CR>kki
+
+nnoremap Ai :call AAStartSession(15, 8)
+nnoremap At :call AASinceLastShout()<CR>
+nnoremap An :Note 
+
+" inoremap As :exec "vs " . g:aa_file<CR>Go<ESC>:.!date<CR>Go<ESC>:put =g:aa_separator<CR>kki
+" tnoremap A 
+
+nnoremap b :exec '15Le ' . expand("%:h")<CR>:let t:exp_set_ttm = 1<CR>
+nnoremap B :if exists("g:exp_set_ttm")<CR>9<C-W>h:q<CR>:unlet! t:exp_set_ttm<CR>
+
 " should put fold markers as comments, for now just VimL
 noremap c mf?^fuA " {{{/^endfuA " }}}`f 
 inoremap c <ESC>?^fuA " {{{/^endfuA " }}}`fa
+" for gigraphs
+inoremap C <ESC>a
+inoremap Ck k<BS>I
 
 " nnoremap d gT
 " inoremap d <ESC><C-W>:tabp<CR>l<C-W>:startinsert<CR>
@@ -31,6 +51,7 @@ nnoremap d gt
 tnoremap d <C-W>:tabn<CR>
 inoremap d <ESC><C-W>:tabn<CR>l<C-W>:startinsert<CR>
 cnoremap d <ESC><C-W>:tabn<CR>l<c-w>:
+inoremap Dk k<BS>I
 
 nnoremap e :e<CR>
 inoremap e <ESC>:e<CR>a
@@ -42,9 +63,13 @@ nnoremap f mf?^fu<CR>V/^endf<CR>:@*<CR>`f
 inoremap f <ESC>mf?^fu<CR>V/^endf<CR>:@*<CR>`fa
 
 " find files
-nnoremap FF :Split echo globpath('/home/renato/repos/', "**/percolation*/**")
-nnoremap Ff :Split echo globpath(&rtp, "*/vimwiki.vim")
+nnoremap FF :Split echo globpath('/home/renato/repos/', "**/rdf*")
+nnoremap Ff :Split echo globpath(&rtp, "*/ttm*")
+" nnoremap Ff :Split echo globpath(&rtp, '"**/' . expand("<cword>") . "*")
+nnoremap Fa :Split echo globpath(&rtp, "*/ttm*")<CR>
+nnoremap FA :Split echo globpath(&rtp, "**/pack/**")<CR>
 
+nnoremap Fs :lvim /RegisterNote/ ~/.vim/pack/ttm/**
 nnoremap g :up<CR>:source %<CR>
 inoremap g <ESC>:up<CR>:source %<CR>
 
@@ -69,6 +94,12 @@ nnoremap L :call CompileLatex()<CR>
 
 inoremap o <ESC>
 
+" Notes mappings
+" nnoremap N 
+" inoremap N 
+" cnoremap N 
+" tnoremap N 
+
 nnoremap p :runtime! plugin/**/*.vim<CR>
 inoremap p <ESC>:runtime! plugin/**/*.vim<CR>a
 nnoremap P :call OpenPDF()<CR>
@@ -84,20 +115,40 @@ inoremap S <ESC>:up<CR>:source %<CR>l
 
 nnoremap U :call PushPRV("Auto updating PRV")
 
+inoremap x <ESC>:up<CR>
+inoremap 3 <ESC>:up<CR>
+inoremap [ <ESC>:up<CR>
+
 nnoremap W :w<CR>
 inoremap W <ESC>:w<CR>a
 nnoremap w :up<CR>
 inoremap w <ESC>:up<CR>a
 nnoremap q :q<CR>
 inoremap q <ESC>:q<CR>a
+
+" substitue all these mappings by one e+surroundings.
+" E might be previous words, or WORD. TTM
+nnoremap " ea"<ESC>hbi"<ESC>lel
+nnoremap ' ea'<ESC>hbi'<ESC>lel
+inoremap " <ESC>hhea"<ESC>hbi"<ESC>lelli
+inoremap ' <ESC>hhea'<ESC>hbi'<ESC>lelli
+cnoremap " ea"<ESC>hbi"<ESC>lel<CR>
+cnoremap ' ea'<ESC>hbi'<ESC>lel<CR>
+tnoremap " ea"<ESC>hbi"<ESC>lel<CR>
+tnoremap ' ea'<ESC>hbi'<ESC>lel<CR>
+
+" }}}
+
+" space mappings ---------------------- {{{
+" normal mode mappings
+" migrated from leader mappings
+nnoremap <Space>a :exec "normal li".nr2char(getchar())."\e"<CR>
+nnoremap <Space>A  :call InsertAfterAfter()<CR>
+" for all the digraphs
 " }}}
 
 " leader mappings ---------------------- {{{
-nnoremap <leader>" ea"<ESC>hbi"<ESC>lel<CR>
-vnoremap <leader>" <ESC>`>a"<ESC>`<i"<ESC>
-vnoremap <leader>' <ESC>`>a'<ESC>`<i'<ESC>
-nnoremap <leader>a :exec "normal li".nr2char(getchar())."\e"<CR>
-nnoremap <leader>A  :call InsertAfterAfter()<CR>
+" should be removed in order to avoid conflict with plugins
 nnoremap <leader>b :Sex<CR><C-W>T
 nnoremap <leader>B :Sex<CR>
 nnoremap <leader>c :<C-F>
@@ -140,7 +191,7 @@ nnoremap <leader>X :execute getline('.')
 
 " Vimwiki
 call VWFileNMapping("<leader>wA", "achievements.wiki")
-call VWFileNMapping("<leader>wT", "todo.wiki")
+call VWFileNMapping("<leader>wT", "../todo.wiki")
 call VWFileNMapping("<leader>wD", "daily/tasks.wiki")
 call VWFileNMapping("<leader>wW", "weekly/wtasks.wiki")
 call VWFileNMapping("<leader>wN", "blergh.wiki")

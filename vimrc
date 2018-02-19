@@ -2,6 +2,8 @@
 " reworked for usage with Vim 8, True Colors (24 bits) and tmux
 set nocompatible
 let g:prv_dir = expand("<sfile>:h") . '/'
+let g:netrw_liststyle = 0
+set textwidth=0
 
 set termguicolors
 " :se t_Co should give 256, otherwise uncomment:
@@ -67,7 +69,7 @@ let mapleader = "\\"
   " }}}
 
 " statusline --- {{{
-set laststatus=0                             " always show statusbar  
+set laststatus=2                             " always show statusbar  
 set statusline=%-5.3n\                     " buffer number  
 set statusline+=%f\                          " filename   
 set statusline+=%h%m%r%w                     " status flags  
@@ -135,7 +137,7 @@ tnoremap <C-H> <C-W><C-H>
 nnoremap <space><space> za
 " inoremap jj <ESC>:up<CR>
 " inoremap jj <ESC>:up<CR>
-inoremap <C-[> <ESC>:up<CR>
+" inoremap <C-[> <ESC>:up<CR>
 " inoremap kk <CR><UP>
 " inoremap kj <ESC>kyypi
 " inoremap jk <ESC>jyyPi
@@ -460,3 +462,14 @@ map Q gq
 " respecting the desing of the keyboard for writting.
 " (study typing techniques?)
 
+" both statusline and tabsline are lines (not statusbar, but
+" statusline)
+"
+" run :helptags and include the generated files in the distro, as un
+" :h  repeat | g/command to generate the doc/tags file
+" (in the context of :helptags and plug-and-play packages)
+"
+" vim parses the files before sourcing, so it is quite robust to
+" dependencies, handling them without need for a sourcing order for the files
+"
+" sessao no artigo sobre debugging

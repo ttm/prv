@@ -1,4 +1,5 @@
 # Vim
+aux/vimwiki/
 *.swp
 aux/trash/
 pack/plugins/*

@@ -1,4 +1,15 @@
-VimCrypt~03!¬ïGÏ‚8ÇlÓ-#BÅ}µ'Ä¸’0õ*iÑãV¿.qõDğK*ï8‚f–låµÄàh§»Š’ç
-Ö•ØÙ'dÓ6Œlı2ú.Áqé_Ğ:¹ƒıÀ{¥+ÑìÖ Úp;â '°ï#>ì“
-¶†çì_õÀ§y5˜¿ ’ŒÁåiêgã\#óe7²Š91†^ƒpD8-µ	ZÈUÔ	ÈŒå©%útò#BNè±òÿúçfÏø¿#^¦C.âí  Ş|.±Q¤]^#_úå$çcT.kç‰¬‚alõZŒÏœğn)´Òÿ[íZŒövãe2S8µ£³1B˜™g9!ªqá²~ìŞ-£4´BÀ‹šwº°™et’ŒdÑ"jÈÚ„\%“OÕZÔúÜ„†l›…P2t_a©âpQvù©
-²BŸoa`çeê-KGêšÅêçK«Ö]şs]›0@îù“Km´Ş>uÈ¹çÃOÏWc 02œU9‹9Ãà]Ÿ³¾áû©>	ºX†Ò8·k4H9G¤NÊíÑ×yqVp™p2|ƒS-¸§2Ø-Wë0^yxˆ*¹ß6Ï•kO«’
+(receive items from [[todo]])
+fev 12
+* published tokipona python package at PyPI
+
+Ter Fev 13 04:20:30 -02 2018
+* finished cap 1 of natural computing
+
+Qui Fev 15 15:30:00 -02 2018
+* Using vimtex
+* saw videos from Bram (2007, 2016) taking notes
+
+Sex Fev 16 13:08:45 -02 2018
+- encrypt prv notes in repo and add to git management
+- joined all vim repos and resources (.vim ttm/vim ttm/prv in one
+  repo. Tokipona was left in another repo)
