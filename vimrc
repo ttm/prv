@@ -83,6 +83,10 @@ set statusline+=%-14(%l/%L,%P,%c%V%)               " line, character
 " }}}
 " }}}
 
+"  ----------- package plugins loading {{{
+packadd vimwiki
+" }}}
+
 " notes for movements and usage : ------------------------------------------------- {{{
 "" the general strategy is to choose invalid commands
 "" (e.g. operation1+operation2 or operation1+non-movement)

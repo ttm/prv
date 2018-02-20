@@ -3,6 +3,17 @@
 " au InsertEnter * set timeoutlen=200
 " au InsertLeave * set timeoutlen=1000
 " }}}
+function! QuitNetrw()
+  for i in range(1, bufnr($))
+    if buflisted(i)
+      if getbufvar(i, '&filetype') == "netrw"
+        silent exe 'bwipeout ' . i
+      endif
+    endif
+  endfor
+endfunction
+
+autocmd VimLeavePre *  call QuitNetrw()
 
 au Colorscheme * runtime ~/.vim/aux/underlineSpellBad.vim
 " What is this for?? TTM

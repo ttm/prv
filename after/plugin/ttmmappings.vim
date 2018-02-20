@@ -1,5 +1,5 @@
-nnoremap : q:i
-nnoremap q: :
+" nnoremap : q:i
+" nnoremap q: :
 nnoremap <leader>z :call ExtremeFolding()<CR>
 nnoremap <leader>R :call PythonShowRun()<CR>
 
@@ -11,7 +11,7 @@ nnoremap <Leader>h :call ViewHtmlText(@+)<CR>
 
 nnoremap <localleader>L :call ToggleVerbose()<CR>
 
-" Alt mappings ---------------------- {{{
+" Alt mappings ---------------------- {{{ ttm:alt-map
 " Alt is a "command leader" for me
 " Maybe change it to space
 " and make folding with space space
@@ -22,18 +22,19 @@ tnoremap a <C-W>:tabp<CR>
 
 " AA mappings
 nnoremap Aa :A 
-nnoremap AA :exec "vs " . g:aa_file<CR>
-nnoremap As :exec "vs " . g:aa_file<CR>Go<ESC>o<ESC>:.!date<CR>:put =g:aa_separator<CR>kki
+nnoremap AA :exec "vs " . g:aa.paths.shouts<CR>
+nnoremap As :exec "vs " . g:aa.paths.shouts<CR>Go<ESC>o<ESC>:.!date<CR>:put =g:aa.separator<CR>kki
 
 nnoremap Ai :call AAStartSession(15, 8)
 nnoremap At :call AASinceLastShout()<CR>
 nnoremap An :Note 
 
-" inoremap As :exec "vs " . g:aa_file<CR>Go<ESC>:.!date<CR>Go<ESC>:put =g:aa_separator<CR>kki
+" inoremap As :exec "vs " . g:aa_file<CR>Go<ESC>:.!date<CR>Go<ESC>:put =g:aa.separator<CR>kki
 " tnoremap A 
 
 nnoremap b :exec '15Le ' . expand("%:h")<CR>:let t:exp_set_ttm = 1<CR>
-nnoremap B :if exists("g:exp_set_ttm")<CR>9<C-W>h:q<CR>:unlet! t:exp_set_ttm<CR>
+nnoremap B :if exists("t:exp_set_ttm")<CR>exec "normal 9\<C-W>h:q"<CR>unlet! t:exp_set_ttm<CR>endif
+nnoremap B :if exists("t:exp_set_ttm")<CR>unlet! t:exp_set_ttm<CR>endif
 
 " should put fold markers as comments, for now just VimL
 noremap c mf?^fuA " {{{/^endfuA " }}}`f 
@@ -64,12 +65,14 @@ inoremap f <ESC>mf?^fu<CR>V/^endf<CR>:@*<CR>`fa
 
 " find files
 nnoremap FF :Split echo globpath('/home/renato/repos/', "**/rdf*")
-nnoremap Ff :Split echo globpath(&rtp, "*/ttm*")
+nnoremap Ff :Split echo globpath(&rtp, "**/*")<Left><Left><Left>
 " nnoremap Ff :Split echo globpath(&rtp, '"**/' . expand("<cword>") . "*")
-nnoremap Fa :Split echo globpath(&rtp, "*/ttm*")<CR>
+nnoremap Fa :Split echo globpath(&rtp, "**/ttm*")<CR>
 nnoremap FA :Split echo globpath(&rtp, "**/pack/**")<CR>
 
 nnoremap Fs :lvim /RegisterNote/ ~/.vim/pack/ttm/**
+nnoremap Fg :lvim /\v/ ~/.vim/**<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
+
 nnoremap g :up<CR>:source %<CR>
 inoremap g <ESC>:up<CR>:source %<CR>
 
@@ -141,10 +144,24 @@ tnoremap ' ea'<ESC>hbi'<ESC>lel<CR>
 
 " space mappings ---------------------- {{{
 " normal mode mappings
-" migrated from leader mappings
+" (migrate leader mappings to here)
 nnoremap <Space>a :exec "normal li".nr2char(getchar())."\e"<CR>
 nnoremap <Space>A  :call InsertAfterAfter()<CR>
-" for all the digraphs
+
+nnoremap <Space>ea :exec "e " . split(&runtimepath,',')[0] . "/after/plugin/ttmmappings.vim"<CR>/\v[^\]\^]ttm:alt-map\|^ttm:alt-map<CR>
+nnoremap <Space>eA :exec "e " . split(globpath(&rtp, "plugin/ttmmappings.vim"), "\n")[0]<CR>:lvim $\v[^\]\^]ttm:alt-map\|^ttm:alt-map$ ~/.vim/**
+nnoremap <Space>eb :Split ec getbufinfo()
+
+" for exceptional commands
+nnoremap <Space>ee :exec "e " . split(globpath(&rtp, "plugin/ttmmappings.vim"), "\n")[0]<CR>/ttm:exc-com<CR>
+" nnoremap <Space>ea :exec "e " . split(globpath(&rtp, "plugin/ttmmappings.vim*"), "\n")[0]<CR>:lvim $\v[^\]]ttm:alt-map$ ~/.vim/**<CR>
+
+nnoremap <Space>ef :exec "e " . split(&runtimepath,',')[0] . "/after/plugin/ttmfstartup.vim"<CR>G
+nnoremap <Space>eF GoCopyright: Public Domain.  vim:modifiable:noreadonly:tw=0:ts=8:ft=help.vimwiki:suffixesadd+=.txt:norl:softtabstop=4:shiftwidth=4:textwidth=0:expandtab:<ESC><C-O>
+
+nnoremap <Space>ep :Split exec "normal \<C-G>"<CR>xf"Dh
+
+
 " }}}
 
 " leader mappings ---------------------- {{{
@@ -194,7 +211,7 @@ call VWFileNMapping("<leader>wA", "achievements.wiki")
 call VWFileNMapping("<leader>wT", "../todo.wiki")
 call VWFileNMapping("<leader>wD", "daily/tasks.wiki")
 call VWFileNMapping("<leader>wW", "weekly/wtasks.wiki")
-call VWFileNMapping("<leader>wN", "blergh.wiki")
+call VWFileNMapping("<leader>wN", "blergh.wiki<CR>gg")
 
 " }}}
 

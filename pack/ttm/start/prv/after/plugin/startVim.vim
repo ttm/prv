@@ -186,10 +186,6 @@ fu! FindVar(varname, v, g, s, l, w, b)
 endfu
 
 
-let aa = 'test'
-let aa2 = 'test2'
-let aa23 = 'test3'
-
 let found = FindVar('aa', v:, g:, s:, v:none , w:, b:)  " :l
 " }}}
 

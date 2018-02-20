@@ -1,0 +1,51 @@
+*aaplug.txt*    For Vim version 8.X     Last Change: 2018
+Plugin for enhancing your life
+
+This plugin is meant to help you keep track of what
+you are doing. This might be very helpful in fine-tuning
+efforts, but also is very obviously useful when tackling
+complex tasks.
+
+                                                                       F
+
+            *aa-mappings*
+<Space>a
+        write a one-line shout
+<Space>A
+        write an arbitrary shout in your shouts file
+<Space>s
+  start an AA session :S X Y with Y slots of X minutes
+
+            *aa-commands*
+*:A* {shout}
+        Add a shout
+
+*:S* {dur} {nslots}
+        Start a session.
+        {dur} is the duration of a slot in minutes.
+        {nslots} is the number of slots in the session.
+
+The funcionality of the AA plugin is centered around these
+two commands.
+The idea is to send one shout each slot, as a way to keep
+a record of the dedication.
+More shouts are often useful as notes and enhanced records.
+
+            *aa-settings*
+This plugin doesn't have any settings.
+'asdasd' is very cool
+
+|aa-settings| is good for you
+
+*asdasd* is the best ever
+
+            *aa-todo*
+TODO:
+* Tags should not collide. How to find out all the tags defined by the system?
+* Routines to send shouts to cloud (SQl, MondDB or RDF preferably)
+* arrumar doc
+* fazer o resto dos comandos e mapeamentos
+* soltar no github talvez vim.org
+* ver no doxigen com fazem com vimL
+
+Copyright: Public Domain.  vim:modifiable:noreadonly:tw=0:ts=8:ft=help.vimwiki:suffixesadd+=.txt:norl:softtabstop=4:shiftwidth=4:textwidth=0:expandtab:

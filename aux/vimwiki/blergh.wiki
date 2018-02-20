@@ -1,3 +1,14 @@
+
+
+
+/home/renato/.vim/aux/aa/
+
+
+
+
+
+
+
 call writefile(['a banana', '', 'another banana', '',''], 'aux/bananafile.txt', 'as')
   
   
