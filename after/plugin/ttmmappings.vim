@@ -159,6 +159,12 @@ nnoremap <Space>ee :exec "e " . split(globpath(&rtp, "plugin/ttmmappings.vim"), 
 nnoremap <Space>ef :exec "e " . split(&runtimepath,',')[0] . "/after/plugin/ttmfstartup.vim"<CR>G
 nnoremap <Space>eF GoCopyright: Public Domain.  vim:modifiable:noreadonly:tw=0:ts=8:ft=help.vimwiki:suffixesadd+=.txt:norl:softtabstop=4:shiftwidth=4:textwidth=0:expandtab:<ESC><C-O>
 
+nnoremap <Space>et :tselect /aa<CR>
+
+" how to do this TTM |aa-todo|
+" nnoremap <Space>eh :map \\<Space><CR>
+
+
 nnoremap <Space>ep :Split exec "normal \<C-G>"<CR>xf"Dh
 
 

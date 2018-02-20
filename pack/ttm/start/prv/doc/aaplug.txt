@@ -47,5 +47,8 @@ TODO:
 * fazer o resto dos comandos e mapeamentos
 * soltar no github talvez vim.org
 * ver no doxigen com fazem com vimL
+* usar o enter para criar direto o caminho.
+* talvez espaco-enter para decorar (link, tag, ref-tag, ref-option ref-command ref-func)
+* relacionar bem com a ideia de reactwiki (hypertexto com codigos executaveis)
 
 Copyright: Public Domain.  vim:modifiable:noreadonly:tw=0:ts=8:ft=help.vimwiki:suffixesadd+=.txt:norl:softtabstop=4:shiftwidth=4:textwidth=0:expandtab:

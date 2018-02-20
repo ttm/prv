@@ -1,4 +1,7 @@
 # Vim
+aux/aa/
+tags
+ftplugin/vimwikiTrue.vim
 aux/vimwiki/
 *.swp
 aux/trash/
