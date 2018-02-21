@@ -12,6 +12,7 @@ set termguicolors
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
+lan tim en_US.utf8
 set viminfo=%,!,'1000,:1000,n~/.vim/aux/viminfo
 " this file should be read out of the box, but I need to source it (bug??)
 let mysyntaxfile = '~/.vim/syntax/mysyntaxfileTTM.vim'

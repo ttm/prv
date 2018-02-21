@@ -1,3 +1,17 @@
+!espeak "Qua Fev 21 14:53:22 -03 2018"
+
+Qua 21 Fev 2018 14:56:32 -03
+
+14:58:26 2018 fevereiro 21
+!espeak "14:58:51, fevereiro dia 21"
+let a=strftime("%T, %B, day %d")
+15:03:25, February, day 21
+15:01:49, February dia 21
+15:02:00, February, day 21
+marvelous commands
+:<C-F>
+:changes, g; and g,
+
 {'events': {'last_shout': {'sent_seconds': 1519205153, 'time': 'Qua 21 Fev 2018 06:25:53 -03'}, 'aa_initialized': 'Qua 21 Fev 2018 06:25:53 -03'}, 'note': 'AA stuff should be kept in files. Keep this dictionary minimal.', 'user': 'anon-310991433327410
 ', 'say': 0, 'msgs': {}, 'paths': {'path': '/home/renato/.vim/aux/aa/', 'sessions': '/home/renato/.vim/aux/aa/aasessions.txt', 'shouts': '/home/renato/.vim/aux/aa/aashouts.txt'}, 'separator': '----- QWEEWQPOIIOPTYUUTYREWWRE AA separator -----'}
 

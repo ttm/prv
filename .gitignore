@@ -1,4 +1,5 @@
 # Vim
+aux/sessions/
 aux/aa/
 tags
 ftplugin/vimwikiTrue.vim

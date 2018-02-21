@@ -95,7 +95,8 @@ endfu " }}}
 fu! CommandColorSchemes() " {{{
   let cs = {}
   let cs.green1 = ['colo blue', 'hi Normal  guifg=#0fffe0 guibg=#03800b']
-  let cs.green2 = ['colo torte', 'highlight Normal guifg=white  guibg=darkGreen']
+  let cs.green2 = ['colo torte', 'highlight Normal guifg=white  guibg=darkGreen',
+        \'hi Folded guifg=darkgreen']
   
   let cs.yellow1 = ['colo morning', 'hi Normal guibg=#ffff00',
         \ 'hi Constant cterm=bold guifg=#a0a010 guibg=NONE',
@@ -126,7 +127,9 @@ fu! CommandColorSchemes() " {{{
         \ 'hi vimFunction guifg=#bcbc0c',
         \ 'hi vimOperParen cterm=bold guifg=#fc2c2c']
   let cs.redblackl = ['colo koehler', 'hi Normal guibg=#800000']
-  let cs.passivepink1 = ['colo koehler', 'hi Normal guibg=#ff91af', 'hi Comment guifg=#888888', 'hi Identifier guifg=#bb7777', 'hi Constant guifg=#ffcccc']
+  let cs.passivepink1 = ['colo koehler', 'hi Normal guibg=#ff91af',
+        \'hi Comment guifg=#888888', 'hi Identifier guifg=#bb7777', 'hi Constant guifg=#ffcccc',
+        \'hi PreProc guifg=#888088']
   
   
   let cs.exu1 = cs.red4

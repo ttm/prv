@@ -73,7 +73,6 @@ nnoremap k <C-W><C-K>
 nnoremap l <C-W><C-L>
 inoremap h <ESC><C-W><C-H>a
 inoremap j <ESC><C-W><C-J>a
-inoremap k <ESC><C-W><C-K>a
 inoremap l <ESC><C-W><C-L>a
 tnoremap h <ESC><C-W><C-H>
 tnoremap j <ESC><C-W><C-J>
@@ -131,27 +130,25 @@ cnoremap " ea"<ESC>hbi"<ESC>lel<CR>
 cnoremap ' ea'<ESC>hbi'<ESC>lel<CR>
 tnoremap " ea"<ESC>hbi"<ESC>lel<CR>
 tnoremap ' ea'<ESC>hbi'<ESC>lel<CR>
-
 " }}}
-
 " space mappings ---------------------- {{{
 " normal mode mappings
 " (migrate leader mappings to here)
 nnoremap <Space>a :exec "normal li".nr2char(getchar())."\e"<CR>
 nnoremap <Space>A  :call InsertAfterAfter()<CR>
-
+" -- for exceptional commands {{{2
 nnoremap <Space>ea :exec "e " . split(&runtimepath,',')[0] . "/after/plugin/ttmmappings.vim"<CR>/\v[^\]\^]ttm:alt-map\|^ttm:alt-map<CR>
 nnoremap <Space>eA :exec "e " . split(globpath(&rtp, "plugin/ttmmappings.vim"), "\n")[0]<CR>:lvim $\v[^\]\^]ttm:alt-map\|^ttm:alt-map$ ~/.vim/**
 nnoremap <Space>eb :Split ec getbufinfo()
-
-" for exceptional commands
+nnoremap <Space>ec  :put ='\" '.string(keys(ccs))<CR>:put ='cal ApplyCS(g:ccs[\"green1\"],\"color\")'<CR>
 nnoremap <Space>ee :exec "e " . split(globpath(&rtp, "plugin/ttmmappings.vim"), "\n")[0]<CR>/ttm:exc-com<CR>
 " nnoremap <Space>ea :exec "e " . split(globpath(&rtp, "plugin/ttmmappings.vim*"), "\n")[0]<CR>:lvim $\v[^\]]ttm:alt-map$ ~/.vim/**<CR>
-
 nnoremap <Space>ei :help aa<CR>
 nnoremap <Space>eI :help aa<CR>`t
 
 nnoremap <Space>ef :exec "e " . split(&runtimepath,',')[0] . "/after/plugin/ttmfstartup.vim"<CR>G
+nnoremap <Space>e<Space>f :Split filter // oldfiles<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
+nnoremap <Space>e<Space>f :Split filter // oldfiles<S-Left><S-Left><Right>
 nnoremap <Space>eF GoCopyright: Public Domain.  vim:modifiable:noreadonly:tw=0:ts=8:ft=help.vimwiki:suffixesadd+=.txt:norl:softtabstop=4:shiftwidth=4:textwidth=0:expandtab:<ESC><C-O>
 
 nnoremap <Space>et :tselect /aa<CR>
@@ -163,14 +160,11 @@ nnoremap <Space>eT :tselect /
 
 nnoremap <Space>ep :Split exec "normal \<C-G>"<CR>xf"Dh
 
-
-" }}}
-
-" leader mappings ---------------------- {{{
+" leader mappings ---------------------- {{{1
 " should be removed in order to avoid conflict with plugins
 nnoremap <leader>b :Sex<CR><C-W>T
 nnoremap <leader>B :Sex<CR>
-nnoremap <leader>c :<C-F>
+
 nnoremap <leader>C :call ListSessions()<CR>
 " nnoremap <leader>d :args ~/repos/percolation/**/*.py<CR>
 nnoremap <leader>d :call SaveSession()<CR>
@@ -178,15 +172,13 @@ nnoremap <leader>D :call SaveNewSession()<CR>
 " assert latest is saved as a user practice
 nnoremap <leader>e :call LoadSession()<CR>
 nnoremap <leader>E :call InsertSession()<CR>
-" nnoremap <leader>r :set shiftround!<CR>
+
 " make the f mappings usable by using the paths correctly
 nnoremap <leader>f :term ++hidden ++close pdflatex %
 nnoremap <leader>F :term ++hidden ++open pdflatex %
-nnoremap <leader>g :source %<CR>
-nnoremap <leader>G :echo "BANANA"<CR>
 nnoremap <leader>i :exec "normal i".nr2char(getchar())."\e"<CR>
 nnoremap <leader>I :call InsertBeforeAfter()<CR>
-nnoremap <leader>f :set hlsearch!<CR>
+
 nnoremap <leader>j :s/=/ = /g<CR>
 nnoremap <leader>J :jumps<CR>
 nnoremap <leader>k :s/,/, /g<CR>
@@ -210,14 +202,13 @@ nnoremap <leader>X :execute getline('.')
 
 " Vimwiki
 call VWFileNMapping("<leader>wA", "achievements.wiki")
-call VWFileNMapping("<leader>wT", "../todo.wiki")
+call VWFileNMapping("<leader>wT", "todo.wiki")
 call VWFileNMapping("<leader>wD", "daily/tasks.wiki")
 call VWFileNMapping("<leader>wW", "weekly/wtasks.wiki")
 call VWFileNMapping("<leader>wN", "blergh.wiki<CR>gg")
 
 " }}}
-
-" localleader mappings ---------------------- {{{
+" localleader mappings ---------------------- {{{1
 nnoremap <localleader>' :s/"/'/g<CR>
 nnoremap <localleader>c :set cursorline! cursorcolumn!<CR>
 nnoremap <localleader>b :execute 'rightbelow vs ' . bufname('#')<CR>
@@ -236,5 +227,10 @@ nnoremap <localleader>t :args /home/r/repos/tokipona/**/*.py<CR>
 nnoremap <localleader>T :call ToggleTabLine()<CR>
 nnoremap <localleader>w :match Error /\v[ ]+$/<CR>
 nnoremap <localleader>W :match none<CR>
+" }}}
+" command line commands {{{1
+cnoremap <C-J> <S-Left>
+cnoremap <C-K> <S-Right>
+
 " }}}
 

@@ -1,3 +1,6 @@
+* connect terminal to prv python though pty option of jobs
+
+
 (send finished items to [[achievements]] \wa)
 
 Hoje:

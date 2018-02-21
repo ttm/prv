@@ -66,18 +66,22 @@ endfunction
 
 " sessions {{{1
 set sessionoptions+=globals
+let g:prv_sessions_dir = g:prv_dir.'aux/sessions/'
+if !isdirectory(g:prv_sessions_dir)
+  call mkdir(g:prv_sessions_dir, 'p')
+endif
 function! SaveSession()
   if !exists("g:msession")
     call ListSessions()
     let g:msession = input("Enter session name: ")
   endif
-  execute 'mksession! ~/.vim/sessions/' . g:msession
+  execute 'mksession! ' . g:prv_sessions_dir . g:msession
 endfunction
 
 function! SaveNewSession()
   call ListSessions()
   let g:msession = input("Enter session name: ")
-  execute 'mksession! ~/.vim/sessions/' . g:msession
+  execute 'mksession!' g:prv_sessions_dir . g:msession
 endfunction
 
 function! LoadSession()
@@ -85,18 +89,18 @@ function! LoadSession()
   let g:msession = input("Enter session name: ")
   execute 'only'
   execute 'tabonly'
-  execute 'so ~/.vim/sessions/' . g:msession
+  execute 'so ' . g:prv_sessions_dir . g:msession
 endfunction
 
 function! InsertSession()
   call ListSessions()
   execute 'tabe'
   let g:msession = input("Enter session name: ")
-  execute 'so ~/.vim/sessions/' . g:msession
+  execute 'so ' . g:prv_sessions_dir . g:msession
 endfunction
 
 function! ListSessions()
-  execute '!ls ~/.vim/sessions/'
+  execute '!ls ' . g:prv_sessions_dir
 endfunction
 
 " visual functions {{{1

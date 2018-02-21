@@ -1,4 +1,5 @@
 " ttm final startup for PRV
+hi Terminal guibg=lightgrey guifg=blue
 call CommandColorSchemes()
 call ApplyCS(g:ccs.yellow1, 'c')
 
@@ -9,5 +10,7 @@ packadd gruvbox
 colo gruvbox
 set bg=dark
 
-cal ApplyCS(g:ccs['green2'],'color')
+cal ApplyCS(g:ccs["passivepink1"],"color")
+
+
 
