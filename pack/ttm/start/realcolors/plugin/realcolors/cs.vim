@@ -129,7 +129,7 @@ fu! CommandColorSchemes() " {{{
   let cs.redblackl = ['colo koehler', 'hi Normal guibg=#800000']
   let cs.passivepink1 = ['colo koehler', 'hi Normal guibg=#ff91af',
         \'hi Comment guifg=#888888', 'hi Identifier guifg=#bb7777', 'hi Constant guifg=#ffcccc',
-        \'hi PreProc guifg=#888088']
+        \'hi PreProc guifg=#888088', 'hi Special guifg=#8f3580', 'hi Type guifg=#508f60']
   
   
   let cs.exu1 = cs.red4

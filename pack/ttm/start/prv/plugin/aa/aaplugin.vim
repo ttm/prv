@@ -98,16 +98,15 @@ fu! AAStartSession(...) " {{{
   call AAPutCC()
   " put two empty lines and a session separator
   call writefile(['', '', g:aa.session_separator], g:aa.paths.shouts, 'as')
-  if a:.0 > 2
-    let aamsg = join(a:.000[2:], ' ')
-    exec 'A '.l:aamsg
-  en
   call writefile(['', '', 'started: '.system("date")[:-2],
                         \ 'dur: '.string(l:dur), 'slots: '.l:nslots],
                \ g:aa.paths.sessions, 'as')
   let g:aa.events.session_started = strftime("%c")
-  let g:lll = l:
-  let g:aaa = a:
+  cal AAExpectMsg("foo")
+  if a:.0 > 2
+    let aamsg = join(a:.000[2:], ' ')
+    exec 'A '.l:aamsg
+  en
 endfu " }}}
 fu! AAInitialize() " {{{
   call AAInitVars()
@@ -198,8 +197,8 @@ fu! AAInfoLines() " {{{
   cal add(l:mlines, 'shouts sent since init: '.g:aa.events.shouts_count)
   cal add(l:mlines, 'time since last shout: '.AATimeSinceLastShout())
   cal add(l:mlines, 'last shout in: '.AATimeOfLastShout())
-  cal add(l:mlines, '(shouts in current shouts.txt: '.
-                    \ AACountShoutsInFile() .')')
+  cal add(l:mlines, '(((( shouts in current shouts.txt: '.
+                    \ AACountShoutsInFile() .' )))')
 
   cal add(l:mlines, '')
   cal add(l:mlines, 'session on: '.AAIsSessionOn())
@@ -211,6 +210,7 @@ fu! AAInfoLines() " {{{
     cal add(l:mlines, 'shouts sent: '.g:aa.cursession.shouts_sent)
     cal add(l:mlines, 'slot duration in minutes: '.string(g:aa.cursession.dur))
     cal add(l:mlines, 'number of slots: '.g:aa.cursession.nslots)
+    cal add(l:mlines, '((( to finish a session, one should send slots + 1 shouts )))')
   else
     cal add(l:mlines, '(start AA session to have more stats)')
   endif
@@ -324,7 +324,7 @@ fu! AASessionReceiveMsg() " {{{
     let g:aa.cursession.shouts_expected -= 1
     let g:aa.cursession.shouts_sent += 1
     call AAPutCC()
-    if (g:aa.cursession.nslots == g:aa.cursession.shouts_requested) && (g:aa.cursession.shouts_expected == 0)
+    if (g:aa.cursession.nslots + 1 == g:aa.cursession.shouts_requested) && (g:aa.cursession.shouts_expected == 0)
       unlet g:aa.session_on
       call writefile([g:aa.session_separator, '', ''], g:aa.paths.shouts, 'as')
       call writefile(['ended: '.system("date")[:-2], '', ''], g:aa.paths.sessions, 'as')

@@ -49,7 +49,6 @@ This plugin doesn't have any settings.
 *asdasd* is the best ever
 
             *aa-todo*
-TODO:
 * Tags should not collide. How to find out all the tags defined by the system?
 * Routines to send shouts to cloud (SQl, MondDB or RDF preferably)
 * arrumar doc
@@ -66,4 +65,7 @@ TODO:
 * 
 
 
-Copyright: Public Domain.  vim:modifiable:noreadonly:tw=0:ts=8:ft=help.vimwiki:suffixesadd+=.txt:norl:softtabstop=4:shiftwidth=4:textwidth=0:expandtab:
+Copyright: Public Domain.
+
+Note
+ vim:modifiable:noreadonly:tw=0:ts=8:ft=help:suffixesadd+=.txt:norl:softtabstop=4:shiftwidth=4:textwidth=0:expandtab:
