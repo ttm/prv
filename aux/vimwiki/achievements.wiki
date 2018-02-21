@@ -1,4 +1,7 @@
 (receive items from [[todo]])
+Ter Fev 20 08:15:24 -03 2018
+* fazer o aa fumegar no prv!
+
 fev 12
 * published tokipona python package at PyPI
 

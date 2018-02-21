@@ -15,22 +15,13 @@ nnoremap <localleader>L :call ToggleVerbose()<CR>
 " Alt is a "command leader" for me
 " Maybe change it to space
 " and make folding with space space
+nnoremap A :Ai<CR>
 nnoremap a gT
 inoremap a <ESC><C-W>:tabp<CR>l<C-W>:startinsert<CR>
 cnoremap a <ESC><C-W>:tabp<CR>l<c-w>:
 tnoremap a <C-W>:tabp<CR>
 
-" AA mappings
-nnoremap Aa :A 
-nnoremap AA :exec "vs " . g:aa.paths.shouts<CR>
-nnoremap As :exec "vs " . g:aa.paths.shouts<CR>Go<ESC>o<ESC>:.!date<CR>:put =g:aa.separator<CR>kki
-
-nnoremap Ai :call AAStartSession(15, 8)
-nnoremap At :call AASinceLastShout()<CR>
-nnoremap An :Note 
-
-" inoremap As :exec "vs " . g:aa_file<CR>Go<ESC>:.!date<CR>Go<ESC>:put =g:aa.separator<CR>kki
-" tnoremap A 
+" see :h aaplug or :h aa-mappings or :h aa
 
 nnoremap b :exec '15Le ' . expand("%:h")<CR>:let t:exp_set_ttm = 1<CR>
 nnoremap B :if exists("t:exp_set_ttm")<CR>exec "normal 9\<C-W>h:q"<CR>unlet! t:exp_set_ttm<CR>endif
@@ -118,6 +109,7 @@ inoremap S <ESC>:up<CR>:source %<CR>l
 
 nnoremap U :call PushPRV("Auto updating PRV")
 
+nnoremap x :up<CR>
 inoremap x <ESC>:up<CR>
 inoremap 3 <ESC>:up<CR>
 inoremap [ <ESC>:up<CR>
@@ -156,10 +148,14 @@ nnoremap <Space>eb :Split ec getbufinfo()
 nnoremap <Space>ee :exec "e " . split(globpath(&rtp, "plugin/ttmmappings.vim"), "\n")[0]<CR>/ttm:exc-com<CR>
 " nnoremap <Space>ea :exec "e " . split(globpath(&rtp, "plugin/ttmmappings.vim*"), "\n")[0]<CR>:lvim $\v[^\]]ttm:alt-map$ ~/.vim/**<CR>
 
+nnoremap <Space>ei :help aa<CR>
+nnoremap <Space>eI :help aa<CR>`t
+
 nnoremap <Space>ef :exec "e " . split(&runtimepath,',')[0] . "/after/plugin/ttmfstartup.vim"<CR>G
 nnoremap <Space>eF GoCopyright: Public Domain.  vim:modifiable:noreadonly:tw=0:ts=8:ft=help.vimwiki:suffixesadd+=.txt:norl:softtabstop=4:shiftwidth=4:textwidth=0:expandtab:<ESC><C-O>
 
 nnoremap <Space>et :tselect /aa<CR>
+nnoremap <Space>eT :tselect /
 
 " how to do this TTM |aa-todo|
 " nnoremap <Space>eh :map \\<Space><CR>

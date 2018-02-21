@@ -22,7 +22,6 @@ fu! ParseOrixas() " {{{
   let g:infos = infos
   return os
 endfu " }}}
-
 fu! AfricanCS() " {{{
   " https://www.pinterest.com/pin/456974693425216689/
   let synon = {'osanha': 'ossain', 'xapanã': 'xapana',
@@ -38,7 +37,6 @@ fu! AfricanCS() " {{{
   let cs.exu = MkCS(palletes.exu_)
   " call ApplyCS(cs.exu
 endfu " }}}
-
 fu! MkPallte12(pallete) " {{{
   " return a 12 colors pallete from what comes
   " assuming pallete is a sequence of lists with three
@@ -74,15 +72,12 @@ fu! MkPallte12(pallete) " {{{
   " endwhile
   return colors
 endfu " }}}
-
 fu! MaxDiff(colors) " {{{
   " Return a color that is maximally different from all the colors given
 endfu " }}}
-
 fu! MkCS(pallete) " {{{
   " Return a CS relating each basic group to a color
 endfu " }}}
-
 fu! ApplyCS(cs_pallete, method) " {{{
   " Apply a CS which should relate colors to groups
   " if a:method == 'commands'
@@ -97,7 +92,6 @@ fu! ApplyCS(cs_pallete, method) " {{{
     endfor
   endif
 endfu " }}}
-
 fu! CommandColorSchemes() " {{{
   let cs = {}
   let cs.green1 = ['colo blue', 'hi Normal  guifg=#0fffe0 guibg=#03800b']

@@ -6,7 +6,16 @@ you are doing. This might be very helpful in fine-tuning
 efforts, but also is very obviously useful when tackling
 complex tasks.
 
-                                                                       F
+            *aa-design*
+AA is designed to be as simple to use and hack
+(as I can make it ok, but other people have contributed
+to AA[1][2]).
+
+            *aa-disclaimer*
+aa is the ambiguous acronym.
+  ) ( /\/\/\/\/\ _o_o_ oOo _o_o_ /\/\/\/\/\ ) (
+./aa-crazy                                                                       
+
 
             *aa-mappings*
 <Space>a
@@ -50,5 +59,11 @@ TODO:
 * usar o enter para criar direto o caminho.
 * talvez espaco-enter para decorar (link, tag, ref-tag, ref-option ref-command ref-func)
 * relacionar bem com a ideia de reactwiki (hypertexto com codigos executaveis)
+* iniciar sessao abre duas linhas em branco
+* make espeak async!!! >.<
+* implement optional margin around slot endings to receive a shout.
+*
+* 
+
 
 Copyright: Public Domain.  vim:modifiable:noreadonly:tw=0:ts=8:ft=help.vimwiki:suffixesadd+=.txt:norl:softtabstop=4:shiftwidth=4:textwidth=0:expandtab:

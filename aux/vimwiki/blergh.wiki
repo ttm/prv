@@ -1,10 +1,13 @@
+{'events': {'last_shout': {'sent_seconds': 1519205153, 'time': 'Qua 21 Fev 2018 06:25:53 -03'}, 'aa_initialized': 'Qua 21 Fev 2018 06:25:53 -03'}, 'note': 'AA stuff should be kept in files. Keep this dictionary minimal.', 'user': 'anon-310991433327410
+', 'say': 0, 'msgs': {}, 'paths': {'path': '/home/renato/.vim/aux/aa/', 'sessions': '/home/renato/.vim/aux/aa/aasessions.txt', 'shouts': '/home/renato/.vim/aux/aa/aashouts.txt'}, 'separator': '----- QWEEWQPOIIOPTYUUTYREWWRE AA separator -----'}
 
-
+{'timers': [], 'voices': ['croak', 'f1', 'f2', 'f3', 'f4', 'f5', 'klatt', 'klatt2', 'klatt3', 'klatt4', 'm1', 'm2', 'm3', 'm4', 'm5', 'm6', 'm7', 'whisper', 'whisperf'], 'initialized': 1, 'saytime': 0, 'events': {'last_shout': {'sent_seconds': 1519205400, 'time': 'Qua 21 Fev 2018 06:30:00 -03'}, 'aa_initialized': 'Qua 21 Fev 2018 06:30:00 -03'}, 'note': 'AA stuff should be kept in files. Keep this dictionary minimal.', 'user': 'anon-1946410116366
+', 'say': 0, 'msgs': {}, 'paths': {'path': '/home/renato/.vim/aux/aa/', 'sessions': '/home/renato/.vim/aux/aa/aasessions.txt', 'shouts': '/home/renato/.vim/aux/aa/aashouts.txt'}, 'separator': '----- QWEEWQPOIIOPTYUUTYREWWRE AA separator -----'}
 
 /home/renato/.vim/aux/aa/
 
 
-
+ aaa
 
 
 
