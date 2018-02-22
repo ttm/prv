@@ -61,7 +61,7 @@ This plugin doesn't have any settings.
 * iniciar sessao abre duas linhas em branco
 * make espeak async!!! >.<
 * implement optional margin around slot endings to receive a shout.
-*
+* enable the use of parallel sessions (e.g. for different duration slots)
 * 
 
 

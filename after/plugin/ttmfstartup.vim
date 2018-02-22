@@ -11,6 +11,7 @@ colo gruvbox
 set bg=dark
 
 cal ApplyCS(g:ccs["passivepink1"],"color")
+hi SpellBad cterm=undercurl
 
 
 
