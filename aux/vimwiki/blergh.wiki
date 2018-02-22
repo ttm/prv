@@ -1,5 +1,6 @@
 !espeak "Qua Fev 21 14:53:22 -03 2018"
 
+/home/renato/.vim/aux/aa/aasessions.txt
 Qua 21 Fev 2018 14:56:32 -03
 
 14:58:26 2018 fevereiro 21

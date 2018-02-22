@@ -20,7 +20,7 @@ let g:loaded_aaplugin = "v0.01b"
 nnoremap Aa :A 
 nnoremap AA :exec "vs " . g:aa.paths.shouts<CR>Go<ESC>o<ESC>:.!date<CR>:put =g:aa.separator<CR>kki
 
-nnoremap Av :exec "vs " . g:aa.paths.shouts<CR>
+nnoremap Av :exec "vs " . g:aa.paths.shouts<CR>G
 nnoremap Ao :exec "e " . g:aa.paths.shouts<CR>
 nnoremap At :exec "tabe " . g:aa.paths.shouts<CR>
 
@@ -30,9 +30,12 @@ nnoremap AA :As<CR>
 nnoremap As :S 15 8
 nnoremap AS :S .1 3
 nnoremap AS :S 15 8 starting session (dummy message from aa plugin)<CR>
+nnoremap AV :exec "vs " . g:aa.paths.sessions<CR>G
 nnoremap Al :At<CR>
 nnoremap AL :AT<CR>
 nnoremap AO :Ao<CR>
+nnoremap Ar :Ar<CR>
+nnoremap AR :AR<CR>
 " -- general {{{3
 nnoremap Ac :Ac<CR>
 nnoremap AC :Ac y<CR>
@@ -52,6 +55,8 @@ command! -nargs=* Ac call AAClear(<q-args>)
 command! At ec AATimeLeftInSlot()
 command! AT ec AATimeSpentInSlot()
 command! As ec 'minutes since last shout: ' . AATimeSinceLastShout()
+command! Ar cal AASessionRegisterShoutGiven()
+command! AR cal AASessionRegisterShoutWanted()
 
 command! -nargs=+ AATest call AATestCommandToFunctionArgs(<f-args>)
 
@@ -90,7 +95,7 @@ fu! AAStartSession(...) " {{{
   else
     let nslots = 15
   en
-  let g:aa.cursession = {'dur': l:dur, 'nslots': l:nslots, 'shouts_requested': 0, 'shouts_expected': 0, 'shouts_sent': 0, 'last_shout': {}}
+  let g:aa.cursession = {'dur': l:dur, 'nslots': l:nslots, 'shouts_requested': 0, 'shouts_expected': 0, 'shouts_sent': 0, 'last_shout': {}, 'note': 'see g:aa.events'}
   ec "ok"
   call timer_start(float2nr(60.0*1000*l:dur), "AAExpectMsg", {'repeat': l:nslots})
   let g:aa.session_on = 1
@@ -102,6 +107,7 @@ fu! AAStartSession(...) " {{{
                         \ 'dur: '.string(l:dur), 'slots: '.l:nslots],
                \ g:aa.paths.sessions, 'as')
   let g:aa.events.session_started = strftime("%c")
+  let g:aa.events.session_started_seconds = localtime()
   cal AAExpectMsg("foo")
   if a:.0 > 2
     let aamsg = join(a:.000[2:], ' ')
@@ -176,6 +182,18 @@ endf " }}}
 fu! AATestCommandToFunctionArgs(...) " {{{
   let g:mfargs = a:
 endfu " }}} " }}}
+fu! AASessionRegisterShoutGiven() " {{{
+  " let g:aa.cursession.shouts_requested += 1
+  " let g:aa.cursession.shouts_expected -= 1
+  if !AAIsInitialized()
+    call AAInitialize()
+  endif
+  call AASessionReceiveMsg()
+  let g:aa.events.shouts_count += 1
+endf " }}}
+fu! AASessionRegisterShoutWanted() " {{{
+  cal AAExpectMsg('foobar')
+endf " }}}
 " }}}
 " -- AUX {{{2
 fu! AAInfoLines() " {{{
@@ -206,11 +224,13 @@ fu! AAInfoLines() " {{{
     cal add(l:mlines, '|| time left in current slot: '.AATimeLeftInSlot())
     cal add(l:mlines, '|| time spent in current slot: '.AATimeSpentInSlot())
     cal add(l:mlines, '|| shouts expected: '.g:aa.cursession.shouts_expected)
-    cal add(l:mlines, 'shouts requested / slots finished: '.g:aa.cursession.shouts_requested)
+    cal add(l:mlines, 'shouts requested: '.g:aa.cursession.shouts_requested)
+    cal add(l:mlines, 'slots finished: '.(g:aa.cursession.shouts_requested-1))
+    
     cal add(l:mlines, 'shouts sent: '.g:aa.cursession.shouts_sent)
     cal add(l:mlines, 'slot duration in minutes: '.string(g:aa.cursession.dur))
     cal add(l:mlines, 'number of slots: '.g:aa.cursession.nslots)
-    cal add(l:mlines, '((( to finish a session, one should send slots + 1 shouts )))')
+    cal add(l:mlines, 'messages in session when finalized: '.(g:aa.cursession.nslots-1))
   else
     cal add(l:mlines, '(start AA session to have more stats)')
   endif
@@ -276,6 +296,7 @@ fu! AAInitVars() " {{{
 
   let g:aa.events = {}
   let g:aa.events.aa_initialized = strftime("%c")
+  let g:aa.events.aa_initialized_seconds =localtime()
   let g:aa.events.last_shout = {}
   let g:aa.events.shouts_count = 0
 
@@ -299,8 +320,8 @@ fu! AAExpectMsg(timer) " {{{
     en
     call AASay(l:pmsg)
   en
-  let g:aa.events.last_shout.request_seconds = localtime()
   let g:aa.events.last_shout.request_time = strftime("%c")
+  let g:aa.events.last_shout.request_seconds = localtime()
   " Make sound"
 endf " }}}
 fu! AASay(phrases) " {{{
@@ -330,8 +351,8 @@ fu! AASessionReceiveMsg() " {{{
       call writefile(['ended: '.system("date")[:-2], '', ''], g:aa.paths.sessions, 'as')
     endif
   endif
-  let g:aa.events.last_shout.sent_seconds = localtime()
   let g:aa.events.last_shout.time = strftime("%c")
+  let g:aa.events.last_shout.sent_seconds = localtime()
 endfu " }}}
 fu! AACountShoutsInFile() " {{{
   " count ^-----

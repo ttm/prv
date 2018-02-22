@@ -28,7 +28,7 @@ nnoremap B :if exists("t:exp_set_ttm")<CR>exec "normal 9\<C-W>h:q"<CR>unlet! t:
 nnoremap B :if exists("t:exp_set_ttm")<CR>unlet! t:exp_set_ttm<CR>endif
 
 " should put fold markers as comments, for now just VimL
-noremap c mf?^fuA " {{{/^endfuA " }}}`f 
+noremap c mf?^fuA " {{{/^endfA " }}}`f 
 inoremap c <ESC>?^fuA " {{{/^endfuA " }}}`fa
 " for gigraphs
 inoremap C <ESC>a
