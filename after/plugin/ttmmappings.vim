@@ -142,6 +142,7 @@ nnoremap <Space>eA :exec "e " . split(globpath(&rtp, "plugin/ttmmappings.vim"), 
 nnoremap <Space>eb :Split ec getbufinfo()
 nnoremap <Space>ec  :put ='\" '.string(keys(ccs))<CR>:put ='cal ApplyCS(g:ccs[\"green1\"],\"color\")'<CR>
 nnoremap <Space>ee :exec "e " . split(globpath(&rtp, "plugin/ttmmappings.vim"), "\n")[0]<CR>/ttm:exc-com<CR>
+nnoremap <Space>e<Space>F :sf **/aa|    " press tab after
 " nnoremap <Space>ea :exec "e " . split(globpath(&rtp, "plugin/ttmmappings.vim*"), "\n")[0]<CR>:lvim $\v[^\]]ttm:alt-map$ ~/.vim/**<CR>
 nnoremap <Space>ei :help aa<CR>
 nnoremap <Space>eI :help aa<CR>`t

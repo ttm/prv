@@ -19,3 +19,11 @@ set bg=dark
 
 cal ApplyCS(g:ccs["passivepink1"],"color")
 hi SpellBad cterm=undercurl
+se path-=~/.vim/pack/ttm/opt/
+se path+=~/.vim/pack/ttm/opt/
+se path+=~/.vim/aux/vimwiki/
+
+se suffixesadd+=.wiki
+se suffixesadd+=.vim
+se suffixesadd+=.py
+se suffixesadd+=.txt

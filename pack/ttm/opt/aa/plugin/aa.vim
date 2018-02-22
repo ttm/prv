@@ -1,4 +1,4 @@
-"bjjj Vim plugin for time management and automated documenting activities
+" Vim plugin for time management and automated documenting activities
 " Author: Renato Fabbri <renato.fabbri@gmail.com>
 " Date: 2018 Fev 21 (when I wrote this header...)
 " Installing:	:help aa-install 
@@ -15,41 +15,50 @@ if exists("g:loaded_aaplugin") && (exists("g:aa_not_hacking") || exists("g:prv_n
 endif
 let g:loaded_aaplugin = "v0.01b"
 let g:aa_dir = expand("<sfile>:p:h:h") . '/'
+" let g:aa_default_leader = '<Space>'
+let g:aa_default_leader = ''
 
 " MAPPINGS: {{{2
 " -- for shouts {{{3
-nnoremap Aa :A 
-nnoremap AA :exec "vs " . g:aa.paths.shouts<CR>Go<ESC>o<ESC>:.!date<CR>:put =g:aa.separator<CR>kki
+let g:aall = mapleader
+if exists("g:aa_leader")
+  let mapleader = g:aa_leader
+el
+  let mapleader = g:aa_default_leader
+en
+nn <leader>Aa :A 
+nn <leader>AA :exec "vs " . g:aa.paths.shouts<CR>Go<ESC>o<ESC>:.!date<CR>:put =g:aa.separator<CR>kki
 
-nnoremap Ae :exec "e " . g:aa.paths.shouts<CR>
-nnoremap Av :exec "vs " . g:aa.paths.shouts<CR>G
-nnoremap At :exec "tabe " . g:aa.paths.shouts<CR>
+nn <leader>Ae :exec "e " . g:aa.paths.shouts<CR>
+nn <leader>Av :exec "vs " . g:aa.paths.shouts<CR>G
+nn <leader>At :exec "tabe " . g:aa.paths.shouts<CR>
 
-nnoremap AA :As<CR>
+nn <leader>A<leader> :As<CR>
 
 " -- for sessions {{{3
-nnoremap As :S 15 8
-nnoremap AS :S .1 3
-nnoremap AS :S 15 8 starting session (dummy message from aa plugin)<CR>
-nnoremap AV :exec "vs " . g:aa.paths.sessions<CR>G
-nnoremap Al :At<CR>
-nnoremap AL :AT<CR>
-nnoremap AO :Ao<CR>
-nnoremap Ar :Ar<CR>
-nnoremap AR :AR<CR>
+nn <leader>As :S 15 8
+nn <leader>AS :S .1 3
+nn <leader>A<leader>S :S 15 8 starting session (dummy message from aa plugin)<CR>
+nn <leader>AV :exec "vs " . g:aa.paths.sessions<CR>G
+nn <leader>Al :At<CR>
+nn <leader>AL :AT<CR>
+nn <leader>AO :Ao<CR>
+nn <leader>A<leader>r :Ar<CR>
+nn <leader>A<leader>R :AR<CR>
 " -- hacking {{{3
-nnoremap Ah :exec "vs " . g:aa.paths.aux<CR>
-nnoremap AH :exec "vs " . g:aa.paths.aascript<CR>
-nnoremap Ah :exec "vs " . g:aa.paths.aaiscript<CR>
-nnoremap AH :exec "vs " . g:aa.paths.aadoc<CR>
-" plus A(e,t,v) for shouts and AV for session
+nn <leader>Ah :exec "vs " . g:aa.paths.aux<CR>
+nn <leader>A<leader>H :exec "vs " . g:aa.paths.aascript<CR>
+nn <leader>A<leader>h :exec "vs " . g:aa.paths.aaiscript<CR>
+nn <leader>AH :exec "vs " . g:aa.paths.aadoc<CR>
+" plus <leader>A(e,t,v) for shouts and <leader>AV for session
 
 " -- general {{{3
-nnoremap Ac :Ac<CR>
-nnoremap AC :Ac y<CR>
-nnoremap Ai :Ai<CR>
-nnoremap AI :AI<CR>
-nnoremap Ar :new<CR>:put =string(g:aa)<CR>:PRVbuff<CR>
+nn <leader>Ac :Ac<CR>
+nn <leader>AC :Ac y<CR>
+nn <leader>Ai :Ai<CR>
+nn <leader>AI :AI<CR>
+nn <leader>Ar :new<CR>:put =string(g:aa)<CR>:PRVbuff<CR>
+let mapleader = g:aall
 
 " COMMANDS: {{{2
 " -- MAIN: {{{3
@@ -168,18 +177,18 @@ fu! AAClear(...) " {{{
 endf " }}}
 fu! AATimeLeftInSlot() " {{{
   let at = g:aa.cursession.dur*60 - (localtime() - g:aa.events.last_shout.request_seconds)
-  retu AAMinutesFromSeconds(string(l:at))
+  retu AASecondsToTimestring(string(l:at))
 endfu " }}}
 fu! AATimeSpentInSlot() " {{{
   let at = localtime() - g:aa.events.last_shout.request_seconds
-  retu AAMinutesFromSeconds(l:at)
+  retu AASecondsToTimestring(l:at)
 endfu " }}}
 fu! AATimeSinceLastShout() " {{{
   if !exists("g:aa.events.last_shout.sent_seconds")
     retu 'no shout has beed given since last AA startup'
   en
   let at = (localtime() - g:aa.events.last_shout.sent_seconds)
-  retu AAMinutesFromSeconds(l:at)
+  retu AASecondsToTimestring(l:at)
 endf " }}}
 fu! AATestCommandToFunctionArgs(...) " {{{
   let g:mfargs = a:
@@ -208,7 +217,7 @@ fu! AAInfoLines() " {{{
   cal add(l:mlines, '')
   cal add(l:mlines, 'initialized: '.g:aa.initialized)
   cal add(l:mlines, 'initialized time: '.g:aa.events.aa_initialized)
-  cal add(l:mlines, 'time since initialized: '.AAMinutesFromSeconds(localtime() - g:aa.events.aa_initialized_seconds))
+  cal add(l:mlines, 'time since initialized: '.AASecondsToTimestring(localtime() - g:aa.events.aa_initialized_seconds))
   cal add(l:mlines, 'using voices: '.string(g:aa.voices))
   cal add(l:mlines, 'using voice to say time: '.g:aa.saytime)
   cal add(l:mlines, 'user: '.g:aa.user)
@@ -235,14 +244,14 @@ fu! AAInfoLines() " {{{
     cal add(l:mlines, 'number of slots: '.g:aa.cursession.nslots)
     cal add(l:mlines, 'messages in session when finalized: '.(g:aa.cursession.nslots-1))
     cal add(l:mlines, 'session started at: '.(g:aa.events.session_started))
-    cal add(l:mlines, 'total duration: '.(g:aa.cursession.nslots*g:aa.cursession.dur))
+    cal add(l:mlines, 'total duration: '.AASecondsToTimestring(g:aa.cursession.nslots*60*float2nr(g:aa.cursession.dur)))
     let at = localtime() - g:aa.events.session_started_seconds
-    cal add(l:mlines, 'in session for: '.AAMinutesFromSeconds(l:at))
+    cal add(l:mlines, 'in session for: '.AASecondsToTimestring(l:at))
   else
     cal add(l:mlines, '(start AA session to have more stats)')
   endif
   cal add(l:mlines, '')
-  cal add(l:mlines, 'more info in :h aaplug.txt, the files in the paths above, and the script files.')
+  cal add(l:mlines, 'more info in :h aa.txt, the files in the paths above, and the script files.')
   retu l:mlines
 endf " }}}
 fu! AATimeOfLastShout() " {{{
@@ -319,11 +328,23 @@ fu! AAInitVars() " {{{
 
   let g:aa.voices = ['croak', 'f1', 'f2', 'f3', 'f4', 'f5', 'klatt', 'klatt2', 'klatt3', 'klatt4', 'm1', 'm2', 'm3', 'm4', 'm5', 'm6', 'm7', 'whisper', 'whisperf']
 endfu " }}}
-fu! AAMinutesFromSeconds(secs) " {{{
+fu! AASecondsToTimestring(secs) " {{{
   let g:coisa = a:secs
-  let min = float2nr(str2float(a:secs)/60.0)
-  let sec = float2nr(str2float(a:secs) - l:min * 60)
-  retu l:min.'m'.l:sec.'s'
+  if type(a:secs) ==  1
+    let s = str2float(a:secs)
+  elsei type(a:secs) == 0
+    let s = 1.0*a:secs
+  en
+  cal assert_equal(type(l:s), 5)
+  let hr = float2nr(l:s/(60*60))
+  let min = float2nr(l:s/60 - l:hr*60)
+  let sec = float2nr(l:s - l:min * 60 - l:hr*60*60)
+  if hr > 0
+    let durline = l:hr.'h'.l:min.'m'.l:sec.'s'
+  else
+    let durline = l:min.'m'.l:sec.'s'
+  en
+  retu l:durline
 endf " }}}
 fu! AAExpectMsg(timer) " {{{
   let g:aa.cursession.shouts_requested += 1

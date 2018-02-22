@@ -1,8 +1,42 @@
 * connect terminal to prv python though pty option of jobs
+* 
+* sessao p publica aa plugin and review realcolors and toki pona and prv.
+  - plugin aa:
+    * implement the tagging mechanism (to define, use and obtain files
+    * read all files and see if they are ok.
+    * add about mappings, functions and commands to aa.txt
+    * make vimball to distribute
+    * upload to vim.org
+    *                                                           
+    * jpj
 
+ok abracadabra man.
+lets see...
+
+* I am a garanton
+  - Yes you are
+  - So you are too.
+
+So lets see how you go now...
+write the tutorial on using realcolors,
+  - make a colorscheme on the fly (start vim session, open any file, change usual colors,
+    then change ft=vimwiki, change the colors of bullets. Then open a python or help file.
+    Show the person how to save and load such colorschemes.)
+      * on the first phase:
+	      * vim .
+	      * tabe
+	      * make screen bigger with c-+
+	      * write 'lets make a color scheme on the fly to suit my taste, mood and intentions'
+	      * c-\ i initializes
+	      * c-\ s shows the syntax group
+	      * c-\ c shows hex rep of colors and enables the change of them
+another for using aa,
+another for using toki pona,
+and another on using vim in the prv framework.
 
 (send finished items to [[achievements]] \wa)
-
+aco
+à
 Hoje:
 dar conta da encriptagem
 fazer o aa fumegar no vim corretamente
