@@ -7,7 +7,7 @@ aux/vimwiki/
 *.swp
 aux/trash/
 pack/plugins/*
-pack/ttm/start/tokipona
+pack/ttm/opt/tokipona
 undo/
 spell/
 viminfo
