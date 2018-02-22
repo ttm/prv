@@ -1,4 +1,4 @@
-*aaplugin.txt*    For Vim version 8.X     Last Change: 2018
+*aaplugin.txt*    For Vim version 8.X     Last Change: 2018jkj
 Plugin for enhancing your life
 
 This plugin is meant to help you keep track of what

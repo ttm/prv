@@ -1,4 +1,4 @@
-" Vim plugin for time management and automated documenting activities
+"bjjj Vim plugin for time management and automated documenting activities
 " Author: Renato Fabbri <renato.fabbri@gmail.com>
 " Date: 2018 Fev 21 (when I wrote this header...)
 " Installing:	:help aa-install 
@@ -14,14 +14,15 @@ if exists("g:loaded_aaplugin") && (exists("g:aa_not_hacking") || exists("g:prv_n
  finish
 endif
 let g:loaded_aaplugin = "v0.01b"
+let g:aa_dir = expand("<sfile>:p:h:h") . '/'
 
 " MAPPINGS: {{{2
 " -- for shouts {{{3
 nnoremap Aa :A 
 nnoremap AA :exec "vs " . g:aa.paths.shouts<CR>Go<ESC>o<ESC>:.!date<CR>:put =g:aa.separator<CR>kki
 
+nnoremap Ae :exec "e " . g:aa.paths.shouts<CR>
 nnoremap Av :exec "vs " . g:aa.paths.shouts<CR>G
-nnoremap Ao :exec "e " . g:aa.paths.shouts<CR>
 nnoremap At :exec "tabe " . g:aa.paths.shouts<CR>
 
 nnoremap AA :As<CR>
@@ -36,6 +37,13 @@ nnoremap AL :AT<CR>
 nnoremap AO :Ao<CR>
 nnoremap Ar :Ar<CR>
 nnoremap AR :AR<CR>
+" -- hacking {{{3
+nnoremap Ah :exec "vs " . g:aa.paths.aux<CR>
+nnoremap AH :exec "vs " . g:aa.paths.aascript<CR>
+nnoremap Ah :exec "vs " . g:aa.paths.aaiscript<CR>
+nnoremap AH :exec "vs " . g:aa.paths.aadoc<CR>
+" plus A(e,t,v) for shouts and AV for session
+
 " -- general {{{3
 nnoremap Ac :Ac<CR>
 nnoremap AC :Ac y<CR>
@@ -166,12 +174,6 @@ fu! AATimeSpentInSlot() " {{{
   let at = localtime() - g:aa.events.last_shout.request_seconds
   retu AAMinutesFromSeconds(l:at)
 endfu " }}}
-fu! AAMinutesFromSeconds(secs) " {{{
-  let g:coisa = a:secs
-  let min = float2nr(str2float(a:secs)/60.0)
-  let sec = float2nr(str2float(a:secs) - l:min * 60)
-  retu l:min.'m'.l:sec.'s'
-endf
 fu! AATimeSinceLastShout() " {{{
   if !exists("g:aa.events.last_shout.sent_seconds")
     retu 'no shout has beed given since last AA startup'
@@ -181,7 +183,7 @@ fu! AATimeSinceLastShout() " {{{
 endf " }}}
 fu! AATestCommandToFunctionArgs(...) " {{{
   let g:mfargs = a:
-endfu " }}} " }}}
+endf " }}}
 fu! AASessionRegisterShoutGiven() " {{{
   " let g:aa.cursession.shouts_requested += 1
   " let g:aa.cursession.shouts_expected -= 1
@@ -206,6 +208,7 @@ fu! AAInfoLines() " {{{
   cal add(l:mlines, '')
   cal add(l:mlines, 'initialized: '.g:aa.initialized)
   cal add(l:mlines, 'initialized time: '.g:aa.events.aa_initialized)
+  cal add(l:mlines, 'time since initialized: '.AAMinutesFromSeconds(localtime() - g:aa.events.aa_initialized_seconds))
   cal add(l:mlines, 'using voices: '.string(g:aa.voices))
   cal add(l:mlines, 'using voice to say time: '.g:aa.saytime)
   cal add(l:mlines, 'user: '.g:aa.user)
@@ -231,6 +234,10 @@ fu! AAInfoLines() " {{{
     cal add(l:mlines, 'slot duration in minutes: '.string(g:aa.cursession.dur))
     cal add(l:mlines, 'number of slots: '.g:aa.cursession.nslots)
     cal add(l:mlines, 'messages in session when finalized: '.(g:aa.cursession.nslots-1))
+    cal add(l:mlines, 'session started at: '.(g:aa.events.session_started))
+    cal add(l:mlines, 'total duration: '.(g:aa.cursession.nslots*g:aa.cursession.dur))
+    let at = localtime() - g:aa.events.session_started_seconds
+    cal add(l:mlines, 'in session for: '.AAMinutesFromSeconds(l:at))
   else
     cal add(l:mlines, '(start AA session to have more stats)')
   endif
@@ -278,16 +285,20 @@ fu! AAInitVars() " {{{
   let g:aa.say = 1
   let g:aa.saytime = 1
   let g:aa.paths = {}
-  let g:aa.paths.path = g:prv_dir . 'aux/aa/'
-  if !isdirectory(g:aa.paths.path)
-    let mkd = input("make directory " . g:aa.paths.path . " ? (y/N)")
-    if (l:mkd == 'y' || l:mkd == 'Y') && 
-      call mkdir(g:aa.paths.path, 'p')
+  let g:aa.paths.aa_dir = g:aa_dir
+  let g:aa.paths.aux = g:aa.paths.aa_dir . 'aux/'
+  if !isdirectory(g:aa.paths.aux)
+    let mkd = input("make directory " . g:aa.paths.aux . " ? (y/N)")
+    if l:mkd == 'y' || l:mkd == 'Y'
+      call mkdir(g:aa.paths.aux, 'p')
     endif
   endif
   " mkdir if necessary
-  let g:aa.paths.shouts = g:aa.paths.path . 'aashouts.txt'
-  let g:aa.paths.sessions = g:aa.paths.path . 'aasessions.txt'
+  let g:aa.paths.shouts = g:aa.paths.aux . 'aashouts.txt'
+  let g:aa.paths.sessions = g:aa.paths.aux . 'aasessions.txt'
+  let g:aa.paths.aascript = g:aa.paths.aa_dir . 'plugin/aa.vim'
+  let g:aa.paths.aaiscript = g:aa.paths.aa_dir . 'after/plugin/aastartup.vim'
+  let g:aa.paths.aadoc = g:aa.paths.aa_dir . 'doc/aa.txt'
   if exists("g:aa_user")
     let g:aa.user = aa_user
   else
@@ -308,6 +319,12 @@ fu! AAInitVars() " {{{
 
   let g:aa.voices = ['croak', 'f1', 'f2', 'f3', 'f4', 'f5', 'klatt', 'klatt2', 'klatt3', 'klatt4', 'm1', 'm2', 'm3', 'm4', 'm5', 'm6', 'm7', 'whisper', 'whisperf']
 endfu " }}}
+fu! AAMinutesFromSeconds(secs) " {{{
+  let g:coisa = a:secs
+  let min = float2nr(str2float(a:secs)/60.0)
+  let sec = float2nr(str2float(a:secs) - l:min * 60)
+  retu l:min.'m'.l:sec.'s'
+endf " }}}
 fu! AAExpectMsg(timer) " {{{
   let g:aa.cursession.shouts_requested += 1
   let g:aa.cursession.shouts_expected += 1
@@ -329,7 +346,7 @@ fu! AASay(phrases) " {{{
   for i in a:phrases
     call add(l:voices, AAMkVoice() . ' "' . i . '"')
   endfo
-  let ef = g:aa.paths.path . 'tempespeak'
+  let ef = g:aa.paths.aux . 'tempespeak'
   cal writefile(l:voices, l:ef)
   cal system('chmod +x ' . l:ef)
   cal job_start(l:ef)
