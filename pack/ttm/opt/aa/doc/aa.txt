@@ -1,22 +1,258 @@
-*aa.txt*    For Vim version 8.X     Last Change: 2018jkj
-Plugin for enhancing your life
+*aa.txt*        Plugin for managing time and note taking        version 0.01b
 
-This plugin is meant to help you keep track of what
-you are doing. This might be very helpful in fine-tuning
-efforts, but also is very obviously useful when tackling
-complex tasks.
+==============================================================================
+CONTENTS                                                            *aa-index*
 
+    1. Intro                                    |aa-intro|       
+        1.2. AA (Algorithmic Autoregulation)    |AA|
+             |aa-shout|, |aa-literature|, |aa-shout-usage|, |aa-session|,
+             |aa-slot|, |aa-repr|,  |aa-plugin|
+        1.2. Related plugins                    |aa-related-plugins|
+        1.3. Usage examples                     |aa-usage-examples|
+        1.3. |aa| help                            |aa-helphelp|
+    2. Install                                  |aa-install|
+    3. Options, variables and general settings  |aa-settings|
+    3. Mappings                                 |aa-mappings|
+        3.1. shout                              |aa-shout-mappings|
+        3.1. session                            |aa-shout-mappings|
+        3.1. hack                               |aa-shout-mappings|
+        3.1. general-us                         |aa-shout-mappings|
+    4. Commands                                 |aa-commands|
+        4.1. main                               |aa-main-commands|
+        4.1. utils                              |aa-util-commands|
+    5. Functions                                |aa-functions|
+    6. Files                                    |aa-files|
+        6.1. Syntax highlighting in |aa|          |aa-syntax|
+        6.2. aux/aashouts.txt                   |aashouts.txt|
+        6.2. aux/aasessions.txt                 |aasessions.txt|
+        6.1. plugin/aa.vim                      |aa.vim|
+        6.2. syntax/aashouts.vim                |aashouts.vim|
+        6.2. ftdetect/aafts.vim                 |aaftdetect.vim|
+        6.2. after/plugin/aastartup.vim         |aastartup.vim|
+        6.2. doc/aa.txt                         |aa.txt|
+             |aa-help|
+    7. Final words                              |aa-final-words|
+        7.1. Advantages and drawbacks of |aa|     |aa-compare|
+        7.1. Further work                       |aa-todo|
+        7.1. Acknowledgements                   |aa-Ack|
+        7.2. Contact                            |aa-Contact|
+                                                
+    
+
+==============================================================================
+1. Intro                                                       *aa-intro*
+This plugin enables the AA a personal time-tracking and note-taking mechanism
+inside Vim.
+
+AA as been useful for personal and collective work-forces, in both professional
+and voluntary dedication, employing either formal and informal logging of
+shouts, for scientific research and for software development.  This plugin
+holds considerable advantages over the preceding implementations, although the
+sharing interface is not still implemented.  See |aa-AA|
+
+It might be maximally harnessed by using other advanced self-management
+facilities, such as Vimwiki. See |aa-related-plugins|
+
+------------------------------------------------------------------------------
+1.1.                                                            *AA*
+                                                                *aa-shout*
+
+The main idea of AA is sending messages, which are notes about ongoing work
+(but not strictly) for managing personal or group dedication, sharing ongoing
+processes, automated documentation of efforts, self-transparency, and other
+resounding goals. Such messages are herein called shouts.
+This method (or strategy) has proved itself valuable though time,
+specially in fine-tuning efforts and tackling complex tasks. [1][2][3][4]
+One might also want to loot at the Pomodoro Technique for time management.
+
+                                                                *aa-literature*
+[1]: Fabbri, R. (2017). The Algorithmic-Autoregulation (AA) Methodology and
+Software: a collective focus on self-transparency.
+arXiv preprint https://arxiv.org/abs/1711.04612
+[2]: Fabbri, R., Fabbri, R., Vieira, V., Negrao, A., Zambianchi, L., Mendonça,
+M., ... & Shiga, D. (2013). AA: The Algorithmic Autoregulation
+(Distributed Software Development) Methodology.
+arXiv preprint https://arxiv.org/abs/1604.08255
+[3]: https://github.com/ttm/aa01
+[4]: http://wiki.nosdigitais.teia.org.br/Lab_Macambira
+
+                                                                *aa-shout-usage*
+The use of shouts is by no means strict. As AA is meant for the user to harness
+its mechanisms, one should continually adapt its use to fit personal needs and
+desires.  Propaganda are considered useless, a deviation from the purposes of
+AA, and are most often in shouts from new users.  Notes about ongoing tasks are
+preferred against those exhibiting finished products, although finishing
+something is often the most appropriate shout.  See |aa-usage-examples|
+
+                                                                *aa-session*
+These might or not be grouped into sessions, which are sets of consecutive (and
+usually also somewhat periodic) shouts.  Sessions are often dedicated to some
+ongoing project or task, might be de recipient of other media, such as a video
+screenscast or a final message, and metadata, such as rating by other AA users.
+
+                                                                *aa-slot*
+Most traditionally, a session is comprised of 8 slots of 15 minutes.  One
+should send a shout at the beginning of the session and after each slot is
+finished.  Sometimes a tolerance of +- 5 minutes is used as a reference, but it
+is all up to the user, of course.
+Slot duration range from about a minute to hours.
+
+                                                                *aa-repr*
+AA shouts and sessions have traditionally been represented as texts, with e.g.
+videos and blogs being uploaded in any third-party online platform, and then
+the URLs used as convenient.
+
+                                                                *aa-plugin*
+|aa| is a plugin for using AA inside Vim.  With |aa| you can:
+    - Write a shout at any time, with convenient mappings and commands.
+      See |aa-shout-mappings| |aa-commands|
+    - Keep track of your shouts, editing and inputing them though automated
+      routines or editing |aashouts.txt| directly as a normal file in Vim.
+    - Make AA sessions, with visual and audio cues for: slots finished,
+    - Have a clear understanding of AA state (shouts, sessions, paths,
+      initialization, variables) with a convenient mapping. See |aaleader-Ai|
+    - Hack a very friendly interface of functions, commands and mappings.
+      See |aa.vim|
+    - Share your shouts and sessions with other AA users through linked data
+      protocols (RDF, SparQL, OWL, etc). Not Implemented. See |aa-todo|
+
+------------------------------------------------------------------------------
+1.2. Related plugins                                    *aa-related-plugins*
+
+|aa| is being developed as part of the PRV (Python, RDF and VIM) framework.
+One might benefit from the other PRV plugins:
+    - prv is a set of utilities that I used in a disordered manner beforehand: save and load sessions, mappings, functions, syntax highlighting, etc..
+    - realcolors is a set of utilities for tweaking and creating 24 bit true color
+      color schemes for Vim.
+      The color schemes, default color sets, ways to navigate the color space,
+      and more are obtained through techniques derived from psychophysics,
+      data visualization, and simple mathematics.
+    - tokipona is a set of utilities for the Toki Pona minimalist conlang: syntax highlighting, vocabulary mining, text synthesis, and preliminary Toki Pona wordnets.
+
+Other plugins are envisioned in PRV, partly mentioned in the documenation:
+    https://github.com/ttm/prv
+
+Vimwiki has been very symbiotic with my |aa| usage.
+See the |aa-bare-vim-wiki| intended.
+
+Please suggest me other plugins.
+
+------------------------------------------------------------------------------
+1.3. Usage examples                                    *aa-usage-examples*
+
+As |AA| is a very open methodology, there are coutless ways to use AA.
+The core ideas are given in |aa-intro|. This section presents some
+procedures which might be followed while using |aa|.
+
+In writing some documents (say scripts and latex files), one has many ideas
+about possible enhancements and recognizes potential bugs. These notes
+might be taken without leaving the window by using |aaleader-a|.
+More ellaborate notes might be taken using |aaleader-A| at any time,
+editing directly into shouts.txt. To access the notes, one might
+use |aaleader-v|, |aaleader-t|and |aaleader-e|.
+                                         ^asdasdaad^
+
+
+------------------------------------------------------------------------------
+1.4. |aa| help                                    *aa-helphelp*
+
+
+
+helphelp
+
+Reload this help file (:e<CR> or :e %) to edit it, as specified in the final
+line of this aa.txt file.
+Render the |aa| help tags e.g. with 
+
+    :helptags %
+    (Press TAB and then Backspace the aa.txt)
+
+Please enhance this documentation within this or another file e.g. by 
+copy ./aa.txt to ./anything.txt as a template.
+
+                                                        *aa-help-cheat-sheet*
+highlighting and functions:
+    *Tag*
+    |hyperlink|
+    'option'
+    `:command`
+    Column heading~
+>
+    function SomeFunc()
+        echo "Yes, I am verbatim"
+    endf
+<
+    {braces} CTRL-X <Left>
+    Note Notes
+    
+These require tabs:
+	*Todo	something to do
+	*Error	something wrong
+        *Todo   make a syntax rule to always color the line when starting
+                with ^\s{x,y}*\U.
+                If possible, color the line according to a calculation
+                leading the *<token> to RGB space.
+    
+Mannerisms and default usability: 
+    :se ft=              to see the chars being used in any help file
+    :se ft=help         set syntax again
+    copy aa.txt or any other help file as a template
+    You might follow any tag with <C-]>.
+    You see every incidence of a tag in current file with 
+                |:lv| /|tag< remove me>|/ %
+                (% might be replaced to any path according to {file})
+                Similarly:
+                `:lh` |tag< remove me>>
+                and then `:lop` to navigate the lines where they occur
+                (also, :vim and :helpg with :copen
+    Type :h aa- and press <C-D> to see all the matches.
+    You reach a list of all |aa| tags with `:ts` ./aa
+
+                                                        *aa-usage-sheet*
+
+
+mk different sets of tags to be searched for by creating different
+tag files, which are loaded when one type of tag is present.
+
+
+
+
+
+
+
+
+
+
+===============
             *aa-design*
 AA is designed to be as simple to use and hack
 (as I can make it ok, but other people have contributed
 to AA[1][2]).
 
-            *aa-disclaimer*
-aa is the ambiguous acronym.
+*aa-activism*
+|AA| has been envisioned and used for social transformation.
+Examples:
+* |AA| is recurrently understood as a way to comprovar dedication,
+  thus opening a possibility for one to requerer the bounty that fits
+  the time spent on a collective wealfare (goals, ethic principles, etc).
+  This has happened both in relation to the government (one might ask
+  for resources in a public institution), and in relation to the academy
+  (one might ask for 
+
+
+                                                      *aa-disclaimer*
+AA is the ambiguous acronym.
+
+Public domain technology
+(conceptualization, code, documents, etc)
+
+Run this command-line command in your command-line prompt:
+  :cal timer_start(300, 'CrazyFu', {'repeat': 10}) | :exe "fu! CrazyFu(timer) \n exec 'hi Normal guibg=#'.(system(\"echo $RANDOM$RANDOM\")[:5]) \n endf"
+See |aa-related-plugins|
+
   ) ( /\/\/\/\/\ _o_o_ oOo _o_o_ /\/\/\/\/\ ) (
-./aa-crazy                                                                       
 
-
+    
             *aa-mappings*
 <Space>a
         write a one-line shout
@@ -48,7 +284,9 @@ This plugin doesn't have any settings.
 
 *asdasd* is the best ever
 
-            *aa-todo*
+------------------------------------------------------------------------------
+1.3. Todo                                                     *aa-todo*
+
 * Tags should not collide. How to find out all the tags defined by the system?
 * Routines to send shouts to cloud (SQl, MondDB or RDF preferably)
 * arrumar doc
@@ -62,7 +300,31 @@ This plugin doesn't have any settings.
 * make espeak async!!! >.<
 * implement optional margin around slot endings to receive a shout.
 * enable the use of parallel sessions (e.g. for different duration slots)
-* 
+* implement publishing routines for the shouts (and sessions).
+    - data should be sent to Data.Wold, DataHub, os similar and made available in RDF/linked data
+    - internally, the date line yields a reasonable ID for a shout or session (maybe remove spaces).
+      For sharing, the id shoud be: user-datestring.
+    - let a user share any number of info in a dedicated file, parsing it to rdf.
+* make a cool window with aa info with syntax highlighting
+* make declare shout sent/request with or without influecing in the slots related to each slot.
+
+                                                   *aa-bare-vim-wiki*
+I have been thinking about maintaining a wiki on bare Vim because it is very
+simple and functional:
+    - use a directory as wiki root, 
+    - put a suffix *.mwiki in the ....
+    - use gf to follow pages
+    - write token or word with starting / or . if internal link intended
+    - reuse Vim's capabilities with help files and (parallel help files?) with
+      tags and searching (and what more?).
+    - integrate with |aa| and the rest of PRV. See |aa-related-plugins|
+    - manage to link paths of wiki pages and of repository trees.  E.g. .py
+      files use a specific &path, .vim files, other &path etc...
+    - it might be condensed in just a couple of settings with optional advanced
+      functions
+    - it should be very friendly to making collage of files to render, e.g. a
+      latex or HTML file.
+
 
 
 Copyright: Public Domain.

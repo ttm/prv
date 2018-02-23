@@ -16,48 +16,55 @@ endif
 let g:loaded_aaplugin = "v0.01b"
 let g:aa_dir = expand("<sfile>:p:h:h") . '/'
 " let g:aa_default_leader = '<Space>'
-let g:aa_default_leader = ''
+let g:aa_default_leader = 'A'
 
 " MAPPINGS: {{{2
-" -- for shouts {{{3
+" -- g:aa_leader hack, part 1 of 2 {{{3
 let g:aall = mapleader
 if exists("g:aa_leader")
   let mapleader = g:aa_leader
 el
   let mapleader = g:aa_default_leader
+  let g:aa_leader = g:aa_default_leader
 en
-nn <leader>Aa :A 
-nn <leader>AA :exec "vs " . g:aa.paths.shouts<CR>Go<ESC>o<ESC>:.!date<CR>:put =g:aa.separator<CR>kki
-
-nn <leader>Ae :exec "e " . g:aa.paths.shouts<CR>
-nn <leader>Av :exec "vs " . g:aa.paths.shouts<CR>G
-nn <leader>At :exec "tabe " . g:aa.paths.shouts<CR>
-
-nn <leader>A<leader> :As<CR>
-
+" -- for shouts {{{3
+" shouting:
+nn <leader>a :A 
+nn <leader>A :exec "vs " . g:aa.paths.shouts<CR>Go<ESC>o<ESC>:.!date<CR>:put =g:aa.separator<CR>kki
+" for accessing the aashouts.txt:
+nn <leader>e :exec "e " . g:aa.paths.shouts<CR>
+nn <leader>v :exec "vs " . g:aa.paths.shouts<CR>G
+nn <leader>t :exec "tabe " . g:aa.paths.shouts<CR>
+" for the time since last shout:
+nn <leader>A<leader>A :As<CR>
 " -- for sessions {{{3
-nn <leader>As :S 15 8
-nn <leader>AS :S .1 3
-nn <leader>A<leader>S :S 15 8 starting session (dummy message from aa plugin)<CR>
-nn <leader>AV :exec "vs " . g:aa.paths.sessions<CR>G
-nn <leader>Al :At<CR>
-nn <leader>AL :AT<CR>
-nn <leader>AO :Ao<CR>
-nn <leader>A<leader>r :Ar<CR>
-nn <leader>A<leader>R :AR<CR>
+" starting a session:
+nn <leader>s :S 15 8
+nn <leader>S :S .1 3
+nn <leader><leader>S :S 15 8 starting session (dummy message from aa plugin)<CR>
+" accessing aasessions.txt:
+nn <leader>V :exec "vs " . g:aa.paths.sessions<CR>G
+" for info on the session (time and left in the slot, іs session on): 
+nn <leader>l :At<CR>
+nn <leader>L :AT<CR>
+nn <leader>O :Ao<CR>
+" declare shout sent or request
+nn <leader><leader>r :Ar<CR>
+nn <leader><leader>R :AR<CR>
 " -- hacking {{{3
-nn <leader>Ah :exec "vs " . g:aa.paths.aux<CR>
-nn <leader>A<leader>H :exec "vs " . g:aa.paths.aascript<CR>
-nn <leader>A<leader>h :exec "vs " . g:aa.paths.aaiscript<CR>
-nn <leader>AH :exec "vs " . g:aa.paths.aadoc<CR>
+nn <leader>h :exec 'vs ' . g:aa.paths.aux<CR>
+nn <leader><leader>H :exec 'vs ' . g:aa.paths.aascript<CR>
+nn <leader><leader>h :exec 'vs ' . g:aa.paths.aaiscript<CR>
+nn <leader>H :exec 'vs ' . g:aa.paths.aadoc<CR>
+nn <leader>m :exec 'Split :map '.g:aa_leader.'A'<CR>:sort />A\zs/<CR>
 " plus <leader>A(e,t,v) for shouts and <leader>AV for session
-
 " -- general {{{3
-nn <leader>Ac :Ac<CR>
-nn <leader>AC :Ac y<CR>
-nn <leader>Ai :Ai<CR>
-nn <leader>AI :AI<CR>
-nn <leader>Ar :new<CR>:put =string(g:aa)<CR>:PRVbuff<CR>
+nn <leader>c :Ac<CR>
+nn <leader>C :Ac y<CR>
+nn <leader>i :Ai<CR>
+nn <leader>I :AI<CR>
+nn <leader>r :new<CR>:put =string(g:aa)<CR>:PRVbuff<CR>
+" -- g:aa_leader hack, part 2 of 2 {{{3
 let mapleader = g:aall
 
 " COMMANDS: {{{2
@@ -117,7 +124,7 @@ fu! AAStartSession(...) " {{{
   call timer_start(float2nr(60.0*1000*l:dur), "AAExpectMsg", {'repeat': l:nslots})
   let g:aa.session_on = 1
   " BufEnter		after entering a buffer
-  call AAPutCC()
+  call AAUpdateColorColumns()
   " put two empty lines and a session separator
   call writefile(['', '', g:aa.session_separator], g:aa.paths.shouts, 'as')
   call writefile(['', '', 'started: '.system("date")[:-2],
@@ -172,7 +179,7 @@ fu! AAClear(...) " {{{
       unl g:AA_dict
     en
     cal timer_stopall()
-    cal AAPutCC()
+    cal AAUpdateColorColumns()
   en
 endf " }}}
 fu! AATimeLeftInSlot() " {{{
@@ -218,8 +225,8 @@ fu! AAInfoLines() " {{{
   cal add(l:mlines, 'initialized: '.g:aa.initialized)
   cal add(l:mlines, 'initialized time: '.g:aa.events.aa_initialized)
   cal add(l:mlines, 'time since initialized: '.AASecondsToTimestring(localtime() - g:aa.events.aa_initialized_seconds))
-  cal add(l:mlines, 'using voices: '.string(g:aa.voices))
-  cal add(l:mlines, 'using voice to say time: '.g:aa.saytime)
+  cal add(l:mlines, '| using voices: '.string(g:aa.voices))
+  cal add(l:mlines, '| using voice to say time: '.g:aa.saytime)
   cal add(l:mlines, 'user: '.g:aa.user)
   cal add(l:mlines, 'paths: '.string(g:aa.paths))
 
@@ -227,31 +234,32 @@ fu! AAInfoLines() " {{{
   cal add(l:mlines, 'shouts sent since init: '.g:aa.events.shouts_count)
   cal add(l:mlines, 'time since last shout: '.AATimeSinceLastShout())
   cal add(l:mlines, 'last shout in: '.AATimeOfLastShout())
-  cal add(l:mlines, '(((( shouts in current shouts.txt: '.
-                    \ AACountShoutsInFile() .' )))')
+  cal add(l:mlines, '| shouts in current shouts.txt: '. AACountShoutsInFile())
 
   cal add(l:mlines, '')
   cal add(l:mlines, 'session on: '.AAIsSessionOn())
   if AAIsSessionOn()
-    cal add(l:mlines, '|| time left in current slot: '.AATimeLeftInSlot())
-    cal add(l:mlines, '|| time spent in current slot: '.AATimeSpentInSlot())
-    cal add(l:mlines, '|| shouts expected: '.g:aa.cursession.shouts_expected)
-    cal add(l:mlines, 'shouts requested: '.g:aa.cursession.shouts_requested)
+    cal add(l:mlines, 'time left in current slot: '.AATimeLeftInSlot())
+    cal add(l:mlines, 'time spent in current slot: '.AATimeSpentInSlot())
     cal add(l:mlines, 'slots finished: '.(g:aa.cursession.shouts_requested-1))
+    cal add(l:mlines, '|| shouts expected: '.g:aa.cursession.shouts_expected)
+    cal add(l:mlines, '|| shouts requested: '.g:aa.cursession.shouts_requested)
     
-    cal add(l:mlines, 'shouts sent: '.g:aa.cursession.shouts_sent)
+    let l:sextra = g:aa.cursession.shouts_sent - g:aa.cursession.shouts_requested
+    let astr = '   (' . l:sextra . ' extra)'
+    cal add(l:mlines, '|| shouts sent: '.g:aa.cursession.shouts_sent .l:astr)
+    cal add(l:mlines, '|| minimum number of shouts in whole session: '.(g:aa.cursession.nslots+1))
     cal add(l:mlines, 'slot duration in minutes: '.string(g:aa.cursession.dur))
     cal add(l:mlines, 'number of slots: '.g:aa.cursession.nslots)
-    cal add(l:mlines, 'messages in session when finalized: '.(g:aa.cursession.nslots-1))
-    cal add(l:mlines, 'session started at: '.(g:aa.events.session_started))
-    cal add(l:mlines, 'total duration: '.AASecondsToTimestring(g:aa.cursession.nslots*60*float2nr(g:aa.cursession.dur)))
+    cal add(l:mlines, '| total duration: '.AASecondsToTimestring(g:aa.cursession.nslots*60*float2nr(g:aa.cursession.dur)))
+    cal add(l:mlines, '| session started at: '.(g:aa.events.session_started))
     let at = localtime() - g:aa.events.session_started_seconds
-    cal add(l:mlines, 'in session for: '.AASecondsToTimestring(l:at))
+    cal add(l:mlines, '| in session for: '.AASecondsToTimestring(l:at))
   else
     cal add(l:mlines, '(start AA session to have more stats)')
   endif
   cal add(l:mlines, '')
-  cal add(l:mlines, 'more info in :h aa.txt, the files in the paths above, and the script files.')
+  cal add(l:mlines, 'more info in :h aa, the files in the paths above, and the script files.')
   retu l:mlines
 endf " }}}
 fu! AATimeOfLastShout() " {{{
@@ -265,8 +273,8 @@ fu! AARunInAllWindows(acmd)
   let wi = win_getid()
   tabdo windo exec a:acmd
   call win_gotoid(l:wi)
-endf
-fu! AAPutCC() " {{{
+endf " }}}
+fu! AAUpdateColorColumns() " {{{
   if !exists("g:aa.cursession") || g:aa.cursession.shouts_expected <= 0
     setg colorcolumn=
     se colorcolumn<
@@ -284,7 +292,7 @@ fu! AAPutCC() " {{{
     " tabdo windo exec g:aa.cccommand | windo set colorcolumn<
     cal AARunInAllWindows(g:aa.cccommand)
   en
-endfu " }}} " }}}
+endfu " }}}
 fu! AAInitVars() " {{{
   let g:aa = {}
   let g:AA_dict = g:aa
@@ -349,12 +357,14 @@ endf " }}}
 fu! AAExpectMsg(timer) " {{{
   let g:aa.cursession.shouts_requested += 1
   let g:aa.cursession.shouts_expected += 1
-  cal AAPutCC()
+  cal AAUpdateColorColumns()
   let pmsg = []
   if g:aa.say == 1
-    call add(l:pmsg, 'A.A.: 1 shout expected. Total of ' . g:aa.cursession.shouts_expected . ' shouts expected.')
+    call add(l:pmsg, 'A.A.: slot: ' . (g:aa.cursession.shouts_requested-1)
+          \ . 'of ' . g:aa.cursession.nslots)
+    call add(l:pmsg, 'A.A.: 1 more shout expected. Total of ' . g:aa.cursession.shouts_expected)
     if g:aa.saytime == 1
-      call add(l:pmsg, 'now is : ' . strftime("%T, %B, day %d"))
+      call add(l:pmsg, 'A.A.: current time and day is: ' . strftime("%T, %B, day %d"))
     en
     call AASay(l:pmsg)
   en
@@ -382,7 +392,7 @@ fu! AASessionReceiveMsg() " {{{
   if exists("g:aa.session_on") && g:aa.cursession.shouts_expected > 0
     let g:aa.cursession.shouts_expected -= 1
     let g:aa.cursession.shouts_sent += 1
-    call AAPutCC()
+    call AAUpdateColorColumns()
     if (g:aa.cursession.nslots + 1 == g:aa.cursession.shouts_requested) && (g:aa.cursession.shouts_expected == 0)
       unlet g:aa.session_on
       call writefile([g:aa.session_separator, '', ''], g:aa.paths.shouts, 'as')
@@ -398,17 +408,14 @@ fu! AACountShoutsInFile() " {{{
   let g:taafile = readfile(g:aa.paths.shouts)
   let g:aashoutcount = count(g:taafile, "-----")
   return g:aashoutcount
-endf
-" -------- notes {{{
-" timer_start(400, TickColor(), {'repeat': 3}) )
-"
-" com -nargs=1 Question let g:banana='for you'
-" Question how do behave the function arguments? In all the cases of having bang or not, receiving range, etc
+endf " }}}
+" }}}
+" -------- notes {{{3
 " Todo check glaive
-" Note Maj.Min.Pat-(a,b,rc)XXXYYY pattern for software releases, as in https://semver.org/
 " Cnote exists(), tempname()
 " Todo look for chatter bot in vim
-" }}}
-" }}}
-" -- file settings {{{1
+" -- final commands and file settings {{{3
+if !AAIsInitialized()
+  cal AAInitialize()
+en
 " vim:foldlevel=2:

@@ -5,19 +5,26 @@ packadd gruvbox
 packadd realcolors
 packadd prv
 packadd aa
+packadd vimwiki
+" because of a bug or Vim's ways, the after/ in a opt/ pack/
+" are not loaded at startup. (afterwards it is, probably because
+" they are on the runtimepath.
+" yields error:
+" runtime! after/plugin/*.vim
 
 " ------------------------ ttm final startup {{{1
 hi Terminal guibg=lightgrey guifg=blue
-call CommandColorSchemes()
-call ApplyCS(g:ccs.yellow1, 'c')
+" colo gruvbox
+" set bg=dark
+cal CommandColorSchemes()
+" cal ApplyCS(g:ccs["passivepink1"],"color")
+" cal ApplyCS(g:ccs.yellow1, 'c')
+cal ApplyCS(g:ccs.green2, 'c')
 
 let g:mstartup = v:true
 
 set wildignore+=*.swp,*.swo,*.pyo,**/aux/undo/*,viminfo
-colo gruvbox
-set bg=dark
 
-cal ApplyCS(g:ccs["passivepink1"],"color")
 hi SpellBad cterm=undercurl
 se path-=~/.vim/pack/ttm/opt/
 se path+=~/.vim/pack/ttm/opt/

@@ -53,16 +53,30 @@ fu! VWFileNMapping(mapping, fpath) " {{{1
 endfu
 
 " insert one char {{{1
-function! InsertBeforeAfter()
+fu! InsertBeforeAfter()
   let a = nr2char(getchar())
-  :exec "normal i".a."\e"
-  :exec "normal lli".a."\e"
-endfunction
-function! InsertAfterAfter()
+  exe "norm i".a."\e"
+  exe "norm lli".a."\e"
+endf
+fu! InsertAfterAfter()
   let a = nr2char(getchar())
-  :exec "normal a".a."\e"
-  :exec "normal lla".a."\e"
-endfunction
+  exe "norm a".a."\e"
+  exe "norm lla".a."\e"
+endf
+fu! CircleChar(...)
+  let a = nr2char(getchar())
+  let w = 'w'
+  if a:1 == 'W'
+    let w = 'W'
+  en
+  let cmd = "norm vi".l:w."di".l:a."\<C-R>\"".l:a
+  let g:asd = l:cmd
+  if getline('.')[col('.')-1] == ' '
+    norm h
+  en
+  exe l:cmd
+  norm l
+endf
 
 " sessions {{{1
 set sessionoptions+=globals

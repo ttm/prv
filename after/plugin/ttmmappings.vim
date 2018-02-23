@@ -87,6 +87,10 @@ nnoremap L :call CompileLatex()<CR>
 
 inoremap o <ESC>
 
+" put char around word and WORD
+nnoremap q :q<CR>
+inoremap q <ESC>:q<CR>a
+
 " Notes mappings
 " nnoremap N 
 " inoremap N 
@@ -117,9 +121,6 @@ nnoremap W :w<CR>
 inoremap W <ESC>:w<CR>a
 nnoremap w :up<CR>
 inoremap w <ESC>:up<CR>a
-nnoremap q :q<CR>
-inoremap q <ESC>:q<CR>a
-
 " substitue all these mappings by one e+surroundings.
 " E might be previous words, or WORD. TTM
 nnoremap " ea"<ESC>hbi"<ESC>lel
@@ -140,7 +141,10 @@ nnoremap <Space>A  :call InsertAfterAfter()<CR>
 nnoremap <Space>ea :exec "e " . split(&runtimepath,',')[0] . "/after/plugin/ttmmappings.vim"<CR>/\v[^\]\^]ttm:alt-map\|^ttm:alt-map<CR>
 nnoremap <Space>eA :exec "e " . split(globpath(&rtp, "plugin/ttmmappings.vim"), "\n")[0]<CR>:lvim $\v[^\]\^]ttm:alt-map\|^ttm:alt-map$ ~/.vim/**
 nnoremap <Space>eb :Split ec getbufinfo()
-nnoremap <Space>ec  :put ='\" '.string(keys(ccs))<CR>:put ='cal ApplyCS(g:ccs[\"green1\"],\"color\")'<CR>
+nnoremap <Space>ec :cal CircleChar('foo')<CR>
+nnoremap <Space>eC :cal CircleChar('W')<CR>
+" nnoremap <Space>eC 
+nnoremap <Space>e<Space>c :put ='\" '.string(keys(ccs))<CR>:put ='cal ApplyCS(g:ccs[\"green1\"],\"color\")'<CR>
 nnoremap <Space>ee :exec "e " . split(globpath(&rtp, "plugin/ttmmappings.vim"), "\n")[0]<CR>/ttm:exc-com<CR>
 nnoremap <Space>e<Space>F :sf **/aa|    " press tab after
 " nnoremap <Space>ea :exec "e " . split(globpath(&rtp, "plugin/ttmmappings.vim*"), "\n")[0]<CR>:lvim $\v[^\]]ttm:alt-map$ ~/.vim/**<CR>
