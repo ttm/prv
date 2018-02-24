@@ -16,17 +16,31 @@ endif
 let g:loaded_aaplugin = "v0.01b"
 let g:aa_dir = expand("<sfile>:p:h:h") . '/'
 " let g:aa_default_leader = '<Space>'
+" options:
+" aux/ dir?
+" aa_leader and aa_localleader
+" say and saytime
+
 let g:aa_default_leader = 'A'
+let g:aa_default_localleader = ''
 
 " MAPPINGS: {{{2
 " -- g:aa_leader hack, part 1 of 2 {{{3
-let g:aall = mapleader
+let s:fool = mapleader
+let s:fooll = maplocalleader
 if exists("g:aa_leader")
   let mapleader = g:aa_leader
 el
   let mapleader = g:aa_default_leader
   let g:aa_leader = g:aa_default_leader
 en
+if exists("g:aa_localleader")
+  let maplocalleader = g:aa_localleader
+el
+  let maplocalleader = g:aa_default_localleader
+  let g:aa_localleader = g:aa_default_localleader
+en
+  let maplocalleader = g:aa_localleader
 " -- for shouts {{{3
 " shouting:
 nn <leader>a :A 
@@ -36,12 +50,12 @@ nn <leader>e :exec "e " . g:aa.paths.shouts<CR>
 nn <leader>v :exec "vs " . g:aa.paths.shouts<CR>G
 nn <leader>t :exec "tabe " . g:aa.paths.shouts<CR>
 " for the time since last shout:
-nn <leader>A<leader>A :As<CR>
+nn <leader><leader> :As<CR>
 " -- for sessions {{{3
 " starting a session:
 nn <leader>s :S 15 8
 nn <leader>S :S .1 3
-nn <leader><leader>S :S 15 8 starting session (dummy message from aa plugin)<CR>
+nn <leader><localleader>S :S 15 8 starting session (dummy message from aa plugin)<CR>
 " accessing aasessions.txt:
 nn <leader>V :exec "vs " . g:aa.paths.sessions<CR>G
 " for info on the session (time and left in the slot, іs session on): 
@@ -49,13 +63,16 @@ nn <leader>l :At<CR>
 nn <leader>L :AT<CR>
 nn <leader>O :Ao<CR>
 " declare shout sent or request
-nn <leader><leader>r :Ar<CR>
-nn <leader><leader>R :AR<CR>
+nn <leader><localleader>r :Ar<CR>
+nn <leader><localleader>R :AR<CR>
 " -- hacking {{{3
 nn <leader>h :exec 'vs ' . g:aa.paths.aux<CR>
-nn <leader><leader>H :exec 'vs ' . g:aa.paths.aascript<CR>
-nn <leader><leader>h :exec 'vs ' . g:aa.paths.aaiscript<CR>
-nn <leader>H :exec 'vs ' . g:aa.paths.aadoc<CR>
+nn <leader><localleader>H :exec 'vs ' . g:aa.paths.aascript<CR>
+nn <leader><localleader>h :exec 'vs ' . g:aa.paths.aaiscript<CR>
+" this command does not tags from other help files:
+" nn <leader>H :exec 'vs ' . g:aa.paths.aadoc<CR>
+" thus we use:
+nn <leader>H :help aa<CR>`"
 nn <leader>m :exec 'Split :map '.g:aa_leader.'A'<CR>:sort />A\zs/<CR>
 " plus <leader>A(e,t,v) for shouts and <leader>AV for session
 " -- general {{{3
@@ -65,25 +82,25 @@ nn <leader>i :Ai<CR>
 nn <leader>I :AI<CR>
 nn <leader>r :new<CR>:put =string(g:aa)<CR>:PRVbuff<CR>
 " -- g:aa_leader hack, part 2 of 2 {{{3
-let mapleader = g:aall
+let mapleader = s:fool
+let maplocalleader = s:fooll
 
 " COMMANDS: {{{2
 " -- MAIN: {{{3
-command! -nargs=1 A call AAShout(<q-args>)
-command! -nargs=+ S call AAStartSession(<f-args>)
-command! Ai ec AAInfo()
-command! AI call AAInitialize()
+com! -nargs=1 -complete=tag_listfiles A call AAShout(<q-args>)
+" com! -nargs=1 -complete=customlist,AAAutoComplete A call AAShout(<q-args>)
+com! -nargs=+ S call AAStartSession(<f-args>)
+com! -nargs=* Ac call AAClear(<q-args>)
+com! Ai ec AAInfo()
+com! AI call AAInitialize()
 " -- UTILS: {{{3
-command! Ao ec 'AA session on: '.AAIsSessionOn()
-command! -nargs=* Ac call AAClear(<q-args>)
-command! At ec AATimeLeftInSlot()
-command! AT ec AATimeSpentInSlot()
-command! As ec 'minutes since last shout: ' . AATimeSinceLastShout()
-command! Ar cal AASessionRegisterShoutGiven()
-command! AR cal AASessionRegisterShoutWanted()
-
-command! -nargs=+ AATest call AATestCommandToFunctionArgs(<f-args>)
-
+com! Ar cal AASessionRegisterShoutGiven()
+com! AR cal AASessionRegisterShoutWanted()
+" the following are more easely accesses though :Ai
+com! At ec AATimeLeftInSlot()
+com! AT ec AATimeSpentInSlot()
+com! As ec 'minutes since last shout: ' . AATimeSinceLastShout()
+com! Ao ec 'AA session ongoing: '.AAIsSessionOn()
 " FUNCTIONS: {{{1
 " -- MAIN {{{2
 fu! AAShout(msg) " {{{
@@ -196,9 +213,6 @@ fu! AATimeSinceLastShout() " {{{
   en
   let at = (localtime() - g:aa.events.last_shout.sent_seconds)
   retu AASecondsToTimestring(l:at)
-endf " }}}
-fu! AATestCommandToFunctionArgs(...) " {{{
-  let g:mfargs = a:
 endf " }}}
 fu! AASessionRegisterShoutGiven() " {{{
   " let g:aa.cursession.shouts_requested += 1
@@ -409,6 +423,10 @@ fu! AACountShoutsInFile() " {{{
   let g:aashoutcount = count(g:taafile, "-----")
   return g:aashoutcount
 endf " }}}
+fu! AAAutoComplete(ArgLead, CmdLine, CursorPos)
+  " blend funtion, buffer names, augroup, color, command, dir, file, file-In_path, event, help, highlight, history, mapping, messages, option, packadd, syntax, tag, tag_listfiles, var
+  let g:asd = a:
+endf
 " }}}
 " -------- notes {{{3
 " Todo check glaive

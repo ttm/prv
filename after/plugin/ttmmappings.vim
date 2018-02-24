@@ -1,241 +1,243 @@
-" nnoremap : q:i
-" nnoremap q: :
-nnoremap <leader>z :call ExtremeFolding()<CR>
-nnoremap <leader>R :call PythonShowRun()<CR>
+" nn : q:i
+" nn q: :
+nn <leader>z :cal ExtremeFolding()<CR>
+nn <leader>R :cal PythonShowRun()<CR>
 
 " Save and view text for current html file.
-nnoremap <Leader>H :update<Bar>call ViewHtmlText(expand('%:p'))<CR>
+nn <Leader>H :update<Bar>cal ViewHtmlText(expand('%:p'))<CR>
 " View text for visually selected url.
-vnoremap <Leader>h y:call ViewHtmlText(@@)<CR>
-nnoremap <Leader>h :call ViewHtmlText(@+)<CR>
+vn <Leader>h y:cal ViewHtmlText(@@)<CR>
+nn <Leader>h :cal ViewHtmlText(@+)<CR>
 
-nnoremap <localleader>L :call ToggleVerbose()<CR>
+nn <localleader>L :cal ToggleVerbose()<CR>
 
 " Alt mappings ---------------------- {{{ ttm:alt-map
 " Alt is a "command leader" for me
 " Maybe change it to space
 " and make folding with space space
-nnoremap A :Ai<CR>
-nnoremap a gT
-inoremap a <ESC><C-W>:tabp<CR>l<C-W>:startinsert<CR>
-cnoremap a <ESC><C-W>:tabp<CR>l<c-w>:
-tnoremap a <C-W>:tabp<CR>
+nn A :Ai<CR>
+nn a gT
+ino a <ESC><C-W>:tabp<CR>l<C-W>:startinsert<CR>
+cno a <ESC><C-W>:tabp<CR>l<c-w>:
+tno a <C-W>:tabp<CR>
 
 " see :h aaplug or :h aa-mappings or :h aa
 
-nnoremap b :exec '15Le ' . expand("%:h")<CR>:let t:exp_set_ttm = 1<CR>
-nnoremap B :if exists("t:exp_set_ttm")<CR>exec "normal 9\<C-W>h:q"<CR>unlet! t:exp_set_ttm<CR>endif
-nnoremap B :if exists("t:exp_set_ttm")<CR>unlet! t:exp_set_ttm<CR>endif
+nn b :exe 'Le ' . expand("%:h")<CR>:let t:prv_browserid = win_getid()<CR>25<C-W>\|
+nn B :if exists("t:prv_browserid")ec 'a abanna'let t:prv_tempwinid = win_getid()cal win_gotoid(t:prv_browserid):q!if t:prv_tempwinid != t:prv_browseridcal win_gotoid(t:prv_tempwinid)enunl t:prv_browseridunl t:prv_tempwinidendif
 
 " should put fold markers as comments, for now just VimL
 noremap c mf?^fuA " {{{/^endfA " }}}`f 
-inoremap c <ESC>?^fuA " {{{/^endfuA " }}}`fa
+ino c <ESC>?^fuA " {{{/^endfuA " }}}`fa
 " for gigraphs
-inoremap C <ESC>a
-inoremap Ck k<BS>I
+ino C <ESC>a
+ino Ck k<BS>I
 
-" nnoremap d gT
-" inoremap d <ESC><C-W>:tabp<CR>l<C-W>:startinsert<CR>
-" cnoremap d <ESC><C-W>:tabp<CR>l<c-w>:
-" tnoremap d <C-W>:tabp<CR>
+" nn d gT
+" ino d <ESC><C-W>:tabp<CR>l<C-W>:startinsert<CR>
+" cno d <ESC><C-W>:tabp<CR>l<c-w>:
+" tno d <C-W>:tabp<CR>
 
-nnoremap d gt
-tnoremap d <C-W>:tabn<CR>
-inoremap d <ESC><C-W>:tabn<CR>l<C-W>:startinsert<CR>
-cnoremap d <ESC><C-W>:tabn<CR>l<c-w>:
-inoremap Dk k<BS>I
+nn d gt
+tno d <C-W>:tabn<CR>
+ino d <ESC><C-W>:tabn<CR>l<C-W>:startinsert<CR>
+cno d <ESC><C-W>:tabn<CR>l<c-w>:
+ino Dk k<BS>I
 
-nnoremap e :e<CR>
-inoremap e <ESC>:e<CR>a
-nnoremap E <C-L>
-inoremap E <ESC><C-L>:e<CR>a
+nmap <silent> D :set opfunc=PRVPutCharAround<CR>g@
+vmap <silent> D :<C-U>call PRVPutCharAround(visualmode(), 1)<CR>
+
+nn e :e<CR>
+ino e <ESC>:e<CR>a
+nn E <C-L>
+ino E <ESC><C-L>:e<CR>a
 
 " should run functions, for now just VimL
-nnoremap f mf?^fu<CR>V/^endf<CR>:@*<CR>`f
-inoremap f <ESC>mf?^fu<CR>V/^endf<CR>:@*<CR>`fa
+nn f mf?^fu<CR>V/^endf<CR>:@*<CR>`f
+ino f <ESC>mf?^fu<CR>V/^endf<CR>:@*<CR>`fa
 
 " find files
-nnoremap FF :Split echo globpath('/home/renato/repos/', "**/rdf*")
-nnoremap Ff :Split echo globpath(&rtp, "**/*")<Left><Left><Left>
-" nnoremap Ff :Split echo globpath(&rtp, '"**/' . expand("<cword>") . "*")
-nnoremap Fa :Split echo globpath(&rtp, "**/ttm*")<CR>
-nnoremap FA :Split echo globpath(&rtp, "**/pack/**")<CR>
+nn FF :Split echo globpath('/home/renato/repos/', "**/rdf*")
+nn Ff :Split echo globpath(&rtp, "**/*")<Left><Left><Left>
+" nn Ff :Split echo globpath(&rtp, '"**/' . expand("<cword>") . "*")
+nn Fa :Split echo globpath(&rtp, "**/ttm*")<CR>
+nn FA :Split echo globpath(&rtp, "**/pack/**")<CR>
 
-nnoremap Fs :lvim /RegisterNote/ ~/.vim/pack/ttm/**
-nnoremap Fg :lvim /\v/ ~/.vim/**<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
+nn Fs :lv /RegisterNote/ ~/.vim/pack/ttm/**
+nn Fg :lv /\v/ ~/.vim/**<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
 
-nnoremap g :up<CR>:source %<CR>
-inoremap g <ESC>:up<CR>:source %<CR>
+nn g :up<CR>:source %<CR>
+ino g <ESC>:up<CR>:source %<CR>
 
-nnoremap h <C-W><C-H>
-nnoremap j <C-W><C-J>
-nnoremap k <C-W><C-K>
-nnoremap l <C-W><C-L>
-inoremap h <ESC><C-W><C-H>a
-inoremap j <ESC><C-W><C-J>a
-inoremap l <ESC><C-W><C-L>a
-tnoremap h <ESC><C-W><C-H>
-tnoremap j <ESC><C-W><C-J>
-tnoremap k <ESC><C-W><C-K>
-tnoremap l <ESC><C-W><C-L>
-cnoremap h <ESC><C-W><C-H>:
-cnoremap j <ESC><C-W><C-J>:
-cnoremap k <ESC><C-W><C-K>:
-cnoremap l <ESC><C-W><C-L>:
+nn h <C-W><C-H>
+nn j <C-W><C-J>
+nn k <C-W><C-K>
+nn l <C-W><C-L>
+ino h <ESC><C-W><C-H>a
+ino j <ESC><C-W><C-J>a
+ino l <ESC><C-W><C-L>a
+tno h <ESC><C-W><C-H>
+tno j <ESC><C-W><C-J>
+tno k <ESC><C-W><C-K>
+tno l <ESC><C-W><C-L>
+cno h <ESC><C-W><C-H>:
+cno j <ESC><C-W><C-J>:
+cno k <ESC><C-W><C-K>:
+cno l <ESC><C-W><C-L>:
 
-nnoremap L :call CompileLatex()<CR>
+nn L :cal CompileLatex()<CR>
 
-inoremap o <ESC>
+ino o <ESC>
 
 " put char around word and WORD
-nnoremap q :q<CR>
-inoremap q <ESC>:q<CR>a
+nn q :q<CR>
+ino q <ESC>:q<CR>a
 
 " Notes mappings
-" nnoremap N 
-" inoremap N 
-" cnoremap N 
-" tnoremap N 
+" nn N 
+" ino N 
+" cno N 
+" tno N 
 
-nnoremap p :runtime! plugin/**/*.vim<CR>
-inoremap p <ESC>:runtime! plugin/**/*.vim<CR>a
-nnoremap P :call OpenPDF()<CR>
+nn p :runtime! plugin/**/*.vim<CR>
+ino p <ESC>:runtime! plugin/**/*.vim<CR>a
+nn P :cal OpenPDF()<CR>
 
 " should run the line or the selection, for now just VimL
-nnoremap r Y:@"<CR>
-inoremap r <ESC>Y:@"<CR>a
+nn r Y:@"<CR>
+ino r <ESC>Y:@"<CR>a
 
-nnoremap s :up<CR>:source $MYVIMRC<CR>:runtime! plugin/**/*.vim<CR>
-inoremap s <ESC>:up<CR>:source %<CR>a
-nnoremap S :up<CR>:source $MYVIMRC<CR>
-inoremap S <ESC>:up<CR>:source %<CR>l
+nn s :up<CR>:source $MYVIMRC<CR>:runtime! plugin/**/*.vim<CR>
+ino s <ESC>:up<CR>:source %<CR>a
+nn S :up<CR>:source $MYVIMRC<CR>
+ino S <ESC>:up<CR>:source %<CR>l
 
-nnoremap U :call PushPRV("Auto updating PRV")
+nn U :cal PushPRV("Auto updating PRV")
 
-nnoremap x :up<CR>
-inoremap x <ESC>:up<CR>
-inoremap 3 <ESC>:up<CR>
-inoremap [ <ESC>:up<CR>
+nn x :up<CR>
+ino x <ESC>:up<CR>
+ino 3 <ESC>:up<CR>
+ino [ <ESC>:up<CR>
 
-nnoremap W :w<CR>
-inoremap W <ESC>:w<CR>a
-nnoremap w :up<CR>
-inoremap w <ESC>:up<CR>a
+nn W :w<CR>
+ino W <ESC>:w<CR>a
+nn w :up<CR>
+ino w <ESC>:up<CR>a
 " substitue all these mappings by one e+surroundings.
 " E might be previous words, or WORD. TTM
-nnoremap " ea"<ESC>hbi"<ESC>lel
-nnoremap ' ea'<ESC>hbi'<ESC>lel
-inoremap " <ESC>hhea"<ESC>hbi"<ESC>lelli
-inoremap ' <ESC>hhea'<ESC>hbi'<ESC>lelli
-cnoremap " ea"<ESC>hbi"<ESC>lel<CR>
-cnoremap ' ea'<ESC>hbi'<ESC>lel<CR>
-tnoremap " ea"<ESC>hbi"<ESC>lel<CR>
-tnoremap ' ea'<ESC>hbi'<ESC>lel<CR>
+nn " ea"<ESC>hbi"<ESC>lel
+nn ' ea'<ESC>hbi'<ESC>lel
+ino " <ESC>hhea"<ESC>hbi"<ESC>lelli
+ino ' <ESC>hhea'<ESC>hbi'<ESC>lelli
+cno " ea"<ESC>hbi"<ESC>lel<CR>
+cno ' ea'<ESC>hbi'<ESC>lel<CR>
+tno " ea"<ESC>hbi"<ESC>lel<CR>
+tno ' ea'<ESC>hbi'<ESC>lel<CR>
 " }}}
 " space mappings ---------------------- {{{
 " normal mode mappings
 " (migrate leader mappings to here)
-nnoremap <Space>a :exec "normal li".nr2char(getchar())."\e"<CR>
-nnoremap <Space>A  :call InsertAfterAfter()<CR>
+nn <Space>a :exec "normal li".nr2char(getchar())."\e"<CR>
+nn <Space>A  :cal InsertAfterAfter()<CR>
 " -- for exceptional commands {{{2
-nnoremap <Space>ea :exec "e " . split(&runtimepath,',')[0] . "/after/plugin/ttmmappings.vim"<CR>/\v[^\]\^]ttm:alt-map\|^ttm:alt-map<CR>
-nnoremap <Space>eA :exec "e " . split(globpath(&rtp, "plugin/ttmmappings.vim"), "\n")[0]<CR>:lvim $\v[^\]\^]ttm:alt-map\|^ttm:alt-map$ ~/.vim/**
-nnoremap <Space>eb :Split ec getbufinfo()
-nnoremap <Space>ec :cal CircleChar('foo')<CR>
-nnoremap <Space>eC :cal CircleChar('W')<CR>
-" nnoremap <Space>eC 
-nnoremap <Space>e<Space>c :put ='\" '.string(keys(ccs))<CR>:put ='cal ApplyCS(g:ccs[\"green1\"],\"color\")'<CR>
-nnoremap <Space>ee :exec "e " . split(globpath(&rtp, "plugin/ttmmappings.vim"), "\n")[0]<CR>/ttm:exc-com<CR>
-nnoremap <Space>e<Space>F :sf **/aa|    " press tab after
-" nnoremap <Space>ea :exec "e " . split(globpath(&rtp, "plugin/ttmmappings.vim*"), "\n")[0]<CR>:lvim $\v[^\]]ttm:alt-map$ ~/.vim/**<CR>
-nnoremap <Space>ei :help aa<CR>
-nnoremap <Space>eI :help aa<CR>`t
+nn <Space>ea :exec "e " . split(&runtimepath,',')[0] . "/after/plugin/ttmmappings.vim"<CR>/\v[^\]\^]ttm:alt-map\|^ttm:alt-map<CR>
+nn <Space>eA :exec "e " . split(globpath(&rtp, "plugin/ttmmappings.vim"), "\n")[0]<CR>:lvim $\v[^\]\^]ttm:alt-map\|^ttm:alt-map$ ~/.vim/**
+nn <Space>eb :Split ec getbufinfo()
+nn <Space>ec :cal CircleChar('foo')<CR>
+nn <Space>eC :cal CircleChar('W')<CR>
+" nn <Space>eC 
+nn <Space>e<Space>c :put ='\" '.string(keys(ccs))<CR>:put ='cal ApplyCS(g:ccs[\"green1\"],\"color\")'<CR>
+nn <Space>ee :exec "e " . split(globpath(&rtp, "plugin/ttmmappings.vim"), "\n")[0]<CR>/ttm:exc-com<CR>
+nn <Space>e<Space>F :sf **/aa|    " press tab after
+" nn <Space>ea :exec "e " . split(globpath(&rtp, "plugin/ttmmappings.vim*"), "\n")[0]<CR>:lvim $\v[^\]]ttm:alt-map$ ~/.vim/**<CR>
+nn <Space>ei :help aa<CR>
+nn <Space>eI :help aa<CR>`t
 
-nnoremap <Space>ef :exec "e " . split(&runtimepath,',')[0] . "/after/plugin/ttmfstartup.vim"<CR>G
-nnoremap <Space>e<Space>f :Split filter // oldfiles<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
-nnoremap <Space>e<Space>f :Split filter // oldfiles<S-Left><S-Left><Right>
-nnoremap <Space>eF GoCopyright: Public Domain.  vim:modifiable:noreadonly:tw=0:ts=8:ft=help.vimwiki:suffixesadd+=.txt:norl:softtabstop=4:shiftwidth=4:textwidth=0:expandtab:<ESC><C-O>
+nn <Space>ef :exec "e " . split(&runtimepath,',')[0] . "/after/plugin/ttmfstartup.vim"<CR>G
+nn <Space>e<Space>f :Split filter // oldfiles<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
+nn <Space>e<Space>f :Split filter // oldfiles<S-Left><S-Left><Right>
+nn <Space>eF GoCopyright: Public Domain.  vim:modifiable:noreadonly:tw=0:ts=8:ft=help.vimwiki:suffixesadd+=.txt:norl:softtabstop=4:shiftwidth=4:textwidth=0:expandtab:<ESC><C-O>
 
-nnoremap <Space>et :tselect /aa<CR>
-nnoremap <Space>eT :tselect /
+nn <Space>et :tselect /aa<CR>
+nn <Space>eT :tselect /
 
 " how to do this TTM |aa-todo|
-" nnoremap <Space>eh :map \\<Space><CR>
+" nn <Space>eh :map \\<Space><CR>
 
 
-nnoremap <Space>ep :Split exec "normal \<C-G>"<CR>xf"Dh
+nn <Space>ep :Split exec "normal \<C-G>"<CR>xf"Dh
 
 " leader mappings ---------------------- {{{1
 " should be removed in order to avoid conflict with plugins
-nnoremap <leader>b :Sex<CR><C-W>T
-nnoremap <leader>B :Sex<CR>
+nn <leader>b :Sex<CR><C-W>T
+nn <leader>B :Sex<CR>
 
-nnoremap <leader>C :call ListSessions()<CR>
-" nnoremap <leader>d :args ~/repos/percolation/**/*.py<CR>
-nnoremap <leader>d :call SaveSession()<CR>
-nnoremap <leader>D :call SaveNewSession()<CR>
+nn <leader>C :cal ListSessions()<CR>
+" nn <leader>d :args ~/repos/percolation/**/*.py<CR>
+nn <leader>d :cal SaveSession()<CR>
+nn <leader>D :cal SaveNewSession()<CR>
 " assert latest is saved as a user practice
-nnoremap <leader>e :call LoadSession()<CR>
-nnoremap <leader>E :call InsertSession()<CR>
+nn <leader>e :cal LoadSession()<CR>
+nn <leader>E :cal InsertSession()<CR>
 
 " make the f mappings usable by using the paths correctly
-nnoremap <leader>f :term ++hidden ++close pdflatex %
-nnoremap <leader>F :term ++hidden ++open pdflatex %
-nnoremap <leader>i :exec "normal i".nr2char(getchar())."\e"<CR>
-nnoremap <leader>I :call InsertBeforeAfter()<CR>
+nn <leader>f :term ++hidden ++close pdflatex %
+nn <leader>F :term ++hidden ++open pdflatex %
+nn <leader>i :exec "normal i".nr2char(getchar())."\e"<CR>
+nn <leader>I :cal InsertBeforeAfter()<CR>
 
-nnoremap <leader>j :s/=/ = /g<CR>
-nnoremap <leader>J :jumps<CR>
-nnoremap <leader>k :s/,/, /g<CR>
-nnoremap <leader>l :ls<CR>:b 
-nnoremap <leader>L :set list!<CR>
+nn <leader>j :s/=/ = /g<CR>
+nn <leader>J :jumps<CR>
+nn <leader>k :s/,/, /g<CR>
+nn <leader>l :ls<CR>:b 
+nn <leader>L :set list!<CR>
 " :bn to choose file n
-nnoremap <leader>n :set number!<CR>
-nnoremap <leader>N :set relativenumber!<CR>
-nnoremap <leader>p :reg<CR>
+nn <leader>n :set number!<CR>
+nn <leader>N :set relativenumber!<CR>
+nn <leader>p :reg<CR>
 
-nnoremap <leader>q :q<CR>
+nn <leader>q :q<CR>
 " next command is only to remember how to do stuff
-nnoremap <leader>r ?^\n<CR>V/^\n<CR>:py3 exec(vim.eval("@*"))<CR>/W<CR>f'lvt'y:!aplay <C-R>"
-nnoremap <leader>s :up<CR>:source $MYVIMRC<CR>
-nnoremap <leader>S :up<CR>:let g:mmapclear=1<CR>:mapclear<CR> :source $MYVIMRC<CR>
-nnoremap <leader>t :vs.<CR><C-W>T
-nnoremap <leader>T :r !date +\%d/\%h/\%y,\ \%H:\%\M:\%S<CR>
-nnoremap <leader>W :up<CR>
-nnoremap <leader>x :execute getline('.')<CR>
-nnoremap <leader>X :execute getline('.')
+nn <leader>r ?^\n<CR>V/^\n<CR>:py3 exec(vim.eval("@*"))<CR>/W<CR>f'lvt'y:!aplay <C-R>"
+nn <leader>s :up<CR>:source $MYVIMRC<CR>
+nn <leader>S :up<CR>:let g:mmapclear=1<CR>:mapclear<CR> :source $MYVIMRC<CR>
+nn <leader>t :vs.<CR><C-W>T
+nn <leader>T :r !date +\%d/\%h/\%y,\ \%H:\%\M:\%S<CR>
+nn <leader>W :up<CR>
+nn <leader>x :execute getline('.')<CR>
+nn <leader>X :execute getline('.')
 
 " Vimwiki
-call VWFileNMapping("<leader>wA", "achievements.wiki")
-call VWFileNMapping("<leader>wT", "todo.wiki")
-call VWFileNMapping("<leader>wD", "daily/tasks.wiki")
-call VWFileNMapping("<leader>wW", "weekly/wtasks.wiki")
-call VWFileNMapping("<leader>wN", "blergh.wiki<CR>gg")
+cal VWFileNMapping("<leader>wA", "achievements.wiki")
+cal VWFileNMapping("<leader>wT", "todo.wiki")
+cal VWFileNMapping("<leader>wD", "daily/tasks.wiki")
+cal VWFileNMapping("<leader>wW", "weekly/wtasks.wiki")
+cal VWFileNMapping("<leader>wN", "blergh.wiki<CR>gg")
 
 " }}}
 " localleader mappings ---------------------- {{{1
-nnoremap <localleader>' :s/"/'/g<CR>
-nnoremap <localleader>c :set cursorline! cursorcolumn!<CR>
-nnoremap <localleader>b :execute 'rightbelow vs ' . bufname('#')<CR>
-nnoremap <localleader>B :call ToggleStatusbar()<CR>
-nnoremap <localleader>g :call ChangeBackground()<CR>
-" nnoremap <localleader>h :tabe<CR>:h 
-nnoremap <localleader>i :call ShowImg()<CR>
+nn <localleader>' :s/"/'/g<CR>
+nn <localleader>c :set cursorline! cursorcolumn!<CR>
+nn <localleader>b :execute 'rightbelow vs ' . bufname('#')<CR>
+nn <localleader>B :cal ToggleStatusbar()<CR>
+nn <localleader>g :cal ChangeBackground()<CR>
+" nn <localleader>h :tabe<CR>:h 
+nn <localleader>i :cal ShowImg()<CR>
 " keymap=
-nnoremap <localleader>k :se keymap=accents<CR>
-nnoremap <localleader>l :set invhlsearch \| set hlsearch?<CR>
-"-> nnoremap <localleader>L <CR>
-nnoremap <localleader>p :setlocal spell!<CR>
-nnoremap <localleader>s :e $MYVIMRC<CR>
-nnoremap <localleader>S :tabe $MYVIMRC<CR>
-nnoremap <localleader>t :args /home/r/repos/tokipona/**/*.py<CR>
-nnoremap <localleader>T :call ToggleTabLine()<CR>
-nnoremap <localleader>w :match Error /\v[ ]+$/<CR>
-nnoremap <localleader>W :match none<CR>
+nn <localleader>k :se keymap=accents<CR>
+nn <localleader>l :set invhlsearch \| set hlsearch?<CR>
+"-> nn <localleader>L <CR>
+nn <localleader>p :setlocal spell!<CR>
+nn <localleader>s :e $MYVIMRC<CR>
+nn <localleader>S :tabe $MYVIMRC<CR>
+nn <localleader>t :args /home/r/repos/tokipona/**/*.py<CR>
+nn <localleader>T :cal ToggleTabLine()<CR>
+nn <localleader>w :match Error /\v[ ]+$/<CR>
+nn <localleader>W :match none<CR>
 " }}}
 " command line commands {{{1
-cnoremap <C-J> <S-Left>
-cnoremap <C-K> <S-Right>
+cno <C-J> <S-Left>
+cno <C-K> <S-Right>
 
 " }}}
 

@@ -10,8 +10,10 @@ CONTENTS                                                            *aa-index*
         1.2. Related plugins                    |aa-related-plugins|
         1.3. Usage examples                     |aa-usage-examples|
         1.3. |aa| help                            |aa-helphelp|
+             |aa-cheatsheet|, |aa-help-cheatsheet|
     2. Install                                  |aa-install|
-    3. Options, variables and general settings  |aa-settings|
+             |aa-install-recommended|, |aa-install-Vimball|, |aa-install-root|
+    3. Options, variables and general settings  |aa-settings| |aa-options|
     3. Mappings                                 |aa-mappings|
         3.1. shout                              |aa-shout-mappings|
         3.1. session                            |aa-shout-mappings|
@@ -149,16 +151,27 @@ about possible enhancements and recognizes potential bugs. These notes
 might be taken without leaving the window by using |aaleader-a|.
 More ellaborate notes might be taken using |aaleader-A| at any time,
 editing directly into shouts.txt. To access the notes, one might
-use |aaleader-v|, |aaleader-t|and |aaleader-e|.
-                                         ^asdasdaad^
+use |aaleader-v|, |aaleader-t| and |aaleader-e|.
 
+A researcher and developer with many tasks relating to diverse subjects is
+trying to better keep track of the ideas and issues that spark all the time,
+while having focus on the intended tasks for relevant periods of time.
+He adopts the standards AA session of 2h: 8 slots of 15 minutes each.
+Such sessions (and variations) are conveniently started wih |aaleader-s| and
+|aaleader-S|, and |aa-leader-localleader-S|, while |aaleader-l|, |aa-leader-L|,
+and |aaleader-O| assists sessions by providing the selected info of: time
+left in slot, time since slot started, session on.
+
+A newbie starts using |aa|. First she starts to test the mappings
+and write shouts with notes about how to use |aa|. Next, she writes
+new mappings, and starts hacking |aa| functions in order to achieve
+desired functionalities. Eager to use shouts with appropriate tagging
+mechanisms, she uses `:lv` to browse though tags created on the fly.
+Finally, the enhancements are sent for evaluation to the main |aa| repository
+as a pull request or a Git patch.
 
 ------------------------------------------------------------------------------
 1.4. |aa| help                                    *aa-helphelp*
-
-
-
-helphelp
 
 Reload this help file (:e<CR> or :e %) to edit it, as specified in the final
 line of this aa.txt file.
@@ -168,24 +181,26 @@ Render the |aa| help tags e.g. with
     (Press TAB and then Backspace the aa.txt)
 
 Please enhance this documentation within this or another file e.g. by 
-copy ./aa.txt to ./anything.txt as a template.
+copying ./aa.txt to ./anything.txt as a template.
 
-                                                        *aa-help-cheat-sheet*
-highlighting and functions:
+                                                        *aa-help-cheatsheet*
+Standard Highlighting and functions:
     *Tag*
     |hyperlink|
     'option'
-    `:command`
-    Column heading~
->
+    `:command` >
     function SomeFunc()
         echo "Yes, I am verbatim"
     endf
-<
+<    |AFunction()|
     {braces} CTRL-X <Left>
+    Column heading~
     Note Notes
-    
-These require tabs:
+
+More details in $VIMRUNTIME/syntax/help.vim,
+and in browsing other help files.
+
+These require tabs (use :se list! to see them):
 	*Todo	something to do
 	*Error	something wrong
         *Todo   make a syntax rule to always color the line when starting
@@ -194,32 +209,79 @@ These require tabs:
                 leading the *<token> to RGB space.
     
 Mannerisms and default usability: 
-    :se ft=              to see the chars being used in any help file
-    :se ft=help         set syntax again
+    `:se ft=`              to see the chars being used in any help file
+    `:se ft=help`         set syntax again
     copy aa.txt or any other help file as a template
     You might follow any tag with <C-]>.
     You see every incidence of a tag in current file with 
-                |:lv| /|tag< remove me>|/ %
+                `:lv /|tag< remove me>|/ %`
                 (% might be replaced to any path according to {file})
                 Similarly:
-                `:lh` |tag< remove me>>
+                `:lh |tag< remove me>|`
                 and then `:lop` to navigate the lines where they occur
                 (also, :vim and :helpg with :copen
-    Type :h aa- and press <C-D> to see all the matches.
+    Type `:h aa-` and press <C-D> to see all the matches.
     You reach a list of all |aa| tags with `:ts` ./aa
+    or with `:h aa-index`
+    If you load aa.txt not using a help-related command, the tags available
+    will only be related to aa.vim, and browsing documentation with external
+    tags become broken.
 
-                                                        *aa-usage-sheet*
+The documentation does not leave much more information about conventions
+on help files. Check $VIMRUNTIME/syntax/help.vim for more details.
+
+                                                        *aa-cheatsheet*
+Just look into |aa-mappings| and |aa-options|.
 
 
 mk different sets of tags to be searched for by creating different
 tag files, which are loaded when one type of tag is present.
 
 
+==============================================================================
+1. Install                                                  *aa-install*
+                                       lj
+There is various ways to install Vim plugins.
+If you have not picked your preffered way,
+this section summarizes what I understand about the issue.
+
+In Vim manual (e.g. `:h usr_toc`), a Vim plugin is described as a single file,
+which is sourced at startup right after vimrc according to `:h rtp`
+
+
+The way I find most clean and simple is to copy the whole |aa| file tree
+to any pack/prv/opt/aa/ directory in your 'runtimepath'.
+
+Then put:
+    `packadd aa`
+in yout vimrc.
+
+These are added to the base directories (stored in 'runtimepath')
+where Vim looks for standard directories and files.
+If you have problems, close and open Vim again.
+
+Also, this same installation is performed with Vimball:
+
+You might also just clone all PRV repository:
+
+and use aa there with all prv facilities.
+You might want to substitute vimrc, filetype.vim, script.vim,
+and other template files with your own.
 
 
 
 
 
+
+
+
+               *aa-options*
+
+               *aa_leader*
+
+               *aa_localleader*
+
+notice that 
 
 
 
@@ -307,6 +369,9 @@ This plugin doesn't have any settings.
     - let a user share any number of info in a dedicated file, parsing it to rdf.
 * make a cool window with aa info with syntax highlighting
 * make declare shout sent/request with or without influecing in the slots related to each slot.
+* use :later and :earlier to compare a current file with that of the beginning of a session or lest x sessions or at last x shouts.
+  maybe keep the localtime() string in the time string ?
+  find a way to have undos specific to a line (and range if possible)
 
                                                    *aa-bare-vim-wiki*
 I have been thinking about maintaining a wiki on bare Vim because it is very
@@ -326,8 +391,7 @@ simple and functional:
       latex or HTML file.
 
 
-
+                                                 *aa-license*
 Copyright: Public Domain.
 
-Note
  vim:modifiable:noreadonly:tw=0:ts=8:ft=help:suffixesadd+=.txt:norl:softtabstop=4:shiftwidth=4:textwidth=0:expandtab:

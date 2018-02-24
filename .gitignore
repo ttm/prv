@@ -115,3 +115,4 @@ ENV/
 
 # mypy
 .mypy_cache/
+pack/ttm/opt/aa/aux/

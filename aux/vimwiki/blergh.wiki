@@ -1,4 +1,17 @@
-aaaaaaaaaaaaaab
+
+
+$VIMRUNTIME
+
+asdads bbbbbb ccc
+
+{'0': 0, '000': [], 'firstline': 4, 'ArgLead': 'cc', 'CmdLine': 'A asdads bbbbbb cc', 'lastline': 4, 'CursorPos': '18'}
+{'0': 0, '000': [], 'firstline': 6, 'ArgLead': 'cc-a', 'CmdLine': 'A asdads bbbbbb cc-a', 'lastline': 6, 'CursorPos': '20'}
+
+
+
+
+
+
 !espeak "Qua Fev 21 14:53:22 -03 2018"
 **/aa
 todo
