@@ -322,3 +322,41 @@ fu! SetRegisters()
   let c = ':Split echo globpath(&rtp, "' . g:b . '")'
   normal c
 endfu
+fu! PRVPutCharAround(type, ...) " {{{1
+  " borrowed some from :h map-operator
+  let sel_save = &selection
+  let &selection = "inclusive"
+  let reg_save = @@
+
+  let g:asd = a:
+  let c = nr2char(getchar("what char to put around region?"))
+  ec l:c
+  exe "norm i" . l:c
+  ec  "norm i" . l:c
+  if a:0  " Invoked from Visual mode, use gv command.
+    exe "normal! gvd"
+  elsei a:type == 'line'
+    exe "normal! '[V']d"
+  el
+  en
+  exe "norm i" . l:c . "\<C-R>@" . l:c
+
+  let &selection = sel_save
+  let @@ = reg_save
+  let g:dsa = l:
+endfu
+
+fu! SearchFilenameRTP()
+  " Make a :B command with this
+  let a = expand("<cword>")
+  let b = '**/' . g:a . '*'
+  let c = ':Split echo globpath(&rtp, "' . g:b . '")'
+  normal c
+endfu
+
+fu! SetRegisters()
+  let @g = expand("<cword>")
+  let b = '**/' . g:a . '*'
+  let c = ':Split echo globpath(&rtp, "' . g:b . '")'
+  normal c
+endfu

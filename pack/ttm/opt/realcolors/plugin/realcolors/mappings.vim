@@ -31,6 +31,9 @@ noremap <C-\>g2 :call GetColors(2)<CR>
 " Recover
 noremap <C-\>r :colo blue<CR>
 noremap <C-\>R :colo gruvbox<CR>
+                   
+" Luck
+noremap <C-\>l :exec 'hi Normal guibg=#'.(system("echo $RANDOM$RANDOM")[:5])<CR>
 
 " use <C-\ c> (press control and \, release, press c).
 " to start the color mode.

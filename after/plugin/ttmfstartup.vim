@@ -18,8 +18,9 @@ hi Terminal guibg=lightgrey guifg=blue
 " set bg=dark
 cal CommandColorSchemes()
 " cal ApplyCS(g:ccs["passivepink1"],"color")
-" cal ApplyCS(g:ccs.yellow1, 'c')
 cal ApplyCS(g:ccs.green2, 'c')
+cal ApplyCS(g:ccs.yellow1, 'c')
+cal ApplyCS(g:ccs.red4, 'c')
 
 let g:mstartup = v:true
 

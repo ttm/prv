@@ -40,7 +40,7 @@ ino Ck k<BS>I
 
 nn d gt
 tno d <C-W>:tabn<CR>
-ino d <ESC><C-W>:tabn<CR>l<C-W>:startinsert<CR>
+ino d <ESC><C->:tabn<CR>l<C-W>:startinsert<CR>
 cno d <ESC><C-W>:tabn<CR>l<c-w>:
 ino Dk k<BS>I
 

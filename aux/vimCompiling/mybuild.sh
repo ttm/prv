@@ -6,7 +6,9 @@
 # x11 is kept to enable the x11 selection (what is it?)
 make clean
 # ./configure --enable-gui=motif
-./configure --disable-gui --enable-python3interp --enable-pythoninterp
+# ./configure --disable-gui --enable-python3interp --enable-pythoninterp
+./configure --enable-python3interp --enable-pythoninterp
+./configure --enable-python3interp --enable-pythoninterp --enable-browse --enable-fontset
 make config
 make
 make install
