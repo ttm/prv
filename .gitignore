@@ -1,17 +1,12 @@
-# Vim
-aux/sessions/
-aux/aa/
+Vim
+aux/
 tags
-ftplugin/vimwikiTrue.vim
-aux/vimwiki/
 *.swp
-aux/trash/
 pack/plugins/*
 pack/ttm/opt/tokipona
 undo/
 spell/
 viminfo
-# vimwiki/
 .netrw*
 
 # Byte-compiled / optimized / DLL files

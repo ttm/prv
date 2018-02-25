@@ -1,0 +1,23 @@
+
+
+                           *prv-after-after*
+                    (auxiliary help file for |prv|)
+
+pack/ directories are not recursive.  Novice that the after/ directory in this
+after/ directory is not added to 'runtimeath'.  Notice that file in
+after/after/dummy.vim (or ../after/dummy.vim) will not be sourceѕ (the variable
+the should not be defined after startup).
+
+This is in accordance with Vim specifications (in help files): after/
+directories found in any standard directory in 'runtimepath' is added to
+'runtimepath', but that is performed only once.
+
+What seems not to fit is: the after directories are added at once, and includes
+package directories, such as pack/ttm/start/someplugin/after.
+pack/ttm/opt/someplugin/after is added to &rtp, but files there are not sourced
+(in after/plugin/*). See |prv-after-after-2|
+
+
+See |prv-paths| and |prv-templates|
+
+ vim:modifiable:noreadonly:tw=0:ts=8:ft=help:suffixesadd+=.txt:norl:softtabstop=4:shiftwidth=4:textwidth=0:expandtab:
