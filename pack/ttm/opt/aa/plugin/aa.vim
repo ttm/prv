@@ -26,21 +26,9 @@ let g:aa_default_localleader = ''
 
 " MAPPINGS: {{{2
 " -- g:aa_leader hack, part 1 of 2 {{{3
-let s:fool = mapleader
-let s:fooll = maplocalleader
-if exists("g:aa_leader")
-  let mapleader = g:aa_leader
-el
-  let mapleader = g:aa_default_leader
-  let g:aa_leader = g:aa_default_leader
-en
-if exists("g:aa_localleader")
-  let maplocalleader = g:aa_localleader
-el
-  let maplocalleader = g:aa_default_localleader
-  let g:aa_localleader = g:aa_default_localleader
-en
-  let maplocalleader = g:aa_localleader
+"  cal PRVDeclareLeader('g:aa_default_leader', 'g:aa_leader')
+"  cal PRVDeclareLocalLeader('g:aa_default_local_leader', 'g:aa_local_leader')
+cal PRVDeclareLeader('aa')
 " -- for shouts {{{3
 " shouting:
 nn <leader>a :A 
@@ -85,6 +73,9 @@ nn <leader>r :new<CR>:put =string(g:aa)<CR>:PRVbuff<CR>
 let mapleader = s:fool
 let maplocalleader = s:fooll
 
+cal PRVRestoreLeader('aa')
+
+" -- for shouts {{{3
 " COMMANDS: {{{2
 " -- MAIN: {{{3
 com! -nargs=1 -complete=tag_listfiles A call AAShout(<q-args>)
