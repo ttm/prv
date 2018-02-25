@@ -139,6 +139,7 @@ tno ' ea'<ESC>hbi'<ESC>lel<CR>
 " (migrate leader mappings to here)
 nn <Space>a :exec "normal li".nr2char(getchar())."\e"<CR>
 nn <Space>A  :cal InsertAfterAfter()<CR>
+nn <Space>f  :cal system("wmctrl -ir " . v:windowid . " -b toggle,fullscreen")<CR>
 " -- for exceptional commands {{{2
 nn <Space>ea :exec "e " . split(&runtimepath,',')[0] . "/after/plugin/ttmmappings.vim"<CR>/\v[^\]\^]ttm:alt-map\|^ttm:alt-map<CR>
 nn <Space>eA :exec "e " . split(globpath(&rtp, "plugin/ttmmappings.vim"), "\n")[0]<CR>:lvim $\v[^\]\^]ttm:alt-map\|^ttm:alt-map$ ~/.vim/**

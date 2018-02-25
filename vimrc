@@ -1,33 +1,47 @@
 " basic settings -------------------------------------------------------- {{{
 " reworked for usage with Vim 8, True Colors (24 bits) and tmux
-set nocompatible
-let g:prv_dir = expand("<sfile>:h") . '/'
-let g:netrw_liststyle = 0
-set textwidth=0
+se nocp
 
-set termguicolors
-" :se t_Co should give 256, otherwise uncomment:
+let g:prv_vimrc_dir = expand("<sfile>:h") . '/'
+" PRV leaders and localleaders {{{
+let g:prv_leader = " "
+let g:prv_localleader = "<C-...>"
+let g:aa_leader = "<A-...>"
+let g:aa_localleader = " "
+let g:realcolors_leader = "<A-...>"
+let g:realcolors_localleader = " "
+let g:tokipona_leader = "<A-...>"
+let g:tokipona_localleader = " "
+" }}}
+
+let g:netrw_liststyle = 0
+se textwidth=0
+
+" Terminal color: set to termguicolors and deal with tmux. {{{
+" if in terminal, :se t_Co should give 256, otherwise uncomment:
 " se t_Co=256
 " to enable true colors inside Byoby/Tmux
+se tgc
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+" }}}
 
-lan tim en_US.utf8
-set viminfo=%,!,'1000,:1000,n~/.vim/aux/viminfo
+" Deprecated:   ------- {{{
+" an tim en_US.utf8
+se viminfo=%,!,'1000,:1000,n~/.vim/aux/viminfo
 " this file should be read out of the box, but I need to source it (bug??)
 let mysyntaxfile = '~/.vim/syntax/mysyntaxfileTTM.vim'
-py3 import random
 se digraph
-set tw=0
+se tw=0
 se noru
 " se autowrite does not work... using update again on mappings
 let g:netrw_altv=1
 let g:netrw_preview=1
-set virtualedit=all
+se virtualedit=all
 runtime! ftplugin/man.vim
-set mouse=a
-" call pathogen#infect()
-filetype plugin indent on
+se mouse=a
+" cal pathogen#infect()
+filet plugin indent on
 
 let g:vimwiki_list = [{'path': '~/.vim/aux/vimwiki/', 'syntax': 'markdown', 'ext': '.wiki'}]
 
@@ -164,7 +178,8 @@ endfu
 " nnoremap j gj
 " nnoremap k gk
 
-" set autoread
+" se noautoread noautowrite
+" make a mappint (with func) to toggle C-[ to C-[:up<CR> and back to normal
 onoremap in( :<c-u>normal! f(vi(<cr>
 onoremap iN( :<c-u>normal! F)vi(<cr>
 onoremap in[ :<c-u>normal! f[vi[<cr>
@@ -174,7 +189,10 @@ onoremap iN{ :<c-u>normal! F}vi{<cr>
 " }}}
 " }}}
 
-let @f = 'mf?^fu^MV/^endf^M:@*^M`f'
+":Todo prv make random mask for vim commands {{{
+py3 import random
+" }}}
+
 " Useful commands which I might need to recall:
 " C-A, C-X to add and subtract from number
 " check on usage of bracket commands in Python

@@ -1,9 +1,0 @@
-Did not have a [[vimwiki]] yet :: a [[TTM]] note!
-
-tests with vimwiki:
-[
-This is a special [[vimwiki]] file:
-a diary index, reached though a mapping.
-What else?
-ok *vimwiki_<Leader>w<Leader>i*
-                      [trash]]

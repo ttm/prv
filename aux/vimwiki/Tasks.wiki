@@ -1,7 +1,0 @@
-understand vimwiki (see file in diary dir)
-
-finish mass suite
-
-reestabligh the nice 2h/task routine
-
-finish aa in prv (using vimwiki?)

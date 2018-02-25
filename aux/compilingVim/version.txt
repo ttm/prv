@@ -1,0 +1,35 @@
+
+
+VIM - Vi IMproved 8.0 (2016 Sep 12, compiled Feb 24 2018 10:17:16)
+Included patches: 1-1532
+Compiled by renato@xps
+Huge version with GTK2 GUI.  Features included (+) or not (-):
++acl               +comments          +file_in_path      +linebreak         +mouse_urxvt       +quickfix          +terminal          +windows
++arabic            +conceal           +find_in_path      +lispindent        +mouse_xterm       +reltime           +terminfo          +writebackup
++autocmd           +cryptv            +float             +listcmds          +multi_byte        +rightleft         +termresponse      +X11
+-autoservername    +cscope            +folding           +localmap          +multi_lang        -ruby              +textobjects       -xfontset
++balloon_eval      +cursorbind        -footer            -lua               -mzscheme          +scrollbind        +timers            +xim
++balloon_eval_term +cursorshape       +fork()            +menu              +netbeans_intg     +signs             +title             -xpm
++browse            +dialog_con_gui    +gettext           +mksession         +num64             +smartindent       +toolbar           +xsmp_interact
+++builtin_terms    +diff              -hangul_input      +modify_fname      +packages          +startuptime       +user_commands     +xterm_clipboard
++byte_offset       +digraphs          +iconv             +mouse             +path_extra        +statusline        +vertsplit         -xterm_save
++channel           +dnd               +insert_expand     +mouseshape        -perl              -sun_workshop      +virtualedit       
++cindent           -ebcdic            +job               +mouse_dec         +persistent_undo   +syntax            +visual            
++clientserver      +emacs_tags        +jumplist          -mouse_gpm         +postscript        +tag_binary        +visualextra       
++clipboard         +eval              +keymap            -mouse_jsbterm     +printer           +tag_old_static    +viminfo           
++cmdline_compl     +ex_extra          +lambda            +mouse_netterm     +profile           -tag_any_white     +vreplace          
++cmdline_hist      +extra_search      +langmap           +mouse_sgr         +python/dyn        -tcl               +wildignore        
++cmdline_info      +farsi             +libcall           -mouse_sysmouse    +python3/dyn       +termguicolors     +wildmenu          
+   system vimrc file: "$VIM/vimrc"
+     user vimrc file: "$HOME/.vimrc"
+ 2nd user vimrc file: "~/.vim/vimrc"
+      user exrc file: "$HOME/.exrc"
+  system gvimrc file: "$VIM/gvimrc"
+    user gvimrc file: "$HOME/.gvimrc"
+2nd user gvimrc file: "~/.vim/gvimrc"
+       defaults file: "$VIMRUNTIME/defaults.vim"
+    system menu file: "$VIMRUNTIME/menu.vim"
+  fall-back for $VIM: "/usr/local/share/vim"
+Compilation: gcc -c -I. -Iproto -DHAVE_CONFIG_H -DFEAT_GUI_GTK  -pthread -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0/ -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/libpng12 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng12 -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/freetype2   -g -O2 -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=1       
+Linking: gcc   -L/usr/local/lib -Wl,--as-needed -o vim   -lgtk-x11-2.0 -lgdk-x11-2.0 -lpangocairo-1.0 -latk-1.0 -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lpangoft2-1.0 -lpango-1.0 -lgobject-2.0 -lglib-2.0 -lfontconfig -lfreetype -lSM -lICE -lXt -lX11 -lXdmcp -lSM -lICE  -lm -ltinfo -lnsl    -ldl           
+

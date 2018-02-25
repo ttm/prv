@@ -1,9 +1,0 @@
-This file shoud hold is a special kinds of todo lists,
-which consists of things to do daily.
-
-* organize Vim files, doubts, commands, etc.
-* upload Vimwiki files to github.
-  - add vimrc file there maybe, or just add these ~/vimwiki/ files to a folder in ttm/vim/vimwiki/*
-* Review aa logs, and compare to plans for the day and for larger timespans (e.g. calendar for ufabc)
-* 
-

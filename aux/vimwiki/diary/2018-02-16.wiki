@@ -1,5 +1,0 @@
-Deixar aa no vim ok
-terminar artigo
-voltar a fazer as leituras seriamente
-fazer pagina para anotar comandos uteis (e.g. Split ec globpath
-Split echo globpath(&rtp, "plugin/vimwiki.vim")

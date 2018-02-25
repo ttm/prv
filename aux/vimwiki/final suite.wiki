@@ -1,7 +1,0 @@
-final suite for the [[mass]] framework.
-
-
-
-|         |   | 123123 | 4 |   |
-|---------|---|--------|---|---|
-| abanana |   |        |   |   |
