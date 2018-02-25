@@ -22,56 +22,6 @@ fu! PRVRestoreLeader(plug)
   let [mapleader, maplocalleader] = g:prv_keepleaders
 endf
 
-fu! ExtremeFolding() " {{{1
-  if &nctionfoldopen == 'all'
-    set foldopen&
-    set foldclose&
-  else
-    set foldopen=all
-    set foldclose=all
-  endif
-endfu
-
-fu! PythonShowRun() " {{{1
-  " Move this function to +PRV? TTM
-  let pout = system("python3 " . bufname("%") . " 2>&1")
-  " Open a new split and set it up.
-  vsplit __Python_output__
-  normal! ggdG
-  setlocal buftype=nofile
-  " Insert the bytecode.
-  call append(0, split(pout, '\v\n'))
-endfu
-
-fu! ViewHtmlText(url) " WWW navigation {{{1
-  if !empty(a:url)
-    new
-    setlocal buftype=nofile bufhidden=hide noswapfile
-    let g:ttmurl=a:url
-    execute 'r !elinks ' . a:url . ' -dump -dump-width ' . winwidth(0)
-    1d
-  endif
-endfu
-
-fu! ToggleVerbose() " {{{1
-    if !&verbose
-        set verbosefile=~/.vim/aux/verbose.log
-        set verbose=15
-        vs ~/.vim/aux/verbose.log
-        setlocal autoread
-    else
-        set verbose=0
-        set verbosefile=
-    endif
-endfu
-
-fu! VWFileNMapping(mapping, fpath) " {{{1
-  let tpath = g:vimwiki_list[0].path . a:fpath
-  let tcmd = ' :vs ' . tpath
-  let tcmd2 = 'nnoremap ' . a:mapping . l:tcmd . '<CR>'
-  exec l:tcmd2
-endfu
-
 " insert one char {{{1
 fu! InsertBeforeAfter()
   let a = nr2char(getchar())
@@ -99,139 +49,161 @@ fu! CircleChar(...)
 endf
 
 " sessions {{{1
-set sessionoptions+=globals
-let g:prv_sessions_dir = g:prv_dir.'aux/sessions/'
 if !isdirectory(g:prv_sessions_dir)
-  call mkdir(g:prv_sessions_dir, 'p')
-endif
-function! SaveSession()
+  cal mkdir(g:prv_sessions_dir, 'p')
+en
+fu! SaveSession()
   if !exists("g:msession")
-    call ListSessions()
+    cal ListSessions()
     let g:msession = input("Enter session name: ")
-  endif
-  execute 'mksession! ' . g:prv_sessions_dir . g:msession
-endfunction
-function! SaveNewSession()
-  call ListSessions()
+  en
+  exe 'mksession! ' . g:prv_sessions_dir . g:msession
+endf
+fu! SaveNewSession()
+  cal ListSessions()
   let g:msession = input("Enter session name: ")
-  execute 'mksession!' g:prv_sessions_dir . g:msession
-endfunction
-function! LoadSession()
-  call ListSessions()
+  exe 'mksession!' g:prv_sessions_dir . g:msession
+endf
+fu! LoadSession()
+  cal ListSessions()
   let g:msession = input("Enter session name: ")
-  execute 'only'
-  execute 'tabonly'
-  execute 'so ' . g:prv_sessions_dir . g:msession
-endfunction
-function! InsertSession()
-  call ListSessions()
-  execute 'tabe'
+  exe 'only'
+  exe 'tabonly'
+  exe 'so ' . g:prv_sessions_dir . g:msession
+endf
+fu! InsertSession()
+  cal ListSessions()
+  exe 'tabe'
   let g:msession = input("Enter session name: ")
-  execute 'so ' . g:prv_sessions_dir . g:msession
-endfunction
-function! ListSessions()
-  execute '!ls ' . g:prv_sessions_dir
-endfunction
+  exe 'so ' . g:prv_sessions_dir . g:msession
+endf
+fu! ListSessions()
+  exe '!ls ' . g:prv_sessions_dir
+endf
 
 " visual functions {{{1
-function! ShowImg()
-  exec "normal! viWy"
-  silent exec '!eog -f ' getreg('0')
-  exec 'colorscheme gruvbox'
-endfunction
-function! ChangeBackground()
+fu! ShowImg()
+  exe "normal! viWy"
+  sil exec '!eog -f ' getreg('0')
+  exe 'colorscheme gruvbox'
+endf
+fu! ChangeBackground()
   if &bg == 'dark'
-    set bg=light
-  else
-    set bg=dark
-  endif
-endfunction
-function! ToggleStatusbar()
+    se bg=light
+  el
+    se bg=dark
+  en
+endf
+fu! ToggleStatusbar()
   if &ls == 2
-    set ls=0
-  else
-    set ls=2
-  endif
-endfunction
-function! ToggleTabLine()
+    se ls=0
+  el
+    se ls=2
+  en
+endf
+fu! ToggleTabLine()
   if &showtabline == 2
-    set showtabline=0
-  else
-    set showtabline=2
-  endif
-endfunction
+    se showtabline=0
+  el
+    se showtabline=2
+  en
+endf
 
-fu! TabMessage(cmd) " {{{1
-  " use like :TabMessage highlight
-  redir => message
-  silent execute a:cmd
-  redir END
+" get window with output of command using redir {{{1
+fu! TabMessage(cmd)
+  redi => message
+  ex a:cmd
+  redi END
   if empty(l:message)
-    echoerr "no output"
-  else
-    " use "new" instead of "tabnew" below if you prefer split windows instead of tabs
+    echoe "no output"
+  el
     tabnew
     PRVbuff
-    put=message
-  endif
-endfu
-
-fu! SplitMessage(...) " {{{1
-  " this function output the result of the Ex command into a split scratch buffer
-  let cmd = join(a:000, ' ')
-  let temp_reg = @"
-  redir @"
-  silent! execute cmd
-  redir END
-  let output = copy(@")
-  let @" = temp_reg
+    p = message
+  en
+endf
+fu! SplitMessage(cmd)
+  redi => avar
+  exe a:cmd
+  redi END
   if empty(output)
-    echoerr "no output"
-  else
-    new
-    setlocal buftype=nofile bufhidden=wipe noswapfile nobuflisted
-    put! =output
-  endif
-endfu
+    echoe "no output"
+  el
+    vne
+    PRVbuff
+    p = avar
+  en
+endf
 
-fu! HiFile() " {{{1
-  " Does a bad job... But the idea is good, enhance it! TTM
-  " run to hightlight the buffer with the highlight output
-  " e.g. after :Split sy or :Split hi
-    let i = 1
-    while i <= line("$")
-        if strlen(getline(i)) > 0 && len(split(getline(i))) > 2
-            let w = split(getline(i))[0]
-            exe "syn match " . w . " /\\(" . w . "\\s\\+\\)\\@<=xxx/"
-        endif
-        let i += 1
-    endwhile
-endfu
-
-fu! OpenPDF() " {{{1
+" latex related {{{1
+fu! OpenPDF()
   let l:tfname = expand("%:r") . '.pdf'
   let l:tcmd = 'evince ' . l:tfname
   if !filereadable(l:tfname)
     let @x = ':call add( g:pdfjobs, job_start(["/bin/bash", "-c", "' . l:tcmd . '" ]))'
-    echo 'command to open PDF in @x register'
-  else
-    call add( g:pdfjobs, job_start(["/bin/bash", "-c", l:tcmd]))
-  endif
-endfu
-
-fu! CompileLatex() " {{{1
+    ec 'command to open PDF in @x register, pdf not found'
+  el
+    cal add( g:pdfjobs, job_start(["/bin/bash", "-c", l:tcmd]))
+  en
+endf
+fu! CompileLatex()
   let l:tfname = expand("%")
   let l:tdname = expand("%:h")
   let l:tcmd = 'pdflatex -output-directory=' . l:tdname . '/ ' . l:tfname
-  call job_start(["/bin/bash", "-c", l:tcmd])
-endfu
+  cal job_start(["/bin/bash", "-c", l:tcmd])
+endf
+
+fu! ExtremeFolding() " {{{1
+  " make mapping TTM
+  if &foldopen == 'all'
+    se foldopen&
+    se foldclose&
+  el
+    se foldopen=all
+    se foldclose=all
+  en
+endf
+
+fu! ViewHtmlText(url) " WWW navigation {{{1
+  if !empty(a:url)
+    new
+    setl buftype=nofile bufhidden=hide noswapfile
+    let g:ttmurl=a:url
+    exe 'r !elinks ' . a:url . ' -dump -dump-width ' . winwidth(0)
+    1d
+  en
+endf
+
+fu! ToggleVerbose() " {{{1
+  " TTM make mapping
+  if !&verbose
+    se verbosefile = g:prv_verbose_file
+    se verbose = 15
+    vs ~/.vim/aux/verbose.log
+    setl autoread
+  el
+    se verbose = 0
+    se verbosefile=
+  en
+endf
+
+fu! VWFileNMapping(mapping, fpath) " {{{1
+  let path = g:vimwiki_list[0].path.a:fpath
+  let cmd = ' :vs '.l:path
+  let cmd2 = 'nn '.a:mapping.l:cmd
+  exe l:tcmd2
+endf
 
 fu! RotateRegisters() " {{{1
+  " find where it is used and assert it is doing what is expected
+  " also try to make similar mechanisms for other registers,
+  " maybe use a dict of lists (one list for the history
+  " of each type of register)
   let @h=@j
   let @j=@k
   let @k=@l
   let @l=@.
-endfu
+endf
 
 fu! DecryptVimwiki() " {{{1
   " encrypt all vimwiki messages
@@ -241,32 +213,31 @@ fu! DecryptVimwiki() " {{{1
   let g:tcmd = 'vs ' . g:prv_dir . 'aux/vimwiki/'
   exe g:tcmd
   " normal /^" =====.*\n[^"]\<CR>
-  silent g|=.*\n.[^ ]
-  normal j
+  sil g|=.*\n.[^ ]
+  norm j
   let l:tlinen = line('.')
   let l:visdirs = 0
   let g:cmls = []
   let g:visited = []
-  while 1
+  wh 1
     let tline = getline('.')
-    echo l:tlinen tline
+    ec l:tlinen tline
     if l:tline != "../" && l:tline != "./"
-      echo 'not ..'
+      ec 'not ..'
       let fname = expand("<cfile>:p")
       if index(g:visited, fname) >= 0
         " file or dir already visited..
         let l:alinen = line('.')
-        normal j
+        norm j
         if l:alinen == line('.')
-          normal -
+          norm -
           let g:visdirs -= 1
-        else
+        el
           let l:tlinen = line('.')
-          continue
-        endif
-        
-      endif
-      silent exec "normal \<CR>"
+          con
+        en
+      en
+      sil exec "normal \<CR>"
       " silent exec "normal gf"
       if &ft == 'vimwiki'
         "ec 'found vimwiki'
@@ -276,103 +247,62 @@ fu! DecryptVimwiki() " {{{1
         setl key=
         " call input('4 Press any key to continue')
         exe "normal :w\<CR>"
-        call add(g:cmls, getcmdline())
-        " call input('5 Press any key to continue')
+        cal add(g:cmls, getcmdline())
+        " cal input('5 Press any key to continue')
         " exe "normal :w!\<CR>\<C-^>"
         exe "normal \<C-^>"
-        " call input('6 Press any key to continue')
-      elseif &ft != 'netrw'
+        " cal input('6 Press any key to continue')
+      elsei &ft != 'netrw'
         "ec 'found spurious'
         exe "normal \<C-^>"
-      else
+      el
         "ec "entered a directory"
-        silent g|=.*\n.[^ ]
-        normal j
+        sil g|=.*\n.[^ ]
+        norm j
         let l:tlinen = line('.')
-        continue
-      endif
-      call add(g:visited, l:fname)
-    else
-      echo "yes .."
+        con
+      en
+      cal add(g:visited, l:fname)
+    el
+      ec "yes .."
       "ec 'dir half count'
       let l:visdirs += 0.5
-    endif
-    normal j
+    en
+    norm j
     if line('.') == l:tlinen
       if exists("l:entdict")
         let banana=6
-      else
+      el
         "ec 'got to the same line. Up a dir'
         let stuck = 1
-        while stuck
-          normal -
+        wh stuck
+          norm -
           let l:visdirs -= 1
           if l:visdirs < 0.9
             break
-          endif
+          en
           let l:alinen = line('.')
-          normal j
+          norm j
           if l:alinen == line('.')
             " got up a dir to the bottom of the list
             " will loop again
-          else
+          el
             let stuck = 0
-          endif
-        endwhile
-      endif
-    endif
+          en
+        endw
+      en
+    en
     let l:tlinen = line('.')
-  endwhile
-endfu
+  endw
+endf
+fu! PythonShowRun() " {{{1
+  " Test TTM
+  let pout = system("python3 " . bufname("%") . " 2>&1")
+  " Open a new split and set it up.
+  vs __Python_output__
+  norm! ggdG
+  setl buftype=nofile
+  " Insert the bytecode.
+  0a split(pout, '\v\n')
+endf
 
-fu! SearchFilenameRTP()
-  let a = expand("<cword>")
-  let b = '**/' . g:a . '*'
-  let c = ':Split echo globpath(&rtp, "' . g:b . '")'
-  normal c
-endfu
-
-fu! SetRegisters()
-  let @g = expand("<cword>")
-  let b = '**/' . g:a . '*'
-  let c = ':Split echo globpath(&rtp, "' . g:b . '")'
-  normal c
-endfu
-fu! PRVPutCharAround(type, ...) " {{{1
-  " borrowed some from :h map-operator
-  let sel_save = &selection
-  let &selection = "inclusive"
-  let reg_save = @@
-
-  let g:asd = a:
-  let c = nr2char(getchar("what char to put around region?"))
-  ec l:c
-  exe "norm i" . l:c
-  ec  "norm i" . l:c
-  if a:0  " Invoked from Visual mode, use gv command.
-    exe "normal! gvd"
-  elsei a:type == 'line'
-    exe "normal! '[V']d"
-  el
-  en
-  exe "norm i" . l:c . "\<C-R>@" . l:c
-
-  let &selection = sel_save
-  let @@ = reg_save
-  let g:dsa = l:
-endfu
-
-fu! SearchFilenameRTP()
-  " Make a :B command with this
-  let a = expand("<cword>")
-  let b = '**/' . g:a . '*'
-  let c = ':Split echo globpath(&rtp, "' . g:b . '")'
-  normal c
-endfu
-
-fu! SetRegisters()
-  let @g = expand("<cword>")
-  let b = '**/' . g:a . '*'
-  let c = ':Split echo globpath(&rtp, "' . g:b . '")'
-  normal c
-endfu
