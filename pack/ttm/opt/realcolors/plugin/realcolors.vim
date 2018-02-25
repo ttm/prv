@@ -139,4 +139,17 @@
 " }}}
 let g:loaded_colorsPlugin = 'v01'
 " GetLatestVimScripts: 5650 1 :AutoInstall: Realcolors
-"
+
+fu! HiFile() " {{{1
+  " Does a bad job... But the idea is good, enhance it! TTM
+  " run to hightlight the buffer with the highlight output
+  " e.g. after :Split sy or :Split hi
+    let i = 1
+    while i <= line("$")
+        if strlen(getline(i)) > 0 && len(split(getline(i))) > 2
+            let w = split(getline(i))[0]
+            exe "syn match " . w . " /\\(" . w . "\\s\\+\\)\\@<=xxx/"
+        endif
+        let i += 1
+    endwhile
+endfu

@@ -1,6 +1,26 @@
 if !exists("g:pdfjobs")
   let g:pdfjobs = []
 endif
+" for plugin-specific leader and localleader {{{1
+fu! PRVDeclareLeader(plug)
+  cal assert_equal(type(a:plug), 1, 'only strings are accepted as arg to PRVDeclareLeader(plug)')
+  let g:prv_keepleaders = [g:mapleader, g:maplocalleader]
+  if exists('g:'.a:plug.'_leader')
+    exe 'let mapleader = g:'.a:plug.'_leader'
+  el
+    exe 'let mapleader = g:'.a:plug.'_default_leader'
+    exe 'let g:'.a:plug.'_leader = g:'.a:plug.'_default_leader'
+  en
+  if exists("g:aa_localleader")
+    exe 'let maplocalleader = g:'.a:plug.'_localleader'
+  el
+    exe 'let maplocalleader = g:'.a:plug.'_default_localleader'
+    exe 'let g:'.a:plug.'_localleader = g:'.a:plug.'_default_localleader'
+  en
+endf
+fu! PRVRestoreLeader(plug)
+  let [mapleader, maplocalleader] = g:prv_keepleaders
+endf
 
 fu! ExtremeFolding() " {{{1
   if &nctionfoldopen == 'all'
@@ -91,13 +111,11 @@ function! SaveSession()
   endif
   execute 'mksession! ' . g:prv_sessions_dir . g:msession
 endfunction
-
 function! SaveNewSession()
   call ListSessions()
   let g:msession = input("Enter session name: ")
   execute 'mksession!' g:prv_sessions_dir . g:msession
 endfunction
-
 function! LoadSession()
   call ListSessions()
   let g:msession = input("Enter session name: ")
@@ -105,14 +123,12 @@ function! LoadSession()
   execute 'tabonly'
   execute 'so ' . g:prv_sessions_dir . g:msession
 endfunction
-
 function! InsertSession()
   call ListSessions()
   execute 'tabe'
   let g:msession = input("Enter session name: ")
   execute 'so ' . g:prv_sessions_dir . g:msession
 endfunction
-
 function! ListSessions()
   execute '!ls ' . g:prv_sessions_dir
 endfunction
@@ -155,8 +171,8 @@ fu! TabMessage(cmd) " {{{1
   else
     " use "new" instead of "tabnew" below if you prefer split windows instead of tabs
     tabnew
-    setlocal buftype=nofile bufhidden=wipe noswapfile nobuflisted nomodified
-    silent put=message
+    PRVbuff
+    put=message
   endif
 endfu
 

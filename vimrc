@@ -5,12 +5,12 @@ se nocp
 let g:prv_vimrc_dir = expand("<sfile>:h") . '/'
 " PRV leaders and localleaders {{{
 let g:prv_leader = " "
-let g:prv_localleader = "<C-...>"
-let g:aa_leader = "<A-...>"
+let g:prv_localleader = "\<C-...>"
+let g:aa_leader = "\<A-...>"
 let g:aa_localleader = " "
-let g:realcolors_leader = "<A-...>"
+let g:realcolors_leader = "\<A-...>"
 let g:realcolors_localleader = " "
-let g:tokipona_leader = "<A-...>"
+let g:tokipona_leader = "\<A-...>"
 let g:tokipona_localleader = " "
 " }}}
 
