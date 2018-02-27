@@ -7,8 +7,6 @@
 
 " {{{1 default Vim
 se nocp
-let maplocalleader = '\'
-let mapleader = '\\'
 se sts=2 sw=2 tw=0 et ai
 se hi=10000  " remember more commands and search history
 se wig=*.swp,*.bak,*.pyc,*.class
@@ -24,6 +22,9 @@ se showcmd
 
 let g:netrw_altv=1
 let g:netrw_preview=1
+
+let mapleader = '\'
+let maplocalleader = '\\'
 
 " statusline --- {{{2
 se hl -=sn,Sn
@@ -56,12 +57,37 @@ let g:prv_vimrc_dir = expand("<sfile>:h") . '/'
 let g:prvset = {'leaders': {}}
 " [leader, localleader, auxleader]
 let g:prvset.leaders.prv = ['\', '', ' ']
-let g:prvset.leaders.aa = ['A', ' ']
+let g:prvset.leaders.aa = ['A', '']
 let g:prvset.leaders.realcolors = ['R', ' ']
 let g:prvset.leaders.tokipona = ['T', " "]
 " use <CR> for commands that have little to do with Vimwiki
 
 " PRV also deals with Vimwiki, so \w is taken
+
+" \X is also reserved for a nice restart
+nn \Xx :so $MYVIMRC<CR>:cal PRVReinitializeAll()<CR>
+nn \Xp :cal PRVInit()<CR>
+" aa init has another meaning
+" TODO TTM
+nn \Xt :cal TPInit()<CR>
+nn \Xc :cal RCInit()<CR>
+fu! PRVReinitializeAll() " {{{2
+  if exists("g:loaded_prvplugin")
+    exe 'so '.g:prv_dir.'plugin/prv.vim' 
+    cal PRVInit()
+  en
+  if exists("g:loaded_aaplugin")
+    exe 'so '.g:aa_dir.'plugin/aa.vim' 
+    " AAInit() will clear sessions and etc. Settings
+    " are already rerun when sourcing script
+  en
+  if exists("g:loaded_realcolorsplugin")
+    " TODO TTM
+  en
+  if exists("g:loaded_tokiponaplugin")
+    " TODO TTM
+  en
+endf " }}}
 
 " Notes{{{1
 " this file should be read out of the box, but I need to source it (bug??) TTM
@@ -83,5 +109,5 @@ let g:prvset.leaders.tokipona = ['T', " "]
 " set listchars=tab:>-,trail:.,extends:#,nbsp:*,eol:$
 " }}}
 
-" make function in prv that sources the opt/after tree.
+":Todo make function in prv that sources the opt/after tree.
 " " allow recursive TTM

@@ -8,8 +8,14 @@
 " FAPESP (project 2017/05838-3)
 " Ricardo Fabbri (PhD, IPRJ/UERJ)
 
+" Load Once: {{{1
+if exists("g:loaded_aaplugin") && (exists("g:aa_not_hacking") || exists("g:prv_not_hacking_all"))
+ finish
+endif
+let g:loaded_prvplugin = "v0.01b"
+let g:prv_dir = expand("<sfile>:p:h:h") . '/'
 " {{{1 settings
-let g:prv_dir = expand("%:h")
+
 fu! PRVInit()
 " {{{2 variables
   cal PRVDefineSettings()
@@ -19,8 +25,6 @@ fu! PRVInit()
   cal PRVMkMappings('ndlLa')
   cal PRVRestoreLeader('prv')
 endf
-
-
 
 " {{{1 commands
 com! -nargs=+ -complete=command PRVRedir call PRVRedirMessage(<f-args>)
@@ -435,7 +439,7 @@ fu! PRVMkMappings(str) " {{{3
     "
     nn <localleader>d gt
     tno <localleader>d <C-W>:tabn<CR>
-    ino <localleader>d <ESC><C->:tabn<CR>l<C-W>:startinsert<CR>
+    ino <localleader>d <ESC>:tabn<CR>l<C-W>:startinsert<CR>
     cno <localleader>d <ESC><C-W>:tabn<CR>l<c-w>:
     ino <localleader>Dk k<BS>I
     "
@@ -609,13 +613,30 @@ endf
 
 " {{{2 aux funcs (time, random numbers, etc)
 let g:Curmili = {-> system("date +%s%N | cut -b1-13")[:-2]}
-" {{{1 au
-" for mapping of letters in insert mode {{{ 
-" (test with <Space> to replicate normal commands)
-" au InsertEnter * set timeoutlen=200
-" au InsertLeave * set timeoutlen=1000
-" }}}
-fu! QuitNetrw()
+
+" {{{1 autocommands
+" restore-cursor, usr-05.txt
+aug prvgeneric
+  au!
+  au BufReadPost *
+    \ if line("'\"") >= 1 && line("'\"") <= line("$") |
+    \   exe "normal! g`\"" |
+    \ endif
+  if !has('gui_running') " because of tgc not using gui= attr in :hi
+    au Colorscheme * runtime ~/.vim/aux/underlineSpellBad.vim
+  en
+  au CmdwinEnter * map <buffer> <C-D> <CR>q:
+  au VimLeavePre *  call QuitNetrw() " really needed? Useful when? TTM
+aug END
+
+aug prvfttweaks
+  au!
+  au FileType vim setl fdm=marker sts=2 sw=2 et
+  au FileType help setl iskeyword+=-,.,(,)
+  au Filetype python setl sts=4 sw=4 tw=0 et ai ff=unix
+aug END
+
+fu! QuitNetrw() " is this really needed? TTM {{{2
   for i in range(1, bufnr($))
     if buflisted(i)
       if getbufvar(i, '&filetype') == "netrw"
@@ -625,72 +646,7 @@ fu! QuitNetrw()
   endfo
 endf
 
-au VimLeavePre *  call QuitNetrw()
-
-au Colorscheme * runtime ~/.vim/aux/underlineSpellBad.vim
-" What is this for?? TTM
-aug vimrcEx
-  au!
-  " restore-cursor, usr-05.txt
-  au BufReadPost *
-    \ if line("'\"") >= 1 && line("'\"") <= line("$") |
-    \   exe "normal! g`\"" |
-    \ endif
-aug END
-
-au CmdwinEnter * map <buffer> <C-D> <CR>q:
-
-
-" filetype settings --- {{{
-" Vimscript file settings ---------------------- {{{
-aug filetype_vim
-  au!
-  au FileType vim setl foldmethod=marker softtabstop=2 shiftwidth=2 expandtab
-aug END
-" }}}
-
-" Help file settings ---------------------- {{{
-aug filetype_help
-  au!
-  au FileType help setlocal iskeyword+=-,.,(,)
-aug END
-" }}}
-
-" Python file settings ---------------------- {{{
-aug pythonaus
-  au!
-  " TTM removed tabstop=4
-  au BufNewFile,BufRead *.py setl softtabstop=4 shiftwidth=4 textwidth=0 expandtab autoindent fileformat=unix
-  au BufNewFile,BufRead *.py nnoremap <buffer> cd /\<def\><CR>
-  au BufNewFile,BufRead *.py nnoremap <buffer> cD ?\<def\><CR> 
-  au BufNewFile,BufRead *.py nnoremap <buffer> cc /\<class\><CR>
-  au BufNewFile,BufRead *.py nnoremap <buffer> cC ?\<class\><CR>
-  " validade this (from usr_05.txt):
-  vn _g y:exe "grep /" . escape(@", '\\/') . "/ *.py"<CR>
-aug END
-" }}}
-" }}}
-" {{{1 grep
-nnoremap <leader>g :set operatorfunc=<SID>GrepOperator<cr>g@
-vnoremap <leader>g :<c-u>call <SID>GrepOperator(visualmode())<cr>
-
-function! s:GrepOperator(type)
-    let saved_unnamed_register = @@
-
-    if a:type ==# 'v'
-        normal! `<v`>y
-    elseif a:type ==# 'char'
-        normal! `[v`]y
-    else
-        return
-    endif
-
-    silent execute "grep! -R " . shellescape(@@) . " " . expand("%")
-    copen
-
-    let @@ = saved_unnamed_register
-endfunction
-" {{{1 for digraphs and other things that do not fit anywhere else
+" {{{1 digraphs
 " ♔ ☘ ☠ ☥ ☨ ☪ ☮ ☯ 
 dig kI 9812
 dig kT 9752
@@ -711,3 +667,11 @@ dig kE 9775
 " mono fonts beyond single digit indexes.
 "
 " ☲ (0,0,1) ☶ (0,0,1)
+
+" {{{1 Notes and further stuff
+" for mapping of letters in insert mode {{{ 
+" (test with <Space> to replicate normal commands)
+" au InsertEnter * set timeoutlen=200
+" au InsertLeave * set timeoutlen=1000
+" }}}
+

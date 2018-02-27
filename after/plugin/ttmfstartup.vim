@@ -12,3 +12,4 @@ cal PRVInit()
 hi Terminal guibg=lightgrey guifg=blue
 " cal CommandColorSchemes()
 " cal ApplyCS(g:ccs.red4, 'c')
+colo blue

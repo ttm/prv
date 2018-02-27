@@ -68,7 +68,7 @@ nn <leader>c :Ac<CR>
 nn <leader>C :Ac y<CR>
 nn <leader>i :Ai<CR>
 nn <leader>I :AI<CR>
-nn <leader>r :new<CR>:put =string(g:aa)<CR>:PRVbuff<CR>
+nn <leader>r :new<CR>:PRVbuf<CR>:put =string(g:aa)<CR>
 " -- g:aa_leader hack, part 2 of 2 {{{3
 cal PRVRestoreLeader('aa')
 
@@ -80,7 +80,7 @@ com! -nargs=1 -complete=tag_listfiles A call AAShout(<q-args>)
 com! -nargs=+ S call AAStartSession(<f-args>)
 com! -nargs=* Ac call AAClear(<q-args>)
 com! Ai ec AAInfo()
-com! AI call AAInitialize()
+com! AI call AAInit()
 " -- UTILS: {{{3
 com! Ar cal AASessionRegisterShoutGiven()
 com! AR cal AASessionRegisterShoutWanted()
@@ -96,7 +96,7 @@ fu! AAShout(msg) " {{{
   " date and time, the message,
   " and a final line separator
   if !AAIsInitialized()
-    call AAInitialize()
+    call AAInit()
   endif
   let date = system("date")[:-2]
 
@@ -112,7 +112,7 @@ fu! AAStartSession(...) " {{{
   " message = 'Ding Dong Ding Dong'
   let g:asd = a:
   if !AAIsInitialized()
-    cal AAInitialize()
+    cal AAInit()
   en
   if a:.0 > 0
     let dur = str2float(a:.1)
@@ -143,7 +143,7 @@ fu! AAStartSession(...) " {{{
     exec 'A '.l:aamsg
   en
 endfu " }}}
-fu! AAInitialize() " {{{
+fu! AAInit() " {{{
   call AAInitVars()
   if !exists('g:aa.timers')
     let g:aa.timers = []
@@ -158,10 +158,10 @@ endfu " }}}
 " -- UTILS {{{2
 fu! AAIsInitialized() " {{{
   if exists("g:aa.initialized")
-    return 1
-  else
-    return 0
-  endif
+    retu 1
+  el
+    retu 0
+  en
 endf " }}}
 fu! AAIsSessionOn() " {{{
   if exists("g:aa.session_on")
@@ -206,7 +206,7 @@ fu! AASessionRegisterShoutGiven() " {{{
   " let g:aa.cursession.shouts_requested += 1
   " let g:aa.cursession.shouts_expected -= 1
   if !AAIsInitialized()
-    call AAInitialize()
+    call AAInit()
   endif
   call AASessionReceiveMsg()
   let g:aa.events.shouts_count += 1
@@ -220,7 +220,7 @@ fu! AAInfoLines() " {{{
   let mlines = ['== Info about AA ==']
   if !AAIsInitialized()
     cal add(l:mlines, 'AA has not been initialized... Initialing.')
-    cal AAInitialize()
+    cal AAInit()
     cal add(l:mlines, 'AA initialized ok.')
   en
   cal add(l:mlines, '')
@@ -362,7 +362,7 @@ fu! AAExpectMsg(timer) " {{{
   cal AAUpdateColorColumns()
   let pmsg = []
   if g:aa.say == 1
-    call add(l:pmsg, 'A.A.: slot: ' . (g:aa.cursession.shouts_requested-1)
+    call add(l:pmsg, 'A.A.: finished slot: ' . (g:aa.cursession.shouts_requested-1)
           \ . 'of ' . g:aa.cursession.nslots)
     call add(l:pmsg, 'A.A.: 1 more shout expected. Total of ' . g:aa.cursession.shouts_expected)
     if g:aa.saytime == 1
@@ -422,6 +422,6 @@ endf
 " Todo look for chatter bot in vim
 " -- final commands and file settings {{{3
 if !AAIsInitialized()
-  cal AAInitialize()
+  cal AAInit()
 en
 " vim:foldlevel=2:
