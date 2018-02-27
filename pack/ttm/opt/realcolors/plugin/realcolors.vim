@@ -3,6 +3,10 @@
 " :sy creates groups and associates them to textual elements
 " :hi associates them to display parameters: colors + (bold + italics + underline + reverse)
 " underline + strikeout)
+
+" tgc was only for gVim, you don't get the gui=undercurl there.
+hi SpellBad cterm=undercurl
+
 " Script minimal documentation {{{
 " most advanced run: 
 " basic run: \z to create color variables based on the cursor position

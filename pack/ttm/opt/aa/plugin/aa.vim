@@ -70,9 +70,6 @@ nn <leader>i :Ai<CR>
 nn <leader>I :AI<CR>
 nn <leader>r :new<CR>:put =string(g:aa)<CR>:PRVbuff<CR>
 " -- g:aa_leader hack, part 2 of 2 {{{3
-let mapleader = s:fool
-let maplocalleader = s:fooll
-
 cal PRVRestoreLeader('aa')
 
 " -- for shouts {{{3
