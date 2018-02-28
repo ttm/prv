@@ -63,7 +63,6 @@ let g:prvset.leaders.tokipona = ['T', " "]
 " use <CR> for commands that have little to do with Vimwiki
 
 " PRV also deals with Vimwiki, so \w is taken
-
 " \X is also reserved for a nice restart
 nn \Xx :so $MYVIMRC<CR>:cal PRVReinitializeAll()<CR>
 nn \Xp :cal PRVInit()<CR>

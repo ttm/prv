@@ -239,18 +239,20 @@ tag files, which are loaded when one type of tag is present.
 
 
 ==============================================================================
-1. Install                                                  *aa-install*
-                                       lj
-There is various ways to install Vim plugins.
+2. Install                                                  *aa-install*
+
+There are various ways to install Vim plugins.
 If you have not picked your preffered way,
 this section summarizes what I understand about the issue.
 
-In Vim manual (e.g. `:h usr_toc`), a Vim plugin is described as a single file,
-which is sourced at startup right after vimrc according to `:h rtp`
-
+In Vim manual (e.g. see |usr_toc|), a Vim plugin is described as a single file,
+which is sourced at startup right after vimrc according to `:h` 'rtp'
 
 The way I find most clean and simple is to copy the whole |aa| file tree
-to any pack/prv/opt/aa/ directory in your 'runtimepath'.
+to any pack/*/opt/ directory in your 'runtimepath', such as
+.vim/pack/prv/opt/.
+This might be done for any plugin, with care for eventual after/ directories,
+as described in |prv-after|
 
 Then put:
     `packadd aa`
@@ -263,19 +265,15 @@ If you have problems, close and open Vim again.
 Also, this same installation is performed with Vimball:
 
 You might also just clone all PRV repository:
+    $ git clone https://github.com/ttm/prv ~/.vim/   
 
-and use aa there with all prv facilities.
+and use aa with all |prv| facilities.
 You might want to substitute vimrc, filetype.vim, script.vim,
 and other template files with your own.
 
-
-
-
-
-
-
-
-               *aa-options*
+==============================================================================
+2. Options, variables and general settings                       |aa-options|
+                                                                 |aa-settings| 
 
                *aa_leader*
 
