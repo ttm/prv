@@ -7,7 +7,7 @@
 
 " {{{1 default Vim
 se nocp
-se sts=2 sw=2 tw=0 et ai
+se sts=2 sw=2 tw=0 bs=2 et ai
 se hi=10000  " remember more commands and search history
 se wig=*.swp,*.bak,*.pyc,*.class
 se vb           " don't beep
@@ -64,7 +64,8 @@ let g:prvset.leaders.tokipona = ['T', " "]
 
 " PRV also deals with Vimwiki, so \w is taken
 " \X is also reserved for a nice restart
-nn \Xx :so $MYVIMRC<CR>:cal PRVReinitializeAll()<CR>
+" make a PRVReinitializeAll()? TTM TODO
+nn \Xx :so $MYVIMRC<CR>
 nn \Xp :cal PRVInit()<CR>
 " aa init has another meaning
 " TODO TTM
@@ -94,7 +95,6 @@ endf " }}}
 
 " Deprecated:   ------- {{{1
 " se virtualedit=all
-" cal pathogen#infect()
 
 " set encoding=utf-8
 " set scrolloff=3

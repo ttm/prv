@@ -18,7 +18,7 @@ CONTENTS                                                            *aa-index*
         3.1. shout                              |aa-shout-mappings|
         3.1. session                            |aa-shout-mappings|
         3.1. hack                               |aa-shout-mappings|
-        3.1. general-us                         |aa-shout-mappings|
+        3.1. general-use                         |aa-shout-mappings|
     4. Commands                                 |aa-commands|
         4.1. main                               |aa-main-commands|
         4.1. utils                              |aa-util-commands|
@@ -272,15 +272,103 @@ You might want to substitute vimrc, filetype.vim, script.vim,
 and other template files with your own.
 
 ==============================================================================
-2. Options, variables and general settings                       |aa-options|
-                                                                 |aa-settings| 
+2. Options, variables and general settings                       *aa-options*
+                                                                 *aa-settings* 
+Most importantly, when starting a session, you set the duration of the slot
+and the number of slots. See |aa-session-mappings|
+                                                                *aa-leaders*
+                                                                *aa_leader*
+                                                                *aa_localleader*
+The leader and localleader might be set to any key sequence, it might be
+the same as your default leader and localleader, but need not to be.
+This is achieved using |prv| (see |prv-leaders| to know how this is achieved),
+with a mechanism used in other plugins. To set your leader and localleader
+to X and Y, only for |aa|, put this line in your vimrc:
+    `let g:prvset = {'leaders' : {'aa': [X, Y]}}`
+                                                           *aa-session-cues*
+                                                           *aa-color-columns*
+                                                           *aa-speech* 
+As a way to better support |AA| sessions, |aa| uses both visual cues (color 
+columns) and sonic cues (some info is embeded in the synthesized speech).
+Speech might be turned off by setting g:aa.say=0 and g:aa.saytime=0.
 
-               *aa_leader*
+All these settings are in the |AAInitVars| function in |aa.vim|, with other
+directives that might be used to set |aa| according to the next paragraph.
 
-               *aa_localleader*
 
-notice that 
+                                                           *aa-hack-settings*
+|aa| is seatable in many ways because it deals with writting notes in a few
+files:
+- One might set different files from |aashouts.txt| and |aasessions.txt|
+- Or a different directory that aux/ inside |aa| tree.
+- Set and tweak mappings for shouts, sessions, hacks, general use.
+- Tweak the commands and functions or write new ones.
+- Change the spoken sentences or the color column as the visual cue.
+- Add features that fit the use intended.
 
+These might all be set in |aa.vim|
+
+==============================================================================
+3. Mappings                                                    *aa-mappings*
+
+                                                          |aa-shout-mappings|
+*aa-leader-a*
+*aa-leader-A*
+*aa-leader-e*
+*aa-leader-v*
+*aa-leader-t*
+
+                                                          |aa-session-mappings|
+*aa-leader-s*
+*aa-leader-S*
+*aa-leader-localleader-S*
+*aa-leader-V*
+*aa-leader-l*
+*aa-leader-d*
+*aa-leader-o*
+*aa-leader-localleader-r*
+*aa-leader-localleader-R*
+
+                                                          |aa-hack-mappings|
+*aa-leader-h*
+*aa-leader-H*
+*aa-leader-m*
+*aa-leader-localleader-h*
+*aa-leader-localleader-H*
+
+                                                          |aa-general-mappings|
+*aa-leader-c*
+*aa-leader-C*
+*aa-leader-i*
+*aa-leader-I*
+*aa-leader-r*
+
+==============================================================================
+3. Commands                                                    *aa-commands*
+    *aa-main-commands*
+    *aa-util-commands*
+
+==============================================================================
+3. Functions     *aa-functions*
+
+
+==============================================================================
+3. Files     *aa-functions*
+
+==============================================================================
+3. Final words     *aa-functions*
+
+------------------------------------------------------------------------------
+1.4. Advantages and drawbacks of |aa|                               *aa-compare*
+
+------------------------------------------------------------------------------
+1.4. Further work                                    *aa-helphelp*
+
+------------------------------------------------------------------------------
+1.4. Acknowledgements                                    *aa-helphelp*
+
+------------------------------------------------------------------------------
+1.4. Contact                                    *aa-helphelp*
 
 
 ===============
@@ -335,14 +423,6 @@ two commands.
 The idea is to send one shout each slot, as a way to keep
 a record of the dedication.
 More shouts are often useful as notes and enhanced records.
-
-            *aa-settings*
-This plugin doesn't have any settings.
-'asdasd' is very cool
-
-|aa-settings| is good for you
-
-*asdasd* is the best ever
 
 ------------------------------------------------------------------------------
 1.3. Todo                                                     *aa-todo*
