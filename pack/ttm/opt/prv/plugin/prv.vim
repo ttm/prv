@@ -16,7 +16,7 @@ let g:loaded_prvplugin = "v0.01b"
 let g:prv_dir = expand("<sfile>:p:h:h") . '/'
 " {{{1 settings
 
-fu! PRVInit()
+fu! PRVInit() " {{{
 " {{{2 variables
   cal PRVDefineSettings()
   cal PRVSetWiki()
@@ -24,18 +24,30 @@ fu! PRVInit()
   cal PRVDeclareLeader('prv')
   cal PRVMkMappings('ndlLa')
   cal PRVRestoreLeader('prv')
-endf
+endf " }}}
 
 " {{{1 commands
 com! -nargs=+ -complete=command PRVRedir call PRVRedirMessage(<f-args>)
 com! PRVbuf setlocal buftype=nofile noswapfile bufhidden=wipe nobuflisted ft=python
+com! -nargs=? PRVLeader cal PRVDeclareLeader(
+com! -nargs=+ PRVLeader cal [<f-args>][0] == 'd' ? PRVDeclareLeader([<f-args>][1]) : PRVRestoreLeader([<f-args>][])
+com! -nargs=+ PRVLeader cal [<f-args>][0] == 'd' ? PRVNtabs() : AAInfoLines()
+com! -nargs=+ PRVLeader cal PRVLeaderHelper(<f-args>)
 
 " {{{1 functions
 " for plugin-specific leader and localleader {{{2
+fu! PRVLeaderHelper(...)
+  if a:1 == 'd'
+    cal PRVDeclareLeader(a:2)
+  elsei a:1 == 'r'
+    cal PRVRestoreLeader(a:2)
+  en
+  let g:asd = a:
+endf
 fu! PRVDeclareLeader(plug)
   cal assert_equal(type(a:plug), 1, 'only strings are accepted as arg to PRVDeclareLeader(plug)')
   let g:prv.leaders[a:plug] = [g:mapleader, g:maplocalleader]
-  exe 'let g:'.a:plug.'_keepleaders = [g:mapleader, g:maplocalleader]'
+  " exe 'let g:'.a:plug.'_keepleaders = [g:mapleader, g:maplocalleader]'
   if has_key(g:prvset.leaders, a:plug)
     let g:mapleader = g:prvset.leaders[a:plug][0]
     let g:maplocalleader = g:prvset.leaders[a:plug][1]
@@ -190,7 +202,7 @@ fu! PRVViewHtmlText(url) " WWW navigation {{{2
   en
 endf
 
-fu! ToggleVerbose() " {{{2
+fu! PRVToggleVerbose() " {{{2
   " TTM make mapping
   if !&verbose
     se verbosefile = g:prv_verbose_file

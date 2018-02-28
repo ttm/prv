@@ -26,9 +26,7 @@ let g:aa_default_localleader = ''
 
 " MAPPINGS: {{{1
 " -- g:aa_leader hack, part 1 of 2 {{{3
-"  cal PRVDeclareLeader('g:aa_default_leader', 'g:aa_leader')
-"  cal PRVDeclareLocalLeader('g:aa_default_local_leader', 'g:aa_local_leader')
-cal PRVDeclareLeader('aa')
+PRVLeader d aa
 " -- for shouts {{{3
 " shouting:
 nn <leader>a :A 
@@ -72,7 +70,7 @@ nn <leader>I :AI<CR>
 nn <leader>r :PRVRedir v ec g:aa
 
 " -- g:aa_leader hack, part 2 of 2 {{{3
-cal PRVRestoreLeader('aa')
+PRVLeader r aa
 
 " COMMANDS: {{{1
 " -- MAIN: {{{3
@@ -109,7 +107,7 @@ fu! AAShout(msg) " {{{3
   cal AASessionReceiveMsg()
   let g:aa.events.shouts_count += 1
 endf
-fu! AAStartSession(...) " {{{2
+fu! AAStartSession(...) " {{{3
   " default duration = 15, ntimes = 8
   " message = 'Ding Dong Ding Dong'
   let g:asd = a:
@@ -145,14 +143,14 @@ fu! AAStartSession(...) " {{{2
     exe 'A '.l:aamsg
   en
 endf
-fu! AAInit() " {{{2
+fu! AAInit() " {{{3
   cal AAInitVars()
   if !exists('g:aa.timers')
     let g:aa.timers = []
   en
   let g:aa.initialized = 1
 endf
-fu! AAInfo() " {{{2
+fu! AAInfo() " {{{3
   let ml = AAInfoLines()
   let ml2 = join(l:ml, "\n")
   retu l:ml2
@@ -224,7 +222,7 @@ fu! AASessionRegisterShoutWanted() " {{{3
   cal AAExpectMsg('foobar')
 endf
 " -- AUX {{{2
-fu! AAInfoLines() " {{{
+fu! AAInfoLines() " {{{3
   let mlines = ['== Info about AA ==']
   if !AAIsInitialized()
     cal add(l:mlines, 'AA has not been initialized... Initialing.')
@@ -271,8 +269,8 @@ fu! AAInfoLines() " {{{
   cal add(l:mlines, '')
   cal add(l:mlines, 'more info in :h aa, the files in the paths above, and the script files.')
   retu l:mlines
-endf " }}}
-fu! AARunInAllWindows(acmd)
+endf
+fu! AARunInAllWindows(acmd) " {{{3
   let wi = win_getid()
   tabd windo exec a:acmd
   cal win_gotoid(l:wi)
@@ -295,8 +293,8 @@ fu! AAUpdateColorColumns() " {{{
     " tabdo windo exec g:aa.cccommand | windo set colorcolumn<
     cal AARunInAllWindows(g:aa.cccommand)
   en
-endf " }}}
-fu! AAInitVars() " {{{
+endf
+fu! AAInitVars() " {{{3
   let g:aa = {}
   let g:AA_dict = g:aa
   let g:aa.note = 'AA stuff should be kept in files. Keep this dictionary minimal.'
@@ -338,8 +336,8 @@ fu! AAInitVars() " {{{
   let g:aa.msgs = {}
 
   let g:aa.voices = ['croak', 'f1', 'f2', 'f3', 'f4', 'f5', 'klatt', 'klatt2', 'klatt3', 'klatt4', 'm1', 'm2', 'm3', 'm4', 'm5', 'm6', 'm7', 'whisper', 'whisperf']
-endf " }}}
-fu! AASecondsToTimestring(secs) " {{{
+endf
+fu! AASecondsToTimestring(secs) " {{{3
   let g:coisa = a:secs
   if type(a:secs) ==  1
     let s = str2float(a:secs)
@@ -356,8 +354,8 @@ fu! AASecondsToTimestring(secs) " {{{
     let durline = l:min.'m'.l:sec.'s'
   en
   retu l:durline
-endf " }}}
-fu! AAExpectMsg(timer) " {{{
+endf
+fu! AAExpectMsg(timer) " {{{3
   let g:aa.cursession.shouts_requested += 1
   let g:aa.cursession.shouts_expected += 1
   cal AAUpdateColorColumns()
@@ -375,7 +373,7 @@ fu! AAExpectMsg(timer) " {{{
   let g:aa.events.last_shout.request_seconds = localtime()
   " Make sound"
 endf " }}}
-fu! AASay(phrases) " {{{
+fu! AASay(phrases) " {{{3
   let voices = []
   for i in a:phrases
     cal add(l:voices, AAMkVoice() . ' "' . i . '"')
@@ -385,13 +383,13 @@ fu! AASay(phrases) " {{{
   cal system('chmod +x ' . l:ef)
   cal job_start(l:ef)
   cal system('rm '.l:ef)
-endf " }}}
-fu! AAMkVoice() " {{{
+endf
+fu! AAMkVoice() " {{{3
     let voice = g:aa.voices[reltime()[1]%len(g:aa.voices)]
     let epk = 'espeak -v' . l:voice
   retu l:epk
-endf " }}}
-fu! AASessionReceiveMsg() " {{{
+endf
+fu! AASessionReceiveMsg() " {{{3
   if exists("g:aa.session_on") && g:aa.cursession.shouts_expected > 0
     let g:aa.cursession.shouts_expected -= 1
     let g:aa.cursession.shouts_sent += 1
@@ -405,14 +403,14 @@ fu! AASessionReceiveMsg() " {{{
   let g:aa.events.last_shout.time = strftime("%c")
   let g:aa.events.last_shout.sent_seconds = localtime()
 endf
-fu! AACountShoutsInFile() " {{{
+fu! AACountShoutsInFile() " {{{3
   " count ^-----
   " readfile depois count
   let g:taafile = readfile(g:aa.paths.shouts)
   let g:aashoutcount = count(g:taafile, "-----")
   return g:aashoutcount
 endf
-fu! AAAutoComplete(ArgLead, CmdLine, CursorPos)
+fu! AAAutoComplete(ArgLead, CmdLine, CursorPos) " {{{3
   " blend funtion, buffer names, augroup, color, command, dir, file, file-In_path, event, help, highlight, history, mapping, messages, option, packadd, syntax, tag, tag_listfiles, var
   let g:asd = a:
 endf
