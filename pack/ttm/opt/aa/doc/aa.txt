@@ -389,13 +389,20 @@ More shouts are often useful as notes and enhanced records.
     *aa-main-commands*
 As explicit in |aa.vim|, the main commands are `:A`, `:S`, `:Ac`, `:Ai`, `:AI`, for sending a shout, starting a session, clearing |aa|, info on |aa| and initialization, respectively.
 
-
+See the source (|aa.vim|) for all the functions. |aa| is all built on
+functions, with the exception of a few mappings which implement some funcitonalities directly.
+The commands are used to organize the functionalities yield by the functions,
+and are thus used by the mappings.
+Functions are organized in main (receive shout, start session, init and info),
+utils (check if |aa| is initialized, if session is on,
+register that a shout has beed given,
+time left and spent in a slot, time since last shout, clear),
+aux (routines used by main and utils).
 
     *aa-util-commands*
 The utils commands are `:AR`, `:At`, `:AT`, `:As`, `:Ao`, `:Au`, for registering
 a shout given, a shout wanted/requested, echoing the time left or spent in
 a slot, the time since last shout, if there is an ongoing |aa-session|, and for updating the color columns (related to the finished slots which did not receive a shout), respectively.
-
 
 ==============================================================================
 6. Functions     *aa-functions*
