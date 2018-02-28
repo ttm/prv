@@ -71,6 +71,7 @@ nn \Xp :cal PRVInit()<CR>
 " TODO TTM
 nn \Xt :cal TPInit()<CR>
 nn \Xc :cal RCInit()<CR>
+nn \Xa :exe 'so '.g:aa.paths.aascript<CR>
 fu! PRVReinitializeAll() " {{{2
   if exists("g:loaded_prvplugin")
     exe 'so '.g:prv_dir.'plugin/prv.vim' 

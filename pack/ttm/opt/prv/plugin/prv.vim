@@ -123,6 +123,15 @@ fu! ShowImg()
   exe 'colorscheme gruvbox'
 endf
 
+fu! PRVNtabs()
+  sil PRVRedir v tabs
+  redir => avar
+  sil %s/^Tab p//gn
+  redi END
+  q
+  let ntabs = split(l:avar, ' ')[0][1:]
+  retu l:ntabs
+endf
 fu! PRVRedirMessage(...) " get output of command in window {{{2
   redi => avar
   sil exe join(a:000[1:])
@@ -360,7 +369,7 @@ fu! PRVMkMappings(str) " {{{3
     nn <leader>J :jumps<CR>
     nn <leader>p :reg<CR>
     nn <silent> <leader>t :let &ls = (&ls == 1) ? (len(tabpagebuflist()) > 1 ? 0 : 2) : 2*(((&ls + 2) % 4)/2)<CR>
-    nn <silent> <leader>T :let &stal = (&stal == 1) ? (len(tabpagebuflist()) > 1 ? 0 : 2) : 2*(((&stal + 2) % 4)/2)<CR>
+    nn <silent> <leader>T :let &stal = (&stal == 1) ? (PRVNtabs() > 1 ? 0 : 2) : 2*(((&stal + 2) % 4)/2)<CR>
     nn <leader>g :let &bg = &bg == 'dark' ? 'light' : 'dark'<CR>
     nn <leader>k :let &k'seymap = &keymap ==# 'accents' ? '' : 'accents'<CR>
     nn <leader>c :set cursorline! cursorcolumn!<CR>

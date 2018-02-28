@@ -1,4 +1,4 @@
-" Vim plugin for time management and automated documenting activities
+" Vim plugin for time management and automated documenting activities {{{3
 " Author: Renato Fabbri <renato.fabbri@gmail.com>
 " Date: 2018 Fev 21 (when I wrote this header...)
 " Installing:	:help aa-install 
@@ -24,7 +24,7 @@ let g:aa_dir = expand("<sfile>:p:h:h") . '/'
 let g:aa_default_leader = 'A'
 let g:aa_default_localleader = ''
 
-" MAPPINGS: {{{2
+" MAPPINGS: {{{1
 " -- g:aa_leader hack, part 1 of 2 {{{3
 "  cal PRVDeclareLeader('g:aa_default_leader', 'g:aa_leader')
 "  cal PRVDeclareLocalLeader('g:aa_default_local_leader', 'g:aa_local_leader')
@@ -38,42 +38,43 @@ nn <leader>e :exec "e " . g:aa.paths.shouts<CR>
 nn <leader>v :exec "vs " . g:aa.paths.shouts<CR>G
 nn <leader>t :exec "tabe " . g:aa.paths.shouts<CR>
 " for the time since last shout:
-nn <leader><leader> :As<CR>
+nn <leader><localleader>t :As<CR>
+nn <leader>T :ec system('date')[:-2]<CR>
 " -- for sessions {{{3
 " starting a session:
 nn <leader>s :S 15 8
-nn <leader>S :S .1 3
+nn <leader>S :S 5 3
 nn <leader><localleader>S :S 15 8 starting session (dummy message from aa plugin)<CR>
 " accessing aasessions.txt:
 nn <leader>V :exec "vs " . g:aa.paths.sessions<CR>G
 " for info on the session (time and left in the slot, іs session on): 
 nn <leader>l :At<CR>
 nn <leader>L :AT<CR>
-nn <leader>O :Ao<CR>
+nn <leader>o :Ao<CR>
 " declare shout sent or request
 nn <leader><localleader>r :Ar<CR>
 nn <leader><localleader>R :AR<CR>
+nn <leader>u :Au<CR>:ec 'color columns updated'<CR>
 " -- hacking {{{3
 nn <leader>h :exec 'vs ' . g:aa.paths.aux<CR>
+nn <leader>H :help aa<CR>`"
 nn <leader><localleader>H :exec 'vs ' . g:aa.paths.aascript<CR>
 nn <leader><localleader>h :exec 'vs ' . g:aa.paths.aaiscript<CR>
-" this command does not tags from other help files:
+" this command does not find tags from other help files:
 " nn <leader>H :exec 'vs ' . g:aa.paths.aadoc<CR>
 " thus we use:
-nn <leader>H :help aa<CR>`"
-nn <leader>m :exec 'Split :map '.g:aa_leader.'A'<CR>:sort />A\zs/<CR>
-" plus <leader>A(e,t,v) for shouts and <leader>AV for session
+nn <leader>m :exe 'PRVRedir v :map '.g:prv.leaders.aa[0]<CR>:sort />A\zs/<CR>
 " -- general {{{3
 nn <leader>c :Ac<CR>
 nn <leader>C :Ac y<CR>
 nn <leader>i :Ai<CR>
 nn <leader>I :AI<CR>
-nn <leader>r :new<CR>:PRVbuf<CR>:put =string(g:aa)<CR>
+nn <leader>r :PRVRedir v ec g:aa
+
 " -- g:aa_leader hack, part 2 of 2 {{{3
 cal PRVRestoreLeader('aa')
 
-" -- for shouts {{{3
-" COMMANDS: {{{2
+" COMMANDS: {{{1
 " -- MAIN: {{{3
 com! -nargs=1 -complete=tag_listfiles A call AAShout(<q-args>)
 " com! -nargs=1 -complete=customlist,AAAutoComplete A call AAShout(<q-args>)
@@ -85,10 +86,11 @@ com! AI call AAInit()
 com! Ar cal AASessionRegisterShoutGiven()
 com! AR cal AASessionRegisterShoutWanted()
 " the following are more easely accesses though :Ai
-com! At ec AATimeLeftInSlot()
-com! AT ec AATimeSpentInSlot()
+com! At ec 'time left in slot: '.AATimeLeftInSlot()
+com! AT ec 'time spent in slot: 'AATimeSpentInSlot()
 com! As ec 'minutes since last shout: ' . AATimeSinceLastShout()
 com! Ao ec 'AA session ongoing: '.AAIsSessionOn()
+com! Au cal AAUpdateColorColumns()
 " FUNCTIONS: {{{1
 " -- MAIN {{{2
 fu! AAShout(msg) " {{{3
@@ -365,7 +367,7 @@ fu! AAExpectMsg(timer) " {{{
           \ . 'of ' . g:aa.cursession.nslots)
     cal add(l:pmsg, 'A.A.: 1 more shout expected. Total of ' . g:aa.cursession.shouts_expected)
     if g:aa.saytime == 1
-      cal add(l:pmsg, 'A.A.: current time and day is: ' . strftime("%T, %B, day %d"))
+      cal add(l:pmsg, 'A.A.: current time and day is: ' . strftime("%T, %B, %d"))
     en
     cal AASay(l:pmsg)
   en
