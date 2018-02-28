@@ -107,7 +107,7 @@ fu! AAShout(msg) " {{{3
   cal AASessionReceiveMsg()
   let g:aa.events.shouts_count += 1
 endf
-fu! AAStartSession(...) " {{{
+fu! AAStartSession(...) " {{{2
   " default duration = 15, ntimes = 8
   " message = 'Ding Dong Ding Dong'
   let g:asd = a:
@@ -142,35 +142,35 @@ fu! AAStartSession(...) " {{{
     let aamsg = join(a:.000[2:], ' ')
     exe 'A '.l:aamsg
   en
-endf " }}}
-fu! AAInit() " {{{
+endf
+fu! AAInit() " {{{2
   cal AAInitVars()
   if !exists('g:aa.timers')
     let g:aa.timers = []
   en
   let g:aa.initialized = 1
-endf " }}}
-fu! AAInfo() " {{{
+endf
+fu! AAInfo() " {{{2
   let ml = AAInfoLines()
   let ml2 = join(l:ml, "\n")
   retu l:ml2
 endf " }}}
 " -- UTILS {{{2
-fu! AAIsInitialized() " {{{
+fu! AAIsInitialized() " {{{3
   if exists("g:aa.initialized")
     retu 1
   el
     retu 0
   en
-endf " }}}
-fu! AAIsSessionOn() " {{{
+endf
+fu! AAIsSessionOn() " {{{3
   if exists("g:aa.session_on")
     retu 1
   el
     retu 0
   en
-endf " }}}
-fu! AAClear(...) " {{{
+endf
+fu! AAClear(...) " {{{3
   let g:acaa = a:
   if a:.1 == ''
     let apass = input("are you sure you want to clear AA data? [y/N] ")
@@ -186,23 +186,23 @@ fu! AAClear(...) " {{{
     cal timer_stopall()
     cal AAUpdateColorColumns()
   en
-endf " }}}
-fu! AATimeLeftInSlot() " {{{
+endf
+fu! AATimeLeftInSlot() " {{{3
   let at = g:aa.cursession.dur*60 - (localtime() - g:aa.events.last_shout.request_seconds)
   retu AASecondsToTimestring(string(l:at))
-endf " }}}
-fu! AATimeSpentInSlot() " {{{
+endf
+fu! AATimeSpentInSlot() " {{{3
   let at = localtime() - g:aa.events.last_shout.request_seconds
   retu AASecondsToTimestring(l:at)
 endf
-fu! AATimeSinceLastShout() " {{{
+fu! AATimeSinceLastShout() " {{{3
   if !exists("g:aa.events.last_shout.sent_seconds")
     retu 'no shout has beed given since last AA startup'
   en
   let at = (localtime() - g:aa.events.last_shout.sent_seconds)
   retu AASecondsToTimestring(l:at)
 endf
-fu! AASessionRegisterShoutGiven() " {{{
+fu! AASessionRegisterShoutGiven() " {{{3
   " let g:aa.cursession.shouts_requested += 1
   " let g:aa.cursession.shouts_expected -= 1
   if !AAIsInitialized()
@@ -211,7 +211,14 @@ fu! AASessionRegisterShoutGiven() " {{{
   cal AASessionReceiveMsg()
   let g:aa.events.shouts_count += 1
 endf
-fu! AASessionRegisterShoutWanted() " {{{
+fu! AATimeOfLastShout() " {{{3
+  if exists("g:aa.events.last_shout.time")
+    retu g:aa.events.last_shout.time
+  el
+    retu 'no shout given yet'
+  en
+endf
+fu! AASessionRegisterShoutWanted() " {{{3
   cal AAExpectMsg('foobar')
 endf
 " -- AUX {{{2
@@ -263,13 +270,6 @@ fu! AAInfoLines() " {{{
   cal add(l:mlines, 'more info in :h aa, the files in the paths above, and the script files.')
   retu l:mlines
 endf " }}}
-fu! AATimeOfLastShout() " {{{
-  if exists("g:aa.events.last_shout.time")
-    retu g:aa.events.last_shout.time
-  el
-    retu 'no shout given yet'
-  en
-endf
 fu! AARunInAllWindows(acmd)
   let wi = win_getid()
   tabd windo exec a:acmd

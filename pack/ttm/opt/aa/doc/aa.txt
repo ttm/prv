@@ -15,13 +15,13 @@ CONTENTS                                                            *aa-index*
              |aa-install-recommended|, |aa-install-Vimball|, |aa-install-root|
     3. Options, variables and general settings  |aa-settings| |aa-options|
     3. Mappings                                 |aa-mappings|
-        3.1. shout                              |aa-shout-mappings|
-        3.1. session                            |aa-shout-mappings|
-        3.1. hack                               |aa-shout-mappings|
-        3.1. general-use                         |aa-shout-mappings|
+                                                |aa-shout-mappings|
+                                                |aa-session-mappings|
+                                                |aa-hack-mappings|
+                                                |aa-general-mappings|
     4. Commands                                 |aa-commands|
-        4.1. main                               |aa-main-commands|
-        4.1. utils                              |aa-util-commands|
+                                                |aa-main-commands|
+                                                |aa-util-commands|
     5. Functions                                |aa-functions|
     6. Files                                    |aa-files|
         6.1. Syntax highlighting in |aa|          |aa-syntax|
@@ -311,14 +311,14 @@ These might all be set in |aa.vim|
 ==============================================================================
 3. Mappings                                                    *aa-mappings*
 
-                                                          |aa-shout-mappings|
+                                                          *aa-shout-mappings*
 *aa-leader-a*
 *aa-leader-A*
 *aa-leader-e*
 *aa-leader-v*
 *aa-leader-t*
 
-                                                          |aa-session-mappings|
+                                                          *aa-session-mappings*
 *aa-leader-s*
 *aa-leader-S*
 *aa-leader-localleader-S*
@@ -329,14 +329,14 @@ These might all be set in |aa.vim|
 *aa-leader-localleader-r*
 *aa-leader-localleader-R*
 
-                                                          |aa-hack-mappings|
+                                                          *aa-hack-mappings*
 *aa-leader-h*
 *aa-leader-H*
 *aa-leader-m*
 *aa-leader-localleader-h*
 *aa-leader-localleader-H*
 
-                                                          |aa-general-mappings|
+                                                          *aa-general-mappings*
 *aa-leader-c*
 *aa-leader-C*
 *aa-leader-i*
@@ -345,21 +345,76 @@ These might all be set in |aa.vim|
 
 ==============================================================================
 3. Commands                                                    *aa-commands*
-    *aa-main-commands*
-    *aa-util-commands*
+
+                                                        *aa-main-commands*
+    *:A* {shout}
+Registers all the line that follows `:A` into shouts.txt
+
+    *:S* {dur} {nslots}
+Starts a session with {dur} minutes in each of the {nslots} slots.
+
+    *:Ac* : clears |aa| state. 
+    *:Ai* : returns info on |aa| (shouts, sessions, times, etc)
+    *:AI* : initializes |aa|
+
+                                                         *aa-util-commands*
+    *:Ar* : registers that a shout has been given.
+    *:AR* : registers that a shout is wanted.
+    *:At* : echoes the time left in current slot.
+    *:AT* : echoes the time spent in current slot.
+    *:As* : echoes a message with the time since last shout.
+    *:Ao* : echoes a message stating if there is an ongoing session.
 
 ==============================================================================
 3. Functions     *aa-functions*
 
+See the source (|aa.vim|) for all the functions. |aa| is all built on
+functions, with the exception of a few mappings which implement some funcitonalities directly.
+The commands are used to organize the functionalities yield by the functions,
+and are thus used by the mappings.
+Functions are organized in main (receive shout, start session, init and info),
+utils (check if |aa| is initialized, if session is on,
+register that a shout has beed given,
+time left and spent in a slot, time since last shout, clear),
+aux (routines used by main and utils).
 
 ==============================================================================
-3. Files     *aa-functions*
+3. Files     *aa-files*
+
+    Syntax highlighting in |aa|    
+    aux/aashouts.txt               
+    aux/aasessions.txt             
+    plugin/aa.vim                  
+    syntax/aashouts.vim            
+    ftdetect/aafts.vim             
+    after/plugin/aastartup.vim     
+    doc/aa.txt                     
+    |aa-help|
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ==============================================================================
 3. Final words     *aa-functions*
 
 ------------------------------------------------------------------------------
-1.4. Advantages and drawbacks of |aa|                               *aa-compare*
+1.4. advantages and drawbacks of |aa|                               *aa-compare*
 
 ------------------------------------------------------------------------------
 1.4. Further work                                    *aa-helphelp*
