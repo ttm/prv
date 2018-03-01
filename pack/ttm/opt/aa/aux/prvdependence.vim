@@ -2,6 +2,7 @@
 com! PRVbuf setlocal buftype=nofile noswapfile bufhidden=wipe nobuflisted ft=python
 com! -nargs=+ PRVLeader cal PRVLeaderHelper(<f-args>)
 
+let g:prv = {'leaders':{}}
 fu! PRVLeaderHelper(...)
   if a:1 == 'd'
     cal PRVDeclareLeader(a:2)

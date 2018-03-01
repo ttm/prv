@@ -62,6 +62,8 @@ let g:prvset.leaders.realcolors = ['R', ' ']
 let g:prvset.leaders.tokipona = ['T', " "]
 " use <CR> for commands that have little to do with Vimwiki
 
+let g:vimwiki_list = [{'path': '~/.vim/pack/ttm/opt/prv/aux/vimwiki/'}]
+
 " PRV also deals with Vimwiki, so \w is taken
 " \X is also reserved for a nice restart
 " make a PRVReinitializeAll()? TTM TODO
@@ -89,6 +91,11 @@ fu! PRVReinitializeAll() " {{{2
     " TODO TTM
   en
 endf " }}}
+
+" Aux / Temp {{{1
+nn mn /^=====<CR>zt<C-E>
+nn mp ?^=====<CR>nzt<C-E>
+nn mo /http<CR>:exe '!google-chrome '.expand("<cfile>")<CR><CR>
 
 " Notes{{{1
 " this file should be read out of the box, but I need to source it (bug??) TTM

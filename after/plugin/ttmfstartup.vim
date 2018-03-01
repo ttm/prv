@@ -2,8 +2,8 @@
 " in pack/plugins/opt/
 " packadd gruvbox
 " " in pack/ttm/opt/
-packadd prv
-cal PRVInit()
+" packadd prv
+" cal PRVInit()
 packadd realcolors
 packadd aa
 " packadd vimwiki
