@@ -27,10 +27,11 @@ CONTENTS                                                            *aa-index*
 
     2. Install                                  |aa-install|
              |aa-install-recommended|  |aa-install-Vimball|
-             |aa-install-root|
+             |aa-install-root|  |aa-prv|
 
-    3. Options, variables and general settings  |aa-settings| |aa-options|
-             |aa-g:aa|  |aa-leaders|  |aa_leader|  |aa_localleader| 
+    3. Options, variables and general settings  |aa-settings|
+                                                |aa-options|
+             |aa_g:aa|  |aa-leaders|  |aa_leader|  |aa_localleader| 
              |aa-session-cues|  |aa-color-columns|  |aa-speech| 
              |aa-hack-settings|
 
@@ -42,6 +43,8 @@ CONTENTS                                                            *aa-index*
              |aa-main-commands|  |aa-util-commands|
 
     6. Functions                                |aa-functions|
+             |aa-implementation|
+
     7. Files                                    |aa-files|
              |aashouts.txt|  |aasessions.txt|  |aa.vim|
              |aashouts.vim|  |aa-syntax|  |aaftdetect.vim| 
@@ -50,7 +53,7 @@ CONTENTS                                                            *aa-index*
     8. Final words                              |aa-final-words|
         8.1. Advantages and drawbacks of |aa|     |aa-compare|
         8.2. Further work / Todo                |aa-todo|
-        8.3. Tradition                          |aa-tradition|
+        8.3. |AA| Tradition                       |aa-tradition|
              |aa-activism|
 
         8.4. Disclaimer                         |aa-disclaimer|
@@ -285,60 +288,68 @@ The correspondent pack/*/*/opt/aa directory is added to the base directories
 (stored in 'runtimepath') where Vim looks for standard directories and files.
 If you have problems, close and open Vim again.
 
-This plugin is being developed as part of the PRV framework,
-thus it depends on |prv|.
-For now, the dependency is very shallow: |aa| uses only
-the `:PRVBuf`  and `:PRVLeader` commands, which might be copied
-to vimrc and skip |prv| installation.
-The best and easiest way to deal with this is just to clone
-|prv| into pack/ttm/prv/ and add `:packadd prv` to vimrc
-before `:packadd aa` 
-NOTE: you do not need to initialize |prv| (with `:PRVInit`),
-which will add all |prv| mappings to your session.
+                                                                      *aa-prv*
+This plugin is being developed as part of the PRV framework.  |aa|, at the
+moment, uses only the `:PRVBuf`  and `:PRVLeader` commands, which are copied
+into aux/prvdependence.vim and sourced when prv is not found loaded.
 
-*aa-install-vimball*
+If you want to integrate |prv| and |aa|, the best and easiest way is just to
+clone |prv| into pack/ttm/prv/ and add `:packadd prv` to vimrc before
+`:packadd aa` NOTE: you do not need to initialize |prv| (with `:PRVInit`),
+which will add all |prv| mappings to your session.  NOTE: you may change ttm/
+to any directory.  This layers is only for organization of the packages.
+
+                                                          *aa-install-vimball*
 Also, this same installation is performed with Vimball:
 
-*aa-install-root*
+        $ vim aa.vmb 
+
+Download the Vimball e.g. from vim.org.
+
+                                                             *aa-install-root*
 You might also just clone all PRV repository:
     $ git clone https://github.com/ttm/prv ~/.vim/
 
-and use aa with all |prv| facilities.
-You might want to substitute vimrc, filetype.vim, script.vim,
-and other template files with your own.
+and use |aa| with all PRV facilities, including |prv|, as described in
+|aa-related-plugins|.  You might want to substitute vimrc, filetype.vim,
+script.vim, and other template files with your own.
+
 
 ==============================================================================
-3. Options, variables and general settings                       *aa-options*
+3. Options, variables and general settings                        *aa-options*
                                                                  *aa-settings* 
-Most importantly in ordinary |aa| usage, 
-when starting a session, you set the duration of the slot
-and the number of slots.  See |aa-session-mappings|
 
-*aa-g:aa*
-The variables referring to |aa| are all kept in the |g:aa| global variable.
-The only exception is the leader and localleader specified through |prv|.
-                                                                *aa-leaders*
-                                                                *aa_leader*
-                                                                *aa_localleader*
-The leader and localleader might be set to any key sequence, it might be
-the same as your default leader and localleader, but need not to be.
-This is achieved using |prv| (see |prv-leaders| to know how this is achieved),
-with a mechanism used in other plugins.  To set your leader and localleader
-to X and Y, only for |aa|, put this line in your vimrc:
-    `let g:prvset = {'leaders' : {'aa': [X, Y]}}`
+Most importantly in ordinary |aa| usage, when starting a session, you set the
+duration of the slot and the number of slots.  See |aa-session-mappings|
+
+                                                                     *aa_g:aa*
+The variables related to |aa| are all kept in the |g:aa| global variable.  The
+only exception is the leader and localleader specified through |prv| as
+follows.
+
+                                                                  *aa-leaders*
+                                                                   *aa_leader*
+                                                              *aa_localleader*
+The leader and localleader might be set to any key sequence, it might be the
+same as your default leader and localleader, but need not to be.  This is
+achieved using |prv| (see |prv-leaders| or |aa-prvdependence.vim| to know how
+this is achieved), with a mechanism also used in other plugins.  To set your
+leader and localleader to X and Y, only for |aa|, put this line in your vimrc:
+
+            `let g:prvset = {'leaders' : {'aa': [X, Y]}}`
+
                                                            *aa-session-cues*
                                                            *aa-color-columns*
                                                            *aa-speech* 
-As a way to better support |AA| sessions, |aa| uses both visual cues (color 
-columns) and sonic cues (some info is embeded in the synthesized speech).
-Speech might be turned off by setting g:aa.say=0 and g:aa.saytime=0.
+As a way to better support |AA| sessions, |aa| uses both visual cues (color
+columns, info panel) and sonic cues (some info is embeded in the synthesized
+speech).  Speech might be turned off by setting g:aa.say=0 and g:aa.saytime=0.
 
-All these settings are in the |AAInitVars| function in |aa.vim|, with other
+All these settings are in the AAInitVars function in |aa.vim|, with other
 directives that might be used to set |aa| according to the next paragraph.
 
-
                                                            *aa-hack-settings*
-|aa| is seatable in many ways because it deals with writting notes in a few
+|aa| is settable in many ways because it deals with writting notes in a few
 files:
 - One might set different files from |aashouts.txt| and |aasessions.txt|
 - Or a different directory that aux/ inside |aa| tree.
@@ -346,60 +357,66 @@ files:
 - Tweak the commands and functions or write new ones.
 - Change the spoken sentences or the color column as the visual cue.
 - Add features that fit the use intended.
+See |aa-files|
 
 These might all be set in |aa.vim|
 
-==============================================================================
-4. Mappings                                                    *aa-mappings*
 
-                                                          *aa-shout-mappings*
+==============================================================================
+4. Mappings                                                      *aa-mappings*
+
+                                                           *aa-shout-mappings*
 *aa-leader-a* : write a one-line shout
 *aa-leader-A* : write an arbitrary shout directly in |aashouts.txt|
 *aa-leader-e* : edit |aashouts.txt|
 *aa-leader-v* : vertical split for |aashouts.txt|
 *aa-leader-t* : tab for |aashouts.txt|
 *aa-leader-localleader-t* : echoes the time since last shout
-*aa-leader-localleader-T* : echoes current time and date
 
-                                                          *aa-session-mappings*
+                                                         *aa-session-mappings*
 *aa-leader-s* :  start new session (command line set it and start)
 *aa-leader-S* : start a lightning |AA| session (3 slots of 5 min each)
-*aa-leader-localleader-S* : start default |AA| session (8 slots of 15 min each)
-with a dummy message
+*aa-leader-localleader-S* : start default |AA| session
+(8 slots of 15 min each) with a dummy message
 *aa-leader-V* : vertical split for |aasessions.txt|
 *aa-leader-l* : echoes the time left in slot. See |aa-slot|
-*aa-leader-L* : echoe the time spent in slot
+*aa-leader-L* : echoes the time spent in slot
 *aa-leader-o* : echoes if an |aa-session| is on
 *aa-leader-localleader-r* : registers that a shouts has been given
 *aa-leader-localleader-R* : registers that a shout is requested.
-(both -r and -R commands updates the visual cue by being folloewd by this
-command:)
+(both -r and -R mappings updates the visual cue because they are followed
+the routine used by this command:)
 *aa-leader-u* : updated color columns (if for any reasons the number of
 requested shouts do not match the visual cue.
 
-                                                          *aa-hack-mappings*
+                                                            *aa-hack-mappings*
 *aa-leader-h* : open the |aa-aux| directory
-*aa-leader-H* : open |aa.txt| in the context of a help file (i.e. within the proper |tags| settings)
+*aa-leader-H* : open |aa.txt| in the context of a help file
+(i.e. within the proper |tags| settings)
 *aa-leader-localleader-h* : vertical split for |aa.vim|.
-*aa-leader-localleader-H* : vertical split for the last sourced file of the |aa| plugin: |aastart.vim|
-*aa-leader-m* : show all the |aa| mappings in alphabetical order.
+*aa-leader-localleader-H* : vertical split for the last sourced file of the
+|aa| plugin: |aastart.vim|
 
-                                                          *aa-general-mappings*
-*aa-leader-c* : clear namespace used by |aa|(ask to confirm)
+                                                         *aa-general-mappings*
+*aa-leader-c* : clear namespace used by |aa| (ask to confirm)
 *aa-leader-C* : clear namespace used by |aa| (no confirm)
-*aa-leader-i* : echo info about the the state of |aa| (times, shouts, session, slots, etc)
-*aa-leader-I* : initialize |aa| (start internal state variables) 
-*aa-leader-r* : open a vertical split with all the contents of the |g:aa| variable.
+*aa-leader-i* : echoes info about the the state of |aa| (times, shouts,
+session, slots, etc)
+*aa-leader* : same as |aa-leader-i|
+*aa-leader-localleader-I* : initialize |aa| (start internal state variables) 
+*aa-leader-T* : echoes current time and date
+*aa-leader-r* : open a vertical split with all the contents of the |g:aa| 
+variable.
+*aa-leader-m* : show all the |aa| mappings in alphabetical order.
 
 
 ==============================================================================
-5. Commands                                                    *aa-commands*
+5. Commands                                                      *aa-commands*
 
-The funcionality of the AA plugin is centered around these
-two commands:
+The functionality of the |aa| plugin is centered around these two commands:
 
     *:A* {shout}
-            Register the message {shout} in |aashouts.txt|
+            Registers the message {shout} in |aashouts.txt|
     
     *:S* {dur} {nslots}
             Start a session.
@@ -407,165 +424,186 @@ two commands:
             {nslots} is the number of slots in the session.
             See |aa-session|
 
-The idea is to send (at least) one shout each slot, as a way to keep
-a record of the dedication.
-More shouts are often useful as notes and enhanced records.
+The idea is to send (at least) one shout each slot, as a way to keep a record
+of the dedication.  More shouts are often useful as notes and enhanced
+records.
 
-    *aa-main-commands*
-As explicit in |aa.vim|, the main commands are `:A`, `:S`, `:Ac`, `:Ai`, `:AI`, for sending a shout, starting a session, clearing |aa|, info on |aa| and initialization, respectively.
+                                                            *aa-main-commands*
+As explicit in |aa.vim|, the main commands are `:A`, `:S`, `:Ac`, `:Ai`,
+`:AI`, for sending a shout, starting a session, clearing |aa|, info on |aa|
+and initialization, respectively.
 
-See the source (|aa.vim|) for all the functions.  |aa| is all built on
-functions, with the exception of a few mappings which implement some funcitonalities directly.
-The commands are used to organize the functionalities yield by the functions,
-and are thus used by the mappings.
-Functions are organized in main (receive shout, start session, init and info),
-utils (check if |aa| is initialized, if session is on,
-register that a shout has beed given,
-time left and spent in a slot, time since last shout, clear),
-aux (routines used by main and utils).
 
-    *aa-util-commands*
+                                                            *aa-util-commands*
 The utils commands are `:AR`, `:At`, `:AT`, `:As`, `:Ao`, `:Au`, for registering
 a shout given, a shout wanted/requested, echoing the time left or spent in
 a slot, the time since last shout, if there is an ongoing |aa-session|, and for updating the color columns (related to the finished slots which did not receive a shout), respectively.
 
-==============================================================================
-6. Functions     *aa-functions*
-
-The functions implemented in |aa| are divided into main, utils, and aux (in |aa.vim|), considering the way the commands use them.
-
-For now, all functions are used directly only by the commands, and the mappings
-use only Vim default commands or |aa-commands|.
 
 ==============================================================================
-7. Files     *aa-files*
+6. Functions                                                    *aa-functions*
+
+                                                           *aa-implementation*
+For now, all functions are used directly only by the commands, and the
+mappings use only Vim default commands or |aa-commands|.  Thus, |aa| is all
+built on functions, with the exception of a few mappings which implement some
+functionalities directly.  The commands are used to organize the
+functionalities yield by the functions, and are then used by the mappings.
+Functions are organized in main (receive shout, start session, init and info),
+utils (check if |aa| is initialized, if session is on, register that a shout
+has beed given, time left and spent in a slot, time since last shout, clear),
+aux (routines used by main and utils).
+See |aa.vim| to access all the functions.
+
+
+==============================================================================
+7. Files                                                            *aa-files*
 
 aux/*aashouts.txt*
-In this file, the shouts are stored in plain text.
-Each shout ends with the date and 5 minus signs ('-----').
-Sessions are marked with five dolar signs ('$$$$$') and two empty lines before (when session starts)
-or after (when session ends).
-A very simple syntax highlighting is implemented
+In this file, the shouts are stored in plain text.  Each shout ends with two
+special lines: the date and 5 minus signs ('-----').  Sessions are marked with
+five dolar signs ('$$$$$') and two empty lines before (when session starts) or
+after (when session ends).  A very simple syntax highlighting is implemented
 for this file.  See |aa-syntax|
 
 aux/*aasessions.txt*
-
-This file holds information on the sessions started.  Each session start registers the time and date of the starting session, the duration of the slots and the number of slots.
-If the session ended, a line with the time and date is added to the file.
+This file holds information on the sessions started.  Each session start
+triggers the storage of the time and date of the starting session, the
+duration of the slots and the number of slots.  If the session ended, a line
+with the time and date is added to the file.
 
 plugin/*aa.vim*
 The main source file of the |aa| plugin.
 
 ftplugin/*aashouts.vim*                       *aa-syntax*
-Not to be confused with |aashouts.txt|, this file holds the (very simple) syntax highlighting used for |aashouts.txt|.
+Not to be confused with |aashouts.txt|, this file holds the (very simple)
+syntax highlighting used for |aashouts.txt|.
 
 ftdetect/*aaftdetect.vim*
-A simple routine to set the filetype of the files in |aa|.  Currently only sets ft=aashouts for |aashouts.txt|, which enables the syntax highlighting.
+A simple routine to set the filetype of the files in |aa|.  Currently only
+sets ft=aashouts for |aashouts.txt|, which enables the syntax highlighting.
 
 after/plugin/*aastartup.vim*
-A minimalistic set of startup commands for |aa| given that the main source (|aa.vim|) is loaded.
-Being discarded because the after/plugin/ directory in pack/*/*/(opt or after) are not sourced by default (|prv| might have facilities for this).
-We have been discussion on the mailing list about this issue,
-and it might not be a good strategy to have and after/ directory
-for a plugin.
+A minimalistic set of final startup commands for |aa| given that the main
+source (|aa.vim|) is loaded.  Being discarded because the after/plugin/
+directory in pack/*/*/(opt or after) are not sourced by default (|prv| might
+have facilities for this soon).  We have been discussing on the vim_use
+mailing list about this issue, and it might not be a good strategy to have and
+after/ directory for a plugin.  The issue is still being understood (at least
+by me).
+
+after/plugin/*prvdependence.vim*
+Holds the very few routines from |prv| which are crucial to |aa|, as explained
+in |aa-prv|.
 
 *aa-aa.txt* (doc/|aa.txt|)
-This very help file.  See |aa.txt|
+This very help file.
+See |aa.txt|
 
 
 ==============================================================================
-8. Final words     *aa-final-words*
+8. Final words                                                *aa-final-words*
 
-While this is "yet another |AA| implementation", this is the first implemented
+While this is a "yet another |AA| implementation", this is the first implemented
 carefully for Vim.
 Next few paragraphs cover some considerations about this context.
 
 ------------------------------------------------------------------------------
-8.1. Advantages and drawbacks of |aa|                               *aa-compare*
+8.1. Advantages and drawbacks of |aa|                             *aa-compare*
 
-A detailed consideration of |aa| againt other |AA| implementations might be
-achieved by reading this file and the documents in |aa-literature| carefully.
+A detailed consideration of |aa| against other |AA| implementations might be
+achieved by carefully reading this file and the documents in |aa-literature|.
 Most evidently:
 - |aa| is very hack-friendly by being embedded in Vim and written in VimL,
   which entails that one may write routines in a very slick scripting language
-  (VimL) with all the resources at hand of a very well developed platform (Vim).
+  (VimL) with all the resources at hand of a very well developed platform
+  (Vim).
 - |aa| has not yet received routines to push the shouts (and sessions) to the
-  cloud, as have been a core feature of all past |AA| implementations.
-- Shouts in |aa| might be corrected, noted, enhanced in any way the user whishes,
-  which had been a drawback of other implementations, for they sent the shouts
+  cloud, which have been a core feature of all other |AA| implementations.
+- Shouts in |aa| might be corrected, noted, enhanced in any way the user
+  wishes.  This is an advance, for all other implementations send the shouts
   to the cloud as soon as the user typed a shout command.
-- The info mapping |aa-leader-i| (and command `:Ai`) is a considerable enhancement
-  over last state probing commands in any |AA| implementation.
+- The info mapping |aa-leader-i| (and command `:Ai`) is a considerable
+  enhancement over last state probing commands in any |AA| implementation.
 - The use of the |AA| methodology inside Vim, enabled by |aa|, with timers and
-  jobs, makes for a very fluent experience.
+  jobs, makes for a very seamless experience.
 
 ------------------------------------------------------------------------------
-8.2. Further work / Todo                                   *aa-todo* 
+8.2. Further work / Todo                                             *aa-todo* 
 
-As |AA| is very loose and intended to fit a large spectrum of contexts,
-and |aa| is very hackable (see |aa-compare| and |aa| in general), the
-possibilites and notes for enhancements are numerous.
-Even so, any comments by uses are very deeply considered, for |AA| in known
-to have important and non-trivial aspects.
+As |AA| is very loose and intended to fit a large spectrum of contexts, and
+|aa| is very hackable (see |aa-compare| and |aa| in general), the
+possibilities and notes for enhancements are numerous.  Even so, any comments
+by users are very deeply considered, for |AA| in known to have important and
+non-trivial aspects.
 
 The following list is what remains after this initial |aa| implemtation:
-* Tags should not collide.  How to find out all the tags defined by the system?
-* Routines to send shouts to cloud (SQl, MondDB or RDF preferably)
-* arrumar doc
-* fazer o resto dos comandos e mapeamentos
-* soltar no github talvez vim.org
-* ver no doxigen com fazem com vimL
-* usar o enter para criar direto o caminho.
-* talvez espaco-enter para decorar (link, tag, ref-tag, ref-option ref-command ref-func)
-* relacionar bem com a ideia de reactwiki (hypertexto com codigos executaveis)
-* iniciar sessao abre duas linhas em branco
-* make espeak async!!! >.<
+* See if and how doxigen or Sphinx deals with VimL
 * implement optional margin around slot endings to receive a shout.
 * enable the use of parallel sessions (e.g. for different duration slots)
-* implement publishing routines for the shouts (and sessions).
-    - data should be sent to Data.Wold, DataHub, os similar and made available in RDF/linked data
-    - internally, the date line yields a reasonable ID for a shout or session (maybe remove spaces).
-      For sharing, the id shoud be: user-datestring.
-    - let a user share any number of info in a dedicated file, parsing it to rdf.
-* make a cool window with aa info with syntax highlighting
-* make declare shout sent/request with or without influecing in the slots related to each slot.
-* use :later and :earlier to compare a current file with that of the beginning of a session or lest x sessions or at last x shouts.
-  maybe keep the localtime() string in the time string ?
-  find a way to have undos specific to a line (and range if possible)
+* Routines to send shouts to cloud (SQl, MondDB or RDF preferably).
+  I.e., implement publishing routines for the shouts (and sessions):
+    - data should be sent to Data.Wold, DataHub, os similar and made available
+      in RDF/linked data
+    - internally, the date line yields a reasonable ID for a shout or session
+      (maybe remove spaces).
+      For sharing, the id shoud be: user-datestring
+    - let a user share any number of info in a dedicated file, parsing it to
+      rdf
+* make a cool window for |aa| info with syntax highlighting
+* make declare shout sent/request with or without influecing in the
+  slots-shout count
+* use :later and :earlier to compare a current file with that of the beginning
+  of a session or last x sessions or at last x shouts.
+  Maybe keep records of localtime() internally or an auxiliary file.
+  Find a reasonable way to have undo-s specific to a line (and range if
+  possible)
 
-                                                   *aa-bare-vim-wiki*
-I have been thinking about maintaining a wiki on bare Vim because it is very
-simple and functional:
+                                                            *aa-bare-vim-wiki*
+I have been thinking about maintaining a wiki on bare Vim because it should
+yield a very simple and functional system:
+    - use <CR> to create a path with the filename under the cursor,
+      as does Vimwiki
+    - maybe use <Space><Cr> to decorate (link, tag-link, tag-reference,
+      (option,command,function)-(link or reference)
+    - exploit deeply the concept of a "react-wiki": hypertexts with executable
+      code.
     - use a directory as wiki root, 
-    - put a suffix *.mwiki in the ....
+    - use a new or standard suffix (e.g. *.mwiki)?
     - use gf to follow pages
     - write token or word with starting / or . if internal link intended
     - reuse Vim's capabilities with help files and (parallel help files?) with
       tags and searching (and what more?).
     - integrate with |aa| and the rest of PRV.  See |aa-related-plugins|
-    - manage to link paths of wiki pages and of repository trees.  E.g. .py
-      files use a specific &path, .vim files, other &path etc...
-    - it might be condensed in just a couple of settings with optional advanced
-      functions
+    - manage to link paths of wiki pages and of repository trees.
+      E.g. .py files use a specific &path, .vim files, other &path etc...
+    - it might be condensed in just a couple of settings with optional
+      advanced functions
     - it should be very friendly to making collage of files to render, e.g. a
       latex or HTML file.
 
 ------------------------------------------------------------------------------
-8.3. Tradition                                   *aa-tradition* 
+8.3. |AA| Tradition                                             *aa-tradition* 
                                              
-
-*aa-activism*
-|AA| has been envisioned and used for social transformation.
+                                                                 *aa-activism*
+|AA| has often been envisioned and used for social transformation.
 Examples:
-* |AA| is recurrently understood as a way to comprovar dedication,
-  thus opening a possibility for one to requerer the bounty that fits
-  the time spent on a collective wealfare (goals, ethic principles, etc).
-  This has happened both in relation to the government (one might ask
-  for resources in a public institution), and in relation to the academy
-  (one might ask for 
+* |AA| is recurrently understood as a way to testify for dedication,
+  thus opening a possibility for one to claim the bounty that fits the time
+  spent on a collective welfare (goals, ethic principles, knowledge, etc).
+  This has happened both in relation to the government (one might ask for
+  resources in a public institution), and in relation to the academy (one
+  might ask for |AA| shouts to be taken into account when productivity is
+  evaluated.
+* Users often think about |AA| as a self-transparency mechanism, in which
+  he/she makes public some internals about current dedications. There are
+  cases that range from extreme (almost all activity is logged into |AA|) to
+  very modest (some shouts are shared occasionally).
+* Groups of developers use |AA| as a way to share ongoing work and make
+  software with a diminished need for meetings, emails, etc.
 
 ------------------------------------------------------------------------------
-8.4. Disclaimer                                       *aa-disclaimer* 
+8.4. Disclaimer                                                *aa-disclaimer* 
 
                 |AA| is the Ambiguous Acronym.
 
@@ -575,35 +613,39 @@ Examples:
     Run this command-line command in your command-line prompt:
 
   :cal timer_start(300, 'CrazyFu', {'repeat': 10}) |
-  \ :exe "fu! CrazyFu(timer) \n exec 'hi Normal guibg=#'.(system(\"echo $RANDOM$RANDOM\")[:5]) \n endf"
+  \ :exe "fu! CrazyFu(timer) \n exec 'hi Normal guibg=#'.(
+  \ system(\"echo $RANDOM$RANDOM\")[:5]) \n endf"
+
+(select the line with <C-V>, then move until all lines are selected, then
+press :@*<CR>)
 
                  See |aa-related-plugins|
 
          ) ( /\/\/\/\/\ _o_o_ oOo _o_o_ /\/\/\/\/\ ) (
 
 ------------------------------------------------------------------------------
-8.5. License                                     *aa-license* 
+8.5. License                                                      *aa-license* 
 
 Copyright: Public Domain.
 
 ------------------------------------------------------------------------------
-8.6. Acknowledgements                                    *aa-ack*
+8.6. Acknowledgements                                                 *aa-ack*
 
+- Vim users and developers
 - vim_use email list (discussion forum)
 - Cristina Ferreira de Oliveira (PhD, VICG/ICMC/USP),
 - FAPESP (project 2017/05838-3, lead by Cristina)
 - Ricardo Fabbri (PhD, IPRJ/UERJ)
 
-
 ------------------------------------------------------------------------------
-8.7. Contact                                    *aa-contact*
+8.7. Contact                                                      *aa-contact*
 
 You may write me directly at renato [?dot] fabbri [a?t] gmail [dot?] com
 
 Other possibilities are:
 - write to other |AA| users at listamacambira@googlegroups.com
 - write to the vim_use email list
-- ask around: your friends/collegues which use Vim, any forum, etc.
+- ask around: your friends/colleges which use Vim, any forum, etc.
 
 
- vim:modifiable:noreadonly:tw=78:ts=8:ft=help:suffixesadd+=.txt:norl:softtabstop=4:shiftwidth=4:expandtab:
+ vim:ma:noro:tw=78:ts=8:ft=help:sua+=.txt:norl:sts=4:sw=4:et:

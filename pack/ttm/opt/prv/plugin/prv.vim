@@ -9,7 +9,7 @@
 " Ricardo Fabbri (PhD, IPRJ/UERJ)
 
 " Load Once: {{{1
-if exists("g:loaded_aaplugin") && (exists("g:aa_not_hacking") || exists("g:prv_not_hacking_all"))
+if exists("g:loaded_prvplugin") && (exists("g:prv_not_hacking") || exists("g:prv_not_hacking_all"))
  finish
 endif
 let g:loaded_prvplugin = "v0.01b"
@@ -29,9 +29,6 @@ endf " }}}
 " {{{1 commands
 com! -nargs=+ -complete=command PRVRedir call PRVRedirMessage(<f-args>)
 com! PRVbuf setlocal buftype=nofile noswapfile bufhidden=wipe nobuflisted ft=python
-com! -nargs=? PRVLeader cal PRVDeclareLeader(
-com! -nargs=+ PRVLeader cal [<f-args>][0] == 'd' ? PRVDeclareLeader([<f-args>][1]) : PRVRestoreLeader([<f-args>][])
-com! -nargs=+ PRVLeader cal [<f-args>][0] == 'd' ? PRVNtabs() : AAInfoLines()
 com! -nargs=+ PRVLeader cal PRVLeaderHelper(<f-args>)
 
 " {{{1 functions

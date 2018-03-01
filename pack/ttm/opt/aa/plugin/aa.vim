@@ -11,8 +11,8 @@
 
 " Load Once: {{{3
 if exists("g:loaded_aaplugin") && (exists("g:aa_not_hacking") || exists("g:prv_not_hacking_all"))
- finish
-endif
+ fini
+en
 let g:loaded_aaplugin = "v0.01b"
 let g:aa_dir = expand("<sfile>:p:h:h") . '/'
 " let g:aa_default_leader = '<Space>'
@@ -20,6 +20,9 @@ let g:aa_dir = expand("<sfile>:p:h:h") . '/'
 " aux/ dir?
 " aa_leader and aa_localleader
 " say and saytime
+if !exists("g:loaded_prvplugin")
+  exe 'so ' . g:aa_dir . 'aux/prvdependence.vim'
+en
 
 let g:aa_default_leader = 'A'
 let g:aa_default_localleader = ''
@@ -66,7 +69,8 @@ nn <leader>m :exe 'PRVRedir v :map '.g:prv.leaders.aa[0]<CR>:sort />A\zs/<CR>
 nn <leader>c :Ac<CR>
 nn <leader>C :Ac y<CR>
 nn <leader>i :Ai<CR>
-nn <leader>I :AI<CR>
+nn <leader> :Ai<CR>
+nn <leader><localleader>I :AI<CR>
 nn <leader>r :PRVRedir v ec g:aa
 
 " -- g:aa_leader hack, part 2 of 2 {{{3
