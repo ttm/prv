@@ -1,0 +1,14 @@
+*prv-todo*
+
+- Assimilate the aux/experimentalStuff.vim file
+- clean .vim/aux vimball stuff
+
+*prv-navigation*
+
+C-hjkl for windows in any mode
+C-np for tabs in any mode
+\b\B to open the browser in current dir
+a-b a-B open close Sex in same dir.
+ttartinsertartinsertartinsertjjjjy to use C- to open the browser.
+
+

@@ -300,11 +300,15 @@ which will add all |prv| mappings to your session.  NOTE: you may change ttm/
 to any directory.  This layers is only for organization of the packages.
 
                                                           *aa-install-vimball*
-Also, this same installation is performed with Vimball:
+Also, this same installation is performed with Vimball: >
 
-        $ vim aa.vmb 
+        vim aa.vmb 
+        :so %
+        :q
 
-Download the Vimball e.g. from vim.org.
+<Download the Vimball e.g. from vim.org.
+It will place the files in the pack/ttm/opt/aa/ dir as explained above, so you
+need to put the `packadd aa` line in yout vimrc.
 
                                                              *aa-install-root*
 You might also just clone all PRV repository:

@@ -1,0 +1,43 @@
+{{{
+fu! PRVMkVimball(plug)
+  " Load this function by visually selecting it, then
+  " :@*
+  " Then run it while in this buffer with:
+  " :call PRVMkVimball(plug), where plug is 'prv', 'aa', 'rc', 'tp'
+  " to create the vimball
+  exe 'e ' g:prv.paths.plugin_files
+  if a:plug =~# 'aa'
+    1,7MkVimball! aa
+    ec 'Vimball for the aa plugin has been written at current directory'
+  en
+  if a:plug =~# 'prv'
+    1,7MkVimball! prv
+    echo 'Vimball for the prv plugin has been written at current directory'
+  en
+  if a:plug =~# 'rc'
+    1,7MkVimball! realcolors
+    echo 'Vimball for the realcolors plugin has been written at current directory'
+  en
+  if a:plug =~# 'tp'
+    1,7MkVimball! tokipona
+    echo 'Vimball for the tokipona plugin has been written at current directory'
+  en
+  normal <C-^>
+endf
+}}}
+
+{{{
+pack/ttm/opt/aa/plugin/aa.vim
+pack/ttm/opt/aa/ftdetect/aaftdetect.vim
+pack/ttm/opt/aa/syntax/aashouts.vim
+pack/ttm/opt/aa/aux/prvdependence.vim
+pack/ttm/opt/aa/aux/aaVimballInfo.txt
+pack/ttm/opt/aa/doc/aa.txt
+pack/ttm/opt/aa/doc/tags
+}}}
+
+===========
+
+" texts for uploading the plugin to vim.org:
+
+

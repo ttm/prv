@@ -86,41 +86,49 @@ fu! PRVCircleChar(...)
   norm l
 endf
 
+fu! PRVMoveToWindow(to)
+  ec a:to
+  ec mode()
+PRVMoveToWindow('l')
+endf
+fu! PRVMoveToTab(to)
+  ec a:to
+endf
 " sessions {{{2 test TTM
 fu! PRVSession(act)
-  if !isdirectory(g:prv_sessions_dir)
-    cal mkdir(g:prv_sessions_dir, 'p')
+  if !isdirectory(g:prv.paths.sessions)
+    cal mkdir(g:prv.paths.sessions, 'p')
   en
   " to keep global variables that star with Uppercase and have at least one
   " lower case letter (only string and number are stored), and local settings:
   let sop = &sessionoptions
   se sessionoptions+=globals,localoptions,
   if a:act == 'l' " list
-    ec '== Sessions currently saved in ' g:prv_sessions_dir.':'
-		ec system("ls ".g:prv_sessions_dir)."\n"
+    ec '== Sessions currently saved in ' g:prv.paths.sessions.':'
+    ec system("ls ".g:prv.paths.sessions)."\n"
   elsei a:act == 's' " save
-    if type(g:prv_session) != 1
+    if !exists('g:prv.session')
       PRVSession('sa')
     en
-    exe 'mksession! ' . g:prv_sessions_dir . g:prv_sesѕion
+    exe 'mksession! ' . g:prv.paths.sessions . g:prv.sesѕion
   elsei a:act == 'sa' " save new
     cal PRVSession('l')
-    let g:prv_session = input("Enter NEW (prv/vim) session name to SAVE: ")
+    let g:prv.session = input("Enter NEW (prv/vim) session name to SAVE: ")
     cal PRVSession('s')
   elsei a:act == 'lo' " load
     cal PRVSession('l')
     let resp = input("loading session makes you loose all windows and tabs, ok? [y/N]: ")
     if l:resp == 'y'
-      let g:prv_session = input("Enter session name to load: ")
+      let g:prv.session = input("Enter session name to load: ")
       on
       tabo
-      exe 'so ' . g:prv_sessions_dir . g:prv_session
+      exe 'so ' . g:prv.paths.sessions . g:prv.session
     en
   elsei a:act == 'i' " insert
     cal PRVSession('l')
-    let g:prv_session = input("Enter session name to insert: ")
+    let g:prv.session = input("Enter session name to insert: ")
     tabe
-    exe 'so ' . g:prv_sessions_dir . g:prv_session
+    exe 'so ' . g:prv.paths.sessions . g:prv.session
   en
   let &sessionoptions = l:sop
 endf
@@ -328,22 +336,121 @@ fu! PythonShowRun() " python {{{2
   pu = pout
 endf
 
+fu! PRVMkVimball(plug, version) " Vimball {{{2
+  " Load this function by visually selecting it, then
+  " :@*
+  " Then run it while in this buffer with:
+  " :call PRVMkVimball(plug), where plug is 'prv', 'aa', 'rc', 'tp'
+  " to create the vimball
+  exe 'e ' g:prv.paths.plugin_files
+  if a:plug =~# 'aa'
+    exe '2,8MkVimball! aa'.a:version
+    ec 'Vimball for the aa plugin has been written at current directory'
+  en
+  if a:plug =~# 'prv'
+    exe '12,23MkVimball! prv'.a:version
+    echo 'Vimball for the prv plugin has been written at current directory'
+  en
+  if a:plug =~# 'rc'
+    exe '2,8MkVimball! realcolors'.a:version
+    echo 'Vimball for the realcolors plugin has been written at current directory'
+  en
+  if a:plug =~# 'tp'
+    exe '2,8MkVimball! tokipona'.a:version
+    echo 'Vimball for the tokipona plugin has been written at current directory'
+  en
+  normal <C-^>
+endf
+
+fu! PRVTerminalMove(direction)
+    exe "normal \<C-W>".a:direction
+    if exists('g:prv.isinsert')
+      if mode() == 'n'
+        unl g:prv.isinsert
+        normal l
+        startinsert
+        ec input(mode())
+      en
+    en
+    " tno <C-L> <C-W><C-L><C-W>:exe exists('g:prv.isinsert') ? 'startinsert' : ''<CR><C-O>:exe mode()=='t' ? '' : (exists('g:prv.isinsert') ? 'unl g:prv.isinsert' : '')<CR>
+endf
+
 " {{{2 init funcs (init, restart, unload all vars/mappings/commands etc etc)
 fu! PRVMkMappings(str) " {{{3
   " str might have the sequences d,n,
   if a:str =~# 'n' " {{{4 mappings in navigation with default keys (C-W navigation)
+    " window navigation {{{5
+    " normal mode
+    nn <C-H> <C-W><C-H>
     nn <C-J> <C-W><C-J>
     nn <C-K> <C-W><C-K>
     nn <C-L> <C-W><C-L>
-    nn <C-H> <C-W><C-H>
-    ino <C-J> <ESC><C-W><C-J>:startinsert<CR>
-    ino <C-K> <ESC><C-W><C-K>:startinsert<CR>
-    ino <C-L> <ESC><C-W><C-L>:startinsert<CR>
-    ino <C-H> <ESC><C-W><C-H>:startinsert<CR>
-    tno <C-J> <C-W><C-J>
-    tno <C-K> <C-W><C-K>
-    tno <C-L> <C-W><C-L>
-    tno <C-H> <C-W><C-H>
+    " insert mode
+    ino <silent> <C-H> <C-[><C-W><C-H><C-W>:exe mode()=='t' ? 'let g:prv.isinsert = 1' : "normal l"<CR><C-W>:star<CR>
+    ino <silent> <C-J> <C-[><C-W><C-J><C-W>:exe mode()=='t' ? 'let g:prv.isinsert = 1' : "normal l"<CR><C-W>:star<CR>
+    ino <silent> <C-K> <C-[><C-W><C-K><C-W>:exe mode()=='t' ? 'let g:prv.isinsert = 1' : "normal l"<CR><C-W>:star<CR>
+    ino <silent> <C-L> <C-[><C-W><C-L><C-W>:exe mode()=='t' ? 'let g:prv.isinsert = 1' : "normal l"<CR><C-W>:star<CR>
+    " command-line mode
+    cno <C-H> <C-E>'<C-B>let tempprv='<CR><C-W><C-H><C-W>:<C-R>=tempprv<CR>
+    cno <C-J> <C-E>'<C-B>let tempprv='<CR><C-W><C-J><C-W>:<C-R>=tempprv<CR>
+    cno <C-K> <C-E>'<C-B>let tempprv='<CR><C-W><C-K><C-W>:<C-R>=tempprv<CR>
+    cno <C-L> <C-E>'<C-B>let tempprv='<CR><C-W><C-L><C-W>:<C-R>=tempprv<CR>
+    " terminal-job mode
+    " tno <C-H> <C-W><C-H><C-W>:exe exists('g:prv.isinsert') ? 'startinsert' : ''<CR><C-O>:exe mode()=='t' ? '' : (exists('g:prv.isinsert') ? 'unl g:prv.isinsert' : '')<CR>
+    " tno <C-J> <C-W><C-J><C-W>:exe exists('g:prv.isinsert') ? 'startinsert' : ''<CR><C-O>:exe mode()=='t' ? '' : (exists('g:prv.isinsert') ? 'unl g:prv.isinsert' : '')<CR>
+    " tno <C-K> <C-W><C-K><C-W>:exe exists('g:prv.isinsert') ? 'startinsert' : ''<CR><C-O>:exe mode()=='t' ? '' : (exists('g:prv.isinsert') ? 'unl g:prv.isinsert' : '')<CR>
+    " tno <C-L> <C-W><C-L><C-W>:exe exists('g:prv.isinsert') ? 'startinsert' : ''<CR><C-O>:exe mode()=='t' ? '' : (exists('g:prv.isinsert') ? 'unl g:prv.isinsert' : '')<CR>
+    tno <silent> <C-H> <C-W>:cal PRVTerminalMove('h')<CR>
+    tno <silent> <C-J> <C-W>:cal PRVTerminalMove('j')<CR>
+    tno <silent> <C-K> <C-W>:cal PRVTerminalMove('k')<CR>
+    tno <silent> <C-L> <C-W>:cal PRVTerminalMove('l')<CR>
+    " tab navigation {{{5
+    " no <C-N> :PRVMoveToTab('T')
+    " no <C-P> :PRVMoveToTab('t')
+    " no! <C-N> PRVMoveToTab('T')
+    " no! <C-P> PRVMoveToTab('t')
+    " nn <C-J> <C-W><C-J>
+    " nn <C-K> <C-W><C-K>
+    " nn <C-L> <C-W><C-L>
+    " nn <C-H> <C-W><C-H>
+    " ino <C-H> PRVMoveToWindow('h', 'i')
+    " ino <C-J> PRVMoveToWindow('j', 'i')
+    " ino <C-K> PRVMoveToWindow('k', 'i')
+    " ino <C-L> PRVMoveToWindow('l', 'i')
+    " tno <C-J> <C-W><C-J>
+    " tno <C-K> <C-W><C-K>
+    " tno <C-L> <C-W><C-L>
+    " tno <C-H> <C-W><C-H>
+    " cno <C-J> <C-W><C-J>
+    " cno <C-K> <C-W><C-K>
+    " cno <C-L> <C-W><C-L>
+    " cno <C-H> <C-W><C-H>
+    " vn <C-J> <C-W><C-J>
+    " vn <C-K> <C-W><C-K>
+    " vn <C-L> <C-W><C-L>
+    " vn <C-H> <C-W><C-H>
+    " nn <C-J> <C-W><C-J>
+    " nn <C-K> <C-W><C-K>
+    " nn <C-L> <C-W><C-L>
+    " nn <C-H> <C-W><C-H>
+    " nn <C-N> gT
+    " nn <C-P> gt
+    " ino <C-J> PRVMoveToWindow('l')<ESC><C-W><C-J>a
+    " ino <C-K> <ESC><C-W><C-K>a
+    " ino <C-L> <ESC><C-W><C-L>a
+    " ino <C-H> <ESC><C-W><C-H>a
+    " tno <C-J> <C-W><C-J>
+    " tno <C-K> <C-W><C-K>
+    " tno <C-L> <C-W><C-L>
+    " tno <C-H> <C-W><C-H>
+    " cno <C-J> <C-W><C-J>
+    " cno <C-K> <C-W><C-K>
+    " cno <C-L> <C-W><C-L>
+    " cno <C-H> <C-W><C-H>
+    " vn <C-J> <C-W><C-J>
+    " vn <C-K> <C-W><C-K>
+    " vn <C-L> <C-W><C-L>
+    " vn <C-H> <C-W><C-H>
   en
   if a:str =~# 'd' " {{{4 mappings with the default keys 
     " normal
@@ -357,9 +464,9 @@ fu! PRVMkMappings(str) " {{{3
     " terminal
     tno <C-Y> <C-A>vim --servername $VIM_SERVERNAME --remote
     tno <C-S-Y> vim --servername $VIM_SERVERNAME --remote 
-    tno <C-I> clear<CR>
-    tno <C-K> <C-W>:normal w<CR>
-    tno <C-J> <C-W>:normal b<CR>
+    " tno <C-I> clear<CR>
+    " tno <C-K> <C-W>:normal w<CR>
+    " tno <C-J> <C-W>:normal b<CR>
   en
   if a:str =~# 'l' " {{{4 leader
     " {{{5 execute lines
@@ -601,17 +708,20 @@ fu! PRVDefineSettings() " {{{3 basic variables/settings
   if !exists("g:prvset") " for user settings
     let g:prvset = {'leaders' : {}}
   en
-  let g:prv.paths.path = expand("%:p:h:h").'/'
+  let g:prv.paths.path = g:prv_dir
   let A = {arg -> g:prv.paths.path . arg}
   let g:prv.paths.verbose_file = A('aux/prvverbose.log')
   let g:prv.paths.vimwiki = A('aux/vimwiki/')
+  if !isdirectory(g:prv.paths.vimwiki)
+    cal mkdir(g:prv.paths.vimwiki, 'p')
+  en
   if !exists("g:pdfjobs")
     let g:prv.jobs = []
     let g:prv.terms = []
   en
   let g:prv.session = v:none
   " {{{4 Persistence see |prv-persistence|:
-  let g:prv_sessions_dir = g:prv_dir.'aux/prvsessions/'
+  let g:prv.paths.sessions = A('aux/prvsessions/')
   " state is maintained upon exit and enter vim because of viminfo not empty:
   if !exists("g:prv_noviminfo")
     exe "se viminfo=%,!,/1000,<1000,'1000,:1000,@1000,n".g:prv_dir."aux/prvviminfo"
@@ -619,6 +729,7 @@ fu! PRVDefineSettings() " {{{3 basic variables/settings
   " autosave the undo file in the known dir:
   se udf
   let g:prv.paths.undo = A('aux/undo')
+  let g:prv.paths.plugin_files = A('aux/pluginFiles.txt')
   se undodir =g:prv.paths.undo
 endf
 " make status lines for filetypes: aashouts.txt, aasessions.txt, prv.vim? (number of :map commands, etc)
@@ -632,7 +743,7 @@ endf
 " {{{2 aux funcs (time, random numbers, etc)
 let g:Curmili = {-> system("date +%s%N | cut -b1-13")[:-2]}
 
-" {{{1 autocommands
+" kk{{{1 autocommands
 " restore-cursor, usr-05.txt
 aug prvgeneric
   au!
@@ -693,3 +804,4 @@ dig kE 9775
 " au InsertLeave * set timeoutlen=1000
 " }}}
 
+cal PRVInit()

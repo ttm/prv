@@ -1,3 +1,4 @@
+" This file holds experimental functions and things still not well organized
 " ->prv: template autocomplete
 com! -complete=custom,ListUsers -nargs=1 Finger !finger <args>
 fun! ListUsers(A,L,P)
@@ -139,18 +140,17 @@ fu! UpNotes() " {{{
       for kk in keys(g:[c . 's'])
         let aval = g:[c . 's'][kk]
         py3 dd[vim.eval('kk')] = vim.eval('aval')
-      endfor
+      endfo
       " py3 client.prv.notes.insert({"note_class": vim.eval("c . 's'"), "note": vim.bindeval('g:[c . "s"]')})
       " translate the dict to RDF?
       " Or send each note through SparQL?
       py3 client.prv.notes.insert(dd)
-          
       " let tline = "let g:" . c . 's = ' . string(g:[c . 's'])
       " let tfile = g:prv_vimpath . '/data/' . c . 's.prv'
       " call writefile([tline], tfile, 'as')
-    endif
-  endfor
-endfu " }}}
+    en
+  endfo
+endf " }}}
 
 fu! LoadNotes() " {{{
   " Just read the last line of each existing file in ./data/*
@@ -162,10 +162,10 @@ fu! LoadNotes() " {{{
       " echo tfile
       let g:tline = readfile(tfile, '', -1)
       let g:c = c
-      exec substitute(g:tline[0], c, c . 'ABAB', '')
-    endif
-  endfor
-endfu " }}}
+      exe substitute(g:tline[0], c, c . 'ABAB', '')
+    en
+  endfo
+endf " }}}
 
 """"""""""""""" Enhance these: {{{
 " 
@@ -175,15 +175,15 @@ fu! SourceSelection()
   let ext =  expand("%:e")
   "normal y:@"<CR>
   if ext == 'vim'
-    normal :@*<CR>
+    norm :@*<CR>
   elseif ext == 'py'
-    normal :python3 @*<CR>
-  endif
-endfu
+    norm :python3 @*<CR>
+  en
+endf
 
 fu! FindVar(varname, v, g, s, l, w, b)
   let g:findthem = 'yes'
-endfu
+endf
 
 
 let found = FindVar('aa', v:, g:, s:, v:none , w:, b:)  " :l
@@ -197,15 +197,15 @@ fu! PersistVars() " {{{
   call SaveNewSession()
 endfu " }}}
 
-function! SaveVariable(var, file)
-    call writefile([string(a:var)], a:file)
-endfun
-function! ReadVariable(file)
+fu! SaveVariable(var, file)
+    cal writefile([string(a:var)], a:file)
+endf
+fu! ReadVariable(file)
     let recover = readfile(a:file)[0]
     " it is so far just a string, make it what it should be:
-    execute "let result = " . recover
-    return result
-endfun
+    exe "let result = " . recover
+    retu result
+endf
 " use with:
 " call SaveVariable(anyvar, "safe.vimData")
 " let restore = ReadVariable("safe.vimdata")
@@ -219,20 +219,20 @@ fu! StartChatter() " {{{
   " echo curdir . '/VimChatBot'
   if !isdirectory(curdir . '/VimChatBot')
     let acom = '!git clone https://github.com/ttm/VimChatBot.git ' .  curdir . '/VimChatBot'
-    exec acom
-  endif
-  exec 'source ' . curdir . '/VimChatBot/plugin/VimChatBot.vim'
-endfu " }}}
+    exe acom
+  en
+  exe 'source ' . curdir . '/VimChatBot/plugin/VimChatBot.vim'
+endf " }}}
 let g:prv_path = expand("%")
 " From Bram's site: http://www.moolenaar.net/fun.html
 " map <leader>wf mX:sp ~/.vim/plugin/prv/fortunes.txt<CR>ggd/^--/<CR>Gp:wq<CR>'XGA<CR><Esc>p`X
 let cand = globpath(&rtp,'data/fortunesBram*.txt')
-echo cand
+ec cand
 let g:gcand = cand
-exec 'map <leader>wf mX:sp ' . cand . "<CR>ggd/^--/<CR>Gp:wq<CR>'XGA<CR><Esc>p`X"
+exe 'map <leader>wf mX:sp ' . cand . "<CR>ggd/^--/<CR>Gp:wq<CR>'XGA<CR><Esc>p`X"
 
 let cand = globpath(&rtp,'data/fortunesrf*.txt')
-exec 'map <leader>wF mX:sp ' . cand . "<CR>ggd/^--/<CR>Gp:wq<CR>'XGA<CR><Esc>p`X"
+exe 'map <leader>wF mX:sp ' . cand . "<CR>ggd/^--/<CR>Gp:wq<CR>'XGA<CR><Esc>p`X"
 " Notes {{{
 " :Note uma música pode ser baseada em 1 ou 3 palavras repetidas (indígena iawanawá etc), frases inteiras (xamanismo gideon), estrofes com ou sem refrão (música pop e de igreja e santo daime), ou apenas materiais de ritmo, melodia e harmonia (e.g. fuga, prelúdio, ou compostos (canon, hickup, etc). Quais equivalências cíclicas ou contínuas são mantidas com que parâmetros da música é uma forma de definir a música.
 " :
