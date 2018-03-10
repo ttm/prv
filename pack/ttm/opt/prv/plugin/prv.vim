@@ -743,7 +743,7 @@ endf
 " {{{2 aux funcs (time, random numbers, etc)
 let g:Curmili = {-> system("date +%s%N | cut -b1-13")[:-2]}
 
-" kk{{{1 autocommands
+" {{{1 autocommands
 " restore-cursor, usr-05.txt
 aug prvgeneric
   au!

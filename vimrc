@@ -48,8 +48,8 @@ hi User3 guifg=red
 " se t_Co=256
 se tgc
 " to enable true colors inside Byoby/Tmux, leave this lines
-" let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-" let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 " PRV {{{1
 let g:prv_vimrc_dir = expand("<sfile>:h") . '/'
