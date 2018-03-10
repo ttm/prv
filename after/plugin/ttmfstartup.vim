@@ -11,5 +11,5 @@ pa vimwiki
 " ------------------------ ttm final startup {{{1
 " hi Terminal guibg=lightgrey guifg=blue
 cal CommandColorSchemes()
-" colo :exe mode()=='t' ? '' : (exists('g:prv.isinsert') ? 'unl g:prv.isinsert' : '')ue
+" colo blue
 cal ApplyCS(g:ccs.green2, 'c')
