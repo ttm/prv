@@ -7,7 +7,10 @@
 
 " {{{1 default Vim
 se nocp
-se sts=2 sw=2 tw=0 bs=2 et ai
+se sts=2 sw=2 tw=0 bs=2 et ai nu rnu
+se so=3
+se so=9999
+se sj=-80
 se hi=10000  " remember more commands and search history
 se wig=*.swp,*.bak,*.pyc,*.class
 se vb           " don't beep
@@ -17,7 +20,9 @@ py3 import random
 se mouse=a
 filet plugin indent on
 sy enable
-se spell spelllang=en_us
+se spell spl=en_us
+se nospell
+se nohls
 se showcmd
 
 let g:netrw_altv=1
@@ -47,7 +52,7 @@ hi User3 guifg=red
 " :se t_Co should give 256, otherwise uncomment:
 " se t_Co=256
 se tgc
-" to enable true colors inside Byoby/Tmux, leave this lines
+" to enable true colors inside Byoby/Tmux, leave this lines:
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
