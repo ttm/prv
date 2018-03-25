@@ -1,0 +1,16 @@
+= a test for today =
+
+
+for the results in vim article:
+- usage manners:
+  * vimwiki with shortcuts to files such as todo and achievements
+  * Leave loeader and local leader to plugins. shortcuts with alt or <c-\>, except when extending some plugin abilities.
+  * tokipona vim plugin and python package
+  * realcolors vim plugin
+  * the outline
+  * potential enhancements
+
+
+
+
+

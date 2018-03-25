@@ -8,6 +8,7 @@ undo/
 spell/
 viminfo
 .netrw*
+pack/ttm/opt/prv/aux/vimwiki/private
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
