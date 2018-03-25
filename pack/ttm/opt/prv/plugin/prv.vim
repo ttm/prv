@@ -729,8 +729,12 @@ fu! PRVDefineSettings() " {{{3 basic variables/settings
   " autosave the undo file in the known dir:
   se udf
   let g:prv.paths.undo = A('aux/undo')
+  if !isdirectory(g:prv.paths.undo)
+    cal mkdir(g:prv.paths.undo, 'p')
+  en
+  exe 'se undodir='.g:prv.paths.undo
+  " TTM what is this for:
   let g:prv.paths.plugin_files = A('aux/pluginFiles.txt')
-  se undodir =g:prv.paths.undo
 endf
 " make status lines for filetypes: aashouts.txt, aasessions.txt, prv.vim? (number of :map commands, etc)
 " Vim already makes such parsing to a small extent, for syntax highlighting, so... TTM
