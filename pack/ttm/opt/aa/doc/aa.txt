@@ -1,4 +1,4 @@
-*aa.txt*        A plugin for managing time and note taking        version 0.01b
+*aa.txt*  A plugin for tracking dedication though periodic note-taking
                      ___                     ___     
                     /\  \                   /\  \    
                    /::\  \                 /::\  \   
@@ -10,6 +10,7 @@
                      /:/  /                  /:/  /  
                     /:/  /                  /:/  /   
                     \/__/ lgorithmic        \/__/ utoregulation
+                                                            version 0.01c
 
 ==============================================================================
 CONTENTS                                                            *aa-index*
@@ -564,27 +565,9 @@ The following list is what remains after this initial |aa| implemtation:
   possible)
 
                                                             *aa-bare-vim-wiki*
-I have been thinking about maintaining a wiki on bare Vim because it should
-yield a very simple and functional system:
-    - use <CR> to create a path with the filename under the cursor,
-      as does Vimwiki
-    - maybe use <Space><Cr> to decorate (link, tag-link, tag-reference,
-      (option,command,function)-(link or reference)
-    - exploit deeply the concept of a "react-wiki": hypertexts with executable
-      code.
-    - use a directory as wiki root, 
-    - use a new or standard suffix (e.g. *.mwiki)?
-    - use gf to follow pages
-    - write token or word with starting / or . if internal link intended
-    - reuse Vim's capabilities with help files and (parallel help files?) with
-      tags and searching (and what more?).
-    - integrate with |aa| and the rest of PRV.  See |aa-related-plugins|
-    - manage to link paths of wiki pages and of repository trees.
-      E.g. .py files use a specific &path, .vim files, other &path etc...
-    - it might be condensed in just a couple of settings with optional
-      advanced functions
-    - it should be very friendly to making collage of files to render, e.g. a
-      latex or HTML file.
+
+Content moved to |prv-wiki| and |bare-vim-wiki|.
+
 
 ------------------------------------------------------------------------------
 8.3. |AA| Tradition                                             *aa-tradition* 
@@ -640,6 +623,7 @@ Copyright: Public Domain.
 - Cristina Ferreira de Oliveira (PhD, VICG/ICMC/USP),
 - FAPESP (project 2017/05838-3, lead by Cristina)
 - Ricardo Fabbri (PhD, IPRJ/UERJ)
+- labmacambira.sf.net memebers and AA users
 
 ------------------------------------------------------------------------------
 8.7. Contact                                                      *aa-contact*

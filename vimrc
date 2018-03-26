@@ -56,6 +56,11 @@ se tgc
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
+" wiki, calendar, email {{{1
+let g:calendar_google_calendar = 1
+let g:calendar_google_task = 1
+let g:calendar_cache_directory = expand('~/.vim/pack/ttm/opt/prv/aux/calendarCache.vim')
+
 " PRV {{{1
 let g:prv_vimrc_dir = expand("<sfile>:h") . '/'
 
@@ -67,7 +72,7 @@ let g:prvset.leaders.realcolors = ['R', ' ']
 let g:prvset.leaders.tokipona = ['T', " "]
 " use <CR> for commands that have little to do with Vimwiki
 
-let g:vimwiki_list = [{'path': '~/.vim/pack/ttm/opt/prv/aux/vimwiki/'}]
+let g:vimwiki_list = [{'path': '~/.vim/pack/ttm/opt/prv/aux/vimwiki/', 'auto_toc': 1, 'auto_tags': 1}]
 
 " PRV also deals with Vimwiki, so \w is taken
 " \X is also reserved for a nice restart

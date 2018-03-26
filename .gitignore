@@ -1,5 +1,5 @@
 Vim
-aux/
+# aux/
 tags
 *.swp
 pack/plugins/*
@@ -111,4 +111,4 @@ ENV/
 
 # mypy
 .mypy_cache/
-pack/ttm/opt/aa/aux/
+ack/ttm/opt/aa/aux/

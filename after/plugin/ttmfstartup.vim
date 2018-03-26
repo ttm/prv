@@ -5,8 +5,10 @@
 pa prv
 pa realcolors
 pa aa
+" pa calendar.vim
 pa vimwiki
 " pa tokipona
+" pa gmail.vim
 
 " ------------------------ ttm final startup {{{1
 " hi Terminal guibg=lightgrey guifg=blue

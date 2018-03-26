@@ -1,14 +1,154 @@
-*prv-todo*
+*prv.txt*  multidisciplinary research and development in Vim, version 0.01a 
 
-- Assimilate the aux/experimentalStuff.vim file
-- clean .vim/aux vimball stuff
+                        PRV is Python, RDF and Vim
 
-*prv-navigation*
+==============================================================================
+CONTENTS                                                            *prv-index*
+                           *prv*
+
+    1. Intro                                    |prv-intro|
+        1.1. Python, RDF and Vim                |PRV|
+        1.2. Plugins                            |prv-plugins|
+        1.3. Usage examples                     |prv-usage-examples|
+        1.4. |prv| help                            |prv-helphelp|
+             |prv-help-cheatsheet|, |prv-cheatsheet|
+
+    2. Install                                  |prv-install|
+             |prv-install-recommended|  |prv-install-Vimball|
+             |prv-install-root|  |prv-prv|
+
+    3. Options, variables and general settings  |prv-settings|
+                                                |prv-options|
+             |prv_g:prv|  |prv-leaders|  |prv_leader|  |prv_localleader| 
+             |prv-hack-settings|
+
+    4. Mappings                                 |prv-mappings|
+
+    5. Commands                                 |prv-commands|
+             |prv-main-commands|  |prv-util-commands|
+
+    6. Functions                                |prv-functions|
+             |prv-implementation|
+
+    7. Files                                    |prv-files|
+             |prv.vim|  |prv.txt|
+
+    8. Final words                              |prv-final-words|
+        8.1. Advantages and drawbacks of |prv|     |prv-compare|
+        8.2. Further work / Todo                |prv-todo|
+        8.4. Disclaimer                         |prv-disclaimer|
+        8.5. License                            |prv-license|
+        8.6. Acknowledgements                   |prv-ack|
+        8.7. Contact                            |prv-contact|
+
+
+==========================================================================
+1. Intro                                                       *prv-intro*
+
+PRV is a package, which currently consists of four plugins:
+* |prv|, the core: naviation strategies of files, tags and Vim interface.
+* |aa|, algorithmic autoregulation: periodic note-taking for dedication
+  tracking.
+* |realcolors|, 24 bit true color for Vim: on-the-fly tweak your color scheme,
+  with persistence and facilities to harness your color settings.
+* |tokipona|, for the minimalist conlang Toki Pona: analyses and syntheses
+  of texts and of the language itself.
+
+See |prv-todo|
+
+------------------------------------------------------------------------------
+                                                             *prv-navigation*
 
 C-hjkl for windows in any mode
-C-np for tabs in any mode
+A-ad for tabs in any mode (nope. A-a is useful in insert)
 \b\B to open the browser in current dir
 a-b a-B open close Sex in same dir.
-ttartinsertartinsertartinsertjjjjy to use C- to open the browser.
 
+------------------------------------------------------------------------------
+                                                                    *prv-wiki*
+                                                               *bare-vim-wiki*
 
+The bare Vim should yield a very simple and functional system:
+* use Vim's standard tagging mechanisms.
+  Tags have to be extracted from the source files, and organized, in order to
+  enable the navigation of tags. See |prv-tags-navigation|
+* use Vim's standard file navigation mechanisms.  File navigation is always
+  enabled.  Beyond absolute and relative paths, one might enable directories
+  in 'path' for files to be searched for.  See |prv-file-navigation|
+
+Long term goals are:
+* exploit deeply the concept of a "reactwiki": hypertexts with executable
+  code.
+* exploit deeply the concept of 'Vim as an aplication platform' (described in |calendar.vim|).
+* integrate with |aa| and the rest of PRV.  See |aa-related-plugins|
+
+Other characteristics:
+* it might be condensed in just a handful of standard Vim settings
+  with optional advanced functions
+* it should be very friendly to making collage of files to render, e.g. a
+  latex or HTML file (pandoc? middleman? vimwiki?).
+* Git versioning
+* optional integration: calendar.vim, gmail.vim
+
+                                                            *prv-tags-navigation*
+* list of directory patterns to make the tags file
+* keep 'tags' option with all the tags files generated
+  * only one? yes. see :h user_29 / ONE TAGS FILE
+  * generate many tags files for different projects/file trees? No, see above
+* use tnext, tselect to handle multiple matches of c-[
+
+                                                            *prv-file-navigation*
+* use a directories in 'path' as wiki roots,  
+* use .wiki, .md and .markdown as extensions (and e.g. *.mwiki?)
+* use gf to follow pages
+* write token or word with starting / or . if internal link intended,
+  but any word might be followed to the corresponding file.
+
+* gf c-w f etc
+* set what are the file chars in option xx
+* set path= to the directories of the wikis
+* add wiki and md as prefixes
+* manage to link paths of wiki pages and of repository trees.
+  E.g. .py files use a specific &path, .vim files, other &path etc...
+
+                                                            *prv-help-navigation*
+* reuse Vim's capabilities with help files and (parallel help files?) with
+  tags and searching (and what more?).
+
+                                                     *prv-vimwiki-considerations*
+* Vimwiki ? standard setting suffice. VS help files VS bare markdown or Media wiki
+
+------------------------------------------------------------------------------
+                                                                    *prv-todo*
+
+* make wiki ok:
+  - read about tags, take notes and define strategy
+  - read about file navigation, notes and strategy
+  - migrate all wiki notes and other notes to the framework
+* make mappings ok:
+  - insert should use alt only when not useful if alt==esc.
+  - revise them
+* revise mappings, commands and mappings and add them to this document.
+* publish to vim.org
+* Assimilate the aux/experimentalStuff.vim file
+* clean .vim/aux vimball stuff
+* make bot
+
+Consider |PRV| masks to:
+* Social, percolation, participation, etc, Python packges.
+* MASS, music
+* complex networks
+* rendering of imagens and animations
+* computational intelligence facilities:
+  - start with the vim bot.
+    make bigrams and trigrams with aa shouts.
+    and with other literature, to mix as convenient.
+    make him talk using words in what you say to him.
+    make the bot return info about the corpus, e.g. aa shouts.
+    the bot gives the aa info window.
+    name: lalenia? many names?
+    make the bot use dbpedia and other linked data.
+    distinguish or not between english and portuguese.
+  - add interfaces to ic algorithms published as Python packages.
+
+ vim:ma:noro:tw=78:ts=8:ft=help:sua+=.txt:norl:sts=4:sw=4:et:
