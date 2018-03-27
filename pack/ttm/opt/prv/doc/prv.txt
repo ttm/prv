@@ -66,6 +66,22 @@ through persistence and selected consideration of excepts,
 is expoited in |PRV| by means of Python, RDF, and Vim.
 See |prv-python|, |prv-rdf|, and |prv-vim|
 
+One fundamental feature is a periodic interaction with
+the |prv-bot|, for note-taking, enriching ongoing work with
+reference literature, or interwiening with own dedication
+by means of previosly taken notes, to which |aa| is dedicated.
+
+Another fundamental feature of |PRV| is a clear strategy
+to harness the Wiki and Unix design of hiperlinked text files.
+Navigating filenames yield by tokens in the files
+faster, cleaner, and isomorphic to the wiki-like links
+such as [[something]], which can be written as something, .something,
+../something, something.wiki, or as convenient for the use
+and meaning intended.
+This is not a trivial issue while not expressed as in |prv-wiki|.
+
+
+
 
 
 ------------------------------------------------------------------------------
