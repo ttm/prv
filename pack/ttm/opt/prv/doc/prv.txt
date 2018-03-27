@@ -42,7 +42,7 @@ CONTENTS                                                            *prv-index*
         8.7. Contact                            |prv-contact|
 
 
-==========================================================================
+==============================================================================
 1. Intro                                                       *prv-intro*
 
 PRV is a package, which currently consists of four plugins:
@@ -54,7 +54,19 @@ PRV is a package, which currently consists of four plugins:
 * |tokipona|, for the minimalist conlang Toki Pona: analyses and syntheses
   of texts and of the language itself.
 
+The long-term goal of |PRV| is to feedback computational intelligence into writting of code and articles.  See Vim ouroboros in [1]. See |prv-intelligence|
+
 See |prv-todo|
+
+------------------------------------------------------------------------------
+1.1. Python, RDF and Vim                                             *PRV*
+
+Harnessing the textual representation of routines and data,
+through persistence and selected consideration of excepts,
+is expoited in |PRV| by means of Python, RDF, and Vim.
+See |prv-python|, |prv-rdf|, and |prv-vim|
+
+
 
 ------------------------------------------------------------------------------
                                                              *prv-navigation*

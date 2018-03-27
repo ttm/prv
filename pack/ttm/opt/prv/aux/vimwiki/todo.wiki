@@ -1,3 +1,24 @@
+= lightyearstones =
+* finish about computer science and physics this year and the next.
+* start medicine school in 2010
+* handle humanities in general as possible (philosophy and anthropology)
+
+= milestones =
+* arrumar PRV, soltar revisão
+* fazer pacotes mínimos de PSO, ACO, etc, no modelo especificado na wikipédia.
+* mandar mensagem para banca com anotações, páginas e códigos
+
+
+== prv ==
+* make wiki ok
+  * pandoc? middleman?
+* revise code and mappings
+* make documentation ok
+* revise the other plugins |aa|, |tokipona|, |realcolors|
+* release
+* start ic additions
+
+= not organized =
 * connect terminal to prv python though pty option of jobs
 * 
 * sessao p publica aa plugin and review realcolors and toki pona and prv.
