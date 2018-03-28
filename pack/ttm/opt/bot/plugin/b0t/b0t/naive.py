@@ -1,30 +1,56 @@
-import os, types
-import nltk as k
+import os, types, random
+import nltk as k, networkx as x
 from collections import Counter
-def markovTalk(self):
+
+# There are two networks: one of the bigrams,
+# and one of the trigrams.
+# They have the same vocabulary.
+# They are both weighted digraphs,
+# but the trigrams graph is a multigraph.
+# These structures are best represented
+# as networkx digraphs and multigraphs.
+
+# big = x.DiGraph()
+# for b in bi:
+#     big[b[0]][b[1]] = bi[b]
+
+
+def markovTalk(self, word=''):
     bi = self.ngrams[0][2]['1john']
     tri = self.ngrams[0][3]['1john']
     # choose a random bigram or trigram
     # choose a word to begin sentence
     # concatenate bi/tri until the phrase is complete
-    print([0][:50])
+    vocabs = list(self.vocab[0].keys())
+    if not word:
+        for v in vocabs:
+            word = random.choice(self.vocab[0][v][0])
+    # print(self.ngrams[0][2]['1john'][0]['and'], word)
+    dg = self.ngrams[0][2]['1john'][0]
+    s1 = word
+    for i in range(10):
+        w_ = random.choice(list(dg[word].keys()))
+        s1 += ' ' + w_
+        word = w_
+    print(s1)
+
 def ngram(text, n):
     c = Counter(k.ngrams(text,n))
     aa = sorted(c.items(), key = lambda ngram: -ngram[1])
+    if n == 2:
+        d = x.DiGraph()
+        d.add_nodes_from(text)
+        for ng in aa:
+            # d[ng[0][0]][ng[0][1]]['weight'] = ng[1]
+            d.add_edge(ng[0][0], ng[0][1], weight = ng[1])
+        return d
     return aa
 class Corpus:
     def __init__(self, path, cid):
         # open files in path
         self.id = cid
-        if os.path.isdir(path):
-            fnames = os.listdir(path)
-            self.texts = [open(fn, 'r').read() for fn in fnames]
-            self.text = " ".join(self.texts)
-        else:
-            self.text = open(path, 'r').read()
-            self.texts = [self.text]
+        self.text = open(path, 'r').read()
         self.text_ = k.wordpunct_tokenize(self.text)
-        self.texts_ = [k.wordpunct_tokenize(t) for t in self.texts]
 class Bot:
     """
     The conversational agent.
@@ -73,7 +99,10 @@ class MarkovReality(Reality):
             for bot in world.populations[pop]:
                 if 'ngrams' not in dir(bot):
                     bot.ngrams = []
+                if 'vocab' not in dir(bot):
+                    bot.vocab = []
                 bot.ngrams.append(self.ngrams_)
+                bot.vocab.append(self.vocab)
                 bot.visited_realities.append('markov' + '-'.join([str(i) for i in self.ngrams]))
                 bot.visited_realities.append(self.id)
                 self.addTalkAbility(bot)
@@ -81,13 +110,12 @@ class MarkovReality(Reality):
         bot.markovTalk = types.MethodType(markovTalk, bot)
     def makeNgrams(self, n, world):
         self.ngrams_[n] = {}
+        self.vocab = {}
         for c in world.corpus:
             c_ = world.corpus[c]
             self.ngrams_[n][c] = [ngram(c_.text_, n)]
             self.vocab[c] = [list(set(c_.text_))]
-            if len(c_.texts) > 1:
-                for t in c_.texts_:
-                    self.ngrams_[n][c].append(ngram(t, n))
+
 class World:
     """
     A binding of Reality, Population, and Corpus.
@@ -130,7 +158,8 @@ class Universe:
     """
     pass
 if __name__ == '__main__':
-    c = Corpus("/home/renato/repos/joyce/corpus/1john.txt", '1john')
+    # c = Corpus("/home/renato/repos/joyce/corpus/1john.txt", '1john')
+    c = Corpus("../corpus/butlerPreciado2.txt", '1john')
     r = MarkovReality('reality1')
     w = World('world1', r)
     w.addCorpus(c)
