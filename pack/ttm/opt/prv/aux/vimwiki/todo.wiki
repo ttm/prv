@@ -10,12 +10,14 @@
 
 
 == prv ==
+* finish to write prv.txt
 * make wiki ok
   * pandoc? middleman?
 * revise code and mappings
 * make documentation ok
 * revise the other plugins |aa|, |tokipona|, |realcolors|
 * release
+* make |bot| plugin
 * start ic additions
 
 = not organized =
