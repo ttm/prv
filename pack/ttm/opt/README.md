@@ -1,2 +1,2 @@
 Here should be realcolors, prv, tokipona
-and other plugins made by Renato Fabbri
+and other plugins for Vim.
