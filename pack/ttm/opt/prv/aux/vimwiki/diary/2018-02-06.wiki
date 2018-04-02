@@ -1,0 +1,11 @@
+
+
+
+
+=====================
+MASSA:
+só usei osciladores de altura e loudness,
+e єnvoltórias de volume e frequência, dos mais simples,
+e.g. Fade out e envoltória ADSR lineares.
+
+

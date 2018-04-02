@@ -1,0 +1,11 @@
+another special kind of [[/todo]], just as [[/daily/tasks]], but for weekly tasks.
+
+* write an article and send to arXiv
+* send article to peer review
+* review wiki notes to make them better organized
+* review Vim hacks to make workflow better
+* read at least a chapter on color, and one on dataviz
+* release a new version of a package or a plugin
+* upload wiki, aa and note files to repo or dropbox
+
+

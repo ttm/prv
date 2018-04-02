@@ -1,5 +1,5 @@
 Vim
-aux/
+# aux/
 tags
 *.swp
 pack/plugins/*
@@ -8,6 +8,7 @@ undo/
 spell/
 viminfo
 .netrw*
+pack/ttm/opt/prv/aux/vimwiki/private
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -110,4 +111,4 @@ ENV/
 
 # mypy
 .mypy_cache/
-pack/ttm/opt/aa/aux/
+ack/ttm/opt/aa/aux/

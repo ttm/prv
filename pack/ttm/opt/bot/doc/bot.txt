@@ -1,0 +1,211 @@
+*bot.txt*         bot population harnessing for PRV        version 0.01a 
+
+
+        bot training, conversation and document writting
+
+==============================================================================
+CONTENTS                                                            *bot-index*
+                           *bot*
+
+    1. Intro                                    |bot-intro|
+                                                |bot-core|
+                                                |bot-reality|
+                                                |bot-corpus|
+                         |bot-static|  |bot-culture|  |bot-context|
+                         |bot-ambient|  |bot-isomorphism|
+                                                |bot-bot|
+                                                |bot-world|
+                                                |bot-universe|
+                                                |bot-soul-swarm|
+                                                |bot-coding|
+        1.2. Related plugins                    |bot-plugins|
+        1.3. Usage examples                     |bot-usage-examples|
+        1.4. |bot| help                            |bot-helphelp|
+             |bot-help-cheatsheet|, |bot-cheatsheet|
+
+    2. Install                                  |bot-install|
+             |bot-install-recommended|  |bot-install-Vimball|
+             |bot-install-root|  |bot-bot|
+
+    3. Options, variables and general settings  |bot-settings|
+                                                |bot-options|
+             |bot_g:bot|  |bot-leaders|  |bot_leader|  |bot_localleader| 
+             |bot-hack-settings|
+
+    4. Mappings                                 |bot-mappings|
+
+    5. Commands                                 |bot-commands|
+             |bot-main-commands|  |bot-util-commands|
+
+    6. Functions                                |bot-functions|
+             |bot-implementation|
+
+    7. Files                                    |bot-files|
+             |bot.vim|  |bot.txt|
+
+    8. Final words                              |bot-final-words|
+        8.1. Advantages and drawbacks of |bot|    |bot-compare|
+        8.2. Further work / Todo                |bot-todo|
+        8.4. Disclaimer                         |bot-disclaimer|
+        8.5. License                            |bot-license|
+        8.6. Acknowledgements                   |bot-ack|
+        8.7. Contact                            |bot-contact|
+
+
+==============================================================================
+1. Intro                                                       *bot-intro*
+
+This plugin is dedicated to harnessing bots for research and development.
+Populations of bots are trained in specific worlds, which consists of specific
+rules of interaction between bots and with multimedia corpus.
+
+------------------------------------------------------------------------------
+                                                                 *bot-core*
+Thus, one might think of the core objects:
+* a reality, which is a collection of rules for agents to interact among
+  themselves and with corpus.  See |bot-reality|
+* a corpus, which is a collection of multimedia documents, e.g. text files. 
+  See |bot-corpus|
+* a bot which is a conversational agent with state persistence.
+  See |bot-bot|
+* a world, which is a binding of corpus, reality, and populations of bots.
+  See |bot-world|
+* a universe, which is a population of worlds sharing the same reality
+  (or almost).  See |bot-universe|
+
+A bot might be dedicated/trained only in one world, or might acquire
+abilities (e.g. deal with new criteria) by being exposed to new worlds.
+
+------------------------------------------------------------------------------
+                                                                 *bot-reality*
+realities envisioned:
+* markov: pure bigrams and trigrams from corpus
+* collocations, networks of words
+* syntax rules: learned with pos tagging
+* bioinpired: optimization algorithms are used for perdicting next shouts or
+  best rated answers
+* bayesian: bayesian learning (inference) is used for predicting next shouts
+  or best rated answers
+* full computational intelligence: all bioinspired, fuzzy, and bayesian
+  techniques are used to obtain predictions, best rated chats, and full texts.
+* social networks-based: agents mimic hubs, peripheral and intermediary
+  participants.
+
+------------------------------------------------------------------------------
+                                                                 *bot-corpus*
+                                                                 *bot-idea*
+                                                                 *bot-static*
+                                                                 *bot-culture*
+                                                                 *bot-context*
+                                                                 *bot-ambient*
+Corpus / statics / culture envisioned:
+* canon: Bible and Shakespeare.
+* gender: Haraway, Butler, Preciado, Buck-Morss, Beauvoir, Vandana Shiva, Silvia Federici.
+* mid-XX century literature: Pound, Joyce, Cage
+* filosofia antiga: plato+aristotle, pré-socráticos
+* paveau
+* dbpedia texts on selected terms (computational intelligence, fuzzy systems, etc).
+  - gutenberg, etc.
+  - archive.org
+* david kopenawa
+* mythological texts (quaran, vedas, indiginous, gypsy, whichcraft, african, bible, discordianism)
+* |aa| shouts and sessions
+* |prv-wiki| notes
+* |PRV|-related help files
+* Vim help files
+* Python docstrings
+* Use wordnet
+* Talk only in English, or Portuguese, or Toki Pona, or a combination of all
+
+                                                            *bot-isomorphism*
+Consider a sequence of frames/images in a stop-motion animation.
+Now generalize the frame to any multimedia content (e.g. a text file),
+and the sequence to any graph (multigraph or not, heterogeneous or not, etc).
+Call such generalized frame a "static", and the graph of statics
+a non-primitive static.
+Such setting is isomorphic to the Ideal Ideas[2]:
+any combination of ideas is an idea, anu combination of statics is a static.
+This is a fundamental link between ideas/concepts and media,
+is formalized in OWL and SKOS, and should enable the creation of multimedia 
+content for cognitive computing.
+
+------------------------------------------------------------------------------
+                                                                 *bot-bot*
+Bots envisioned:
+* just a plain bot which learns from the worlds to which it is exposed.
+* a bot with specific tendencies, such as to use more noise to explore the
+  solution space
+* a bot with incapabilities: e.g. it cannot use the most used words.
+* native capabilities:
+  - chat
+  - make poems and articles
+  - provide a summary of internal state:
+    * worlds visited, abilities, interactions record (with worlds, corpus and other bots)
+    * audiovisualizations: diagrams, scatter plots, statistics, etc
+
+------------------------------------------------------------------------------
+                                                                 *bot-world*
+Worlds envisioned:
+* bigrams and trigrams with any combination of the corpus items
+* syntax rules of one field (e.g. fuzzy set theory), and vocabulary of another
+  (e.g. complex networks, or the gender corpus)
+* bioinpired with specific kinds of algorithms, for specific corpus
+  combinations
+* swarms of (meta-)universes, considered Penrose's generalization, to predict
+  shouts and optimize chat ratings.  See |bot-soul-swarm|
+
+Worlds might have their own rules which add to reality.
+Metaphorically, they bind corpus (culture) with reality
+and biology (which might be understood as reality aspects).
+
+------------------------------------------------------------------------------
+                                                                *bot-universe*
+Universes envisioned:
+* Markov, Bayesian and bioinspired realities within specific corpis
+
+------------------------------------------------------------------------------
+                                                              *bot-soul-swarm*
+                                                          *bot-universe-swarm*
+Soul is here a generalization of being (e.g. a human being). It is an entity,
+but considers the ignorance we have about existence, about how we are linked
+to our context, other beings and universes.
+Penrose and psychiatrists theorized about quantum entanglement mapping brain
+and mind-related structures to the cosmos[1].
+This enables one to think about parallel optimization os swarms of beings
+that are in mutual worlds, or e.g. that are mamal-like in one world, and that
+are all universes potentially yielding a swarm of universes.
+
+------------------------------------------------------------------------------
+                                                               *bot-coding*
+The |bot| plugin is written in Python (for natural language processing and
+general text-mining), and VimL (for interfacing with user).
+
+The |bot| meta-universe is persistent: any bot, population, corpus, reality,
+worlds, universes (collections of worlds within the same reality), etc,
+should be written as Python pickle objects.
+The |b0t| Python package should also provide export of such objects to
+RDF (maybe directly to data.world or dataHub).
+
+Bots should be trained when there are idle resources in the computer.
+A |bot-bot| (and populations) might be distributed already trained.
+
+------------------------------------------------------------------------------
+                                                               *bot-plugins*
+For related plugins, see |prv-plugins|.
+
+------------------------------------------------------------------------------
+                                                               *bot-todo*
+
+* Make first markov realities.
+* Make worlds where bots learn from the Bible, Shakespeare and Joyce.
+* Make worlds where bots learn from notes and shouts.
+* Gather more corpus.
+* Make further realities and worlds.
+* See how the perlbot (perlborg, loteraborg, etc) works
+* See how the panbot works (the one Yupana Kernel and lalenia used)
+* See other literature about chat bots
+
+
+
+
+ vim:ma:noro:tw=78:ts=8:ft=help:sua+=.txt:norl:sts=4:sw=4:et:
