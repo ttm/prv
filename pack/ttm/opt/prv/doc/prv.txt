@@ -46,7 +46,7 @@ CONTENTS                                                            *prv-index*
 1. Intro                                                       *prv-intro*
                                                                *prv-plugins*
 
-PRV is a package, which currently consists these plugins:
+PRV is a package, which currently consists of these plugins:
 * |prv|, the core: naviation strategies of files, tags and Vim interface.
 * |aa|, algorithmic autoregulation: periodic note-taking for dedication
   tracking.
