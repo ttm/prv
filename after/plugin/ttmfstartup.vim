@@ -5,7 +5,14 @@
 pa prv
 pa realcolors
 pa aa
+pa bot
 " pa calendar.vim
+pa vimwiki
+pa fzf
+pa fzf.vim
+" let g:nv_search_paths = ['~/wiki', '~/writing', '~/code', 'docs.md' , './notes.md']
+let g:nv_search_paths = ['~/.vim/pack/ttm/opt/prv/aux/wiki/']
+pa notational-fzf-vim
 pa vimwiki
 " pa tokipona
 " pa gmail.vim
@@ -16,6 +23,7 @@ cal CommandColorSchemes()
 " colo blue
 cal ApplyCS(g:ccs.green1, 'c')
 cal ApplyCS(g:ccs.green2, 'c')
+cal ApplyCS(g:ccs.yellow1, 'c')
 
 " usar red1, 2, 3 para priorizacao de alerta p detalhes
 " blue 1, 2, 3 p criatividade e ficar acordado (acordado sonhando)
