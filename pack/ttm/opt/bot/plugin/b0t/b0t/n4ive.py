@@ -40,7 +40,7 @@ class SimplestBot:
     def addMethodAttr(self, method, attrname='method'):
         self.__dict__[attrname] = types.MethodType(method, self)
 
-class Population:
+class SimplestPopulation:
     """
     A collection of Bots.
 
@@ -112,11 +112,21 @@ class SimplestMarkovReality(Reality):
         for ng in aa:
             d.add_edge(ng[0][0], ng[0][1], weight = ng[1])
         self.ngrams_ = d
-    def markovTalk(self, word=''):
+    def markovTalk(self, words=''):
         bi = self.ngrams
         # choose a random bigram or trigram
         # choose a word to begin sentence
         # concatenate bi/tri until the phrase is complete
+        words_ = words.split(' ')
+        if len(words_) > 0:
+            word = random.choice(words_)
+            while word not in self.vocab:
+                words_.remove(word)
+                if len(words_) > 0:
+                    word = random.choice(words_)
+                else:
+                    word = ''
+                    break
         if not word:
             word = random.choice(self.vocab)
         # print(self.ngrams[0][2]['1john'][0]['and'], word)
@@ -240,7 +250,8 @@ if __name__ == '__main__':
     r = SimplestMarkovReality('reality1')
     w = SimplestWorld('world1', r)
     # c = Corpus("/home/renato/repos/joyce/corpus/1john.txt", '1john')
-    c = SimplestCorpus("../corpus/butlerPreciado2.txt", '1john')
+    # c = SimplestCorpus("../corpus/butlerPreciado2.txt", '1john')
+    c = SimplestCorpus("/home/renato/.vim/pack/ttm/opt/aa/aux/aashouts.txt", 'shouts')
     w.addCorpus(c)
     b = SimplestBot('Srila')
     w.addBot(b)

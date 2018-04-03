@@ -110,6 +110,7 @@ fu! AAShout(msg) " {{{3
   cal writefile(mlines, g:aa.paths.shouts, 'as')
   cal AASessionReceiveMsg()
   let g:aa.events.shouts_count += 1
+  ec a:msg.' || '.BotTalk(a:msg)
 endf
 fu! AAStartSession(...) " {{{3
   " default duration = 15, ntimes = 8

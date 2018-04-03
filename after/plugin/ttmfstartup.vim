@@ -7,11 +7,12 @@ pa realcolors
 pa aa
 pa bot
 " pa calendar.vim
+let g:nv_search_paths = ['~/tempo/mwiki', '~/writing', '~/code', 'docs.md' , './notes.md']
+let g:nv_search_paths = ['~/.vim/pack/ttm/opt/prv/aux/vimwiki', '~/tempo/mwiki']
+let g:nv_default_extension = '.wiki'
 pa vimwiki
 pa fzf
 pa fzf.vim
-" let g:nv_search_paths = ['~/wiki', '~/writing', '~/code', 'docs.md' , './notes.md']
-let g:nv_search_paths = ['~/.vim/pack/ttm/opt/prv/aux/wiki/']
 pa notational-fzf-vim
 pa vimwiki
 " pa tokipona

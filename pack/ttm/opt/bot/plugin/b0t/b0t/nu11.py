@@ -12,7 +12,7 @@ class NullUniverse:
     pass
 
 ########################
-# see naive.py to understand what the following implies:
+# see n4ive.py to understand what the following implies:
 
 # a population is a sequence or set of Bots
 # a World has a population, a Reality and a Corpus
