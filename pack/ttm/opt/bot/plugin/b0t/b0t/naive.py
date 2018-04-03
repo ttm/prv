@@ -130,7 +130,53 @@ class SimplestMarkovReality(Reality):
 
 
 class SimplestWorld:
-    """Only one population and one corpus"""
+    """Only one ability (talk), one population and one corpus
+    
+    Notes
+    -----
+    Other talk methods:
+        choose only the X most used words/bigrams.
+        give preference for a sequence of words
+            ['rice', 'arm']
+            will start with rice if possible
+            and use arm as soon as the second
+            token of the bigram is available.
+        return terms and collocations in corpus 
+        regulate punctuation and/or stopwords
+        relate to synonymy and other Wordnet relations
+        give preference to vowels, consonants, syllables, wordsize, etc.
+        return text as poem with x syllables, words, verses, etc
+        make sentences that respect POS standard structures.
+        return sentence and all words replaced by hypo and hypernyms, when possible.
+
+    other corpus possibilites:
+        more then one corpus, what are the possibilites?
+            multicorpus is multilanguage is multiculture worlds?
+            multipopulation worlds are 
+        remove punctuation and/or stopwords
+        process with POS tagging to use in Talk
+        make standard mythological, scientific (complex networks) and etc corpus
+        trigrams/quadrigrams etc might be encoded in the bigrams network:
+            edges have arbitrary attributes, which might be:
+              g.nodes[x][y][z] = ntrigrams(x,y,z)
+            is there a better way? write networkx community
+
+    other population structures:
+        more then one population:
+            multi-population is multi-specie or multi-race worlds?
+            do they interact?
+            will they be just a sequence of sequence/sets of bots?
+        a population might be a sequence or an unordered set.
+        the population might have different, random attributes.
+
+    other perform routines:
+        iteration evolve population of bots:
+            by natural selection
+            by enhancing their abilities without natural selection
+            any alternative to a fitness value?
+        see |fzf|, use fuzzy logic to iterate/operate among Bots
+
+    """
     def __init__(self, wid, reality):
         self.population = []
         self.reality = reality
