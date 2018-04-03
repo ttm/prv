@@ -92,6 +92,17 @@ Thus, one might think of the core objects:
 A bot might be dedicated/trained only in one world, or might acquire
 abilities (e.g. deal with new criteria) by being exposed to new worlds.
 
+                                                        *bot-cosmology*
+The realities, worlds, corpus and bots employed entails a 'cosmology'.
+The development is based on the simplest (interesting) model (SM),
+and considerations derived from the SM.
+The SM is comprised of:
+* A SimplestMarkovReality
+
+
+Null/empty model interesting for making code ideally executable.
+
+
 ------------------------------------------------------------------------------
                                                                  *bot-reality*
 realities envisioned:
