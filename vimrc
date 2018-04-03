@@ -8,8 +8,8 @@
 " {{{1 default Vim
 se nocp
 se sts=2 sw=2 tw=0 bs=2 et ai nu rnu
-se so=3
 se so=9999
+se so=3
 se sj=-80
 se hi=10000  " remember more commands and search history
 se wig=*.swp,*.bak,*.pyc,*.class

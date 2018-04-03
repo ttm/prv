@@ -16,16 +16,7 @@ cal CommandColorSchemes()
 " colo blue
 cal ApplyCS(g:ccs.green1, 'c')
 cal ApplyCS(g:ccs.green2, 'c')
-cal ApplyCS(g:ccs.passivepink1, 'c')
-cal ApplyCS(g:ccs.redblackl, 'c')
-cal ApplyCS(g:ccs.red1, 'c')
-cal ApplyCS(g:ccs.red1b, 'c')
-cal ApplyCS(g:ccs.red1c, 'c')
-cal ApplyCS(g:ccs.red2, 'c')
-cal ApplyCS(g:ccs.red3, 'c')
-cal ApplyCS(g:ccs.red4, 'c')
-cal ApplyCS(g:ccs.red5, 'c')
-cal ApplyCS(g:ccs.yellow1, 'c')
+
 " usar red1, 2, 3 para priorizacao de alerta p detalhes
 " blue 1, 2, 3 p criatividade e ficar acordado (acordado sonhando)
 " passive pink, branco, preto, outras cores como especiais ou paradigmaticas
