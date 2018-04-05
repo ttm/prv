@@ -8,6 +8,9 @@
 " FAPESP (project 2017/05838-3)
 " Ricardo Fabbri (PhD, IPRJ/UERJ)
 
+let s:mapleader = exists('g:mapleader') ? g:mapleader : "\\"
+let s:maplocalleader = exists('g:maplocalleader') ? g:maplocalleader : "\\"
+
 " Load Once: {{{1
 if exists("g:loaded_prvplugin") && (exists("g:prv_not_hacking") || exists("g:prv_not_hacking_all"))
  finish
@@ -43,7 +46,7 @@ fu! PRVLeaderHelper(...)
 endf
 fu! PRVDeclareLeader(plug)
   cal assert_equal(type(a:plug), 1, 'only strings are accepted as arg to PRVDeclareLeader(plug)')
-  let g:prv.leaders[a:plug] = [g:mapleader, g:maplocalleader]
+  let g:prv.leaders[a:plug] = [s:mapleader, s:maplocalleader]
   " exe 'let g:'.a:plug.'_keepleaders = [g:mapleader, g:maplocalleader]'
   if has_key(g:prvset.leaders, a:plug)
     let g:mapleader = g:prvset.leaders[a:plug][0]
@@ -275,7 +278,7 @@ fu! DecryptVimwiki() " encryption {{{2
       if &ft == 'vimwiki'
         "ec 'found vimwiki'
         " call input('1 Press any key to continue')
-        e
+          e
         " call input('3 Press any key to continue')
         setl key=
         " call input('4 Press any key to continue')
@@ -657,8 +660,10 @@ fu! PRVMkMappings(str) " {{{3
   en
 
   if a:str =~# 'a' " {{{4 auxleader
-    let l:foo = g:mapleader
-    let g:mapleader = g:prvset.leaders.prv[2]
+    if exists('g:prvset.leaders.prv')
+      let l:foo = s:mapleader
+      let g:mapleader = g:prvset.leaders.prv[2]
+    en
     nn <leader>a :exec "normal li".nr2char(getchar())."\e"<CR>
     nn <leader>A  :cal InsertAfterAfter()<CR>
     nn <leader>f  :cal system("wmctrl -ir " . v:windowid . " -b toggle,fullscreen")<CR>
@@ -688,7 +693,9 @@ fu! PRVMkMappings(str) " {{{3
     nn <leader>ep :PRVRedir v exec "normal g\<C-G>"<CR>xf"Dh
     nn <leader>eP :PRVRedir t exec "normal g\<C-G>"<CR>xf"Dh
     nn <leader>e<leader>p :PRVRedir n exec "normal g\<C-G>"<CR>xf"Dh
-    let g:mapleader = l:foo
+    if exists('g:prvset.leaders.prv')
+      let g:mapleader = l:foo
+    en
   en
 endf
 
