@@ -51,10 +51,12 @@ fu! PRVDeclareLeader(plug)
   if has_key(g:prvset.leaders, a:plug)
     let g:mapleader = g:prvset.leaders[a:plug][0]
     let g:maplocalleader = g:prvset.leaders[a:plug][1]
+    let [s:mapleader, s:maplocalleader] = [g:mapleader, g:maplocalleader]
   en
 endf
 fu! PRVRestoreLeader(plug)
   let [g:mapleader, g:maplocalleader] = g:prv.leaders[a:plug]
+  let [s:mapleader, s:maplocalleader] = [g:mapleader, g:maplocalleader]
 endf
 
 " insert one char {{{2
