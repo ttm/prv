@@ -7,10 +7,10 @@ CONTENTS                                                            *prv-index*
                            *prv*
 
     1. Intro                                    |prv-intro|
+                                                  |prv-plugins|
         1.1. Python, RDF and Vim                |PRV|
-        1.2. Plugins                            |prv-plugins|
-        1.3. Usage examples                     |prv-usage-examples|
-        1.4. |prv| help                            |prv-helphelp|
+        1.2. Usage examples                     |prv-usage-examples|
+        1.3. |prv| help                           |prv-helphelp|
              |prv-help-cheatsheet|, |prv-cheatsheet|
 
     2. Install                                  |prv-install|
@@ -46,7 +46,7 @@ CONTENTS                                                            *prv-index*
 1. Intro                                                       *prv-intro*
                                                                *prv-plugins*
 
-PRV is a package, which currently consists these plugins:
+PRV is a package, which currently consists of these plugins:
 * |prv|, the core: naviation strategies of files, tags and Vim interface.
 * |aa|, algorithmic autoregulation: periodic note-taking for dedication
   tracking.
@@ -69,46 +69,22 @@ is exploited in |PRV| by means of Python, RDF, and Vim.
 See |prv-python|, |prv-rdf|, and |prv-vim|
 
 One fundamental feature is a periodic interaction with
-the |prv-bot|, for note-taking, enriching ongoing work with
-reference literature, or interwiening with own dedication
-by means of previosly taken notes, to which |aa| is dedicated.
+the |bot|, for note-taking, enriching ongoing work with
+reference literature, or interweaving with own dedication
+by means of previously taken notes, to which |aa| is dedicated.
 
 Another fundamental feature of |PRV| is a clear strategy
 to harness the Wiki and Unix design of hyperlinked text files.
 Navigating filenames yield by tokens in the files
-faster, cleaner, and isomorphic to the wiki-like links
+is faster, cleaner, and isomorphic to the wiki-like links
 such as [[something]], which can be written as something, .something,
 ../something, something.wiki, or as convenient for the use
 and meaning intended.
 This is not a trivial issue while not expressed as in |prv-wiki|.
 
 
-
-
-
 ------------------------------------------------------------------------------
-                               *prv-bot* 
-
-|PRV| is meant to keep populations of bots, learning with specific corpus,
-and specific criteria, and models.
-These are worlds where specific computational intelligence methods
-and multimedia materials are considered to yield conversational agents,
-which are able to write documents in arbitrary formats, such as poems,
-narratives, scientific and aenceclopedic articles, to the best of my
-habilities and of whomever help me.
-
-Some bots already exist, but I'll document here the mechanisms for
-population training.
-Particularly, bioinspired machine learning techniques are meant
-to enable cognitive computing through natural language.
-Mythological and corpus consideration enables meaningful constructions,
-and learning is performed in the general model of swarms of souls.
-
-
-
-
-------------------------------------------------------------------------------
-                                                             *prv-navigation*
+                                                              *prv-navigation*
 
 C-hjkl for windows in any mode
 A-ad for tabs in any mode (nope. A-a is useful in insert)
@@ -148,27 +124,39 @@ Other characteristics:
   * generate many tags files for different projects/file trees? No, see above
 * use tnext, tselect to handle multiple matches of c-[
 
+See |tagsrch.txt|
+
                                                             *prv-file-navigation*
+* use |gf|, [f, ]f, ^Wf, |:find|, |:sfind|, |:tabfind| etc (which other commands?), to follow pages
+  i.e. entries (verbetes/termos para artigos e notas)
 * use a directories in 'path' as wiki roots,  
 * use .wiki, .md and .markdown as extensions (and e.g. *.mwiki?)
-* use gf to follow pages
+* use 'includeexpr' for further search when file is not found
 * write token or word with starting / or . if internal link intended,
   but any word might be followed to the corresponding file.
 
-* gf c-w f etc
-* set what are the file chars in option xx
-* set path= to the directories of the wikis
-* add wiki and md as prefixes
+* set what are the file chars in option 'isf'
+* set the directories of the wikis in 'path'
+* add wiki and md as prefixes in option 'sua'
 * manage to link paths of wiki pages and of repository trees.
   E.g. .py files use a specific &path, .vim files, other &path etc...
 
+See 'path'
                                                             *prv-help-navigation*
 * reuse Vim's capabilities with help files and (parallel help files?) with
   tags and searching (and what more?).
 
                                                      *prv-vimwiki-considerations*
 * Vimwiki ? standard setting suffice. VS help files VS bare markdown or Media wiki
+* If the markdown syntax chosen is Vimwiki syntax compatible, it will be possible
+  to convert the wiki to HTML with Vimwiki's routines.
+* Ok that Vim navigates through paths, tokens might be marked with standard OS notation
+  (e.g. ./myterm), and that most important files might be reached with
+  uppercase markers.
+* Vimwiki is still useful in the headings mappings, and manipulating lists.
+* Vimwiki tables are not used by me. Maybe I need to experiment with them.
 
+                                                     *prv-fzf*
 ------------------------------------------------------------------------------
                                                                     *prv-todo*
 

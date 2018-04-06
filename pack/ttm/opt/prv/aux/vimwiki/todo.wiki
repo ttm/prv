@@ -10,10 +10,16 @@ notas:
 * arrumar PRV, soltar revisão
 * fazer pacotes mínimos de PSO, ACO, etc, no modelo especificado na wikipédia.
 * mandar mensagem para banca com anotações, páginas e códigos
+* fazer os cursos desta especializacao: https://www.coursera.org/specializations/aml
+  * avançar com b0t antes disso
 
+== bot e prv ==
+- fazer bot usar shouts de aa
+  * coeficiente de prioridade aos últimos shouts,
+    seleção de sessões que contenham este ou aquele verbete
 
-== prv ==
-* finish to write prv.txt
+=== prv ===
+* finish write prv.txt
 * make wiki ok
   * pandoc? middleman?
 * revise code and mappings
@@ -22,6 +28,16 @@ notas:
 * release
 * make |bot| plugin
 * start ic additions
+
+== realcolors ==
+* arrumar que o realcolors não pega a cor em .wiki
+  teste c-\ s c-\ c neste todo.wiki.
+
+* pensar neste ouroboros em que o texto trata dele mesmo como um bootstrap genérico. Esta metalinguagem em que posso fazer/solicitar um c-\ c no realcolors para mudar a interface/projeção de luz. c-\ s para saber em que syntax group usa. comandos, mappings para alterar a própria informação do texto.
+  Na criptografia é útil um comando para acessar o conteúdo. Pense em comandos (em conteúdos, texto) como resultando em mais comandos que operam sobre o próprio conteúdo, o próprio texto.
+
+fazer bot soltar música usando os shouts, dado input de arquivo ou frase, etc.
+
 
 = not organized =
 * connect terminal to prv python though pty option of jobs

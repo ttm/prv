@@ -56,11 +56,27 @@ CONTENTS                                                            *bot-index*
 1. Intro                                                       *bot-intro*
 
 This plugin is dedicated to harnessing bots for research and development.
-Populations of bots are trained in specific worlds, which consists of specific
+Populations of bots are trained in specific worlds, which consist of specific
 rules of interaction between bots and with multimedia corpus.
+
+Within the |PRV| framework, |bot| is meant to keep populations of bots, learning with specific corpus,
+and specific criteria, and models.
+These are worlds where specific computational intelligence methods
+and multimedia materials are considered to yield simple conversational agents.
+Ideally, these bots will be able to write documents in arbitrary formats,
+such as poems, narratives, scientific and encyclopedic articles.
+Ideally, the bots interact not only though text, but output audiovisual
+pieces, with text, speech, music, animation, etc, as convenient.
+
+Particularly, bioinspired techniques are meant
+to enable cognitive computing through natural language capabilities.
+Mythological and corpus consideration enables meaningful constructions,
+and learning is performed in the general model of swarms of souls.
+See |bot-swarm|
 
 ------------------------------------------------------------------------------
                                                                  *bot-core*
+
 Thus, one might think of the core objects:
 * a reality, which is a collection of rules for agents to interact among
   themselves and with corpus.  See |bot-reality|
@@ -75,6 +91,17 @@ Thus, one might think of the core objects:
 
 A bot might be dedicated/trained only in one world, or might acquire
 abilities (e.g. deal with new criteria) by being exposed to new worlds.
+
+                                                        *bot-cosmology*
+The realities, worlds, corpus and bots employed entails a 'cosmology'.
+The development is based on the simplest (interesting) model (SM),
+and considerations derived from the SM.
+The SM is comprised of:
+* A SimplestMarkovReality
+
+
+Null/empty model interesting for making code ideally executable.
+
 
 ------------------------------------------------------------------------------
                                                                  *bot-reality*
@@ -91,6 +118,16 @@ realities envisioned:
 * social networks-based: agents mimic hubs, peripheral and intermediary
   participants.
 
+responsabilities:
+* a reality has a trainBots() method that give the bots certains abilities
+  (new attributes with data and methods).
+  The trainBots() might consider the World in which the Bot lives, or not.
+
+characteristics:
+* Deals with World characteristics (which includes Corpus) and Bot characteristics (which includes other Reality childs).
+* Might require many iterations to deliver or enhance abilities of bots, or
+  might give abilities in a single perform()
+* Might 
 ------------------------------------------------------------------------------
                                                                  *bot-corpus*
                                                                  *bot-idea*
