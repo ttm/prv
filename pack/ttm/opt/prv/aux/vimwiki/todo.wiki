@@ -1,3 +1,6 @@
+notas:
+- os bots são oráculos, meio-termos entre algoritmos e embaralhamento.
+- 
 = lightyearstones =
 * finish about computer science and physics this year and the next.
 * start medicine school in 2010
