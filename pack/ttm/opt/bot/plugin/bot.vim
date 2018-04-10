@@ -29,7 +29,7 @@ endf
 fu! BotsInitialize()
   let g:bot = {}
   let g:bot.sentlen = '2-35'
-  let g:bot.a = 1.7
+  let g:bot.a = 6.7
   let cdir = g:bot_dir . 'plugin/b0t/corpus/'
 python3 << EOF
 import b0t, random
@@ -37,13 +37,22 @@ bots = {}
 bots['peter'] = b0t.baselineBotFromText("/home/renato/repos/joyce/corpus/1peter.txt", 'Peter')
 bots['john' ] =  b0t.baselineBotFromText("/home/renato/repos/joyce/corpus/1john.txt", 'John')
 bots['james'] = b0t.baselineBotFromText("/home/renato/repos/joyce/corpus/james.txt", 'James')
+
 bots['pedro'] = b0t.baselineBotFromText(vim.eval('cdir') + "pedro1.txt", 'Pedro')
-bots['joao'] = b0t.baselineBotFromText(vim.eval('cdir') + "pedro1.txt", 'João')
-bots['tiago'] = b0t.baselineBotFromText(vim.eval('cdir') + "pedro1.txt", 'Tiago')
+bots['joao'] = b0t.baselineBotFromText(vim.eval('cdir') + "joao1.txt", 'João')
+bots['tiago'] = b0t.baselineBotFromText(vim.eval('cdir') + "tiago.txt", 'Tiago')
+
 bots['srila'] = b0t.baselineBotFromText("/home/renato/.vim/pack/ttm/opt/aa/aux/aashouts.txt", 'Srila')
 bots['zer@'] = b0t.baselineBotFromText(vim.eval('cdir') + "butlerPreciado2.txt", 'Zer@')
+bots['laila'] = b0t.baselineBotFromText(vim.eval('cdir') + "laila.txt", 'Laila Kaiabi Manuelle')
+
+bots['lula'] = b0t.baselineBotFromText(vim.eval('cdir') + "lula.txt", 'Luís Inácio Lula da Silva')
+bots['dilma'] = b0t.baselineBotFromText(vim.eval('cdir') + "dilma.txt", 'Dilma Vana Rousseff')
+bots['fhc'] = b0t.baselineBotFromText(vim.eval('cdir') + "fhc.txt", 'Fernando Henrique Cardoso')
+
 b = bots['srila']
-dbots = ['srila', 'tiago', 'joao', 'pedro', 'zer@']
+# dbots = ['srila', 'tiago', 'joao', 'pedro', 'zer@']
+dbots = ['lula', 'dilma', 'fhc', 'pedro', 'joao', 'tiago']
 # dbots = ['srila', 'tiago', 'joao', 'pedro', 'zer@', 'preciado', 'butler', 'bock mors', 'etc', 'shakespeare', 'lula']
 EOF
 endf

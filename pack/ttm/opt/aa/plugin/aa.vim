@@ -115,7 +115,6 @@ endf
 fu! AAStartSession(...) " {{{3
   " default duration = 15, ntimes = 8
   " message = 'Ding Dong Ding Dong'
-  let g:asd = a:
   if !AAIsInitialized()
     cal AAInit()
   en
