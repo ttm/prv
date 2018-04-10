@@ -104,7 +104,7 @@ class SimplestMarkovReality(Reality):
             self.addTalkAbility(bot)
     def addTalkAbility(self, bot):
         bot.markovTalk = types.MethodType(SimplestMarkovReality.markovTalk, bot)
-        bot.sentlength = 0
+        bot.sentlen = 0
     def makeBigrams(self, text):
         c = Counter(k.ngrams(text,2))
         aa = sorted(c.items(), key = lambda ngram: -ngram[1])
@@ -133,8 +133,8 @@ class SimplestMarkovReality(Reality):
         # print(self.ngrams[0][2]['1john'][0]['and'], word)
         dg = self.ngrams
         s1 = word
-        if self.sentlength > 0:
-            length = self.sentlength
+        if self.sentlen > 0:
+            length = self.sentlen
         for i in range(length):
             w_ = random.choice(list(dg[word].keys()))
             s1 += ' ' + w_

@@ -231,6 +231,33 @@ A |bot-bot| (and populations) might be distributed already trained.
 For related plugins, see |prv-plugins|.
 
 ------------------------------------------------------------------------------
+                                                               *bot-conference*
+
+olimpus.
+
+* Srila, aa
+* zer@, do texto da preciado
+* pedro, joao, tiago
+* answer rate (a):
+  - random a: int(a) answers + coin p = a - int(a) answers
+  - fixed: int(msgs * a - int(msgs(a-1)) answers
+* bot is randomly chosen for each answer.
+* text sent to bot might be:
+  - last message
+  - x last messages
+  - all chat
+  - nothing
+* start with command:
+  :b0ts
+  or
+  :b0ts srila zer@ pedro tiago joao
+* make also haraway, bock mors, preciado...
+* set msg length (l):
+  - l = n words
+  - l = (mean, std) words or range (min, max) uniform.
+* set l and a inside chat, command, conference start, global var
+
+------------------------------------------------------------------------------
                                                                *bot-todo*
 
 * Make first markov realities.

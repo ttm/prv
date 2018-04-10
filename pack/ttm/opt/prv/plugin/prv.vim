@@ -201,7 +201,7 @@ endf
 fu! PRVViewHtmlText(url) " WWW navigation {{{2
   if !empty(a:url)
     new
-    PRVBuf
+    PRVbuf
     exe 'r !elinks ' . a:url . ' -dump -dump-width ' . winwidth(0)
     1d
   en
