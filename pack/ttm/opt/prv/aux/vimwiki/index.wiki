@@ -1,8 +1,17 @@
 = Contents =
+  - [[#baits|baits]]
   - [[#conteúdos principais|conteúdos principais]]
   - [[#My knowledge base|My knowledge base]]
   - [[#Generated Links|Generated Links]]
 
+
+= baits =
+* Livros Mumfords Tsallis
+* Artigos por enviar
+* dataviz
+* WP, revisar artigos, passar notas, fazer novos artigos (de dataviz principalmente)
+* explorar IC, bots, PRV
+* rever notas de ideias p artigos
 
 = conteúdos principais =
 
