@@ -1,2 +1,62 @@
 :ic:IC:CI:ci:
 diretorio p migrar os conteúdos de ic.
+
+= andamentos =
+Ambos em [[file:~/repos/concusos/ufabc/proj.pdf]]:
+* Integração de dados ligados à IC
+* Sistema de analítica audiovisual
+
+== wikipédia ==
+Artigos pelos quais estou responsável
+* inferência bayesiana
+* inteligência computacional
+* computação cognitiva
+* inteligência de enxame
+* programação estruturada
+* programação orientada ao objeto
+* estrutura de dados
+* sistemas difusos
+* computação evolucionária ?
+
+por fazer
+* redes neurais
+* big data
+* internet das coisas
+* teoria do aprendizado
+* aprendizado de máquina
+
+== código ==
+:todo: migrar notas e caminhos para cá
+
+
+= tópicos principais =
+a) Programação estruturada e orientada a objeto
+b) Estruturas de Dados
+c) Métodos de Aprendizagem
+d) Métodos Bayesianos para Aprendizado de Máquina **
+e) Redes Neurais Artificiais
+f) sistemas fuzzy
+g) computacao evolutiva
+h) Inteligência de Enxame
+i) Aplicação de métodos de Aprendizado de Máquina em tópicos emergentes: Big Data,
+Computação Cognitiva, Internet das Coisas.
+
+= bibliografia =
+CORMEN, T. H.; LEISERSON, C. E.; RIVEST, R. L.; STEIN, C. Algoritmos: teoria e prática.  2ª edição. Editora Campus, 2002.
+SEDGEWICK, R. Algorithms in C++, Parts 1 - 4: Fundamentals, Data Structure, Sorting, Searching, Addison-Wesley, 1998.
+RUSSEL, S.; ./NORVIG, P. Artificial Intelligence: A Modern Approach. 3ª edição. Pearson, 2009.
+HAYKIN, S. Neural Networks and Learning Machines. 3ª edição. Pearson, 2010. <-
+./SUGIYAMA, M. Introduction to Statistical Machine Learning. 1ª edição, Morgan Kaufmann, 2015. ** **
+./ROSS, R. J. Fuzzy Logic with Engineering Applications, 3ª edição. Wiley, 2010. **
+BÄCK, T.; FOGEL, D. B.; MICHALEWICZ, Z. Evolutionary Computation, vols. 1 e 2. CRC Press, 2000. **
+./CASTRO, L. N. Fundamentals of Natural Computing: Basic Concepts, Algorithms, and Applications, CRC Press, 2006. **
+SIMON, D. Evolutionary Optimization Algorithms. 1ª edição. Wiley, 2013. ** ** 
+
+= MOOCS =
+* https://courses.edx.org/courses/course-v1:UPValenciaX+ISC101.5x+1T2017/course/
+* https://courses.edx.org/courses/course-v1:UPValenciaX+ISC101.4x+1T2017/course/
+* https://courses.edx.org/courses/course-v1:UPValenciaX+ISC101.3x+1T2017/course/
+* https://courses.edx.org/courses/course-v1:UPValenciaX+ISC101.2x+1T2017/course/
+* https://courses.edx.org/courses/course-v1:UPValenciaX+ISC101.1x+1T2017/courseware/Unidad4/Unidad4Subsection5Sequential/?child=first
+* IA (edX acho)
+

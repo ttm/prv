@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:voeiia="http://purl.org/audiovisualanalytics/voeiia/"
+>
+  <rdf:Description rdf:about="http://purl.org/audiovisualanalytics/voeiia/SI">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <voeiia:subjectMatter rdf:resource="http://purl.org/audiovisualanalytics/voeiia/S"/>
+    <voeiia:subjectMatter rdf:resource="http://purl.org/audiovisualanalytics/voeiia/I"/>
+    <rdfs:label>Information System</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/audiovisualanalytics/voeiia/AI">
+    <rdfs:label>Intelligent Agent</rdfs:label>
+    <voeiia:output rdf:resource="http://purl.org/audiovisualanalytics/voeiia/I"/>
+    <owl:subClassOf rdf:resource="http://purl.org/audiovisualanalytics/voeiia/SI"/>
+    <voeiia:input rdf:resource="http://purl.org/audiovisualanalytics/voeiia/I"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/audiovisualanalytics/voeiia/S">
+    <rdfs:label>System</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/audiovisualanalytics/voeiia/EI">
+    <rdfs:label>Information Engineering</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <voeiia:subjectMatter rdf:resource="http://purl.org/audiovisualanalytics/voeiia/SI"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/audiovisualanalytics/voeiia/input">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>input</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/audiovisualanalytics/voeiia/I">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Information</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/audiovisualanalytics/voeiia/output">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>output</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/audiovisualanalytics/voeiia/IA">
+    <voeiia:subjectMatter rdf:resource="http://purl.org/audiovisualanalytics/voeiia/AI"/>
+    <rdfs:label>Artificial Intelligence</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/audiovisualanalytics/voeiia/subjectMatter">
+    <rdfs:label>subject matter</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#subClassOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+</rdf:RDF>
+

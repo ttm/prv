@@ -1,0 +1,199 @@
+Dom Fev  4 12:56:52 -02 2018
+
+reandro Nunes de Castro, Fundamentals of Natural Computing, 2007
+
+===============
+# Foreword
+website not running
+
+# Preface
+
+three branches of natural computing
+
+Read ap B before starting the first chap
+
+linear systems have coputing power limited to second-order statistics
+
+ICAs para remoção de ruído?
+
+# Apendix B
+this appendix has lots of errors, so it is useful to
+remmember things but not for learning.
+
+These are the topics which I found not clear:
+* Self-adjoint, hermitian
+* Hilbert spaces
+* Turing machines (universal, deterministic etc)
+* Computational complexity (complexity theory)
+
+# B4.1
+objective, cost, or criterion function
+search space, feasible solution
+
+garantee and speed of convergence
+convergence to a good solution
+
+global and local solutions
+
+# B4.2
+check propositional (zeroth order logic)
+first order and second order logic.
+
+
+# Chap 1
+## 1.1.
+-> taxonomy of natural computaing divided into three:
+computing inspired by nature,
+simulation and emulation of natural phenomena in computers,
+computing with natural materials.
+
+1.1.1
+wetware?
+
+1.3
+it cand be advantageous to highlight the minimal features necessary to enable
+some particular aspects of a system to be reproduced and to observe some emergent properties.
+"if it is possible to do something using simple techniques, why use more complicated ones?"
+
+1.4.1
+"Among all natural computing approaches, computational algorithms and sys-
+tems inspired by nature are the oldest and most popular ones."
+
+Computing inspired by nature,
+simulation of nature,
+bio-inspired computing, biologically motivated computing, computing with biological metaphors.
+
+McCulloch and Pitts
+
+invididuals capable of reproduction, subject to genetic variation and natural selection:
+genetic algorithms, evolution strategies, evolutionary programming, genetic programming,
+classifier systems
+
+int de enxame: late 1980's, celullar robotic systems in which a collection of simple agents in an environment interact bases on local rules.
+nowadays: any attemp to design algorithms or problem-solving devices inspired by the collectiove behavior of social organisms (social insects, cultures and sociocognition.
+
+Artificial immune systems (AIS) or immunocomputing.
+
+1.4.2
+artificial life and .. fractal geometry of nature
+
+for modelling fractal patterns and structures:
+cellular automata, L-systems or Lindenmayer systems,
+interated function systems, particle systems, Brownian motion
+
+Alife, 'strong Alife'
+
+1.4.3
+molecular computing
+quantum computing or computation
+
+1.5
+brute force or exaustive search
+
+Problems
+--------
+Occam's razor
+
+
+
+# 2
+## 2.1
+"most of these concepts are made up of ‘slippery’ words;
+words whose meaning can be different under different domains and words
+whose definitions are not available or agreed upon yet."
+
+chapter about conceptualization
+
+### 2.1.1
+models and metaphors
+
+### 2.1.2
+branches of natural computing and respective roots on biological or
+natural phenomena (pag 30)
+
+## 2.2
+### 2.2.1
+individuals, agents, entities, components (synonyms)
+
+agents (and definitions in the literature)
+
+### 2.2.2
+parallel and distributed operations of individual entities.
+parallel-distributed systems
+parallel distributed processing (PDP)
+PDP networks such as ANN
+
+### 2.2.3
+
+interactions
+
+(direct) connectionism
+(indirect) stigmergy/estigmergia
+
+### 2.2.4
+
+learning 
+
+"learning does not depend purely on consciousness
+and also does not require a brain." pag 37
+
+evolution
+"The outcome of evolution, like the outcome of learning, is a better
+adaptabil-
+ity to life and the environment."
+
+### 2.2.5
+positive and negative feedback
+
+### 2.2.6
+"Self-
+organization may also go by the name ‘emergent structuring’,
+‘self-assembly’,
+‘autocatalysis’, and ‘autopoiesis’, though most of these concepts have
+some
+slight differences to the self-organization concept provided here"
+
+SOSs:
+collectivity and interactivity
+dynamics
+Emergent patterns
+nonlinearities
+complexity
+rule-based
+feedback loops
+
+####
+alternatives to self-organization:
+following a leader
+blueprint
+recipe
+templates
+
+### 2.2.7
+
+###
+"a complex system is a system featuring a large number
+of interacting components whose aggregate activity is nonlinear (not
+derivable
+by summing the behavior of individual components) and typically
+exhibit self-
+organization" pag 44
+
+complexity vs redutionism
+
+"The five basic forms of investigating complex systems have already
+been dis-
+cussed (Section 2.1.1), namely, experimentation, simulation,
+theoretical model-
+ing, emulation, and realization."
+
+Complex adaptative systems (CAS)
+
+interactions, diversity, adaptation
+
+#
+(emergence, parei aqui
+Qui Fev 22 07:49:56 -03 2018
+)
+
+

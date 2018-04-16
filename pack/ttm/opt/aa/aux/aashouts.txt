@@ -1791,3 +1791,27 @@ Seg Abr 16 03:04:59 -03 2018
 :bot: chout forte da Srila sobre registros mudarem mediante interacao com corpus
 Seg Abr 16 03:09:20 -03 2018
 -----
+
+
+$$$$$
+primeira sessao com arvore :prv: limpinha. Indo integrar wiki ic
+Seg Abr 16 03:16:46 -03 2018
+-----
+confusao na hora de recomecar sessao
+Seg Abr 16 03:20:25 -03 2018
+-----
+c-o c-i no vimwiki estah baguncado
+Seg Abr 16 03:30:03 -03 2018
+-----
+migrando ic p wiki principal
+Seg Abr 16 03:33:40 -03 2018
+-----
+repassando notas dos livros p wiki principal
+Seg Abr 16 03:49:04 -03 2018
+-----
+entendendo extensoes no vimwiki
+Seg Abr 16 04:04:14 -03 2018
+-----
+escrevendo organizacao do que estah feito de ic
+Seg Abr 16 04:20:26 -03 2018
+-----

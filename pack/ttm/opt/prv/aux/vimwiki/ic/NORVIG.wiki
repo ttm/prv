@@ -1,0 +1,47 @@
+Dom Fev  4 09:30:27 -02 2018
+
+Russell, Norvig, Artificial Inteligence, 3rd, 2009
+
+==========
+# Preface
+## Overview
+Intelligent agents is the main unifying idea of the book.
+
+# Ch 1
+# 1.1.1
+NLP, knowlœdge representation,
+automated reasoning, machine learning,
+computer vision, robotics
+
+# 1.1.2
+cognitive science: computer models from AI
+and experimental techniques from psychology
+
+# 1.1.3
+Syllogism, Logic, Logicist
+
+# 1.1.4
+agent
+rational agent
+
+"this book concentrates on general aspects of rational agents
+and on components for constructing them"
+
+limited rationality
+
+# 1.2.2
+propositional logic == boolean logic
+
+first order logic developed by Frege from Boolean logic.
+
+al-Khowarazmi
+
+
+decidability?
+
+# 1.2.3
+Parei aqui, pg 10
+anotar as sessoes anteriores (depois de 1.1.4)
+
+
+

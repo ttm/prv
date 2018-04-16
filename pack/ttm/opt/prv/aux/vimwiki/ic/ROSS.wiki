@@ -1,0 +1,377 @@
+Sex Fev  9 18:23:10 -02 2018
+
+Preface
+-------
+'generalized information theories'
+(possibility and evidence theories)
+
+excluded middle axiom
+axiom of contradiction
+
+# 1
+precision and uncertainty
+(add quantum mechanichs quotes,
+add bible and other mithological literature.)
+
+complexity of systems and uncertainty
+
+precision, information and complexity
+
+fuzzyness is one of the types of uncertainty we find everywhere
+
+## case for fuzzyness
+dinossours 90,000,006 year ago..
+(add precise to imprecise is foolish)
+recipe and calories and vitamins etc
+
+a Proust sentence is 326 words long 
+
+deal with imprecision to aleviate costs,
+exploit our tolerance for imprecision.
+
+## a historical perspective
+statistical mechanics
+
+calculus considered no uncertanty
+
+" :Question uncertainty and imprecision: synonyms?
+
+probability theory captures random uncertainty
+
+association of credible solutions with the amount of uncertainty
+
+Max Black (1937), Zadeh (1965)
+
+Cardano ~1500, Bishop of Wells 1685
+
+Bernoulli 1713, Moivre 1738, Bayes 1763,
+Laplace 1774
+
+Bayes 1763 -> assessment of subjective probabilities
+human's degree of belief within sublective probability theory
+
+Lukasiewicz ~1930 multivalued discrete logic
+Dempster 1967 theory of evidence (assessment of ignorance, abcence of
+information)
+Zadeh 1965 fuzzy seet theory (continuous-valued logic)
+Shafer 1975 complete theory of evidence (info from more then one
+source)
+Zadeh ~??? possibility theory from special cases of fuzzy sets
+~1980- relation between evidence, probability and possibility theory
+by means of monotone measures (former fuzzy measures)
+
+unertainty oposed to information
+
+prob with little info -> ill-posed, complex or not sufficielty known
+
+" :Idea use the edX course on ignorance to harness uncertainty, not
+only deal with it like it is proposed in the book.
+E.g. how to measure the usefulness of potentiality of the uncertainty,
+or ignorance, of a system or problem?
+
+fuzzy, vague, ambiguous, ignorance, etc
+
+Zadeh, return soon is vague , return in a few minutes in fuzzy
+
+Mack 1937 about inexactㄣess of mathematical formulations for real phenomena
+Quine 1981 table and not table by one molecule
+
+de Finetti 1974 probability does not exist, it is a subjective
+description of a person's uncertainty... Be normative, not descriptive..
+
+## the utility of fuzzy systems
+
+they are universal aproximators
+
+isomorphism between (abstract and linear algebra) and (the structures
+of a fuzzy system)
+
+FS : action/antecedent -> (implies) -> conclusion/consequent
+
+input group (?) to output group (?)
+
+Stone-Wierstrass theorem is fundamental for fuzzy systems
+
+" :Q define fuzzy system, logic, set etc?
+
+fuzzy has all that algebra has to offer + handles not only numerical
+quantities
+
+fuzzy systems are most useful not for being universal approximators
+to algebraix functions, but to approximate behavior in which analytic
+functions and numerical relations do not exist.
+
+handles when there are vague, ambiguous or not known inputs
+
+(1) when behaviors are not well understood,
+(2) when an approximate and fast solution is warranted
+
+fuzzy systems are robust
+
+spherical chicken clucking
+
+## limitations of fuzzy systems
+shallow/deductive and deep/inductive reasoning, models, logic
+
+ill-defined problems and deep reasoning
+
+El Farol problem by Arthur 1994
+
+## the illusion: ignoring uncertainty and accuracy
+prob and fuzzy sets only differ in one of 16 axioms
+(logics of uncertainty)
+
+Gaines -> valuation on a lattece of propositions
++ excluded middle -> prob logic
++ strong truth-functionality -> fuzzy logic
+
+random errors aværage out
+nonrandom errors will generally not average out
+they both migh be quantifieѕ, but only
+nonrandom errors might be redㄩced with addition information.
+
+statist -> statistics
+
+ind rand vars and
+noninteractive sets
+
+## uncertainty and information
+
+"information is the resolution of uncertainty"
+Claude Shannon
+
+## fuzzy sets and membership
+set membership
+
+ppl 6 feet tall
+
+membership function
+
+degrees of membership in [0,1]
+
+fuzzy vs crisp sets
+
+a fuzzy set might have an inf num of memb fun
+a crisp set has only one memb fun
+crisp set inсs a special case of fuzzy sets
+
+"Fuzzy sets are always functions"
+that maps a universe of objects (X) to [0,1]
+The fuzzy set H is the fun \mu_H
+
+every fun that X -> [0,1] is a fuzzy set
+but beyond math, it is a FS iff it matches
+some intuitively plausible
+semantic description of imprecise properties.
+
+## chance vs fuzzyness
+95% of being above 7 feet or healthy liquid, against
+very tall or .95 membership in the class of healthy liquid.
+
+"fuzzyness describes the lack of distinction of an event,
+whereas chance describes the uncertanty in the occurence of the
+event."
+
+disc, cylinder and rod through d/h
+right circular cylinder
+
+aproximate circle C\_~  (fuzzy set)
+membership function \mu\_{C\_~} of the C\_~
+
+## intuition of uncertainty: fuzzy versus probability
+y = sin(x)
+x is uncertain
+model thourgh probability density function
+and a fuzzy set membership function
+
+propagation of error:
+- derived distributions (in probability theory)
+- extension principle (in fuzzy set theory)
+
+extension principle (by Zadeh) used æxtensively in the area of fuzzy
+arithmetic
+
+":T learn the derived distributions (method or propagation or whatnot)
+
+from uniform x -> saddle for prob dens fun, uniform for fuzzy set memb
+
+":N eqs 1.4 - 1.8b are messy: from initial logic wiggle in 1.4 to final
+y(?) instead of f(y) in 1.8a,b TTM
+
+## sets as points in hypercubes
+suzzy set A\_~ on a Universe X
+
+power set of the universe with 2^n elements
+(with full membership (vs empty membership?))
+
+special note on points: (1,1,1...) whole set,
+(0,0,0...) null set, (.5,.5,.5....) maximum fuzziness.
+
+value set V{P(X)}
+
+## Summary
+two kinds of information
+(or uncertainty which is the opposite of information?)
+fuzzy membership functions: similarities of objects with regards to a set of properties
+probabilities: relative frequencies
+
+fuzzy models are not replacements for probability models
+
+every crisp set is fuzzy
+converse is not true
+
+"the efficacy of a model in solving a problem should be the only
+criterion used to judge that model"
+
+
+# 2
+
+universe of discourse
+
+" :Q membership -> pertencimento?
+
+"crisp sets are special cases of fuzzy sets,
+they are sets without ambiguity in their
+membership (i.e. they are sets
+with unambiguous boudaries)"
+
+### classical sets
+sets, subsets
+cardinality and whole sets
+
+notation for contained, contained or equal
+and equivalent sets
+
+null sets
+whole sets has two conflicting definitions
+(one given two paragraphs after the other,
+error?).
+
+null set -> impossible event
+whole set -> certain event
+power sets
+
+### operations on classical sets
+union of sets -> logical or
+another union -> exclusive or
+A | B -> difference between A and B
+
+### properties of classical (crisp) sets
+Commutativity   2
+Associativity   2
+Distributivity  2
+Idempotency     2
+Identity        4
+transitivity    1
+involution      1
+               ---
+               14
+d morgans       2
+excluded middle 2
+               ---
+               18
+
+excluded middle axioms
+axioms of the excluded middle, axiom of contradiction
+
+(soh usam interseccao, unicao e complemento)
+(involution, excluded middle axioms and de morgans
+are the only that use complements)
+
+### mapping of classical sets to functions
+
+" :Presentation use the three elements set to make all operations.
+state how it happens for larger sets.
+
+"mapping is important in relating set-theoretic and function-theoretic
+representations of information"
+
+characteristic (indicator) function
+
+any set -> a function theoretic set (at least one?)
+value set V(A)
+
+union, intersection,  complement, containment
+through max/min (or/and) 
+
+## Fuzzy sets
+elements have varying degrees of membership.
+" :Question fuzzy set is a function AND a counter-domain or domain (?)
+
+Universe of membership values
+
+notation convention for
+universes of discourse:
+discrete and finite,
+constinuous and infinite.
+(function-theoretic aggregations or collections)
+function-theoretic agreggation operator
+
+" :Note universe of discouse is domain. Universe membership values is image
+
+### fuzzy set operation
+standard fuzzy operations
+for each element, function-theoretic operations
+Union, intersection, complement
+
+contained in any set, whole a null sets
+
+the cardinality of the fuzzy power set is infinite
+
+Union, intersection, complement
+
+contained in any set, whole a null sets
+
+the cardinality of the fuzzy power set is infinite
+
+Union, intersection, complement
+
+contained in any set, whole a null sets
+
+the cardinality of the fuzzy power set is infinite
+" :Question what about discrete, finite fuzze sets?
+
+De Morgan's principles
+
+excluded middles axioms are not satistied
+
+" :Errata equation 2.25c
+" :Errata figure 2.16, caption b
+
+### properties of fuzzy sets
+"the same as crispy"
+(only the excluded middle that don't)
+(commutativity, associativity, distributivity,
+identity, transitivity, involution)
+
+examples in a two fuzzy set,
+each with two variables problem
+
+" :E in the example of the discrete fuzzy sets, De Morgan's principle
+that (IS) mixed with an amine
+
+noninteractive fuzzy sets
+(combining membership functions of different universes in an
+orthogonal form)
+
+### Alternative fuzzy set operations
+standard fuzzy operations
+t-norms t-conorms (for intersections and unions)
+(triangular n cn, Menger 1942)
+
+special significance of t-norms and t-conorms
+
+aggregation operations
+averaging operations
+(dont exist in classical set theory,
+thus fuzzy logic is much more expressive
+to manipulate empirical data and intuitive aspects.)
+
+## Summary
+the excluded middle axiom constrains reasoning
+
+noninteractivity // independence
+
+norms for intersections, unions and complements
+
+

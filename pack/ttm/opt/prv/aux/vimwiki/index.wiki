@@ -110,6 +110,6 @@ Old notes in blergh.
 EXPERIMENTAL STUFF FROM VIMWIKI DOCUMENTATION
   j
 = My knowledge base =
-    * [[Tasks]] -- things to be done _yesterday_!!!
+    * Tasks -- things to be done _yesterday_!!!, a subset of todo
     * Project Gutenberg -- good books are power.
     * Scratchpad -- various temporary stuff.

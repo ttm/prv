@@ -157,6 +157,10 @@ let marray = linspace(2,100,0.1)
 
 
 = migrado do Tasks.vim =
+:tasks:Tasks:TASKS:task:Task:TASK:
+
+:definition: a task is a :todo: item with absolute immediate priority.
+
 understand vimwiki (see file in diary dir)
 
 finish mass suite

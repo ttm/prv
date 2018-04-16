@@ -692,12 +692,13 @@ fu! PRVMkMappings(str) " {{{3
   en
 endf
 
-fu! PRVSetWiki() " {{{3 bare Vim wiki, findind files
+fu! PRVSetWiki() " {{{3 bare Vim wiki, finding files
   exe 'se path+='.g:prv_dir.'aux/vimwiki/'
   se sua +=.wiki
   se sua +=.vim
   se sua +=.py
   se sua +=.txt
+  se sua +=.md
   " to avoid getting unwanted files when finding files
   se wildignore+=*.swp,*.swo,*.pyo,**/aux/undo/*,viminfo
 endf
