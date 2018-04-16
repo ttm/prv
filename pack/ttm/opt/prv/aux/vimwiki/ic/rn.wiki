@@ -1,0 +1,6 @@
+:rn:rna:ann:nn:
+
+https://pt.wikipedia.org/wiki/Rede_neural_artificial
+https://en.wikipedia.org/wiki/Artificial_neural_network
+https://en.wikipedia.org/wiki/Deep_learning
+

@@ -9,11 +9,14 @@ Ambos em [[file:~/repos/concusos/ufabc/proj.pdf]]:
 Aula sobre ie:
 ../legacy/aulaIE.wiki
 
+Contexto da minha pesquisa com ic:
+../legacy/pesqIC.wiki
+
 == wikipédia ==
 Artigos pelos quais estou responsável
-* inferência bayesiana
+* inferência bayesiana ib
 https://pt.wikipedia.org/wiki/Inferência_bayesiana
-* inteligência computacional
+* inteligência computacional icwp
 https://pt.wikipedia.org/wiki/Inteligência_computacional
 * computação cognitiva
 https://pt.wikipedia.org/wiki/Computação_cognitiva
@@ -33,11 +36,12 @@ https://pt.wikipedia.org/wiki/Orienta%C3%A7%C3%A3o_a_objetos
 https://pt.wikipedia.org/wiki/Estrutura_de_dados
 
 por fazer
-* redes neurais
+* redes neurais rn
 * big data
 * internet das coisas
 * teoria do aprendizado
 * aprendizado de máquina
+* soft computing [[sc]]
 
 notas para passar a limpo:
 * probabilidade
@@ -45,20 +49,38 @@ notas para passar a limpo:
 
 
 == código ==
-:todo: migrar notas e caminhos para cá
+:todo: migrar caminhos/paths para cá
+
+
+=== inteliência meta-universal ===
+Com algoritmo, solta no PyPI.
+Descrito no :h bot
+
+inteligencia mitologica
+estelar
+(meta-)universal é a mais geral,
+
+=== Pacotes no PyPI ===
+ACO
+PSO
+etc
+todos fazem parte do pacote
+natural computing
+utilizam o
+IC, que são rotinas em baixo nível
 
 
 = tópicos principais =
-a) Programação estruturada e orientada a objeto
-b) Estruturas de Dados
-c) Métodos de Aprendizagem
-d) Métodos Bayesianos para Aprendizado de Máquina **
-e) Redes Neurais Artificiais
-f) sistemas fuzzy
-g) computacao evolutiva
-h) Inteligência de Enxame
+a) Programação estruturada e orientada a objeto pe poo
+b) Estruturas de Dados ed
+c) Métodos de Aprendizagem am [[ta]]
+d) Métodos Bayesianos para Aprendizado de Máquina ** ib
+e) Redes Neurais Artificiais rn
+f) sistemas fuzzy  fuzzy
+g) computacao evolutiva  ce
+h) Inteligência de Enxame  ie
 i) Aplicação de métodos de Aprendizado de Máquina em tópicos emergentes: Big Data,
-Computação Cognitiva, Internet das Coisas.
+Computação Cognitiva, Internet das Coisas.  te
 
 = bibliografia =
 CORMEN, T. H.; LEISERSON, C. E.; RIVEST, R. L.; STEIN, C. Algoritmos: teoria e prática.  2ª edição. Editora Campus, 2002.

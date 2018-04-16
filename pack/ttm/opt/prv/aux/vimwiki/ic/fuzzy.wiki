@@ -18,9 +18,6 @@ which might be sound or at least yield reasonable results.)
 = inteligência difusa =
 :id:
 
-
-:todo: migrate content from concursos
-
 do antigo ld.wiki ateh {{{
 == todo ==
 idealmente fazer o artigo de sistema fuzzy

@@ -1,0 +1,494 @@
+  ~ Calibra monitor / datashow / projetor ~
+         (calibra projeção de luz)
+     
+match Constant /\v\~.*\~/
+hi Normal guibg=red guifg=green
+
+" tenta C-\i C-\c (j n y, rgb etc)
+" tenta amarelo ou verde, ou realcolors:
+cal ApplyCS(g:ccs.yellow1, 'c')
+cal ApplyCS(g:ccs.green2, 'c')
+" ['yellow1', 'redblackl', 'passivepink1', 'green1', 'green2', 'red1', 'red2', 'red3', 'red4', 'red5', 'blue1', 'blue2', 'red1b', 'red1c', 'mith1']
+
+setl so=0
+
+
+(capa)
+
+
+          ~ Defesa de projeto de pesquisa ~
+           (edital 227/2016, 2018/Mar/21-3)
+    
+    
+        Renato Fabbri, renato.fabbri@gmail.com
+    
+        ICMC/USP, FAPESP (projeto 2017/05838-3)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+==========================
+(0)
+
+                 ~ Roteiro ~
+
+     principal
+        IC com WS/DL (falta nos 5 pilates)
+        SI de Analítica Audiovisual
+        literatura
+     atualização (desde o envio dos documentos)
+        apresentações, escritos, software
+     ontologia de pesquisa <-
+        árvore taxonômica
+        folhas de preferência são 'feitos'
+     assuntos
+       cor
+       áudio, fala e música
+       complexidade
+       IC
+       ciência aberta e cultura livre
+       aulas
+       imediato
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+======================
+(1)
+
+                 ~ Literatura ~
+
+  do concurso
+      como selecionaram os títulos e tópicos?
+      por, com quem?
+      
+  WP em ptbr: feitos todos os artigos menos RN (sex?)
+      IC (ao invés de métodos)
+      CC (criado)
+        SD (criado, SD vs SDC)
+        IB
+      CE (sinônimo do braço de CN em software?)
+      IE (tinha nada, quasi-criado)
+        PE
+        POO
+        ED
+      
+      CN não relei, bate com o Castro
+  
+  peço ajuda da experiência
+    da banca
+    da UFABC
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+==========================
+(2)
+
+             ~ atualização ~
+          de Nov/2017 até hoje
+
+  arXiv
+      Vim e Toki Pona
+  plugins
+      realcolors, prv, aa, toki pona (Vim)
+      github e Vim.og
+      usamos o realcolors, apr feita em aa, agora prv
+  'meia suíte forma', archive.org
+  música final da massa
+  recauchutados código e texto
+      principalmente da MASSA
+  seminário sobre layouts de redes em JS
+      maior coleção e usando WebGL
+  alunos
+      tcc e doc (co)
+  submetidos artigos:
+      sobre analítica textual para crítica literária e ?
+      Pluriel Plurie ?
+  revisado sobre IC
+      livros do concurso e WP
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+==========================
+(3)
+
+         ~ Ontologia da pesquisa ~
+            (OWL-compatível)
+              (4 eixos)
+        
+   5 pilares da IC com WS
+   (falta BD, MD, dados?)
+   
+   SI para analítica audiovisual
+   
+   literatura (absorção e escrita)
+   
+   suporte à IC
+     sistemas formais
+       matemática
+         grupos, grafos/topologia
+         cálculo, AL
+         prob e est, fuzzy
+         
+       computação, fís, eng
+         termodinamica / sistemas complexos
+         relatividade e quântica
+         base: mecânica, eletromag, materiais etc
+         
+     conceitos-chave
+       casca e conteúdo
+       navalha de Occam
+       personalidade autoritária
+       etc
+     
+     imprecisão (inerente à modelagem e aplicação)
+       hedges? (alteradores fuzzy)
+         'espero que sim, acho que não'
+         ? desejo que (sim, talvez)
+       contraste da ciência/modelagem tradicional com realidade:
+         cavalo esférico
+         mesa de inf pernas
+         eng, mat e fis impar -> primo
+         
+     complexidade
+       ARS
+       redes complexas
+           setorialização de Erdös
+           ARS
+       linguagem natural (humana)
+           recursividade semântica é um (definição, não hiperonímia)
+             "pleaonasmo redundante que repete a mesma coisa em seência, internamente e/ou simultâneo",
+             inspira e está ligado a concepções de ubiquidade
+             imprecisão
+           literatura
+             análise
+               de corpus (Joyce, Bíblia e Shakespeare, Toki Pona)
+               de linguagem (Toki Pona)
+             síntese (Markov bi e tri, vocabulário, fonética, sintáxe, Toki Pona)
+             cultura caipira, Timor Leste, mitologia
+           complexa (integrada ao contexto, a sistemas complexos)
+             ARS
+             artigos científicos
+             Lattes (ARS?)
+       complexidade
+         ubiquidade da lei de potência
+         
+     cultura livre
+       ciência aberta
+         tudo aberto e com versionamento (Git):
+           pub, dados, soft, documentação
+         UE, Alemanha
+       cultura hacker
+         meritocracia e emergente e de falácia
+           ditador benevolente (!= wikipedia ptbr)
+         GNU/Linux, Python, Javascript, modularização e reúso de código
+         samurai, ninja, gnomo
+           dubstep, trap, twerk, noise, erudito (eletrônicos)
+           IC via massa
+           
+     arte e humanas tecnológicas
+       música, filosofia, antropologia
+       processamento de sinais
+       programação
+       erudição
+       aspectos antropológicos
+         empréstimos etnográficos
+         física
+         (ciência da) computação
+       origami, xagrez, pandorga
+       toy example/model
+         exemplo lúdico ou de brinquedo?
+         ABC da IC na WP
+           está condicionado, fiz dias antes do concurso
+           removo?
+           aula invertida?
+           
+           
+adicionais:              
+  notas ric: RDF em 3D, Jogos (pet, Edson), treinar redes sociais
+  assuntos nos próximos slides, principalmente:
+      aulas
+      imediato
+
+(zoom out, backspace)
+obrigado,
+Qui Mar 22 07:54:16 -03 2018,
+r.
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        
+     
+
+==========================
+(4 - início de outros assuntos)
+
+                ~ Cor ~
+                
+  diferença entre a recepção de som e de luz
+  
+  livros do Goethe, Runge, Shoppenheuer
+  
+  realce de sintáxe 
+    programação, apresentação, línguas, cores especiais, etc
+    
+  analítica visual
+  
+  desponta nos artigos sobre Vim e Toki Pona, no Realcolors, e no AAVO
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+==========================
+(5)
+
+          ~ Áudio, fala e música ~
+          
+  publicar massa
+  
+  deixar as bibliotecas, pacotes e toolboxes 100%
+  
+  Paisagem sonora
+  
+  Emoções na fala
+  
+  artigo da massa na wikipedia para material didático
+    pedido do comitê de música computacional, do qual sou membro
+
+
+
+
+
+
+
+
+
+
+
+
+==========================
+(5)
+
+      ~ Complexidade ~
+      
+  Publicar artigos, em grande parte já escritos, do doutorado
+  
+  Aprofundar e generalizar a setorialização de Erdös
+  
+  Aprofundar análises de diferenças linguísticas em redes sociais
+  
+  Sistema de analítica audiovisual para redes complexas, texto, e ARS
+  
+  Lei de potência, sistemas não lineares
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+==========================
+(6)
+
+         ~ Inteligência computacional ~
+         
+  Criatividade artística (texto, música, imagem, video, etc)
+  
+  Modelos de CN (e.g. aranha, pessoas com ideias e coisas circulando no espaço-tempo)
+  
+  Ideias exóticas, e.g. Vim para varredura do espaço de hipóteses, ou evolução de modelos criptográficos.
+  
+  Revisão e organização da literatura (Wikipédia)
+  
+  Percepção: leis de Weber-Fechner e de Steven, mapeamentos da percepção e da natureza
+  
+  Análise, aplicação e avaliação de sistemas de IC
+  
+  ARS, personalidade autoritária, indicadores de Myer-Briggs, mania-depressão, traços esquizo ou histéricos ou epiléticos, etc
+  
+  Bots
+  
+  Aproximação do corpo docente e pessoal de neurociência
+
+
+
+
+
+
+
+
+
+==========================
+(7)
+
+     ~ Ciência aberta e cultura livre ~
+     
+  Contribuições em software livre bastante utilizados (e.g. LM wiki)
+  
+  Contribuições pessoais em VimL, Python, SPARQL/RDF, Latex, Wikis (e.g. wikipedia)
+  
+  Pacotes no repositório apt do Ubuntu, pip do Python, GetLatest do Vim
+  
+  Publicações abertas, códigos, anotações, dados, tudo em repositórios e com versionamento/histórico
+  
+  Aprender e expressar conhecimento usando software, RDF, e wikis enquanto necessário
+  
+  Dados ligados / web semântica
+  
+  MOOCs (absorver, advocar, disponibilizar)
+
+
+
+
+
+
+
+
+
+
+==================================
+(8)
+
+        ~ Aulas ~
+        
+  Aproveitar para pensar soluções, incluindo de discurso (pedagogia)
+  
+  Se possível, aula invertida: material em video ou na wikipédia para referência e melhora contínua
+  
+  MOOCs: de pesquisa e desenvolvimento com tecnologias livres,
+    de áudio e música computacionais
+  
+  outros que gostarei:
+    inferência estatística, computação natural, IC,
+    criatividade computacional, processamento de sinais para IC,
+    sistemas complexos, redes complexas, análise de redes sociais,
+
+
+
+
+
+
+
+
+
+
+
+==================================
+(9)
+
+                ~ Imediato ~
+
+  Terminar o PRV, que inclui o realcolors, prv, aa, toki pona
+  
+  Submeter escrito da MASSA e recauchutar código em Python
+  
+  Submeter artigos mais finalizados
+  
+  Melhorar escritos da Wikipédia sobre IC, iniciar novas contribuições
+  
+  Continuar trabalho no VICG/ICMC/USP, artigo do Alan 
+  
+  Terminar revisão de literatura de visualização de dados,
+    talvez já organizando em software, artigos científicos, e wikis.
+
+
+
+
+
+  
+==================================
+(10)
+
+
+
+              ~ Obrigado! ~
+
+        (perguntas, discussão, etc)
+
+        renato.fabbri@gmail.com
+
+
+======
+japa: fuzzy, origami, 
+

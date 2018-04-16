@@ -373,3 +373,8 @@ slots: 8
 ended: Seg Abr 16 05:18:50 -03 2018
 
 
+
+
+started: Seg Abr 16 05:51:32 -03 2018
+dur: 15.0
+slots: 8
