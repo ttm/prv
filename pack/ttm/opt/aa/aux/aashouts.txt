@@ -1842,3 +1842,30 @@ Seg Abr 16 05:51:32 -03 2018
 terminado de passar tudo de ic para a wiki
 Seg Abr 16 06:07:06 -03 2018
 -----
+lendo help do Vim sobre tags
+Seg Abr 16 06:22:29 -03 2018
+-----
+primeiro mapping da bare-vim wiki
+Seg Abr 16 06:40:07 -03 2018
+-----
+estudando wiki novamente
+Seg Abr 16 06:52:30 -03 2018
+-----
+dei pala vendo de sampa c milena e caleb
+Seg Abr 16 08:01:23 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+sessao adicional sobre novo plugin do prv: wiki
+Seg Abr 16 09:40:12 -03 2018
+-----
+prv plugin: persistence, for persistence of visual cues, settings, undo, markers, sessions, windows, tabs, terminals, buffers, etc, and clearing them
+Seg Abr 16 09:46:25 -03 2018
+-----
+migrando wiki para plugin dedicado
+Seg Abr 16 09:55:01 -03 2018
+-----

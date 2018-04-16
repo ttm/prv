@@ -77,6 +77,10 @@ mais uma sessao sobre prv.
 
 :todo: make mapping for tagsrch in help files, wiki, current tree, update tags, etc
 
+Seg Abr 16 06:17:18 -03 2018
+feitas algumas sessoes de aa, terminado de passar a limpo wiki de ic p wiki prv
+
+
 === March ===
 ==== 2018-03-15 ====
 * palestra do Marcos da dotlib (livro fuzzy)

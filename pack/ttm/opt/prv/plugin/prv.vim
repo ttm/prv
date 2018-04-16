@@ -694,6 +694,9 @@ endf
 
 fu! PRVSetWiki() " {{{3 bare Vim wiki, finding files
   exe 'se path+='.g:prv_dir.'aux/vimwiki/'
+  exe 'se tags+='.g:prv_dir.'aux/vimwiki/**/.tags'
+  exe '!ctags-exuberant'.g:prv_dir.'aux/vimwiki/' 
+  nn Wu :exe '!ctags-exuberant '.g:prv_dir.'aux/vimwiki/'<CR> 
   se sua +=.wiki
   se sua +=.vim
   se sua +=.py

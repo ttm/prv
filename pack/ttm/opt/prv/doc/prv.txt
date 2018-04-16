@@ -80,16 +80,27 @@ is faster, cleaner, and isomorphic to the wiki-like links
 such as [[something]], which can be written as something, .something,
 ../something, something.wiki, or as convenient for the use
 and meaning intended.
-This is not a trivial issue while not expressed as in |prv-wiki|.
+This is not a trivial issue while not expressed as in |wiki-intro|.
 
 
 ------------------------------------------------------------------------------
                                                               *prv-navigation*
 
-C-hjkl for windows in any mode
-A-ad for tabs in any mode (nope. A-a is useful in insert)
-\b\B to open the browser in current dir
-a-b a-B open close Sex in same dir.
+Vim interface:
+* C-hjkl for windows in any mode
+* A-ad for tabs in any mode (nope. A-a is useful in insert)
+* \b\B to open the browser in current dir
+* a-b a-B open close Sex in same dir.
+
+File trees:
+* see |wiki|
+
+
+tags (help, wiki, source code)
+    - declared as :tag: or any other pure tag mode
+    - entailed by file structure (section, class, function, folding, etc)
+* file paths
+* generic text searches in file names (fuzzyfinder?) and contents (lgrep)
 
 ------------------------------------------------------------------------------
                                                                     *prv-wiki*
@@ -126,6 +137,7 @@ Todo:
   * only one? yes. see :h user_29 / ONE TAGS FILE
   * generate many tags files for different projects/file trees? No, see above
 * use tnext, tselect to handle multiple matches of c-[
+* use c-t
 
 See |tagsrch.txt|
 

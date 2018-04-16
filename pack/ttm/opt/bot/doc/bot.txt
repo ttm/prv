@@ -145,6 +145,9 @@ Corpus / statics / culture envisioned:
   - gutenberg, etc.
   - archive.org
 * david kopenawa
+* Fiorini (from Palmeiras/SP/Brazil)
+* Deleuze, Guatarri
+* Dinha, Fernanda Valdiviezo
 * mythological texts (quaran, vedas, indiginous, gypsy, whichcraft, african, bible, discordianism)
 * |aa| shouts and sessions
 * |prv-wiki| notes

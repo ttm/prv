@@ -22,6 +22,7 @@ Use lowercase markers for inside files.
 = baits =
 :baits:iscas:
 * miles/lightyear stones
+* jogos c primo
 * parar de fumar
 * estudos mitológicos
 * Livros Mumford Tsallis
