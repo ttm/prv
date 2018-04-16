@@ -692,19 +692,6 @@ fu! PRVMkMappings(str) " {{{3
   en
 endf
 
-fu! PRVSetWiki() " {{{3 bare Vim wiki, finding files
-  exe 'se path+='.g:prv_dir.'aux/vimwiki/'
-  exe 'se tags+='.g:prv_dir.'aux/vimwiki/**/.tags'
-  exe '!ctags-exuberant'.g:prv_dir.'aux/vimwiki/' 
-  nn Wu :exe '!ctags-exuberant '.g:prv_dir.'aux/vimwiki/'<CR> 
-  se sua +=.wiki
-  se sua +=.vim
-  se sua +=.py
-  se sua +=.txt
-  se sua +=.md
-  " to avoid getting unwanted files when finding files
-  se wildignore+=*.swp,*.swo,*.pyo,**/aux/undo/*,viminfo
-endf
 fu! PRVDefineSettings() " {{{3 basic variables/settings
   let g:prv = {}
   let g:prv.paths = {}

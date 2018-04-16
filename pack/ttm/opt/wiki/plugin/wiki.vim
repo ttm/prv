@@ -29,7 +29,7 @@ fu! WikiInit() " {{{3 bare Vim wiki, finding files
 endf
 
 fu! WikiMkMappings()
-  nn Wu :exe '!ctags-exuberant '.g:wiki_dir.'aux/wiki/'<CR> 
+  nn Wu :exe '!ctags-exuberant -f '.g:wiki_dir.'aux/wiki/.tags '.g:wiki_dir.'aux/wiki/**/*'<CR> 
 endf
 
 cal WikiInit()

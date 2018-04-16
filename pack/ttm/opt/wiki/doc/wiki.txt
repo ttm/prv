@@ -48,16 +48,16 @@ tags (help, wiki, source code)
 * generic text searches in file names (fuzzyfinder?) and contents (lgrep)
 
 ------------------------------------------------------------------------------
-                                                                    *wiki*
+                                                                    *prv-wiki*
                                                                *bare-vim-wiki*
 
 The bare Vim should yield a very simple and functional system:
 * use Vim's standard tagging mechanisms.
   Tags have to be extracted from the source files, and organized, in order to
-  enable the navigation of tags. See |prv-tags-navigation|
+  enable the navigation of tags. See |wiki-tags-navigation|
 * use Vim's standard file navigation mechanisms.  File navigation is always
   enabled.  Beyond absolute and relative paths, one might enable directories
-  in 'path' for files to be searched for.  See |prv-file-navigation|
+  in 'path' for files to be searched for.  See |wiki-file-navigation|
 
 Long term goals are:
 * exploit deeply the concept of a "reactwiki": hypertexts with executable
