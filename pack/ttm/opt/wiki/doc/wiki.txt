@@ -100,6 +100,7 @@ See |tagsrch.txt|
 * add wiki and md as prefixes in option 'sua'
 * manage to link paths of wiki pages and of repository trees.
   E.g. .py files use a specific &path, .vim files, other &path etc...
+* |Files| command of |fzf.vim| is pretty handy.
 
 See 'path'
                                                             *wiki-help-navigation*
@@ -121,5 +122,67 @@ See 'path'
   - read about tags, take notes and define strategy
   - read about file navigation, notes and strategy
   - migrate all wiki notes and other notes to the framework
-                                                     *prv-fzf*
+
+
+==============================================================================
+3. Options, variables and general settings                  *wiki-settings*
+
+Important files:
+'isf'
+'isi'
+'isk'
+'wig'
+
+tags:
+'tag'
+
+(also: 'tagst')
+
+for display:
+'isp'
+'kp'
+
+
+
+Maybe relevant:
+'include'
+'includeexpr'
+'display'
+'key'
+'tsr'
+'vdir'
+'vi'
+'vif'
+
+
+
+
+
+
+
+
+==============================================================================
+5. Commands                                                 *wiki-commands*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  vim:ma:noro:tw=78:ts=8:ft=help:sua+=.txt:norl:sts=4:sw=4:et:
