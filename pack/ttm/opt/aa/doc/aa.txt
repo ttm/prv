@@ -392,7 +392,7 @@ These might all be set in |aa.vim|
 (both -r and -R mappings updates the visual cue because they are followed
 the routine used by this command:)
 *aa-leader-u* : updated color columns (if for any reasons the number of
-requested shouts do not match the visual cue.
+requested shouts do not match the visual cue).
 
                                                             *aa-hack-mappings*
 *aa-leader-h* : open the |aa-aux| directory
@@ -458,7 +458,8 @@ Functions are organized in main (receive shout, start session, init and info),
 utils (check if |aa| is initialized, if session is on, register that a shout
 has beed given, time left and spent in a slot, time since last shout, clear),
 aux (routines used by main and utils).
-See |aa.vim| to access all the functions.
+See ../plugin/aa.vim to access all the functions, documented and organized
+therein.
 
 
 ==============================================================================

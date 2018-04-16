@@ -117,6 +117,9 @@ Other characteristics:
 * Git versioning
 * optional integration: calendar.vim, gmail.vim
 
+Todo:
+* collapse section titles and tags, make syntax collapse
+
                                                             *prv-tags-navigation*
 * list of directory patterns to make the tags file
 * keep 'tags' option with all the tags files generated

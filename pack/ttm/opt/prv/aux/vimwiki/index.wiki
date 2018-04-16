@@ -1,23 +1,58 @@
+:wiki:Wiki:
 = Contents =
+  - [[#note types|note types]]
   - [[#baits|baits]]
   - [[#conteúdos principais|conteúdos principais]]
   - [[#My knowledge base|My knowledge base]]
-  - [[#Generated Links|Generated Links]]
 
+
+= note types = 
+:notes:note-types:
+Use uppercase markers for main files.
+Use lowercase markers for inside files.
+* Calendário, Calendar, calendar
+* Diary, diário
+* Notes, blergh
+* Todo
+* Wiki, wiki
+* ../../../aa/aux/aashouts.txt, AA shouts
 
 = baits =
-* Livros Mumfords Tsallis
+:baits:iscas:
+* miles/lightyear stones
+* parar de fumar
+* estudos mitológicos
+* Livros Mumford Tsallis
+  - disponibilizar implementacoes: github, pypi, algorithmia
+  - gravar videos
+* Implementacoes algorithmia, github, pypi:
+  - setorializacao de erdos
+  - mass
 * Artigos por enviar
 * dataviz
-* WP, revisar artigos, passar notas, fazer novos artigos (de dataviz principalmente)
+* Wikipedia, revisar artigos, passar notas, fazer novos artigos (de dataviz principalmente)
 * explorar IC, bots, PRV
+  - enxame de almas
+  - bots com melhores parametrizacoes da fala:
+    * com o baseline
+    * utilizando estruturas morfossintaticas (POS tagging).
+    * com deeplearning (tensorflow Seq2Seq):
+      - https://adeshpande3.github.io/How-I-Used-Deep-Learning-to-Train-a-Chatbot-to-Talk-Like-Me
+    * conversa como aprendido em chat de bate papo mas com vocabulário próprio,
+    * digressao apenas pega as ultimas mensagens e monta com o corpus proprio
+  - formalizar paralelismo entre cultura da pessoa e treinamento.
+  - comando para bot mostrar a sua rede de palavras adjacentes
 * rever notas de ideias p artigos
+  - retomar escrita e integracao com blog ttm
+* Acompanhar Nexos
+  - fazer bots com autoras
+* Aproveitar torre na rede com URL pública
+* retomar experimentos em estruturas sociais, percola mundo etc
 
 = conteúdos principais =
 
-[[todo]]
-[[ic/ic]] [[ic/complexidade]]
-[[./prv/prv|prv]] [[prv/|vim]] [[prv/python]] [[prv/rdf]]
+ic complexidade
+prv [[prv/|vim]] [[prv/python]] [[prv/rdf]]
 [[massa/massa]]
 [[audiovis/audiovis]]
 [[on/process]] [[on/todo]] [[on/achievements]]
@@ -76,16 +111,3 @@ EXPERIMENTAL STUFF FROM VIMWIKI DOCUMENTATION
     * [[Tasks]] -- things to be done _yesterday_!!!
     * Project Gutenberg -- good books are power.
     * Scratchpad -- various temporary stuff.
-
-= Generated Links =
-  - [[Achievements]]
-  - [[Music]]
-  - [[Tasks]]
-  - [[blergh]]
-  - [[final suite]]
-  - [[index]]
-  - [[mass]]
-  - [[notes]]
-  - [[prv]]
-  - [[vibes]]
-  - 

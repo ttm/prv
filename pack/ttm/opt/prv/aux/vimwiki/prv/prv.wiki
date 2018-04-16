@@ -1,0 +1,20 @@
+:prv:
+assimilando:
+* \wd \wr para deletar e renomear paginas
+* = - p header
+- [ ] gl(lhr*#-1aAiI
+
+TODO:
+* Make recovery automatic if buffer contain equal file contents,
+else diff it.
+  - https://superuser.com/questions/904031/vim-automatically-delete-swp-file-after-recovery-doesnt-change-the-original-f
+
+[[Achievements]] 
+* Using [[vimwiki]]
+* Published preliminary version of realcolors Vim plugin.
+* Usim vimscript fluently for loading and running functions
+on the fly while making them.
+* Rudimentary use of Python interface.
+  - The ideal thing would be to interface with ipython and Vim's
+    terminal interface (the one that has the Terminal-Job mode).
+

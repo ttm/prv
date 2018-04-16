@@ -1,10 +1,12 @@
+:Todo:
 = lightyearstones =
+:stones:Stones:
 * finish about computer science and physics this year and the next.
-* start medicine school in 2010
+* start medicine school in 2020
 * handle humanities in general as possible (philosophy and anthropology)
 
 = milestones =
-* arrumar PRV, soltar revisão
+* arrumar PRV, soltar revisão aa
 * fazer pacotes mínimos de PSO, ACO, etc, no modelo especificado na wikipédia.
 * mandar mensagem para banca com anotações, páginas e códigos
 * fazer os cursos desta especializacao: https://www.coursera.org/specializations/aml

@@ -23,8 +23,10 @@ pa vimwiki
 cal CommandColorSchemes()
 " colo blue
 cal ApplyCS(g:ccs.green1, 'c')
-cal ApplyCS(g:ccs.green2, 'c')
 cal ApplyCS(g:ccs.yellow1, 'c')
+cal ApplyCS(g:ccs.green2, 'c')
+cal ApplyCS(g:ccs.blue1, 'c')
+cal ApplyCS(g:ccs.red4, 'c')
 
 " usar red1, 2, 3 para priorizacao de alerta p detalhes
 " blue 1, 2, 3 p criatividade e ficar acordado (acordado sonhando)
