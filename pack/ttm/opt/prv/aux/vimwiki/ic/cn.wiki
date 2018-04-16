@@ -1,0 +1,7 @@
+computacao natural
+[[rna|redes neurais]] [[ie|enxame]] [[ce|computação evolucionária]]
+
+https://www.journals.elsevier.com/swarm-and-evolutionary-computation/
+
+./CASTRO
+

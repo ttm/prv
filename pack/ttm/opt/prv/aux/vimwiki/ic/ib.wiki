@@ -1,0 +1,69 @@
+~ Inferência bayesiana ~
+
+refs: [[am]], [[ame]], [[pe]], [[imprecisão]]
+[[metodosBayesianosDeAM]]
+[[imprecisão]], 
+
+== todo ==
+* ler o artigo da wikipedia
+  - ptbr: reaproveitar destrincho da fórmula, relacionar evidências com dados (ou modelo) e hipóteses com valores e/ou classes.
+    * integrar sessão 'informalmente' ao final
+  - en:
+    * decision theory, bayesian probability (subjective, [[imprecisão]])
+
+=====
+
+== Não organizado ==
+TA
+
+crença , conhecimento, possibilidade, etc
+
+probabilidades e verossimilhanças marginais
+
+inteligência robusta, computação robusta
+
+bayesian network 
+
+bayesian hierarchical learning
+
+bayesian transfer learning
+
+bayesian deep learning
+
+https://www.quora.com/What-is-Bayesian-machine-learning
+
+== Base teórica ==
+(verificar links de prob e est)
+(adicionar desigualdades, relações e conceitos mais utilizados p IB?
+pegar do livro de [[ame]])
+(arrumar links sobre conceitos de plauível e crença neste contexto estatístico)
+
+== Desenvolvimento da teoria através de exemplos ==
+ibexemplos
+
+
+== Ver também ==
+* [[ic]]
+* https://pt.wikipedia.org/wiki/Teorema_de_Bayes
+
+== Topicos avançados e termos especiais ==
+* https://pt.wikipedia.org/wiki/Complexidade_de_Kolmogorov
+* https://pt.wikipedia.org/wiki/FBST
+* https://pt.wikipedia.org/wiki/Teoria_de_investiga%C3%A7%C3%A3o_bayesiana
+* https://pt.wikipedia.org/wiki/Infer%C3%AAncia_frequencista
+* https://pt.wikipedia.org/wiki/Filtro_bayesiano
+* https://pt.wikipedia.org/wiki/Infer%C3%AAncia_estat%C3%ADstica (principalmente as proposições estatísticas)
+* https://pt.wikipedia.org/wiki/Proposi%C3%A7%C3%A3o
+* https://en.wikipedia.org/wiki/Dutch_book (e bayesian updating?)
+* https://en.wikipedia.org/wiki/Jeffreys_prior (p p(theta, alpha) dificeis de achar)
+* https://pt.wikipedia.org/wiki/Probabilidade_indutiva e a IA universal
+
+
+
+== [[vocabulário]] ==
+iid, linearidade, invariância no tempo, slit, polinomial,
+termos no corpo deste artigo
+
+
+
+

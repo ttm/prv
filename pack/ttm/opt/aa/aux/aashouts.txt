@@ -1815,3 +1815,21 @@ Seg Abr 16 04:04:14 -03 2018
 escrevendo organizacao do que estah feito de ic
 Seg Abr 16 04:20:26 -03 2018
 -----
+repassado tudo da ufabc a limpo, menos a outra wiki
+Seg Abr 16 04:33:58 -03 2018
+-----
+passando topicos da wiki, incluindo aula de ie, p wiki principal
+Seg Abr 16 04:49:07 -03 2018
+-----
+folding para bare vimwiki?
+Seg Abr 16 05:00:53 -03 2018
+-----
+passando da wiki ic p principal a todo vapor
+Seg Abr 16 05:09:08 -03 2018
+-----
+passando wiki de ic p principal, ainda vai + ao menos uma sessao
+Seg Abr 16 05:18:50 -03 2018
+-----
+$$$$$
+
+

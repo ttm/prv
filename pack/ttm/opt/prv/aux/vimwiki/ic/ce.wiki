@@ -1,0 +1,54 @@
+:ce:ec:
+
+https://pt.wikipedia.org/wiki/Computa%C3%A7%C3%A3o_evolucion%C3%A1ria
+https://en.wikipedia.org/wiki/Evolutionary_computation
+https://en.wikipedia.org/wiki/Evolutionary_algorithm
+
+A '''computação evolucionária''' (CE, '''computação evolutiva''', ou mesmo '''biologia evolucionária''')
+é a [[otimização global]] inspirada na [[evolução biológica]].
+Constitui uma [[família de algoritmos]] e é um ramo da
+[[inteligência computacional]] e da [[computação natural]].
+Sistemas de CE resolvem problemas via populações, [[erro e acerto]],
+[[meta-heurística]], ou [[otimização estocástica]].
+Um conjunto inicial de soluções candidatas é gerado e atualizado [[progração estruturada|iterativamente]]: remoção das soluções menos desejadas, inserção de ruído.
+No jargão da área, uma população de soluções é sujeita à [[seleçao natural]]
+ou [[seleção artificial]] e mutação, e portanto
+evolui e adapta, i.e. aumenta o [[fitness]] (função quantiza quão adaptada/desejada é a solução).
+
+A CE é popular na IC por resultar soluções otimizadas
+em um espectro largo de contextos, há muitas variantes e extensões para problemas e [[estruturas de dados]] específicas.
+
+
+== Histórico ==
+A CE surgiu nos anos 1950.
+Nos anos 60, desenvolveu-se na [[programação evolucionária]] (Fogel), [[algoritmos genéticos]] (Holland),
+e [[estratégias de evolução]] (Rachenberg e Schwefel).
+Nos anos 1990 elas foram unificadas como [[computação evolucionária]] e apareceu a [[progração genética]].
+Nas últimas décadas, com o aumento expressivo do poder de computação, a CE pode ser mais amplamente aplicada, inclusive para a evolução de [[POO|programas]] e solução de problemas multidimensionais.
+
+
+== Algoritmo evolucionário ==
+Algoritmos evolucionários (AE): sistemas de CEs marcados por 'seleção' e ('recombinação' e 'mutação') de populações.
+AEs são tipicamente estocásticos.
+Um AE pode ser implementado com as seguintes etapas:
+* Gere uma população inicial (e.g. aleatoriamente)
+* Repita os paços até o término:
+  * Selecione os indivícuos mais aptos para reprodução (e.g. maior fitness)
+  * Gere novos indivíduos a partir dos selecionados (e.g. via [[crossover]] e [[mutação]])
+
+
+selecione a sua população (e.g. aleatoriamente ou os mais desejáveis de uma população prévia)
+
+
+== Outros paradigmas de CE ==
+
+
+
+Ver também
+* Meta-heurística
+* Inteligência de enxame
+
+
+=== Conteúdo não organizado ===
+
+

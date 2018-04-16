@@ -109,3 +109,654 @@ homogeneas:
 
 
 
+de antigo 'estrDados.wiki' ateh {{{
+== Conceito-chave: ponteiro<ref></ref> ==
+Um [[ponteiro]] é um objeto cujo valor aponta para outro valor através de um endereço de memória
+(e.g. da memória RAM).
+A forma como os ponteiros são usados em uma ED, seja explicitamente
+(como em uma lista ligada) ou implictamente (como em um vetor homogêneo),
+evidencia suas propriedades, usos e operações.
+Por exemplo, em uma estrutura ligada, em que cada elemento possui um (ou mais) ponteiro(s)
+para outro(s) elemento(s), os valores podem assumir diferentes tipos e estruturas
+arbitrariamente complexas;
+já com a omissão dos ponteiros, por exemplo em um vetor (sequência de valores de um mesmo tipo),
+a representação fica compacta e muitas vezes favorece o processamento massivamente paralelo,
+como no caso de tensores e outras variantes multidimensionais tão comuns na física, engenharia
+e matemática aplicada em geral.
+
+Mesmo quando ponteiros não são usados diretamente, como em linguagens que não utilizam
+distinção entre ponteiros e outras variáveis (veja o exemplo abaixo),
+a noção de referenciar a uma outra estrutura de dado arbitrária é usada,
+que é canonicamente abordada pela utilização do [[ponteiro (programação)|ponteiro]].
+
+=== Exemplo de discussão a respeito de ponteiros ===
+É usual dizer que linguagens de alto nível, e.g. [[Python]], 
+não utilizam ponteiros.
+Pode-se argumentar que mais fiel aos fatos é considerar que,
+ao menos em Python, os ponteiros são utilizados por padrão</ref>https://stackoverflow.com/questions/13530998/python-variables-are-pointers<ref>:
+
+<source lang="c">
+int a = 1;
+int *b = *a;
+a = 2
+count << *b << endl; # 2
+</source>
+
+<source lang="python">
+# Python 3.5.2:
+a = 1
+b = a
+b = 2
+print(b)  # 2
+
+# além disso:
+l = [3, 4, 5]
+m = l
+l[1] = 8
+print(m)  # [3, 8, 5]
+</source>
+
+São [[referências (programação)]] no jargão de linguagens de programação.
+
+
+=========================
+Uma estrutura de dados (ED), em ciência de computação, é
+uma coleção tanto de valores (e seus relacionamentos) quanto de operações (sobre os valores e estruturas decorrentes).
+É uma implementação concreta de um [[POO|tipo abstrado de dado]] (TAD) ou um [[tipo de dado]] (TD) básico.
+Assim, ED pode ser considerado sinônimo de TD, se considerarmos TAD um hipônimo de TD, isto é, se um TAD for um TD.
+
+Critérios para escolha e estudo de uma estrutura de dados incluem eficiencia para buscas e padrões específicos de acesso,
+necessidades especiais para manejo de grandes volumes (veja [[big data]]),
+ou a simplicidade de implementação e uso (talvez o motivo mais comum da escolha).
+Ou seja, EDs eficientes são chave para a elaboração de algoritmos,
+diversas linguagens possuem ênfase nas EDs, como envidenciado pela [[POO]],
+e aplicações distintas usufruem de ou requerem EDs específicas
+(e.g. um compilador usa uma [[tabela de dispersão]] para
+identificadores e namespaces, uma
+[[árvore-B]] ou [[árvore-AA]] são apropriadas para acessos randômicos).
+
+Em termos de EDs, os TDs e TADs são definidos indiretamente pelas operações
+e usos, e propriedades destas operações e usos: e.g. o custo computacional
+e o espaço que pode representar.
+
+
+== Estruturas de dados canônicas ==
+As EDs usualmente exemplificadas são construídas sob '''TDs primitivos''':
+(fundir com classicos do artigo)
+* 
+
+As EDs são chamadas tipos de dados compostos que dividem-se em '''homogêneos''' ([[Arranjo (computação)|vetores e matrizes]]) e '''heterogêneos''' ([[Registro (ciência da computação)|registros]]):
+* As estruturas homogêneas são conjuntos de dados formados pelo mesmo tipo de dado primitivo. 
+* As estruturas heterogêneas são conjuntos de dados formados por tipos de dados primitivos diferentes (campos do registro) em uma mesma estrutura. 
+A escolha de uma estrutura de dados apropriada pode tornar um problema complicado em um de solução relativamente simples. O estudo das estruturas de dados está em constante desenvolvimento (assim como o de algoritmos), mas, apesar disso, existem certas estruturas clássicas que se comportam como padrões.
+
+
+
+
+
+
+===
+hierarquia aparece na POO e em sistemas de BD pois árvores são usadas para obter
+um custo computacional logaritmico para acesso randomico e melhoras para casos específicos.
+
+
+
+
+== EDs na Web e scripting ==
+Para dados em lista, são apropriados
+métodos de visualização de séries temporais e sequenciais em geral.
+Já para pilhas, a visualização tende a ser:
+
+
+- Um sort, ou média e std ou regex são mais rápidos no endpoint sparql
+ou no Python?
+Decidir até que ponto as operações podem ser feitas no endpoint. Fatores:
+  * processamento no SparQL é confiável até onde?
+  * Quanto mais dado é enviado para o python,
+  mais utiliza-se o trafego na rede.
+  Então a geração de estruturas derivadas
+  em conjunto com a original não é tão interessante.
+  * processamento do SparQL pode ser utilizado para minimar o trafego
+  se não for utilizada a estrutura original.
+
+No Sparql:
+  * Obtenção de redes junto a metadados de vértices e arestas.
+  * Ordenação.
+  * Obtenção de dq:Slice ou dados em segundo algum critério (e.g. âmbito).
+  * Descrição estatítica geral: média, max, min, n de palavras, etc.
+  * Escrever os dados gerados para consulta posterior. (todos?)
+  * ??
+
+No Python:
+  * Realização de histogramas, curve fitting, PCA/MDS
+  * Manutenção e registro de estado dos dados, análises, visualizações e interface (usuário, sessão, etc) no endpoint sparql.
+  * Cálculo de quantís e medidas estatísticas mais elaboradas que a descrição baixada do SparQL (e.g. kurtosis).
+  * Síntese de queries SparQL e arquivos RDF:
+    - Para relacionamentos entre dados, análises, audiovisuaizações e interfaces (DAAI)
+    - Para inferências de relações possíveis em DAAI.
+  * 
+  
+No JavaScript:
+  * layout de redes.
+
+Como prevenir que o usuário faça queries que sobrecarreguem os servidores
+com leitura e escrita? (remoção é na interface por padrão)
+
+
+
+
+TTM
+== Vocabulário essencial ==
+Estruturas de dados são em geral concebidas, estudadas e implementadas
+com base em tipos básicos e compostos de dados (de tipos básicos).
+Há outras classificações ubíquas, e.g. dados lineares são sequências
+de valores (como imagens, sons, etc), estruturas homogêneas consistem
+de valores de um mesmo tipo, em oposição às heterogêneas.
+
+'Dados relacionais' é um termo ambíguo: pode se referir a dados
+representados em um banco de dados relacional (e.g. MySQL PostgreSQL)
+ou a dados caracterizados pelas relações duais/binárias/dicotômicas,
+paradigmaticamente conmpreendidos como [[grafos]]/redes..
+
+Em consonância com as atuais recomendações da [[W3C]], dados são preferivelmente representados em RDF
+e conectados à nuvem semântica global (i.e. ao Grafo Gigante e Global<ref></ref>
+de [[dados ligados]]<ref></ref>),
+motivo pelo qual os exemplos neste artigo são de preferência escritos em RDF e [[SparQL]].
+Pela facilidade e adoção ampla, exemplos JSON-compatíveis (como em [[Javascript]], [[Python]], [[VimL]], etc)
+são também incentivados, embora seja pertinente explicitar como a estrutura é de fato utilizada na linguagem,
+e.g. <code>val = lista[i%len(lista)]</code> é a implementação usual de uma lista ligada em Python,
+e deve ser mantida inclusive quando há muitas consultas, com o uso do [[Numpy]]/[[Scipy]] que utiliza as rotinas
+em Fortran do Blas e LAPACK, otimizados desde as primeiras décadas de programação de [[computadores Turing completas]].
+
+As implementações úteis destas estruturas de dados, mesmo em linguagens de baixo nível como C/C++,
+em geral estão nas bibliotecas padrão de cada linguagem.
+É importante entender estas classificações gerais, pois explicitam conceitos-chave
+na lida com dados em geral.
+
+== Verbetes ==
+Uma [[estrutura linear de dados]] é uma sequência de valores,
+em geral de mesmo tipo.
+Isto é, muitas vezes uma ELD é também uma [[estrutura homogênea de dados]].
+Algumas estruturas de dados são básicos/padrão para cada linguagem,
+e em geral há também recursos para formar estruturas compostas/elaboradas de dados,
+que se baseiam nos dados básicos.
+
+TTM
+# 01 - Listas
+Listas lineares: pilhas, filas, filas duplas; filas de prioridade; alocação sequencial e alocação ligada; listas circulares; listas duplamente ligadas; matrizes e listas ortogonais; skip lists OK01 
+
+Muitas vezes, as estruturas padrão são chamadas de tipos de dados,
+as elaboradas pelo programa são chamadas tipos abstratos de dados,
+nomenclatura estabelecida na [[POO]].
+Neste paradigma, as estruturas de dados (chamados de [[atributos]])
+são encapsuladas por [[objetos]]
+e interfaceadas através de [[rotinas]] (chamadas de [[métodos]]).
+Desta forma, há uma abstração desta manipulação direta dos dados,
+própria da linguagem e dos TDs, por isso o nome TAD.
+
+O estudo de estruturas de dados consiste na observação e projeto de
+representações dos dados e das operações sobre estes dados na representação escolhida.
+A fim de exemplificação, é costume utilizar classes, p.ex. em Python,
+com métodos e atributos, para representar as estruturas de dados consideradas canônicas.
+E.g.:
+
+lista ligada com classe p elemento e p lista
+
+Na prática, um programador muito raramente implementa estas estruturas diretamente.
+Mais ainda: enquanto não é necessário, são utilizados TDs genéricos da linguagem,
+como listas de dicionários em Python,
+em detrimento dos TDs que são exemplificados na teoria.
+e.g. potencialmente melhores para custo computacional.
+
+== JSON-compatível ==
+Os dados são preferencialmente mantidos nas estruturas de listas e de dicionários,
+e há distinção entre os tipos básicos numéricos (e.g. floats e ints), e textuais (e.g. chars e strings).
+
+A maior limitação prática desta abordagem é o processamento de vetores multidimensionais,
+motivo pelo qual há bibliotecas com implementações otimizadas.
+
+Quando um valor pode ser uma função/rotina, tal objeto permite a representação de
+objetos para a [[POO]].
+
+Embora o padrão lista+dicionário de representação de estruturas de dados esteja aqui utilizada
+de forma genérica, [[JSON]] quer dizer Javascript Object Notation, e é um padrão muito bem definido
+de representação de dados, ao qual e.g. Python, VimL, e o próprio Javascript, com frequência se adequam para
+transferir ou armazenar dados.
+
+TTM
+== Exemplo de estruturas canônicas e conceitos básicos ==
+
+lista ligada em rdf, python, viml
+
+dicionario hash
+
+
+== Taxonomia de estruturas de dados canônicas ==
+Pode-se dizer que, 
+na PE as variáveis são chaves cujos valores são TDs.
+enquanto na POO são TDs ou TADs.
+Estas TDs são em geral concebidos em termos das
+seguintes estruturas de dados<ref></ref>:
+
+ligadas:
+
+heterogêneas:
+
+lineares:
+
+homogeneas:
+
+
+== veja também ==
+
+== links externos ==
+
+{{referencias}}
+
+
+
+
+TTM
+== lombra ==
+
+Contemplar também as visualizações em:
+https://www.cs.usfca.edu/~galles/visualization/Algorithms.html
+Outras fontes?
+
+Linked lists:
+o fundamento é manter um ponteiro/referência/registro para
+cada elemento seguinte e para o primeiro elemento da lista ligada.
+
+  
+Possibilidades imediatas:
+sonificar as visualizações geradas
+
+Relacionar com as estruturas sociais pelo tipo de dado gerado
+e as visualizações geradas.
+Relacionar os tipos de dados aos utilizados em SparQL e RDF em geral.
+Relacionar com a obtenção de dados de um certo tipo
+(rede de interações a partir de emails
+e medidas topológicas, textuais.
+Calcular/estimar ou ao menos apontar os potenciais ganhos
+em performance para uma utilização,
+para uma sequência de utilizações,
+para um grupo de pesquisa,
+para institutos e para a sociedade com acesso à Web.
+Justificar a discussão da escala pelo artigo
+do Chu no arXiv.
+
+
+
+
+
+
+== percepção de estruturas de dados ==
+No código, metáforas visuais, visualizações
+em video, dançadas, animações, aplicativos online como os da UFSCar.
+
+Veja [[analítica audiovisual]]<ref nome="AAVO">https://arxiv.org/abs/1710.09954</ref>.
+
+
+== template para formalização de conhecimento sobre uma ED ==
+Observada a literatura<ref></ref>,
+um vocabulário sobre EDs pode seguir o seguinte padrão:
+*) Vocabulário em português e inglês e definições e relações entre vocábulos.
+Passível de formalização como vocabulário SKOS.
+
+(CONCEITO)
+termos pt-br
+termos en
+definição
+
+(CONCEITO)
+termos pt-br
+termos en
+definição
+
+*) Descrição geral da teoria básica relacionada ao item
+*) Tipos de dados relacionados
++ características abstratas (sequência ou conjunto de valores, dicionário, etc)
++ proveniências (áudio, redes sociais, etc)
+*) Importância do item e limitações
+*) Demais notas teóricas
+*) Implementações em Pseudocódigo
+*) Ontologias:
+(diagramas de conceitualização passível de formalização ontológica em OWL,
+utilizável por máquina para realizar inferências, tomada de decisão e consulta aos dados
+útil para discussões teoricas precisas)
++ Do item sorteado
++ Do item sorteado com relação à ciência da computação
++ Do item sorteado com relação a técnicas de análise, tipos de dados e visualizações
++ Do item sorteado com relação a todos os itens propostos para o concurso
+*) Nota histórica
++ origens
++ percurso
++ estado atual da teoria e implementações
+*) Problemas típicos e soluções canônicas
+*) Aplicações clássicas
+*) Exercícios interessantes
+*) Usos em aprendizado de máquina, classificação e otimização; Medições
+*) Visualizações de informação de dados relacionados ao item. Visualizações/diagramas/imagens pertinentes para a teoria do item.
+*) Usos artísticos e educacionais de representações audiovisuais do item; música
++ encontrados na literatura e outros artefatos audiovisuais
++ potenciais
+*) Software para implementação. Implementações em linguagens de programação (Python, Scheme, Javascript, Java, C/C++, Fortran, Bash, Vimscript, ChucK, SuperCollider, PD)
+*) Bibliografia
++ Livros
++ Artigos recentes que utilizam o item ou sobre desenvolvimentos no item.
+TTM
+
+
+
+=== INTRO TTM
+arvores de arquivos, pastas e diretorios, como estrutura de dados básica de sistemas Unix.
+
+===
+Lista de Temas da Prova escrita e Prova didática:
+1. Listas lineares: pilhas, filas, filas duplas; *filas de prioridade*; alocação sequencial e alocação ligada; listas circulares; listas duplamente ligadas; matrizes e listas ortogonais; skip lists OK01 
+(faltam filas duplas, listas circulares, matrizes e listas ortogonais e skip lists)
+2. Árvores: terminologia, representação; algoritmos de manipulação e percursos em árvores binárias. Árvores de busca binária; árvores de busca AVL; árvores rubro-negras de busca; árvore de busca ótima; B-árvores. OK
+3. Tabelas de espalhamento (hash tables) OK1
+4. Implementação de estruturas de dados em disco ?
+5. Grafos: representações, busca em largura, busca em profundidade e suas aplicações OK
+6. Algoritmos de ordenação em memória primária e em memória secundária e suas complexidades OK01 (como abordar memória pimária e secundária?)
+8. Técnicas de projetos de algoritmos: programação dinâmica e backtracking OK1
+9. Técnicas de projetos de algoritmos: divisão e conquista e algoritmos gulosos OK1
+10. Técnicas de projetos de algoritmos: Problemas NP-Completos OK
+
+7. Problema do caminho mínimo em grafos e suas variações: principais algoritmos e suas complexidades OK
+ djstra
+
+
+Bibliografia Recomendada
+CORMEN, T. H.; LEISERSON, C.E.; RIVEST, R.L.; Algoritmos: Teoria e Prática. Editora Campus, Tradução da 2ª edição americana, 2002.
+Cormen, Thomas H., Charles E. Leiserson, Ronald L. Rivest, and Clifford Stein.Introduction to algorithms. Vol. 2. Cambridge: MIT press, 2001.
+Dasgupta, Sanjoy, Christos H. Papadimitriou, and Umesh Vazirani. Algorithms. McGraw-Hill, Inc., 2006.
+ZIVIANI, N.; Projeto de Algoritmos com implementação em Java e C++. Editora Thomson, 1ª edição, 2006.
+
+MOOCs:
+*) https://www.coursera.org/specializations/data-structures-algorithms
+*) https://www.coursera.org/specializations/algorithms
+*) https://www.coursera.org/learn/algorithms-part1
+*) https://www.coursera.org/learn/algorithms-part2
+*) https://www.coursera.org/learn/analysis-of-algorithms
+*) https://www.youtube.com/playlist?list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb
+
+
+EDs para processamento paralelo.
+
+Tópicos avançados: http://www.cs.cornell.edu/people/kopylov/papers/thesis/thesis.pdf
+
+Pode-se considerar a Mãquina de Turing como um paradigma genérico de ED<ref>https://www.quora.com/Is-there-a-theory-of-data-structures</ref>.
+
+=========
+
+discorrer sobre grafos e árvores.
+
+However, there are certainly many common themes in the design of data structures. For example, the principle of hierarchically organizing data shows up in BSTs, other kinds of search trees, segment trees, range trees, skip lists, and more. The principle of caching recently-used data comes up in several contexts such as splay trees, data structure combinations such as LinkedHashMap that are used for implementing LRU caches, and optimizations to other data structures (e.g. get min/max of a BST in O(1)). The idea of partitioning data into buckets comes up in radix trees, quadtrees, hash tables, and van Emde Boas trees.
+
+Many data structures are inspired by ideas from other data structures or algorithms. For example, we could see the BST as a dynamic version of quicksort, the radix tree as a dynamic version of radix sort, the range tree as a type of segment tree, and the B-tree as a generalization of 2–3–4 trees.
+
+Another point to consider is that there are sometimes general statements we can prove, within a particular model of computation, about all data structures. Results about lower bounds would be an example of this.
+
+
+
+
+
+============
+Estes exemplos de EDs estão em [ttm/concursos/rdf/estruturasdedados.rdf|RDF/XML aqui], no namespace e padrão SKOS
+para vocabulários, em [ttm/|tut=turtle aqui]:
+
+tabela com o vocabulario
+
+
+exemplificar o erro mais comum impeditivo: iteracao sobre vetores multidimensionais.
+Mostrar o timeit no ipython de for em array numpy e a diferenca p lista e diferenca p
+operacao mais adequada, que aproveita a homogeneidade dos dados e operacao.
+Ou seja, é muitas vezes necessário tomar proveito das implementações com
+suporte à [[concorrência]].
+
+
+opaque data types
+
+há também estruturas de dados apropriadas para uso em memória lenta (e.g. de um disco rígido),
+para RAM ou registradores do processador.
+
+registro: significado é outro significante se utilizado o signo de Saussure.
+
+
+============
+
+de antigo 'estDadosT.wiki' ateh {{{
+[[Ficheiro:binary tree.svg|right|192|thumb|Uma [[árvore binária]] é uma estrutura de dados.]]
+
+Uma '''estrutura de dados''' (ED), em ciência de computação, é
+uma coleção tanto de valores (e seus relacionamentos) quanto de operações (sobre os valores e estruturas decorrentes).
+É uma implementação concreta de um [[POO|tipo abstrado de dado]] (TAD) ou um [[tipo de dado]] (TD) básico.
+Assim, ED pode ser considerado sinônimo de TD, se considerarmos TAD um hipônimo de TD, isto é, se um TAD for um TD.
+
+Critérios para escolha e estudo de uma estrutura de dados incluem eficiencia para buscas e padrões específicos de acesso,
+necessidades especiais para manejo de grandes volumes (veja [[big data]]),
+ou a simplicidade de implementação e uso (talvez o motivo mais comum da escolha).
+Ou seja, EDs eficientes são chave para a elaboração de algoritmos,
+diversas linguagens possuem ênfase nas EDs, como envidenciado pela [[POO]],
+e aplicações distintas usufruem de ou requerem EDs específicas
+(e.g. um compilador usa uma [[tabela de dispersão]] para
+identificadores e namespaces, uma
+[[árvore-B]] ou [[árvore-AA]] são apropriadas para acessos randômicos).
+
+Em termos de EDs, os TDs e TADs são definidos indiretamente pelas operações
+e usos, e propriedades destas operações e usos: e.g. o custo computacional
+e o espaço que pode representar.
+
+
+== Relevância para a Ciência da Computação ==
+Na [[ciência da computação]], uma ED é um modo particular de [[armazenamento]] e organização de [[dados]] em um computador de modo que possam ser usados eficientemente, facilitando sua busca e modificação.<ref>Paul E. Black (ed.), ''Data structure''. ''Dictionary of Algorithms and Data Structures. U.S. National Institute of Standards and Technology, 2004. [http://xlinux.nist.gov/dads/HTML/datastructur.html Versão online] .''</ref><ref>''Data structure''. [[Encyclopædia Britannica]] (2009) [http://www.britannica.com/EBchecked/topic/152190/data-structure Online]</ref>
+EDs e [[algoritmo]]s são temas fundamentais da [[ciência da computação]], sendo utilizados nas mais diversas áreas do conhecimento e com os mais diferentes propósitos de aplicação. Sabe-se que algoritmos manipulam dados. Quando estes dados estão organizados (dispostos) de forma coerente, caracterizam uma forma, uma '''estrutura de dados'''. A organização e os métodos para manipular essa estrutura é que lhe conferem singularidade e diminuição do espaço ocupado pela memória RAM, além (potencialmente) de tornar o código-fonte do programa mais enxuto e simplificado.
+
+=== Conceito-chave: ponteiro ===
+Um [[ponteiro (programação)|ponteiro]] é um objeto cujo valor aponta para outro valor através de um endereço de memória
+(e.g. da memória RAM).
+A forma como os ponteiros são usados em uma ED, seja explicitamente
+(como em uma lista ligada) ou implictamente (como em um vetor homogêneo),
+evidencia suas propriedades, usos e operações<ref name=Corben>CORMEN, T. H.; LEISERSON, C.E.; RIVEST, R.L.; Algoritmos: Teoria e Prática. Editora Campus, Tradução da 2ª edição americana, 2002.</ref><ref>Dasgupta, Sanjoy, Christos H. Papadimitriou, and Umesh Vazirani. Algorithms. McGraw-Hill, Inc., 2006.</ref><ref>ZIVIANI, N.; Projeto de Algoritmos com implementação em Java e C++. Editora Thomson, 1ª edição, 2006.</ref>.
+Por exemplo, em uma estrutura ligada, em que cada elemento possui um (ou mais) ponteiro(s)
+para outro(s) elemento(s), os valores podem assumir diferentes tipos e estruturas
+arbitrariamente complexas;
+já com a omissão dos ponteiros, por exemplo em um vetor (sequência de valores de um mesmo tipo),
+a representação fica compacta e muitas vezes favorece o processamento massivamente paralelo,
+como no caso de tensores e outras variantes multidimensionais tão comuns na física, engenharia
+e matemática aplicada em geral.
+
+Mesmo quando ponteiros não são usados diretamente, como em linguagens que não utilizam
+distinção entre ponteiros e outras variáveis (veja o exemplo abaixo),
+a noção de referenciar a uma outra estrutura de dado arbitrária é usada,
+que é canonicamente abordada pela utilização do [[ponteiro (programação)|ponteiro]].
+
+==== Exemplo de discussão a respeito de ponteiros ====
+É usual dizer que linguagens de alto nível, e.g. [[Python]], 
+não utilizam ponteiros.
+Pode-se argumentar que mais fiel aos fatos é considerar que,
+ao menos em Python, os ponteiros são utilizados por padrão<ref>https://stackoverflow.com/questions/13530998/python-variables-are-pointers</ref>:
+
+<source lang="c">
+int a = 1;
+int *b = *a;
+a = 2
+count << *b << endl; # 2
+</source>
+
+<source lang="python">
+# Python 3.5.2:
+a = 1
+b = a
+b = 2
+print(b)  # 2
+
+# além disso:
+l = [3, 4, 5]
+m = l
+l[1] = 8
+print(m)  # [3, 8, 5]
+</source>
+
+São [[referência (programação)|referências]] no jargão de linguagens de programação.
+
+== EDs na Web e scripting ==
+
+== sobre EDs p stripting ==
+Usar decorator no python para que os códigos
+possam estar vinculados à ontologia facilmente.
+Como fazer no Javascript?
+
+== Estruturas de dados canônicas ==
+Como evidenciado neste artigo, reconhecida a utilidade da teoria,
+é pertinente que o programador pondere se há
+ganho no uso destas estruturas de dados e.g. em Python ou Javascript.
+De todo modo, a reimplementação destas estruturas é desaconselhada
+quando há EDs correspondentes disponibilizadas pela linguagem por padrão,
+pois costumeiramente apresentam otimizações diversas.
+Esta orientação é válida até mesmo para linguagens consideradas de baixo nível,
+como [[C]], [[C++]], e [[Fortran]].
+
+=== JSON-compatível ===
+Os dados são preferencialmente mantidos nas estruturas de listas e de dicionários,
+e há distinção entre os tipos básicos numéricos (e.g. floats e ints), e textuais (e.g. chars e strings).
+
+A maior limitação prática desta abordagem é o processamento de vetores multidimensionais,
+motivo pelo qual há bibliotecas com implementações otimizadas.
+
+Quando um valor pode ser uma função/rotina, tal objeto permite a representação de
+objetos para a [[POO]].
+
+Embora o padrão lista+dicionário de representação de estruturas de dados esteja aqui utilizada
+de forma genérica, [[JSON]] quer dizer Javascript Object Notation, e é um padrão muito bem definido
+de representação de dados, ao qual e.g. Python, VimL, e o próprio Javascript, com frequência se adequam para
+transferir ou armazenar dados.
+
+Para dados em lista, são apropriados
+métodos de visualização de séries temporais e sequenciais em geral.
+Já para pilhas, a visualização tende a ser:
+
+
+=== Considerações sobre processamento e transferência ===
+- Um sort, ou média e std ou regex são mais rápidos no endpoint sparql
+ou no Python?
+Decidir até que ponto as operações podem ser feitas no endpoint. Fatores:
+  * processamento no SparQL é confiável até onde?
+  * Quanto mais dado é enviado para o python,
+  mais utiliza-se o trafego na rede.
+  Então a geração de estruturas derivadas
+  em conjunto com a original não é tão interessante.
+  * processamento do SparQL pode ser utilizado para minimar o trafego
+  se não for utilizada a estrutura original.
+
+No Sparql:
+  * Obtenção de redes junto a metadados de vértices e arestas.
+  * Ordenação.
+  * Obtenção de dq:Slice ou dados em segundo algum critério (e.g. âmbito).
+  * Descrição estatítica geral: média, max, min, n de palavras, etc.
+  * Escrever os dados gerados para consulta posterior. (todos?)
+  * ??
+
+No Python:
+  * Realização de histogramas, curve fitting, PCA/MDS
+  * Manutenção e registro de estado dos dados, análises, visualizações e interface (usuário, sessão, etc) no endpoint sparql.
+  * Cálculo de quantís e medidas estatísticas mais elaboradas que a descrição baixada do SparQL (e.g. kurtosis).
+  * Síntese de queries SparQL e arquivos RDF:
+    - Para relacionamentos entre dados, análises, audiovisuaizações e interfaces (DAAI)
+    - Para inferências de relações possíveis em DAAI.
+  * 
+  
+No JavaScript:
+  * layout de redes.
+
+Como prevenir que o usuário faça queries que sobrecarreguem os servidores
+com leitura e escrita? (remoção é na interface por padrão)
+
+
+
+== Taxonomia de estruturas de dados canônicas ==
+Pode-se dizer que, 
+na [[PE]] as variáveis são chaves cujos valores são TDs.
+enquanto na [[POO]] são TDs ou TADs.
+Estas TDs são em geral concebidos em termos das
+seguintes estruturas de dados<ref name="Cormen"></ref>:
+
+ligadas:
+
+heterogêneas:
+
+lineares:
+
+homogeneas:
+
+
+=== Estruturas de dados clássicas ===
+==== Vetores ou ''arrays'' ====
+{{Ver artigo principal|[[Array]]}}
+'''Vetores''' ou '''''arrays''''' são estruturas de dados lineares e estáticas, isto é, são compostas por um número fixo (finito) de elementos de um determinado [[tipo de dados]]. O tempo de acesso aos elementos de um vetor é muito rápido, sendo considerado constante: o acesso aos elementos é feito pelo seu índice no vetor. Porém, a remoção de elementos pode ser custosa se não for desejável que haja espaços "vazios" no meio do vetor, pois nesse caso é necessário "arrastar" de uma posição todos os elementos depois do elemento removido.
+
+Essa é uma estrutura muito recomendada para casos em que os dados armazenados não mudarão, ou pouco mudarão, através do tempo.
+
+=== Lista ===
+{{Ver artigo principal|[[Lista]]}}
+
+Uma Lista é uma estrutura de dados linear. Uma [[lista ligada]], também chamada de encadeada, é linear e dinâmica, é composta por nós que apontam para o próximo elemento da lista, o último elemento apontará para nulo. Para compor uma lista encadeada, basta guardar seu primeiro elemento.
+
+=== Fila ===
+{{Ver artigo principal|[[FIFO]]}}
+As filas são estruturas baseadas no princípio '''FIFO''' (''first in, first out''), em que os elementos que foram inseridos no início são os primeiros a serem removidos. Uma fila possui duas funções básicas: '''ENQUEUE''', que adiciona um elemento ao final da fila, e '''DEQUEUE''', que remove o elemento no início da fila.
+A operação '''DEQUEUE''' só pode ser aplicada se a fila não estiver vazia, causando um erro de '''underflow''' ou fila vazia se esta operação for realizada nesta situação.
+
+=== Pilha ===
+{{Ver artigo principal|[[LIFO]]}}
+A [[Pilha (informática)|pilha]] é uma estrutura de dados baseada no princípio LIFO (LAST in, FIRST out''), na qual os dados que foram inseridos primeiros na pilha serão os últimos a serem removidos. Existem duas funções que se aplicam a todas as pilhas: '''PUSH''', que insere um dado no topo da pilha, e '''POP''', que remove o item no topo da pilha.
+
+=== Árvore ===
+{{Ver artigo principal|[[Árvore (estrutura de dados)]]}}
+Uma árvore é uma estrutura de dados em que cada elemento tem um ou mais elementos associados,
+podendo definir-se uma árvore recursivamente como:
+
+# uma estrutura (uma árvore);
+# um nó (designado por raiz), que contém a informação a armazenar e um conjunto finito de árvores (as sub-árvores).
+
+
+Cada árvore tem apenas uma raiz. Além disso, os elementos associados a cada nó são habitualmente chamados de ''filhos'' desses nós.
+Os nós sem filhos de uma árvore são chamados de folhas.
+
+==== Árvores binárias ====
+{{Ver artigo principal|[[Árvore binária]]}}
+Uma árvore binária é uma árvore em que cada nó tem no máximo dois filhos. São muito utilizadas como estruturas de buscas, como [[Árvore de busca binária|árvores de busca binária]] e [[Árvore AVL|árvores AVL]].
+
+=== Grafo ===
+{{Ver artigo principal|Grafo}}
+A estrutura de grafos pode ser usada em situações onde é necessária a representação de dados complexos e estruturados de formas não convencionais. Algumas situações são observadas em mapas rodoviários, circuitos elétricos, dentre outras.
+
+=== Deque ===
+{{Ver artigo principal|[[Deque (estruturas de dados)]]}}
+
+=== Tabela de hashing ===
+{{Ver artigo principal|[[Tabela de hashing]]}}
+
+{{Referências}}
+
+<br>
+Livro: Estruturas de Dados, Autor: Paulo Veloso/Cleusio dos Santos/Paulo Azeredo/Antonio Furtado, 1984, Editora Campus, ISBN 85-7001-352-3
+<br>
+
+== {{Veja também}} ==
+
+* [[Lista de estruturas de dados]]
+* [[Modelagem de dados]]
+* [[Lista de termos relacionados aos Algoritmos e Estruturas de Dados]]
+* [[Arquitetura de dados]]
+
+{{Estrutura de dados}}
+
+[[Categoria:Ciência da computação]]
+[[Categoria:Estruturas de dados| ]]
+
+
+
+

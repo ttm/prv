@@ -1,0 +1,41 @@
+:am:ml:
+
+~ aprendizado de máquina ~
+
+Ramo da IA que trata de aprendizado.
+
+== Base teórica ==
+===  paralelo/metáfora ===
+mundo -> operação sobre o mundo
+Dados -> etiquetação, previsão, etc.
+
+
+=== Pilares sup-unsup ===
+
+
+=== Fundamento bayesiano/estatístico e natural ===
+bayesiano: [[ib]]
+natural: [[cn]]
+
+Ver como encaixar SVM aqui.
+
+=== Distinção da IC: soft e hard computing ===
+Métodos de AM que exploram [[imprecisão]] são, por definição,
+pertencentes ao [[sc]] e à [[ic]].
+ 
+! Exemplo de exploração de imprecisão.
+
+== Para contribuir no artigo da wikipédia ==
+- inserção dos métodos listados nos livros [[ld]], [[ep]], [[cn]]
+- linkar apropriadamente com [[ed]] [[poo]] [[ic]] e outras contribs q chancelo, potencialmente com parágrafos dedicados dando contexto [[am]] -> artigo
+- 
+
+
+= aprendizado de maquina estatístico =
+:ame:sml:
+
+documento base:
+[[local:~/Documents/ebooks/ufabc/Sugiyama, Masashi-Introduction to Statistical Machine Learning-Morgan Kaufmann (2016).pdf]]
+
+
+

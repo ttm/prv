@@ -1,0 +1,133 @@
+:cc:
+
+IC para cognição no computador
+
+Sistemas que não computacionais como rne:
+material com função de transferência de propriedades
+que o Rodolfo queria usar. Cálculo rápido, função não linear.
+
+
+A '''computação cognitiva''' (CC) é a utilização da [[inteligência computacional]] (IC) para auxiliar
+na [[tomada de decisão]] humana.
+Calcada nas disciplinas de [[IA]] e [[processamento de sinais]],
+os sistemas de CC abrangem [[aprendizado de máquina]], [[inferência automatizada]], [[processamento de linguagem natural]], [[reconhecimento de fala]],
+[[visão computacional]] (e.g. [[reconhecimento de objetos]]),
+e [[HCI]].<ref name=":02"/><ref>Augmented intelligence, helping humans make smarter decisions. Hewlett Packard Enterprise. http://h20195.www2.hpe.com/V2/GetPDF.aspx/4AA6-4478ENW.pdf</ref>
+
+== Características gerais ==
+Há dissenso na definição de CC, seja na academia ou na indústria,
+mas em geral o termo se refere à [[hardware]] ou [[software]] inspirado
+no cérebro ou mente humana
+(um traço de [[computação natural]] característico da [[IC]])
+para [[suporte computacional|suporte]] à [[tomada de decisão]] realizada por humanos.
+Neste sentido, a CC se aproxima especialmente da cognição humana,
+sendo modelada pelo e modelando o comportamento humano através
+de estimulos potencialmente também utilizados por humanos
+(e.g. processamento de espectro audível e visível).
+As aplicações reunem [[análise de dados]] com [[interfaces adaptativas de usuário]] (''adaptive user interface'', AUI) para especialização em audiências e contextos e buscam afetividade e influência por [[projeto de software|projeto]] (design).
+<ref name=":02">{{Cite web|url=http://www.research.ibm.com/software/IBMResearch/multimedia/Computing_Cognition_WhitePaper.pdf|title=Computing, cognition and the future of knowing|last=Kelly III|first=Dr. John|date=2015|website=IBM Research: Cognitive Computing|publisher=IBM Corporation|access-date=February 9, 2016}}</ref><ref name=":1">{{Cite web|url=http://www.research.ibm.com/cognitive-computing/|title=IBM Research: Cognitive Computing}}</ref><ref name=":2">{{Cite web|url=https://synthexis.com/cognitive-computing/|title=Cognitive Computing}}</ref>
+<ref>{{cite web|url=http://labs.hpe.com/research/next-next/brain/|title=Hewlett Packard Labs|publisher=}}</ref><ref>Terdiman, Daniel (2014) .IBM's TrueNorth processor mimics the human brain.http://www.cnet.com/news/ibms-truenorth-processor-mimics-the-human-brain/</ref><ref>Knight, Shawn (2011). ''[http://www.techspot.com/news/45138-ibm-unveils-cognitive-computing-chips-that-mimic-human-brain.html IBM unveils cognitive computing chips that mimic human brain]'' TechSpot: August 18, 2011, 12:00 PM</ref><ref>Hamill, Jasper (2013). ''[https://www.theregister.co.uk/2013/08/08/ibm_unveils_computer_architecture_based_upon_your_brain/ Cognitive computing: IBM unveils software for its brain-like SyNAPSE chips]'' The Register: August 8, 2013</ref><ref name="Denning">{{cite journal|year=2014|title=Surfing Toward the Future|journal=Communications of the ACM|volume=57|issue=3|pages=26–29|doi=10.1145/2566967|author=Denning. P.J.}}</ref><ref>{{cite paper
+  | author = Dr. Lars Ludwig
+  | title = Extended Artificial Memory. Toward an integral cognitive theory of memory and technology.
+  | publisher = Technical University of Kaiserslautern
+  | year = 2013
+  | url = https://kluedo.ub.uni-kl.de/frontdoor/index/index/docId/3662
+  | format = pdf
+  | accessdate = 2017-02-07}}</ref> (2004) and helps to improve human decision-making.<ref>{{cite web|url=http://www.hpl.hp.com/research/|title=Research at HP Labs|publisher=}}</ref>
+
+Algumas características de CCs:
+* [[Adaptação]]: [[aprendizado online]] com [[dado]]s (e.g. de [[sensor]]es) e modelos (objetivo, requisitos), potencialmente em [[tempo real]].<ref name="Ferrucci">Ferrucci, D. et al. (2010) Building Watson: an overview of the DeepQA Project. Association for the Advancement of Artificial Intelligence, Fall 2010, 59–79.</ref> 
+* [[Interatividade]]: coforto e facilidade para o usuário. Podem interagir com sensores e outros dispositivos (veja [[IoT]]), serviços em [[computação em nuvem|nuvem]] e outras pessoas.
+* [[Programação estruturada|Iteratividade]] e [[persistência (computação)|persistência]]: podem iterativamente realizar buscas perante interação com o usuário ou outro sistema.
+* Considera [[contexto]]: potencialmente identificam e extraem elementos contextuais tais como [[significado]], sintáxe, tempo, localização, etc., potencialmente via [[dados ligados]] na [[web semância]]. Podendo recorrer a múltiplas fontes de [[informação]], incluindo [[dados estrutura de dados|estruturada]] (e.g. [[RDF]]) e [[dados não estruturados|não estruturada]] (e.g. input visual/luz e auditivo/som, texto e hipertexto).<ref>Deanfelis, Stephen (2014). ''[https://www.wired.com/insights/2014/04/will-2014-year-fall-love-cognitive-computing/ Will 2014 Be the Year You Fall in Love With Cognitive Computing?]'' Wired: 2014-04-21</ref>
+
+== Analítica cognitiva ==
+Plataformas de CC são tipicamente especializadas em [[big data]],
+i.e. na análise/mineração de grandes quantidades de dados não estruturados.
+É característica da IC o aprendizado não-supervisionado (i.e. ou com ênfase em, ou semi-estruturado),
+permitindo que documentos de texto, áudio, imagem, video,
+muitas vezes formando [[estruturas de dado]]s elaboradas como na [[análise de redes sociais]],
+sejam utilizados sem [[etiquetação]] prévia.
+Esta não-necessidade de etiquetação é apontada como a principal vantagem
+da Analítica Cognitiva (AC) sobre métodos tradicionais de [[big data]].<ref>{{Cite web|url=https://public.deloitte.com/media/analytics/pdfs/us_da_3min_guide_cognitive_analytics.pdf|title=Cognitive analytics - The three-minute guide|last=|first=|date=2014|website=|archive-url=|archive-date=|dead-url=|access-date=2017-08-18}}</ref><ref>{{Cite web|url=https://www.quora.com/What-is-cognitive-analytics|title=What is cognitive analytics? - Quora|website=www.quora.com|language=en|access-date=2017-08-18}}</ref>.
+
+Outras características da AC incluem:
+* [[Adaptação]]: a diferentes contextos, com supervisão humana minimizada, via [[inteligência computacional]].
+* Interatividade de [[língua natural]]: realizada através de um [[bot]]<ref>Descrição dos bots utilizados no Laboratório Macambira, 2011, disponível em:</ref>, paradigmaticamente.
+
+A analítica cognitiva pode interfacear com o usuário através
+da [[analítica audiovisual]] para saída (entrada para o sistema-usuário),
+[[processamento de sinais]] para entrada (saída para o sistema-usuário),
+e [[inteligência computacional]] (IC) para análise e tomada de decisão.<ref>AAVO</ref><ref>Trabalho de referência sobre HCI e visualização</ref><ref>Oppeheim, Signal processing</ref>.
+
+== Complexidade ==
+A lida com sistemas reais usualmente implica na lida com [[sistemas complexos]], i.e. constituídos de diversas
+partes que, em conjunto, apresentam [[comportamento emergente]].
+Sistemas complexos, em especial as [[redes complexas]], tendem a apresentar
+distribuições sem escala (também 'livres de escala' ou 'de [[escala livre]]').
+Há muitas outras [[não-linearidades]], [[transições de fase]], e [[clusterização|clusterizaçòes]]
+pouco intuitivas, [[fractal|fractalidades]], propriedades [[caos|caóticas]], em [[sistemas complexo]]s, sejam eles
+livres ou não de escala (i.e. apresentando ou não uma [[lei de potência]] na
+[[distribuição de probabilidade|distribuição]] de [[conectividade]]).<ref>Fabbri, Renato, et al. "Temporal stability in human interaction networks." Physica A: Statistical Mechanics and its Applications 486 (2017): 92-105.</ref><ref>Newman, Mark. Networks: an introduction. Oxford university press, 2010.</ref>
+
+A teoria promovida pelo [[SFI]]
+(o Santa Fe Institute promove a [[pesquisa científica|pesquisa]]
+em [[complexidade]] desde a década de [[1980]])
+assume que um [[sistema complexo]]
+possui definições não consensuais.
+Que, são constituídos de diversas partes e
+apresentam comportamento emergente,
+e possuem uma combinação destas características:
+[[adaptação|comportamento adaptativo]], [[sitema de informação|processam informação]], podem se [[reprodução|reproduzir]], são integrados a outros sistemas complexos, é integrado em si.
+Veja a [[|nota lúdica sobre IC]] para uma reflexão tecnológica e filosófica.
+Neste sentido, no contexto atual (março, 2018), o [[big data]] encontra a [[computação cognitiva]], e chega ao nosso cotidiano via a [[IoT]], de forma a [[inferência bayesiana|evidenciar]], reforçar, erigir, ou destruir [[sistema complexo|sistemas complexos]].<ref>MOOC sobre complexidade, Santa Fe Institute, 2018</ref>
+
+== Computação natural ==
+A [[computação natural]] contribui para a CC principalmente
+com os algoritmos [[computaçãob bioinspirada|bioinspirados]]
+capazes de [[aprendizado]] e [[predição]] superior ou complementar à [[inferência bayesiana]],
+Possuem uma valoração (de mercado, conceitual, acadêmica, artística)
+inerente à transdisciplinaridade e trato de conceitos como [[vida]] e [[inteligência]].<ref name="natural">CASTRO, L. N. Fundamentals of Natural Computing: Basic Concepts, Algorithms, and Applications, CRC Press, 2006.</ref>
+
+== Inferência bayesiana (IB) ==
+A [[Inferência bayesiana|IB]] fornece [[baseline]]s informativas
+e com resultados competitítveis para o reconhecimento de padrões e para a [[IC]] em geral (inclusive de [[computação natural]].
+Ou seja, são fundamentais para referência na interpretação
+da [[IC]] aplicada na [[CC]], e são utilizadas na prática para aprendizado e tarefas como classificação e regressão, em casos supervisionados e não-supervisionados.
+A IB é canônica na [[análise de dado]]s (observação de [[fenômeno real|fenômenos reais]])
+e na [[tomada de decisão]] subsequente e apropriada.
+Complementam, monitoram, dão suporte, à [[computação natural]]
+na otimização 
+
+== Técnicas ==
+* [[Reconhecimento de fala]]
+* [[Análise de sentimento]]
+* [[Detecção de face]]
+* [[Avaliação de risco]]
+* [[Detecção de fraude]]
+* Recomendações comportamentais, tais como especificadas via ontologias [[OWL]] e vocabulários [[SKOS]] na [[web semântica]]
+
+== Veja também ==
+* [[Computação afetiva]]
+* [[Analítica]]
+* [[Redes neurais artificiais]]
+* [[Computador cognitivo]]
+* [[Raciocício cognitivo]]
+* [[Corporação cognitiva]]
+* [[Neurociência social]]
+* [[Inteligência sintética]]
+* [[Usabilidade]]
+* [[Inteligência computacional]]
+* [[Inferência bayesiana]]
+* [[Computação natural]]
+* [[Computação evolutiva]]
+* [[Inteligência de enchame]]
+* [[IoT]]
+* [[Big data]]
+* [[Cidades inteligentes]]
+* [[Computação macia]]
+* [[Estruturas de dados]]
+  
+  
+
+

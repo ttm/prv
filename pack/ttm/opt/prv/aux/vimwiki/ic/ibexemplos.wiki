@@ -1,0 +1,50 @@
+* interpretação do fator
+* comportamento assintótico posterior
+* conjugado anterior
+* estimativas de parâmetros e predição.
+
+exemplo com estatística c', argumentar pela matemática empírica pelo c'
+estar sendo considerado bem comportado por mineração de modelo (tabelas do artigo).
+
+===========
+Minimizacao do erro (frequentista, soma e divide) ~ minimizacao do erro quadrático (bayesiano)
+
+! fazer exemplo com a média, como no video
+
+
+=== Detector de spam ===
+(propriedades como as do sistema sem ruído ou em que
+a priori (ou p(h)?) é uniforme).
+
+======
+=== Moeda frequentista VS bayesiana ===
+
+==== Falácia do apostador ====
+Contra-argumento pela IB e frequentista.
+
+=== Aplicação para regressão ou classificação com ruído ===
+outro:
+{x_i, d_i} dados
+d_i = f(x_i) + e_i, f n precisa ser linear, f é desconhecida e f = ? (pode-se querer uma descrição de f)
+e_i ~ N(0, \sigma^2) i.i.d. (idependentes e identicamente distribuídas)
+h_{ML} = argmax_h p(h|D) = argmax \prod_i p(d_i|h)
+
+seja h = N(h_2, \sigma^2) => h2_ML = armax \prod_i 1/\sqrt{2 pi \sigma^2} e^{-(d_i - h_2)^2/(2\sigma^2)} = armin_{h_2}\sum_i (d_i - h_2)^2
+(h_2 pode ser um g(x_i) qualquer? faz sentido o resultado final de minimizar o erro quadrático médio?)
+
+exemplo x_i altura, d_i = f(x_i) + e_i é o peso.
+f=?
+viola x_i sem ruído, pois nossos instrumentos não são capazes de precisão absoluta.
+
+=== Regressão linear ===
+representando crenças:
+regressão linear de que a maioria dos parametros/caracteristicas (features) não importam.
+
+=== Métodos bayesianos (derivados da teoria básica) ===
+
+==== Bayes ingênuo (Naive Bayes) ====
+Esta é a ''suposição de váriáveis
+idependentes e identicamente distribuídas'' (diz-se: assuma [[IID]]).
+
+
+

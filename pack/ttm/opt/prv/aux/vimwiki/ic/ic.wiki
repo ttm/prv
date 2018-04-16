@@ -6,17 +6,31 @@ Ambos em [[file:~/repos/concusos/ufabc/proj.pdf]]:
 * Integração de dados ligados à IC
 * Sistema de analítica audiovisual
 
+Aula sobre ie:
+../legacy/aulaIE.wiki
+
 == wikipédia ==
 Artigos pelos quais estou responsável
 * inferência bayesiana
+https://pt.wikipedia.org/wiki/Inferência_bayesiana
 * inteligência computacional
+https://pt.wikipedia.org/wiki/Inteligência_computacional
 * computação cognitiva
-* inteligência de enxame
-* programação estruturada
-* programação orientada ao objeto
-* estrutura de dados
+https://pt.wikipedia.org/wiki/Computação_cognitiva
+
 * sistemas difusos
-* computação evolucionária ?
+https://pt.wikipedia.org/wiki/Sistema_difuso_de_controle
+* computação evolucionária ? ce
+https://pt.wikipedia.org/wiki/Computação_evolucionária
+* inteligência de enxame
+https://pt.wikipedia.org/wiki/Swarm_intelligence
+
+* programação estruturada
+https://pt.wikipedia.org/wiki/Programa%C3%A7%C3%A3o_estruturada
+* programação orientada ao objeto
+https://pt.wikipedia.org/wiki/Orienta%C3%A7%C3%A3o_a_objetos
+* estrutura de dados
+https://pt.wikipedia.org/wiki/Estrutura_de_dados
 
 por fazer
 * redes neurais
@@ -24,6 +38,11 @@ por fazer
 * internet das coisas
 * teoria do aprendizado
 * aprendizado de máquina
+
+notas para passar a limpo:
+* probabilidade
+* lógica fuzzy
+
 
 == código ==
 :todo: migrar notas e caminhos para cá
