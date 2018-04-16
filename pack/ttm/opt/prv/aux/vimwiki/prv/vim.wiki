@@ -1,0 +1,31 @@
+:vim:Vim:
+
+= tutorial =
+:vim-tutorial:
+
+Start by encouraging the apprentice,
+then bag him to have courage,
+and manage to follow these simple steps
+with care to understand that this might
+be considered a very basic most useful material.
+
+Then direct him to open a pack/myplugs/opt
+then to clone vimwiki, realcolors and the like.
+Show how to use packadd with completion, sweet,
+and to make mappings to reload vimrc
+and plugins.
+Show the directory structure that vim uses, and for what.
+Advocate the .vim git repository, show the possibilities
+for encryption of sensitive files.
+Show some functions, mappings, autocommands, the like,
+and some selected important features.
+
+direct the user to the first article.
+
+= wiki =
+TODO:
+* Make triplification routines for Vimwiki so that one might
+  represent their knowledge base as RDF and write as a wiki:
+  personal info, interests, annotations, discoveries, etc etc.
+* encription of non-default files for publication
+  of the wiki in github and as an html website

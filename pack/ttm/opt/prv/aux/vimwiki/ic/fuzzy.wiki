@@ -1,0 +1,20 @@
+:fuzzy:fuzzy-logic:lógica-difusa:
+
+= intro fuzzy =
+- conjuntos fuzzy e crispy
+- indeterminação
+
+= fuzzy vs prob =
+* A honest question.
+* partial membership, ambiguity on the classification (fundamental
+  difference)
+* operations on fuzzy sets (diff gets evident)
+* The consideration of classifiers and regression output as fuzzy sets
+(the values, most often interpreted as probabilities,
+yield memberships.
+These are fuzzy interpretations of probabilistic values,
+which might be sound or at least yield reasonable results.)
+
+
+:todo: migrate content from concursos
+

@@ -1,0 +1,139 @@
+recommendation: major revision (do drop-down menu)
+
+level of interest: 'An article whose findings are important to those with closely related research interests' (dos itens a escolher, é o penúltimo nível)
+
+quality of written English:
+'not suitable for publication unless extensively edited'
+(dos itens para escolher, o mais severo)
+
+declaration of competing interests:
+'I declare that I have no competing interests'
+
+reviewer confidential comments to editor:
+'Writing problems in this article are severe, but the methods and results seem sound and relevant,
+as explained in the "reviewer blind comments to author".'
+
+
+reviewer blind comments to author:
+============
+  ~ Major problem ~
+  
+The wording of the article should be enhanced.
+For example, the first term 'community findings'
+is usually expressed by
+'community detection'.
+Moreover, 'community finding' would at least
+be gramatically correct.
+
+I will avoid more notes on writing because
+it is pervasive on the whole text.
+Please note that, given that the subject is not trivial,
+wording and grammatical problems render the article
+difficult to read and the concepts unclear.
+Also, needless phrases and words add to the (untrue)
+impression of inconsistency, which entails
+an even more arduous reading.
+
+My recommendation is that the authors strive to achieve
+a better written document and that the editors reject
+the article otherwise.
+
+
+===========
+  ~ General considerations ~
+
+On the second paragraph of the introduction, 
+it is relevant to mention also the 2013 Brazilian
+protests as a more recent event highly linked to
+social networking platforms.
+
+Equation (1) seems to be properly applied,
+but is not described correctly.
+TR(alpha)^{a,b} is not the 'total number of relationships'
+as written.
+It is the weight of the relationship, calculated
+as the weighted relations normalized by the total
+number of publications of each participant in the relation.
+
+In this context, where the equation is not clearly described,
+One might also ask if the measure is only appropriate if
+CR_i^{a,b} is the number co-authorships.
+
+Preferably, the final normalized measure (with log and max-min)
+should be presented as an equation.
+
+-> relationship age, first paragraph:
+'degree' is this context has the special meaning of
+the number of edges connected to a vertex (see 'degree centrality').
+I suggest the authors to just omit 'degree definition' in the sentence.
+
+Again, eq 2 is not well described:
+TR(alpha, rho)^ {a,b} is not the 'total number of links between
+researchers a and b', but the weight of the link between a and b.
+
+In eq 3, it is not clear what is the value of RY if authors
+contributed through various years nor if partnerships of many years
+have any influence over rho(RY).
+
+Last paragraph of this subsection:
+relationship degree -> relationship weight
+
+-> content loss 
+FM measure should be described formally, not only through
+an example (which leaves unclear many aspects of the measure).
+
+-> weighted resistance distance
+Spectral graph theory deals with Laplacina-like matrices
+of weighted graphs.
+It is important to minimally consider, at least mention,
+this theoretical framework,
+even if a thorough consideration of the theory is left for
+further work.
+
+-> k-Medoids and results
+If the article is very well written, the procedures might
+be described in usual paragraphs.
+I recommend the authors to use bullet (or numbered) lists as a way to assure
+the reader that she knows what the steps are.
+
+-> experiments and results analysis
+See Erdös-Rényi model (ERM) of networks, and avoid using
+the term 'Erdös model' if not referring to ERM because it belong
+to the very basis of network science.
+(in this case, it seems that the authors are using
+'Erdös model' to what is yield by REN: the rational Erdös number,
+proposed by Barr).
+Suggestion: use the RENM (rational Erdös number model)
+acronym.
+
+-> Final remarks
+Why k-Medoids was preffered against other well known community
+detection algorithms? Or is their exploitation envisioned as
+further work?
+
+=======
+    ~ Summary of the review ~
+
+Negative:
+- the article is inadequately written.
+- The equations and measures are not well described.
+
+Positive:
+- The results and methods are sound.
+- The results and methods are of interest.
+
+Remarks:
+- Degree centrality is a very basic measure
+in network science. Use 'weight' to refer to
+the intensity of a link.
+- See also strength centrality to avoid
+misusage of the term 'strength'.
+
+I recommend the article for publication
+if the authors make a deep revision of the
+document considering the notes above. 
+
+
+
+parei na pág 7: measurement models to define strength
+

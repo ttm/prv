@@ -1,0 +1,1793 @@
+
+first shout ever on this new shouts.txt!!!
+Qui Fev 22 11:59:55 -03 2018
+-----
+another shout, not from the command line
+Qui Fev 22 12:00:32 -03 2018
+-----
+seems all ok, i admit... pretty cool. lets check the hack files.
+Qui Fev 22 12:01:02 -03 2018
+-----
+all working 100%. lets go!!!
+Qui Fev 22 12:05:46 -03 2018
+-----
+need to migrate previously used shouts and sessions.txt and close other vim instances
+Qui Fev 22 12:06:14 -03 2018
+-----
+a cognicao eh toda para fora,
+saio carne e atencao de dentro do cranio para fora,
+o auto-conhecimento, desta substancia oca que sobra,
+é também luz, mas pode valer fazer isso de fora para dentro.
+Qui Fev 22 12:40:50 -03 2018
+-----
+fazer sistema que usa as tags como definidas pelo usuario.
+prefixo definido em
+g:aa_tagprefix='ttm-'
+see how to set options
+Qui Fev 22 12:43:39 -03 2018
+-----
+make ^C prefix for realcolors
+learn how to define prefixes,
+is there a way to define
+something as a <aaleader>?
+
+
+$$$$$
+iniciando sessao p publicar plugins do vim. comecando pelo vim
+Qui Fev 22 13:46:59 -03 2018
+-----
+fazendo com que o AAMinutesFromSeconds use horas tambem
+Qui Fev 22 14:04:39 -03 2018
+-----
+adicionar completar funcoes, mappings, comandos, arquivos, options, etc no autocomplete dos comandos :A e :S
+Qui Fev 22 14:05:21 -03 2018
+-----
+a funcao agora aceita inteiros, floats ou numeros e retorna a string hms considerando a entrada segundos
+Qui Fev 22 14:15:30 -03 2018
+-----
+mudado o nome da funcao de minutos, os todos estao um pouco soltos, talvez centralizar no shouts.txt e no todo.wiki
+Qui Fev 22 14:19:00 -03 2018
+-----
+use set path to enable easier browsing of files of interest
+Qui Fev 22 14:22:36 -03 2018
+-----
+entendendo busca de arquivos
+Qui Fev 22 14:39:24 -03 2018
+-----
+migrando antigo aux em vim para opt/aa
+Qui Fev 22 15:16:39 -03 2018
+-----
+estudando findfile, finddir, :af :fin path e suffixesadd
+Qui Fev 22 15:17:25 -03 2018
+-----
+tudo isso pq cismei de fazer command completion com tudo p :A e :S
+Qui Fev 22 15:18:10 -03 2018
+-----
+terminando de entender os finds basicos, com o gf
+Qui Fev 22 15:35:00 -03 2018
+-----
+use :lcd to compile file into PDF in the right directory
+Qui Fev 22 15:49:59 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+iniciando sessao para terminar de estudar search e implementar o sistema de tageamento
+Qui Fev 22 15:54:05 -03 2018
+-----
+estudando os padroes de busca
+Qui Fev 22 16:22:42 -03 2018
+-----
+ainda nos padroes. primeiro usr_27 depois pattern.txt
+Qui Fev 22 16:31:14 -03 2018
+-----
+entendendo as sequencias especiais para buscas
+Qui Fev 22 16:36:06 -03 2018
+-----
+indo longe no aprendizados dos padroes, espero que pague
+Qui Fev 22 16:44:43 -03 2018
+-----
+composing characters
+Qui Fev 22 16:56:26 -03 2018
+-----
+fazendo syntax para aashouts.txt
+Qui Fev 22 17:10:11 -03 2018
+-----
+estudando :match e matchadd()
+Qui Fev 22 17:20:16 -03 2018
+-----
+adiantado bastante com os patterns
+Qui Fev 22 17:30:45 -03 2018
+-----
+entendendo os padroes mais profundamente, terminanto pattern.txt
+Qui Fev 22 17:54:45 -03 2018
+-----
+terminado de ler pattern inteirinho
+Qui Fev 22 18:55:49 -03 2018
+-----
+$$$$$
+
+
+resonlvida a onda do leader proprio OK
+Qui Fev 22 19:52:32 -03 2018
+-----
+make right the aashouts.vim syntax file OK
+Qui Fev 22 20:37:56 -03 2018
+-----
+sessao para publicar plugins. Tem que ser possivel fazer isso rapido
+Sex Fev 23 10:08:46 -03 2018
+-----
+fazendo script para o vim_use OK
+Sex Fev 23 11:11:51 -03 2018
+-----
+fazer funcao para limpar todas as telas (aarcadd em aadoall)
+Sex Fev 23 12:06:10 -03 2018
+-----
+
+
+$$$$$
+comecando sessao para publicar os plugins
+Sex Fev 23 12:11:07 -03 2018
+-----
+postar depois do pack/*/opt/after como um possivel BUG
+Sex Fev 23 12:16:42 -03 2018
+-----
+respondido vim_use sobre sequencias <XXX>
+Sex Fev 23 12:31:21 -03 2018
+-----
+perdido na net, refletindo sobre varias coisas, Buxtehude
+Sex Fev 23 12:50:03 -03 2018
+-----
+escrevendo todo do aa
+Sex Fev 23 12:56:22 -03 2018
+-----
+renomeando AAPutCC pq eh o arrumador geral das colunas coloridas
+Sex Fev 23 13:11:51 -03 2018
+-----
+restarting Vim, it is not loading syntax files well... I must have messed with the autocommands for making the shouts.txt syntax file
+Sex Fev 23 13:24:55 -03 2018
+-----
+reiniciando vim e terminando a sessao com mais 3 slots
+Sex Fev 23 13:28:07 -03 2018
+-----
+
+
+$$$$$
+ainda nao peguei no tranco para publicar, entrando agora no help
+Sex Fev 23 13:39:25 -03 2018
+-----
+fazendo o CONTENTS do aa.txt
+Sex Fev 23 13:54:20 -03 2018
+-----
+escrevendo intro do aa.txt
+Sex Fev 23 14:09:14 -03 2018
+-----
+descrevendo funcionalidades do aa
+Sex Fev 23 14:21:28 -03 2018
+-----
+use plug??
+Sex Fev 23 14:55:54 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+para terminar de escrever o aa.txt
+Sex Fev 23 14:57:05 -03 2018
+-----
+disclaimer e outras partes, vai dar trabalho esse aa
+Sex Fev 23 15:17:10 -03 2018
+-----
+fazendo a funcao de uma linha para ficar mudando o bg
+Sex Fev 23 15:34:02 -03 2018
+-----
+terminada linha unica, ficou mara, tah no aa.txt cal timer_start(300, 'CrazyFu', {'repeat': 10}) | :exe "fu! CrazyFu(timer) \n exec 'hi Normal guibg=#'.(system(\"echo $RANDOM$RANDOM\")[:5]) \n endf"
+Sex Fev 23 15:50:41 -03 2018
+-----
+melhorada rotina do espeak, vamos ver
+Sex Fev 23 16:05:30 -03 2018
+-----
+conseguindo dar forma para o aa.txt
+Sex Fev 23 16:24:21 -03 2018
+-----
+melhorando muitas coisas, entendido na lista do Vim, acho q to sabendo um tanto comparavel ao dos caras que respondem na lista
+Sex Fev 23 16:32:40 -03 2018
+-----
+melhorado o aa info
+Sex Fev 23 16:39:45 -03 2018
+-----
+entrando em 1.2. no aa.txt!!! andou!
+Sex Fev 23 16:46:12 -03 2018
+-----
+related plugins
+Sex Fev 23 17:00:39 -03 2018
+-----
+$$$$$
+
+
+$$$$$
+mais uma sessao para terminar o aa.txt
+Sex Fev 23 17:01:44 -03 2018
+-----
+descrevendo a bare-vim wiki
+Sex Fev 23 17:27:17 -03 2018
+-----
+alocando todo no contents
+Sex Fev 23 17:32:24 -03 2018
+-----
+post to vim user : how to get and reach users and contributors to plugins?
+Sex Fev 23 17:37:16 -03 2018
+-----
+post to the vim use about bare vim wiki, described in :h aa-bare-vim-wiki
+Sex Fev 23 17:40:18 -03 2018
+-----
+arrumando helphelp
+Sex Fev 23 18:15:17 -03 2018
+-----
+anotando as formas como o help syntax faz as coisas
+Sex Fev 23 18:15:37 -03 2018
+-----
+feito comando para mostrar todos os comandos do aa
+Sex Fev 23 18:39:46 -03 2018
+-----
+entendido sort de linhas, aprendendo sobre help no vim
+Sex Fev 23 18:39:58 -03 2018
+-----
+make a closure or the like to calculate slots finished from shouts requested (see AAInfoLines)
+Sex Fev 23 18:44:39 -03 2018
+-----
+is it possible to have an omni completion on a command? What is the most permissive setting without having to write a function?
+Sex Fev 23 18:45:19 -03 2018
+-----
+make A-E to load maintaining the fold state (at least foldlevel)
+Sex Fev 23 18:47:53 -03 2018
+-----
+relendo partes do helphelp e anotando no help cheatsheet do aa
+Sex Fev 23 19:15:03 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+sessao ainda para terminar aa.txt
+Sex Fev 23 21:22:43 -03 2018
+-----
+colocando um localleader no aa
+Sex Fev 23 21:38:31 -03 2018
+-----
+feita funcao correta para abrir browser no mesmo diretorio
+Sex Fev 23 22:16:23 -03 2018
+-----
+reiniciando vim, parece que estah tudo ok
+Sex Fev 23 22:17:51 -03 2018
+-----
+bora p aa.txt
+Sex Fev 23 22:21:28 -03 2018
+-----
+adiantadas varias coisas no aa e aa.txt e prv
+Sex Fev 23 23:19:37 -03 2018
+-----
+organizando aa.vim
+Sex Fev 23 23:22:58 -03 2018
+-----
+$$$$$
+
+
+add to vim article: commands that are used to define things (:fu, :com, :map, :hi, :sy, etc, are also used to access which ones exist already)
+Sex Fev 23 23:27:44 -03 2018
+-----
+how to get the lists that Vim uses when a command uses e.g. -complete=function
+Sex Fev 23 23:42:55 -03 2018
+-----
+errata no :h map.txt " -complete=mapclear    buffer argument"
+Sex Fev 23 23:52:57 -03 2018
+-----
+compile vim with +browse to use :browse commands and see if they are cool
+Sáb Fev 24 00:06:23 -03 2018
+-----
+make a command to run any command enclosed in `command` (which is Vim standard)
+Sáb Fev 24 00:23:35 -03 2018
+-----
+pelo jeito o comando :help adiciona tags. abrir aa.txt deixa ele ft=help, sintaxe certinha, mas nao acha tags de fora com c-]. Apenas depois de um :h aa ou algo assim, as tags fica carregadas no buffer ou janela
+Sáb Fev 24 00:30:57 -03 2018
+-----
+movimento de peca, nome de musica que eh estilo tambem (igual courante, sonata, etc): *\W* onde \W eh juvenil, da juventude, jovem, etc. Usar os textos do figado, giowani, etc
+Sáb Fev 24 02:23:56 -03 2018
+-----
+fazer esquema de enderecos para o PRV: prv_leader-eX pega o arquivo e linha com notacao de arquivo, e faz um mapping para leader-e-X. Se for no mesmo arquivo, redefine
+Sáb Fev 24 02:28:36 -03 2018
+-----
+
+
+$$$$$
+mais uma sessao p terminar aa.txt
+Sáb Fev 24 02:28:51 -03 2018
+-----
+lembrar de estudar as sessoes e os shouts. Entender pq demoro tanto para escrever o aa.txt, se eh pq demora mesmo ou se fico divergindo muito
+Sáb Fev 24 02:29:34 -03 2018
+-----
+I can redir the output of fake/dummy autocommands with the completion tags, parse the lines, and get the values for each of them. This seems not the right way to do it because Vim already have the names, it might be feasible to just access them in a list or string... They are not in any g: or v: var, I checked. Maybe there is a specific function?
+Sáb Fev 24 08:38:08 -03 2018
+-----
+implement undo in realcolors
+Sáb Fev 24 08:46:01 -03 2018
+-----
+fazer color scheme com a paletta da USP http://www.scs.usp.br/identidadevisual/?page_id=12
+Sáb Fev 24 08:55:11 -03 2018
+-----
+fazer CS com cores do exercito, bandeira do brasil, de outros paises, etc
+Sáb Fev 24 08:55:37 -03 2018
+-----
+voltando e mexer com realcolors. adicionei um comando para CS randomicos
+Sáb Fev 24 09:04:03 -03 2018
+-----
+
+
+$$$$$
+retomando aa.txt seriamente. Hoje comecei retomando as colorschemes
+Sáb Fev 24 09:07:31 -03 2018
+-----
+define :Colorscheme command to load realcolor colorschemes
+also :CMask to load masks over CSs
+Sáb Fev 24 09:08:46 -03 2018
+-----
+entendendo vimwiki. Entendido +- <Plug>, vendo como vimwiki usa
+Sáb Fev 24 09:23:52 -03 2018
+-----
+why is all my c-cr s-cr c-s-cr all the same while Vimwiki uses theses keys by default?
+Sáb Fev 24 09:34:56 -03 2018
+-----
+also, my c-space does not output anything (even with c-v)...
+Sáb Fev 24 09:37:49 -03 2018
+-----
+some wimwiki mappings use a-left etc, which conflicts with byobu
+Maybe learn to use only one Vim instance.
+Sáb Fev 24 09:40:23 -03 2018
+-----
+nao consigo achar o jeito de ativar a featture +browse para compilar o Vim
+Sáb Fev 24 10:08:41 -03 2018
+-----
+put <SNR> or so to the aa aux functions
+Sáb Fev 24 10:13:36 -03 2018
+-----
+post on vim use about build process. Show my configs, with and without gui
+Sáb Fev 24 10:17:23 -03 2018
+-----
+
+
+$$$$$
+nao esquecer do almoco 12h
+Sáb Fev 24 10:28:49 -03 2018
+-----
+maybe if compile the terminal flavor of vim with +xim, it will be ok
+No, tested. OK
+Sáb Fev 24 10:30:03 -03 2018
+-----
+gevim compilado e em uso jah
+Sáb Fev 24 11:08:05 -03 2018
+-----
+fantardigo
+Sáb Fev 24 11:08:13 -03 2018
+-----
+fazer funcao no PRV para que finalmentes com _leader sejam usadas dali para frente. Assim, soh PRVLeader("aa") e PRVLeader("vim") no comeco e final dos mappings jah resolve. Fazer PRVLocalLeader tambem
+Sáb Fev 24 11:27:38 -03 2018
+-----
+serah?
+Sáb Fev 24 11:30:24 -03 2018
+-----
+usar menus para comandos que quero lembrar mas nao estao ainda muito funcionais..
+Sáb Fev 24 18:47:23 -03 2018
+-----
+make an :amap command to mimmic :amenu?
+Sáb Fev 24 19:03:56 -03 2018
+-----
+make aa menu itens and toolbar itens
+Sáb Fev 24 19:24:35 -03 2018
+-----
+funcionalidade para terminais: pode fechar que ele nao reclama, quando abrir, abre ele, se tiver mais de um, aceita prefixo numerico ou abre prompt ou abre auto algum. Bons mappins para escrita dos comandos no terminal e para navegacao na janela e para outras
+Sáb Fev 24 22:14:41 -03 2018
+-----
+plugin pre-requisite: be able to be entirely loaded or reloaded: all variables, all functions, autocommands, etc. Echo plugin should have a set and a clear method. Clear should have grades of intensity: remove everything even its path from runtimepath, remove vars, funcs, etc...
+Sáb Fev 24 22:19:21 -03 2018
+-----
+arrumar nos scripts semanticamente. Ordem alfabetica de comandos e ou o que for conseguimoc com sort
+Sáb Fev 24 22:36:24 -03 2018
+-----
+chegar hoje ateh coletar tags nos scripts (e executar comands, e.g. ":Todo etc etc) e saber o que fazer com elas
+Sáb Fev 24 22:38:19 -03 2018
+-----
+make tags in .tags for prv
+Dom Fev 25 00:44:40 -03 2018
+-----
+terminar de arrumar o .vim/aux/
+Dom Fev 25 00:52:21 -03 2018
+-----
+remove aux/vimwiki files in repository from git history
+Dom Fev 25 01:08:17 -03 2018
+-----
+remove undo dir from prv git history
+Dom Fev 25 01:10:10 -03 2018
+-----
+testar after and opt e start de pack
+Dom Fev 25 13:14:38 -03 2018
+-----
+our prv sessions save aa sessions because it saves global vars with upper-case letters. One might have to start the timers again...
+Dom Fev 25 13:56:36 -03 2018
+-----
+see what each command related to each char is
+Dom Fev 25 14:09:57 -03 2018
+-----
+use default upper case letters for prv so to make viminfo keep it and it recall all the settings from before
+Dom Fev 25 19:41:50 -03 2018
+-----
+write a manual about the usage of the Vim features... how to efficiently navigate without plugins, use the tree, filetypes, search in file names and contents, etc
+Dom Fev 25 20:51:49 -03 2018
+-----
+ask vim_use, listamacambira and fb group to test prv and other plugins because they went to a thorough rewrite
+Dom Fev 25 21:51:11 -03 2018
+-----
+escrito p vim_use, tb respondido msg ali
+Dom Fev 25 22:26:30 -03 2018
+-----
+caminhando btte com reescrita do prv
+Dom Fev 25 22:26:38 -03 2018
+-----
+add to bugs email (sent to vim_use): en does not unindent when finishing an if clause
+Dom Fev 25 22:35:38 -03 2018
+-----
+which is more powerful? viminfo ou session? melhor os 2 ou um deles contem o outro?
+Dom Fev 25 22:36:34 -03 2018
+-----
+here this registers that each iterate takes 50ms from start of callback to finish of the callback to highlight:
+	:let g:durs = []
+	:let timer = timer_start(50, {-> execute("let g:mtimer=g:Curmili() | hi Normal guibg=#".(system("echo $RANDOM$RANDOM")[:5])." | cal add(g:durs, g:Curmili() - g:mtimer)")}, {'repeat': 20})
+
+Check durs. The result is the same, be the duration of 50 any other
+Dom Fev 25 23:24:32 -03 2018
+-----
+como medir o tempo que o vim/gvim estah demorando para fazer um :exe "hi Normal guibg=#".(system("echo $RANDOM$RANDOM")[:5] ???
+Estas one-liners nao ajudam muito por motivos diversos:
+
+:let timer = timer_start(50, {-> execute("let g:asd+=1 \| echo 'Handler called:'.g:asd ", "")}, {'repeat': 90})
+:let g:mtimer2 = g:Curmili() | let timer = timer_start(50, {-> execute("let g:mtimer=g:Curmili() | hi Normal guibg=#".(system("echo $RANDOM$RANDOM")[:5])." | cal add(g:durs, g:Curmili() - g:mtimer2)")}, {'repeat': 50})
+:let g:mtimer2 = g:Curmili() | let timer = timer_start(50, {-> execute("hi Normal guibg=#".(system("echo $RANDOM$RANDOM")[:5])." | cal add(g:durs, g:Curmili() - g:mtimer2)")}, {'repeat': 50})
+:let timer = timer_start(50, {-> execute("let g:mtimer=g:Curmili() | let g:mtimerfoo=g:Curmili() | cal add(g:durs, g:Curmili() - g:mtimer)")}, {'repeat': 50})
+Dom Fev 25 23:36:18 -03 2018
+-----
+write to vim_use with the mappings that I don't understand the use, such as vn . :norm .<CR>
+Seg Fev 26 00:14:46 -03 2018
+-----
+lembrar que match eh separado de hlsearch!
+Seg Fev 26 02:33:35 -03 2018
+-----
+pq esse comando gera E10: \ should be followed by /, ? or &          ??????????:
+nn <localleader>w :exe 'mat Error /\v([ ]+$)|\t/'
+Seg Fev 26 02:42:28 -03 2018
+-----
+Vim help files tell much about what things do, but not how they are used. Try to syntonize this with vim_use
+Seg Fev 26 02:54:19 -03 2018
+-----
+a organizacao dos mapeamentos nos arquivos deve ser semantica. Para lista alfaberica, usa sort
+Seg Fev 26 03:16:34 -03 2018
+-----
+el tamb n desindenta no Vim!
+Seg Fev 26 04:04:46 -03 2018
+-----
+how to make commands with smaller aliases, as in vim default commands (:vsplit is :vs[split])
+Seg Fev 26 06:21:13 -03 2018
+-----
+ask vim use for cool commands to search inside files. (because i need to understand it better and because of vim wiki and bare vim wiki)
+Seg Fev 26 07:11:12 -03 2018
+-----
+why can't we get the default mappings available though commands? This would make usage more sound, because, e.g. , C-W o for terminal window is not specified anywhere, but is there. 
+Seg Fev 26 08:00:47 -03 2018
+-----
+a terminal, starting with a specific color, is not changed with hi Terminal or hi Normal, only new ones are affected
+Seg Fev 26 08:03:16 -03 2018
+-----
+is alt reserved in gvim?
+Seg Fev 26 11:13:03 -03 2018
+-----
+you simply cant map Alt to leader in gVim. Besides that, the escape==C-[==A- gives you two nifty tricks: a-o a-O inserts a blank line above and below current line in insert mode. Esc is a good leader to normal mappings, which are the more encountered type, so a-x might be conveniently handed in normal mode as well. You can get into some clumsyness. And you dont really have another key (with alt) in terminal vim, and you cannot use all the keyboard as you might wish in terminal vim. You can use <A-x> as a mapping in gVim, which in terminal is A-x == Esc-x == C-[, but you cannot actually set leader to any <x-(next char)> type of key. (<C-...> cannot be a leader or localleadr key)
+Seg Fev 26 12:00:29 -03 2018
+-----
+testando aa no novo vim
+Ter Fev 27 10:09:02 -03 2018
+-----
+
+
+$$$$$
+primeira sessao no novo vim, bora!
+Ter Fev 27 10:09:57 -03 2018
+-----
+tem q arrumar os comandos q estao demorando para serem recebidos, nao sei por qual motivo....
+Ter Fev 27 10:24:08 -03 2018
+-----
+cuzcuz e outras, tentando arrumar os autocommands do prv.vim
+Ter Fev 27 10:39:54 -03 2018
+-----
+tentando desatar os autocommands
+Ter Fev 27 10:56:49 -03 2018
+-----
+aus tomando forma... passando ft settings p ftdetect acho
+Ter Fev 27 11:11:37 -03 2018
+-----
+maybe not put aus inside ftplugin/ but leave in prv.vim 
+Ter Fev 27 11:25:52 -03 2018
+-----
+fazendo funcao de reinicializacao d td
+Ter Fev 27 11:47:06 -03 2018
+-----
+elaborando rotina de reinicializacao
+Ter Fev 27 11:55:23 -03 2018
+-----
+terminada arrumacao inicial pelo jeito
+Ter Fev 27 12:12:43 -03 2018
+-----
+$$$$$
+
+
+assimilar p prv/after
+Ter Fev 27 12:16:07 -03 2018
+-----
+retomando trabalho p soltar aa plug
+Ter Fev 27 14:36:32 -03 2018
+-----
+
+
+$$$$$
+sessao para iniciar a apresentacao
+Qui Mar  1 08:11:19 -03 2018
+-----
+iniciando slides
+Qui Mar  1 08:31:54 -03 2018
+-----
+roteiro elaborado
+Qui Mar  1 08:44:11 -03 2018
+-----
+graph drawing
+Qui Mar  1 08:58:40 -03 2018
+-----
+terminado slide 3
+Qui Mar  1 09:12:13 -03 2018
+-----
+escrito para o helikarlab sobre o bug mt chato
+Qui Mar  1 09:26:36 -03 2018
+-----
+continuando depois de parada p comer slide 4 sobre netviz
+Qui Mar  1 10:17:35 -03 2018
+-----
+ultimo slide
+Qui Mar  1 10:32:38 -03 2018
+-----
+terminada apresentacao, fazer debug do ccnetviz...
+Qui Mar  1 10:49:45 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+ultima sessao antes d sair p palestra
+Qui Mar  1 11:05:53 -03 2018
+-----
+tentando resolver o bug
+Qui Mar  1 11:26:49 -03 2018
+-----
+consegui finalmente fazer o netviz funcionar
+asdoiasjdo j
+Qui Mar  1 11:53:18 -03 2018
+-----
+um pouco de hacking antes d previa da apr
+Qui Mar  1 11:54:26 -03 2018
+-----
+hackeando 
+Qui Mar  1 12:21:12 -03 2018
+-----
+terminando exploracao do source
+Qui Mar  1 12:24:04 -03 2018
+-----
+revisando slides, td pronto!
+Qui Mar  1 12:37:32 -03 2018
+-----
+banana
+Qui Mar  1 12:51:30 -03 2018
+-----
+apresentando
+Qui Mar  1 13:06:28 -03 2018
+-----
+$$$$$
+
+
+asd
+Qui Mar  1 15:12:52 -03 2018
+-----
+
+
+$$$$$
+estudando programacao estruturada
+Dom Mar  4 08:25:26 -03 2018
+-----
+tentando achar o que seja um statement em portugues (por enquanto está elemento...)
+Dom Mar  4 08:42:32 -03 2018
+-----
+explorando padroes de projeto (desing patterns)
+Dom Mar  4 09:04:52 -03 2018
+-----
+indo para revisao do artigo
+Dom Mar  4 09:57:53 -03 2018
+-----
+bora
+Dom Mar  4 10:00:29 -03 2018
+-----
+terminada intro do artigo
+Dom Mar  4 10:13:15 -03 2018
+-----
+tentano terminar cap 2
+Dom Mar  4 10:27:51 -03 2018
+-----
+lendo artigo, arrumando equacao 1
+Dom Mar  4 20:48:21 -03 2018
+-----
+bora
+Dom Mar  4 20:55:08 -03 2018
+-----
+$$$$$
+
+
+tentar novamente colocar artigo sobre o Nexos na Wikipedia, agora com mais uma referência por se tornar parte do consorcio encabecado pela Buttler (repassado e articulado por Marilia Pisani) http://directory.criticaltheoryconsortium.org/organizations/nexos-critical-theory-and-interdisciplinary-research/
+Ter Mar 13 13:51:32 -03 2018
+-----
+'desorientacao ao objeto' em consonancia com as criticas aa POO, trocadilho hacker
+Ter Mar 13 16:00:30 -03 2018
+-----
+codigo-poemas com a POO, pegar da dissertacao de msc e outras
+Ter Mar 13 16:01:10 -03 2018
+-----
+
+
+$$$$$
+iniciando sessao p IC
+Qui Mar 15 03:56:00 -03 2018
+-----
+IC e termos
+Qui Mar 15 04:16:47 -03 2018
+-----
+fuzzy
+Qui Mar 15 04:27:54 -03 2018
+-----
+
+
+$$$$$
+para desovar ao menos algumas partes do que tenho p colocar no artigo
+Qui Mar 15 11:01:14 -03 2018
+-----
+arrumando discurso conceitual geral
+Qui Mar 15 11:18:57 -03 2018
+-----
+arrumando tijolo conceitual inicial, tem que ficar certinho
+Qui Mar 15 11:36:06 -03 2018
+-----
+feitas contribuicoes iniciais para a IC
+Qui Mar 15 11:53:49 -03 2018
+-----
+
+
+$$$$$
+sessao canonica p acabar o artigo de IC
+Qui Mar 15 19:50:42 -03 2018
+-----
+arrumando mt o artigo
+Qui Mar 15 20:20:35 -03 2018
+-----
+nota mitologica p ic, e criatividade computacional?
+Qui Mar 15 20:36:43 -03 2018
+-----
+terminada de repassar aquela intro enorme
+Qui Mar 15 20:40:41 -03 2018
+-----
+soh falta referencias, criatividade computacional, nota mitologica e repassada, caixinhas de coisas encima e embaixo, algo mais?
+Qui Mar 15 20:54:13 -03 2018
+-----
+tendo q procurar sobre a teoria + geral q fuzzy
+Qui Mar 15 21:21:29 -03 2018
+-----
+estudar teoria do aprendizado, ao menos entender do que se trata
+Sex Mar 16 11:26:08 -03 2018
+-----
+
+
+$$$$$
+sessao para iniciar estudo de metodos bayesianos de AM
+Sex Mar 16 11:26:23 -03 2018
+-----
+arrumando artigo de ED e IC
+Sex Mar 16 11:56:53 -03 2018
+-----
+to deixando o aa sem mensagem. Tudo bem serah?
+Sex Mar 16 11:57:15 -03 2018
+-----
+articulado envio p revista francesa Plural Pluriel c Daniel e Luis
+Sex Mar 16 12:17:26 -03 2018
+-----
+$$$$$
+
+
+cuidada de varias coisas na rede, principalmente wikipedia e artigo luis-daniel
+Sex Mar 16 13:27:23 -03 2018
+-----
+articulado artigo com Alan
+Sex Mar 16 13:40:35 -03 2018
+-----
+
+
+$$$$$
+preciso conseguir iniciar este processo antes de levar a thata na rodoviaria
+Sex Mar 16 13:41:00 -03 2018
+-----
+it is easier to paste in insert mode in Vim
+Sex Mar 16 15:41:55 -03 2018
+-----
+
+
+$$$$$
+engatando imprecisao bayesiana e fuzzy
+Sáb Mar 17 01:11:17 -03 2018
+-----
+- ver indice do livro, terminar anotacoes do livro
+
+- ler wikipedia de inferencia bayesiana, estatistica bayesiana, e outros, da wikipedia.
+
+- passar a limpo p wp ptbr
+  * Probabilidade e estatística
+  * Imprecisão
+  * Inferência Bayesiana
+  * Métodos estatísticos de AM (item no artigo de AM?): inserir os itens do indice do livro de AM estatística
+  * AM em geral (revisar, inserir base sup-unsup)
+  * revisitar indice do livro e tentar passar, linkar o q der
+Depois:
+- mesmo para fuzzy
+- artigo sobre imprecisao probabilistica e fuzzy
+Sáb Mar 17 01:15:54 -03 2018
+-----
+estudando indice do livro, varios artigos saem dele
+Sáb Mar 17 01:27:12 -03 2018
+-----
+relendo artigo de AB, abertos outros 2 artigos p imprecisao e p probabilidade e estatística
+Sáb Mar 17 01:42:14 -03 2018
+-----
+feita arquitetura basica de wiki p escrever na wikipedia
+Sáb Mar 17 02:12:13 -03 2018
+-----
+fazendo organizacao geral p trabalhar
+Sáb Mar 17 02:26:20 -03 2018
+-----
+organizada arvore geral p concurso
+Sáb Mar 17 02:36:36 -03 2018
+-----
+sout expected?
+Sáb Mar 17 02:43:04 -03 2018
+-----
+colocar numero da janela e do buffer na statusline
+Sáb Mar 17 02:58:12 -03 2018
+-----
+pirando o cabecao c a wiki vimwiki
+Sáb Mar 17 03:12:39 -03 2018
+-----
+$$$$$
+
+
+organizando artigos
+Sáb Mar 17 03:19:40 -03 2018
+-----
+
+
+$$$$$
+mais uma sessao p adiantar bayesiano
+Sáb Mar 17 03:20:08 -03 2018
+-----
+retomando ib
+Sáb Mar 17 03:35:33 -03 2018
+-----
+escrevendo artigo lindo de ib
+Sáb Mar 17 03:51:05 -03 2018
+-----
+parece q sim acho q sim espero q sim
+Sáb Mar 17 04:40:19 -03 2018
+-----
+tentando retomar
+Sáb Mar 17 04:44:37 -03 2018
+-----
+$$$$$
+
+
+fazer artigo na wikipedia de musica brasileira e musica brasileira contemporanea
+Dom Mar 18 12:27:28 -03 2018
+-----
+IA, IB (inf bay), e IC (int comp)
+Dom Mar 18 15:52:26 -03 2018
+-----
+como fazer ficar um pouco mais p cima quando redirecionado p ancora?
+Dom Mar 18 17:09:51 -03 2018
+-----
+agente inteligente universal: escolhe dentre diversos tipos de inteligencia, o fitness é a taxa de + que coleta de mim, seu dono, quando me escreve.
+Dom Mar 18 19:45:10 -03 2018
+-----
+
+
+$$$$$
+sessao p terminar IB, ao menos sem contar os exemplos
+Dom Mar 18 19:46:27 -03 2018
+-----
+escrevendo sobre AA: aplicação e avaliação
+Dom Mar 18 20:07:17 -03 2018
+-----
+retomando depois de intervalo sei lah pq
+Dom Mar 18 20:29:17 -03 2018
+-----
+adicionada sessao sobre aplicacao e avaliacao
+Dom Mar 18 20:29:49 -03 2018
+-----
+indo buscar sobre testes estatisticos
+Dom Mar 18 20:34:07 -03 2018
+-----
+me perdi completamente. deliciando-me com o beico de baixo solto
+Dom Mar 18 20:54:33 -03 2018
+-----
+descrecendo sobre software
+Dom Mar 18 21:02:11 -03 2018
+-----
+passado p wp de cauda longa e de software
+Dom Mar 18 21:40:56 -03 2018
+-----
+adentrando contextualização
+Dom Mar 18 21:56:45 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+pessao p terminar ib
+Seg Mar 19 01:06:00 -03 2018
+-----
+adiantado sobre pre processamento, organizacao de td
+Seg Mar 19 01:27:31 -03 2018
+-----
+galgando passagem de conteúdo p artigo de ib
+Seg Mar 19 01:36:42 -03 2018
+-----
+
+
+$$$$$
+sessao comecada 16h p ajeitar da banca
+Seg Mar 19 16:38:28 -03 2018
+-----
+para terminar de arrumar coisas da banca e o q vier, parece q ganhei 2h
+Seg Mar 19 16:41:45 -03 2018
+-----
+ver tb suplentes p banca
+fazer slides:
+* p aula
+  - e levar impressas 5 cópias dos materiais
+* memorial
+* proj de pesq
+para prova escrita:
+* só releitura da wp?
+* rever anotacoes e indices de livros
+* definir cabeçalho (e formato?)
+Seg Mar 19 16:42:44 -03 2018
+-----
+revisando e anotando material, planejando slides
+Seg Mar 19 17:00:23 -03 2018
+-----
+revisar o artigo de desigualdade com vistas aa fractalidade do espaco ou da distribuicao do recurso no espaco
+Seg Mar 19 17:06:22 -03 2018
+-----
+lombrando. Queixo, focinho lindo, parte da boca e da cara, integrado aa cabeca, q delicia
+Seg Mar 19 17:14:27 -03 2018
+-----
+agilizando d ligar p marilia e confirmar conduta
+Seg Mar 19 17:27:11 -03 2018
+-----
+ligado p marilia
+Seg Mar 19 17:41:57 -03 2018
+-----
+fazendo a lista dos 30 comprobatorios
+Seg Mar 19 17:56:56 -03 2018
+-----
+$$$$$
+
+
+andando c preparacao d td
+Seg Mar 19 23:16:01 -03 2018
+-----
+
+
+$$$$$
+sessao 1 p terminar ib
+Ter Mar 20 01:02:57 -03 2018
+-----
+anotando muitas coisas do concurso, vai ser bruto focar
+Ter Mar 20 01:13:50 -03 2018
+-----
+fazendo exemplo de spam
+Ter Mar 20 01:18:48 -03 2018
+-----
+escrevendo exemplo do detector de spam
+Ter Mar 20 01:34:12 -03 2018
+-----
+mandando ver no detector de spam, passando p wp
+Ter Mar 20 01:50:10 -03 2018
+-----
+adicionado detector de spam
+Ter Mar 20 02:11:44 -03 2018
+-----
+terminado de vez o exemplo de spam, ou acho
+Ter Mar 20 02:19:58 -03 2018
+-----
+quebrando no contexto com ruido e com hipoteses constantes p achar os minimos quadrados
+Ter Mar 20 02:43:36 -03 2018
+-----
+tentando fazer o exemplo de ruido p regressao
+Ter Mar 20 02:48:32 -03 2018
+-----
+regressao linear e metodo dos minimos quadrados eh a mesma coisa?
+Ter Mar 20 03:20:17 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+ultima sessao da ib, passando regressao linear p wp
+Ter Mar 20 03:21:12 -03 2018
+-----
+terminado IB em contexto ruidoso
+Ter Mar 20 04:06:01 -03 2018
+-----
+esticada pensando no proximo passo
+Ter Mar 20 04:06:13 -03 2018
+-----
+1h15 p resto de ib, bora
+Ter Mar 20 04:06:30 -03 2018
+-----
+terminado BI
+Ter Mar 20 04:26:10 -03 2018
+-----
+adicionando notas aa wp
+Ter Mar 20 04:44:25 -03 2018
+-----
+repassado sobre regressao linear e minimizacao quadratica
+Ter Mar 20 04:51:33 -03 2018
+-----
+falacia do apostador, moeda bayesiana vs freq
+Ter Mar 20 05:07:11 -03 2018
+-----
+terminada ib
+Ter Mar 20 05:35:40 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+sessao retomando resto nao ib
+Ter Mar 20 06:00:04 -03 2018
+-----
+escrevendo sobre alguns dos topicos
+Ter Mar 20 06:15:13 -03 2018
+-----
+labutando complexidade depois de pincelar outros topicos
+Ter Mar 20 06:30:46 -03 2018
+-----
+escrevendo sobre complexidade
+Ter Mar 20 06:46:24 -03 2018
+-----
+revendo reflexao conceitual
+Ter Mar 20 07:00:24 -03 2018
+-----
+adicionada reflexao ludica no artigo de ic
+Ter Mar 20 07:42:36 -03 2018
+-----
+escrevendo varias coisas
+Ter Mar 20 07:42:44 -03 2018
+-----
+tentando retomar depois da nota ludica
+Ter Mar 20 07:47:19 -03 2018
+-----
+escrito principalmente sobre o ultimo item nesta sessao
+Ter Mar 20 08:00:37 -03 2018
+-----
+$$$$$
+
+
+reiniciado sem querer, mais uma sessao, prioridade eh pesquisa
+Ter Mar 20 08:58:06 -03 2018
+-----
+sessao p fazer logica difusa, tudo
+Ter Mar 20 14:51:45 -03 2018
+-----
+
+
+$$$$$
+sessao p logica difusa. Atencao
+Ter Mar 20 14:52:23 -03 2018
+-----
+organizando empreitada geral p fuzzy
+Ter Mar 20 15:03:12 -03 2018
+-----
+escrevendo visao geral sobre sistemas de controle fuzzy
+Ter Mar 20 15:14:26 -03 2018
+-----
+arrumada documentacao p unimed, enviado por email
+Ter Mar 20 15:41:21 -03 2018
+-----
+historico
+Ter Mar 20 15:44:37 -03 2018
+-----
+terminado historico
+Ter Mar 20 15:52:42 -03 2018
+-----
+terminado de descrever arquitetura de SDs
+Ter Mar 20 16:28:46 -03 2018
+-----
+terminando de ver sd
+Ter Mar 20 16:33:51 -03 2018
+-----
+terminada passada em SDs
+Ter Mar 20 17:00:53 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+iniciada sessao p terminar fuzzy e jah entrar em algo mais
+Ter Mar 20 17:02:20 -03 2018
+-----
+revisando escritos sobre sd
+Ter Mar 20 17:17:36 -03 2018
+-----
+relendo artigo adicionado aas notas
+Ter Mar 20 17:33:06 -03 2018
+-----
+escrevendo sobre funcionamento de sd
+Ter Mar 20 17:47:34 -03 2018
+-----
+bora terminar esse artigo
+Ter Mar 20 18:09:50 -03 2018
+-----
+tentando desovar o artigo, tem q sair
+Ter Mar 20 18:18:55 -03 2018
+-----
+terminando passada inicial no texto
+Ter Mar 20 18:47:09 -03 2018
+-----
+publicado SD
+Ter Mar 20 20:27:33 -03 2018
+-----
+terminada sessao com isso depois de revisar
+Ter Mar 20 20:27:44 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+sessao penultima (ultima inteira), antes de parar tudo para viajar
+Ter Mar 20 20:28:39 -03 2018
+-----
+feito café, acho q indo para reavalizacao d td
+Ter Mar 20 20:44:37 -03 2018
+-----
+escrevendo ce
+Ter Mar 20 21:01:44 -03 2018
+-----
+
+
+$$$$$
+sessao de aa p preparar apresentacao de projeto de pesquisa
+Qui Mar 22 06:05:01 -03 2018
+-----
+fazendo calibragem de luz
+Qui Mar 22 06:22:27 -03 2018
+-----
+lapidando roteiro
+Qui Mar 22 06:35:36 -03 2018
+-----
+feito principal, literatura, atualizacao
+Qui Mar 22 06:50:31 -03 2018
+-----
+bora q tah fumegando
+Qui Mar 22 07:13:07 -03 2018
+-----
+terminando de passar a limpo as anotacoes
+Qui Mar 22 07:35:16 -03 2018
+-----
+bora
+Qui Mar 22 07:35:19 -03 2018
+-----
+terminada quase a passagem das notas
+Qui Mar 22 07:52:36 -03 2018
+-----
+terminado de passar a limpo as notas
+Qui Mar 22 08:05:35 -03 2018
+-----
+$$$$$
+
+
+26h30 https://www.youtube.com/watch?v=x9b3rsFNcNs&list=LLKkgHPpphGJdUCFpCrkyaMA&index=4
+Sex Mar 23 00:07:32 -03 2018
+-----
+43m
+Sex Mar 23 00:24:27 -03 2018
+-----
+
+
+$$$$$
+sessao p organizar afazeres, feitos, ambiente de trabalho
+Dom Mar 25 13:38:56 -03 2018
+-----
+
+
+$$$$$
+sessao p por a casa em ordem: prv, vimwiki, aa
+Dom Mar 25 13:56:17 -03 2018
+-----
+adicionando arquivos da wiki
+Dom Mar 25 14:11:36 -03 2018
+-----
+repassando itens do diario
+Dom Mar 25 14:26:32 -03 2018
+-----
+tentando achar quem tah bloquenao os vimwiki
+Dom Mar 25 14:52:47 -03 2018
+-----
+ainda lutando p reestabelecer vimwiki
+Dom Mar 25 14:57:00 -03 2018
+-----
+revisando vimwiki h
+Dom Mar 25 15:13:27 -03 2018
+-----
+arrumar abrir vertical e horizontal p vimwiki?
+Dom Mar 25 15:14:56 -03 2018
+-----
+retomando finalzinho da sessao revisando vimwiki
+Dom Mar 25 16:32:45 -03 2018
+-----
+arrumando ateh o vimrc....
+Dom Mar 25 16:49:40 -03 2018
+-----
+ainda fazendo revisao da vimwiki
+Dom Mar 25 17:02:57 -03 2018
+-----
+$$$$$
+
+
+usar o gmail.vim e o calendar.vim
+Dom Mar 25 22:50:14 -03 2018
+-----
+Vim as an application platform, conceito do calendar.txt
+Dom Mar 25 22:55:46 -03 2018
+-----
+ler o tagsrch.txt
+Seg Mar 26 11:34:26 -03 2018
+-----
+
+
+$$$$$
+sessao para terminar de entender arquitetura da wiki: tags do vimwiki e vim, integracao com jekyll
+Seg Mar 26 14:30:28 -03 2018
+-----
+tentando pegar no tranco, mta coisa
+Seg Mar 26 14:57:13 -03 2018
+-----
+bora
+Seg Mar 26 15:06:48 -03 2018
+-----
+elaborando bare vim wiki
+Seg Mar 26 15:16:34 -03 2018
+-----
+estudando afazeres proximos
+Seg Mar 26 15:38:34 -03 2018
+-----
+terminando organizacao, pausa
+Seg Mar 26 15:47:12 -03 2018
+-----
+vendo c primo sobre jogos, td q ele assumiu
+Seg Mar 26 16:13:00 -03 2018
+-----
+adicionar infos do video do ric no artigos da wp
+Seg Mar 26 16:13:53 -03 2018
+-----
+tentando ainda reingatar
+Seg Mar 26 16:26:29 -03 2018
+-----
+tenho q organizar os passos p fazer sessao de leitura de tags, navegacao e arquivos, e help files no vim
+ver tb anotacoes no aa.
+Renderizar arvore final com esquema desejado de wiki.
+Repassar tudo, inclusive do computador remoto, para a árvore,
+limpar as notas antigas.
+Fazer ágil pq eh mta coisa.
+Seg Mar 26 16:32:11 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+sessao para arrumar a wiki, completamente
+depois:
+* arrumar PRV, soltar revisão
+* fazer pacotes mínimos de PSO, ACO, etc, no modelo especificado na wikipédia.
+* mandar mensagem para banca com anotações, páginas e códigos
+Seg Mar 26 16:36:06 -03 2018
+-----
+arrumando prv
+Seg Mar 26 16:52:38 -03 2018
+-----
+ouvindo half shape
+Seg Mar 26 17:06:12 -03 2018
+-----
+escrevendo no prv.vim sobre o bare vim wiki
+Seg Mar 26 17:23:42 -03 2018
+-----
+arrumando notas sobre vim wiki
+Seg Mar 26 17:39:15 -03 2018
+-----
+ainda organizando sobre vim wiki
+Seg Mar 26 17:51:26 -03 2018
+-----
+particle swarm de social networks. Each node has atributtes that change through interaction with the medium/solution space and with other members
+Seg Mar 26 18:07:05 -03 2018
+-----
+arrumando documentacao do prv, organizando tudo bonitinho
+Seg Mar 26 18:21:44 -03 2018
+-----
+organizando prv como um todo
+Seg Mar 26 18:36:29 -03 2018
+-----
+propor para o ricardo revisar a documentacao do PRV
+Seg Mar 26 18:45:06 -03 2018
+-----
+bora, tah fumegando
+Seg Mar 26 18:51:44 -03 2018
+-----
+PRV documentado, pensando em como fazer fumegat td
+Seg Mar 26 19:45:45 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+sessao p terminar de organizar sobre navegacao de tags e de arquivos
+Ter Mar 27 10:37:48 -03 2018
+-----
+tentando pegar no tranco.
+Ter Mar 27 11:16:03 -03 2018
+-----
+conversando c marilia sobre trabalho do joyce
+Ter Mar 27 11:16:15 -03 2018
+-----
+andando c org
+Ter Mar 27 11:41:37 -03 2018
+-----
+dei pala forte na sessao. Parece que preciso organizar o PRV primeiro, ao menos o prv.txt, para depois cair p wiki e resto
+Ter Mar 27 13:22:05 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+sessao p labutar no prv, deixar txt certinho
+Ter Mar 27 18:32:00 -03 2018
+-----
+bot
+Ter Mar 27 18:49:04 -03 2018
+-----
+tentando retomar td, pensando na viagem p cacapava
+Ter Mar 27 19:02:49 -03 2018
+-----
+escrevendo sobre o bot do PRV
+Ter Mar 27 20:16:12 -03 2018
+-----
+descrevendo os bots
+Ter Mar 27 20:31:43 -03 2018
+-----
+modelando o enxame de almas
+Ter Mar 27 21:07:14 -03 2018
+-----
+terminando sobre o projeto dos bots
+Ter Mar 27 21:16:20 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+sessao p organizar bot e prv txts
+Ter Mar 27 23:36:20 -03 2018
+-----
+escrevendo sobre mundos e universos dos bots
+Ter Mar 27 23:51:58 -03 2018
+-----
+add session pause into aa's features
+Qua Mar 28 00:03:11 -03 2018
+-----
+lavado louca, td menos continuado aqui
+Qua Mar 28 01:04:13 -03 2018
+-----
+mundos e universos
+Qua Mar 28 01:04:24 -03 2018
+-----
+terminando de escrever sobre os bots
+Qua Mar 28 01:21:08 -03 2018
+-----
+mais anotacoes sobre os bots: soul swarm e isomorfismo de ideias e estaticos
+Qua Mar 28 01:34:31 -03 2018
+-----
+teminando anotacoes do bot
+Qua Mar 28 01:50:43 -03 2018
+-----
+retomando b0t!
+Qua Mar 28 02:33:43 -03 2018
+-----
+escrevendo rotina para abrir corpus
+Qua Mar 28 02:50:23 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+sessao p fazer fumegar esses bots em mundos e realidades
+Qua Mar 28 03:06:33 -03 2018
+-----
+iniciando testes dos codigos
+Qua Mar 28 03:22:54 -03 2018
+-----
+trabalhando para mundos de markov
+Qua Mar 28 03:36:46 -03 2018
+-----
+enxame de bots comecando a fumegar
+Qua Mar 28 03:51:59 -03 2018
+-----
+ngramas
+Qua Mar 28 04:06:53 -03 2018
+-----
+lapidando enxame de bots
+Qua Mar 28 04:22:09 -03 2018
+-----
+trabalhando nos bots de markov
+Qua Mar 28 04:37:16 -03 2018
+-----
+yeah, ngrams fumagation
+Qua Mar 28 04:52:06 -03 2018
+-----
+fazendo o bot falar
+Qua Mar 28 05:12:37 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+sessao p engatar labuta do feriado
+Sex Mar 30 15:10:16 -03 2018
+-----
+planos p bots, estudo de bootstrap generico de ouroboros
+Sex Mar 30 15:26:27 -03 2018
+-----
+me perdendo nos pensamentos, escrito p fred, maurer, gabi
+Sex Mar 30 15:40:36 -03 2018
+-----
+lombrando. Escrevi p Antônio, melli, alfaix
+Sex Mar 30 15:57:00 -03 2018
+-----
+sem foco, comunicacoes. Viagem p europa tomou corpo
+Sex Mar 30 16:23:01 -03 2018
+-----
+bananinha p vc
+Sáb Mar 31 00:28:59 -03 2018
+-----
+
+
+$$$$$
+sessao p arrumar wiki e arquivos de help
+Ter Abr  3 04:50:35 -03 2018
+-----
+andando com construcao da wiki
+Ter Abr  3 05:05:44 -03 2018
+-----
+testando fzf.vim e notational-fzf-vim
+Ter Abr  3 05:20:47 -03 2018
+-----
+terminando de arrumar esquema da wiki
+Ter Abr  3 05:35:59 -03 2018
+-----
+caminhando com anotacao sobre vimwiki
+Ter Abr  3 05:55:07 -03 2018
+-----
+revendo codigo do b0t
+Ter Abr  3 06:05:46 -03 2018
+-----
+ver como funciona o fzf pq eh mt bom!
+Ter Abr  3 06:07:31 -03 2018
+-----
+revisando escritps do prv e do bot
+Ter Abr  3 06:21:20 -03 2018
+-----
+pensando muito, muito por fazer, preciso de forcas p concentrar, n perder tempo
+Ter Abr  3 06:36:03 -03 2018
+-----
+melhorando b0t
+Ter Abr  3 06:50:59 -03 2018
+-----
+$$$$$
+
+
+check https://github.com/xolox/vim-notes
+Ter Abr  3 09:44:57 -03 2018
+-----
+make a command for prv to open the file with word in title or PRVBuf with files, as in https://github.com/xolox/vim-notes
+Ter Abr  3 17:25:49 -03 2018
+-----
+primeiro shout com retorno do bot?
+Ter Abr  3 20:25:27 -03 2018
+-----
+collection of Bots.
+Ter Abr  3 20:31:58 -03 2018
+-----
+collection of ways by which Bots interact with Corpus and other Bots.
+Ter Abr  3 20:31:58 -03 2018
+-----
+bora nessa
+Ter Abr  3 20:32:14 -03 2018
+-----
+serah que agora tah indo bonito?
+Ter Abr  3 20:32:31 -03 2018
+-----
+cor som
+Ter Abr  3 20:32:43 -03 2018
+-----
+cor som
+Ter Abr  3 20:32:47 -03 2018
+-----
+cor som
+Ter Abr  3 20:32:49 -03 2018
+-----
+cor sound
+Ter Abr  3 20:32:59 -03 2018
+-----
+cor sound
+Ter Abr  3 20:33:02 -03 2018
+-----
+color sound
+Ter Abr  3 20:33:10 -03 2018
+-----
+color sound
+Ter Abr  3 20:33:12 -03 2018
+-----
+banana p vc
+Ter Abr  3 20:39:43 -03 2018
+-----
+banana p vc
+Ter Abr  3 20:39:46 -03 2018
+-----
+bom hoje vc
+Ter Abr  3 20:39:51 -03 2018
+-----
+bom hoje vc
+Ter Abr  3 20:39:55 -03 2018
+-----
+bom hoje vc
+Ter Abr  3 20:39:58 -03 2018
+-----
+bom hoje vc
+Ter Abr  3 20:40:00 -03 2018
+-----
+bom hoje vc
+Ter Abr  3 20:40:02 -03 2018
+-----
+bom hoje vc
+Ter Abr  3 20:40:05 -03 2018
+-----
+bom hoje vc
+Ter Abr  3 20:40:08 -03 2018
+-----
+aosidja soidj asoidj as
+Ter Abr  3 20:40:17 -03 2018
+-----
+asdasjdoasd asodiajsodiajsodj asdiajsidjasd
+Ter Abr  3 20:40:26 -03 2018
+-----
+bora
+Ter Abr  3 20:41:57 -03 2018
+-----
+bora
+Ter Abr  3 20:42:13 -03 2018
+-----
+as qowiejjsas assim
+Ter Abr  3 20:42:20 -03 2018
+-----
+algo
+Ter Abr  3 20:43:36 -03 2018
+-----
+agora sim
+Ter Abr  3 20:43:58 -03 2018
+-----
+retomando escrita do artigo de abordagem multinivel
+Sex Abr  6 01:16:07 -03 2018
+-----
+
+
+$$$$$
+iniciando sessao padrao. Bora, tem q rolar
+Sex Abr  6 01:17:32 -03 2018
+-----
+arrumando primeiro paragrafo
+Sex Abr  6 01:38:35 -03 2018
+-----
+anotando das ontologias e deixando texto ok
+Sex Abr  6 01:48:00 -03 2018
+-----
+terminando matching
+Sex Abr  6 02:02:53 -03 2018
+-----
+andando c edge matching
+Sex Abr  6 02:18:18 -03 2018
+-----
+andando com edge matching
+Sex Abr  6 02:32:53 -03 2018
+-----
+dando o tapa em RM HEM e LEM matchings
+Sex Abr  6 02:47:57 -03 2018
+-----
+terminando comeco do edge mapping
+Sex Abr  6 03:03:17 -03 2018
+-----
+MHEM
+Sex Abr  6 03:21:21 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+mais uma sessao, heavy clique matching
+Sex Abr  6 03:56:44 -03 2018
+-----
+sorted matching
+Sex Abr  6 04:42:44 -03 2018
+-----
+ok, andando bem com as notacoes
+Sex Abr  6 04:57:13 -03 2018
+-----
+algoritmo geral de random matching
+Sex Abr  6 05:12:29 -03 2018
+-----
+tentando acompanhar o q tah rolando
+Sex Abr  6 05:29:36 -03 2018
+-----
+bora, arrumado alg de BRM
+Sex Abr  6 05:53:04 -03 2018
+-----
+bora
+Sex Abr  6 06:06:05 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+sessao p fazer bots de markov: pedro, joao, e tiago
+Seg Abr  9 00:03:45 -03 2018
+-----
+opcao de bots:
+srila (shouts aa)
+pedro, joao, tiago
+paulo
+mateus, marcos, lucas
+judas
+Seg Abr  9 00:08:10 -03 2018
+-----
+ingles (kj, niv)
+ptbr (nvi)
+Seg Abr  9 00:09:34 -03 2018
+-----
+instanciando trio do inicio dos tempos
+Seg Abr  9 00:19:22 -03 2018
+-----
+arrumando funcoes do Vim p bots padaro
+Seg Abr  9 00:35:29 -03 2018
+-----
+fazendo setup do b0t
+Seg Abr  9 00:54:13 -03 2018
+-----
+python do Vim nao recarrega modulo...
+Seg Abr  9 01:04:02 -03 2018
+-----
+melhorando interface com os bots
+Seg Abr  9 01:20:01 -03 2018
+-----
+feitos pedro tiago e joao em pt e en
+Seg Abr  9 01:36:38 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+sessao p deixar conferencia de bots fumegando, e links com aa 100%
+Ter Abr 10 01:08:42 -03 2018
+-----
+escrito ao chu sobre reuniao d hj
+Ter Abr 10 01:24:11 -03 2018
+-----
+projetando a conferencia de bots
+Ter Abr 10 01:39:48 -03 2018
+-----
+fazendo funcao e comando p conferencia d bots
+Ter Abr 10 01:54:39 -03 2018
+-----
+bora fazendo a conferencia de bots fumegar
+Ter Abr 10 02:09:04 -03 2018
+-----
+devaneiando, embora a conferencia esteja quase pronta
+Ter Abr 10 02:27:48 -03 2018
+-----
+conferencia de bots jah operante
+Ter Abr 10 02:42:41 -03 2018
+-----
+bora finalizar esta conferencia
+Ter Abr 10 03:32:01 -03 2018
+-----
+andando com conferencia dos bots
+Ter Abr 10 03:39:36 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+para terminar conferencia de bots
+Ter Abr 10 03:39:45 -03 2018
+-----
+deixando conferencia fumegante
+Ter Abr 10 03:55:08 -03 2018
+-----
+melhorando conferencia
+Ter Abr 10 04:13:46 -03 2018
+-----
+conferencia ficando fina
+Ter Abr 10 04:25:35 -03 2018
+-----
+
+
+$$$$$
+sessao p bots politicos
+Ter Abr 10 13:41:47 -03 2018
+-----
+fazendo bots politicos
+Ter Abr 10 14:01:09 -03 2018
+-----
+bora q os bots estao fumegando
+Ter Abr 10 14:12:18 -03 2018
+-----
+$$$$$
+andando com publicacoes minimas dos resultados
+Ter Abr 10 14:49:18 -03 2018
+-----
+agora fazendo triades politicas cristas e brasileiras
+Ter Abr 10 14:49:41 -03 2018
+-----
+terminado dos bots, soh commitar e push
+Ter Abr 10 16:12:15 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+sessao em algum dos baits, wiki e prv provavelmente
+Dom Abr 15 21:19:42 -03 2018
+-----
+bots fumegando?
+Dom Abr 15 21:20:17 -03 2018
+-----
+fazendo arrumando caminhos no vim p arquivos principais por enquanto
+Dom Abr 15 21:35:21 -03 2018
+-----
+arrumando estrutura geral vimwiki prv
+Dom Abr 15 21:50:01 -03 2018
+-----
+aprendendo novamente sobre como usar a documentacao q eu mesmo fiz
+Dom Abr 15 22:05:00 -03 2018
+-----
+escrevendo sobre como fazer os bots
+Dom Abr 15 22:19:58 -03 2018
+-----
+arrumando notas diversas
+Dom Abr 15 22:36:36 -03 2018
+-----
+organizando wiki
+Dom Abr 15 22:49:59 -03 2018
+-----
+terminando arrumadas da wiki
+Dom Abr 15 23:05:32 -03 2018
+-----
+aprendendo :ts direito, nao entendi pq o Vimwiki tem search proprio
+Dom Abr 15 23:20:22 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+sessao p terminar d arrumar a wiki
+Seg Abr 16 00:57:01 -03 2018
+-----
+foram 5 min p planejar. Usando diario de forma diferente, usando premio
+Seg Abr 16 01:01:54 -03 2018
+-----
+integrando e deletando arquivos
+Seg Abr 16 01:12:32 -03 2018
+-----
+adicionando e limpando arquivos da wiki
+Seg Abr 16 01:27:13 -03 2018
+-----
+incorporando arquivos soltos
+Seg Abr 16 01:43:37 -03 2018
+-----
+arrumando datavis
+Seg Abr 16 01:57:12 -03 2018
+-----
+repassando diario para arquivo univo
+Seg Abr 16 02:12:56 -03 2018
+-----
+repassando notas de diario p arquivo unico ou organizando
+Seg Abr 16 02:27:23 -03 2018
+-----
+mappings e arrumando wiki
+Seg Abr 16 02:42:32 -03 2018
+-----
+escrevendo ultimos arquivos
+Seg Abr 16 02:57:51 -03 2018
+-----
+$$$$$
+
+
+buffer-specific registers in :Vim:?
+Seg Abr 16 03:04:59 -03 2018
+-----
+:bot: chout forte da Srila sobre registros mudarem mediante interacao com corpus
+Seg Abr 16 03:09:20 -03 2018
+-----

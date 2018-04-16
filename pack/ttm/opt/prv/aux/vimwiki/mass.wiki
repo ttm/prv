@@ -1,0 +1,53 @@
+:mass:massa:MASS:MASSA:
+just finished first half of final suite.
+
+TODO:
+* assert that linear and exp fades work properly
+* clean and organize the half suite pieces
+* enhance the standard pieces from mass.
+* integrate the half suite to the article.
+  - with the excercises
+* read again the whole work.
+* maybe enhance the discussion about reverberation.
+* enhance the section on cyclic arcs though:
+  - including patterns with greater cycles then the
+  patterns inside (d=[1,2,3], f=[200,300] cycle of 6 notes)
+  - enhance the exposition about change ringing to at least conform to wikipedia
+* enhance the music package:
+  * revise the scripts, making documentation properly
+  * use doxigen or similar
+  * make routines to generate music automatically
+
+I need to release the [[Music]] package sourcecode.
+
+for mass exercises:
+product of sounds: if you sum the result, you get
+the magnitude of the projection of one sound (vector)
+into the other.
+This is in the core of fourier, wavelet and most
+transformations, but the coefficients are magnitudes
+of the original signal/sound into a complete base
+(sinusoids, wavelets, etc).
+Explore this representing sounds against other sounds,
+e.g. recompose the transformation of a mozart piece
+against a Nobel prize speech or a Sex Pistols track.
+Hear the result, keep track of what might be of use, 
+try other sounds and other procedures (e.g. the lower part
+of the spectrum is against Goldberg Variations while
+higher components are given in terms of dog barks).
+Note: to represent sound X in terms of Y, you might
+want to use copies of Y with various lengths.
+E.g. sum(X . Y) = coeff_0,
+sum(X[:len(X)/2] . Y[::2]) = coeff_10
+sum(X[len(X)/2:] . Y[::2]) = coeff_11
+etc
+Then recompose with:
+Y . coeff_0 + H(Y[::2] . c10, Y[::2] . c11) etc
+
+
+download audios for first exercise using:
+http://music-scraper.readthedocs.io/en/latest/
+
+== links do youtube ==
+:youtube:links-musica:music-links:
+* https://youtu.be/c0hdvq5d8bc?t=13m10s

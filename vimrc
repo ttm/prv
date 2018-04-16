@@ -72,7 +72,7 @@ let g:prvset.leaders.realcolors = ['R', ' ']
 let g:prvset.leaders.tokipona = ['T', " "]
 " use <CR> for commands that have little to do with Vimwiki
 
-let g:vimwiki_list = [{'path': '~/.vim/pack/ttm/opt/prv/aux/vimwiki/', 'auto_toc': 1, 'auto_tags': 1}]
+let g:vimwiki_list = [{'path': '~/.vim/pack/ttm/opt/prv/aux/vimwiki/', 'auto_toc': 0, 'auto_tags': 1}]
 
 " PRV also deals with Vimwiki, so \w is taken
 " \X is also reserved for a nice restart

@@ -16,6 +16,8 @@ Use lowercase markers for inside files.
 * Todo
 * Wiki, wiki
 * ../../../aa/aux/aashouts.txt, AA shouts
+* tags usadas :todo: :note: :mass: etc
+
 
 = baits =
 :baits:iscas:

@@ -9,7 +9,7 @@ TODO:
 else diff it.
   - https://superuser.com/questions/904031/vim-automatically-delete-swp-file-after-recovery-doesnt-change-the-original-f
 
-[[Achievements]] 
+Achievements 
 * Using [[vimwiki]]
 * Published preliminary version of realcolors Vim plugin.
 * Usim vimscript fluently for loading and running functions

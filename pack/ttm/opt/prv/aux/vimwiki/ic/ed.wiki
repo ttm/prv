@@ -1,0 +1,111 @@
+:ed:ds:estrutura-de-dado:data-structure:estruturas-de-dados:data-structures:ED:DS:
+
+== Vocabulário essencial ==
+Estruturas de dados são em geral concebidas, estudadas e implementadas
+com base em tipos básicos e compostos de dados (de tipos básicos).
+Há outras classificações ubíquas, e.g. dados lineares são sequências
+de valores (como imagens, sons, etc), estruturas homogêneas consistem
+de valores de um mesmo tipo, em oposição às heterogêneas.
+
+'Dados relacionais' é um termo ambíguo: pode se referir a dados
+representados em um banco de dados relacional (e.g. MySQL PostgreSQL)
+ou a dados caracterizados pelas relações duais/binárias/dicotômicas.
+
+Em consonância com as atuais recomendações da [[W3C]], dados são preferivelmente representados em RDF
+e conectados à nuvem semântica global (i.e. ao Grafo Gigante e Global<ref></ref>
+de [[dados ligados]]<ref></ref>),
+motivo pelo qual os exemplos neste artigo são de preferência escritos em RDF e [[SparQL]].
+Pela facilidade e adoção ampla, exemplos JSON-compatíveis (como em [[Javascript]], [[Python]], [[VimL]], etc)
+são também incentivados, embora seja pertinente explicitar como a estrutura é de fato utilizada na linguagem,
+e.g. <code>val = lista[i%len(lista)]</code> é a implementação usual de uma lista ligada em Python,
+e deve ser mantida inclusive quando há muitas consultas, com o uso do [[Numpy]]/[[Scipy]] que utiliza as rotinas
+em Fortran do Blas e LAPACK, otimizados desde as primeiras décadas de programação de [[computadores Turing completas]].
+
+As implementações úteis destas estruturas de dados, mesmo em linguagens de baixo nível como C/C++,
+em geral estão nas bibliotecas padrão de cada linguagem.
+É importante entender estas classificações gerais, pois explicitam conceitos-chave
+na lida com dados em geral.
+
+== Verbetes ==
+Uma [[estrutura linear de dados]] é uma sequência de valores,
+em geral de mesmo tipo.
+Isto é, muitas vezes uma ELD é também uma [[estrutura homogênea de dados]].
+Algumas estruturas de dados são básicos/padrão para cada linguagem,
+e em geral há também recursos para formar estruturas compostas/elaboradas de dados,
+que se baseiam nos dados básicos.
+
+Muitas vezes, as estruturas padrão são chamadas de tipos de dados,
+as elaboradas pelo programa são chamadas tipos abstratos de dados,
+nomenclatura estabelecida na [[POO]].
+Neste paradigma, as estruturas de dados (chamados de [[atributos]])
+são encapsuladas por [[objetos]]
+e interfaceadas através de [[rotinas]] (chamadas de [[métodos]]).
+Desta forma, há uma abstração desta manipulação direta dos dados,
+própria da linguagem e dos TDs, por isso o nome TAD.
+
+O estudo de estruturas de dados consiste na observação e projeto de
+representações dos dados e das operações sobre estes dados na representação escolhida.
+A fim de exemplificação, é costume utilizar classes, p.ex. em Python,
+com métodos e atributos, para representar as estruturas de dados consideradas canônicas.
+E.g.:
+
+lista ligada com classe p elemento e p lista
+
+Na prática, um programador muito raramente implementa estas estruturas diretamente.
+Mais ainda: enquanto não é necessário, são utilizados TDs genéricos da linguagem,
+como listas de dicionários em Python,
+em detrimento dos TDs que são exemplificados na teoria.
+e.g. potencialmente melhores para custo computacional.
+
+== JSON-compatível ==
+Os dados são preferencialmente mantidos nas estruturas de listas e de dicionários,
+e há distinção entre os tipos básicos numéricos (e.g. floats e ints), e textuais (e.g. chars e strings).
+
+A maior limitação prática desta abordagem é o processamento de vetores multidimensionais,
+motivo pelo qual há bibliotecas com implementações otimizadas.
+
+Quando um valor pode ser uma função/rotina, tal objeto permite a representação de
+objetos para a [[POO]].
+
+Embora o padrão lista+dicionário de representação de estruturas de dados esteja aqui utilizada
+de forma genérica, [[JSON]] quer dizer Javascript Object Notation, e é um padrão muito bem definido
+de representação de dados, ao qual e.g. Python, VimL, e o próprio Javascript, com frequência se adequam para
+transferir ou armazenar dados.
+
+== Exemplo de estruturas canônicas e conceitos básicos ==
+
+lista ligada em rdf, python, viml
+
+dicionario hash
+
+
+== Taxonomia de estruturas de dados canônicas ==
+Pode-se dizer que, 
+na PE as variáveis são chaves cujos valores são TDs.
+enquanto na POO são TDs ou TADs.
+Estas TDs são em geral concebidos em termos das
+seguintes estruturas de dados<ref></ref>:
+
+ligadas:
+
+heterogêneas:
+
+lineares:
+
+homogeneas:
+
+
+== veja também ==
+
+== links externos ==
+
+{{referencias}}
+
+
+
+
+
+
+
+
+

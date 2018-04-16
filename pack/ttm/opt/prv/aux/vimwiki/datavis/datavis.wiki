@@ -1,0 +1,6 @@
+
+
+= [[Achievements]] =
+* Realcolors plugin released at vim.org:
+  - http://www.vim.org/scripts/script.php?script_id=5650
+* Talk with paco: ../legacy/paco

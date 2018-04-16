@@ -1,4 +1,5 @@
-:Todo:
+:Todo:todo:TODO:ToDo:
+
 = lightyearstones =
 :stones:Stones:
 * finish about computer science and physics this year and the next.
@@ -27,6 +28,7 @@
 * release
 * make |bot| plugin
 * start ic additions
+* absorb ~/.vim/aux/ttmnotes.vim
 
 == realcolors ==
 * arrumar que o realcolors não pega a cor em .wiki
@@ -152,3 +154,13 @@ let tokens nltk.lrun("this sentence should be tokenized")
 Think about extending the model for any module..
 E.g. let linspace = pymodule("numpy", "linalg.linspace")
 let marray = linspace(2,100,0.1)
+
+
+= migrado do Tasks.vim =
+understand vimwiki (see file in diary dir)
+
+finish mass suite
+
+reestabligh the nice 2h/task routine
+
+finish aa in prv (using vimwiki?)

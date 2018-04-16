@@ -1,0 +1,41 @@
+:notation:wiki-notation:bare-vim-wiki:
+
+:todo:
+use utf8 chars through :digraphs: to take notes on individual projects
+and note types.
+E.g.:
+* ♔ for most rewarding things (such as reading "pattern recognition"
+  (mumford) and Tsallis)
+* ☥ for more relevant contributions
+* ☯ for equilibrium matters
+* ☠ for dead ends or wrong ways
+* ☮ for socially-engaged stuff
+* ☘ for opportunities
+* ☨ for transcendental stuff
+* Ⓐ for political and notes (e.g. experiments)
+* symbols are written 1-6 times, as a rating of the characteristic.
+* E.g.:
+  * Espiritualidade instrumental ☮☮☮☮ 
+* make mappings with Alt TTM
+
+
+TTM is the general tag for "needs revision",
+a generic TODO tag. Maybe use TODO as everyone else
+
+(entering special chars: 
+<C-(M, S-U)>
+digraphs
+digraphs and c-u both enters symbols in the charset (e.g utf8),
+but one uses the hex notation (c-u) and the other the decimal notation.
+
+
+como q C-S-U entra unicode?? entao eh diferente c-u (q remove tudo da
+linha) e c-s-u
+C-S are system
+C-S-U entra unicode pelo system (funciona no terminal e no gmail...)
+digraphs, que 'e do Vim, usa representacao decimal.
+Jah C-M entra a representação em caracteres para as teclas apertadas.
+C-S-U não pode ser usado para mappings (at least here), mas digraph
+sim de boa
+
+:question: <C-M> é <CR>, não entendi como entrar caracteres especiais com c-m
