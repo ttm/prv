@@ -1884,3 +1884,12 @@ Seg Abr 16 10:25:57 -03 2018
 retomando sessao anterior, reiniciado Vim p dar conta
 Seg Abr 16 10:26:19 -03 2018
 -----
+arrumar wikipedia de visualizacao de dados
+Ter Abr 17 18:46:45 -03 2018
+-----
+arrumar wikipedia de visualizacao de dados
+Ter Abr 17 18:47:05 -03 2018
+-----
+pq realcolors n pega a cor do normal no vimwiki?
+Ter Abr 17 20:32:27 -03 2018
+-----

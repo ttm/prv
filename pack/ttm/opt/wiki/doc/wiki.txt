@@ -127,7 +127,20 @@ See 'path'
 ==============================================================================
 3. Options, variables and general settings                  *wiki-settings*
 
-Important files:
+Within Vim design, uppercase letters are cross-files,
+and lowercase markers are for locations inside each file.
+
+------------------------------------------------------------------------------
+3.1 Files                                                     *wiki-files*
+Important files for notes in aux/wiki/ (added to 'path'):
+* Messages, in private/messages.wiki, marker M
+* TODO, in aux/todo.wiki, marker T
+  - section Accomplishments, marker a
+* NOTEs, in aux/blergh.wiki, marker N
+* Calendar, in daiary/index.wiki, marker C
+* Diary, also in daiary/index.wiki, marker D
+
+Important for files:
 'isf'
 'isi'
 'isk'
@@ -141,8 +154,6 @@ tags:
 for display:
 'isp'
 'kp'
-
-
 
 Maybe relevant:
 'include'
