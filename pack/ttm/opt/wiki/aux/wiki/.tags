@@ -6,11 +6,11 @@ Calendário	diary/diary.wiki	33;"	vimwiki:diary/diary\tdiary/diary#Calendário
 Complexidade	ic/complexidade.wiki	1;"	vimwiki:ic/complexidade\tic/complexidade
 Complexity	ic/complexidade.wiki	1;"	vimwiki:ic/complexidade\tic/complexidade
 DS	ic/ed.wiki	1;"	vimwiki:ic/ed\tic/ed
-Diary	diary/diary.wiki	66;"	vimwiki:diary/diary\tdiary/diary#Diary
-Diário	diary/diary.wiki	66;"	vimwiki:diary/diary\tdiary/diary#Diary
+Diary	diary/diary.wiki	62;"	vimwiki:diary/diary\tdiary/diary#Diary
+Diário	diary/diary.wiki	62;"	vimwiki:diary/diary\tdiary/diary#Diary
 Done	Achievements.wiki	1;"	vimwiki:Achievements\tAchievements
 ED	ic/ed.wiki	1;"	vimwiki:ic/ed\tic/ed
-Feitos	diary/diary.wiki	187;"	vimwiki:diary/diary\tdiary/diary#Feitos
+Feitos	diary/diary.wiki	183;"	vimwiki:diary/diary\tdiary/diary#Feitos
 IC	ic/ic.wiki	1;"	vimwiki:ic/ic\tic/ic
 MASS	mass.wiki	1;"	vimwiki:mass\tmass
 MASSA	mass.wiki	1;"	vimwiki:mass\tmass
@@ -56,12 +56,12 @@ dados-ligados	ic/ws.wiki	1;"	vimwiki:ic/ws\tic/ws
 data-structure	ic/ed.wiki	1;"	vimwiki:ic/ed\tic/ed
 data-structures	ic/ed.wiki	1;"	vimwiki:ic/ed\tic/ed
 definition	todo.wiki	162;"	vimwiki:todo\ttodo#definition
-diary	diary/diary.wiki	66;"	vimwiki:diary/diary\tdiary/diary#Diary
+diary	diary/diary.wiki	62;"	vimwiki:diary/diary\tdiary/diary#Diary
 digraphs	Notation.wiki	4;"	vimwiki:Notation\tNotation#digraphs
-diário	diary/diary.wiki	66;"	vimwiki:diary/diary\tdiary/diary#Diary
+diário	diary/diary.wiki	62;"	vimwiki:diary/diary\tdiary/diary#Diary
 done	Achievements.wiki	1;"	vimwiki:Achievements\tAchievements
 done	Achievements.wiki	13;"	vimwiki:Achievements\tAchievements#done
-done	diary/diary.wiki	72;"	vimwiki:diary/diary\tdiary/diary#Diary#2018#April
+done	diary/diary.wiki	68;"	vimwiki:diary/diary\tdiary/diary#Diary#2018#April
 ds	ic/ed.wiki	1;"	vimwiki:ic/ed\tic/ed
 ec	ic/ce.wiki	1;"	vimwiki:ic/ce\tic/ce
 ed	ic/ed.wiki	1;"	vimwiki:ic/ed\tic/ed
@@ -73,8 +73,8 @@ et	ic/te.wiki	1;"	vimwiki:ic/te\tic/te
 feito	Achievements.wiki	1;"	vimwiki:Achievements\tAchievements
 fuzzy	ic/fuzzy.wiki	1;"	vimwiki:ic/fuzzy\tic/fuzzy
 fuzzy-logic	ic/fuzzy.wiki	1;"	vimwiki:ic/fuzzy\tic/fuzzy
-habitos	diary/diary.wiki	270;"	vimwiki:diary/diary\tdiary/diary#habitos
-habits	diary/diary.wiki	270;"	vimwiki:diary/diary\tdiary/diary#habits
+habitos	diary/diary.wiki	266;"	vimwiki:diary/diary\tdiary/diary#habitos
+habits	diary/diary.wiki	266;"	vimwiki:diary/diary\tdiary/diary#habits
 ic	ic/ic.wiki	1;"	vimwiki:ic/ic\tic/ic
 ic	ic/icwp.wiki	1;"	vimwiki:ic/icwp\tic/icwp
 id	ic/fuzzy.wiki	19;"	vimwiki:ic/fuzzy\tic/fuzzy#inteligência difusa
@@ -96,18 +96,18 @@ ml	ic/icwp.wiki	1;"	vimwiki:ic/icwp\tic/icwp
 music	Music.wiki	1;"	vimwiki:Music\tMusic
 music	music/music.wiki	1;"	vimwiki:music/music\tmusic/music
 music-links	mass.wiki	52;"	vimwiki:mass\tmass#links do youtube
-musica	diary/diary.wiki	210;"	vimwiki:diary/diary\tdiary/diary#musica
+musica	diary/diary.wiki	206;"	vimwiki:diary/diary\tdiary/diary#musica
 musica	music/music.wiki	1;"	vimwiki:music/music\tmusic/music
 nn	ic/rn.wiki	1;"	vimwiki:ic/rn\tic/rn
 notation	Notation.wiki	1;"	vimwiki:Notation\tNotation
-note	diary/diary.wiki	81;"	vimwiki:diary/diary\tdiary/diary#note
+note	diary/diary.wiki	77;"	vimwiki:diary/diary\tdiary/diary#note
 note	index.wiki	19;"	vimwiki:index\tindex#note
 note-types	index.wiki	10;"	vimwiki:index\tindex#note types
 notes	blergh.wiki	1;"	vimwiki:blergh\tblergh
 notes	index.wiki	10;"	vimwiki:index\tindex#note types
 ok	Achievements.wiki	1;"	vimwiki:Achievements\tAchievements
 pe	ic/pe.wiki	1;"	vimwiki:ic/pe\tic/pe
-premio	diary/diary.wiki	78;"	vimwiki:diary/diary\tdiary/diary#premio
+premio	diary/diary.wiki	74;"	vimwiki:diary/diary\tdiary/diary#premio
 probabilidade	ic/probabilidade.wiki	1;"	vimwiki:ic/probabilidade\tic/probabilidade
 probability	ic/probabilidade.wiki	1;"	vimwiki:ic/probabilidade\tic/probabilidade
 programacao-estruturada	ic/pe.wiki	1;"	vimwiki:ic/pe\tic/pe
@@ -135,7 +135,7 @@ tasks	todo.wiki	160;"	vimwiki:todo\ttodo#migrado do Tasks.vim
 te	ic/te.wiki	1;"	vimwiki:ic/te\tic/te
 teoria-do-aprendizado	ic/ta.wiki	1;"	vimwiki:ic/ta\tic/ta
 todo	Notation.wiki	3;"	vimwiki:Notation\tNotation#todo
-todo	diary/diary.wiki	83;"	vimwiki:diary/diary\tdiary/diary#todo
+todo	diary/diary.wiki	79;"	vimwiki:diary/diary\tdiary/diary#todo
 todo	ic/ic.wiki	52;"	vimwiki:ic/ic\tic/ic#andamentos#código
 todo	ic/pe.wiki	3;"	vimwiki:ic/pe\tic/pe#todo
 todo	index.wiki	19;"	vimwiki:index\tindex#todo

@@ -1893,3 +1893,102 @@ Ter Abr 17 18:47:05 -03 2018
 pq realcolors n pega a cor do normal no vimwiki?
 Ter Abr 17 20:32:27 -03 2018
 -----
+lendo artigo da wikipedia sobre data visualization
+Qua Abr 18 00:44:52 -03 2018
+-----
+
+
+$$$$$
+lendo artigo da wikipedia sobre data visualization
+Qua Abr 18 00:45:08 -03 2018
+-----
+entendendo os artigos mais importantes da wikipedia
+Qua Abr 18 01:00:34 -03 2018
+-----
+namorando literatura de visualizacao de dados
+Qua Abr 18 01:15:24 -03 2018
+-----
+pausei para comer, esqueci e perdi 2 slots
+Qua Abr 18 01:54:05 -03 2018
+-----
+disperso + 1 slot
+Qua Abr 18 02:01:50 -03 2018
+-----
+anotando do artigo wpen, vendo sobre arquitetura de apresentacao de dados
+Qua Abr 18 02:20:24 -03 2018
+-----
+terminado de ler as wikipedias em ptbr e ingles
+Qua Abr 18 03:10:16 -03 2018
+-----
+feita busca por links adicionais
+Qua Abr 18 03:10:29 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+sessao p fazer o artigo de visualizacao de dados
+Qua Abr 18 14:14:10 -03 2018
+-----
+escrevendo visao geral
+Qua Abr 18 14:32:09 -03 2018
+-----
+arrumando sobre imagem, vídeo e áudio
+Qua Abr 18 14:44:22 -03 2018
+-----
+escrevendo sobre AA
+Qua Abr 18 15:00:32 -03 2018
+-----
+arrumando estrutura do artigo, indo p proxima arrumacao
+Qua Abr 18 15:15:28 -03 2018
+-----
+pensando em bots e quarto p eu curtir
+Qua Abr 18 15:29:48 -03 2018
+-----
+trabalhando nos itens básicos
+Qua Abr 18 15:44:22 -03 2018
+-----
+andando com artigo de VD
+Qua Abr 18 18:34:11 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+sessao p dar tapa final no artigo de visualizacao
+Qui Abr 19 03:08:04 -03 2018
+-----
+$$$$$
+
+
+decidido ir com calma do artigo de VD, talvez uma sessao soh p arrumar historico
+Qui Abr 19 14:20:58 -03 2018
+-----
+uma sessao p arrumar historico de VD, ateh amanha p arrumar wiki, bot, prv, etc e encaminhar c Chu
+Qui Abr 19 14:21:50 -03 2018
+-----
+
+
+$$$$$
+iniciando sessao p arrumar historico de VD
+Qui Abr 19 14:52:50 -03 2018
+-----
+testando nova manutencao da ultima msg do bot
+Qui Abr 19 14:56:12 -03 2018
+-----
+mais um teste
+Qui Abr 19 14:58:02 -03 2018
+-----
+arrumando bot: ultima mensagem, guardando dialogo geral
+Qui Abr 19 15:08:30 -03 2018
+-----
+fazendo gambi p guardar os dialogos dos bots
+Qui Abr 19 15:24:11 -03 2018
+-----
+ficou mara mm esse bot, o esquema de guardar dialogos, a srila tah dando show
+Qui Abr 19 15:38:18 -03 2018
+-----

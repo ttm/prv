@@ -1,0 +1,170 @@
+dataviz
+
+'''Visualização de dados''' (VD) é uma expressão contemporânea da [[comunicação visual]] que consiste na representação [[Sistema visual|visual]] de [[dados]].<ref name = "MF08">[[Michael Friendly]] (2008). [http://www.math.yorku.ca/SCS/Gallery/milestone/milestone.pdf "Milestones in the history of thematic cartography, statistical graphics, and data visualization"].</ref><ref name="wpen">https://en.wikipedia.org/wiki/Data_visualization</ref>
+Na VD, há exibição gráfica (tipicamente imagens ou videos, mas também e.g. escultura, aplicativo web) de
+[[informação|informações]] abstratas (i.e. não físicas, veja [[estrutura de dados]])
+com os propósitos de atribuição de sentido (sensemaking ([[https://en.wikipedia.org/wiki/Sensemaking|en]])) e [[comunicação]]<ref>Few, Stephen. [https://www.interaction-design.org/literature/book/the-encyclopedia-of-human-computer-interaction-2nd-ed/data-visualization-for-human-perception?refresh=true%3Frefresh%3Dtrue "Data visualization for human perception."] The Encyclopedia of Human-Computer Interaction, 2nd Ed. (2013).</ref>.
+
+== Visão geral ==
+A VD envolve necessariamente o mapeamento (potencialmente degenerado)
+de [[informação|informações]] abstradas (e.g. [[estrutura da dados|dados]] ou uma [[equação]])
+para o domínio da [[luz]] no [[espectro visível]], possivelmente
+distribuída [[espaço|espacialmente]] (como em uma [[imagem]]) e no [[tempo]] (como em um [[vídeo]] ou na navegação de uma galeria de imagens).
+Há [[#Apresentação gráfica efetiva|melhores práticas]] para a VD e [[#Princípios da Gestalt|princípios]] que noteiam a [[Percepção visual|cognição e percepção visuais]]. 
+A área conta também com algoritmos e métodos bem estabelecidos (e.g. para obteção de [[curva de nível]]), organizações conceituais diversas referentes aos dados, diagramas, interatividade, cores, etc.<ref name="wpen"><ref name="ware">Ware, Colin. Information visualization: perception for design. Elsevier, 2012.</ref><ref name="munzner">Munzner, Tamara. Visualization analysis and design. CRC press, 2014.</ref>
+
+== Histórico ==
+O histórico da VD é descrito de formas constrastantes, e.g. começando da [[pré-história]]
+ou segunda metade do [[século XX]].
+Desde pinturas nas cavernas
+até hoje (Few, etc), visualização de paisagens sonoras,
+redes complexas, redes sociais, dados ligados,
+suporte à crítica literária, computação cognitiva,
+mineração de dados, etc.
+
+=== arte, ciência e nota cosmológica ===
+A VD é ambas uma arte e uma ciência<ref name='wpen' />.
+Design, gestalt, Tufte.
+Meios eletrônicos digitais, analógicos e mídias não eletrônicas,
+como um artigo impresso (e suas figuras), uma pintura, uma escultura, etc.
+Em última instância, segundo a ciência atual,
+sempre que um ser vivo está fazendo uso de sensores,
+está realizando 'percepção de dados' (e.g. [[#audiovisualização]]).
+Quando há sensibilidade às ondas eletromagnéticas,
+e.g. na [[visão]], pode-se dizer que realiza VD.
+Isso decorre da definição de VD e das concepções da realidade (ou universo)
+como um [[computador]], e os objetos ou [[sinal|sinais]] recebidos como [[estruturas de dados]] (ou 'informações abstratas'), o que em geral implica em aceitar a [[hipótese da simulação]]
+de que a [[vida]] é uma [[simulação]] (ou [[emulação]]) computacional<ref name=.
+strom>Bostrom, Nick. "Are we living in a computer simulation?." The Philosophical Quarterly 53.211 (2003): 243-255.</ref>.
+Neste sentido, a VD (atual expoênte da [[percepção de dados]])
+assume um escopo [[cosmológico]] e [[epistemológico]],
+tratados e.g. na [[filosofia da percepção]] e (em geral indiretamente)
+na física, especialmente na [[quântica]] e [[relatividade]].
+
+== imagem, video, áudio ==
+A área de VD tem ênfase no uso de imagens estáticas (gráficos, diagramas, fotos, etc),
+pois<ref>Paulovich, 2013</ref>: 
+1) os elementos visuais são neste caso mais facilmente referenciados por outras mídias (e.g. texto);
+2) o observador é incentivado a absorver e refletir sobre a representação imutável;
+3) uma imagem pode portar mais informação do que é intuitivo supor.
+4) imagens são convenientes para mídias impressas (especialmente se for em [[preto-e-branco|tons de cinza]]);
+5) imagens são tradicionais na literatura científica e acadêmica em geral;
+6) a teoria de visualização de dados através de imagens está mais desenvolvida e consolidada do que através de outras mídias (e.g. vídeo).
+
+TODO: perguntar para a cristina de onde o paulovich tirou essa info sobre imagens.
+==== Figura, tabela, texto ====
+Na VD, há ênfase na representação de [[dado]]s por [[figura]]s (e.g. [[gráfico]]s, [[diagrama]]s).
+A argumentação básica é a de que <math>\approx 2/3</math> dos neurônios humanos
+estejam relacionados de alguma forma com o a visão,
+e de que o processamento visual pré-atentivo é extremamente eficiente.
+De fato, ao observar uma foto, reconhecemos seus elementos e contexto
+com pouco ou nenhum esforço, e os [[#princípios da Gestalt]] são robustos
+e estabelecidos.
+
+As [[tabela]]s são adequadas para a [[representação]] e [[busca]] de valores específicos,
+e sua interpretação se dá mais através do [[processamento de linguagem no cérebro|processamento verbal]] ([https://en.wikipedia.org/wiki/Language_processing_in_the_brain en]) do que através do processamento visual pré-atentivo, se comparada ao caso das figuras.
+O [[texto]], a rigor, é também uma VD: os dados são signos [[linguística|linguísticos]] e a imagem consiste na coleção de significantes gráficos (e.g. palavras, hieroglifos, etc).
+Embora o [[texto]] isolado não seja, em geral, considerado diretamente na literatura de VD
+
+=== Vídeo ===
+Vídeos estão ganhando espaço na literatura de VD
+e apresentado incidência crescente na literatura científica em geral,
+nitidamente influenciados pela popularização das tecnologias web e computacionais,
+pela adequação do vídeo para alguns conteúdos (e.g. resumos ou cursos)
+e potencial comodidade na absorção de grandes quantidades de informação.<ref name='telea' /><ref name='munzner' /><ref name='xx' /><ref name='yy' /><ref name='av' /><ref name='av2' />
+
+=== Sonificação ===
+O mapeamento de [[dados]] para [[som]] é a ''sonificação de dados'' (ou simplesmente [[sonificação]]).
+Um vídeo pode incorporar a sonificação de dados, mas em geral,
+atualmente,
+o áudio consiste em falas ou alguma música pouco ou metaforicamente relacionada
+ao vídeo.<ref>https://en.wikipedia.org/wiki/Sonification</ref>
+
+=== Audiovisualização ===
+A [[audiovisualização de dados]] (AD) consiste no mapeamento dos dados para
+ambos os canais [[audição|auditivo]] e [[visão|visual]], i.e.
+envolve necessariamente o mapeamento de [[dado]]s para [[ondas eletromagnéticas]] ([[luz]])
+e para [[ondas mecânicas]] ([[som]]).<ref>Audiovisual Analytics</ref><ref>Audiovisual Analytics2</ref>
+Note que a AD não implica no uso de vídeo: uma imagem ou galeria acompanhada
+de som ou [[música]] que representem os dados é uma AD.
+
+== estética e funcionalidade ==
+Um objetivo nuclear na VD é a comunicação clara e efetiva utilizando meios gráficos.
+Neste contexto, busca-se um equilíbrio entre qualidades estéticas e funcionais,
+idealmente expondo, de forma intuitiva, perspectivas-chave sobre conjuntos de dados complexos.<ref>[https://infogr.am/page/visualizacao-de-dados "Data Visualization and Infographics"] in: ''Visualização de Dados'', Infogram Research, 12 Março, 2017.</ref>
+
+== Conceitos-chave ==
+=== Visualização ===
+Percepção e cognição visuais.
+Bastonetes para cor e luminosidade.
+
+=== Dados ===
+Definidos neste contexto como informação abstraída de maneira esquemática,
+e.g. através de atributos ou variáveis para as unidades de [[informação]]<ref name="MF08">
+
+==== Dados quantitativos e não quantitativos ====
+escalares, vetores multidimensionais.
+strings.
+relacionais, categóricos, etc.
+=== Princípios da Gestalt ===
+Princípios de percepção. Contextualizar com VD, linkar com artigo.
+
+=== Comparação e causalidade? ===
+Simetrias/diferenças, distâncias euclidianas e estatísticas.
+Causalidade, correlação, etc.
+
+=== Processamento pré-atentivo, atenção e memória ===
+Human processor model.
+
+=== Interatividade ===
+Analítica visual.
+
+=== Apresentação gráfica efetiva ===
+Tufte
+
+=== Mensagens quantitativas ===
+Few
+
+=== Narrativa ===
+story em:
+https://www.interaction-design.org/literature/book/the-encyclopedia-of-human-computer-interaction-2nd-ed/data-visualization-for-human-perception?refresh=true%3Frefresh%3Dtrue
+
+=== Interação ===
+usar comentário do Kosara em:
+https://www.interaction-design.org/literature/book/the-encyclopedia-of-human-computer-interaction-2nd-ed/data-visualization-for-human-perception?refresh=true%3Frefresh%3Dtrue
+
+== Comparação entre gráficos de barra e pizza ==
+apenas citar os requisitos e mencionar se e como estes
+gráficos cumprem eles:
+https://www.interaction-design.org/literature/book/the-encyclopedia-of-human-computer-interaction-2nd-ed/data-visualization-for-human-perception?refresh=true%3Frefresh%3Dtrue
+(seção 35.2)
+
+
+= Audiovisualização de dados =
+
+= Sistematizações =
+figura (interpretada/processada visualmente),
+tabela (interpretada/processada visualmente e verbalmente),
+texto (interpretado/processada verbalmente).
+
+= Contexto da área =
+Visualização de dados, visualização científica, visualização de informação.
+
+Analítica (audio)visual, mineração de dados, aprendizado de máquina,
+inteligência computacional, computação cognitiva.
+
+A visualização de dados está intimamente relacionada com os gráficos de informação, visualização científica e com gráficos estatísticos. Atualmente, a visualização de dados é muito prática e uma área vital de pesquisas, ensino e desenvolvimento. O termo une os campos da visualização científica e da visualização da informação.<ref name= "FHP02">Frits H. Post, Gregory M. Nielson and Georges-Pierre Bonneau (2002). [http://visualisation.tudelft.nl/publications/post2003b.pdf ''Data Visualization: The State of the Art''].</ref>
+
+== Arquitetura de apresentação de dados ==
+?
+
+== Software ==
+
+eficaz efficacious/effective
+eficiente efficient
+efetivo effective
+
+= Veja também =
+human factors (artigo do few)
+hci
+

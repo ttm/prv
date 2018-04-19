@@ -23,11 +23,21 @@ let g:bot_default_localleader = ''
 fu! BotTalk(string)
   let tokens = split(a:string, ' ')
   let cmd = 'b.markovTalk("'.a:string.'")'
-  retu py3eval('b.id'). ': '.py3eval(l:cmd)
+  py3 b.lastmsg = b.id + ': ' + eval(vim.eval('l:cmd'))
+  cal BotDialogAdd(a:string, py3eval('b.lastmsg'))
+  retu py3eval('b.lastmsg')
+endf
+
+fu! BotDialogAdd(...)
+  let asd = a:
+  " maybe replace \n by \r because o last paragraph of :h writefile()
+  cal writefile(['','$$$$$ ::: '.system('date')[:-2]], g:bot.paths.dialogs, 'as')
+  cal writefile( a:000, g:bot.paths.dialogs, 'as')
 endf
 
 fu! BotsInitialize()
-  let g:bot = {}
+  let g:bot = {'paths': {}}
+  let g:bot.paths.dialogs = g:bot_dir . 'aux/dialogs.txt'
   let g:bot.sentlen = '2-35'
   let g:bot.a = 6.7
   let cdir = g:bot_dir . 'plugin/b0t/corpus/'
@@ -49,6 +59,8 @@ bots['laila'] = b0t.baselineBotFromText(vim.eval('cdir') + "laila.txt", 'Laila K
 bots['lula'] = b0t.baselineBotFromText(vim.eval('cdir') + "lula.txt", 'Luís Inácio Lula da Silva')
 bots['dilma'] = b0t.baselineBotFromText(vim.eval('cdir') + "dilma.txt", 'Dilma Vana Rousseff')
 bots['fhc'] = b0t.baselineBotFromText(vim.eval('cdir') + "fhc.txt", 'Fernando Henrique Cardoso')
+
+bots['morss'] = b0t.baselineBotFromText(vim.eval('cdir') + "fhc.txt", 'Fernando Henrique Cardoso')
 
 b = bots['srila']
 # dbots = ['srila', 'tiago', 'joao', 'pedro', 'zer@']
@@ -111,5 +123,9 @@ fu! BotConference(...)
   pu = l:foo
 endf
 com! -nargs=* Bc call BotConference(<f-args>)
+com! -nargs=1 -complete=tag_listfiles Bt ec BotTalk(<q-args>)
 
+nn Bt :Bt 
+nn Bc :Bc<CR> 
+nn Bi :cal BotsInitialize()<CR>
 " vim:foldlevel=2:

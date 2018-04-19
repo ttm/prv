@@ -47,6 +47,11 @@ tags (help, wiki, source code)
 * file paths
 * generic text searches in file names (fuzzyfinder?) and contents (lgrep)
 
+The |wiki| follows the same self-transparency standards as |aa| and |PRV| in
+general: notes, articles, code, data, everything is public by default. Privary
+is valued, and files to be encrypted, or not to be added to the |wiki| repository,
+are kept in (wiki/aux/wiki/)private/ directory.  See |wiki-files| and |wiki-privacy|
+
 ------------------------------------------------------------------------------
                                                                     *prv-wiki*
                                                                *bare-vim-wiki*

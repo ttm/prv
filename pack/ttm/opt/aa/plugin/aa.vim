@@ -81,7 +81,7 @@ PRVLeader r aa
 com! -nargs=1 -complete=tag_listfiles A call AAShout(<q-args>)
 " com! -nargs=1 -complete=customlist,AAAutoComplete A call AAShout(<q-args>)
 com! -nargs=+ S call AAStartSession(<f-args>)
-com! -nargs=* Ac call AAClear(<q-args>)
+com! -nargs=* Ac call AAClear(<q-ar4jgs>)
 com! Ai ec AAInfo()
 com! AI call AAInit()
 " -- UTILS: {{{3

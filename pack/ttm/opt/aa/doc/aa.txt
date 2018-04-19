@@ -398,8 +398,8 @@ requested shouts do not match the visual cue).
 *aa-leader-h* : open the |aa-aux| directory
 *aa-leader-H* : open |aa.txt| in the context of a help file
 (i.e. within the proper |tags| settings)
-*aa-leader-localleader-h* : vertical split for |aa.vim|.
-*aa-leader-localleader-H* : vertical split for the last sourced file of the
+*aa-leader-localleader-H* : vertical split for |aa.vim|.
+*aa-leader-localleader-h* : vertical split for the last sourced file of the
 |aa| plugin: |aastart.vim|
 
                                                          *aa-general-mappings*

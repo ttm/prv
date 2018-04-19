@@ -1,4 +1,36 @@
+wikipédia article: datavizwp
 
+= bib =
+== wikipedia ==
+https://en.wikipedia.org/wiki/Data_visualization
+https://en.wikipedia.org/wiki/Visual_analytics
+https://en.wikipedia.org/wiki/Analytics
+https://en.wikipedia.org/wiki/Data_analysis
+https://en.wikipedia.org/wiki/Visual_design_elements_and_principles
+https://en.wikipedia.org/wiki/Design
+https://en.wikipedia.org/wiki/Exploratory_data_analysis
+https://en.wikipedia.org/wiki/Sonification
+
+== moocs ==
+https://www.coursera.org/learn/datavisualization
+https://www.coursera.org/learn/exploratory-data-analysis
+
+== 4 livros principais ==
+== artigos q a cristina passou ==
+== livros que a cristina deixou comigo ==
+== Busca ==
+* https://books.google.com.br/books?hl=pt-BR&lr=&id=NGwvDwAAQBAJ&oi=fnd&pg=PR2&dq=data+visualization&ots=ruUAokmySm&sig=X1j9c49AwKyU0TRZHp80N8ZrOfw#v=onepage&q=data%20visualization&f=false
+* https://patents.google.com/patent/US9870629B2/en
+* https://books.google.com.br/books?hl=pt-BR&lr=&id=AGjOBQAAQBAJ&oi=fnd&pg=PP1&dq=data+visualization&ots=Nkwsug40Go&sig=UPi5y0MJl_4C-hmg2oL5kJo7s14#v=onepage&q=data%20visualization&f=false
+* https://patents.google.com/patent/US9171387B2/en
+* https://www.sas.com/en_us/insights/big-data/data-visualization.html
+* https://searchbusinessanalytics.techtarget.com/definition/data-visualization
+* https://datavizcatalogue.com/
+* https://www.oracle.com/br/solutions/business-analytics/data-visualization.html
+* http://datavizproject.com/
+* https://www.youtube.com/watch?v=YaGqOPxHFkc
+* https://www.ted.com/talks/david_mccandless_the_beauty_of_data_visualization
+* https://www.interaction-design.org/literature/book/the-encyclopedia-of-human-computer-interaction-2nd-ed/data-visualization-for-human-perception?refresh=true%3Frefresh%3Dtrue
 
 = [[Achievements]] =
 * Realcolors plugin released at vim.org:

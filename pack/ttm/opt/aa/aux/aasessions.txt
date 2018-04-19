@@ -391,3 +391,29 @@ slots: 8
 started: Seg Abr 16 10:25:47 -03 2018
 dur: 15.0
 slots: 5
+
+
+started: Qua Abr 18 00:45:08 -03 2018
+dur: 15.0
+slots: 8
+ended: Qua Abr 18 03:10:29 -03 2018
+
+
+
+
+started: Qua Abr 18 14:14:10 -03 2018
+dur: 15.0
+slots: 8
+ended: Qua Abr 18 18:34:12 -03 2018
+
+
+
+
+started: Qui Abr 19 03:08:04 -03 2018
+dur: 15.0
+slots: 8
+
+
+started: Qui Abr 19 14:52:50 -03 2018
+dur: 15.0
+slots: 8
