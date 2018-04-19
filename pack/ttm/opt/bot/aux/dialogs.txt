@@ -1,3 +1,6 @@
+ vim:ma:noro:tw=78:ts=8:sts=4:sw=4:et:foldmethod=marker
+
+" {{{ gênese:
 oi, fala cmg
 Srila: notas diversas Dom Abr 16 04 - v )... Sáb Mar
 gatinha esperta
@@ -68,3 +71,45 @@ Srila: paulo mateus , it recall all the lines , is all
 $$$$$ ::: Qui Abr 19 15:48:30 -03 2018
 agora também tenho um comando p falar c vc
 Srila: também luz Qui Abr 15 : 27 : fin path to
+}}}
+
+$$$$$ ::: Qui Abr 19 15:54:28 -03 2018
+commitado prv, notando de filosofia da percepcao para wp, fazendo bots autoras
+Srila: de SDs Ter Fev 22 13 13 : 21 - E
+
+$$$$$ ::: Qui Abr 19 16:32:56 -03 2018 {{{ musilingua, yoga, dança
+parado para fazer várias coisas: musilingua para ataque entre grupos humanos, coordenados ou não, contra animais ou nao
+Srila: para opt / Dom Fev 26 12 Sáb Mar 19 03
+
+$$$$$ ::: Qui Abr 19 16:35:03 -03 2018
+dança-yoga relaxado, balançando, curvando, braços pendendo, levantados ou esticados, passos como quiser, nos ladrilhos do piso, lento, pulado
+Srila: ou organizando wiki Dom Fev 25 01 : CMask to each
+
+$$$$$ ::: Qui Abr 19 16:37:36 -03 2018
+juntar com musilingua, batucar com corpo, beatbox, estalo de dedo. Usar gravetos e objetos do meio (paredes, mesas, árvore, etc) para bater, emburrar, balançar.
+Srila: com arvore : lcd to enable easier browsing of vim article
+
+$$$$$ ::: Qui Abr 19 16:39:02 -03 2018
+usar músicas diversas: dub (high tone, bass temperature: https://www.youtube.com/watch?v=34h2aGYWwAM), étnicas, religiosas, pop, rock, trap, twerk, massa, etc
+Srila: etc no texto ok , enviado por email Ter Fev 25
+}}}
+
+$$$$$ ::: Qui Abr 19 17:17:01 -03 2018
+banca robson, reuniao alan, casa caleb/gera
+Srila: casa em SDs Ter Abr 18 18 03 - me escreve
+
+$$$$$ ::: Qui Abr 19 17:57:51 -03 2018
+com os vocabulários certos, coisas, conceitos, complicados tornam-se simples. A elevação espiritual está atada à fala e escrita nos corpos humanos
+Srila: os todos estao fumegando Qui Abr 9 01 - conhecimento ,
+
+$$$$$ ::: Qui Abr 19 18:05:06 -03 2018
+com o conhecimento apropriado, conceitos apropriados para a conduta, ética, bem-estar pessoal e coletivo são operados com simplicidade. Por refletir na cultura, as nomeações, e conceitos representados de outras formas, há varredura do espaço semântico, para exploração como conveniente pelo indivíduo e espécie
+Srila: com ruido e brasileiras Ter Fev 25 01 : A -
+
+$$$$$ ::: Qui Abr 19 18:07:27 -03 2018
+ruido bom? brasileiras boas?
+Srila: ruido e atencao de software Dom Mar 4 Sex Fev 26
+
+$$$$$ ::: Qui Abr 19 18:08:35 -03 2018
+vou sair para andar, alguma palavra final para mim, Srila?
+Srila: para opt e metodo dos materiais * Probabilidade e áudio Qua

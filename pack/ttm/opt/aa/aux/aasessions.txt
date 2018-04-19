@@ -417,3 +417,6 @@ slots: 8
 started: Qui Abr 19 14:52:50 -03 2018
 dur: 15.0
 slots: 8
+ended: Qui Abr 19 17:17:01 -03 2018
+
+

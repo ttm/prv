@@ -40,7 +40,8 @@ fu! BotsInitialize()
   let g:bot.paths.dialogs = g:bot_dir . 'aux/dialogs.txt'
   let g:bot.sentlen = '2-35'
   let g:bot.a = 6.7
-  let cdir = g:bot_dir . 'plugin/b0t/corpus/'
+  let g:bot.paths.corpus = g:bot_dir . 'plugin/b0t/corpus/'
+  py3 cdir = vim.eval('g:bot.paths.corpus')
 python3 << EOF
 import b0t, random
 bots = {}
@@ -48,19 +49,25 @@ bots['peter'] = b0t.baselineBotFromText("/home/renato/repos/joyce/corpus/1peter.
 bots['john' ] =  b0t.baselineBotFromText("/home/renato/repos/joyce/corpus/1john.txt", 'John')
 bots['james'] = b0t.baselineBotFromText("/home/renato/repos/joyce/corpus/james.txt", 'James')
 
-bots['pedro'] = b0t.baselineBotFromText(vim.eval('cdir') + "pedro1.txt", 'Pedro')
-bots['joao'] = b0t.baselineBotFromText(vim.eval('cdir') + "joao1.txt", 'João')
-bots['tiago'] = b0t.baselineBotFromText(vim.eval('cdir') + "tiago.txt", 'Tiago')
+bots['pedro'] = b0t.baselineBotFromText(cdir + "pedro1.txt", 'Pedro')
+bots['joao'] = b0t.baselineBotFromText( cdir + "joao1.txt", 'João')
+bots['tiago'] = b0t.baselineBotFromText(cdir + "tiago.txt", 'Tiago')
 
 bots['srila'] = b0t.baselineBotFromText("/home/renato/.vim/pack/ttm/opt/aa/aux/aashouts.txt", 'Srila')
-bots['zer@'] = b0t.baselineBotFromText(vim.eval('cdir') + "butlerPreciado2.txt", 'Zer@')
-bots['laila'] = b0t.baselineBotFromText(vim.eval('cdir') + "laila.txt", 'Laila Kaiabi Manuelle')
+bots['zer@'] = b0t.baselineBotFromText( cdir + "butlerPreciado2.txt", 'Zer@')
+bots['laila'] = b0t.baselineBotFromText(cdir + "laila.txt", 'Laila Kaiabi Manuelle')
 
-bots['lula'] = b0t.baselineBotFromText(vim.eval('cdir') + "lula.txt", 'Luís Inácio Lula da Silva')
-bots['dilma'] = b0t.baselineBotFromText(vim.eval('cdir') + "dilma.txt", 'Dilma Vana Rousseff')
-bots['fhc'] = b0t.baselineBotFromText(vim.eval('cdir') + "fhc.txt", 'Fernando Henrique Cardoso')
+bots['lula'] = b0t.baselineBotFromText( cdir + "lula.txt", 'Luís Inácio Lula da Silva')
+bots['dilma'] = b0t.baselineBotFromText(cdir + "dilma.txt", 'Dilma Vana Rousseff')
+bots['fhc'] = b0t.baselineBotFromText(  cdir + "fhc.txt", 'Fernando Henrique Cardoso')
 
-bots['morss'] = b0t.baselineBotFromText(vim.eval('cdir') + "fhc.txt", 'Fernando Henrique Cardoso')
+bots['morss'] = b0t.baselineBotFromText(cdir + "buckMorss.txt", 'Susan Buck-Morss')
+bots['butler'] = b0t.baselineBotFromText(cdir + "buttler.txt", 'Susan Buck-Morss')
+bots['preciado'] = b0t.baselineBotFromText(cdir + "preciado.txt", '')
+bots['haraway'] = b0t.baselineBotFromText(cdir + "buckMorss.txt", 'Donna Haraway')
+bots['shiva'] = b0t.baselineBotFromText(cdir + "buckMorss.txt", 'Susan Buck-Morss')
+
+# achar autores africanos e orientais TTM
 
 b = bots['srila']
 # dbots = ['srila', 'tiago', 'joao', 'pedro', 'zer@']
@@ -125,7 +132,14 @@ endf
 com! -nargs=* Bc call BotConference(<f-args>)
 com! -nargs=1 -complete=tag_listfiles Bt ec BotTalk(<q-args>)
 
-nn Bt :Bt 
+nn BT :Bt 
 nn Bc :Bc<CR> 
 nn Bi :cal BotsInitialize()<CR>
+nn Be :exe 'e '.g:bot.paths.dialogs<CR>
+nn Bv :exe 'vs '.g:bot.paths.dialogs<CR>
+nn Bt :exe 'tabe '.g:bot.paths.dialogs<CR>
+
+if !exists('g:bot')
+  cal BotsInitialize()
+en
 " vim:foldlevel=2:
