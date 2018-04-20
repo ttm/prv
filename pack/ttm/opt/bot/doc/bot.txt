@@ -138,6 +138,7 @@ characteristics:
 Corpus / statics / culture envisioned:
 * canon: Bible and Shakespeare.
 * gender: Haraway, Butler, Preciado, Buck-Morss, Beauvoir, Vandana Shiva, Silvia Federici.
+* hakin bay, chomsky, tarde, zizek, bauman, 
 * mid-XX century literature: Pound, Joyce, Cage
 * filosofia antiga: plato+aristotle, pré-socráticos
 * paveau

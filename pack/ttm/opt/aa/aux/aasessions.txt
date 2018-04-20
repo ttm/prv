@@ -420,3 +420,11 @@ slots: 8
 ended: Qui Abr 19 17:17:01 -03 2018
 
 
+
+
+started: Qui Abr 19 22:16:59 -03 2018
+dur: 15.0
+slots: 8
+ended: Sex Abr 20 00:18:40 -03 2018
+
+

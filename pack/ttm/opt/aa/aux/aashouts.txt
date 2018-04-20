@@ -2019,3 +2019,39 @@ Qui Abr 19 17:57:51 -03 2018
 com o conhecimento apropriado, conceitos apropriados para a conduta, ética, bem-estar pessoal e coletivo são operados com simplicidade. Por refletir na cultura, as nomeações, e conceitos representados de outras formas, há varredura do espaço semântico, para exploração como conveniente pelo indivíduo e espécie
 Qui Abr 19 18:05:06 -03 2018
 -----
+
+
+$$$$$
+retomando sessao bot-wiki
+Qui Abr 19 22:17:00 -03 2018
+-----
+comecando pela conferencia de bots
+Qui Abr 19 22:17:30 -03 2018
+-----
+estudando a conferencia de bots que jah estah feita para fazer a proxima
+Qui Abr 19 22:32:18 -03 2018
+-----
+perdido vendo fb, acho q + nd q preste
+Qui Abr 19 22:56:27 -03 2018
+-----
+organizando bot.vim
+Qui Abr 19 23:05:41 -03 2018
+-----
+escolhida cor muito legal
+Qui Abr 19 23:18:00 -03 2018
+-----
+modularizando conferencia dos bots para fazer auto conference
+Qui Abr 19 23:33:32 -03 2018
+-----
+organizando conferencia de bots e demais partes do codigo
+Qui Abr 19 23:48:18 -03 2018
+-----
+terminando conferencia auto
+Sex Abr 20 00:02:53 -03 2018
+-----
+terminado primeiro esqueleto do bot autoconf
+Sex Abr 20 00:18:40 -03 2018
+-----
+$$$$$
+
+

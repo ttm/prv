@@ -20,26 +20,11 @@ let g:bot_default_localleader = ''
 
 " FUNCTIONS: {{{1
 " -- MAIN {{{2
-fu! BotTalk(string)
-  let tokens = split(a:string, ' ')
-  let cmd = 'b.markovTalk("'.a:string.'")'
-  py3 b.lastmsg = b.id + ': ' + eval(vim.eval('l:cmd'))
-  cal BotDialogAdd(a:string, py3eval('b.lastmsg'))
-  retu py3eval('b.lastmsg')
-endf
-
-fu! BotDialogAdd(...)
-  let asd = a:
-  " maybe replace \n by \r because o last paragraph of :h writefile()
-  cal writefile(['','$$$$$ ::: '.system('date')[:-2]], g:bot.paths.dialogs, 'as')
-  cal writefile( a:000, g:bot.paths.dialogs, 'as')
-endf
-
-fu! BotsInitialize()
+fu! BotsInitialize() " {{{
   let g:bot = {'paths': {}}
   let g:bot.paths.dialogs = g:bot_dir . 'aux/dialogs.txt'
   let g:bot.sentlen = '2-35'
-  let g:bot.a = 6.7
+  let g:bot.nmsgs = 6.7
   let g:bot.paths.corpus = g:bot_dir . 'plugin/b0t/corpus/'
   py3 cdir = vim.eval('g:bot.paths.corpus')
 python3 << EOF
@@ -62,10 +47,10 @@ bots['dilma'] = b0t.baselineBotFromText(cdir + "dilma.txt", 'Dilma Vana Rousseff
 bots['fhc'] = b0t.baselineBotFromText(  cdir + "fhc.txt", 'Fernando Henrique Cardoso')
 
 bots['morss'] = b0t.baselineBotFromText(cdir + "buckMorss.txt", 'Susan Buck-Morss')
-bots['butler'] = b0t.baselineBotFromText(cdir + "buttler.txt", 'Susan Buck-Morss')
-bots['preciado'] = b0t.baselineBotFromText(cdir + "preciado.txt", '')
-bots['haraway'] = b0t.baselineBotFromText(cdir + "buckMorss.txt", 'Donna Haraway')
-bots['shiva'] = b0t.baselineBotFromText(cdir + "buckMorss.txt", 'Susan Buck-Morss')
+# bots['butler'] = b0t.baselineBotFromText(cdir + "buttler.txt", 'Susan Buck-Morss')
+# bots['preciado'] = b0t.baselineBotFromText(cdir + "preciado.txt", '')
+# bots['haraway'] = b0t.baselineBotFromText(cdir + "buckMorss.txt", 'Donna Haraway')
+# bots['shiva'] = b0t.baselineBotFromText(cdir + "buckMorss.txt", 'Susan Buck-Morss')
 
 # achar autores africanos e orientais TTM
 
@@ -74,54 +59,59 @@ b = bots['srila']
 dbots = ['lula', 'dilma', 'fhc', 'pedro', 'joao', 'tiago']
 # dbots = ['srila', 'tiago', 'joao', 'pedro', 'zer@', 'preciado', 'butler', 'bock mors', 'etc', 'shakespeare', 'lula']
 EOF
-endf
-
-fu! BotSetDefault(botname)
-  py3 b = bots[vim.eval('a:botname')]
-endf
-
-fu! BotConference(...)
-  let g:asd = a:
+endf " }}}
+fu! BotTalk(string) " {{{
+  let tokens = split(a:string, ' ')
+  let cmd = 'b.markovTalk("'.a:string.'")'
+  py3 b.lastmsg = b.id + ': ' + eval(vim.eval('l:cmd'))
+  cal BotDialogAdd(a:string, py3eval('b.lastmsg'))
+  retu py3eval('b.lastmsg')
+endf " }}}
+fu! BotConference(...) " {{{
   let g:bot.confmsgs = []
-  let g:bot.lastmsg = input("você: ")
-  ec "\n\n"
-  cal add(g:bot.confmsgs, g:bot.lastmsg)
-  let g:bot.nmsgs = 0
-  wh g:bot.lastmsg != 'q'
-    if g:bot.lastmsg[0] == ':'
-      if g:bot.lastmsg[1] == 'l'
-        let g:bot.sentlen = g:bot.lastmsg[2:]
-      elsei g:bot.lastmsg[1] == 'a'
-        let g:bot.a = str2float(g:bot.lastmsg[2:])
-      en
+  if a:0 == 0
+    cal BotConferenceUserAsks()
+  elsei a:1 == 'a'
+    if a:0 > 1
+      cal BotConferenceAuto(join(a:000[1:], ' '))
     el
-      for i in range(float2nr(g:bot.a))
-        py3 b = bots[random.choice(dbots)]
-        if g:bot.sentlen =~ '-'
-          py3 b.sentlen = random.randint(*[int(i) for i in vim.eval('split(g:bot.sentlen, "-")')])
-        el
-          py3 b.sentlen = int(vim.eval('g:bot.sentlen'))
-        en
-
-        cal add(g:bot.confmsgs, BotTalk(g:bot.lastmsg))
-        ec g:bot.confmsgs[-1]
+      cal BotConferenceAuto()
+    en
+  en
+endf " }}}
+" -- AUX {{{2
+fu! BotDialogAdd(...) " {{{
+  let asd = a:
+  " maybe replace \n by \r because o last paragraph of :h writefile()
+  cal writefile(['','$$$$$ ::: '.system('date')[:-2]], g:bot.paths.dialogs, 'as')
+  cal writefile( a:000, g:bot.paths.dialogs, 'as')
+endf " }}}
+fu! BotSetDefault(botname) " {{{
+  py3 b = bots[vim.eval('a:botname')]
+endf " }}}
+" -- AUX CONFEFERENCE {{{2
+fu! BotConferenceAuto(...)
+  if a:0 == 0
+    let smsg = ''
+  el
+    let smsg = a:1
+  en
+  let g:bot.lastmsg = input("você (<enter> para abster-se, q para sair): ")
+  wh g:bot.lastmsg != 'q'
+    let cmdmsg = BotParseConferenceMsg()
+    if l:cmdmsg == 0
+      let rem = g:bot.nmsgs - float2nr(g:bot.nmsgs)
+      let onemore = py3eval('random.random()') <= l:rem
+      for i in range(float2nr(g:bot.nmsgs) + l:onemore)
+        cal BotConferenceBotMessage()
+        let g:bot.lastmsg = g:bot.confmsgs[-1]
       endfo
-      let rem = g:bot.a - float2nr(g:bot.a)
-      if  py3eval('random.random()') <= l:rem
-        py3 b = bots[random.choice(dbots)]
-        if g:bot.sentlen =~ '-'
-          py3 b.sentlen = random.randint(*[int(i) for i in vim.eval('split(g:bot.sentlen, "-")')])
-        el
-          py3 b.sentlen = int(vim.eval('g:bot.sentlen'))
-        en
-
-        cal add(g:bot.confmsgs, BotTalk(g:bot.lastmsg))
-        ec g:bot.confmsgs[-1]
-      en
       ec "\n"
     en
-    let g:bot.lastmsg = input("você: ")
-    cal add(g:bot.confmsgs, g:bot.lastmsg)
+    cal BotConferenceGetUserMsg()
+    if g:bot.lastmsg == ''
+      g:bot.lastmsg = g>bot.confmsgs[-2]
+    en
     ec "\n"
   endw
   let foo = join(g:bot.confmsgs,"\n")
@@ -129,9 +119,64 @@ fu! BotConference(...)
   PRVbuf
   pu = l:foo
 endf
+fu! BotConferenceUserAsks() " {{{
+  cal BotConferenceGetUserMsg()
+  let g:bot.lastmsg = input("você: ")
+  ec "\n\n"
+  cal add(g:bot.confmsgs, g:bot.lastmsg)
+  wh g:bot.lastmsg != 'q'
+    let cmdmsg = BotParseConferenceMsg()
+    if l:cmdmsg == 0:
+      let rem = g:bot.nmsgs - float2nr(g:bot.nmsgs)
+      let onemore = py3eval('random.random()') <= l:rem
+      for i in range(float2nr(g:bot.nmsgs) + l:onemore)
+        cal BotConferenceBotMessage()
+      endfo
+      ec "\n"
+    en
+    cal BotConferenceGetUserMsg()
+    ec "\n"
+  endw
+  let foo = join(g:bot.confmsgs,"\n")
+  new
+  PRVbuf
+  pu = l:foo
+endf " }}}
+fu! BotConferenceGetUserMsg() " {{{
+  let g:bot.lastmsg = input("você: ")
+  cal add(g:bot.confmsgs, g:bot.lastmsg)
+endf " }}}
+fu! BotConferenceBotMessage() " {{{
+  py3 b = bots[random.choice(dbots)]
+  if g:bot.sentlen =~ '-'
+    py3 b.sentlen = random.randint(*[int(i) for i in vim.eval('split(g:bot.sentlen, "-")')])
+  el
+    py3 b.sentlen = int(vim.eval('g:bot.sentlen'))
+  en
+  cal add(g:bot.confmsgs, BotTalk(g:bot.lastmsg))
+  ec g:bot.confmsgs[-1]
+endf " }}}
+fu! BotParseConferenceMsg() " {{{
+  if g:bot.lastmsg[0] == ':'
+    if g:bot.lastmsg[1] == 'l'
+      let g:bot.sentlen = g:bot.lastmsg[2:]
+    elsei g:bot.lastmsg[1] == 'n'
+      let g:bot.nmsgs = str2float(g:bot.lastmsg[2:])
+    el
+      retu 0
+    en
+    retu 1
+  el
+    retu 0
+  en
+endf " }}}
+" COMMANDS: {{{1
+" -- MAIN {{{2
 com! -nargs=* Bc call BotConference(<f-args>)
 com! -nargs=1 -complete=tag_listfiles Bt ec BotTalk(<q-args>)
 
+" MAPPINGS: {{{1
+" -- MAIN {{{2
 nn BT :Bt 
 nn Bc :Bc<CR> 
 nn Bi :cal BotsInitialize()<CR>
@@ -139,7 +184,10 @@ nn Be :exe 'e '.g:bot.paths.dialogs<CR>
 nn Bv :exe 'vs '.g:bot.paths.dialogs<CR>
 nn Bt :exe 'tabe '.g:bot.paths.dialogs<CR>
 
+" LAST COMMANDS: {{{1
+" -- STTARTUP {{{2
 if !exists('g:bot')
   cal BotsInitialize()
 en
-" vim:foldlevel=2:
+" -- MODELINE {{{2
+" vim:foldlevel=1:
