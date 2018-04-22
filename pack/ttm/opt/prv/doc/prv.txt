@@ -47,7 +47,7 @@ CONTENTS                                                            *prv-index*
                                                                *prv-plugins*
 
 PRV is a package, which currently consists of these plugins:
-* |prv|, the core: naviation strategies of files, tags and Vim interface.
+* |prv|, the core: navigation strategies of files, tags and Vim interface.
 * |aa|, algorithmic autoregulation: periodic note-taking for dedication
   tracking.
 * |realcolors|, 24 bit true color for Vim: on-the-fly tweak your color scheme,
