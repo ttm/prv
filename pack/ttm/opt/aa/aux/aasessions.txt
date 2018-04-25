@@ -428,3 +428,32 @@ slots: 8
 ended: Sex Abr 20 00:18:40 -03 2018
 
 
+
+
+started: Sáb Abr 21 14:16:43 -03 2018
+dur: 15.0
+slots: 8
+ended: Sáb Abr 21 16:17:34 -03 2018
+
+
+
+
+started: Sáb Abr 21 17:13:01 -03 2018
+dur: 15.0
+slots: 8
+ended: Sáb Abr 21 19:47:25 -03 2018
+
+
+
+
+started: Ter Abr 24 22:56:04 -04 2018
+dur: 15.0
+slots: 8
+ended: Qua Abr 25 01:00:42 -04 2018
+
+
+
+
+started: Qua Abr 25 02:05:52 -04 2018
+dur: 15.0
+slots: 8

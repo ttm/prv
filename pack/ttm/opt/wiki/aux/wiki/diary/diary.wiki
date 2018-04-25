@@ -61,12 +61,71 @@ Sala de Treinamento da Biblioteca, no 3o. piso.
 apresentcao dinha, dia 29, shopping.
 banca Robson, dia 30.
 
+aula maio 11.
+
+revisão JBCS, maio 17
+
 = Diary =
 :Diary:diary:diário:Diário:
 
 == 2018 ==
-
 === April ===
+Sáb Abr 21 14:04:25 -03 2018
+mandar msgs + cristina OK
+passadas notas de musilingua p Vim OK
+ouvido meia suíte OK
+Responsas até 18h amanhã:
+* andy 18h gig
+Responsas em Campao:
+* ler orgmode, baits
+* arrumar bots, wiki, realcolors, tokipona, aa e PRV em geral
+* artigo Alan
+* arrumar páginas IC e VD
+* mandar msg p Chu e p Cristina
+* algum outro artigo. Pode ser descrevendo PRV.
+* PRV 100%, + páginas wiki de VD e IC
+* retomada de leituras dos artigos q a Cristina mandou
+* ler quali do Robson
+* articulação estadia em sampa doa 30
+* articulação morar no di
+* escrever p banca de IC
+* artigo vírus
+
+Para dia 10, aula:
+* artigos sobre cor na wikipédia
+
+
+Sex Abr 20 14:15:16 -03 2018
+tfidf?
+
+vec spac model eh + transp
+
+TAR (jurídicos?, precedentes)
+relevância booleana ou fuzzy ou nota?
+
+aprendizado de reforço, online?
+
+oráculo?
+
+antonimo, meronimia, holonimia, hieronimos.
+
+sinonimos escopo
+contexto restricao
+
+
+biofonia
+geofonia
+antrofonia
+tecnofonia
+
+silhueta eh uma medida de distance inter-classes?
+e segregação?
+
+autoencoder
+
+redes neurais n necessariamente trabalham com classes,
+fazerm e.g. regressao e clusterizacao
+
 Seg Abr 16 00:58:03 -03 2018
 sessao sobre prv e wiki :done:
 sessao p arrumar wiki de vez. Ideal:

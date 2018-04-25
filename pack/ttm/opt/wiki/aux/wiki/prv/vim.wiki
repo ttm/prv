@@ -29,3 +29,34 @@ TODO:
   personal info, interests, annotations, discoveries, etc etc.
 * encription of non-default files for publication
   of the wiki in github and as an html website
+
+= :musilingua: e vim =
+:musilingua:musilíngua:musilanguage:
+musilingua recuperada pela escrita datilografada.
+Acordes, etc sao evidência,
+assim como aquele filme do aprendiz de escritor,
+baseado em fatos reais, em que ele cita do ritmo
+na escrita.
+
+Fazer experimento de musilingua com 2 galhos cada 1:
+batendo lento quer que vá p direita os outros,
+voz grave p direita tb,
+rápido ou agudo eh esqueda.
+Variações.
+Ritmo em 2 é printo para atacar,
+em 3 eh circular, encolver,
+brincar mais.
+
+No Vim, a datilografia se amplia para controle
+da interface, programação para ela e outros fins (e.g. científicos),
+documentação, mensagens aos outros,
+artigos e notas, etc.
+
+=== nota sobre persistência no Vim ===
+Tabs e janelas sao usadas pelos usuarios de diversas formas
+e parece n concordar com os entendimentos dos devs (ao menos dos principais).
+tablites e statuslines
+linha de comando
+numeros de linha
+arquivos de referencia, vimrc, plugins proprios e dos outros.
+

@@ -63,24 +63,22 @@ See |prv-todo|
 ------------------------------------------------------------------------------
 1.1. Python, RDF and Vim                                             *PRV*
 
-Harnessing the textual representation of routines and data,
-through persistence and selected consideration of excepts,
-is exploited in |PRV| by means of Python, RDF, and Vim.
-See |prv-python|, |prv-rdf|, and |prv-vim|
+Harnessing the textual representation of routines and data, through
+persistence and selected consideration of excepts, is exploited in |PRV| by
+means of Python, RDF, and Vim.  See |prv-python|, |prv-rdf|, and |prv-vim|
 
-One fundamental feature is a periodic interaction with
-the |bot|, for note-taking, enriching ongoing work with
-reference literature, or interweaving with own dedication
-by means of previously taken notes, to which |aa| is dedicated.
+One fundamental feature is a periodic interaction with the |bot|, for
+note-taking, enriching ongoing work with reference literature, or interweaving
+with own dedication by means of previously taken notes, to which |aa| is
+dedicated.
 
-Another fundamental feature of |PRV| is a clear strategy
-to harness the Wiki and Unix design of hyperlinked text files.
-Navigating filenames yield by tokens in the files
-is faster, cleaner, and isomorphic to the wiki-like links
-such as [[something]], which can be written as something, .something,
-../something, something.wiki, or as convenient for the use
-and meaning intended.
-This is not a trivial issue while not expressed as in |wiki-intro|.
+Another fundamental feature of |PRV| is a clear strategy to harness the |wiki|
+and Unix design of hyperlinked text files.  Navigating filenames yield by
+tokens in the files is faster, cleaner, and isomorphic to the wiki-like links
+(such as [[something]] in Vimwiki default syntax), which can be written as
+something, ./something, ../something, something.wiki, or as convenient for the
+use and meaning intended.  This is not a trivial issue while not expressed as
+in the |wiki| plugin.
 
 
 ------------------------------------------------------------------------------
@@ -124,4 +122,4 @@ Consider |PRV| masks to:
     distinguish or not between english and portuguese.
   - add interfaces to ic algorithms published as Python packages.
 
- vim:ma:noro:tw=78:ts=8:ft=help:sua+=.txt:norl:sts=4:sw=4:et:
+ vim:ma:noro:tw=78:ts=8:ft=help:sua+=.txt:norl:sts=4:sw=4:et:nu:rnu

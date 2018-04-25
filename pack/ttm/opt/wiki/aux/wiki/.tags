@@ -2,20 +2,28 @@
 Achievements	Achievements.wiki	1;"	vimwiki:Achievements\tAchievements
 CI	ic/ic.wiki	1;"	vimwiki:ic/ic\tic/ic
 Calendar	diary/diary.wiki	33;"	vimwiki:diary/diary\tdiary/diary#Calendário
+Calendar	home/renato/.vim/pack/ttm/opt/wiki/aux/wiki/diary/diary.wiki	33;"	vimwiki:home/renato/.vim/pack/ttm/opt/wiki/aux/wiki/diary/diary\thome/renato/.vim/pack/ttm/opt/wiki/aux/wiki/diary/diary#Calendário
 Calendário	diary/diary.wiki	33;"	vimwiki:diary/diary\tdiary/diary#Calendário
+Calendário	home/renato/.vim/pack/ttm/opt/wiki/aux/wiki/diary/diary.wiki	33;"	vimwiki:home/renato/.vim/pack/ttm/opt/wiki/aux/wiki/diary/diary\thome/renato/.vim/pack/ttm/opt/wiki/aux/wiki/diary/diary#Calendário
 Complexidade	ic/complexidade.wiki	1;"	vimwiki:ic/complexidade\tic/complexidade
 Complexity	ic/complexidade.wiki	1;"	vimwiki:ic/complexidade\tic/complexidade
 DS	ic/ed.wiki	1;"	vimwiki:ic/ed\tic/ed
-Diary	diary/diary.wiki	65;"	vimwiki:diary/diary\tdiary/diary#Diary
-Diário	diary/diary.wiki	65;"	vimwiki:diary/diary\tdiary/diary#Diary
+Diary	diary/diary.wiki	69;"	vimwiki:diary/diary\tdiary/diary#Diary
+Diary	home/renato/.vim/pack/ttm/opt/wiki/aux/wiki/diary/diary.wiki	69;"	vimwiki:home/renato/.vim/pack/ttm/opt/wiki/aux/wiki/diary/diary\thome/renato/.vim/pack/ttm/opt/wiki/aux/wiki/diary/diary#Diary
+Diário	diary/diary.wiki	69;"	vimwiki:diary/diary\tdiary/diary#Diary
+Diário	home/renato/.vim/pack/ttm/opt/wiki/aux/wiki/diary/diary.wiki	69;"	vimwiki:home/renato/.vim/pack/ttm/opt/wiki/aux/wiki/diary/diary\thome/renato/.vim/pack/ttm/opt/wiki/aux/wiki/diary/diary#Diary
 Done	Achievements.wiki	1;"	vimwiki:Achievements\tAchievements
 ED	ic/ed.wiki	1;"	vimwiki:ic/ed\tic/ed
-Feitos	diary/diary.wiki	186;"	vimwiki:diary/diary\tdiary/diary#Feitos
+Feitos	diary/diary.wiki	245;"	vimwiki:diary/diary\tdiary/diary#Feitos
+Feitos	home/renato/.vim/pack/ttm/opt/wiki/aux/wiki/diary/diary.wiki	243;"	vimwiki:home/renato/.vim/pack/ttm/opt/wiki/aux/wiki/diary/diary\thome/renato/.vim/pack/ttm/opt/wiki/aux/wiki/diary/diary#Feitos
 IC	ic/ic.wiki	1;"	vimwiki:ic/ic\tic/ic
 MASS	mass.wiki	1;"	vimwiki:mass\tmass
+MASS	music/mass.wiki	1;"	vimwiki:music/mass\tmusic/mass
 MASSA	mass.wiki	1;"	vimwiki:mass\tmass
+MASSA	music/mass.wiki	1;"	vimwiki:music/mass\tmusic/mass
 Music	Music.wiki	1;"	vimwiki:Music\tMusic
 Notes	blergh.wiki	1;"	vimwiki:blergh\tblergh
+Notes	home/renato/.vim/pack/ttm/opt/wiki/aux/wiki/blergh.wiki	1;"	vimwiki:home/renato/.vim/pack/ttm/opt/wiki/aux/wiki/blergh\thome/renato/.vim/pack/ttm/opt/wiki/aux/wiki/blergh
 OK	Achievements.wiki	1;"	vimwiki:Achievements\tAchievements
 Stones	todo.wiki	4;"	vimwiki:todo\ttodo#lightyearstones
 TASK	todo.wiki	160;"	vimwiki:todo\ttodo#migrado do Tasks.vim
@@ -37,10 +45,13 @@ bare-vim-wiki	Notation.wiki	1;"	vimwiki:Notation\tNotation
 bd	ic/te.wiki	2;"	vimwiki:ic/te\tic/te
 big-data	ic/te.wiki	2;"	vimwiki:ic/te\tic/te
 blergh	blergh.wiki	1;"	vimwiki:blergh\tblergh
+blergh	home/renato/.vim/pack/ttm/opt/wiki/aux/wiki/blergh.wiki	1;"	vimwiki:home/renato/.vim/pack/ttm/opt/wiki/aux/wiki/blergh\thome/renato/.vim/pack/ttm/opt/wiki/aux/wiki/blergh
 calendar	diary/diary.wiki	33;"	vimwiki:diary/diary\tdiary/diary#Calendário
+calendar	home/renato/.vim/pack/ttm/opt/wiki/aux/wiki/diary/diary.wiki	33;"	vimwiki:home/renato/.vim/pack/ttm/opt/wiki/aux/wiki/diary/diary\thome/renato/.vim/pack/ttm/opt/wiki/aux/wiki/diary/diary#Calendário
 calendario	legacy/calendarioUFABC.wiki	1;"	vimwiki:legacy/calendarioUFABC\tlegacy/calendarioUFABC
 calendario-ufabc	legacy/calendarioUFABC.wiki	1;"	vimwiki:legacy/calendarioUFABC\tlegacy/calendarioUFABC
 calendário	diary/diary.wiki	33;"	vimwiki:diary/diary\tdiary/diary#Calendário
+calendário	home/renato/.vim/pack/ttm/opt/wiki/aux/wiki/diary/diary.wiki	33;"	vimwiki:home/renato/.vim/pack/ttm/opt/wiki/aux/wiki/diary/diary\thome/renato/.vim/pack/ttm/opt/wiki/aux/wiki/diary/diary#Calendário
 calendário	legacy/calendarioUFABC.wiki	1;"	vimwiki:legacy/calendarioUFABC\tlegacy/calendarioUFABC
 cc	ic/cc.wiki	1;"	vimwiki:ic/cc\tic/cc
 cc	ic/te.wiki	2;"	vimwiki:ic/te\tic/te
@@ -56,12 +67,15 @@ dados-ligados	ic/ws.wiki	1;"	vimwiki:ic/ws\tic/ws
 data-structure	ic/ed.wiki	1;"	vimwiki:ic/ed\tic/ed
 data-structures	ic/ed.wiki	1;"	vimwiki:ic/ed\tic/ed
 definition	todo.wiki	162;"	vimwiki:todo\ttodo#definition
-diary	diary/diary.wiki	65;"	vimwiki:diary/diary\tdiary/diary#Diary
+diary	diary/diary.wiki	69;"	vimwiki:diary/diary\tdiary/diary#Diary
+diary	home/renato/.vim/pack/ttm/opt/wiki/aux/wiki/diary/diary.wiki	69;"	vimwiki:home/renato/.vim/pack/ttm/opt/wiki/aux/wiki/diary/diary\thome/renato/.vim/pack/ttm/opt/wiki/aux/wiki/diary/diary#Diary
 digraphs	Notation.wiki	4;"	vimwiki:Notation\tNotation#digraphs
-diário	diary/diary.wiki	65;"	vimwiki:diary/diary\tdiary/diary#Diary
+diário	diary/diary.wiki	69;"	vimwiki:diary/diary\tdiary/diary#Diary
+diário	home/renato/.vim/pack/ttm/opt/wiki/aux/wiki/diary/diary.wiki	69;"	vimwiki:home/renato/.vim/pack/ttm/opt/wiki/aux/wiki/diary/diary\thome/renato/.vim/pack/ttm/opt/wiki/aux/wiki/diary/diary#Diary
 done	Achievements.wiki	1;"	vimwiki:Achievements\tAchievements
 done	Achievements.wiki	13;"	vimwiki:Achievements\tAchievements#done
-done	diary/diary.wiki	71;"	vimwiki:diary/diary\tdiary/diary#Diary#2018#April
+done	diary/diary.wiki	130;"	vimwiki:diary/diary\tdiary/diary#done
+done	home/renato/.vim/pack/ttm/opt/wiki/aux/wiki/diary/diary.wiki	128;"	vimwiki:home/renato/.vim/pack/ttm/opt/wiki/aux/wiki/diary/diary\thome/renato/.vim/pack/ttm/opt/wiki/aux/wiki/diary/diary#done
 ds	ic/ed.wiki	1;"	vimwiki:ic/ed\tic/ed
 ec	ic/ce.wiki	1;"	vimwiki:ic/ce\tic/ce
 ed	ic/ed.wiki	1;"	vimwiki:ic/ed\tic/ed
@@ -73,8 +87,10 @@ et	ic/te.wiki	1;"	vimwiki:ic/te\tic/te
 feito	Achievements.wiki	1;"	vimwiki:Achievements\tAchievements
 fuzzy	ic/fuzzy.wiki	1;"	vimwiki:ic/fuzzy\tic/fuzzy
 fuzzy-logic	ic/fuzzy.wiki	1;"	vimwiki:ic/fuzzy\tic/fuzzy
-habitos	diary/diary.wiki	269;"	vimwiki:diary/diary\tdiary/diary#habitos
-habits	diary/diary.wiki	269;"	vimwiki:diary/diary\tdiary/diary#habits
+habitos	diary/diary.wiki	328;"	vimwiki:diary/diary\tdiary/diary#habitos
+habitos	home/renato/.vim/pack/ttm/opt/wiki/aux/wiki/diary/diary.wiki	326;"	vimwiki:home/renato/.vim/pack/ttm/opt/wiki/aux/wiki/diary/diary\thome/renato/.vim/pack/ttm/opt/wiki/aux/wiki/diary/diary#habitos
+habits	diary/diary.wiki	328;"	vimwiki:diary/diary\tdiary/diary#habits
+habits	home/renato/.vim/pack/ttm/opt/wiki/aux/wiki/diary/diary.wiki	326;"	vimwiki:home/renato/.vim/pack/ttm/opt/wiki/aux/wiki/diary/diary\thome/renato/.vim/pack/ttm/opt/wiki/aux/wiki/diary/diary#habits
 ic	ic/ic.wiki	1;"	vimwiki:ic/ic\tic/ic
 ic	ic/icwp.wiki	1;"	vimwiki:ic/icwp\tic/icwp
 id	ic/fuzzy.wiki	19;"	vimwiki:ic/fuzzy\tic/fuzzy#inteligência difusa
@@ -87,27 +103,38 @@ iscas	index.wiki	23;"	vimwiki:index\tindex#baits
 ld	ic/fuzzy.wiki	1;"	vimwiki:ic/fuzzy\tic/fuzzy
 linked-data	ic/ws.wiki	1;"	vimwiki:ic/ws\tic/ws
 links-musica	mass.wiki	52;"	vimwiki:mass\tmass#links do youtube
+links-musica	music/mass.wiki	53;"	vimwiki:music/mass\tmusic/mass#links do youtube
 lógica-difusa	ic/fuzzy.wiki	1;"	vimwiki:ic/fuzzy\tic/fuzzy
 mass	index.wiki	19;"	vimwiki:index\tindex#mass
 mass	mass.wiki	1;"	vimwiki:mass\tmass
+mass	music/mass.wiki	1;"	vimwiki:music/mass\tmusic/mass
 massa	mass.wiki	1;"	vimwiki:mass\tmass
+massa	music/mass.wiki	1;"	vimwiki:music/mass\tmusic/mass
 ml	ic/am.wiki	1;"	vimwiki:ic/am\tic/am
 ml	ic/icwp.wiki	1;"	vimwiki:ic/icwp\tic/icwp
 music	Music.wiki	1;"	vimwiki:Music\tMusic
 music	music/music.wiki	1;"	vimwiki:music/music\tmusic/music
 music-links	mass.wiki	52;"	vimwiki:mass\tmass#links do youtube
-musica	diary/diary.wiki	209;"	vimwiki:diary/diary\tdiary/diary#musica
+music-links	music/mass.wiki	53;"	vimwiki:music/mass\tmusic/mass#links do youtube
+musica	diary/diary.wiki	268;"	vimwiki:diary/diary\tdiary/diary#musica
+musica	home/renato/.vim/pack/ttm/opt/wiki/aux/wiki/diary/diary.wiki	266;"	vimwiki:home/renato/.vim/pack/ttm/opt/wiki/aux/wiki/diary/diary\thome/renato/.vim/pack/ttm/opt/wiki/aux/wiki/diary/diary#musica
 musica	music/music.wiki	1;"	vimwiki:music/music\tmusic/music
+musilanguage	prv/vim.wiki	34;"	vimwiki:prv/vim\tprv/vim#:musilingua: e vim
+musilingua	prv/vim.wiki	34;"	vimwiki:prv/vim\tprv/vim#:musilingua: e vim
+musilíngua	prv/vim.wiki	34;"	vimwiki:prv/vim\tprv/vim#:musilingua: e vim
 nn	ic/rn.wiki	1;"	vimwiki:ic/rn\tic/rn
 notation	Notation.wiki	1;"	vimwiki:Notation\tNotation
-note	diary/diary.wiki	80;"	vimwiki:diary/diary\tdiary/diary#note
+note	diary/diary.wiki	139;"	vimwiki:diary/diary\tdiary/diary#note
+note	home/renato/.vim/pack/ttm/opt/wiki/aux/wiki/diary/diary.wiki	137;"	vimwiki:home/renato/.vim/pack/ttm/opt/wiki/aux/wiki/diary/diary\thome/renato/.vim/pack/ttm/opt/wiki/aux/wiki/diary/diary#note
 note	index.wiki	19;"	vimwiki:index\tindex#note
 note-types	index.wiki	10;"	vimwiki:index\tindex#note types
 notes	blergh.wiki	1;"	vimwiki:blergh\tblergh
+notes	home/renato/.vim/pack/ttm/opt/wiki/aux/wiki/blergh.wiki	1;"	vimwiki:home/renato/.vim/pack/ttm/opt/wiki/aux/wiki/blergh\thome/renato/.vim/pack/ttm/opt/wiki/aux/wiki/blergh
 notes	index.wiki	10;"	vimwiki:index\tindex#note types
 ok	Achievements.wiki	1;"	vimwiki:Achievements\tAchievements
 pe	ic/pe.wiki	1;"	vimwiki:ic/pe\tic/pe
-premio	diary/diary.wiki	77;"	vimwiki:diary/diary\tdiary/diary#premio
+premio	diary/diary.wiki	136;"	vimwiki:diary/diary\tdiary/diary#premio
+premio	home/renato/.vim/pack/ttm/opt/wiki/aux/wiki/diary/diary.wiki	134;"	vimwiki:home/renato/.vim/pack/ttm/opt/wiki/aux/wiki/diary/diary\thome/renato/.vim/pack/ttm/opt/wiki/aux/wiki/diary/diary#premio
 probabilidade	ic/probabilidade.wiki	1;"	vimwiki:ic/probabilidade\tic/probabilidade
 probability	ic/probabilidade.wiki	1;"	vimwiki:ic/probabilidade\tic/probabilidade
 programacao-estruturada	ic/pe.wiki	1;"	vimwiki:ic/pe\tic/pe
@@ -135,7 +162,8 @@ tasks	todo.wiki	160;"	vimwiki:todo\ttodo#migrado do Tasks.vim
 te	ic/te.wiki	1;"	vimwiki:ic/te\tic/te
 teoria-do-aprendizado	ic/ta.wiki	1;"	vimwiki:ic/ta\tic/ta
 todo	Notation.wiki	3;"	vimwiki:Notation\tNotation#todo
-todo	diary/diary.wiki	82;"	vimwiki:diary/diary\tdiary/diary#todo
+todo	diary/diary.wiki	141;"	vimwiki:diary/diary\tdiary/diary#todo
+todo	home/renato/.vim/pack/ttm/opt/wiki/aux/wiki/diary/diary.wiki	139;"	vimwiki:home/renato/.vim/pack/ttm/opt/wiki/aux/wiki/diary/diary\thome/renato/.vim/pack/ttm/opt/wiki/aux/wiki/diary/diary#todo
 todo	ic/ic.wiki	52;"	vimwiki:ic/ic\tic/ic#andamentos#código
 todo	ic/pe.wiki	3;"	vimwiki:ic/pe\tic/pe#todo
 todo	index.wiki	19;"	vimwiki:index\tindex#todo
@@ -150,3 +178,4 @@ web-semântica	ic/ws.wiki	1;"	vimwiki:ic/ws\tic/ws
 wiki	index.wiki	1;"	vimwiki:index\tindex
 wiki-notation	Notation.wiki	1;"	vimwiki:Notation\tNotation
 youtube	mass.wiki	52;"	vimwiki:mass\tmass#links do youtube
+youtube	music/mass.wiki	53;"	vimwiki:music/mass\tmusic/mass#links do youtube

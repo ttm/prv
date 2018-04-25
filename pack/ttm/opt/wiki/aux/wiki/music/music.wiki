@@ -1,5 +1,12 @@
 :musica:music:
 
+= artigos de referência =
+https://en.wikipedia.org/wiki/Evolutionary_musicology#The_Musilanguage_hypothesis
+
+
+= mass =
+./mass
+
 
 
 

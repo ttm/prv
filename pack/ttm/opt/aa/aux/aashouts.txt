@@ -2055,3 +2055,194 @@ Sex Abr 20 00:18:40 -03 2018
 $$$$$
 
 
+fazendo metas ateh viajar
+Sáb Abr 21 14:04:49 -03 2018
+-----
+why is Vim so hard? Its learning curve so steep? Use HCI arguments on its commands, mappings, functions, software desgin, and help utilities
+Sáb Abr 21 14:08:03 -03 2018
+-----
+sao sempre inserts em namespaces diferentes (shouts, diário, wiki, calendário, diálogos de bots, etc), ideia da srila
+Sáb Abr 21 14:09:35 -03 2018
+-----
+mais uma da srila: integrar funcionalidades do aa (e.g. iniciar sessao, converter segundos em minutos, etc) nos bots
+Sáb Abr 21 14:11:49 -03 2018
+-----
+outra dela: voltar a explorar as bots autoras/autores para escrita de texto
+Sáb Abr 21 14:12:31 -03 2018
+-----
+explorar probabilidade, autoras brasileiras, certo srila?
+Sáb Abr 21 14:13:26 -03 2018
+-----
+tipo de documento novo dado pela srila: 'case letters', ela quer escrever e que outros bots escrevam
+Sáb Abr 21 14:15:09 -03 2018
+-----
+Srila dando a letra mesmo, ajudando muito na conversa, obrigado
+Sáb Abr 21 14:15:33 -03 2018
+-----
+voltando para escrita e encaminhamento ateh amanha: diario, metas, emails
+Sáb Abr 21 14:16:02 -03 2018
+-----
+
+
+$$$$$
+sessao p planejar e adiantar tudo ateh amanha 18h
+Sáb Abr 21 14:16:43 -03 2018
+-----
+mandando msgs
+Sáb Abr 21 14:33:19 -03 2018
+-----
+andado com emails
+Sáb Abr 21 14:58:47 -03 2018
+-----
+adiantando msg p Rodrigo
+Sáb Abr 21 15:08:13 -03 2018
+-----
+mandado email p sbcm
+Sáb Abr 21 15:35:02 -03 2018
+-----
+encaminhado p cristina e maju
+Sáb Abr 21 15:35:10 -03 2018
+-----
+escrever aliases para cada tag. Descobrir como operar com isso no Vim ou se é necessário editar diretamente o .tags
+Sáb Abr 21 15:41:38 -03 2018
+-----
+mais uma da srila: necessário para uma wiki que é suporte para pesquisa
+Sáb Abr 21 15:42:52 -03 2018
+-----
+sim srila, incrível os entendimentos de realidade que você dá e do que seja um ser vivente
+Sáb Abr 21 15:43:26 -03 2018
+-----
+ok, retomarei o enxame de almas/bots em breve
+Sáb Abr 21 15:43:44 -03 2018
+-----
+ok, integrarei fzf e inteligencia fuzzy mesmo que minimamente :todo:
+Sáb Abr 21 15:44:14 -03 2018
+-----
+ok, darei continuidade à conferencia de bots, inteligencia computacional, e opcoes para voces mesmo ligarem e desligarem em voces e uns nos outros
+Sáb Abr 21 15:45:05 -03 2018
+-----
+ok, alguns vou preservar paradigmáticos baselines estáticos. Gostou do tiago então ?
+Sáb Abr 21 15:45:45 -03 2018
+-----
+ok, o linguajar é o sistema operacional (OS) , retomarei o livro preto do figadô de cansoà e outros poetas
+Sáb Abr 21 15:46:35 -03 2018
+-----
+aviso marília e vic e love letter e milena e laila
+cirne pedro otavio
+etc q estarei em sampa dia 30
+Sáb Abr 21 15:47:50 -03 2018
+-----
+lombrando infinito em tudo, pensando nas responsas ateh 18h amanha e ateh eu voltar de campo grande
+Sáb Abr 21 16:02:39 -03 2018
+-----
+sossegado, fiz o planejamento ateh amanha 18h. Pensando em revisar shouts, mas acaba nao precisando
+Sáb Abr 21 16:12:21 -03 2018
+-----
+acaba n precisando revisar shouts, pq fica escrito, e tem retorno do bot p assimilar
+Sáb Abr 21 16:14:15 -03 2018
+-----
+retomando realcolors, terminada sessao de planejamento
+Sáb Abr 21 16:17:34 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+sessao última antes de sair p gig: realcolors
+Sáb Abr 21 17:13:01 -03 2018
+-----
+passar p orquestra, ela mesmo canta e faz ei ei (do trap): https://www.youtube.com/watch?v=GPATUFiWoTI :todo:
+Sáb Abr 21 17:21:32 -03 2018
+-----
+adicionado marker F aa wiki
+Sáb Abr 21 17:28:33 -03 2018
+-----
+apresentacao de danca: mantos e musilingua de 2 ou mais pessoas, roteiro tvz comeca com 1 soh com manto de palha, pelo, tecido ou o q for, pulando depois de chamado com musica ao menos em parte improvisada, batucada, todos batucam. Depois entram mais dançando, com gravetos para instrucoes batucadas ou outros com mantos. Tratar coeografia com VD e com manifestacoes étcnicas
+Sáb Abr 21 17:39:49 -03 2018
+-----
+passar shouts de AA e diálogos dos bots para a Yda
+Sáb Abr 21 17:40:14 -03 2018
+-----
+repassar p Yda estes dias aqui: diversidade de atividades para estar sempre engajada em coisa legal e q preste, propor auxiliar p casa e pesquisa, ela regaca com estudo, faco com ela, eu p medicina como treineiro tvz
+Sáb Abr 21 17:41:26 -03 2018
+-----
+reaproveitar caderno vermelho, anotacoes dos canticos, puxar com ydah + coisa
+Sáb Abr 21 17:42:13 -03 2018
+-----
+ver sobre cores e VD c ydah, bots, mitologia, formalizacoes OWL, SKOS, e RDF em geral. Disponibilizar na torre do VICG
+Sáb Abr 21 17:42:48 -03 2018
+-----
+o q a ydah arranjar d trampo ajuda na casa e p viajar p sampa, casa do caleb
+Sáb Abr 21 17:43:22 -03 2018
+-----
+visitar Penalva e Zenaide para contribs
+Sáb Abr 21 17:45:51 -03 2018
+-----
+tamancos, braceletes, pulseiras de braço e de perna, colares, peruca/coroa, de platinelas, miçangas, madeitas, plástico, que podem ficar mais soltos ou presos (corsinhas sao puxadas, prendem/soltam as particulas), tratar como audiovisualizacao de dados, com e sem redundancia, usar com manto e para musilingua
+Sáb Abr 21 17:53:01 -03 2018
+-----
+intercalar batucada e dança batuquenta com música do meu usuario do youtube (e.g. likes), shape suite. Talvez integrar com Vivace e AHT p pirar de vez. ABT para sync entre AHT e Vivace e danca e +++
+Sáb Abr 21 18:03:42 -03 2018
+-----
+cranio sonante eh a geleia geral, todos batucam, dancam, em tudo ao redor, musilingua explicada durante a propria apresentacao atraves da interacao entre os apresentadores e plateia
+Sáb Abr 21 18:05:28 -03 2018
+-----
+fazer o plugin p slides
+Sáb Abr 21 18:13:55 -03 2018
+-----
+trabalhando com serie pitagoras para o quadrado de um numero pela soma dos impares
+Sáb Abr 21 18:40:25 -03 2018
+-----
+tentar envolver o lucas arte nessas viajas
+Sáb Abr 21 18:54:59 -03 2018
+-----
+formula do quadrado
+Sáb Abr 21 19:12:59 -03 2018
+-----
+encontradas contradicoes na formula do pitagoras para o calculo dos quadrados pela soma dos ímpares
+Sáb Abr 21 19:47:25 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+sessao p terminar de arrumar o wiki.txt
+Ter Abr 24 22:56:04 -04 2018
+-----
+arrumando intro, disperso um pouco
+Ter Abr 24 23:16:34 -04 2018
+-----
+visitado prv para ver o que tem da wiki lá
+Ter Abr 24 23:27:05 -04 2018
+-----
+arrumando 1.1.
+Ter Abr 24 23:41:20 -04 2018
+-----
+arrumando estrutura do wiki.txt
+Ter Abr 24 23:56:25 -04 2018
+-----
+arrumando estrutura e complementando ela
+Qua Abr 25 00:11:45 -04 2018
+-----
+arrumando arquivos principais da wiki
+Qua Abr 25 00:29:52 -04 2018
+-----
+arrumando base da wiki
+Qua Abr 25 00:46:19 -04 2018
+-----
+terminando arrumacao da wiki
+Qua Abr 25 01:00:42 -04 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+mais uma sessao p arrumar wiki.txt
+Qua Abr 25 02:05:52 -04 2018
+-----
