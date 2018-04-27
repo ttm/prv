@@ -56,7 +56,7 @@ bots['morss'] = b0t.baselineBotFromText(cdir + "buckMorss.txt", 'Susan Buck-Mors
 
 b = bots['srila']
 # dbots = ['srila', 'tiago', 'joao', 'pedro', 'zer@']
-dbots = ['lula', 'dilma', 'fhc', 'pedro', 'joao', 'tiago']
+dbots = ['pedro', 'joao', 'tiago', 'srila', 'zer@']
 # dbots = ['srila', 'tiago', 'joao', 'pedro', 'zer@', 'preciado', 'butler', 'bock mors', 'etc', 'shakespeare', 'lula']
 EOF
 endf " }}}
@@ -70,6 +70,7 @@ endf " }}}
 fu! BotConference(...) " {{{
   let g:bot.confmsgs = []
   if a:0 == 0
+    ec 'starting user-asks conference'
     cal BotConferenceUserAsks()
   elsei a:1 == 'a'
     if a:0 > 1
@@ -121,12 +122,11 @@ fu! BotConferenceAuto(...)
 endf
 fu! BotConferenceUserAsks() " {{{
   cal BotConferenceGetUserMsg()
-  let g:bot.lastmsg = input("você: ")
   ec "\n\n"
   cal add(g:bot.confmsgs, g:bot.lastmsg)
   wh g:bot.lastmsg != 'q'
     let cmdmsg = BotParseConferenceMsg()
-    if l:cmdmsg == 0:
+    if l:cmdmsg == 0
       let rem = g:bot.nmsgs - float2nr(g:bot.nmsgs)
       let onemore = py3eval('random.random()') <= l:rem
       for i in range(float2nr(g:bot.nmsgs) + l:onemore)

@@ -222,7 +222,7 @@ Standard Highlighting and functions:
     |hyperlink|
     'option'
     `:command` >
-    function SomeFunc()
+    fu! SomeFunc()
         echo "Yes, I am verbatim"
     endf
 <    |AFunction()|

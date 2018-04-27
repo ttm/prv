@@ -1,3 +1,5 @@
+:datavis:dataviz:
+
 wikipédia article: datavizwp
 
 = bib =
@@ -10,6 +12,8 @@ https://en.wikipedia.org/wiki/Visual_design_elements_and_principles
 https://en.wikipedia.org/wiki/Design
 https://en.wikipedia.org/wiki/Exploratory_data_analysis
 https://en.wikipedia.org/wiki/Sonification
+https://en.wikipedia.org/wiki/Syntax_highlighting
+https://en.wikipedia.org/wiki/Color_depth
 
 == moocs ==
 https://www.coursera.org/learn/datavisualization

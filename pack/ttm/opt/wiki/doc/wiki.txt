@@ -138,8 +138,8 @@ See |tagsrch.txt|
 
 Important for files:
 'isf'
-'isi'
 'isk'
+'isi'
 'wig'
 
 See 'path'
@@ -229,31 +229,14 @@ sandbox
 
 
 
-
-
-
 ==============================================================================
 5. TODO                                                 *wiki-todo*
 
 * collapse section titles and tags, make syntax collapse
-
-
-
-
-
 * make wiki ok:
   - read about tags, take notes and define strategy
   - read about file navigation, notes and strategy
   - migrate all wiki notes and other notes to the framework
-
-
-
-
-
-
-
-
-
 
 
  vim:ma:noro:tw=78:ts=8:ft=help:sua+=.txt:norl:sts=4:nu:rnu:sw=4:et:

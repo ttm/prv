@@ -537,3 +537,5 @@ function! SpecialColors() " {{{
   let snamed_colors['blood'] = ['#660000', '#aa0000', '#af111c', '#830303', '#7e3517']
   let most10 = ['#3f5d7d', '#279b61', '#008ab8', '#993333', '#a3e496', '#95cae4', '#cc3333', '#ffcc33', '#ffff7a', '#cc6699']
 endfu " }}}
+
+cal InitializeColors()

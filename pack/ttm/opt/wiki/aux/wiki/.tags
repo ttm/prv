@@ -66,6 +66,8 @@ conspiração	various/conspiracy.wiki	1;"	vimwiki:various/conspiracy\tvarious/co
 dados-ligados	ic/ws.wiki	1;"	vimwiki:ic/ws\tic/ws
 data-structure	ic/ed.wiki	1;"	vimwiki:ic/ed\tic/ed
 data-structures	ic/ed.wiki	1;"	vimwiki:ic/ed\tic/ed
+datavis	datavis/datavis.wiki	1;"	vimwiki:datavis/datavis\tdatavis/datavis
+dataviz	datavis/datavis.wiki	1;"	vimwiki:datavis/datavis\tdatavis/datavis
 definition	todo.wiki	162;"	vimwiki:todo\ttodo#definition
 diary	diary/diary.wiki	69;"	vimwiki:diary/diary\tdiary/diary#Diary
 diary	home/renato/.vim/pack/ttm/opt/wiki/aux/wiki/diary/diary.wiki	69;"	vimwiki:home/renato/.vim/pack/ttm/opt/wiki/aux/wiki/diary/diary\thome/renato/.vim/pack/ttm/opt/wiki/aux/wiki/diary/diary#Diary
@@ -80,6 +82,7 @@ ds	ic/ed.wiki	1;"	vimwiki:ic/ed\tic/ed
 ec	ic/ce.wiki	1;"	vimwiki:ic/ce\tic/ce
 ed	ic/ed.wiki	1;"	vimwiki:ic/ed\tic/ed
 emergent-topic	ic/te.wiki	1;"	vimwiki:ic/te\tic/te
+escrita	writing/writing.wiki	1;"	vimwiki:writing/writing\twriting/writing
 estatística	ic/probabilidade.wiki	1;"	vimwiki:ic/probabilidade\tic/probabilidade
 estrutura-de-dado	ic/ed.wiki	1;"	vimwiki:ic/ed\tic/ed
 estruturas-de-dados	ic/ed.wiki	1;"	vimwiki:ic/ed\tic/ed
@@ -142,6 +145,7 @@ programação-estruturada	ic/pe.wiki	1;"	vimwiki:ic/pe\tic/pe
 pronto	Achievements.wiki	1;"	vimwiki:Achievements\tAchievements
 prv	prv/prv.wiki	1;"	vimwiki:prv/prv\tprv/prv
 question	Notation.wiki	41;"	vimwiki:Notation\tNotation#question
+religion	various/spirituality.wiki	1;"	vimwiki:various/spirituality\tvarious/spirituality
 revista-virus	virus.wiki	1;"	vimwiki:virus\tvirus
 revista-vírus	virus.wiki	1;"	vimwiki:virus\tvirus
 rn	ic/rn.wiki	1;"	vimwiki:ic/rn\tic/rn
@@ -152,6 +156,7 @@ si	ic/ie.wiki	1;"	vimwiki:ic/ie\tic/ie
 sml	ic/am.wiki	35;"	vimwiki:ic/am\tic/am#aprendizado de maquina estatístico
 soft-computing	ic/sc.wiki	1;"	vimwiki:ic/sc\tic/sc
 sp	ic/pe.wiki	1;"	vimwiki:ic/pe\tic/pe
+spirituality	various/spirituality.wiki	1;"	vimwiki:various/spirituality\tvarious/spirituality
 statistics	ic/probabilidade.wiki	1;"	vimwiki:ic/probabilidade\tic/probabilidade
 stones	todo.wiki	4;"	vimwiki:todo\ttodo#lightyearstones
 structured-programming	ic/pe.wiki	1;"	vimwiki:ic/pe\tic/pe
@@ -177,5 +182,6 @@ vírus	virus.wiki	1;"	vimwiki:virus\tvirus
 web-semântica	ic/ws.wiki	1;"	vimwiki:ic/ws\tic/ws
 wiki	index.wiki	1;"	vimwiki:index\tindex
 wiki-notation	Notation.wiki	1;"	vimwiki:Notation\tNotation
+writing	writing/writing.wiki	1;"	vimwiki:writing/writing\twriting/writing
 youtube	mass.wiki	52;"	vimwiki:mass\tmass#links do youtube
 youtube	music/mass.wiki	53;"	vimwiki:music/mass\tmusic/mass#links do youtube

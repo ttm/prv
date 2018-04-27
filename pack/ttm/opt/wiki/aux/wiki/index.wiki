@@ -32,7 +32,7 @@ Use lowercase markers for inside files.
   - setorializacao de erdos
   - mass
 * Artigos por enviar
-* dataviz
+* datavis
 * Wikipedia, revisar artigos, passar notas, fazer novos artigos (de dataviz principalmente)
 * explorar IC, bots, PRV
   - enxame de almas
@@ -53,7 +53,6 @@ Use lowercase markers for inside files.
 * retomar experimentos em estruturas sociais, percola mundo etc
 
 = conteúdos principais =
-
 ic complexidade
 prv [[prv/|vim]] [[prv/python]] [[prv/rdf]]
 [[massa/massa]]
@@ -83,6 +82,7 @@ can define dictionaries, and use FunRefs
 [[432Hz]]
 
 
+= unorganized content =
 I like music, math and physics.
 Computer science, complex networks,
 text mining, linked data, data visualization, social participation,
