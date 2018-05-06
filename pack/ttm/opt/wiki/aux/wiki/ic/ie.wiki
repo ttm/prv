@@ -1,0 +1,74 @@
+:ie:si:swarm:
+
+https://pt.wikipedia.org/wiki/Swarm_intelligence
+https://pt.wikipedia.org/wiki/Rob%C3%B3tica_de_enxame
+https://pt.wikipedia.org/wiki/Optimiza%C3%A7%C3%A3o_por_enxame_de_part%C3%ADculas
+https://en.wikipedia.org/wiki/Swarm_intelligence
+
+A '''inteligência de enxame''' (IE, ou ''swarm intelligence'') é aquela encontrada no [[comportamento coletivo]]
+de sistemas [[descentralização|descentralizados]] e [[auto-organizado]]s.
+Importantes para a [[inteligência computacional]] (IC),
+sistemas de IE tipicamente consistem em uma
+população de [[agente]]s simples (ou [[boid]]s)
+que interagem (localmente) entre si e com o ambiênte,
+e apresentam [[comportamento emergente]].
+Os modelos são muitas vezes [[computação bioinspirada|bioinspirados]], caso em que a IE pertence à [[computação natural]] (CN).<ref>Beni, G., Wang, J. Swarm Intelligence in Cellular Robotic Systems, Proceed. NATO Advanced Workshop on Robots and Biological Systems, Tuscany, Italy, June 26–30 (1989)</ref>
+
+== Histórico ==
+O termo IE foi introduzido por [[Gerardo Beni|Beni]] e Jing Wang em 1989 em contexto [[robótica de enxame|robótico]].
+Modelos clássicos de IE são os Boids (Reynolds, 1987)
+e as Partículas auto-impulsionadas (Vicsek, 1995).
+
+== Exemplos de IE ==
+Exemplos de sistemas de IE na CN são:
+[[otimização por colônia de formigas]],
+[[bando]]s de aves,
+[[cardume]]s, e
+[[busca por difusão estocástica]].
+A IE por vezes, mas nem sempre, é considerada CE (veja o caso do [[PSO}].
+
+== Otimização por enxame de partículas (PSO) ==
+A PSO realiza uma otimização global em soluções
+localizadas em uma superfície ou ponto.
+Os boids são inicializados com posição e velocidade,
+e são atraídos aos outros boids na proporção de seus valores de [[fitness]].
+A PSO é bastante resistente aos extremos locais devido ao alto número de agentes.
+
+== Aplicações de IE ==
+As aplicações da IE incluem
+[[telecomunicação|telecomunicações]], [[biomedicina]], [[arte]],
+técnicas e observações teóricas como no
+[[exame de humanos]], e na [[gramática de enxame]],
+e suporte à [[IC]].<ref>{{cite journal |last=Lewis |first=M. Anthony |last2=Bekey |first2=George A. |title=The Behavioral Self-Organization of Nanorobots Using Local Rules |work=Proceedings of the 1992 IEEE/RSJ International Conference on Intelligent Robots and Systems }}</ref><ref>{{cite journal | last1 = al-Rifaie | first1 = M.M. | last2 = Aber | first2 = A. | year = | title = Identifying metastasis in bone scans with Stochastic Diffusion Search | url = | journal = Proc. IEEE Information Technology in Medicine and Education, ITME | volume = 2012 | issue = | pages = 519–523 }}</ref><ref>al-Rifaie, Mohammad Majid, Ahmed Aber, and Ahmed Majid Oudah. "Utilising Stochastic Diffusion Search to identify metastasis in bone scans and microcalcifications on mammographs." In Bioinformatics and Biomedicine Workshops (BIBMW), 2012 IEEE International Conference on, pp. 280-287. IEEE, 2012.</ref><ref>{{cite journal |first=D. |last=Martens |first2=B. |last2=Baesens |first3=T. |last3=Fawcett |title=Editorial Survey: Swarm Intelligence for Data Mining |journal=Machine Learning |volume=82 |issue=1 |pages=1–42 |year=2011 |doi=10.1007/s10994-010-5216-5 }}</ref> <ref>Whitaker, R.M., Hurley, S.. An agent based approach to site selection for wireless networks. Proc ACM Symposium on Applied Computing, pp. 574–577, (2002).</ref><ref>{{cite book |last=Miller |first=Peter |year=2010 |title=The Smart Swarm: How understanding flocks, schools, and colonies can make us better at communicating, decision making, and getting things done |publisher=Avery |location=New York |isbn=978-1-58333-390-7 }}</ref>
+
+
+== Computação natural (CN) ==
+Os [[algoritmos evolucionários]], de [[otimização por enxame de partículas]], e de [[otimização por colônia de formigas]] dominam a [[computação natural]] meta-heurística (i.e. sem consideração das [[redes neurais artificiais]]).<ref>{{cite journal|first=Michael A.|last=Lones|year=2014|title=Metaheuristics in Nature-Inspired Algorithms|journal=[[Genetic and Evolutionary Computation Conference|GECCO '14]]|url=http://www.macs.hw.ac.uk/~ml355/common/papers/lones-gecco2014-metaheuristics.pdf|doi=10.1145/2598394.2609841}}</ref>
+
+
+
+== Ver também ==
+* [[Robótica de enxame]]
+* [[Otimização por enxame de partículas]]
+* [[Predição de exame]]
+* [[algoritmo imunoinspirado]]
+* [[inteligência colaborativa]]
+* [[efervecência coletiva]]
+* [[Sistema complexo]]
+* [[Computação evolucionária]]
+* [[Inteligência computacional]]
+* [[Inferência bayesiana]]
+* [[Computação cognitiva]]
+* [[Cérebro global]]
+* [[Sistema multi-agente]]
+* [[Busca de harmonia]]
+* [[Teoria da promessa]]
+* [[Protocolo de população]]
+* [[Aprendizado por reforço]]
+* [[Criticalidade auto-organizada]]
+* [[Algoritmo de otimização espiral]]
+* [[Otimização estocástica]]
+* [[Grupo de desenvolvimento de enxame]]
+* [[Swarming]]
+* [[Saber das massas]]
+

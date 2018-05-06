@@ -1,0 +1,16 @@
+* Clausius
+  - quais as features?
+  - sensores no caso sao principalmente mics, certo?
+  - NMF
+  - paisagens sonoras de cidades?
+* segundo
+  - praat
+  - qual a qualidade do audio
+* terceiro
+  - force atlas 2
+  - apoptose
+  - dados ligados
+
+poco
+* regl: https://github.com/regl-project/regl
+

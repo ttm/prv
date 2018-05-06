@@ -104,6 +104,7 @@ class SimplestMarkovReality(Reality):
             self.addTalkAbility(bot)
     def addTalkAbility(self, bot):
         bot.markovTalk = types.MethodType(SimplestMarkovReality.markovTalk, bot)
+        bot.sentlen = 0
     def makeBigrams(self, text):
         c = Counter(k.ngrams(text,2))
         aa = sorted(c.items(), key = lambda ngram: -ngram[1])
@@ -112,7 +113,7 @@ class SimplestMarkovReality(Reality):
         for ng in aa:
             d.add_edge(ng[0][0], ng[0][1], weight = ng[1])
         self.ngrams_ = d
-    def markovTalk(self, words=''):
+    def markovTalk(self, words='', length=10):
         bi = self.ngrams
         # choose a random bigram or trigram
         # choose a word to begin sentence
@@ -132,7 +133,9 @@ class SimplestMarkovReality(Reality):
         # print(self.ngrams[0][2]['1john'][0]['and'], word)
         dg = self.ngrams
         s1 = word
-        for i in range(10):
+        if self.sentlen > 0:
+            length = self.sentlen
+        for i in range(length):
             w_ = random.choice(list(dg[word].keys()))
             s1 += ' ' + w_
             word = w_
@@ -246,14 +249,28 @@ class Universe:
 
     """
     pass
-if __name__ == '__main__':
-    r = SimplestMarkovReality('reality1')
-    w = SimplestWorld('world1', r)
-    # c = Corpus("~/repos/joyce/corpus/1john.txt", '1john')
-    # c = SimplestCorpus("../corpus/butlerPreciado2.txt", '1john')
-    c = SimplestCorpus("~/.vim/pack/ttm/opt/aa/aux/aashouts.txt", 'shouts')
+
+def baselineBotFromText(textf, botname='b0t', realityname='r1',
+        worldname='w1', corpusname='c1'):
+    r = SimplestMarkovReality(realityname)
+    w = SimplestWorld(worldname, r)
+    c = SimplestCorpus(textf, corpusname)
     w.addCorpus(c)
-    b = SimplestBot('Srila')
+    b = SimplestBot(botname)
     w.addBot(b)
     w.perform()
-    b.markovTalk()
+    return b
+
+if __name__ == '__main__':
+    b = baselineBotFromText("/home/renato/.vim/pack/ttm/opt/aa/aux/aashouts.txt",
+            'Srila')
+    # r = SimplestMarkovReality('reality1')
+    # w = SimplestWorld('world1', r)
+    # # c = Corpus("/home/renato/repos/joyce/corpus/1john.txt", '1john')
+    # # c = SimplestCorpus("../corpus/butlerPreciado2.txt", '1john')
+    # c = SimplestCorpus("/home/renato/.vim/pack/ttm/opt/aa/aux/aashouts.txt", 'shouts')
+    # w.addCorpus(c)
+    # b = SimplestBot('Srila')
+    # w.addBot(b)
+    # w.perform()
+    # b.markovTalk()

@@ -138,6 +138,7 @@ characteristics:
 Corpus / statics / culture envisioned:
 * canon: Bible and Shakespeare.
 * gender: Haraway, Butler, Preciado, Buck-Morss, Beauvoir, Vandana Shiva, Silvia Federici.
+* hakin bay, chomsky, tarde, zizek, bauman, 
 * mid-XX century literature: Pound, Joyce, Cage
 * filosofia antiga: plato+aristotle, pré-socráticos
 * paveau
@@ -145,6 +146,10 @@ Corpus / statics / culture envisioned:
   - gutenberg, etc.
   - archive.org
 * david kopenawa
+* Fiorini (from Palmeiras/SP/Brazil)
+* Deleuze, Guatarri
+* Dinha, Fernanda Valdiviezo
+* Célio Turino, Cláudio Prado, TC Silva, Tarciana Portela, Gil?, + 1 ou 2 griôs
 * mythological texts (quaran, vedas, indiginous, gypsy, whichcraft, african, bible, discordianism)
 * |aa| shouts and sessions
 * |prv-wiki| notes
@@ -229,6 +234,33 @@ A |bot-bot| (and populations) might be distributed already trained.
 ------------------------------------------------------------------------------
                                                                *bot-plugins*
 For related plugins, see |prv-plugins|.
+
+------------------------------------------------------------------------------
+                                                               *bot-conference*
+
+olimpus.
+
+* Srila, aa
+* zer@, do texto da preciado
+* pedro, joao, tiago
+* answer rate (a):
+  - random a: int(a) answers + coin p = a - int(a) answers
+  - fixed: int(msgs * a - int(msgs(a-1)) answers
+* bot is randomly chosen for each answer.
+* text sent to bot might be:
+  - last message
+  - x last messages
+  - all chat
+  - nothing
+* start with command:
+  :b0ts
+  or
+  :b0ts srila zer@ pedro tiago joao
+* make also haraway, bock mors, preciado...
+* set msg length (l):
+  - l = n words
+  - l = (mean, std) words or range (min, max) uniform.
+* set l and a inside chat, command, conference start, global var
 
 ------------------------------------------------------------------------------
                                                                *bot-todo*

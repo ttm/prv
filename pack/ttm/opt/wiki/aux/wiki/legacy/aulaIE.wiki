@@ -1,0 +1,386 @@
+  ~ Calibra monitor / datashow / projetor ~
+         (calibra projeção de luz)
+     
+match Constant /\v\~.*\~/
+hi Normal guibg=red guifg=green
+
+" tenta C-\i C-\c (j n y, rgb etc)
+" tenta amarelo ou verde, ou realcolors:
+cal ApplyCS(g:ccs.yellow1, 'c')
+cal ApplyCS(g:ccs.green2, 'c')
+" ['yellow1', 'redblackl', 'passivepink1', 'green1', 'green2', 'red1', 'red2', 'red3', 'red4', 'red5', 'blue1', 'blue2', 'red1b', 'red1c', 'mith1']
+
+setl so=0
+
+
+(capa)
+
+
+
+          ~ Aula: Inteligência de Enxame ~
+           (edital 227/2016, 2018/Mar/23)
+    
+    
+        Renato Fabbri, renato.fabbri@gmail.com
+    
+        ICMC/USP, FAPESP (projeto 2017/05838-3)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+==========================
+(0)
+
+                 ~ roteiro ~
+                 
+    contexto
+    base
+      definições fundamentais
+        IE
+        boid
+        meta-heurística
+      IE na IC
+      IEs estabelecidas e outras
+    pesquisa
+      de artigos
+        e.g. "Swarm Intelligence and Evolutionary
+        Algorithms: Performance versus speed, 2017"
+    ideias pouco convencionais
+      considerações sobre a complexidade
+      enxame de mentes ou almas
+        motivação
+        básico
+        generalização de Penrose
+        IE de vertebrados
+        
+      
+      
+      
+
+
+
+
+
+==========================
+(0.1)
+
+                 ~ contexto ~
+                 
+
+    adendos sobre ontem
+        aa minimum client
+        educação horizontal disciplinar ou interpessoal?
+        MOOCs (áud e mus comp, e pesq e dev c techs livres)
+          https://docs.google.com/document/d/1O8y-W27P_ydeOXd97HBtLEeI0C0-IMhfq6AKWmqDW10/edit?usp=sharing
+          https://docs.google.com/document/d/1tPY1OedvmLzdIga0uK7DSH6j2UDcXEmZxOL_Kz2K3VI/edit
+        começar achando a cor que queremos (bg, fg, bf/it/un)
+        
+        licença de contexto e evidência
+            o conteúdo é praticável com alunos
+              apelo estético e filosófico
+              modelos intuitivos
+        
+        feedback/realimentação
+            sejam vocês alunos de graduação, com a bagagem que vocês têm
+        
+        limpando
+          enviar email com os artigos da wikipedia
+          
+        proposta inicial
+          bisturi, Occam, esqueleto, modelos mínimos
+            surge complexidade
+            simples
+            
+        plenajamento inicial
+          teoria
+          pacote no pypi, vemos juntos os códigos
+            se for o caso, fazemos juntos
+            ou corrigimos juntos, revejo com vcs
+              IE na WP
+              IC, exemplo lúdico ABC da IC
+          aproveitar que estamos reunidos
+            ideias pouco convencionais
+            me expor ao meio, transparência pessoal
+            contemplar ideia do concurso
+              público/aberto
+                vocês, da banca, e técnico
+                potencialmente mais gente, screencast
+              formato
+                nitidez VS clareza
+                desenvolvimento <-
+        
+        + contexto:
+          2008 ACO e PSO e +
+            teoria com apelo estético
+            complexidade
+          questões:
+            base IA/IC se usar ruido? (von Zuben)
+            Hill climbing, simmulated annealing, differential evolution <-
+
+     
+     
+     
+==========================
+1/4 - definições
+
+          ~ inteligência de enxame (IE) ~
+
+    IE ou swarm intelligence
+      é aquela encontrada no [[comportamento coletivo]]
+      de sistemas [[descentralização|descentralizados]]
+      e [[auto-organizado]]s.
+      Importantes para a [[inteligência computacional]] (IC),
+      os sistemas de IE tipicamente consistem em uma
+      população de [[agente]]s simples (também chamados de [[boid]]s)
+      que interagem (localmente) entre si e com o ambiente,
+      e apresentam [[comportamento emergente]].
+    
+    
+      "A IE é expressa tipicamente como [[propriedade emergente]]
+      em sistemas complexos, um traço central da [[complexidade]]."
+        ??,
+      
+      "Em seu sentido mais amplo, a IE é a inteligência da
+      complexidade." ??
+        - Qui Mar 22 21:45:52 -03 2018, r.
+
+
+
+
+     
+==========================
+2/4 - definições
+
+          ~ boid == bird-oid ~
+
+   (  ...sistemas de IE tipicamente consistem em uma
+   população de...  )
+   
+   [[agente]]s simples (também chamados de [[boid]]s)
+   que interagem (localmente) entre si e com o ambiente,
+   e apresentam [[comportamento emergente]].
+
+   o boid não é só para PSO
+      também para ACO
+      
+   espaço de busca
+      espaço métrico
+      ou ao menos um em que possa-se associar
+      fitness à uma 'posição', velocidade de varredura,
+      direção, etc.
+
+    
+==========================
+3/4 - definições
+
+          ~ conflito de nomenclatura ~
+          
+    PSO que é 'otimização por enxame de partículas',
+    enquanto IE é alg de otimização global (por enxame de agentes).
+    Ou seja, pelos nomes, pode ser que:
+      todo agente seja uma partícula,
+        caso em que todo IE é um PSO
+      toda partícula é seja um agente,
+        caso em que todo PSO é um IE.
+        caso compatível com a nomenclatura canônica
+    
+     
+     
+     
+==========================
+4/4 - definições
+
+          ~ meta-heurística ~
+      (matemática e ciência da computação)
+      
+  heurística (v0)
+    processos cognitivos de decisões não racionais
+    
+  técnica heurística ou heurística (v1)
+    abordagem à solução de problemas que não garante encontrar
+    a melhor solução, mas uma solução potencialmente suficiente
+    
+  definição de meta-heurística
+    procedimento ou heurística projetado
+    para achar, gerar ou selecionar
+    uma heurística (algoritmo de busca parcial)
+          
+  (meta-)heurística é útil, tipicamente, para:
+    quando há conhecimento incompleto sobre o problema
+    quanto há custo computacional impraticável
+    
+
+
+    
+     
+     
+     
+     
+     
+     
+     
+======================
+(3 - IE na IC)
+
+              ~ Contexto da IE ~
+      
+      
+  computação cognitiva (CC)
+    aprendizado não supervisionado
+    com custo (computacional) ajustável
+  
+  CN (e bioinspirada)
+    CE (e bioinspirada)
+      otimização global via meta-heurística
+        IE
+
+  aplicações
+    otimização global
+    (e.g. calibrar uma rede neural artificial)
+    enxame de humanos
+    arte
+     
+  erudição
+    modelos sociais humanos
+    modelos de comportamentos coletivos de animais
+      bandos, cardumes: 'enxames'
+    matemática básica, ao menos para espaços métricos
+    PE e POO
+     
+     
+     
+     
+     
+======================
+(4 - complexidade)
+
+                 ~ Complexidade na IE ~
+  
+  lei de potência
+    exemplo de propriedade típica da complexidade 
+    desigualdade extrema concomitante com
+      homogeneidade de distribuição dos recursos
+  
+  outra que veremos mais a diante:
+    integração com outros sistemas complexos
+  
+  
+  
+  
+  
+  
+  
+     
+======================
+(4 - IEs estabelecidas e outras)
+
+                 ~ IEs ~
+  
+  iniciais
+    Boid (Reynolds, 1987)
+    partículas auto-impulsionadas (Vicsek et al., 1995)
+    busca pode difusão estocástica (Bishop, 1989)
+      (não consta no livro do Castro)
+  
+  mais conhecidas atualmente:
+    PSO
+      problemas no pseudo-código da WP em inglês:
+      http://www.swarmintelligence.org
+      variante com maior ênfase na interação local?
+    ACO
+    evolução diferencial
+      (não consta no livro do Castro)
+      
+  abelhas, libelulas, (automatos celulares?), (AG?)
+    
+
+      
+      
+     
+     
+======================
+(5 - ideias pouco convencionais)
+
+                 ~ Enxame de mentes ou almas ~
+  
+    motivação
+      nada está localizado enquanto não observado
+      a luz não demora de x a y
+      biocentrismo (Robert Lanza)
+
+    básico
+      pessoas circulando na estrutura espaço-temporal
+      pessoas podem co-habitar uma mesma gaiola espaço-temporal
+        e estabelecer trocas
+      possuem ideias, estado de saúde, coisas, características próprias
+        podem ser todos iguais ou não:
+          difusores de informação
+          autoridades
+          etc
+    
+    (nome daquela propriedade de cupins,
+      de intermediar a comunicação através do meio?)
+    
+    generalização de Penrose
+      espelhamento quântico da mente no (cérebro e estruturas estelares)
+      Enxame de:
+        pessoas
+        galáxias
+        clústeres
+        Universos
+        Meta-universos
+        (isolados ou com processamento concomitante)
+    
+    IE de vertebados
+      modelo pós-platelminto (minhoca)
+      intestino:
+        sistema central/ancestral
+        ate 80% da serotonina
+        (energia das ondas)
+        músculos são agentes
+        espinha é o teclado
+        (mamão)
+      desenho no quadro negro
+      
+      
+      
+    
+======================
+(6 - Fim)
+
+
+    Obrigado,
+    
+    Sex Mar 23 10:10:42 -03 2018,
+    
+    r.
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+

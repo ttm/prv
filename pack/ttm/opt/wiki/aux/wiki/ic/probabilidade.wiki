@@ -1,0 +1,51 @@
+:probabilidade:estatística:probability:statistics:
+
+
+base: [[ame]]
+
+* repassar a primeira parte do livro acompanhando notas de [[../dev/readings/statML.md]] e organizando base da área
+
+revisar o da wikipedia com base no indice da primeira parte do livro.
+
+
+vocabulário básico: amostra, hipótese (nula e alternativa), iid, 
+
+
+~ Probabilidade ~
+
+== Nota de utilidade ==
+Vários são os casos em que a intuição falha em questões estatísticas.
+Por exemplo, após cinco arremeços de moeda que deram coroa,
+espera-se que o próximo arremesso seja cara, ou ao menos um arremesso
+muito próximo, é a [[falácia do apostador|falácia de Monte Carlo]].
+Assim, o uso de um linguajar pouco ambíguo é essencial para representar
+o conhecimento, e assim abrir possibilidades poderosas de operar sobre ele,
+implementar em software,
+compartilhá-lo com outros pesquisadores,
+e armazenar seja por meios tradicionais (e.g. papel, [[tradição oral|estórias]]), por meios eletrônicos em mídia analógica (e.g. [[fita K7]])
+ou digital (e.g. na [[Web]] ou [[disco rígido]]).
+
+A atenção é redobrada devido à aplicação quase ubígua da probabilidade e estatística,
+o que implica em vocabulários abundantes em sinonîmia, polissemia, e definições não consensuais.
+Por exemplo, um evento também é chamada de elemento, ponto, objeto, observação, etc.,
+ou mesmo de agente, participante, peça, etc., expressando o contexto.
+Uma [[distribuição de probabilidade]] pode ser escrita como 'frequência das peças', uma inferência byesiana é também chamada de 'aprendizado de máquina bayesiano', etc.
+
+Como resultado, ambas a expressão do contexto e a representação menos ambígua são
+convenientes para casos específicos, e o linguajar empregado varia amplamente.
+Não parece haver recomendação consensual a este respeito,
+a não ser a [[navalha de Occam]], que implica na priorização da simplicidade,
+e a utilização do vocabulário mais largamente utilizado na área em que se insere o texto,
+ou nos fundamentos teóricos, neste caso estatísticos (considerada a probabilidade uma subárea da estatística).
+Assim, segundo<ref>wikipediaen</ref><ref>papoulus</ref>, os termos são: amostra, evento, etc.
+
+== Vocabulário ==
+notação (junto ao vocabulário):
+p(a,b) = p(a\and b) = p(a\union b)
+A é conjunto de eventos a, ou a_i.
+
+p_x é a probabilidade no espaço de x,
+i.e. p_x(y) é a probabilidade de y
+no espaço de x (se considerado y como um x).
+
+

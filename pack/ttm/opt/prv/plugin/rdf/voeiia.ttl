@@ -1,0 +1,44 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix voeiia: <http://purl.org/audiovisualanalytics/voeiia/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+voeiia:EI a owl:Class ;
+    rdfs:label "Information Engineering" ;
+    voeiia:subjectMatter voeiia:SI .
+
+voeiia:IA a owl:Class ;
+    rdfs:label "Artificial Intelligence" ;
+    voeiia:subjectMatter voeiia:AI .
+
+voeiia:input a owl:ObjectProperty ;
+    rdfs:label "input" .
+
+voeiia:output a owl:ObjectProperty ;
+    rdfs:label "output" .
+
+voeiia:subjectMatter a owl:ObjectProperty ;
+    rdfs:label "subject matter" .
+
+owl:subClassOf a owl:ObjectProperty .
+
+voeiia:AI a owl:Class ;
+    rdfs:label "Intelligent Agent" ;
+    voeiia:input voeiia:I ;
+    voeiia:output voeiia:I ;
+    owl:subClassOf voeiia:SI .
+
+voeiia:S a owl:Class ;
+    rdfs:label "System" .
+
+voeiia:SI a owl:Class ;
+    rdfs:label "Information System" ;
+    voeiia:subjectMatter voeiia:I,
+        voeiia:S .
+
+voeiia:I a owl:Class ;
+    rdfs:label "Information" .
+
+

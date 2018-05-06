@@ -1,0 +1,176 @@
+:fuzzy:fuzzy-logic:lógica-difusa:ld:
+
+= intro fuzzy =
+- conjuntos fuzzy e crispy
+- indeterminação
+
+= fuzzy vs prob =
+* A honest question.
+* partial membership, ambiguity on the classification (fundamental
+  difference)
+* operations on fuzzy sets (diff gets evident)
+* The consideration of classifiers and regression output as fuzzy sets
+(the values, most often interpreted as probabilities,
+yield memberships.
+These are fuzzy interpretations of probabilistic values,
+which might be sound or at least yield reasonable results.)
+
+= inteligência difusa =
+:id:
+
+do antigo ld.wiki ateh {{{
+== todo ==
+idealmente fazer o artigo de sistema fuzzy
+e refazer os de lógica e conjuntos fuzzy.
+Talvez iniciar o de matemática fuzzy?
+exemplos de SDs e de processos de modelagem.
+passar parte de modelagem da wpen p wpbr
+
+
+== não organizado ==
+funcoes de pertinência são conjuntos fuzzy.
+
+https://pt.wikipedia.org/wiki/L%C3%B3gica_difusa
+https://pt.wikipedia.org/wiki/Conjunto_difuso
+
+sistemas 
+f) sistemas fuzzy
+não tem artigo na wikipédia.
+Tem fuzzy logic
+e fuzzy set theory
+e:
+https://en.wikipedia.org/wiki/Fuzzy_control_system
+https://en.wikipedia.org/wiki/Genetic_fuzzy_systems
+https://en.wikipedia.org/wiki/Fuzzy_mathematics
+https://en.wikipedia.org/wiki/Fuzzy_clustering
+
+focar em fuzzy control system, ver se tem aritgo em portugues
+
+que mapeia a entrada para valores entre
+0 e 1, contrastando-se ao [[sistema booleano]] ou [[crispy]] em
+que os valores de saída são 0 ou 1.
+
+== Sistema difuso ==
+Um '''sistema difuso''' (SD)
+é um [[sistema de controle]] (i.e. regula [[sistema]]s via [[laço de controle|laços]]) e [[lógica difusa]].
+Em seu sentido mais geral, pode designar qualquer sistema
+que faça uso da [[lógica difusa]].
+Significados mais estritos podem designar a arquitetura
+descrita a seguir, ou de fato um sistema de controle
+construído sobre conceitos semanticamente imprecisos para
+outro sistema.
+Um SD é também chamado de sistema fuzzy ou fuzzy control system.<ref name = "Pedrycz">{{cite book|last1=Pedrycz|first1=Witold|title=Fuzzy control and fuzzy systems|year=1993|publisher=Research Studies Press Ltd.|edition=2}}</ref><ref name="Hájek">{{cite book|last1=Hájek|first1=Petr|title=Metamathematics of fuzzy logic|year=1998|publisher=Springer Science & Business Media|edition=4}}</ref>
+
+== Base ==
+=== Conceito central: imprecisão semântica ===
+A lógica difusa é muito usada na [[inteligência computacional]]
+para conceitos em que verdadeiro ou falso não se aplicam
+de forma booleana
+(ao menos não de forma conveniente).
+Esta é a [[imprecisão]] [[semântica]], característica
+da lógica difusa.
+Ao quantificar a verdade com números entre 0 e 1,
+o conceito "perto" pode ser descrito através uma [[função de pertinência]],
+em que distâncias menores que alguns metros são associadas a valores
+mais altos de "perto" (à rigor, valores mais altos de pertinência ao conjunto difuso "perto").
+Um conjunto difuso é definido pela sua função de pertinência.
+A lógica difusa opera sobre estas funções, canonicamanete
+via [[critério máx-min]] associados ao ''ou'' e ''e'' [[lógica difusa|lógicos]], e à união e interseccão de [[conjuntos difusos]].
+A lógica fuzzy decore dos mesmos axiomas que a probabilidade menos
+um: a do meio faltante (a interseccão dos conjuntos pode 
+
+=== Arquitetura de um SD ===
+Paradigmaticamente, um SD possui quatro componentes:
+* Uma interface de [[difusão]] (''fuzzification´): em que as entradas são mapeadas para valores entre 0 e 1.
+* Um conjunto de funções de pertinência, i.e. de [[conjunto difuso|conjuntos difusos]].
+* Um conjunto de regras, a serem operadas com [[lógica difusa]] sobre estes conjuntos difusos.
+* Uma interface de concisão (desdifusão, defuzzification), em que as verdades difusas são colapsadas em valores bem definidos.
+
+Um SD é muitas vezes concebido para regulação de algum sistema.
+Assim, continuamente o SD recebe sinais, opera sobre eles, e então
+sobre o sistema, de forma a estabelecer o [[laço de controle]].
+
+=== Funcionamento de um SD ===
+Seguindo a arquitetura de um SD, 
+sinais de entrada são mapeados para valores <math>\in [0,1]</math>,
+e estes considerados valores de verdade ou de pertencimento do fenômeno a algum [[conjunfo difuso]].
+As regras são aplicadas via [[lógica difusa]],
+preferencialmente via [[máx-min]] dadas as
+simplicidade, propriedades exploradas
+e uso estabelecido.
+Exemplo de regras:
+:frio e seco = gélido
+:gélido ou com frio = precisa esquentar
+:se precisa esquentar ou noite, então calefador fumega
+
+Onde frio, seco, gélido, com frio, precisa esquentar, noite, calefador fumega,
+são conjuntos difusos, conceitos mal definidos,
+representados por uma função de pertinência arbitrária,
+que reflete as crenças do modelador.
+
+=== Modelagem de um SD ===
+Em geral, observa-se um sistema já em funcionamento
+para a abtenção do modelo (ao menos inicial).
+Por exemplo, se está quente o termostato abaixa a termperatura
+e vice versa.
+Os conceitos de calor e frio são conjuntos difusos,
+expressos e.g. por uma sigmóide cada (transladadas uma da outra
+nas temperaturas).
+As medições de um termômetro são mapeadas para [0,1] em termos
+de 'quente' e 'frio', e operadas para regular a calefação.
+Funções de pertinência são em geral triangulares, mas qualquer
+função pode ser usada.
+As generalizações teóricas da lógica difusa são diversas,
+assim como são numerosas as operações possíveis sobre conjuntos
+difusos que engendram uma [[lógica consistente]],
+e os processos de difusão e de concisão descritos
+na literatura e com casos de uso.
+Há muitas vezes alteradores padrão da função de pertinência,
+chamados 'hedges', associados a 'advérbios' na lógica difusa,
+com definições potencialmente precisas, embora pouco padronizada
+nas implementações: 'muito' eleva a função de pertinência ao quadrado,
+extremamente eleva ao cubo, 'um tanto' aplica a raiz quadrada.
+
+
+=== Justificativa para o uso de um ID ===
+Embora algoritmos de [[compuração natural]],
+ou até de [[inferência bayesiana]],
+possam muitas vezes funcionar tão bem quanto,
+a lógica difusa possui a vantagem de ser expressa
+naturalmente em termos humanos (i.e. de conceitos imprecisos),
+que o usuário pode
+comporeender e operar com facilidade,
+e favorece a automação de tarefas já bem realizadas por humanos.
+Uma prova rigorosa para o [[#|controle fuzzy]] é dada no capítulo 7 de<ref name="Hájek">{{cite book|last1=Hájek|first1=Petr|title=Metamathematics of fuzzy logic|year=1998|publisher=Springer Science & Business Media|edition=4}}</ref>.
+Há também um embasamento lógico para o controle difuso na [[programação difusa]]<ref>{{cite journal|last1=Gerla|first1=Giangiacomo|title=Fuzzy logic programming and fuzzy control|journal=Studia Logica|date=2005|volume=79|issue=2|pages=231–254|doi=10.1007/s11225-005-2977-0}}</ref>.
+
+=== Histótico ===
+A lógica difusa foi estabelecida por [[Lofti A. Zadeh]] (1965<ref>{{Cite journal | doi = 10.1016/S0019-9958(65)90241-X| title = Fuzzy sets| journal = Information and Control| volume = 8| issue = 3| pages = 338–353| year = 1965| last1 = Zadeh | first1 = Lotfi A. }}</ref>, 1973<ref>{{Cite journal | doi = 10.1109/TSMC.1973.5408575| title = Outline of a new approach to the analysis of complex systems and decision processes| journal = IEEE Transactions on Systems, Man and Cybernetics| volume = 1| pages = 28–44| year = 1973| last1 = Zadeh | first1 = Lotfi A. }}</ref>),
+e sistemas fuzzy começaram a surgir, especialmente no Japão,
+e hoje no resto do globo (principalmente EUA e Europa).
+As utilizações atuais incluem: [[sistema especialista]] difuso,
+integração entre [[redes neurais artificiais]] e [[lógica difusa]],
+sistemas adaptativos genéticos difusos, esforços para a criação
+de um sistema difuso de controle capaz de [[auto-aprendizado]].
+Estes SDCs podem ser utilizados para controlar sistemas complexos,
+com não-linearidades, como platas, o corpo humano, e a [[inteligência computacional#Criatividade computacional|criatividade]].<ref name="mamdani">{{cite journal|last1=Mamdani|first1=Ebrahim H|title=Application of fuzzy algorithms for control of simple dynamic plant|journal=Proceedings of the Institution of Electrical Engineers|year=1974|volume=121|issue=12|pages=1585–1588|doi=10.1049/piee.1974.0328}}</ref> These systems can be employed to control complex, nonlinear dynamic plants, for example, human body.<ref name = "sarabadani" /><ref name = "mamdani" /><ref>{{cite journal|last1=Bastian|first1=Andreas|title=Identifying fuzzy models utilizing genetic programming|journal=Fuzzy sets and systems|year=2000|volume=113|issue=3|pages=333–350|doi=10.1016/S0165-0114(98)00086-4|url=http://sci2s.ugr.es/keel/pdf/specific/articulo/science2_27.pdf}}</ref>
+
+== Propriedades ==
+A rigor, um SD é um sistema que processa sinais em termos de variáveis lógicas que podem assumir qualquer valor entre 0 e 1 (em contraste com a lógica clássica, digital, booleana, ou [[crispy]]).<ref>https://en.wikipedia.org/wiki/Fuzzy_control_system</ref>
+Um SD é conveniente para utilização de conceitos com semântica imprecisa.
+
+
+== Contexto ==
+SDs são bastante utilizados em [[inteligência computacional]].<ref name = "Pedrycz"/>
+
+
+== Veja também ==
+[[controle difuso]]
+controlador difuso
+[[programação de lógica difusa]]
+[[Inferência bayesiana]]
+
+
+
+
+

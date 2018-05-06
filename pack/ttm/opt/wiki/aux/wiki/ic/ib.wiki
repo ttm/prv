@@ -1,0 +1,232 @@
+~ Inferência bayesiana ~
+
+refs: [[am]], [[ame]], [[pe]], [[imprecisão]]
+[[metodosBayesianosDeAM]]
+[[imprecisão]], 
+
+== todo ==
+* ler o artigo da wikipedia
+  - ptbr: reaproveitar destrincho da fórmula, relacionar evidências com dados (ou modelo) e hipóteses com valores e/ou classes.
+    * integrar sessão 'informalmente' ao final
+  - en:
+    * decision theory, bayesian probability (subjective, [[imprecisão]])
+
+=====
+
+== Não organizado ==
+TA
+
+crença , conhecimento, possibilidade, etc
+
+probabilidades e verossimilhanças marginais
+
+inteligência robusta, computação robusta
+
+bayesian network 
+
+bayesian hierarchical learning
+
+bayesian transfer learning
+
+bayesian deep learning
+
+https://www.quora.com/What-is-Bayesian-machine-learning
+
+== Base teórica ==
+(verificar links de prob e est)
+(adicionar desigualdades, relações e conceitos mais utilizados p IB?
+pegar do livro de [[ame]])
+(arrumar links sobre conceitos de plauível e crença neste contexto estatístico)
+
+== Desenvolvimento da teoria através de exemplos ==
+ibexemplos
+
+
+== Ver também ==
+* [[ic]]
+* https://pt.wikipedia.org/wiki/Teorema_de_Bayes
+
+== Topicos avançados e termos especiais ==
+* https://pt.wikipedia.org/wiki/Complexidade_de_Kolmogorov
+* https://pt.wikipedia.org/wiki/FBST
+* https://pt.wikipedia.org/wiki/Teoria_de_investiga%C3%A7%C3%A3o_bayesiana
+* https://pt.wikipedia.org/wiki/Infer%C3%AAncia_frequencista
+* https://pt.wikipedia.org/wiki/Filtro_bayesiano
+* https://pt.wikipedia.org/wiki/Infer%C3%AAncia_estat%C3%ADstica (principalmente as proposições estatísticas)
+* https://pt.wikipedia.org/wiki/Proposi%C3%A7%C3%A3o
+* https://en.wikipedia.org/wiki/Dutch_book (e bayesian updating?)
+* https://en.wikipedia.org/wiki/Jeffreys_prior (p p(theta, alpha) dificeis de achar)
+* https://pt.wikipedia.org/wiki/Probabilidade_indutiva e a IA universal
+
+
+
+== [[vocabulário]] ==
+iid, linearidade, invariância no tempo, slit, polinomial,
+termos no corpo deste artigo
+
+
+
+de antigo metodosBayesianosDeAM.wiki ateh {{{
+= am =
+Onde colocar na wikipédia
+Em estatística bayesiana?
+Em estatística? Probabilidade?
+Como estão estes artigos na wikipédia?
+
+https://www.coursera.org/learn/bayesian-methods-in-machine-learning
+http://fastml.com/bayesian-machine-learning/
+ftp://www.cs.toronto.edu/pub/radford/bayes-tut.pdf
+https://www.quora.com/What-is-Bayesian-machine-learning
+https://pdfs.semanticscholar.org/377b/3fffaed25edf38ec181a162911fc7681f51f.pdf
+https://www.reddit.com/r/MachineLearning/comments/6dbwnf/d_what_is_exactly_a_bayesian_guy_in_machine/
+https://www.youtube.com/watch?v=C2OUfJW5UNM
+https://www.youtube.com/watch?v=F1wRTC9vcDU
+https://en.wikipedia.org/wiki/AIXI
+https://en.wikipedia.org/wiki/G%C3%B6del_machine
+https://pt.wikipedia.org/wiki/Fal%C3%A1cia_do_apostador
+http://www.bv.fapesp.br/pt/auxilios/29022/soft-computing-aplicacoes-a-problemas-de-engenharia/
+https://pt.wikipedia.org/wiki/Signific%C3%A2ncia_estat%C3%ADstica
+
+https://www.youtube.com/watch?v=DNvwfNEiKvw (AM e BI, exemplo de aplicação para previsão climática, modelo de brinquedo (toy example)) 
+== Conceitos básicos ==
+Probabilidade segundo os axiomas de Kolmogorov?
+
+MAP ~ MLE quando p(h) não é forte.
+
+== vocab ==
+dados (evidência) para teste, treino
+avaliação cruzada
+precisao sensibildiade
+
+falsos positivos e negativos e medidas derivadas:
+(verdadeiros positivos e negativos,
+tabela de confusão,
+
+
+avaliacao
+
+note que a aplicação de um IB em geral
+envolve pré-processamento dos dados,
+o que é considerado na avaliação destas estatísticas
+relacionadas com testes estatísticos e para [[AM]].
+
+
+== Reflexão conceitual e lúdica sobre as IA, IB, IC, e as IM, IN, IP, IT ==
+Um computador é qualquer sistema que computa.
+Os fenômenos reais são em geral complexos (alguns diriam fundamentalmente complexos, veja [[complexidade]], [[sistema complexo]], [[rede complexa]]).
+Neste sentido, em que a máquina é apenas um caso muito especial
+de sistema capaz de computar,
+pode-se pensar um tripé principal na exploração tecnológica
+de inteligência:
+* [[IA]]: mais consensual se admitidos conceitos imprecisos e generalistas de [[inteligência]] e [[artificial]].
+* [[IB]]: inteligência bayesiana, neste caso um sinônimo, ou quase, de [[inferência bayesiana]], fornece estatísticas simples e informativas sobre o sistema, e.g. sobre o aprendizado.
+* [[IC]]: trata da inteligência, e.g. tomada racional de decisões, no contexto computacional.
+* Outros conceitos relacionados: IM (de máquina), IT (tecnológica), IP (primária, primitiva, de primata)
+
+Considere esta [[ontologia]] como o (I)ABC da IT,
+i.e. da tecnologia em inteligência, da inteligência em tecnologia, ou algo do tipo.
+Observe o hiato entre IC e IM. 
+Reitere a reflexão sobre o computador não ser necessariamente
+eletrônico, ou com transístores de silício.
+Pense ao seu redor em todos os sistemas complexos, que computam:
+nas nuvens (com seus ciclos de evaporação e chuva e dinâmicas com o vento),
+nos seus próprios órgãos internos ([[estômago]], [[intestino]], [[cérebro]]).
+Uma pia cheia de louças é um [[sistema complexo]]? computa? de que forma?
+Inteligências inspiradas em [[colonia de formigas|formigas]], cupins, pássaros (e.g. [[PSO]]), [[cérebro]], [[sistemas imunológicos]], foram formalizadas, consideradas analiticamente, e são usadas há décadas em sistemas de IC, para fins teóricos e práticos.
+Pode-se argumentar que a tomada de decisão e a otimização são capacidades
+inerentes a estes sistemas, implicadas pela evolução natural.
+Note que a evolução natural é potencialmente válida para além dos reinos animal e vegetal, ou mesmo na [[taxonomia biológica]].
+Pode-se considerar vivo o reino mineral e as estruturas estelares?
+Em que sentido?
+E inteligêntes?
+Há algum aspecto da inteligência nestes sistemas naturais, sejam eles biológicos 
+(e.g. insetos, como formigas, abelhas, aranhas; o sistema imunológico humano; peixes individuais ou em cardume; etc ...),
+ou não biológicos (e.g. galáxias, em geral espiraladas, com um buraco negro massivo no centro, e diversos sistemas solares ou centrados em buracros negros; água na forma de nuvens ou de rios superficiais, lençóis freáticos e mares).
+Por exemplo, como pode ser explorada a propriedade natural (física) de campo nulo no interior de um material condutor eletrizado? É possível? Seria com isso possível computar, com a alta velocidade de acomodação da carga elétrica no metal,
+muito rapidamene procedimentos hoje impraticáveis?
+
+IM pode também significar inteligência molhada, se considerado o conceito de wetware.
+Ironicamente, IP pode significar inteligência de primata, ou primitiva, ou primária, ou primeira. Dada esta útil ambiguidade, neste vocabulário [[lúdico]] ([[toy model]], [[toy example]]), o termo preferencial é 'inteligência prima'.
+
+
+[[panspermia]], [[neuroastronomia]], teoria do físico Penrose junto a psiquiatras
+de que a mente e consciência está espelhada no universo através de emaranhamento quantico.
+
+
+==== Comentário sobre reflexão ====
+pedir p ric escrever, e/ou na listamacambira,
+ou soltar pedido no fb, telegram e o q seja.
+
+
+
+
+quando devemos assumir f linear? que diferença faz?
+Se f for linear, x_i pode ser ruidoso, e assumirmos outra funcao deterministica,
+e.g. x_i = y_i + e_{y,i}
+(e a relação gaussiana -> minimização quadrática só ocorre, a princípio,
+com todos os ruídos sendo gaussiano, média zero, independentes, o
+q é razoácel no exemplo altura e peso)
+
+Se há forma de associação de h com x_i (e.g. dados rotulados previamente), pode-se classificar
+x_i em h com o naive bayes.
+
+como fazer o naive bayes em casos contínuos?
+
+============
+o teorema de bayes pode ser interpretado como resultado no quanto devemos acreditar
+nas evicências.
+
+falso positivo
+
+prob a priori = 
+
+==========
+A AB simples é essencialmente a maximização de uma das condicionais
+entre os dados e as hipóteses: p(d_i|h_j) e p(h_j|d_i), i.e. encontrando-se a hipótese mais provável.
+O aprendizado através de p(h_i|d_i), i.e. da probabilidade da hipótese condicionada aos dados,
+dispensa o teorema de Bayes, por isso é chamado [[frequentista]], e é denotado pela sigla [[MPA]] (ou MAP ([MAP|en]).
+O aprendizado através de p(d_i|h_i), i.e. dos dados condicionados à hipótese,
+tipicamente envolve a aplicação do [[teorema de Bayes]]
+
+
+===========
+
+
+==========
+
+Bayesian learning é baseada na minimização do erro, em geral quadrático,
+assumindo normalidade e outras parametrizações sobre h.
+
+funções de pertencimento (fuzzy) podem ser usadas como distribuições de probabilidade para remoção de ruídos.
+
+
+No [[aprendizado Bayesiano]], há valoração central da distribuição preditiva,
+a posteriori p("algo a ser previsto"| "algo já sabido").
+Esta fórmula é aplicada em dois contextos: na consideração de métodos
+e modelos, o "algo já sabido" inclui todas as suposições a respeito
+do modelo, e os dados (rotulados, para treino supervisionado,
+ou não, para treio não-supervisionado; ou ambos, para treino semi-supervisionado).
+O outro contexto é na álgebra, pois de fato a hipótese mais provável é desejada e portanto buscada, dado conhecimento prévio, como suposições quanto ao fenômeno e características do modelo (do fenômeno e do método de aprendizado, e.g. as distribuições),
+pela minimização das distribuições condicionais de probabilidade (ambas condicinal a priori e a posteriori são usadas, veja [[MLE]] e [[MAP]]).
+As restrições impostas ao método implicam em maior [[robustez]] (espectro de casos em que podem ser aplicados com resultados consistentes) e [[sensibilidade]] (resolução de diferenças que o método apresenta), por exemplo,
+
+aprendizado bayesiano usando a estatistica c':
+p(dist|dist2) = p(dist2|dist) ~ c'
+exemplo com resultado para linguagem em redes sociais:
+[[hubs]], [[intermediários]] e [[periféricos]]
+(obtidos pela [[setorialização de Erdös]] ou métodos espectrais
+ou mais [[lógica difusa|crispy]] para classificação por fração 
+de vértices com o mesmo [[redes complexas#grau|grau]] ou [[redes complexas#força|força]]) escrevem de forma bastante distina, detectado de forma nítida mesmo através de uma única característica simples, como tamanho de palavra ou uso de pontuação ou maiúsculas.
+
+==================
+=== Desvios dos fundamentos na descrição da IB ===
+Variante de nomenclatura da wp em ingles, com uso de dados, parâmetro e hipeparâmetros, inferência e predição. Crítica ao modelo: não acrescenta aos fundamentos, aliás, prevê e descreve recursões e outras variantes dos paradigmas básicos da IB: MLE e o NB (e o MAP).
+A diminuição da simplicidade da teoria básica é injustificada, basta uma sentença para especificar a distrinção entre inferência e predição, e o leitor interessado segue para o formalismo expandido sem prejuízo da fundamentação teórica de IB, a qual deve priorizar o [[suficiente e necessário]].
+Como antítese a esta crítica, estas elaborações exemplificam
+variantes algébricas e metáforas de [[computação natural]],
+o que reflete a pertinência da IB à [[ic]].
+A inferência é relacionada com a obtenção do modelo para a predição.
+==== Dado, parâmetro e hiper-parâmetro ====
+
+
+

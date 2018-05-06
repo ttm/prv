@@ -201,7 +201,7 @@ endf
 fu! PRVViewHtmlText(url) " WWW navigation {{{2
   if !empty(a:url)
     new
-    PRVBuf
+    PRVbuf
     exe 'r !elinks ' . a:url . ' -dump -dump-width ' . winwidth(0)
     1d
   en
@@ -692,15 +692,6 @@ fu! PRVMkMappings(str) " {{{3
   en
 endf
 
-fu! PRVSetWiki() " {{{3 bare Vim wiki, findind files
-  exe 'se path+='.g:prv_dir.'aux/vimwiki/'
-  se sua +=.wiki
-  se sua +=.vim
-  se sua +=.py
-  se sua +=.txt
-  " to avoid getting unwanted files when finding files
-  se wildignore+=*.swp,*.swo,*.pyo,**/aux/undo/*,viminfo
-endf
 fu! PRVDefineSettings() " {{{3 basic variables/settings
   let g:prv = {}
   let g:prv.paths = {}

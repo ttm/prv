@@ -1,4 +1,0 @@
-tarefas p agora:
-* ler texto da josefina
-* fazer apresentacao p amanha sobre pesquisa
-* retomar [[../mass]], [[../perv]], cor, ml

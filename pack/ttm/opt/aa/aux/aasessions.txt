@@ -1,0 +1,459 @@
+
+
+started: Qui Fev 22 13:46:59 -03 2018
+dur: 15.0
+slots: 8
+ended: Qui Fev 22 15:49:59 -03 2018
+
+
+
+
+started: Qui Fev 22 15:54:05 -03 2018
+dur: 15.0
+slots: 8
+ended: Qui Fev 22 18:55:49 -03 2018
+
+
+
+
+started: Sex Fev 23 12:11:07 -03 2018
+dur: 15.0
+slots: 8
+
+
+started: Sex Fev 23 13:28:57 -03 2018
+dur: 15.0
+slots: 3
+
+
+started: Sex Fev 23 13:38:54 -03 2018
+dur: 15.0
+slots: 2
+ended: Sex Fev 23 14:09:14 -03 2018
+
+
+
+
+started: Sex Fev 23 14:57:05 -03 2018
+dur: 15.0
+slots: 8
+ended: Sex Fev 23 17:00:39 -03 2018
+
+
+
+
+started: Sex Fev 23 17:01:44 -03 2018
+dur: 15.0
+slots: 8
+ended: Sex Fev 23 19:15:03 -03 2018
+
+
+
+
+started: Sex Fev 23 21:22:43 -03 2018
+dur: 15.0
+slots: 8
+
+
+started: Sex Fev 23 22:18:51 -03 2018
+dur: 15.0
+slots: 8
+
+
+started: Sex Fev 23 22:20:57 -03 2018
+dur: 15.0
+slots: 4
+ended: Sex Fev 23 23:22:58 -03 2018
+
+
+
+
+started: Sáb Fev 24 02:28:51 -03 2018
+dur: 15.0
+slots: 8
+
+
+started: Sáb Fev 24 09:07:31 -03 2018
+dur: 15.0
+slots: 8
+
+
+started: Sáb Fev 24 10:18:12 -03 2018
+dur: 0.0
+slots: 15
+
+
+started: Ter Fev 27 10:09:57 -03 2018
+dur: 15.0
+slots: 8
+ended: Ter Fev 27 12:12:43 -03 2018
+
+
+
+
+started: Qui Mar  1 08:11:19 -03 2018
+dur: 15.0
+slots: 8
+ended: Qui Mar  1 10:49:45 -03 2018
+
+
+
+
+started: Qui Mar  1 11:05:53 -03 2018
+dur: 15.0
+slots: 8
+ended: Qui Mar  1 13:06:28 -03 2018
+
+
+
+
+started: Dom Mar  4 08:25:26 -03 2018
+dur: 15.0
+slots: 8
+ended: Dom Mar  4 20:55:08 -03 2018
+
+
+
+
+started: Qui Mar 15 03:56:00 -03 2018
+dur: 15.0
+slots: 8
+
+
+started: Qui Mar 15 11:01:14 -03 2018
+dur: 15.0
+slots: 8
+
+
+started: Qui Mar 15 19:50:42 -03 2018
+dur: 15.0
+slots: 8
+
+
+started: Sex Mar 16 11:26:23 -03 2018
+dur: 15.0
+slots: 8
+ended: Sex Mar 16 13:27:00 -03 2018
+
+
+
+
+started: Sex Mar 16 13:41:00 -03 2018
+dur: 15.0
+slots: 4
+
+
+started: Sáb Mar 17 01:11:17 -03 2018
+dur: 15.0
+slots: 8
+ended: Sáb Mar 17 03:12:39 -03 2018
+
+
+
+
+started: Sáb Mar 17 03:20:08 -03 2018
+dur: 15.0
+slots: 8
+
+
+started: Dom Mar 18 19:46:27 -03 2018
+dur: 15.0
+slots: 8
+ended: Dom Mar 18 21:56:45 -03 2018
+
+
+
+
+started: Seg Mar 19 01:06:00 -03 2018
+dur: 15.0
+slots: 8
+
+
+started: Seg Mar 19 16:41:45 -03 2018
+dur: 15.0
+slots: 5
+ended: Seg Mar 19 17:56:56 -03 2018
+
+
+
+
+started: Ter Mar 20 01:02:57 -03 2018
+dur: 15.0
+slots: 8
+ended: Ter Mar 20 03:20:17 -03 2018
+
+
+
+
+started: Ter Mar 20 03:21:12 -03 2018
+dur: 15.0
+slots: 8
+ended: Ter Mar 20 05:35:40 -03 2018
+
+
+
+
+started: Ter Mar 20 06:00:04 -03 2018
+dur: 15.0
+slots: 8
+ended: Ter Mar 20 08:00:37 -03 2018
+
+
+
+
+started: Ter Mar 20 14:52:23 -03 2018
+dur: 10.0
+slots: 12
+ended: Ter Mar 20 17:00:53 -03 2018
+
+
+
+
+started: Ter Mar 20 17:02:20 -03 2018
+dur: 15.0
+slots: 8
+ended: Ter Mar 20 20:27:44 -03 2018
+
+
+
+
+started: Ter Mar 20 20:28:39 -03 2018
+dur: 15.0
+slots: 8
+
+
+started: Qui Mar 22 06:05:01 -03 2018
+dur: 15.0
+slots: 8
+ended: Qui Mar 22 08:05:35 -03 2018
+
+
+
+
+started: Dom Mar 25 13:38:56 -03 2018
+dur: 15.0
+slots: 8
+
+
+started: Dom Mar 25 13:56:17 -03 2018
+dur: 15.0
+slots: 8
+ended: Dom Mar 25 17:02:57 -03 2018
+
+
+
+
+started: Seg Mar 26 14:30:28 -03 2018
+dur: 15.0
+slots: 8
+ended: Seg Mar 26 16:32:11 -03 2018
+
+
+
+
+started: Seg Mar 26 16:36:06 -03 2018
+dur: 15.0
+slots: 10
+ended: Seg Mar 26 19:45:45 -03 2018
+
+
+
+
+started: Ter Mar 27 10:37:48 -03 2018
+dur: 15.0
+slots: 8
+ended: Ter Mar 27 13:22:09 -03 2018
+
+
+
+
+started: Ter Mar 27 18:32:00 -03 2018
+dur: 15.0
+slots: 8
+ended: Ter Mar 27 23:07:24 -03 2018
+
+
+
+
+started: Ter Mar 27 23:36:20 -03 2018
+dur: 15.0
+slots: 8
+ended: Qua Mar 28 02:50:23 -03 2018
+
+
+
+
+started: Qua Mar 28 03:06:33 -03 2018
+dur: 15.0
+slots: 8
+ended: Qua Mar 28 05:12:37 -03 2018
+
+
+
+
+started: Sex Mar 30 15:10:16 -03 2018
+dur: 15.0
+slots: 8
+
+
+started: Ter Abr  3 04:50:35 -03 2018
+dur: 15.0
+slots: 8
+ended: Ter Abr  3 06:50:59 -03 2018
+
+
+
+
+started: Sex Abr  6 01:17:32 -03 2018
+dur: 15.0
+slots: 8
+ended: Sex Abr  6 03:21:21 -03 2018
+
+
+
+
+started: Sex Abr  6 03:56:44 -03 2018
+dur: 15.0
+slots: 8
+ended: Sex Abr  6 06:06:05 -03 2018
+
+
+
+
+started: Seg Abr  9 00:03:45 -03 2018
+dur: 15.0
+slots: 8
+
+
+started: Ter Abr 10 01:08:42 -03 2018
+dur: 15.0
+slots: 8
+ended: Ter Abr 10 03:39:36 -03 2018
+
+
+
+
+started: Ter Abr 10 03:39:45 -03 2018
+dur: 15.0
+slots: 8
+
+
+started: Ter Abr 10 13:41:47 -03 2018
+dur: 15.0
+slots: 8
+ended: Ter Abr 10 16:05:57 -03 2018
+
+
+
+
+started: Dom Abr 15 21:19:42 -03 2018
+dur: 15.0
+slots: 8
+ended: Dom Abr 15 23:20:22 -03 2018
+
+
+
+
+started: Seg Abr 16 00:57:01 -03 2018
+dur: 15.0
+slots: 8
+ended: Seg Abr 16 02:57:51 -03 2018
+
+
+
+
+started: Seg Abr 16 03:16:46 -03 2018
+dur: 15.0
+slots: 8
+
+
+started: Seg Abr 16 03:18:16 -03 2018
+dur: 15.0
+slots: 8
+ended: Seg Abr 16 05:18:50 -03 2018
+
+
+
+
+started: Seg Abr 16 05:51:32 -03 2018
+dur: 15.0
+slots: 8
+ended: Seg Abr 16 08:01:29 -03 2018
+
+
+
+
+started: Seg Abr 16 09:39:40 -03 2018
+dur: 15.0
+slots: 8
+
+
+started: Seg Abr 16 10:25:47 -03 2018
+dur: 15.0
+slots: 5
+
+
+started: Qua Abr 18 00:45:08 -03 2018
+dur: 15.0
+slots: 8
+ended: Qua Abr 18 03:10:29 -03 2018
+
+
+
+
+started: Qua Abr 18 14:14:10 -03 2018
+dur: 15.0
+slots: 8
+ended: Qua Abr 18 18:34:12 -03 2018
+
+
+
+
+started: Qui Abr 19 03:08:04 -03 2018
+dur: 15.0
+slots: 8
+
+
+started: Qui Abr 19 14:52:50 -03 2018
+dur: 15.0
+slots: 8
+ended: Qui Abr 19 17:17:01 -03 2018
+
+
+
+
+started: Qui Abr 19 22:16:59 -03 2018
+dur: 15.0
+slots: 8
+ended: Sex Abr 20 00:18:40 -03 2018
+
+
+
+
+started: Sáb Abr 21 14:16:43 -03 2018
+dur: 15.0
+slots: 8
+ended: Sáb Abr 21 16:17:34 -03 2018
+
+
+
+
+started: Sáb Abr 21 17:13:01 -03 2018
+dur: 15.0
+slots: 8
+ended: Sáb Abr 21 19:47:25 -03 2018
+
+
+
+
+started: Ter Abr 24 22:56:04 -04 2018
+dur: 15.0
+slots: 8
+ended: Qua Abr 25 01:00:42 -04 2018
+
+
+
+
+started: Qua Abr 25 02:05:52 -04 2018
+dur: 15.0
+slots: 8

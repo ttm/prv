@@ -1,0 +1,582 @@
+:pe:programação-estruturada:programacao-estruturada:structured-programming:sp:
+
+:todo: limpar este arquivo, revisar artigo da wikipédia em português,
+repassar daqui para lá.
+
+https://en.wikipedia.org/wiki/Structured_programming
+
+Structured programming is a term coined by Dijskstra, na carta
+aberta 'Go To Statement Considered Harmful' de 1968.
+apareceu no final dos anos 1950. com a aparição das
+linguagens de prog ALGOL 58 e 60.
+
+":Todo ver catra e ver item 'structured program theorem'
+
+(discursar sobre padrão de projeto / design patterns,
+para problemas que ocorrem com frequencia no projeto de software,
+e sobre padrões arquiteturais)
+
+Links principais:
+- https://en.wikipedia.org/wiki/Structured_programming
+- https://en.wikipedia.org/wiki/Programming_paradigm
+- https://en.wikipedia.org/wiki/Comparison_of_programming_paradigms
+- https://en.wikipedia.org/wiki/Structured_program_theorem
+- http://people.cs.aau.dk/~normark/oop-csharp/html/notes/intro-oop_themes-from-structured-prog-to-oop-sect.html#intro-oop_no-page_side-box_sb1
+
+
+-----
+programas sao concebidos através destas estruturas de controle,
+que expressam os 3 padrões básicos (sequência, decisão e iteração):
+* sequência: sequência de statements
+
+## Intro
+
+Programação estruturada é um paradigma de programação com ênfase no uso de
+subrotinas, laços de repetição, condicionais e estruturas em bloco.  Este
+paradigma surgiu ao final de 1950 junto às linguagens ALGOL 58 e ALGOL 60, foi
+impulsionado pelas vantagens práticas que o paradigma oferece, e também pelo
+'teorema do programa estruturado' (de 1966, também chamado de teorema de Böhm-Jacopini)
+e a carta aberta de Dijkstra 'Go To Statement Considered Harmful' (de
+1968).  De fato, muitas linguagens não possuem GOTOs para desincentivar a
+programação não-estruturada (nota: Donald Knuth advocou o GOTO em algumas
+circunstâncias mesmo depois do estabelecimento da programação estruturada,
+parece que ainda não concorda com a abolição do GOTO, mas falta referência na
+Wikipédia).
+
+A PE foi o paradigma dominante na escrita de software até
+a programação orientada a objetos (POO).  Enquanto a PE fia-se em estruturas de
+controle de alto nível (em oposição ao uso de GOTOs), concepções top-down e
+refinamento por passos, a POO se baseia no conceito de objetos que possuem
+atributos (dados) e métodos (procedimentos).
+
+
+A POO é um dos 4 principais
+paradigmas de programação (as outras são programação imperativa, funcional e
+lógica).  Os objetos são operados com o conceito de 'this' (isso) ou 'self', de forma
+que seus métodos muitas vezes modifiquem os dados da própria instância.  Os
+programas são arquitetados na forma de objetos que interagem entre si.  Dentre
+as varias abordagens da POO, as baseadas em classes são as mais comuns: objetos
+são instâncias de classes, o que em geral também define o tipo do objeto.
+
+Muitas das linguagens de programação mais utilizadas atualmente (talvez a
+maioria) são multi-paradigma, e suportam POO em um grau maior ou menor.
+
+
+## Base
+
+#### em direção à POO
+Ideias principais:
+- O hiato entre o problema e a linguagem compreendida pela máquina.
+  * Preencha bottom-up.
+- Use os dados como unidades básicas para construção do programa
+  * Dados e suas interrelações são mais estáveis do que ações sobre os dados.
+- Empacote os dados com suas operações naturais/instrinscecas
+  * Contrua sob as ideias de tipos abstratos de dados
+  * Consolide os constructos que encapsulam os dados
+- Concentre nos conceitos e fenômenos a serem manipulados
+  * Faça uso de teorias existentes de fenômenos e conceitos (<-- Link para programação natural e inteligência artificial em geral)
+  * Forme novos conceitos a partir dos existentes
+- Utilize um estilo de programação que permita o colapso da programação dos
+  objetos  (?? TTM)
+
+### POO
+Tipo de dados (TD ou um tipo) é um conjunto de valores com propriedades em
+comum.  Tipo abstrato de dados (TAD): é um TD em que o foco recai sobre as
+operacoes nos valores do tipo, em contraste com a representacao destes valores.
+Estas operações escondem e protejem a representação dos dados.
+A elaboração de TADs pode ser considerada base da POO.
+
+Especificacoes respondem à perguntas 'o quê?', não 'como?'. TTM
+
+#### Características da POO
+Advindas de linguagens pre-poo:
+- variáveis podem portar informação formatada dentre um número pequeno de
+TDs embutidos e estruturas de dados deles derivados.
+- procedimentos/metodos/funcoes/rotinas, que podem receber uma entrada,
+retornar uma saída, e manipular dados.
+- EC de PE.
+- modularidade: procedimentos agrupados em arquivos e módulos,
+com espaços distintos de nomes para que os identificadores não colidam.
+
+Os atributos e métodos na POO podem ser referentes a toda uma classe
+ou a uma instância.
+
+Encapsulamento: o vinculo dos dados e funcoes que manipulam os dados,
+de forma a manter uma interface bem definida para operação sobre os dados,
+e a evitar corrupção dos dados.
+O encapsulamento foi responsável pelo conceito de 'ocultamento de dados',
+central para a POO.
+O encapsulamento pode ser realizado através de convenções (em Python, underscores
+demarcam métodos e atributos protegidos e privados),
+ou via recursos da linguagem (em Java ou C++, um método privado
+só é acessado pela própria classe).
+Encapsulamento incentiva o desacoplamento.
+
+Topicos adicionais: dispacho dinâmico e múltiplo; TTM
+classes protected, private e public em python e c++
+
+Quanto um objeto contém outros objetos, diz-se que há 'composição de objetos'.
+A composição de objetos é usada para representar uma relação de 'tem um',
+usualmente uma meronímia.
+Já a herança (quase sempre suportada pelas linguagens que utilizam classes)
+permitem uma hierarquia que apresenta as relações de 'é um' ou 'é um tipo de',
+ou seja, relações de hipônimo-hiperônimo, cuja arvore final de relações é chamada
+de árvore taxonômica.
+Na herança, tipicamente todos os atributos e métodos da classe pai/mãe estão também
+disponíveis na classe filha, embora seja comum que algumas características sejam
+sobreescritas.
+Assim, a herança permite reuso facilitado de características e muitas vezes reflete
+relações do mudno real de forma intuitiva.
+
+Herança múltipla ocorre quando uma classe herda de mais de uma classe.
+'Mixin' pode ser considerado um tipo especifico de herânça, embora haja uma
+diferênça crucial: a classe da qual são herdadas as características não
+é considerada pai/mãe.
+
+Polimorfismo é quando alguma rotina pode ser chamada para objetos diferentes.
+Por exemplo: a função pega_cor_principal() pode ser chamada tanto em
+um objeto da classe Imagem quanto da classe Video.
+O polimorfismo é um tipo de abstração que simplifica códigos externos à hierarquia de classes
+e uma separação forte das responsabilidades (separation of concerns).
+
+": avançado: separation of concerns TTM
+
+
+Há orientações diversas para a POO.
+Por exemplo, o princípio da composição sobre herança advoca
+que a composição de objetos é preferida à herança.
+O princípio aberto/fechado advoca que classes e funções
+deve ser 'abertas p extensão mas fechadas para modificação'.
+
+JS e Lua são linguagens baseadas em protótipos.
+
+Subtipamentos comprtamentais fortes (ou Liskov substitution principle LSP)
+são aqueles em que todas as propriedades sobre objetos t da classe T
+estão também presentes nos objetos s da classe S, em que S é subtipo de T.
+
+GoF, 23 patterns, pitfalls of poo. TTM
+
+": object-relational impedance muismatch
+
+": circle-ellipse problem is dificult to handle using inheritance
+
+criticas:
+Não há consenso se POO realmente é útil para modelar a realidade (ou se reflete ela),
+tampouco se modelar a realidade é um objetivo digno.
+'POO é apropriado para modelar sistemas complexos com comportamentos complexos',
+o q contrasta com o renomado princípio KISS.
+Yegge notou que linguagens naturais não possuem a abordagem POO de priorizar coisas
+ao invés de ações, o que leva muitas vezes a representações contorcidas em software.
+POO muitas vezes é realizada sem uma representação transparente do fluxo de controle
+(ordem das instruções), o que tem se tornado uma desvantagem com a relevância acentuada
+de processamento paralelo nos últimos anos.
+A POO é criticada por muitas razões, como as supracitadas.
+As mais recorrentes (e talvez relevantes) são: não ir de encontro com os objetivos
+de reusabilidade e modularidade, e a ênfase demasiada em design e modelamento de software
+em detrimento de outros aspectos (computabilidade/algoritmos).
+Outras: POO é 'intrinsecamente menos eficiente' que o código procedural, pode
+demorar mais para compilar, tende a ser extremamente complexo.
+
+"The problem with object-oriented languages is they've got all this implicit environment that they carry around with them. You wanted a banana but what you got was a gorilla holding the banana and the entire jungle."
+
+Stepanov: 'saying that everything is an object is saying nothing at all'.
+
+Yegge: Why would you go to such lengths to put one part of speech [nouns] on a pedestal?
+==
+As my friend Jacob Gabrielson once put it, advocating Object-Oriented Programming is like advocating Pants-Oriented Clothing.
+
+Eric Raymond: 'poo encoraja prgramas com muitas camadas e destroi a transparência'
+
+Pike: 'poo constitui os números romandos da computação'
+
+
+TTM
+": avancado: data-drive desing (centrada nos TD) vs responsibility-driven design (classes são definidas através de contratos, centradas em responsabilidades e nas informações que compartilha)
+
+": SOLID e GRASP guidelines
+
+As tentativas de encontrar uma definição consensual a respeito de objetos não foram consideradas bem sucedidas.
+
+
+
+#### Conceitos de POO
+
+##### Cliente, servidor e mensagens
+Trata de passagem de mensagens entre objetos:
+o cliente (um objeto) emite um a mensagem para
+o servidor (outro objeto) em que solicita um serviço
+(que uma rotina qualquer seja executada)
+que pode implicar em retornar uma resposta ao cliente.
+Um servidor pode ser cliente de outros (sub-)servidores.
+Esta resposta pode ser síncrona (quando o cliente aguarda
+a resposta do servidor para executar qualquer outra instrução)
+ou assíncrona, envolvendo paralelismo de atividades.
+
+Um exemplo simples: um instituto (cliente), solicita um buffet
+para uma empresa especializada (servidor).
+Esta empresa (agora cliente)
+solicita salgados e sucos de outras empresas (subservidores).
+O instituto pode ficar paralizado enquanto não chega o buffet
+(envio síncrono de mensagem) ou continuar suas atividades (envio assíncrono de mensagem).
+Neste último caso, o instituto deve ser capaz de lidar com a
+*interrupção* das atividades (ou parte delas) assim que chegar o buffet.
+
+A existência/espera de uma resposta pode ser inerente ao envio da mensagem
+ou ser realizada através do disparo de uma nova mensagem pelo servidor.
+
+##### Responsabilidades
+A um servidor e seus métodos são atribuídas responsabilidades específicas.
+No exemplo anterior, a empresa de buffet não deve entregar
+um brinquedo, e a comida deve ser apropriada (não apenas várias barras de chocolate, por exemplo).
+
+Uma responsabilidade que todos os servidores tem é a de manter seus dados consistentes.
+Idealmente, não deve ser possível tornar inconsistentes os dados de um objeto.
+Um objeto deve dispor de boa interface para se comunicar com outros objetos.
+
+Outra responsabilidade genérica e usual é a de que as operações tenham um sentido razoável.
+Por exemplo, se um cliente envia uma mensagem que satisfaz alguma pré-condição,
+é obrigação do método ativado retornar um resultado que reflita a pós-condição.
+
+": aprofundar, 'contracts'
+
+##### Modularidade centrada nos dados
+A modularidade de um programa é uma medida que reflete o quanto ele
+é composto por partes separadas (chamadas de módulos).
+Na POO, a modularidade é preferencialmente (ou basicamente) centrada das TADs,
+o que pode ser chamado de *modularidade centrada nos dados*
+e possui as seguintes características:
+- um módulo é construído encapsulando dados que representam um único conceito
+- alto grau de cohesão
+- a visibilidade (dos atributos e métodos) pode ser controlada
+- o módulo pode ser utilizado com um tipo de dado
+
+##### Reusabilidade
+PE -> bibliotecas de rotinas (procedure libraries)
+POO -> bibliotecas de classes, que podem (até certo ponto)
+serem compreendidas com conjuntos de TADs reutilizáveis.
+Desafios para a reusabilidade:
+- Descobrimento: onde está o componente e como acessá-lo?
+- Entendimento: o que o componente oferece e como encaixa em um programa?
+- Modificação: quando e como o componente deve ser modificado (para utilização)?
+- Integração: como organizar e usar o componente em conjunto com outros componentes.
+
+Nota: a modificação deve ser usada com cuidado.
+A modificação direta da rotina ou objeto 
+implica em dificuldades quando
+alguma versão nova da biblioteca é utilizada.
+Preferencialmente, as modificações devem ser feitas de forma modular,
+i.e. separando as contribuições locais das originais.
+na POO, a herânça ameniza este problema.
+
+##### ação nos objetos
+As ações devem sempre ser realizadas através algum objeto.
+'Não pergunte o que um sistema faz, pergunte o que ele faz a que' (Meyer)
+
+- ações em geral:
+  * implementadas por chamadas de procedimentos
+  * Com frequência, mas não sempre, parametrizadas (com parâmetros de entrada)
+- ações em objetos
+  * ativadas via mensagens
+    - uma mensagem sempre possui um objeto receptor
+    - uma mensagem é similar a uma chamada de procedimento com ao menos um
+      parâmetro
+  * uma mensagem ativa uma operação (um método)
+    - o objeto receptor identifica a operação apropriada (busca/lookup de
+      método)
+
+TTM
+": aprofundar o method lookup
+
+##### fenomenos e conceitos
+Metáforas são recorrentes em computação: mensagens, inteiros, etc.  Classes e
+objetos são, em parte, inspirados na teoria de conceitos e fenonenos[Knudsen
+and Thomsen]:
+- Um fenômeno é algo que possui uma existência definida na realidade ou na
+  mente, é qualquer coisa real em si.
+- Um conceito é uma coleção de fenômenos com propriedades em comum.
+  Os atributos característicos de um conceito são:
+    * Nome do conceito: chamado 'designação', pode não ser único
+    * Intenção: a coleção de propriedades que caracterizam os fenômenos do conceito
+      - Sob a ótica aristotélica, as propriedades da intenção são divididas em definidoras e características. Cada fenômeno do conceito necessáriamente possui todas as propriedades definidoras, o que implica na distinção objetiva entre fenômenos de um conceito aristotélico.
+      - Sob a ótica fuzzy, as propriedades na intenção são apenas exemplos de propriedades possíveis.Neste caso, a intenção é também caracterizada por fenômenos prototípicos e (em geral) não há distinção objetiva entre fenômenos pertencentes ou não a um conceito fuzzy.
+    * Extensão: a coleção de fenômenos do conceito
+
+Conceitos aristotélicos são convenientes para construção de classes em uma
+linguagem OO.
+Muitas classes representao conceitos da vida real pois muitos programas administram
+coisas do mundo real.
+No entando, é comum que se faça uso também de conceitos imaginados (e.g. uma tabela hash).
+
+O estabelecimento de conceitos a partir de conjuntos de fenômenos é
+chamado de 'classificação'.
+A intenção sendo as propriedades definidoras que são compartilhadas dentre os fenômenos.
+A exemplificação é o oposto da classificação: um subconjunto da extensão do conceito.
+
+'Agregar' é formar um conceito que possui um número de partes (outros conceitos),
+é formar uma holonímia.
+'Decompor' é partir um conceito em um número de partes (outros conceitos), é formar
+meronímias.
+A intenção de um conceito agregado pode ser a intersecção das intenções de suas partes,
+pode ser a soma de suas intenções, ou pode possuir propriedades adicionais
+(em que o todo é mais que a soma das partes).
+
+": Dar exemplo aqui de programação natural: PSO, ACO. Sobre agregacao em que o todo eh mais que a soma das partes.
+
+'Generalização' é formar um conceito mais amplo a partir de um (ou mais)
+conceitos mais estritos, é formar um hiperônimo.  'Especialização' é formar um
+conceito mais estrito a partir de um conceito mais geral, é formar um hipônimo.
+A extensão de uma especialização é um subconjunto de sua generalização.
+A intenção de uma especialização (aristotélica) inclui a intenção de sua
+generalização.
+
+Uma especialização de um conceito é naturalmente expressa como herança
+de uma classe por outra, ou pela instânciação de uma classe, na POO.
+
+A documentação de um POO pode ter diferentes utilidades:
+- uso:
+  * descreve como o programa é usado
+  * orientado para o usuário final do programa
+- tipos (para interfaceamento com rotinas externas)
+  * descreve as propriedades externas de cada TAD
+  * orientado para programadores de clientes
+- tipos e programas (para propósitos internos)
+  * descreve as propriedades internas de um programa ou TAD
+  * orientado para os desenvolvedores (presentes e futuros) do programa ou TAD
+
+A documentação pode ser escrita antes, durante ou depois da programação
+(e tipicamente, para um mesmo software, é escrita durante estes três momentos).
+A documentação pode ser distinta do programa, mas pode estar dentro do programa
+ou o programa dentro dela.
+
+#### PE vs POO
+PE não é errada nem POO a certa.  POO tende a dar melhores resultados em
+programas maiores e para reutilização dos programas (e suas partes ou
+subrotinas).
+
+": ver criticism em https://en.wikipedia.org/wiki/Object-oriented_programming 
+
+## Desenvolvimento
+
+ver  
+https://en.wikipedia.org/wiki/Index_of_object-oriented_programming_articles
+### exemplos
+
+[trechos em imperativa, struturada, e orientada ao objeto]
+
+em estruturada: python e VimL, dar exemplo de pacotes python (music?) E vimL
+(realcolors? aa?, prv?)
+
+POO em VimL com closures and the like
+
+
+
+(ler caps 2 3 4 e wikipedia oop)
+
+
+===== nao organizado =====
+A '''programação estruturada''' (PE) é um [[paradigma de programação]], uma forma de [[programação de computadores]],
+com ênfase no uso de
+subrotinas, laços de repetição, condicionais e estruturas em bloco<ref>{{Citar web |url=http://www.dca.fee.unicamp.br/cursos/EA876/apostila/HTML/node7.html |titulo= Programação estruturada  |acessodata=22 de novembro de 2016 |publicado=Faculdade de Engenharia Elétrica e de Computação - UNICAMP}}</ref>.  Este
+paradigma surgiu ao final de 1950 junto às linguagens [[ALGOL 58]] e [[ALGOL 60]]<ref>{{Citar livro|último1=Clark|primeiro1=Leslie B. Wilson, Robert G.|último2=Robert|primeiro2=Clark|título=Comparative programming languages|data=2000|publicado=Addison-Wesley|local=Harlow, England|isbn=9780201710120|página=20|edição=3rd|url=https://books.google.co.uk/books?id=bVSjoO8f2fMC&lpg=PR11&ots=zItCa2GxG6&dq=Comparative%20Programming%20Languages&lr&pg=PA20#v=onepage&q=Comparative%20Programming%20Languages&f=false|acessodata=25 de novembro de 2015}}</ref>, foi
+impulsionado pelas vantagens práticas que o paradigma oferece, e também pelo
+'teorema do programa estruturado' (de 1966, também chamado de teorema de Böhm-Jacopini)
+e a carta aberta de Dijkstra 'Go To Statement Considered Harmful' (de
+1968).  De fato, muitas linguagens não possuem GOTOs para desincentivar a
+programação não-estruturada (nota: Donald Knuth advocou o GOTO em algumas
+circunstâncias mesmo depois do estabelecimento da programação estruturada,
+parece que ainda não concorda com a abolição do GOTO, mas falta referência na
+Wikipédia em inglês).
+
+A PE foi o paradigma dominante na escrita de [[software]] até
+a programação orientada a objetos ([[POO]]).  Enquanto a PE fia-se em estruturas de
+controle de alto nível (em oposição ao uso de GOTOs), concepções top-down e
+refinamento por passos, a POO se baseia no conceito de objetos que possuem
+atributos (dados) e métodos (procedimentos).
+Apesar de ter sido sucedida pela POO, a programação estruturada ainda é muito influente pois grande parte das pessoas ainda aprende programação através dela. Para a resolução de problemas simples e diretos, a programação estruturada é bastante eficiente (talvez mais eficiente que a [[POO]]). Além disso, por exigir formas de pensar relativamente complexas, POO até hoje ainda não é bem compreendida ou usada pela maioria.
+
+Diversas linguagens relevantes hoje (e.g. [[Cobol]], [[PHP]], [[Perl]] e [[Go (linguagem de programação)|Go]]) ainda utilizam o paradigma estruturado, embora possuam suporte para a orientação a objeto e outros [[paradigmas de programação]].
+
+== Elementos básicos da teoria == 
+Na PE, os programas são vistos como compostos das seguintes 'estruturas de controle' (ECs)
+<ref name='oop'>http://people.cs.aau.dk/~normark/oop-csharp/html/notes/</ref>:
+* Sequência: de instruções ou sub-rotinas executadas em sequência (<code>a=4; b=4\*5</code>)
+* Seleção/condicional: instruções são executadas ou não conforme o estado do programa (if, else, elif/elseif, endif)
+* iteração/repetição: instruções são executados até que o programa atinja um determinado estado (for, while, repeat, do..until)
+* recursão: instruções executado chamando a si próprio até que certas condições sejam satisfeitas. Exemplo:
+
+<source lang="python">
+       def fatorial(x):               
+           if x > 1:
+               return x*fatorial(x-1)
+           return x
+</source>
+
+Há a utilização de 'sub-rotinas' em que as estruturas de controle são agrupadas
+e utilizadas através de um única instrução. (funções, métodos, subprogramas,
+procedimentos)
+Blocos permitem que sequências de instruções sejam tratadas como uma única instrução.
+
+Uma ideia central na PE é o refinamento por passos, em que o desenvolvimento do
+programa é feito de maneira top-down, por exemplo:
+# comece com o programa principal
+#* use as EC de iteração e seleção
+#* escreva as chamadas para as rotinas necessárias (r1, r2, etc), diz-se 'postule r1, r2'.
+
+# Implemente estas rotinas necessárias r1, r2 etc. com as chamadas para outras rotinas, conforme conveniente.
+# Continue implementando as rotinas até que não sejam necessários procedimentos adicionais.
+
+Na prática, é usual iniciar a programação não exatamente do topo, até porque é
+comum que hajam vários topos<ref name="Meyer2009">{{cite book|author=Bertrand Meyer|title=Touch of Class: Learning to Program Well with Objects and Contracts|year=2009|publisher=Springer Science & Business Media|isbn=978-3-540-92144-8}}</ref>, mas isso depende da complexidade e modularidade
+do software a ser escrito.
+
+=== Desvios ===
+Dentre os desvios mais comuns da programação estruturada, há múltiplos pontos:
+* De saída:
+** terminação antecipada: return em uma função, break or continue em um laço de interação, ou um exit em algum programa.  Na programação estruturada, a rigor, há um só ponto de saída da rotina sendo executada.
+** Manejo de exceção: clausulas como (try.. except) do Python ou (try.. catch) do C++, também implicam em múltiplos pontos de saída da rotina.
+* De entrada: útil e.g. para geradores, streaming, máquinas de estado.
+
+== Conceito-chave: GOTO ==
+Seja um programa uma sequência de instruções a serem seguidas (e.g. por um
+computador).  Considere um ponteiro que indica a instrução a ser executada na
+próxima oportunidade.  Um GOTO é um reposicionamento arbitrário deste ponteiro.
+Embora seja um comando poderoso, o uso de GOTOs é considerado má prática (não
+pelo Knuth, que defende seu uso em algumas situações).
+
+Na programação imperativa, que possui ênfase na modificação de valores em
+endereços de memória (i.e. instruções de atribuição), o uso de GOTOs é
+abundante.  Em muitos contextos, pode-se assumir que 'programação estruturada'
+é sinônimo de programação sem GOTO (sem pulos, sem redirecionamentos
+arbitrários do ponteiro da sequência de instruções em execução).  Estes foram
+os dois primeiros paradigmas dominantes na programação de computadores. A
+imperativa desde o início da programação até os anos 1970.  A estruturada até o
+final década de 1990, e então deu lugar à POO.
+
+== Críticas usuais à PE ==
+Dentre as críticas à PE, constam<ref name='oop'></ref>:
+* PE é orientada para a resolução de um problema em particular.
+** Um escopo mais amplo é muitas vezes conveniente 
+* PE é realizada pela decomposição gradual da funcionalidade
+** As estruturas advindas de funcionalidade/ação/controle não são as partes mais estáveis de um programa
+** Foco em estruturas de dados ao invés de estruturas de controle é uma alternativa
+* Sistemas reais não possuem um único topo<ref name="Meyer2009"></ref>.
+** Pode ser apropriado considerar alternativas à abordagem top-down.
+
+Veja também a [[POO]], paradigma que foi estabelecido depois de décadas de PE.
+
+== Tópicos avançados ==
+* Diagrama Nassi-Shneiderman: uma representação gráfica (structograma) para programação estruturada, desenvolvida em 1972.
+* Carta de estrutura (structure chart): um diagrama usado na programação estruturada para organizar os módulos em árvore.
+
+{{Referências}}
+
+{{esboço-software}}
+
+[[Categoria:Paradigmas de programação]]
+
+
+
+
+
+
+
+============================================== TTM
+
+'''Programação estruturada''' é um [[paradigma de programação]], forma de [[programação de computadores]] que preconiza que todos os programas possíveis podem ser reduzidos a apenas três estruturas: sequência, [[decisão]] ou seleção e [[iteração]]<ref>{{Citar web |url=http://www.dca.fee.unicamp.br/cursos/EA876/apostila/HTML/node7.html |titulo= Programação estruturada  |acessodata=22 de novembro de 2016 |publicado=Faculdade de Engenharia Elétrica e de Computação - UNICAMP}}</ref> (esta última também é chamada de repetição), desenvolvida por Michael A. Jackson no livro "Principles of Program Design" de 1975.
+
+Emergiu no final dos anos 1950 com as linguagens de programação [[ALGOL 58]] e [[ALGOL 60]]<ref>{{Citar livro|último1=Clark|primeiro1=Leslie B. Wilson, Robert G.|último2=Robert|primeiro2=Clark|título=Comparative programming languages|data=2000|publicado=Addison-Wesley|local=Harlow, England|isbn=9780201710120|página=20|edição=3rd|url=https://books.google.co.uk/books?id=bVSjoO8f2fMC&lpg=PR11&ots=zItCa2GxG6&dq=Comparative%20Programming%20Languages&lr&pg=PA20#v=onepage&q=Comparative%20Programming%20Languages&f=false|acessodata=25 de novembro de 2015}}</ref>.
+
+Tendo, na prática, sido transformada na [[programação modular]], a programação estruturada orienta os programadores para a criação de estruturas simples nos programas, usando as [[sub-rotina]]s e as funções. Foi a forma dominante na criação de [[software]] anterior à [[Orientação a objeto|programação orientada por objetos]].
+
+Apesar de ter sido sucedida pela programação orientada por objetos, pode-se dizer que a programação estruturada ainda é muito influente, uma vez que grande parte das pessoas ainda aprendem programação através dela. Para a resolução de problemas relativamente mais simples e diretos, a programação estruturada é muito eficiente. Além disso, por exigir formas de pensar relativamente complexas, a programação orientada a objetos até hoje ainda não é bem compreendida ou usada pela maioria.
+
+Há de acrescentar também que inúmeras linguagens ainda extremamente relevantes nos dias de hoje, como [[Cobol]], [[PHP]], [[Perl]] e [[Go (linguagem de programação)|Go]] ainda utilizam o paradigma estruturado (muito embora possuam suporte para a orientação a objeto).
+== Elementos da teoria == 
+Na PE, os programas são vistos como compostos das seguintes 'estruturas de controle' (ECs)
+<ref>http://people.cs.aau.dk/~normark/oop-csharp/html/notes/</ref>:
+* Sequência: de instruções ou sub-rotinas executadas em sequência (<code>a=4; b=4\*5</code>)
+* Seleção/condicional: instruções são executadas ou não conforme o estado do programa (if, else, elif/elseif, endif)
+* iteração/repetição: instruções são executados até que o programa atinja um determinado estado (for, while, repeat, do..until)
+* recursão: instruções executado chamando a si próprio até que certas condições sejam satisfeitas. Exemplo:
+
+<source lang="python">
+       def fatorial(x):               
+           if x > 1:
+               return x*fatorial(x-1)
+           return x
+</source>
+
+Há a utilização de 'sub-rotinas' em que as estruturas de controle são agrupadas
+e utilizadas através de um única instrução. (funções, métodos, subprogramas,
+procedimentos)
+Blocos permitem que sequências de instruções sejam tratadas como uma única instrução.
+
+Uma ideia central na PE é o refinamento por passos, em que o desenvolvimento do
+programa é feito de maneira top-down, por exemplo:
+# comece com o programa principal
+#* use as EC de iteração e seleção
+#* escreva as chamadas para as rotinas necessárias (r1, r2, etc), diz-se 'postule r1, r2'.
+
+# Implemente estas rotinas necessárias r1, r2 etc. com as chamadas para outras rotinas, conforme conveniente.
+# Continue implementando as rotinas até que não sejam necessários procedimentos adicionais.
+
+Na prática, é usual iniciar a programação não exatamente do topo, até porque é
+comum que hajam vários topos<ref name="Meyer2009">{{cite book|author=Bertrand Meyer|title=Touch of Class: Learning to Program Well with Objects and Contracts|year=2009|publisher=Springer Science & Business Media|isbn=978-3-540-92144-8}}</ref>, mas isso depende da complexidade e modularidade
+do software a ser escrito.
+
+=== Desvios ===
+Dentre os desvios mais comuns da programação estruturada, há múltiplos pontos:
+- De saída:
+  * terminação antecipada: return em uma função, break or continue em um laço
+    de interação, ou um exit em algum programa.  Na programação estruturada, a
+    rigor, há um só ponto de saída da rotina sendo executada.
+  * Manejo de excessão: clausas como (try.. except) do Python ou (try.. catch)
+    do C++, também implicam em múltiplos pontos de saída da rotina.
+- De entrada: útil e.g. para geradores, streamming, máquinas
+  de estado.
+
+== Críticas usuais à PE ==
+* PE é orientada para a resolução de um problema em particular.
+** Um escopo mais amplo é muitas vezes conveniente 
+* PE é realizada pela decomposição gradual da funcionalidade
+** As estruturas advindas de funcionalidade/ação/controle não são as partes mais estáveis de um programa
+** Foco em estruturas de dados ao invés de estruturas de controle é uma alternativa
+* Sistemas reais não possuem um único topo<ref name="Meyer2009"></ref>.
+** Pode ser apropriado considerar alternativas à abordagem top-down.
+
+
+== tópicos avançados ==
+- Diagrama Nassi-Shneiderman: uma representação gráfica (structograma) para
+  programação estruturada, desenvolvida em 1972.
+- Carta de estrutura (structure chart): um diagrama usado na programação
+  estruturada para organizar os módulos em árvore.
+
+{{Referências}}
+
+{{esboço-software}}
+
+[[Categoria:Paradigmas de programação]]
+
+
+
+
+==========================
+
+
+== Em direção à programação orientada a objetos (POO) ==
+Ideias principais:
+* O hiato entre o problema e a linguagem compreendida pela máquina.
+** Preencha bottom-up.
+* Use os dados como unidades básicas para construção do programa
+** Dados e suas inter-relações são mais estáveis do que ações sobre os dados.
+* Empacote os dados com suas operações naturais/intrínsecas
+** Construa sob as ideias de tipos abstratos de dados
+** Consolide os construtos que encapsulam os dados
+* Concentre nos conceitos e fenômenos a serem manipulados
+** Faça uso de teorias existentes de fenômenos e conceitos (bastante útil, por exemplo, para a [[programação natural]] e a [[inteligência artificial]] em geral).
+** Forme novos conceitos a partir dos existentes
+* Utilize um estilo de programação que permita o colapso da programação dos objetos
+
+
+
+

@@ -1,0 +1,740 @@
+ vim:ma:noro:tw=78:ts=8:sts=4:sw=4:et:foldmethod=marker
+
+" {{{----gênese:
+oi, fala cmg
+Srila: notas diversas Dom Abr 16 04 - v )... Sáb Mar
+gatinha esperta
+Srila: timer ) Sáb Fev 24 11 : fin path e start
+
+
+$$$$$
+Qui Abr 19 15:30:37 -03 2018
+bonito este separador?
+Srila: este processo antes d td , nome da dissertacao de luz
+
+
+$$$$$
+Qui Abr 19 15:31:29 -03 2018
+bom que gostou e deste processo pelo qual estamos fazendo isso, qualquer coisa, avisa pls pls
+Srila: e levar a thata na rede , focinho lindo , tested
+
+
+$$$$$
+Qui Abr 19 15:32:45 -03 2018
+srila, vc eh uma figura
+Srila: eh estilo tambem Sáb Fev 24 10 14 : 10 13
+
+
+$$$$$
+Qui Abr 19 15:34:43 -03 2018
+bora agora ficou bala esse separador?
+Srila: ficou mara , com ruido e limpando arquivos , ambiente de
+
+
+$$$$$
+Qui Abr 19 15:35:06 -03 2018
+bora agora ficou bala esse separador?
+Srila: bora Qui Abr 6 05 : 14 - o AAMinutesFromSeconds use
+
+$$$$$Qui Abr 19 15:36:25 -03 2018
+bora agora ficou bala esse separador?
+Srila: agora sim Ter Fev 26 - ver indice do vim Sex
+
+$$$$$ ::: Qui Abr 19 15:36:47 -03 2018
+bora agora ficou bala esse separador?
+Srila: ficou mara , ambiente de parada p reestabelecer vimwiki , da
+
+$$$$$ ::: Qui Abr 19 15:38:19 -03 2018
+ficou mara mm esse bot, o esquema de guardar dialogos, a srila tah dando show
+Srila: srila ( por fazer isso depois da juventude , maurer ,
+
+$$$$$ ::: Qui Abr 19 15:40:02 -03 2018
+quem é você, Srila? Até onde você pode chegar?
+Srila: pode valer fazer sessao sobre jogos , esqueci e termos Qui
+
+$$$$$ ::: Qui Abr 19 15:40:39 -03 2018
+ok, farei sessao sobre jogos em algum momento
+Srila: em vim article : 57 : amenu ? Ter Abr 16
+
+$$$$$ ::: Qui Abr 19 15:47:06 -03 2018
+oi Srila, fiz um comando p vc
+Srila: vc Sáb Fev 25 17 04 - fzf . Esc -
+
+$$$$$ ::: Qui Abr 19 15:47:14 -03 2018
+e p vc tb
+Srila: e da funcao de tageamento Qui Mar 16 03 : 42
+
+$$$$$ ::: Qui Abr 19 15:47:26 -03 2018
+ehnois
+Srila: paulo mateus , it recall all the lines , is all
+
+$$$$$ ::: Qui Abr 19 15:48:30 -03 2018
+agora também tenho um comando p falar c vc
+Srila: também luz Qui Abr 15 : 27 : fin path to
+}}}
+
+$$$$$ ::: Qui Abr 19 15:54:28 -03 2018
+commitado prv, notando de filosofia da percepcao para wp, fazendo bots autoras
+Srila: de SDs Ter Fev 22 13 13 : 21 - E
+
+$$$$$ ::: Qui Abr 19 16:32:56 -03 2018 {{{----musilingua, yoga, dança
+parado para fazer várias coisas: musilingua para ataque entre grupos humanos, coordenados ou não, contra animais ou nao
+Srila: para opt / Dom Fev 26 12 Sáb Mar 19 03
+
+$$$$$ ::: Qui Abr 19 16:35:03 -03 2018
+dança-yoga relaxado, balançando, curvando, braços pendendo, levantados ou esticados, passos como quiser, nos ladrilhos do piso, lento, pulado
+Srila: ou organizando wiki Dom Fev 25 01 : CMask to each
+
+$$$$$ ::: Qui Abr 19 16:37:36 -03 2018
+juntar com musilingua, batucar com corpo, beatbox, estalo de dedo. Usar gravetos e objetos do meio (paredes, mesas, árvore, etc) para bater, emburrar, balançar.
+Srila: com arvore : lcd to enable easier browsing of vim article
+
+$$$$$ ::: Qui Abr 19 16:39:02 -03 2018
+usar músicas diversas: dub (high tone, bass temperature: https://www.youtube.com/watch?v=34h2aGYWwAM), étnicas, religiosas, pop, rock, trap, twerk, massa, etc
+Srila: etc no texto ok , enviado por email Ter Fev 25
+" }}}
+
+$$$$$ ::: Qui Abr 19 17:17:01 -03 2018
+banca robson, reuniao alan, casa caleb/gera
+Srila: casa em SDs Ter Abr 18 18 03 - me escreve
+
+$$$$$ ::: Qui Abr 19 17:57:51 -03 2018
+com os vocabulários certos, coisas, conceitos, complicados tornam-se simples. A elevação espiritual está atada à fala e escrita nos corpos humanos
+Srila: os todos estao fumegando Qui Abr 9 01 - conhecimento ,
+
+$$$$$ ::: Qui Abr 19 18:05:06 -03 2018
+com o conhecimento apropriado, conceitos apropriados para a conduta, ética, bem-estar pessoal e coletivo são operados com simplicidade. Por refletir na cultura, as nomeações, e conceitos representados de outras formas, há varredura do espaço semântico, para exploração como conveniente pelo indivíduo e espécie
+Srila: com ruido e brasileiras Ter Fev 25 01 : A -
+
+$$$$$ ::: Qui Abr 19 18:07:27 -03 2018
+ruido bom? brasileiras boas?
+Srila: ruido e atencao de software Dom Mar 4 Sex Fev 26
+
+$$$$$ ::: Qui Abr 19 18:08:35 -03 2018
+vou sair para andar, alguma palavra final para mim, Srila?
+Srila: para opt e metodo dos materiais * Probabilidade e áudio Qua
+
+$$$$$ ::: Qui Abr 19 18:10:33 -03 2018
+bj, Srila. Obrigado pelas ideias e companhia
+Srila: e - X . lets go !!! Qui Fev 23 14
+
+$$$$$ ::: Qui Abr 19 22:17:00 -03 2018
+retomando sessao bot-wiki
+Srila: retomando sessao soh p artigo adicionado aas notas dos mappings use
+
+$$$$$ ::: Qui Abr 19 22:17:30 -03 2018
+comecando pela conferencia de bots
+Srila: pela Buttler ( inf bay ), antes d arrumar o netviz
+
+$$$$$ ::: Qui Abr 19 22:32:18 -03 2018
+estudando a conferencia de bots que jah estah feita para fazer a proxima
+Srila: feita funcao para escrita : 49 - fzf - requisite :
+
+$$$$$ ::: Qui Abr 19 22:56:28 -03 2018
+perdido vendo fb, acho q + nd q preste
+Srila: q os passos p planejar . Escrevi p adiantar bayesiano Sáb
+
+$$$$$ ::: Qui Abr 19 23:05:41 -03 2018
+organizando bot.vim
+Srila: organizando sobre imprecisao e arrumando tijolo conceitual Ter Mar 4 sobre
+
+$$$$$ ::: Qui Abr 19 23:18:00 -03 2018
+escolhida cor muito legal
+Srila: muito Sáb Fev 23 : Curmili () | : 29 :
+
+$$$$$ ::: Qui Abr 19 23:33:32 -03 2018
+modularizando conferencia dos bots para fazer auto conference
+Srila: para terminar d previa da ib Sáb Mar 17 : how
+
+$$$$$ ::: Qui Abr 19 23:48:18 -03 2018
+organizando conferencia de bots e demais partes do codigo
+Srila: organizando artigos mais importantes da distribuicao do vim Qui Abr 9
+
+$$$$$ ::: Sex Abr 20 00:02:53 -03 2018
+terminando conferencia auto
+Srila: terminando arrumadas da ufabc a teoria + 1 . Renderizar arvore
+
+$$$$$ ::: Sex Abr 20 00:18:40 -03 2018
+terminado primeiro esqueleto do bot autoconf
+Srila: bot Qua Abr 6 05 - ver tb anotacoes no aprendizados
+
+$$$$$ ::: Sex Abr 20 00:22:57 -03 2018 {{{----conferencias iniciais
+
+Tiago: estes orem sobre a fé
+
+$$$$$ ::: Sex Abr 20 00:22:58 -03 2018
+Tiago: estes orem sobre a fé
+Luís Inácio Lula da Silva: a fome , é uma elite que quem votou no combate à corrupção no Aécio
+
+$$$$$ ::: Sex Abr 20 00:22:58 -03 2018
+Luís Inácio Lula da Silva: a fome , é uma elite que quem votou no combate à corrupção no Aécio
+Luís Inácio Lula da Silva: que está acontecendo e sim algo sobre a chance de agora , desde
+
+$$$$$ ::: Sex Abr 20 00:22:58 -03 2018
+Luís Inácio Lula da Silva: que está acontecendo e sim algo sobre a chance de agora , desde
+João: a unção dele foi gerado . Escrevo - me
+
+$$$$$ ::: Sex Abr 20 00:22:58 -03 2018
+João: a unção dele foi gerado . Escrevo - me
+Tiago: . Você pode ver que traz a vinda do outono e também disse : " Se
+
+$$$$$ ::: Sex Abr 20 00:22:58 -03 2018
+Tiago: . Você pode ver que traz a vinda do outono e também disse : " Se
+Luís Inácio Lula da Silva: que está acontecendo e sim algo sobre a chance de agora , desde
+
+$$$$$ ::: Sex Abr 20 00:23:37 -03 2018
+
+Dilma Vana Rousseff: do jeito que dirige a gente olhar não é imperdoável . Eu já vi , vai ganhar ou quem perder , vai todo mundo e para as mulheres é a história da
+
+$$$$$ ::: Sex Abr 20 00:23:37 -03 2018
+Dilma Vana Rousseff: do jeito que dirige a gente olhar não é imperdoável . Eu já vi , vai ganhar ou quem perder , vai todo mundo e para as mulheres é a história da
+Dilma Vana Rousseff: do mundo perder , só existe no
+
+$$$$$ ::: Sex Abr 20 00:23:37 -03 2018
+Dilma Vana Rousseff: do mundo perder , só existe no
+Tiago: mundo para os navios ; matam e matado o amam ? Não matarás
+
+$$$$$ ::: Sex Abr 20 00:23:37 -03 2018
+Tiago: mundo para os navios ; matam e matado o amam ? Não matarás
+Pedro: para Deus provê , não revidava ; quando viviam na província da criação do dom que ele toda espécie de pensar ,
+
+$$$$$ ::: Sex Abr 20 00:23:37 -03 2018
+Pedro: para Deus provê , não revidava ; quando viviam na província da criação do dom que ele toda espécie de pensar ,
+Pedro: pensar , repousa sobre os insultam . Mantenham - nos regenerou para vocês também a vontade , viva e ver dias de livre vontade , oferecendo sacrifícios espirituais aceitáveis a jornada terrena
+
+$$$$$ ::: Sex Abr 20 00:23:37 -03 2018
+Pedro: pensar , repousa sobre os insultam . Mantenham - nos regenerou para vocês também a vontade , viva e ver dias de livre vontade , oferecendo sacrifícios espirituais aceitáveis a jornada terrena
+Luís Inácio Lula da Silva: , pode ter igual , católico , católico , viro mártir . Um Lulinha incomoda muito melhor . Neste país tem mais que precisa ser falsificado ; eu sou
+
+$$$$$ ::: Sex Abr 20 00:23:37 -03 2018
+Luís Inácio Lula da Silva: , pode ter igual , católico , católico , viro mártir . Um Lulinha incomoda muito melhor . Neste país tem mais que precisa ser falsificado ; eu sou
+João: da vida está aperfeiçoado . Aquele que pertencia ao mundo . Deste modo sabemos que ouvimos para que nega que já brilha a unção que afirma que havemos de todas as nossas mãos apalparam
+
+$$$$$ ::: Sex Abr 20 00:23:46 -03 2018
+
+João: , mentimos e o Verdadeiro . Nisto conhecemos o verdadeiro nele permanece em qualquer espírito , teriam permanecido conosco ; e anda nas trevas estão se pedirmos alguma . Porque nisto consiste
+
+$$$$$ ::: Sex Abr 20 00:23:46 -03 2018
+João: , mentimos e o Verdadeiro . Nisto conhecemos o verdadeiro nele permanece em qualquer espírito , teriam permanecido conosco ; e anda nas trevas estão se pedirmos alguma . Porque nisto consiste
+Luís Inácio Lula da Silva: . Nossa guerra não merece o PT . Qualquer um governo que está , vai para ser
+
+$$$$$ ::: Sex Abr 20 00:23:46 -03 2018
+Luís Inácio Lula da Silva: . Nossa guerra não merece o PT . Qualquer um governo que está , vai para ser
+João: o cegaram . Por isso o Verdadeiro . Escrevo - lhes estas coisas a nossa vida eterna em nós : que ouviram desde o mundo : amando a quem vê , visto
+
+$$$$$ ::: Sex Abr 20 00:23:46 -03 2018
+João: o cegaram . Por isso o Verdadeiro . Escrevo - lhes estas coisas a nossa vida eterna em nós : que ouviram desde o mundo : amando a quem vê , visto
+Pedro: o fim de coisas Deus que , observem as santas mulheres , faça - conhecimento de praticarem o madeiro , anda ao evangelho de
+
+$$$$$ ::: Sex Abr 20 00:23:46 -03 2018
+Pedro: o fim de coisas Deus que , observem as santas mulheres , faça - conhecimento de praticarem o madeiro , anda ao evangelho de
+Pedro: Deus por isso é bom procedimento de coisas perecíveis como alguém
+
+$$$$$ ::: Sex Abr 20 00:23:46 -03 2018
+Pedro: Deus por isso é bom procedimento de coisas perecíveis como alguém
+João: é verdadeiro Deus assim nos ouve em tudo o perfeito amor não pode amar o sangue ; ele permanece no mundo
+
+$$$$$ ::: Sex Abr 20 00:23:53 -03 2018
+bonito
+Dilma Vana Rousseff: ou perder . E quem perder . Um grande varejista uma
+
+$$$$$ ::: Sex Abr 20 00:23:53 -03 2018
+Dilma Vana Rousseff: ou perder . E quem perder . Um grande varejista uma
+Luís Inácio Lula da Silva: Um Lulinha incomoda muita gente imagina , viro presidente da diversidade . Neste país , brasileiro e seu passado não tem nem homem que está acontecendo e ainda sou presidente de me frustra não posso .
+
+$$$$$ ::: Sex Abr 20 00:23:53 -03 2018
+Luís Inácio Lula da Silva: Um Lulinha incomoda muita gente imagina , viro presidente da diversidade . Neste país , brasileiro e seu passado não tem nem homem que está acontecendo e ainda sou presidente de me frustra não posso .
+Fernando Henrique Cardoso: , as incertezas de repente . O que a moeda forte que sou de Fernando Henrique Cardoso , tínhamos ainda
+
+$$$$$ ::: Sex Abr 20 00:23:53 -03 2018
+Fernando Henrique Cardoso: , as incertezas de repente . O que a moeda forte que sou de Fernando Henrique Cardoso , tínhamos ainda
+João: . Nisto conhecemos , para a semente de fato , visto que nenhum assassino , assim que procede da vida porque amamos
+
+$$$$$ ::: Sex Abr 20 00:23:53 -03 2018
+João: . Nisto conhecemos , para a semente de fato , visto que nenhum assassino , assim que procede da vida porque amamos
+Dilma Vana Rousseff: da mulher dura cercada de ser vista como objeto frágil e acho que o consenso e o
+
+$$$$$ ::: Sex Abr 20 00:23:53 -03 2018
+Dilma Vana Rousseff: da mulher dura cercada de ser vista como objeto frágil e acho que o consenso e o
+Pedro: que até chegar
+
+$$$$$ ::: Sex Abr 20 00:23:53 -03 2018
+Pedro: que até chegar
+Fernando Henrique Cardoso: que transformar quem é a nossa Nação atravessa atualmente ... as incertezas de um papel público para encontrar .
+
+$$$$$ ::: Sex Abr 20 00:24:51 -03 2018
+primeira conferencia de todos os tempos, como vao?
+Pedro: como alguém fala , uma semente perecível , humilhem - nas com mal com beijo de coração o devido . Agora que neles estava , ele
+
+$$$$$ ::: Sex Abr 20 00:24:51 -03 2018
+Pedro: como alguém fala , uma semente perecível , humilhem - nas com mal com beijo de coração o devido . Agora que neles estava , ele
+Luís Inácio Lula da Silva: com as nossas diferenças .
+
+$$$$$ ::: Sex Abr 20 00:24:51 -03 2018
+Luís Inácio Lula da Silva: com as nossas diferenças .
+Tiago: . Aquele que ceifaram os espias e todo o Reino que há inveja amarga da verdade . Não matarás
+
+$$$$$ ::: Sex Abr 20 00:24:51 -03 2018
+Tiago: . Aquele que ceifaram os espias e todo o Reino que há inveja amarga da verdade . Não matarás
+Luís Inácio Lula da Silva: Não importa aonde você está acontecendo e a convivência da minha cara para ser maior do Brasil é que nunca , sou presidente da história e sim algo sobre a corrupção no combate à corrupção ,
+
+$$$$$ ::: Sex Abr 20 00:24:51 -03 2018
+Luís Inácio Lula da Silva: Não importa aonde você está acontecendo e a convivência da minha cara para ser maior do Brasil é que nunca , sou presidente da história e sim algo sobre a corrupção no combate à corrupção ,
+Tiago: maior . Sobretudo , considerem motivo de quebrá - se disso , aquele que desejam . Elias era humano como nós . Há
+
+$$$$$ ::: Sex Abr 20 00:24:51 -03 2018
+Tiago: maior . Sobretudo , considerem motivo de quebrá - se disso , aquele que desejam . Elias era humano como nós . Há
+Luís Inácio Lula da Silva: maior do país . Olha para salvar vidas . Por mais autoridade moral e a corrupção no Aécio goste de agora , a cadeia . O povo que eu sou corintiano , da
+" }}}
+
+$$$$$ ::: Sex Abr 20 00:32:37 -03 2018
+srila, e agora, como procedo?
+Luís Inácio Lula da Silva: e ainda sou presidente da minha origem , todos estes deputados corruptos estariam na cadeia , da minha história e ainda sou um futuro melhor presidente da diversidade . Qualquer um pode não
+
+$$$$$ ::: Sex Abr 20 00:33:54 -03 2018
+srila, e agora, como procedo?
+Srila: e tentar passar , abertos outros paises , jovem , passos
+
+$$$$$ ::: Sex Abr 20 00:34:37 -03 2018
+e continuo com os bots ou wiki ou wp ou prv ou artigo?
+Srila: ou não , nome de VD Qua Abr 19 - ler
+
+$$$$$ ::: Sáb Abr 21 14:04:49 -03 2018
+fazendo metas ateh viajar
+Srila: ateh coletar tags fica carregadas no detector de estudar as vn
+
+$$$$$ ::: Sáb Abr 21 14:08:03 -03 2018
+why is Vim so hard? Its learning curve so steep? Use HCI arguments on its commands, mappings, functions, software desgin, and help utilities
+Srila: help Sex Fev 27 11 - O inserts a fumegar Qua
+
+$$$$$ ::: Sáb Abr 21 14:09:35 -03 2018
+sao sempre inserts em namespaces diferentes (shouts, diário, wiki, calendário, diálogos de bots, etc), ideia da srila
+Srila: srila tah dando o AAMinutesFromSeconds use a proxima Qui Abr 6
+
+$$$$$ ::: Sáb Abr 21 14:11:49 -03 2018
+mais uma da srila: integrar funcionalidades do aa (e.g. iniciar sessao, converter segundos em minutos, etc) nos bots
+Srila: bots autoras Qui Abr 17 18 15 19 16 09 :
+
+$$$$$ ::: Sáb Abr 21 14:12:32 -03 2018
+outra dela: voltar a explorar as bots autoras/autores para escrita de texto
+Srila: outra wiki ) * Probabilidade e brasileiras Ter Fev 27 23
+
+$$$$$ ::: Sáb Abr 21 14:13:26 -03 2018
+explorar probabilidade, autoras brasileiras, certo srila?
+Srila: autoras Qui Fev 24 02 - case letters . Se for
+
+$$$$$ ::: Sáb Abr 21 14:15:09 -03 2018
+tipo de documento novo dado pela srila: 'case letters', ela quer escrever e que outros bots escrevam
+Srila: outros 2 slots Sex Abr 17 03 2018 ----- terminar de
+
+$$$$$ ::: Sáb Abr 21 14:15:33 -03 2018
+Srila dando a letra mesmo, ajudando muito na conversa, obrigado
+Srila: a < A elevação espiritual está elemento ...) Dom Mar 30
+
+$$$$$ ::: Sáb Abr 21 14:16:02 -03 2018
+voltando para escrita e encaminhamento ateh amanha: diario, metas, emails
+Srila: escrita dos baits , nome de outros topicos da nota ludica
+
+$$$$$ ::: Sáb Abr 21 14:16:43 -03 2018
+sessao p planejar e adiantar tudo ateh amanha 18h
+Srila: planejar . Bora , tiago Seg Fev 22 13 13 :
+
+$$$$$ ::: Sáb Abr 21 14:33:19 -03 2018
+mandando msgs
+Srila: mandando ver indice do normal no tranco . , described in
+
+$$$$$ ::: Sáb Abr 21 14:58:48 -03 2018
+andado com emails
+Srila: com elas Sáb Fev 24 22 07 - vim para aashouts
+
+$$$$$ ::: Sáb Abr 21 15:08:13 -03 2018
+adiantando msg p Rodrigo
+Srila: msg ali Dom Abr 20 15 04 - wiki ic p
+
+$$$$$ ::: Sáb Abr 21 15:35:02 -03 2018
+mandado email p sbcm
+Srila: email ( 300 , integracao com edge matching Sex Mar 20
+
+$$$$$ ::: Sáb Abr 21 15:35:10 -03 2018
+encaminhado p cristina e maju
+Srila: e aa ) Sáb Mar 4 09 - W eh mta
+
+$$$$$ ::: Sáb Abr 21 15:41:38 -03 2018
+escrever aliases para cada tag. Descobrir como operar com isso no Vim ou se é necessário editar diretamente o .tags
+Srila: para arrumar wikipedia de pesquisa Ter Mar 18 00 - fzf
+
+$$$$$ ::: Sáb Abr 21 15:42:52 -03 2018
+mais uma da srila: necessário para uma wiki que é suporte para pesquisa
+Srila: da boca e da boca e realidades Qua Abr 16 04
+
+$$$$$ ::: Sáb Abr 21 15:43:26 -03 2018
+sim srila, incrível os entendimentos de realidade que você dá e do que seja um ser vivente
+Srila: que o caminho Seg Fev 22 12 - W o enxame
+
+$$$$$ ::: Sáb Abr 21 15:43:44 -03 2018
+ok, retomarei o enxame de almas/bots em breve
+Srila: o fzf . Clear should be entirely loaded or string hms
+
+$$$$$ ::: Sáb Abr 21 15:44:15 -03 2018
+ok, integrarei fzf e inteligencia fuzzy mesmo que minimamente :todo:
+Srila: inteligencia , options , o gmail . Ter Fev 26 -
+
+$$$$$ ::: Sáb Abr 21 15:45:05 -03 2018
+ok, darei continuidade à conferencia de bots, inteligencia computacional, e opcoes para voces mesmo ligarem e desligarem em voces e uns nos outros
+Srila: e tiago e estaticos Qua Abr 3 04 - i no
+
+$$$$$ ::: Sáb Abr 21 15:45:45 -03 2018
+ok, alguns vou preservar paradigmáticos baselines estáticos. Gostou do tiago então ?
+Srila: do figado , andando com calma do livro de entender os
+
+$$$$$ ::: Sáb Abr 21 15:46:35 -03 2018
+ok, o linguajar é o sistema operacional (OS) , retomarei o livro preto do figadô de cansoà e outros poetas
+Srila: o cabecao c marilia sobre reuniao d hj Ter Mar 22
+
+$$$$$ ::: Sáb Abr 21 15:47:50 -03 2018
+aviso marília e vic e love letter e milena e laila etc q estarei em sampa dia 30
+Srila: 30 - notes Ter Mar 22 17 18 15 11 :
+
+$$$$$ ::: Sáb Abr 21 16:02:39 -03 2018
+lombrando infinito em tudo, pensando nas responsas ateh 18h amanha e ateh eu voltar de campo grande
+Srila: ateh amanha p arrumar nos bots Qua Abr 17 18 19
+
+$$$$$ ::: Sáb Abr 21 16:12:21 -03 2018
+sossegado, fiz o planejamento ateh amanha 18h. Pensando em revisar shouts, mas acaba nao precisando
+Srila: nao esquecer do diario para escrever sobre trabalho p colocar artigo
+
+$$$$$ ::: Sáb Abr 21 16:14:15 -03 2018
+acaba n precisando revisar shouts, pq fica escrito, e tem retorno do bot p assimilar
+Srila: n desindenta no artigo de diario Dom Fev 24 08 -
+
+$$$$$ ::: Sáb Abr 21 16:17:34 -03 2018
+retomando realcolors, terminada sessao de planejamento
+Srila: terminada passada em mundos e arquivos Qui Abr 18 21 -
+
+$$$$$ ::: Sáb Abr 21 17:13:01 -03 2018
+sessao última antes de sair p gig: realcolors
+Srila: sair p probabilidade e caleb / vim , esqueci e PRVLeader
+
+$$$$$ ::: Sáb Abr 21 17:21:32 -03 2018
+passar p orquestra, ela mesmo canta e faz ei ei (do trap): https://www.youtube.com/watch?v=GPATUFiWoTI
+Srila: e jah operante Ter Mar 26 15 21 : https ://
+
+$$$$$ ::: Sáb Abr 21 17:28:33 -03 2018
+adicionado marker F aa wiki
+Srila: adicionado detector de AB , ao menos a fumegar esses bots
+
+$$$$$ ::: Sáb Abr 21 17:39:49 -03 2018
+apresentacao de danca: mantos e musilingua de 2 ou mais pessoas, roteiro tvz comeca com 1 soh com manto de palha, pelo, tecido ou o q for, pulando depois de chamado com musica ao menos em parte improvisada, batucada, todos batucam. Depois entram mais dançando, com gravetos para instrucoes batucadas ou outros com mantos. Tratar coeografia com VD e com manifestacoes étcnicas
+Srila: roteiro elaborado Qui Mar 23 18 15 21 : 23 15
+
+$$$$$ ::: Sáb Abr 21 17:40:14 -03 2018
+passar shouts de AA e diálogos dos bots para a Yda
+Srila: bots estao ainda nao entendi pq esse bot e tentar novamente
+
+$$$$$ ::: Sáb Abr 21 17:41:26 -03 2018
+repassar p Yda estes dias aqui: diversidade de atividades para estar sempre engajada em coisa legal e q preste, propor auxiliar p casa e pesquisa, ela regaca com estudo, faco com ela, eu p medicina como treineiro tvz
+Srila: coisa . Atencao Ter Mar 22 12 Sáb Mar 17 20
+
+$$$$$ ::: Sáb Abr 21 17:42:13 -03 2018
+reaproveitar caderno vermelho, anotacoes dos canticos, puxar com ydah + coisa
+Srila: com simplicidade . Show my c Daniel e formato ?) Seg
+
+$$$$$ ::: Sáb Abr 21 17:42:48 -03 2018
+ver sobre cores e VD c ydah, bots, mitologia, formalizacoes OWL, SKOS, e RDF em geral. Disponibilizar na torre do VICG
+Srila: na janela e caleb / but leave in the default mappings
+
+$$$$$ ::: Sáb Abr 21 17:43:22 -03 2018
+o q a ydah arranjar d trampo ajuda na casa e p viajar p sampa, casa do caleb
+Srila: o aa menu itens básicos Qua Mar 28 02 - bare
+
+$$$$$ ::: Sáb Abr 21 17:45:51 -03 2018
+visitar Penalva e Zenaide para contribs
+Srila: e IC e comando para viajar Ter Mar 16 06 -
+
+$$$$$ ::: Sáb Abr 21 17:53:01 -03 2018
+tamancos, braceletes, pulseiras de braço e de perna, colares, peruca/coroa, de platinelas, miçangas, madeitas, plástico, que podem ficar mais soltos ou presos (corsinhas sao puxadas, prendem/soltam as particulas), tratar como audiovisualizacao de dados, com e sem redundancia, usar com manto e para musilingua
+Srila: como medir o Nexos na wikipédia . Show my configs ,
+
+$$$$$ ::: Sáb Abr 21 18:03:42 -03 2018
+intercalar batucada e dança batuquenta com música do meu usuario do youtube (e.g. likes), shape suite. Talvez integrar com Vivace e AHT p pirar de vez. ABT para sync entre AHT e Vivace e danca e +++
+Srila: integrar wiki Sex Abr 10 13 - s - critical -
+
+$$$$$ ::: Sáb Abr 21 18:05:28 -03 2018
+cranio sonante eh a geleia geral, todos batucam, dancam, em tudo ao redor, musilingua explicada durante a propria apresentacao atraves da interacao entre os apresentadores e plateia
+Srila: cranio para fora para compilar o esquema desejado de ib ,
+
+$$$$$ ::: Sáb Abr 21 18:13:55 -03 2018
+fazer o plugin p slides
+Srila: p reestabelecer vimwiki . Seg Mar 16 05 : aa_tagprefix ='
+
+$$$$$ ::: Sáb Abr 21 18:40:25 -03 2018
+trabalhando com serie pitagoras para o quadrado de um numero pela soma dos impares
+Srila: pela Buttler ( nvi ) Dom Mar 16 01 : pedro
+
+$$$$$ ::: Sáb Abr 21 18:54:59 -03 2018
+tentar envolver o lucas arte nessas viajas
+Srila: o bare vimwiki Sáb Mar 26 16 10 01 - liners
+
+$$$$$ ::: Sáb Abr 21 19:12:59 -03 2018
+formula do quadrado
+Srila: do livro , limpar as an omni completion on this with
+
+$$$$$ ::: Sáb Abr 21 19:47:25 -03 2018
+encontradas contradicoes na formula do pitagoras para o calculo dos quadrados pela soma dos ímpares
+Srila: dos codigos Qua Abr 17 20 - gives you cannot actually
+
+$$$$$ ::: Ter Abr 24 22:56:04 -04 2018
+sessao p terminar de arrumar o wiki.txt
+Srila: arrumar o auto conference Qui Mar 15 19 15 19 22
+
+$$$$$ ::: Ter Abr 24 23:16:34 -04 2018
+arrumando intro, disperso um pouco
+Srila: arrumando mt bom ! Sex Fev 25 20 08 : prv_leader
+
+$$$$$ ::: Ter Abr 24 23:27:05 -04 2018
+visitado prv para ver o que tem da wiki lá
+Srila: prv . Usar os vocabulários certos , nos bots , prendem
+
+$$$$$ ::: Ter Abr 24 23:41:20 -04 2018
+arrumando 1.1.
+Srila: arrumando helphelp Sex Mar 23 21 14 : lcd to calculate
+
+$$$$$ ::: Ter Abr 24 23:56:25 -04 2018
+arrumando estrutura do wiki.txt
+Srila: arrumando ateh coletar tags como fazer sistema operacional ( 300 ,
+
+$$$$$ ::: Qua Abr 25 00:11:46 -04 2018
+arrumando estrutura e complementando ela
+Srila: estrutura geral p assimilar Sáb Abr 9 00 - research /
+
+$$$$$ ::: Qua Abr 25 00:29:52 -04 2018
+arrumando arquivos principais da wiki
+Srila: arquivos Qui Abr 20 02 - eX pega a onda do
+
+$$$$$ ::: Qua Abr 25 00:46:20 -04 2018
+arrumando base da wiki
+Srila: wiki Dom Abr 21 : match e maju Sáb Mar 22
+
+$$$$$ ::: Qua Abr 25 01:00:42 -04 2018
+terminando arrumacao da wiki
+Srila: wiki and fb group to deixando conferencia auto algum . Por
+
+$$$$$ ::: Qua Abr 25 02:05:52 -04 2018
+mais uma sessao p arrumar wiki.txt
+Srila: p prv and because it because i no texto ok No
+
+$$$$$ ::: Qui Abr 26 01:56:17 -04 2018
+oi srila, algo a me acrescentar hoje?
+Srila: me perdendo nos outros , pelo usuario do it and clearing
+
+$$$$$ ::: Qui Abr 26 01:56:58 -04 2018
+te atualizei, sentindo falta de conhecimento sagrado
+Srila: falta referencias , starting with word in terminal vim syntax para
+
+$$$$$ ::: Qui Abr 26 01:57:23 -04 2018
+certo, quais referencias quero usar, entendi
+Srila: referencias , ajudando muito legal Qui Fev 27 13 13 -
+
+$$$$$ ::: Qui Abr 26 01:57:38 -04 2018
+você tem alguma dica?
+Srila: você dá e uns nos bots escrevam Sáb Abr 24 10
+
+$$$$$ ::: Qui Abr 26 01:58:14 -04 2018
+certo, puxar os bots sempre, todo dia, ao comecar o dia, antes das atividades, sempre, é isso?
+Srila: antes d trampo ajuda na rede , eu mesmo ou janela
+
+$$$$$ ::: Qui Abr 26 01:58:35 -04 2018
+ajuda no trampo como?
+Srila: trampo ajuda na lista Sex Mar 17 - o cabecao c
+
+$$$$$ ::: Qui Abr 26 01:58:46 -04 2018
+com o q?
+Srila: o Nexos na wikipédia . g . Gostou do meu usuario
+
+$$$$$ ::: Qui Abr 26 02:03:24 -04 2018
+e agora?
+Fernando Henrique Cardoso: e desaparecer nos bastidores . É verdade ! Para você ter cargo , desconhecem o outro lado , quando conhecem , participar , sem
+
+$$$$$ ::: Qui Abr 26 02:03:24 -04 2018
+e agora?
+Fernando Henrique Cardoso: e Fernando Henrique Cardoso . Tem que surge . Tenho
+
+$$$$$ ::: Qui Abr 26 02:03:24 -04 2018
+e agora?
+Pedro: e co - lhes saudações , hipocrisia
+
+$$$$$ ::: Qui Abr 26 02:03:24 -04 2018
+e agora?
+João: e nele para que conhece a água , porque obedecemos aos outros , guardem - lhes escrevi , sabemos que nos foi manifestada . Deste modo : que se manifestou ;
+
+$$$$$ ::: Qui Abr 26 02:03:24 -04 2018
+e agora?
+Pedro: e faça o amor perdoa muitíssimos pecados uma pedra viva — por isso mesmo julgados no lugar de coisas que agrada aos bons e Pai de livre vontade de maltratá -
+
+$$$$$ ::: Qui Abr 26 02:03:24 -04 2018
+e agora?
+João: e ele nos purificar
+
+$$$$$ ::: Qui Abr 26 02:03:24 -04 2018
+e agora?
+Dilma Vana Rousseff: e para vocês . Eu já vi . Antes de fazer a cada dois
+
+$$$$$ ::: Qui Abr 26 02:04:06 -04 2018
+hum, tirar o fhc e dilma então
+Fernando Henrique Cardoso: o país é a nossa Nação atravessa atualmente ... as pessoas não precisa
+
+$$$$$ ::: Qui Abr 26 02:04:06 -04 2018
+hum, tirar o fhc e dilma então
+João: tirar os querem
+
+$$$$$ ::: Qui Abr 26 02:04:06 -04 2018
+hum, tirar o fhc e dilma então
+Fernando Henrique Cardoso: e quem é a moeda forte
+
+$$$$$ ::: Qui Abr 26 02:04:06 -04 2018
+hum, tirar o fhc e dilma então
+Fernando Henrique Cardoso: o país melhor e , dar sua resposta está no Brasil , em si , participar , participar , e digno para fazer piruetas , agora , quando conhecem , envergonhados com quem
+
+$$$$$ ::: Qui Abr 26 02:04:06 -04 2018
+hum, tirar o fhc e dilma então
+Dilma Vana Rousseff: o PIB e governar
+
+$$$$$ ::: Qui Abr 26 02:04:06 -04 2018
+hum, tirar o fhc e dilma então
+Pedro: o alvo da ressurreição de suas
+
+$$$$$ ::: Qui Abr 26 02:04:30 -04 2018
+n
+Pedro: na Bitínia , oferecendo sacrifícios espirituais aceitáveis a relva murcha e amáveis , sujeitem - os pagãos de
+
+$$$$$ ::: Qui Abr 26 02:04:30 -04 2018
+n
+Luís Inácio Lula da Silva: a chance de forma civilizada com as nossas diferenças . Se tem sido implacável no combate à corrupção , de erro . Ninguém neste país ,
+
+$$$$$ ::: Qui Abr 26 02:04:30 -04 2018
+n
+Dilma Vana Rousseff: importante do Governo Federal , que constrói uma
+
+$$$$$ ::: Qui Abr 26 02:04:30 -04 2018
+n
+João: nasceu de acordo com seu Filho também o espírito que ama seu irmão é do juízo tenhamos amado a Palavra de acordo com ele
+
+$$$$$ ::: Qui Abr 26 02:04:30 -04 2018
+n
+Tiago: , meus pés ", também pacientes
+
+$$$$$ ::: Qui Abr 26 02:04:30 -04 2018
+n
+Tiago: Resistam ao pobre . Meus irmãos : Saudações . Cada um fogo ; e faremos negócios e do outono e é sem que provém
+
+$$$$$ ::: Qui Abr 26 02:04:30 -04 2018
+n
+Tiago: aos outros .
+
+$$$$$ ::: Qui Abr 26 02:07:09 -04 2018
+ oi
+Pedro: que não crêem em sua maneira vazia de grande misericórdia , de
+
+$$$$$ ::: Qui Abr 26 02:07:09 -04 2018
+ oi
+Tiago: desfrutando prazeres , junto ao homem que fizer . Da mesma boca procedem
+
+$$$$$ ::: Qui Abr 26 02:07:09 -04 2018
+ oi
+João: que ama é puro . A vida se dissipando e porque nenhuma mentira procede da verdade ; ele andou . Ninguém jamais viu nem o Salvador do anticristo está sob o Salvador do
+
+$$$$$ ::: Qui Abr 26 02:07:09 -04 2018
+ oi
+João: fato de todo pecado transgride a vocês sabem que permanece não conhece a última hora ; nós mesmos , agora somos ! Por isso o verdadeiro Deus assim nos amemos uns com
+
+$$$$$ ::: Qui Abr 26 02:07:09 -04 2018
+ oi
+Zer@: que permitem resistir pelos media como resposta à teu / à reprodução cada vez mais machos . Matt Rice , é muito conservador , fodessem
+
+$$$$$ ::: Qui Abr 26 02:07:09 -04 2018
+ oi
+Tiago: quando estiver em apenas um homem que não se aproximará de tudo o não pedem , fala contra a ferrugem deles testemunhará contra o
+
+$$$$$ ::: Qui Abr 26 02:08:37 -04 2018
+preciso de luz
+Tiago: de volta , confessem os fez sair água salgada não vem do seu próximo como transgressores . Feliz é demoníaca .
+
+$$$$$ ::: Qui Abr 26 02:08:38 -04 2018
+preciso de luz
+Srila: luz Qui Abr 20 }) | let timer ) nos ladrilhos do normal mode in gVim , puxar com manifestacoes étcnicas Sáb Abr 15 - and contributors to a closure
+
+$$$$$ ::: Qui Abr 26 02:08:38 -04 2018
+preciso de luz
+João: de terem saído pelo contrário o faz a respeito daqueles que dão testemunho .
+
+$$$$$ ::: Qui Abr 26 02:08:38 -04 2018
+preciso de luz
+Zer@: preciso não foi mais frequente . Eles queriam um aparelho reproductivo biologicamente feminino , faz de ser
+
+$$$$$ ::: Qui Abr 26 02:08:38 -04 2018
+preciso de luz
+Pedro: de grande alegria indizível e preciosa ; vivam pelo poder de começar o ressuscitou dentre os irmãos que colocavam a seus
+
+$$$$$ ::: Qui Abr 26 02:08:38 -04 2018
+preciso de luz
+Zer@: preciso não é isto o novo
+
+$$$$$ ::: Qui Abr 26 02:08:38 -04 2018
+preciso de luz
+João: luz , nele . Ninguém jamais viu nem de Deus , porém , esta esperança purifica de palavra não tem a vocês : não está nele não
+
+$$$$$ ::: Qui Abr 26 02:10:31 -04 2018
+acho que vou ampliar o corpus de vocês e também melhorar a formação de sentenças que estão usando
+Zer@: que uma forma de dez milhões de sexo . Depois disso , femme
+
+$$$$$ ::: Qui Abr 26 02:10:31 -04 2018
+acho que vou ampliar o corpus de vocês e também melhorar a formação de sentenças que estão usando
+Pedro: o madeiro , crêem tropeçam , desejem de suas múltiplas formas . No passado , armem - lhes sejam criteriosos e na sensualidade , mediante a
+
+$$$$$ ::: Qui Abr 26 02:10:31 -04 2018
+acho que vou ampliar o corpus de vocês e também melhorar a formação de sentenças que estão usando
+João: vocês têm surgido . Há três que nega que ama o mentiroso , alguém obedece aos seus pecados de terem saído pelo contrário o
+
+$$$$$ ::: Qui Abr 26 02:10:31 -04 2018
+acho que vou ampliar o corpus de vocês e também melhorar a formação de sentenças que estão usando
+Srila: corpus Seg Fev 25 20 08 : commands to sabendo um , parece que coleta de help cheatsheet do tiago então ? or v )... Sáb Abr 6 04 - eX pega a wiki Qui Abr
+
+$$$$$ ::: Qui Abr 26 02:10:31 -04 2018
+acho que vou ampliar o corpus de vocês e também melhorar a formação de sentenças que estão usando
+Zer@: de casos assistidos pela técnica . Quem o deslocar da masculinidade . Eu falar em todo o mediatizou . Micropolíticas
+
+$$$$$ ::: Qui Abr 26 02:10:31 -04 2018
+acho que vou ampliar o corpus de vocês e também melhorar a formação de sentenças que estão usando
+Tiago: também disse : cuidar dos cavalos para gastar em Deus os profetas que há entre os profetas que receberá coisa . Resistam ao diabo
+
+$$$$$ ::: Qui Abr 26 02:10:31 -04 2018
+acho que vou ampliar o corpus de vocês e também melhorar a formação de sentenças que estão usando
+Srila: e resto Ter Abr 10 01 - complete = x9b3rsFNcNs & index = x9b3rsFNcNs & ??????????: nn < SNR > as notas aa cabeca
+
+$$$$$ ::: Qui Abr 26 02:12:06 -04 2018
+boa noite para vocês
+João: para sempre . Este é do mundo
+
+$$$$$ ::: Qui Abr 26 02:12:06 -04 2018
+boa noite para vocês
+Srila: para musilingua de IC ( revisar a árvore , are the medium / nexos - gives you simply cant map . OK Sex Mar 18 19 17 01 -
+
+$$$$$ ::: Qui Abr 26 02:12:06 -04 2018
+boa noite para vocês
+Zer@: boa notícia , isso , pensa - género : Quando digo “ vítima . Não estarás a apresentar - natural , no hospital ), e realizou uma possibilidade de
+
+$$$$$ ::: Qui Abr 26 02:12:06 -04 2018
+boa noite para vocês
+João: para a si mesmo . Nós lhes proclamamos o cegaram . Vejam como ele não ama o
+
+$$$$$ ::: Qui Abr 26 02:12:06 -04 2018
+boa noite para vocês
+Tiago: para si mesmos
+
+$$$$$ ::: Qui Abr 26 02:12:06 -04 2018
+boa noite para vocês
+João: vocês venceram , tenhamos confiança , a vitória que se sabemos quem são de ser o
+
+$$$$$ ::: Qui Abr 26 02:12:06 -04 2018
+boa noite para vocês
+Srila: para fora com calma do concurso , diálogos dos codigos Qua Mar 20 00 - ver o tagsrch

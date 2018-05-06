@@ -1,0 +1,242 @@
+*wiki.txt*  A bare-Vim wiki, version 0.01a
+
+==============================================================================
+CONTENTS                                                            *wiki-index*
+                           *wiki*
+
+    1. Intro                                    |wiki-intro|
+        1.1. Bare-Vim wiki                      |prv-wiki|  |bare-vim-wiki|
+        1.2. Usage                              |wiki-usage| 
+             |wiki-usage-examples|
+        1.3. |wiki| help                          |wiki-helphelp|
+             |wiki-help-cheatsheet|  |wiki-cheatsheet|
+
+    2. Install                                  |wiki-install|
+             |wiki-install-recommended|  |wiki-install-Vimball|
+             |wiki-install-root|
+
+    3. Options, variables and general settings  |wiki-settings|
+                                                |wiki-options|
+             |prv_g:prv|  |wiki-leaders|  |prv_leader|  |prv_localleader| 
+             |wiki-hack-settings|
+
+    4. Mappings                                 |wiki-mappings|
+
+    5. Commands                                 |wiki-commands|
+             |wiki-main-commands|  |wiki-util-commands|
+
+    6. Functions                                |wiki-functions|
+             |wiki-implementation|
+
+    7. Files                                    |wiki-files|
+             |prv.vim|  |prv.txt|
+
+    8. Final words                              |wiki-final-words|
+        8.1. Advantages and drawbacks of |prv|     |wiki-compare|
+        8.2. Further work / Todo                |wiki-todo|
+        8.4. Disclaimer                         |wiki-disclaimer|
+        8.5. License                            |wiki-license|
+        8.6. Acknowledgements                   |wiki-ack|
+        8.7. Contact                            |wiki-contact|
+
+==============================================================================
+1. Intro                                                       *wiki-intro*
+
+Organizing notes of various kinds in not an obvious task. One might use
+Vimwiki or other plugins, but there are several drawback which |wiki| tries to
+deflect by making use of standard Vim facilities for navigating text files and
+tags.
+
+The |wiki| plugin follows the same self-transparency standards as |aa| and |PRV| in
+general: notes, articles, code, data, everything is public by default. Privacy
+is valued, and files to be encrypted, or not to be added to the |wiki| repository,
+are kept in (wiki/aux/wiki/)private/ directory.  See |wiki-files| and |wiki-privacy|
+
+------------------------------------------------------------------------------
+1.1. Bare-Vim wiki                                             *prv-wiki*
+                                                               *bare-vim-wiki*
+
+The |wiki| is designed as a 'bare-Vim wiki' (i.e. as a wiki built with standard
+Vim facilities), and should yield a very simple and functional system:
+* use Vim's standard tagging mechanisms.
+  Tags have to be extracted from the source files, and organized, in order to
+  enable the navigation of tags.  See |wiki-tags-navigation|
+* use Vim's standard file navigation mechanisms.  File navigation is always
+  enabled.  Beyond absolute and relative paths, one might enable directories
+  in 'path' for files to be searched for.  See |wiki-file-navigation|
+
+Long term goals are:
+* exploit deeply the concept of a "reactwiki": hypertexts with executable
+  code;
+* exploit deeply the concept of 'Vim as an aplication platform' (described in |calendar.vim|);
+* integrate with |aa| and the rest of |PRV|.  See e.g. |aa-related-plugins|
+
+Other characteristics:
+* |wiki| might be condensed in just a handful of standard Vim settings
+  with optional advanced functions;
+* it should be very friendly to making a collage of files to render, e.g. a
+  latex or HTML file (use pandoc? middleman? vimwiki?);
+* Git versioning;
+* optional integration: calendar.vim, gmail.vim.
+
+------------------------------------------------------------------------------
+1.2. Usage                                                        *wiki-usage*
+                                                         *wiki-usage-examples*
+
+The |wiki| usage may be summarized as:
+* The navigation of files.  See |wiki-files|, |wiki-file-navigation| and
+  |wiki-file-settings|
+* The navigation of tags.  See |wiki-tags|, |wiki-tag-navigation| and
+  |wiki-tag-settings|
+* Some mappings and commands.  See |wiki-mappings| and |wiki-commands|
+* A handful of settings.  See |wiki-settings|
+
+                                                                 *wiki-files*
+The |wiki| files (with notes) are in aux/wiki/ (directory added to 'path' by |wiki|):
+* Messages, in private/messages.wiki, marker M
+* TODO, in todo.wiki, marker T
+  - section Accomplishments, marker a (inside todo.wiki)
+* NOTEs, in blergh.wiki, marker N
+* Calendar, in diary/diary.wiki, marker C
+* Diary, also in diary/diary.wiki, marker D
+* Final, might be anywhere, current final organization of nexts tasks,
+  marker F
+
+                                                       *wiki-file-navigation*
+* use |gf|, |^Wf|, |:find|, |:sfind|, |:tabfind| etc (which other commands?), to follow pages i.e. entries (verbetes/termos para artigos e notas)
+* use directories in 'path' as wiki roots,  
+* use .wiki, .md and .markdown as extensions (and e.g. *.mwiki?)
+* use 'includeexpr' for further search when file is not found
+* write token or word with starting / or . if internal link intended,
+  but any word might be followed to the corresponding file.
+
+
+ 
+                                                        *wiki-tag-navigation*
+* list of directory patterns to make the tags file
+* keep 'tags' option with all the tags files generated
+  * only one? yes. see :h user_29 / ONE TAGS FILE
+  * generate many tags files for different projects/file trees? No, see above
+* use tnext, tselect to handle multiple matches of c-[
+* use c-t
+
+tags (help, wiki, source code)
+    - declared as :tag: or any other pure tag mode
+    - entailed by file structure (section, class, function, folding, etc)
+* file paths
+* generic text searches in file names (fuzzyfinder?) and contents (lgrep)
+
+See |tagsrch.txt|
+
+                                                       *wiki-file-settings*
+* set what are the file chars in option 'isf'
+* set the directories of the wikis in 'path'
+* add wiki and md as prefixes in option 'sua'
+* manage to link paths of wiki pages and of repository trees.
+  E.g. .py files use a specific &path, .vim files, other &path etc...
+* |Files| command of |fzf.vim| is pretty handy.
+
+Important for files:
+'isf'
+'isk'
+'isi'
+'wig'
+
+See 'path'
+
+                                                       *wiki-tag-settings*
+tags:
+'tag'
+
+(also: 'tagst')
+
+                                                       *wiki-settings*
+for display:
+'isp'
+'kp'
+
+Maybe relevant:
+'include'
+'includeexpr'
+'display'
+'key'
+'tsr'
+'vdir'
+'vi'
+'vif'
+
+'showcmd'
+'cmdheigh'
+'shortmess'
+'ruler'
+'mouse'
+'more'
+
+'nf'
+'nu'
+'rnu'
+'nuw'
+
+'ofu'
+
+                                                        *wiki-help-navigation*
+* reuse Vim's capabilities with help files and (parallel help files?) with
+  tags and searching (and what more?).
+
+
+                                                 *wiki-vimwiki-considerations*
+* Vimwiki ? standard setting suffice. VS help files VS bare markdown or Media wiki
+* If the markdown syntax chosen is Vimwiki syntax compatible, it will be possible
+  to convert the wiki to HTML with Vimwiki's routines.
+* Ok that Vim navigates through paths, tokens might be marked with standard OS notation
+  (e.g. ./myterm), and that most important files might be reached with
+  uppercase markers.
+* Vimwiki is still useful in the headings mappings, and manipulating lists.
+* Vimwiki tables are not used by me. Maybe I need to experiment with them.
+
+------------------------------------------------------------------------------
+1.3. |wiki| help                                             *wiki-helphelp*
+
+                                          *wiki-help-cheatsheet*
+
+                                          *wiki-cheatsheet*
+
+==============================================================================
+2. Install                                                       *wiki-install*
+
+
+                                                   *wiki-install-recommended*
+                                                   *wiki-install-Vimball*
+                                                   *wiki-install-root*
+
+
+==============================================================================
+3. Options, variables and general settings                  *wiki-settings*
+
+Within Vim design, uppercase letters are cross-files,
+and lowercase markers are for locations inside each file.
+
+                                                            *wiki-options*
+
+                                                            *wiki-concepts*
+modeline
+sandbox
+
+
+
+==============================================================================
+5. Commands                                                 *wiki-commands*
+
+
+
+==============================================================================
+5. TODO                                                 *wiki-todo*
+
+* collapse section titles and tags, make syntax collapse
+* make wiki ok:
+  - read about tags, take notes and define strategy
+  - read about file navigation, notes and strategy
+  - migrate all wiki notes and other notes to the framework
+
+
+ vim:ma:noro:tw=78:ts=8:ft=help:sua+=.txt:norl:sts=4:nu:rnu:sw=4:et:

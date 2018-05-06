@@ -1,0 +1,103 @@
+:ic:IC:CI:ci:
+diretorio p migrar os conteúdos de ic.
+
+= andamentos =
+Ambos em [[file:~/repos/concusos/ufabc/proj.pdf]]:
+* Integração de dados ligados à IC
+* Sistema de analítica audiovisual
+
+Aula sobre ie:
+../legacy/aulaIE.wiki
+
+Contexto da minha pesquisa com ic:
+../legacy/pesqIC.wiki
+
+== wikipédia ==
+Artigos pelos quais estou responsável
+* inferência bayesiana ib
+https://pt.wikipedia.org/wiki/Inferência_bayesiana
+* inteligência computacional icwp
+https://pt.wikipedia.org/wiki/Inteligência_computacional
+* computação cognitiva
+https://pt.wikipedia.org/wiki/Computação_cognitiva
+
+* sistemas difusos
+https://pt.wikipedia.org/wiki/Sistema_difuso_de_controle
+* computação evolucionária ? ce
+https://pt.wikipedia.org/wiki/Computação_evolucionária
+* inteligência de enxame
+https://pt.wikipedia.org/wiki/Swarm_intelligence
+
+* programação estruturada
+https://pt.wikipedia.org/wiki/Programa%C3%A7%C3%A3o_estruturada
+* programação orientada ao objeto
+https://pt.wikipedia.org/wiki/Orienta%C3%A7%C3%A3o_a_objetos
+* estrutura de dados
+https://pt.wikipedia.org/wiki/Estrutura_de_dados
+
+por fazer
+* redes neurais rn
+* big data
+* internet das coisas
+* teoria do aprendizado
+* aprendizado de máquina
+* soft computing [[sc]]
+
+notas para passar a limpo:
+* probabilidade
+* lógica fuzzy
+
+
+== código ==
+:todo: migrar caminhos/paths para cá
+
+
+=== inteliência meta-universal ===
+Com algoritmo, solta no PyPI.
+Descrito no :h bot
+
+inteligencia mitologica
+estelar
+(meta-)universal é a mais geral,
+
+=== Pacotes no PyPI ===
+ACO
+PSO
+etc
+todos fazem parte do pacote
+natural computing
+utilizam o
+IC, que são rotinas em baixo nível
+
+
+= tópicos principais =
+a) Programação estruturada e orientada a objeto pe poo
+b) Estruturas de Dados ed
+c) Métodos de Aprendizagem am [[ta]]
+d) Métodos Bayesianos para Aprendizado de Máquina ** ib
+e) Redes Neurais Artificiais rn
+f) sistemas fuzzy  fuzzy
+g) computacao evolutiva  ce
+h) Inteligência de Enxame  ie
+i) Aplicação de métodos de Aprendizado de Máquina em tópicos emergentes: Big Data,
+Computação Cognitiva, Internet das Coisas.  te
+
+= bibliografia =
+CORMEN, T. H.; LEISERSON, C. E.; RIVEST, R. L.; STEIN, C. Algoritmos: teoria e prática.  2ª edição. Editora Campus, 2002.
+SEDGEWICK, R. Algorithms in C++, Parts 1 - 4: Fundamentals, Data Structure, Sorting, Searching, Addison-Wesley, 1998.
+RUSSEL, S.; ./NORVIG, P. Artificial Intelligence: A Modern Approach. 3ª edição. Pearson, 2009.
+HAYKIN, S. Neural Networks and Learning Machines. 3ª edição. Pearson, 2010. <-
+./SUGIYAMA, M. Introduction to Statistical Machine Learning. 1ª edição, Morgan Kaufmann, 2015. ** **
+./ROSS, R. J. Fuzzy Logic with Engineering Applications, 3ª edição. Wiley, 2010. **
+BÄCK, T.; FOGEL, D. B.; MICHALEWICZ, Z. Evolutionary Computation, vols. 1 e 2. CRC Press, 2000. **
+./CASTRO, L. N. Fundamentals of Natural Computing: Basic Concepts, Algorithms, and Applications, CRC Press, 2006. **
+SIMON, D. Evolutionary Optimization Algorithms. 1ª edição. Wiley, 2013. ** ** 
+
+= MOOCS =
+* https://courses.edx.org/courses/course-v1:UPValenciaX+ISC101.5x+1T2017/course/
+* https://courses.edx.org/courses/course-v1:UPValenciaX+ISC101.4x+1T2017/course/
+* https://courses.edx.org/courses/course-v1:UPValenciaX+ISC101.3x+1T2017/course/
+* https://courses.edx.org/courses/course-v1:UPValenciaX+ISC101.2x+1T2017/course/
+* https://courses.edx.org/courses/course-v1:UPValenciaX+ISC101.1x+1T2017/courseware/Unidad4/Unidad4Subsection5Sequential/?child=first
+* IA (edX acho)
+

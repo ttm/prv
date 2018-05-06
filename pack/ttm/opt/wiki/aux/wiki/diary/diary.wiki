@@ -1,0 +1,494 @@
+= Contents =
+  - [[#Calendário|Calendário]]
+    - [[#Calendário#compromissos próximos|compromissos próximos]]
+  - [[#Diary|Diary]]
+    - [[#Diary#2018|2018]]
+      - [[#Diary#2018#April|April]]
+      - [[#Diary#2018#March|March]]
+        - [[#Diary#2018#March#2018-03-15|2018-03-15]]
+        - [[#Diary#2018#March#2018-03-13|2018-03-13]]
+        - [[#Diary#2018#March#2018-03-05|2018-03-05]]
+      - [[#Diary#2018#February|February]]
+        - [[#Diary#2018#February#2018-02-22|2018-02-22]]
+        - [[#Diary#2018#February#2018-02-16|2018-02-16]]
+        - [[#Diary#2018#February#2018-02-15|2018-02-15]]
+        - [[#Diary#2018#February#2018-02-13|2018-02-13]]
+        - [[#Diary#2018#February#2018-02-10|2018-02-10]]
+        - [[#Diary#2018#February#2018-02-07|2018-02-07]]
+        - [[#Diary#2018#February#2018-02-06|2018-02-06]]
+        - [[#Diary#2018#February#[[2018-02-05]]|[[2018-02-05]]]]
+        - [[#Diary#2018#February#2018-02-04|2018-02-04]]
+        - [[#Diary#2018#February#2018-02-03|2018-02-03]]
+        - [[#Diary#2018#February#2018-02-02|2018-02-02]]
+        - [[#Diary#2018#February#2018-02-01|2018-02-01]]
+      - [[#Diary#2018#January|January]]
+        - [[#Diary#2018#January#2018-01-31|2018-01-31]]
+        - [[#Diary#2018#January#2018-01-29|2018-01-29]]
+        - [[#Diary#2018#January#2018-01-28|2018-01-28]]
+        - [[#Diary#2018#January#2018-01-27|2018-01-27]]
+        - [[#Diary#2018#January#2018-01-26|2018-01-26]]
+  - [[#related files|related files]]
+
+= Calendário =
+:calendar:calendário:Calendar:Calendário:
+Dom Abr 15 21:21:55 -03 2018
+diariamente:
+* [[../prv/prv|prv]]
+* artigo wikipedia IC
+* artigo wikipedia dataviz
+* retomando trabalho do Alan
+
+veja iscas
+
+== compromissos próximos ==
+Qui Abr 19 14:11:55 -03 2018
+viajar p campo grande antes de 24/04
+
+ir com thaís na caixa econômica
+
+responder Schramm sobre instrumentos
+
+9am dentista quinta  OK
+11am segunda
+(16)3371-5900, (16)99702-0908
+RODRIGO MAZO ORLANDI
+RUA SAO JOAQUIM, 1852- CENTRO, SAO CARLOS - SP CEP: 13561150
+http://cloud2.fisistemas.com.br:8090/pesquisa;s=335525
+
+14h Tópicos em Vis e Imagens, a Amanda (mestrado)
+Sala de Treinamento da Biblioteca, no 3o. piso. 
+
+apresentcao dinha, dia 29, shopping.
+banca Robson, dia 30.
+
+aula maio 11.
+
+revisão JBCS, maio 17
+
+= Diary =
+:Diary:diary:diário:Diário:
+
+== 2018 ==
+=== April ===
+Sáb Abr 21 14:04:25 -03 2018
+mandar msgs + cristina OK
+passadas notas de musilingua p Vim OK
+ouvido meia suíte OK
+Responsas até 18h amanhã:
+* andy 18h gig
+Responsas em Campao:
+* ler orgmode, baits
+* arrumar bots, wiki, realcolors, tokipona, aa e PRV em geral
+* artigo Alan
+* arrumar páginas IC e VD
+* mandar msg p Chu e p Cristina
+* algum outro artigo. Pode ser descrevendo PRV.
+* PRV 100%, + páginas wiki de VD e IC
+* retomada de leituras dos artigos q a Cristina mandou
+* ler quali do Robson
+* articulação estadia em sampa doa 30
+* articulação morar no di
+* escrever p banca de IC
+* artigo vírus
+
+Para dia 10, aula:
+* artigos sobre cor na wikipédia
+
+
+Sex Abr 20 14:15:16 -03 2018
+tfidf?
+
+vec spac model eh + transp
+
+TAR (jurídicos?, precedentes)
+relevância booleana ou fuzzy ou nota?
+
+aprendizado de reforço, online?
+
+oráculo?
+
+antonimo, meronimia, holonimia, hieronimos.
+
+sinonimos escopo
+contexto restricao
+
+
+biofonia
+geofonia
+antrofonia
+tecnofonia
+
+silhueta eh uma medida de distance inter-classes?
+e segregação?
+
+autoencoder
+
+redes neurais n necessariamente trabalham com classes,
+fazerm e.g. regressao e clusterizacao
+
+Seg Abr 16 00:58:03 -03 2018
+sessao sobre prv e wiki :done:
+sessao p arrumar wiki de vez. Ideal:
+* adicionar tudo nos arquivos corretos, subir no git
+* ver tagsrch
+* sistematizar bare-vim wiki com ou sem vimwiki
+
+:premio: se ficar 100% os itens acima,
+mais uma sessao sobre prv.
+
+:note: change colors every [[aa]] session.
+
+:todo: make mapping for tagsrch in help files, wiki, current tree, update tags, etc
+
+Seg Abr 16 06:17:18 -03 2018
+feitas algumas sessoes de aa, terminado de passar a limpo wiki de ic p wiki prv
+
+
+=== March ===
+==== 2018-03-15 ====
+* palestra do Marcos da dotlib (livro fuzzy)
+  14:00 – 15:30
+  Palestra: "Artigos Científicos – Dicas e Sugestões"
+  Palestrante: Marcos Criado (DotLib)
+  Sorteio do Tablet para os participantes presentes
+  Local: Anfiteatro Jorge Caron
+
+==== 2018-03-13 ====
+ic/ed
+
+==== 2018-03-05 ====
+* fazer a prova sobre programacao estruturada e orientada a objetos
+
+=== February ===
+==== 2018-02-22 ====
+IA Helder:
+* Organizar nomenclatura de IA
+* IA ou aprendizado de máquina (IA envolve mais coisas, e.g.
+  ontologia)
+* pattern theory do mumford
+* Vim IA (usar comandos do Vim para aprendizado)
+* Estudar a capacidade de aprendizado do sistema mundo tempo-espaco,
+  pessoas perambulantes, ideias (e talvez coisas). Inteligência de
+  enxame.
+* Tenho na manga uma porcao de tecnicas (ACO, PSO, redes neurais,
+  metodos estatisticos tradicionais.….) p aplicar em qqr prob
+* Uso da distancia estatistica de KS p reconhecimento de padrões:
+  * Melhorar/arrumar a implementação.
+  * Fazer implementações em outras linguagens e serviços (algorithmia
+    etc)
+  * Estudar o uso da medida para reconhecimento de padroes, em
+    especial separa classes de amostras não ordenadas.
+* cor para syntax highlighting: achando as cores da pessoa, criando
+  variacoes a partir de alguma, etc etc.
+* Hubs, intermediarios e periféricos com teoria fuzzy… algorithmia etc
+  etc.
+  
+* 1 semana. Fazer cronograma dia-a-dia, comecar pelos documentos.
+* qual o nivel de profundidade que você espera do trabalho? E que a
+  sua banca espera? Quem é a banca?
+
+
+===================
+* procure novos prazeres, já hoje comece a elencar eles aqui ou em uma
+  página própria
+* eutimia é sinal de mente muito organizada, em que o processamento se
+  dá em vias bem definidas, portanto a mente não fica tão estimulada.
+* Estimule-se com prazeres diversos, como ler algo no inicio do dia,
+  encontrar pessoas para comer, ficar um pouco no sol enquanto está
+  fresco, fazer planos para o futuro, labutar no calendario, absorver
+  e produzir arte, .
+
+==== 2018-02-16 ====
+Deixar aa no vim ok
+terminar artigo
+voltar a fazer as leituras seriamente
+fazer pagina para anotar comandos uteis (e.g. Split ec globpath
+Split echo globpath(&rtp, "plugin/vimwiki.vim")
+
+==== 2018-02-15 ====
+sessao p voltar e finalizar o artigo
+comecarah 3h30, vai ateh 5h30
+
+1h desatar anotacoes todas, upload para ttm/vim das notas wiki,
+atualizar vimrc tb, retomar notas dos videos, aproveitar o scripting,
+andar com prv neste sentido talvez.
+
+1h finalizar sessao de resultados do Vim
+
+Subir no arXiv
+ver revista p mandar.
+soltar na lista
+
+==== 2018-02-13 ====
+for the results in vim article:
+- usage manners:
+  * vimwiki with shortcuts to files such as todo and achievements
+  * Leave loeader and local leader to plugins. shortcuts with alt or <c-\>, except when extending some plugin abilities.
+  * tokipona vim plugin and python package
+  * realcolors vim plugin
+  * the outline
+  * potential enhancements
+
+==== 2018-02-10 ====
+Desejos:
+* leitura final e envio dos artigos do vim e toki pona 2h **
+  * artigo do vi primeiro
+* leitura ufabc 2h
+* retomada realcolors 2h
+* rascunhar WF-S
+* rascunhar escrito sobre SH
+* rasc escrito sobre set de erdos
+  * fazer plugin python e colocar no algorithmia
+  * comecar pelo plugin e colocando no algorithmia, depois escrever artigo explicando ele.
+* fazer algorithmia e plugin p dist derivada do teste de KS
+
+:Feitos:
+* sessao 2h para digerir o primeiro cap de fuzzї
+* revisado artigo. Falta secao de resultados.
+* Solto plugin para toki pona:
+https://vim.sourceforge.io/scripts/script.php?script_id=5656
+
+
+
+# Prova UFABC
+um teste estatístico bem aplicado, em que consigo um
+resultado simples e importante.
+
+TODO:
+* Fuzzy set description of hubs, peripherals and intermediaries
+(a vertex might bt 30% peripheral and 70% intermediary or whatnot).
+* Publicar o pacote toki pona do python <--
+* 
+==== 2018-02-07 ====
+* recuperar o ritmo de leituras
+* decidir onde œ como ficar de que jeito
+* viajar?
+* 
+
+:musica:
+https://youtu.be/HOOhUDRFmEM?t=28m21s
+https://youtu.be/HOOhUDRFmEM?t=53m57s - misturar com o áudiro audio da love
+
+==== 2018-02-06 ====
+MASSA:
+só usei osciladores de altura e loudness,
+e єnvoltórias de volume e frequência, dos mais simples,
+e.g. Fade out e envoltória ADSR lineares.
+
+==== [[2018-02-05]] ====
+
+==== 2018-02-04 ====
+hoje é o primeiro dia das leituras.
+A meta é ao menos 150 páginas.
+Como é o primeiro dia, fica um pouco menos simples
+de organizar e pegar o ritmo.
+
+O livros eleitos para serem lidos hoje:
+* SU
+* CA
+* H
+* RU
+
+
+Se eu andar muito bem, comecar um dos livros
+extra ou a codar, revisar, etc.
+
+Previsão: 10h concentrado, 15 pag/h
+
+==== 2018-02-03 ====
+* Ler texto da Josefina
+* 3am: organizar sessao
+* 3h30 começa: passando anotações sobre stevens e weber-fechner para latex
+* 5h30 termina. Avalia quando e se fazer a próxima sessão
+
+6h30 planeja
+
+7h comeca
+9h termina. Reavalia
+
+10h planeja
+10h30 comeca
+12h30 termina
+
+===========
+Conversa com a Thata amanhã de tarde, 16-17h
+Marco hoje de noite perguntando sobre amanha de tarde,
+se ela estará em casa.
+
+TODO:
+Ideal hoje seria conseguir desovar os escritos e tarefas de ontem.
+Iniciar os estudos UFABC
+
+
+
+
+============
+
+PARA SEMPRE:
+:habitos:habits:
+* Preciso limpar a cabeça e os hábitos.
+Como não descanso se não estiver chapando ou pensando besteira,
+preciso introduzir meditação nos intervalos entre as sessoes de trabalho.
+  * Gasto muito tempo todos os dias fazendo banza e indo fumar e pensando besteira:
+    * coisa à toa; ou pior
+    * desavenças atuais, passadas ou imaginadas.
+  * Algumas vezes fico limpo de mente, mas não sempre, principalmente sem cigarro e banza pq
+  
+
+==== 2018-02-02 ====
+TODO:
+fazer [[calendário]] para estudo até o concurso.
+* Uma semana antes tudo pronto.
+* O mínimo a ser alcançado é:
+  - Leitura de todos os livros
+  - uma prova escrita sobre cada tópico
+* O ideal é ter:
+  - Visto também 2 moocs / tópico
+  - Implementações das teorias nos livros:
+    * Algoritmos copiados, tidos como cânone dados pelos livros.
+    * Variações
+    * Toolboxes/packages that result from them
+  - Artigos sobre os assuntos do concurso
+
+TODO:
+* Fazer escrito com unificacao weber Fechner stevens.
+jogar no arXiv. (1)
+* Fazer escrito com consideracoes sobre SH,
+mandar p Poco e Cristina.
+Jogar no arXiv. (2)
+* Fazer escrito sobre setorializacao de erdos com pacote no PyPI
+e código no algorithmia. (3)
+* Subir rotinas da massa/music no algorythmia. (4)
+
+TODO:
+Arrumar minimamente as coisas:
+* Artigo TP
+* Vimwiki com raiz no Dropbox
+Escrever p:
+* paco
+* pedro
+Retomar o que der: ???
+* ml
+* massa
+* color
+* prv
+
+
+Questions
+* How to cope with demands from ICMC and articles to submit?
+
+
+===============
+* Colors
+  - adicionar color picker (https://github.com/KabbAmine/vCoolor.vim sent by v1z)
+  - anotar que tem varredura elegante, integrada, etc...
+  - 
+
+prestar atenção no coronário. No crânio, face,
+se prestar atenção irrigæ de sangue.
+Mantem a atencao no olho bastante para fazer.
+Concentra nas maos, olhos e coronário para escrever.
+
+
+
+
+
+==== 2018-02-01 ====
+finish presentation for paco
+go to presentation 9h30.
+present 14h30---
+do whatever I fell like.
+  ~/.vim/vimrc
+  
+conversa com Nobu
+Qui Fev  1 12:12:43 -02 2018
+equacao de campo de Einstein (equacao de relatividade geral)
+solucao de Schwarzschild.
+
+../legacy/palestrasVICG
+
+=== January ===
+==== 2018-01-31 ====
+tarefas p agora:
+* ler texto da josefina
+* fazer apresentacao p amanha sobre pesquisa
+* retomar mass, perv, cor, ml
+
+==== 2018-01-29 ====
+* prv
+* vimwiki
+* mass
+  - decidido fechar somente com a meia suite, e deixar a outra metade como exercicio na massa
+* ml
+  - retomar hj
+  - Seg Jan 29 20:40:13 -02 2018
+  - consegui somente adiantar sobre a massa e outras coisas menores.
+nao estou lendo o que preciso
+  - 
+* color
+
+Ter Jan 30 02:53:05 -02 2018
+organizacao de sessao 3am
+comeca 3h30 termina 5h30
+
+O intuito é ao menos terminar o cap10 de ml
+e usar o resto do tempo para retomar prv ou color
+
+terminada leitura do capitulo.
+Anotando.
+Sobrou 1h:
+Cogitando atualizar o pacote music logo depois.
+Ou atacar prv.
+Estou lentificado de cansado,
+o melhor eh dormir um pouco depois continuo.
+
+==== 2018-01-28 ====
+acordei 11am.
+Indo p sessao comecando 14h ou planejamento 14h.
+
+Terminando a massa, ficar com 2 divisões principais:
+* ml/ufabc
+  - Comecar outro livro. Manter o ritmo de 2h/dia
+* color,prv/dataviz
+  - SH
+  - TT5
+
+Hoje comecando arrumando a wiki,
+acabei adentrando planejamento
+da primeira sessao no prv.
+A ideia era andar com a massa.
+
+Fiz uma sessao de quase 3h sobre vim, arrumando
+shortcuts p navegar janelas e tabs
+
+vimwiki
+
+TODO
+- Assistir:
+  - https://www.youtube.com/watch?v=ayc_qpB-93o&list=LLKkgHPpphGJdUCFpCrkyaMA&index=30 DONE
+
+==== 2018-01-27 ====
+ok, this is nice.
+First file for the diary of the day.
+
+Now my notes might be united!
+
+What was done today about:
+* [[../prv|prv]]
+* mass
+* colors
+* ml
+
+==== 2018-01-26 ====
+Did not have a vimwiki yet :: a TTM note!
+
+tests with vimwiki:
+[
+This is a special [[vimwiki]] file:
+a diary index, reached though a mapping.
+What else?
+ok *vimwiki_<Leader>w<Leader>i*
+                      [trash]]
+
+= related files =
+Always check [[/todo]], [[/daily/tasks]] and [[/weekly/wtasks]].

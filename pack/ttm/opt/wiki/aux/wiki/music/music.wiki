@@ -1,0 +1,19 @@
+:musica:music:
+
+= artigos de referência =
+https://en.wikipedia.org/wiki/Evolutionary_musicology#The_Musilanguage_hypothesis
+
+
+= mass =
+./mass
+
+
+
+
+
+== candidatos a verbetes ==
+* [[história da música brasileira]] e [[música brasileira contemporânea]], [[música contemporânea]]
+* [[técnicas composicionais]], [[técnicas da música contemporânea]]
+* [[música computacional]]
+
+

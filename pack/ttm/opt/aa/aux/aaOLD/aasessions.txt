@@ -1,0 +1,396 @@
+ended: Qua Fev 21 03:04:27 -03 2018
+
+
+ended: Qua Fev 21 03:09:00 -03 2018
+
+
+
+
+started: Qua Fev 21 06:21:33 -03 2018
+dur: .2
+slots: 3
+
+
+started: Qua Fev 21 06:24:41 -03 2018
+dur: .3
+slots: 1
+
+
+started: Qua Fev 21 06:47:59 -03 2018
+dur: .3
+slots: 1
+
+
+started: Qua Fev 21 09:10:58 -03 2018
+dur: 15
+slots: 8
+
+
+started: Qua Fev 21 09:11:18 -03 2018
+dur: 15
+slots: 8
+
+
+started: Qua Fev 21 10:02:52 -03 2018
+dur: 15
+slots: 8
+
+
+started: Qua Fev 21 10:02:56 -03 2018
+dur: 15
+slots: 8
+
+
+started: Qua Fev 21 10:06:31 -03 2018
+dur: .1
+slots: 3
+
+
+started: Qua Fev 21 10:13:40 -03 2018
+dur: .1
+slots: 3
+ended: Qua Fev 21 10:15:50 -03 2018
+
+
+
+
+started: Qua Fev 21 10:16:24 -03 2018
+dur: .2
+slots: 3
+
+
+started: Qua Fev 21 10:20:35 -03 2018
+dur: 15
+slots: 8
+
+
+started: Qua Fev 21 10:25:05 -03 2018
+dur: 15
+slots: 8
+
+
+started: Qua Fev 21 10:25:28 -03 2018
+dur: 0.2
+slots: 8
+
+
+started: Qua Fev 21 10:25:42 -03 2018
+dur: 15
+slots: 8
+
+
+started: Qua Fev 21 10:27:54 -03 2018
+dur: 15
+slots: 8
+
+
+started: Qua Fev 21 10:28:10 -03 2018
+dur: 15
+slots: 8
+
+
+started: Qua Fev 21 10:31:13 -03 2018
+dur: 15
+slots: 8
+
+
+started: Qua Fev 21 10:31:30 -03 2018
+dur: 0.2
+slots: 8
+
+
+started: Qua Fev 21 10:34:12 -03 2018
+dur: 0.2
+slots: 8
+
+
+started: Qua Fev 21 10:36:37 -03 2018
+dur: 0.2
+slots: 8
+
+
+started: Qua Fev 21 10:37:16 -03 2018
+dur: 0.2
+slots: 8
+
+
+started: Qua Fev 21 10:48:32 -03 2018
+dur: 0.2
+slots: 8
+
+
+started: Qua Fev 21 11:04:09 -03 2018
+dur: 0.2
+slots: 8
+
+
+started: Qua Fev 21 11:04:46 -03 2018
+dur: 0.2
+slots: 8
+
+
+started: Qua Fev 21 11:05:02 -03 2018
+dur: 0.2
+slots: 8
+
+
+started: Qua Fev 21 11:06:26 -03 2018
+dur: 0.2
+slots: 8
+
+
+started: Qua Fev 21 11:12:09 -03 2018
+dur: 0.2
+slots: 8
+
+
+started: Qua Fev 21 11:15:47 -03 2018
+dur: 0.2
+slots: 8
+
+
+started: Qua Fev 21 11:16:07 -03 2018
+dur: 0.1
+slots: 8
+ended: Qua Fev 21 11:19:48 -03 2018
+
+
+
+
+started: Qua Fev 21 11:20:46 -03 2018
+dur: 0.33
+slots: 5
+
+
+started: Qua Fev 21 11:22:16 -03 2018
+dur: 0.33
+slots: 5
+
+
+started: Qua Fev 21 11:22:25 -03 2018
+dur: 0.33
+slots: 5
+
+
+started: Qua Fev 21 11:22:31 -03 2018
+dur: 0.33
+slots: 5
+
+
+started: Qua Fev 21 11:22:38 -03 2018
+dur: 0.33
+slots: 5
+
+
+started: Qua Fev 21 11:22:54 -03 2018
+dur: 0.33
+slots: 5
+
+
+started: Qua Fev 21 11:23:03 -03 2018
+dur: 0.33
+slots: 5
+
+
+started: Qua Fev 21 11:23:09 -03 2018
+dur: 0.33
+slots: 5
+
+
+started: Qua Fev 21 11:23:13 -03 2018
+dur: 0.33
+slots: 5
+
+
+started: Qua Fev 21 11:23:20 -03 2018
+dur: 0.33
+slots: 5
+
+
+started: Qua Fev 21 11:26:57 -03 2018
+dur: 0.33
+slots: 5
+
+
+started: Qua Fev 21 11:28:00 -03 2018
+dur: 0.33
+slots: 5
+
+
+started: Qua Fev 21 11:29:31 -03 2018
+dur: 0.33
+slots: 5
+
+
+started: Qua Fev 21 11:30:20 -03 2018
+dur: 0.33
+slots: 5
+ended: Qua Fev 21 11:32:55 -03 2018
+
+
+
+
+started: Qua Fev 21 11:38:36 -03 2018
+dur: 0.33
+slots: 5
+
+
+started: Qua Fev 21 11:38:52 -03 2018
+dur: 0.33
+slots: 5
+
+
+started: Qua Fev 21 11:39:27 -03 2018
+dur: 0.33
+slots: 5
+
+
+started: Qua Fev 21 11:39:58 -03 2018
+dur: 0.33
+slots: 5
+
+
+started: Qua Fev 21 11:40:21 -03 2018
+dur: 0.33
+slots: 5
+
+
+started: Qua Fev 21 11:41:47 -03 2018
+dur: 0.33
+slots: 5
+ended: Qua Fev 21 11:52:42 -03 2018
+
+
+
+
+started: Qua Fev 21 11:53:30 -03 2018
+dur: 0.33
+slots: 5
+
+
+started: Qua Fev 21 12:00:34 -03 2018
+dur: 0.4
+slots: 5
+ended: Qua Fev 21 12:04:12 -03 2018
+
+
+
+
+started: Qua Fev 21 12:04:19 -03 2018
+dur: 0.4
+slots: 5
+ended: Qua Fev 21 12:08:14 -03 2018
+
+
+
+
+started: Qua Fev 21 12:08:20 -03 2018
+dur: 0.4
+slots: 5
+
+
+started: Qua Fev 21 12:08:40 -03 2018
+dur: 0.4
+slots: 5
+
+
+started: Qua Fev 21 12:29:49 -03 2018
+dur: 0.2
+slots: 1
+
+
+started: Qua Fev 21 12:30:10 -03 2018
+dur: 0.2
+slots: 1
+
+
+started: Qua Fev 21 12:30:52 -03 2018
+dur: 0.15
+slots: 2
+
+
+started: Qua Fev 21 12:31:06 -03 2018
+dur: 0.15
+slots: 2
+ended: Qua Fev 21 12:31:47 -03 2018
+
+
+
+
+started: Qua Fev 21 12:32:46 -03 2018
+dur: 0.2
+slots: 2
+ended: Qua Fev 21 12:33:14 -03 2018
+
+
+
+
+started: Qua Fev 21 12:33:50 -03 2018
+dur: 15.0
+slots: 8
+
+
+started: Qua Fev 21 14:06:33 -03 2018
+dur: 15.0
+slots: 8
+
+
+started: Qua Fev 21 14:12:28 -03 2018
+dur: 15.0
+slots: 8
+
+
+started: Qua Fev 21 14:13:56 -03 2018
+dur: 15.0
+slots: 8
+
+
+started: Qua Fev 21 14:17:22 -03 2018
+dur: 15.0
+slots: 8
+
+
+started: Qua Fev 21 15:05:27 -03 2018
+dur: 15.0
+slots: 8
+
+
+started: Qua Fev 21 15:17:48 -03 2018
+dur: 15.0
+slots: 8
+
+
+started: Qua Fev 21 15:25:50 -03 2018
+dur: 15.0
+slots: 8
+
+
+started: Qua Fev 21 16:30:59 -03 2018
+dur: 15.0
+slots: 8
+
+
+started: Qua Fev 21 16:45:44 -03 2018
+dur: 15.0
+slots: 8
+
+
+started: Qua Fev 21 16:52:19 -03 2018
+dur: 15.0
+slots: 8
+
+
+started: Qui Fev 22 05:49:24 -03 2018
+dur: 15.0
+slots: 8
+ended: Qui Fev 22 07:50:31 -03 2018
+
+
+
+
+started: Qui Fev 22 08:49:19 -03 2018
+dur: 15.0
+slots: 8
+ended: Qui Fev 22 10:55:28 -03 2018
+
+

@@ -1,0 +1,20 @@
+:te:tópico-emergente:et:emergent-topic:
+:bd:big-data:cc:iot:
+
+colocar tudo no artigo de big data da wikipedia?
+Ou de computacao cognitiva?
+IoT?
+
+
+== mais ==
+robust inteligence ou computing
+wavelets para rna
+
+== questões mais urgentes ==
+* Que métodos fazem parte da CE?
+* E da IE?
+* Redes neurais pode ser centrada no neurônio e generalizada com as funções de transferências e arquiteturas em rede?
+  * Analizando redes neurais. Artigo sobre Wavelets
+* Até que ponto vou aproveitar quais artigos?
+* 
+

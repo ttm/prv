@@ -1,0 +1,14 @@
+== Página para anotar ocorrências do acrônimo AA ==
+
+=== Em IC (IB, CN, LD) ===
+AA é aplicação e avaliação **
+AA é algoritmo aleatório
+AA é algoritmo de anelamento (simulated anealling)
+
+=== Em PE e POO ===
+aplicação e avaliação também?
+
+=== Em música ===
+
+
+

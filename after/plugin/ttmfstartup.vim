@@ -6,15 +6,17 @@ pa prv
 pa realcolors
 pa aa
 pa bot
+pa wiki
 " pa calendar.vim
+" what are these for? TTM: {{{
 let g:nv_search_paths = ['~/tempo/mwiki', '~/writing', '~/code', 'docs.md' , './notes.md']
 let g:nv_search_paths = ['~/.vim/pack/ttm/opt/prv/aux/vimwiki', '~/tempo/mwiki']
 let g:nv_default_extension = '.wiki'
+"}}}
 pa vimwiki
 pa fzf
 pa fzf.vim
 pa notational-fzf-vim
-pa vimwiki
 " pa tokipona
 " pa gmail.vim
 
@@ -25,7 +27,6 @@ cal CommandColorSchemes()
 cal ApplyCS(g:ccs.green1, 'c')
 cal ApplyCS(g:ccs.yellow1, 'c')
 cal ApplyCS(g:ccs.green2, 'c')
-
 " usar red1, 2, 3 para priorizacao de alerta p detalhes
 " blue 1, 2, 3 p criatividade e ficar acordado (acordado sonhando)
 " passive pink, branco, preto, outras cores como especiais ou paradigmaticas

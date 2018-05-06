@@ -1,0 +1,198 @@
+:calendario-ufabc:calendario:calendário:
+
+= contexto =
+Por ocasião de um concurso para professor de ic
+na UFABC, escrevi o seguinte calendário idealizado.
+
+Há notas úteis de literatura e projeto de processo.
+
+
+= calendário como encontrei em Seg Abr 16 01:20:16 -03 2018 =
+
+agora : Sex Fev  2 22:48:04 -02 2018
+
+meta : desossar o concurso ufabc
+
+data do concurso : 21-23/Mar
+
+hoje : calendário e outras coisas
+
+data inicial : 04/03
+
+data final : 14/03 (14 = 21 - 7)
+
+período = (28 - 4) + 14 = 38 = 5 semanas e 3 dias
+
+========
+meta secundária: ao menos 2 livros ou tópicos / semana
++ 1 dentre codar algo, aprofundar por conta, estudar em python, etc.
+Isso equivale praticamente a mesma coisa que 1 livro / 2 dias.
+
+meta secundária: rascunhar defesa d projeto de pesquisa e memorial.
+
+meta secundária: dar um tapa nas wikipedias em ptbr nos assuntos do concurso
+
+*meta bônus*: dar conta do tsallis e pattern theory tb.
+
+OBS: últimos 7 dias é para caprichar e para caso algo dê errado,
+aprofundamentos, publicacoes, etc, etc.
+
+OBS: nem todos os itens para a prova correspondem a livros.
+Atentar a isso e tirar tempo para procurar sobre o assunto (e.g. IoT)
+em videos, wikipedia etc.
+
+livros, itens etc em:
+~/repos/concusos/ufabc/notas.md
+
+ebooks em:
+~/Documents/ebooks/ufabc/
+
+são 9 itens.
+são 9 livros.
+
+a estratégia é ler os livros mais interessantes:
+RU, H, SU, RO, BA, CA, SI (7 livros)
++ *tsallis*
+  * 4 partes
+  * 8 caps
+  * 326 = 33 h = 4 dias ou 3.
++ *pattern theory*
+  * 6 chap
+  * 379 pg
+  * PM = 37h = 4 dias ou 3.
++ algum livro sobre Informação, teoria da informação, eng da informação, informação na física e na computação
+
+Artigos da wikipedia e outras páginas:
+* https://en.wikipedia.org/wiki/Deep_learning
+* SVM, SVD 
+
+========
+tamanho de cada um:
+* SU:
+  * 5 parts
+  * 39 ch
+  * 482 ‐ 113 = 370 pg
+  * PM = 37h = 4 dias
+* CA:
+  * three parts
+  * 11 ch
+  * 545 pg
+  * PM = 545/10 = 55 hr = 5 dias e 1/2
+* RO:
+  * pegar com editora
+  * 17 ch
+  * 550 pg
+  * PM = 55h = 5 dias e meio
+* RU:
+  * 7 parts
+  * 27 ch
+  * 1050 pg
+  * PM = 105 h = 10 dias e meio
+* H:
+  * 15 ch
+  * 842 pg
+  * previsao minima = 842 /10 = 84 horas = 8 dias e 1/2
+* BA:
+  * https://www.amazon.com/Evolutionary-Computation-Basic-Algorithms-Operators/dp/0750306645/ref=sr_1_8?s=books&ie=UTF8&qid=1517622732&sr=1-8&keywords=michalewicz v1 2000
+  * https://www.amazon.com/Evolutionary-Computation-David-B-Fogel/dp/B00891L2PE/ref=sr_1_26?s=books&ie=UTF8&qid=1517622623&sr=1-26&refinements=p_27%3ADavid+B.+Fogel, 2005
+  * candidato a substituto: Fundamentals of Computational Intelligence. NEURAL NETWORKS, FUZZY SYSTEMS, AND EVOLUTIONARY COMPUTATION:
+    * baixado
+  * outro candidato: Evolutionary computation: advanced algorithms and operators. Thomas Baeck, D.B Fogel, Z Michalewicz
+    * 2016
+    * baixado!
+  * outros:
+    * Evolutionary computation : techniques and applications. Babu, B. V.; Gujarathi, Ashish Mar
+    * Advances of Evolutionary Computation: Methods and Operators. Erik Cuevas, Margarita Arimatea Díaz Cortés, Diego Alberto Oliva Navarro
+    * Evolutionary Computation Techniques: A Comparative Perspective. Erik Cuevas, Valentín Osuna, Diego Oliva (auth.)
+      * baixado!, 2017
+* SI:
+  * Baixando
+  * Este e BA são sobre computação evolutiva
+
+===========
+
+Total de tempo de leitura:
+8.5 + 5.5 + 4 + 5.5 + 10.5 = 34 dias
+4 dias para leitura de computação evolutiva.
+
+Faltará, no mínimo:
+* Programação estruturada e orientada a objeto:
+  * 4 dias
+* Estruturas de Dados:
+  * 4 dias
+* Montar as provas escritas sobre cada um dos 9 temas:
+  * ao menos 9 dias para isso.
+* Levando em consideração estas necessidades:
+  * daria 30 dias para tudo sem contar a montagem de cada prova
+  * daria 29 dias para tudo sem contar prog obj e est dados:
+    * 29/9 = 3.6 dias para cada tópico
+  * dará 21 dias para tudo considerando obs + est d dados
+
+===========
+Metas:
+* 150 páginas lidas/dia:
+  * ou não dá tempo, pelas contas acima
+
+Rotina:
+* 10h leitura de material:
+  * 15 páginas / hora = 150 páginas / dia
+* sobram 6h.
+  * 3h revisando material
+  * 3h descansando e fazendo outras coisas:
+    * implementações
+    * artigos
+    * arte?
+    * color e dataviz
+    * prv e massa
+* 2h para acordar, banho, comer:
+  * tira do sono: dorme 6h
+* intercalar meditação entre as dedicações
+
+================
+previsoes:
+FEVEREIRO
+* 04 : inicio das leituras com SU
+* 06 : termino SU, implementações, busca de algs nos pacotes etc.
+* 07 : começo CA
+* 10 : termino CA. implementações, busca de algs nos pacotes
+* 11 : começo RO
+  (DOMINGO)
+* 14 : termino RO
+* 15 : comeco RU
+* 18
+  (DOMINGO)
+* 21 : termino RU
+* 22 : implementações de RU
+* 23 : comeco H
+* 25
+  (DOMINGO)
+* 28 : termino H
+
+MARÇO
+[falta a) comp e ot ev, b) prog ori obj e c) est de dados]
+[escrita das provas]
+[acaba 14]
+* 01 : comeco CE (comp ev)
+* 04 : termino CE
+  (DOMINGO)
+* 05 : comeco OOP
+       comeco escrita das provas e aulas
+* 08 : termino OOP
+* 09 : comeco ED (est d dados)
+* 11
+* (DOMINGO)
+* 12 : termino ES
+* 13 e 14 : finalmentes da escrita das provas
+            finalizo escrita das provas e aulas
+* 15 - 19 : arrumações finais antes da prova:
+  * apr proj de pesquisa (2 dias)
+  * defesa de memorial (2 dias):
+    * inclui os 30 comprovantes e lista deles
+  * material e demais documentação para levar documentação (1 dia)
+  * implementações finais e retoques na documentação (todos os dias)
+  * revisão e decoração das provas, revisão das aulas (todos os dias)
+* 18
+  (DOMINGO)
+* 20 : Viagem cedo para São Paulo ou Santo André.
+
+

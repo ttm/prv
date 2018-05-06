@@ -1,0 +1,116 @@
+:wiki:Wiki:
+= Contents =
+  - [[#note types|note types]]
+  - [[#baits|baits]]
+  - [[#conteúdos principais|conteúdos principais]]
+  - [[#My knowledge base|My knowledge base]]
+
+
+= note types = 
+:notes:note-types:
+Use uppercase markers for main files.
+Use lowercase markers for inside files.
+* Calendário, Calendar, calendar
+* Diary, diário
+* Notes, blergh
+* Todo
+* Wiki, wiki
+* ../../../aa/aux/aashouts.txt, AA shouts
+* tags usadas :todo: :note: :mass: etc
+
+
+= baits =
+:baits:iscas:
+* miles/lightyear stones
+* jogos c primo
+* parar de fumar
+* estudos mitológicos
+* Livros Mumford Tsallis
+  - disponibilizar implementacoes: github, pypi, algorithmia
+  - gravar videos
+* Implementacoes algorithmia, github, pypi:
+  - setorializacao de erdos
+  - mass
+* Artigos por enviar
+* datavis
+* Wikipedia, revisar artigos, passar notas, fazer novos artigos (de dataviz principalmente)
+* explorar IC, bots, PRV
+  - enxame de almas
+  - bots com melhores parametrizacoes da fala:
+    * com o baseline
+    * utilizando estruturas morfossintaticas (POS tagging).
+    * com deeplearning (tensorflow Seq2Seq):
+      - https://adeshpande3.github.io/How-I-Used-Deep-Learning-to-Train-a-Chatbot-to-Talk-Like-Me
+    * conversa como aprendido em chat de bate papo mas com vocabulário próprio,
+    * digressao apenas pega as ultimas mensagens e monta com o corpus proprio
+  - formalizar paralelismo entre cultura da pessoa e treinamento.
+  - comando para bot mostrar a sua rede de palavras adjacentes
+* rever notas de ideias p artigos
+  - retomar escrita e integracao com blog ttm
+* Acompanhar Nexos
+  - fazer bots com autoras
+* Aproveitar torre na rede com URL pública
+* retomar experimentos em estruturas sociais, percola mundo etc
+
+= conteúdos principais =
+ic complexidade
+prv [[prv/|vim]] [[prv/python]] [[prv/rdf]]
+[[massa/massa]]
+[[audiovis/audiovis]]
+[[on/process]] [[on/todo]] [[on/achievements]]
+
+
+
+[[visRedes]]
+[[revisaoArtigo]]
+[[virus]]
+
+Notes to organize:
+you might not be able to define functions
+starting with lower case letters, but you
+can define dictionaries, and use FunRefs
+
+
+[todo](todo)
+[Vim tutorial](Vim tutorial)
+[Notation](Notation)
+[Concurso UFABC](Concurso UFABC)
+[massa](massa)
+
+
+
+[[432Hz]]
+
+
+= unorganized content =
+I like music, math and physics.
+Computer science, complex networks,
+text mining, linked data, data visualization, social participation,
+ethnic cultures.
+
+I like arts, humanities and exact sciences.
+I like to write music, poetry, scientific articles, short stories, and
+computer programs.
+
+My favourite languages are:
+Python, Javascript, Vimscript (VimL).
+
+Hello. If you are reading this,
+send me a message or think about me
+with good [[vibes]].
+
+These are my cwp (current working projects):
+a) [[mass]]
+b) [[prv]]
+  a) [[colors]]
+c) [[ml]]
+
+Old notes in blergh.
+
+
+EXPERIMENTAL STUFF FROM VIMWIKI DOCUMENTATION
+  j
+= My knowledge base =
+    * Tasks -- things to be done _yesterday_!!!, a subset of todo
+    * Project Gutenberg -- good books are power.
+    * Scratchpad -- various temporary stuff.

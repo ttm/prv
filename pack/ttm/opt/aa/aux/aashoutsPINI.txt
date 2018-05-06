@@ -1,0 +1,599 @@
+testando primeiro shout do aa, vamos ver
+Tue Feb 27 22:47:36 -03 2018
+-----
+
+
+$$$$$
+primeira sessao teste nesta nova instalacao do aa, vamos ver
+Tue Feb 27 22:50:31 -03 2018
+-----
+arrumar os comandos de navegacao. O mais critico eh com o terminal-job mode
+Tue Feb 27 22:53:28 -03 2018
+-----
+
+
+$$$$$
+mais uma tentativa de sessao, na outra o micro caiu...
+Tue Feb 27 23:25:55 -03 2018
+-----
+escrevendo sobre opcoes e hacking do aa
+Tue Feb 27 23:43:02 -03 2018
+-----
+descrevendo mappings
+Tue Feb 27 23:59:43 -03 2018
+-----
+organizado um pouco o plugin do aa
+Wed Feb 28 00:20:37 -03 2018
+-----
+parei ontem antes de terminar sessao aqui, mas resolvi em casa mais um pouco, dando git pull
+Wed Feb 28 10:07:09 -03 2018
+-----
+$$$$$
+
+$$$$$
+sessao numa boa para hoje terminar o aa, tinindo!
+Wed Feb 28 11:28:14 -03 2018
+-----
+descrito e melhorados mappings do aa para shouts
+Wed Feb 28 11:51:30 -03 2018
+-----
+$$$$$
+
+
+$$$$$
+plugin do aa quase pronto, martelada final!
+Wed Feb 28 14:01:11 -03 2018
+-----
+comandos, escrito os mappings certinho no aa.txt
+Wed Feb 28 14:15:50 -03 2018
+-----
+escrito sobre commands e functions
+Wed Feb 28 14:32:36 -03 2018
+-----
+descrevendo os arquivos do plugin
+Wed Feb 28 14:45:44 -03 2018
+-----
+final words, balanco
+Wed Feb 28 15:03:15 -03 2018
+-----
+finalmentes dos finalmentes da escrita, depois revisao e publicar
+Wed Feb 28 15:21:51 -03 2018
+-----
+terminada escrita geral, agora releitura e arrumacao de formatacao
+Wed Feb 28 15:31:43 -03 2018
+-----
+terminada passada para ver formatacao
+Wed Feb 28 15:46:28 -03 2018
+-----
+terminando de dar uma formatacao minimamente coerente com o indice no aa.txt
+Wed Feb 28 16:02:44 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+sessao p pub o aa finalmente
+Wed Feb 28 16:58:40 -03 2018
+-----
+testes com comandos p limar a chamada de funcao feita nos plugins
+Wed Feb 28 17:15:56 -03 2018
+-----
+pau no aa.vim pro causa de nao ter dado pull certinho!
+Wed Feb 28 17:35:35 -03 2018
+-----
+retomando leitura e formatacao do aa.txt
+Wed Feb 28 17:45:31 -03 2018
+-----
+feito um cabecalho decente p aa.txt
+Wed Feb 28 17:59:52 -03 2018
+-----
+revisando 1.1
+Wed Feb 28 18:16:00 -03 2018
+-----
+reformatado esquema, passando finalmente para 1.2...
+Wed Feb 28 18:29:06 -03 2018
+-----
+usage examples
+Wed Feb 28 18:44:21 -03 2018
+-----
+escrito ate metade do install, 46% do arquivo
+Wed Feb 28 19:04:19 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+sessao para enviar esse aa caraio
+Wed Feb 28 21:03:02 -03 2018
+-----
+feito hack p n depender do prv. Escrevendo help
+Wed Feb 28 21:18:39 -03 2018
+-----
+terminado de formatar mappings
+Wed Feb 28 21:34:37 -03 2018
+-----
+retomando sessao q perdi, mudei o mapping de inicializar p n fazer isso dinovo... (info era muito proximo de inicializar)
+Wed Feb 28 21:51:08 -03 2018
+-----
+final words!!!
+Wed Feb 28 22:09:34 -03 2018
+-----
+todo
+Wed Feb 28 22:32:51 -03 2018
+-----
+escrevendo sobre a tradicao do aa, finalmentes do aa.txt!!!
+Wed Feb 28 22:36:44 -03 2018
+-----
+terminada revisao do aa.txt
+Wed Feb 28 22:46:39 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+agora sim, uma sessao p publicar o aa
+Wed Feb 28 23:07:31 -03 2018
+-----
+fazendo vimball
+Wed Feb 28 23:24:11 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+sessao p fazer novos vimballs e publicar prv e outros plugs
+Fri Mar  2 17:05:05 -03 2018
+-----
+arrumando paths para vimball, bati com path zuado para sessoes do vim
+Fri Mar  2 17:24:23 -03 2018
+-----
+arrumadno sessions. Articulando apresentacao
+Fri Mar  2 17:35:19 -03 2018
+-----
+anotar no aa-todo que vale fazer um sistema de pausar a sessao
+Fri Mar  2 17:59:30 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+iniciando sessao p publicar os plugins
+Fri Mar  2 20:52:44 -03 2018
+-----
+respondendo a ceci no thackday sobre legalidade de burlar captchas
+Fri Mar  2 21:08:24 -03 2018
+-----
+escrito p maldonado
+Fri Mar  2 21:26:19 -03 2018
+-----
+enrolando e disperso, querendo sair p fumar
+Fri Mar  2 21:42:35 -03 2018
+-----
+realocado script com rotinas experimentais do prv
+Fri Mar  2 22:09:31 -03 2018
+-----
+fazendo sequencia de arquivos do prv p vimball
+Fri Mar  2 22:13:04 -03 2018
+-----
+
+
+$$$$$
+bora bora nesses plugs de vim
+Sat Mar  3 01:13:10 -03 2018
+-----
+todo p publicar o prv
+Sat Mar  3 01:33:05 -03 2018
+-----
+pensando em 2 teclas p navegar tabs com ctrl... mesma coisa de antes
+Sat Mar  3 01:44:01 -03 2018
+-----
+fazendo mapeamentos para navegacao
+Sat Mar  3 01:59:02 -03 2018
+-----
+escrevendo funcoes p navegacao
+Sat Mar  3 02:14:48 -03 2018
+-----
+bug: c-o c-w (hjkl) mantem o (insert) se o target for um terminal, i.e. n perde o one-normal-command mode, mesmo depois de sair do terminal
+Sat Mar  3 02:32:05 -03 2018
+-----
+resolvida navegacao em command-line acho
+Sat Mar  3 02:43:36 -03 2018
+-----
+resolvido p comand insert e normal, indo p terminal
+Sat Mar  3 02:58:34 -03 2018
+-----
+acho que terminei os mappings para navegar as janelas
+Sat Mar  3 03:13:48 -03 2018
+-----
+$$$$$
+
+
+incorporar o hack do ZyX para os leaders e localleaders do prv
+Sat Mar  3 06:57:47 -03 2018
+-----
+
+
+$$$$$
+iniciando sessao p prog est
+Wed Mar  7 20:14:30 -03 2018
+-----
+fazendo intro da prova
+Wed Mar  7 20:31:44 -03 2018
+-----
+escrevendo a base sobre prog est. Como é um 'statement' em portugues? uma instrução?
+Wed Mar  7 20:49:19 -03 2018
+-----
+entendendo um pouco melhor a historia da prog estr
+Wed Mar  7 21:05:07 -03 2018
+-----
+dev de prg estr
+Wed Mar  7 21:33:28 -03 2018
+-----
+desvios da PE
+Wed Mar  7 21:35:48 -03 2018
+-----
+pontos de saida e entrada
+Wed Mar  7 21:49:50 -03 2018
+-----
+terminado minimo sobre prog est
+Wed Mar  7 21:59:45 -03 2018
+-----
+terminado minimo de pro est. proxima sessao eh oo
+Wed Mar  7 22:17:32 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+sessao p continuar item d hj
+Thu Mar  8 00:56:15 -03 2018
+-----
+ver com ric o que quer dizer este refinamento por passos
+Thu Mar  8 01:06:19 -03 2018
+-----
+aprendendo prog estruturada melhor
+Thu Mar  8 01:18:43 -03 2018
+-----
+aprofundando o tema
+Thu Mar  8 01:28:03 -03 2018
+-----
+escrito sobre goto, prog imperativa e estruturada e oo
+Thu Mar  8 01:43:45 -03 2018
+-----
+reavaliando tudo por conta de OOP
+Thu Mar  8 01:58:08 -03 2018
+-----
+entendendo PE
+Thu Mar  8 02:11:45 -03 2018
+-----
+o q quer dizer colapso da programacao de objetos??? http://people.cs.aau.dk/~normark/oop-csharp/html/notes/intro-oop_themes-from-structured-prog-to-oop-sect.html#intro-oop_no-page_side-box_sb1
+Thu Mar  8 02:31:20 -03 2018
+-----
+TAD tipo abstrado de dados
+Thu Mar  8 02:42:08 -03 2018
+-----
+iniciando entendimento sobre POO
+Thu Mar  8 02:56:34 -03 2018
+-----
+$$$$$
+
+
+fazer itens na wikipedia em portugues sobre os conhecimentos da prova
+Thu Mar  8 04:33:30 -03 2018
+-----
+propor no projeto de pesquisa, ensino e extensao criterios como o de contrib na wikipedia ou em codigo fonte para atribuicao de papeis, bolsas, espaco e equipamento
+Thu Mar  8 04:36:57 -03 2018
+-----
+repassar links do artigos da WP na listamacambira e p cristina e vicg p caso alguem queira revisar
+Thu Mar  8 04:38:01 -03 2018
+-----
+iVim: improved Vi improved
+Thu Mar  8 07:49:24 -03 2018
+-----
+elaborando vocabulario, lendo wikipedia em ptbr
+Thu Mar  8 08:12:02 -03 2018
+-----
+option 'noh' not highlighting as expected
+Thu Mar  8 09:40:11 -03 2018
+-----
+
+
+$$$$$
+poo
+Sat Mar 10 01:32:24 -03 2018
+-----
+lendo o q tah escrito ateh agora
+Sat Mar 10 01:32:46 -03 2018
+-----
+reler termos e criterios da prova
+Sat Mar 10 01:33:05 -03 2018
+-----
+linha 54ddo que estah escrito
+Sat Mar 10 01:42:18 -03 2018
+-----
+linha 70, escrito exemplos p PE
+Sat Mar 10 01:47:55 -03 2018
+-----
+arrumando PE
+Sat Mar 10 01:57:17 -03 2018
+-----
+POO
+Sat Mar 10 02:03:33 -03 2018
+-----
+retomando sessao, colocado um slot a mais. Corrigido bug do prv para undo persistente
+Sat Mar 10 02:26:28 -03 2018
+-----
+poo: cliente e servidor
+Sat Mar 10 02:42:14 -03 2018
+-----
+responsabilidades dos objetos
+Sat Mar 10 02:56:43 -03 2018
+-----
+modularidade centrada nos dados
+Sat Mar 10 03:13:28 -03 2018
+-----
+programação estruturada foi o paradigma dominante na escrita de software até
+Sat Mar 10 03:24:33 -03 2018
+-----
+terminando cap do livro de poo
+Sat Mar 10 03:26:55 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+ultimo capitulo do livro de poo http://people.cs.aau.dk/~normark/oop-csharp/html/notes/intro-oop_themes-phen-concepts-sect.html#intro-oop_gen-spec_title_1
+Sat Mar 10 05:18:40 -03 2018
+-----
+fenomenos e conceitos em poo
+Sat Mar 10 05:36:26 -03 2018
+-----
+agregacao e decomposicao
+Sat Mar 10 05:48:47 -03 2018
+-----
+terminando cap 3 do livro de poo
+Sat Mar 10 06:04:28 -03 2018
+-----
+adicionar exercicionas aas provas e aulas
+Sat Mar 10 06:05:01 -03 2018
+-----
+pensando em testes e documentacao
+Sat Mar 10 06:24:57 -03 2018
+-----
+iniciando leitura da wikipedia poo
+Sat Mar 10 06:33:56 -03 2018
+-----
+ver esta lista para dev de poo https://en.wikipedia.org/wiki/Index_of_object-oriented_programming_articles
+Sat Mar 10 06:36:22 -03 2018
+-----
+as bases do poo
+Sat Mar 10 06:55:22 -03 2018
+-----
+dando tapa na bichona de poo
+Sat Mar 10 07:03:56 -03 2018
+-----
+encapsulamento
+Sat Mar 10 07:18:46 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+retomando poo da wikipedia
+Sat Mar 10 17:18:07 -03 2018
+-----
+heranca e composicao de objetos
+Sat Mar 10 17:33:44 -03 2018
+-----
+como q eh mixins em ptbr?
+Sat Mar 10 17:37:59 -03 2018
+-----
+polimorfismo
+Sat Mar 10 17:48:36 -03 2018
+-----
+historia do poo
+Sat Mar 10 18:03:13 -03 2018
+-----
+andando com poo, linguagens, dev, hist
+Sat Mar 10 18:18:39 -03 2018
+-----
+o q quer dizer linearizado em https://en.wikipedia.org/wiki/Object-oriented_programming#OOP_in_a_network_protocol
+Sat Mar 10 18:24:02 -03 2018
+-----
+tentando passar do design patterns
+Sat Mar 10 18:33:30 -03 2018
+-----
+GoF design patterns
+Sat Mar 10 18:48:26 -03 2018
+-----
+criticas ao poo
+Sat Mar 10 19:03:43 -03 2018
+-----
+forcando para terminar a wikipedia de poo
+Sat Mar 10 19:19:38 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+passando p wikipedia PE e POO
+Sat Mar 10 23:15:38 -03 2018
+-----
+
+
+$$$$$
+retomando passagem das infos para PE
+Sun Mar 11 18:00:01 -03 2018
+-----
+arrumando wikipedia de PE
+Sun Mar 11 18:17:39 -03 2018
+-----
+desvios da PE
+Sun Mar 11 18:34:17 -03 2018
+-----
+repassando intro de PE
+Sun Mar 11 18:45:14 -03 2018
+-----
+terminado artigo de PE, ao menos a primeira versao
+Sun Mar 11 19:05:27 -03 2018
+-----
+estudando o artigo de poo da wp
+Sun Mar 11 19:15:20 -03 2018
+-----
+arrumando intro de poo
+Sun Mar 11 19:31:21 -03 2018
+-----
+colocando refs no artigo de poo da wp
+Sun Mar 11 19:46:07 -03 2018
+-----
+adicionando algumas ideias centrais para o dev da poo
+Sun Mar 11 20:00:40 -03 2018
+-----
+feito add da parte em direcao aa poo
+Sun Mar 11 20:04:38 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+caramba
+Tue Mar 13 07:11:17 -03 2018
+-----
+sessao mutchatcha. poing pu-tchá.
+Tue Mar 13 07:12:56 -03 2018
+-----
+unificar as anotacoes: papel, rascunho gmail, lap? diario,
+ufscar, q mais?
+Tue Mar 13 07:14:35 -03 2018
+-----
+notas ufscar mara
+Tue Mar 13 07:22:21 -03 2018
+-----
+relacionando AAVO com estruturas de dados gracas aas anotacoes da ufscar
+Tue Mar 13 07:39:48 -03 2018
+-----
+decidindo se migro para fora para uma agua e fumaca
+Tue Mar 13 07:51:18 -03 2018
+-----
+discorrendo sobre o ponteiro e os tipos de dados
+Tue Mar 13 08:12:38 -03 2018
+-----
+terminada revisao geral. Hora de comecar edicao
+Tue Mar 13 08:29:02 -03 2018
+-----
+passando p dev no lap por + 1h or so...
+Tue Mar 13 08:32:14 -03 2018
+-----
+
+
+$$$$$
+sessao hardcore p fumegar essa parada de IC?
+Thu Mar 15 04:49:17 -03 2018
+-----
+lendo ic em ingles
+Thu Mar 15 05:12:06 -03 2018
+-----
+andando com ic em ingles
+Thu Mar 15 05:21:51 -03 2018
+-----
+soft computing
+Thu Mar 15 06:01:04 -03 2018
+-----
+links e commitando p sair
+Thu Mar 15 06:03:39 -03 2018
+-----
+
+
+$$$$$
+sessao sem tempo enquanto limpa. Avaliando passagem do conhecimento p wp
+Thu Mar 15 07:21:25 -03 2018
+-----
+escrevendo sobre os 5 principios
+Thu Mar 15 07:36:49 -03 2018
+-----
+descrevendo conceituralizacao mais coerente da IC
+Thu Mar 15 07:51:45 -03 2018
+-----
+terminada discussao sobre os 5 principios
+Thu Mar 15 08:09:36 -03 2018
+-----
+terminada primeira passada no texto sobre CI. Pausa para comer algo depois retomo e repasso
+Thu Mar 15 08:21:49 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+sessao p adiantar artigo do alan
+Mon Apr  2 13:39:56 -03 2018
+-----
+adiantado o escrito. Um pouco de atencao nos comunicadores
+Mon Apr  2 13:55:16 -03 2018
+-----
+passando texto
+Mon Apr  2 14:10:38 -03 2018
+-----
+bora
+Mon Apr  2 14:25:17 -03 2018
+-----
+retomando
+Mon Apr  2 14:45:25 -03 2018
+-----
+comecando basic concepts
+Mon Apr  2 14:57:31 -03 2018
+-----
+comm det
+Mon Apr  2 15:11:59 -03 2018
+-----
+bora finalizando base
+Mon Apr  2 15:25:22 -03 2018
+-----
+finalizado ateh esperar o Alan
+Mon Apr  2 15:54:01 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+sessao na torre
+Fri Apr  6 07:10:45 -03 2018
+-----
+tentando fechar paragrafo
+Fri Apr  6 07:25:55 -03 2018
+-----
+bora, GVM
+Fri Apr  6 07:44:57 -03 2018
+-----
+collection of Bots.
+Fri Apr  6 07:52:11 -03 2018
+-----
+collection of ways by which Bots interact with Corpus and other Bots.
+Fri Apr  6 07:52:11 -03 2018
+-----
+bora
+Fri Apr  6 08:02:05 -03 2018
+-----

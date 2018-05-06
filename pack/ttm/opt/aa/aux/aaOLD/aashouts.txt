@@ -1,0 +1,462 @@
+primeiro shout de slot jah no aa do vim
+Seg Fev 19 16:02:22 -03 2018
+-----
+first shout with a mapping
+Seg Fev 19 16:14:55 -03 2018
+-----
+shouts no vim fumegando, indo para pistas visuais de quantos slots se passaram
+Seg Fev 19 16:28:19 -03 2018
+-----
+orchestratings mappings and AAShout()
+Seg Fev 19 16:41:27 -03 2018
+-----
+fazendo notacao para fumegar recados visuais e sonoros de pala com sessao de aa
+Seg Fev 19 17:27:39 -03 2018
+-----
+terminando rotinas p acompanhar sessao
+Seg Fev 19 17:43:06 -03 2018
+-----
+
+
+primeira mini-sessao de comemoracao... 5 slots de 2 min
+Ter Fev 20 01:55:54 -03 2018
+-----
+comecando primeira sessao de verdade de AA no vim, vamos vendo
+Ter Fev 20 02:46:00 -03 2018
+-----
+para deixar o aa do vim certinho, ao menos comitar e documentar
+Ter Fev 20 02:46:55 -03 2018
+-----
+te
+Ter Fev 20 03:05:26 -03 2018
+-----
+te2
+Ter Fev 20 03:05:28 -03 2018
+-----
+
+
+iniciada sessao de AA novamente para testar, estava sobrescrevendo quando reiniciado...
+Ter Fev 20 03:07:04 -03 2018
+-----
+arrumando mappings gerais
+Ter Fev 20 03:22:07 -03 2018
+-----
+arrumando documentacao do aaplug.vim
+Ter Fev 20 03:37:00 -03 2018
+-----
+arrumando documentacao, entendendo, mesclando vimwiki com help do vim
+Ter Fev 20 04:04:21 -03 2018
+-----
+perdi um slot acho, nao sei se nao ouvi o AA. mandei msg a pouco sobre vimwiki vim help e avancos nessa direcao
+Ter Fev 20 04:07:28 -03 2018
+-----
+tentando desatar navegacao no vim, comparando utilidades padrao com vimwiki
+Ter Fev 20 04:38:07 -03 2018
+-----
+terminando de entender escrita de help no vim
+Ter Fev 20 04:38:39 -03 2018
+-----
+{shout}
+Ter Fev 20 05:03:15 -03 2018
+-----
+terminando de deixar primeira versao miminamente ok. Fechou primeira sessao creio
+Ter Fev 20 05:10:54 -03 2018
+-----
+
+
+novamente apareceu a linha de color column
+Ter Fev 20 05:35:06 -03 2018
+-----
+parece que deu certo, fiquei direto bem mais concentrado por nao precisar mexer no relogio, nem achar algum terminal para escrever o shout
+Ter Fev 20 06:22:44 -03 2018
+-----
+agora eh parar um pouco. Padoca
+Ter Fev 20 06:23:16 -03 2018
+-----
+
+
+um unico slot de 15 min para comecar sessao na sequencia
+Qua Fev 21 02:06:20 -03 2018
+-----
+terminado slot depois de um tempao, neh... mas escrevi email p vim_use, curti um som, arrumei das sessoes e no aa
+Qua Fev 21 03:04:27 -03 2018
+-----
+
+
+tentando fazer as sessions se comportared direito.
+Qua Fev 21 03:07:44 -03 2018
+-----
+
+
+terminada sessao?
+Qua Fev 21 03:09:00 -03 2018
+-----
+
+
+feita revisao do aaplug
+Qua Fev 21 05:34:43 -03 2018
+-----
+testes finais para comecar sessao do dia
+Qua Fev 21 05:46:12 -03 2018
+-----
+melhorado aa info
+Qua Fev 21 05:55:45 -03 2018
+-----
+agora acertado o tempo do shout?
+Qua Fev 21 06:10:12 -03 2018
+-----
+tah fumegando esse aa! vamos ver. Sessao?
+Qua Fev 21 06:12:40 -03 2018
+-----
+sessao teste para fumegar uma sessao comprida.
+Qua Fev 21 06:23:36 -03 2018
+-----
+
+
+msg 1 da sessao
+Qua Fev 21 06:25:53 -03 2018
+-----
+testando last_shout
+Qua Fev 21 06:30:00 -03 2018
+-----
+
+
+arrumadas varias coisas, postado no vim_use
+Qua Fev 21 08:55:37 -03 2018
+-----
+mudado o separador
+agora sim!
+Qua Fev 21 09:03:40 -03 2018
+-----
+mmmuuuito melhor esse aa no Vim
+Qua Fev 21 09:04:35 -03 2018
+-----
+
+
+iniciando nova tantativa de fazer as sessoes fumegarem.
+
+
+
+----
+melhorando aa info
+Qua Fev 21 09:23:59 -03 2018
+-----
+add info on shouts for session in vim info
+Qua Fev 21 11:32:55 -03 2018
+-----
+
+
+$$$$$
+iniciando sessao teste p fazer miudeza 2
+Qua Fev 21 11:41:47 -03 2018
+-----
+deu certo!!!
+Qua Fev 21 11:52:42 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+ultimo teste de sessao talvez
+Qua Fev 21 12:08:40 -03 2018
+-----
+pensando na organizacao das ideias todas em notas e wiki
+Qua Fev 21 12:08:44 -03 2018
+-----
+$$$$$$
+
+
+
+
+$$$$$
+primeiro shout da sessao teste final
+Qua Fev 21 12:31:06 -03 2018
+-----
+parece funcionando
+Qua Fev 21 12:31:27 -03 2018
+-----
+shout final
+Qua Fev 21 12:31:47 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+primeiro shout da sessao teste final final
+Qua Fev 21 12:32:46 -03 2018
+-----
+parece funcionando
+Qua Fev 21 12:33:06 -03 2018
+-----
+eba
+Qua Fev 21 12:33:14 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+iniciando sessao para arrumar parte do espeak
+Qua Fev 21 12:33:50 -03 2018
+-----
+feita arrumacao, foi soh trocar system() por job_start()
+Qua Fev 21 12:50:03 -03 2018
+-----
+entendendo jobs, mas precisa entender channels, q verei depois
+Qua Fev 21 12:50:21 -03 2018
+-----
+melhorando aa, entendendo os jobs, anotando todo para prv python
+Qua Fev 21 13:05:31 -03 2018
+-----
+perdi um tempao lombrando em varias coisas, prv tah ficando bom
+Qua Fev 21 13:33:02 -03 2018
+-----
+e mandei msg quase 2 slots depois.. mas tah valendo, fumegando tudo
+Qua Fev 21 13:34:19 -03 2018
+-----
+Espeak n tah fumegando direito.... Nem sempre fumega, e quando fumega vai junto as duas falas
+Qua Fev 21 13:35:52 -03 2018
+-----
+meio perdido com algumas coisas...
+
+Qua Fev 21 13:52:55 -03 2018
+-----
+lutando com os jobs para sincronizar, pensando em chamar um terminal mesmo
+Qua Fev 21 14:30:29 -03 2018
+-----
+fazer arquivo para fumegar esse espeak como um job!
+Qua Fev 21 14:48:34 -03 2018
+-----
+espeak fumegante ateh o talo com system, write file e job_start
+Qua Fev 21 15:27:57 -03 2018
+-----
+maravilhoso esse esquema do AA. Foram-se 3h
+Qua Fev 21 15:29:49 -03 2018
+-----
+$$$$$
+
+
+sessao proxima: terminar de ler o helphelp
+Qua Fev 21 15:29:53 -03 2018
+-----
+aa info tb mt bom
+Qua Fev 21 15:30:22 -03 2018
+-----
+TODO:
+revisar codigo do aa e as paginas do vimwiki
+revisar realcolors e tokipona
+terminar artigos vim e tokipona
+Qua Fev 21 15:38:33 -03 2018
+-----
+
+
+$$$$$
+iniciando sessao para ler o helphelp
+Qua Fev 21 16:30:59 -03 2018
+-----
+read {pattern} depois. Nao tah mais sustentavel n entender isso...
+Qua Fev 21 16:33:48 -03 2018
+-----
+retomando sessao, deu pau nas contagens... (??)
+Qua Fev 21 16:45:44 -03 2018
+-----
+sessao iniciada agora mais firmeza, nao estava contando certinho o tempo no primeiro slot...
+Qua Fev 21 16:56:05 -03 2018
+-----
+entendendo realce em helpfiles
+Qua Fev 21 17:01:39 -03 2018
+-----
+estudando o /usr/local/share/vim/vim80/syntax/help.vim
+Qua Fev 21 17:11:42 -03 2018
+-----
+entendendo o arquivo ainda. N sei o q eh me no final de "<N\.$me=e-1
+Qua Fev 21 17:17:12 -03 2018
+-----
+caih cansado escutando musica... indo descansar q depois tem mais
+Qua Fev 21 18:09:07 -03 2018
+-----
+$$$$$
+
+
+$$$$$
+inicianda sessao de leitura do natural computing
+Qui Fev 22 05:49:24 -03 2018
+-----
+ok, lendo cap 2.2.1
+Qui Fev 22 06:08:14 -03 2018
+-----
+2.2.2 pag 33
+Qui Fev 22 06:21:19 -03 2018
+-----
+primeira subparte de 2.2.3, pag 34
+Qui Fev 22 06:37:28 -03 2018
+-----
+2.2.4 pag 36
+Qui Fev 22 06:50:01 -03 2018
+-----
+2.2.5 pag 38
+Qui Fev 22 07:06:16 -03 2018
+-----
+2.2.6 pag 41
+Qui Fev 22 07:20:00 -03 2018
+-----
+2.2.7 pag 44
+Qui Fev 22 07:34:53 -03 2018
+-----
+parado em subitem de 2.2.7, pag 46
+Qui Fev 22 07:50:31 -03 2018
+-----
+$$$$$
+
+
+no relaxamento, o lance é ir aos poucos, dando chance do
+aprendizado se dar. Relaxe não de repente, mas aos poucos
+um pouco mais do que antes.
+Pense que pode gastar o resto da sua vida somente relaxando um
+músculo.
+Ao mesmo tempo, a imagem de que está já completamente
+relaxado é útil.
+O ideal é manter ambas as imagens em mente:
+a do relaxamento eterno e progressivo,
+e a do relaxamento total e já adquirido.
+Qui Fev 22 08:24:40 -03 2018
+-----
+quem tem boca vai a roma, quem tem dedo vai a roma.
+Quem tem lingua e dedo, nao tem medo.
+Boca e mão são (ou parecem) instrumentos de sedução,
+de comunicação primária.
+Qui Fev 22 08:26:11 -03 2018
+-----
+"ttm eh minha tag para comment em shouts.txt
+já o "v1z pode ser tag de comment para o ricardo, etc...
+Assim, um shouts.txt pode ter anotações por outras pessoas,
+passadas como um patch, por exemplo.
+Qui Fev 22 08:29:03 -03 2018
+-----
+aqui fica fácil escrever os shouts em sessoes, ou sequencias
+quaisquer.
+Arrumar problemas de correção,
+escrer notas e ideias com calma.
+Talvez valha começar a usar taggeamento,
+por exemplo, para shout que precisa ser revisto,
+todo, que é só para registro de atividade, ou só
+para acompanhar a passagem do tempo, etc.
+
+Os assuntos podem ser discriminados pelo uso
+cuidadoso de palavras do vocabulário usual
+ou inventado.
+Ou usado algum prefixo para a tag (e.g. "ttm-xxx"),
+ou regex (\W[0]==\W[-1]==*, \W[-1]==~ && \W[0]==^, etc..)
+
+Estas tags podem ser extraídas ou sugeridas automaticamente,
+ou adicionadas uma a uma em um g:aa.msgs.prv_tags.
+
+Talvez valha estudar como funciona o ctags
+e melhorar o uso dos helpfiles do Vim e .wiki do Vimwiki
+para entender os padroes de funcionamento.
+
+Postar no grupo vim_use sobre manejamento de informações
+para pesquisa e desenvolvimento,
+como lidar com as tags das anotações e dos códigos,
+como integrá-los, que estratégia usar para escrita
+da árvore de diretórios, arquivos, títulos, sessões, tags,
+buscas, etc.
+Mostrar o plugin o AA.
+
+
+
+
+
+$$$$$
+ok, comecando sessao para arrumar prv e aaplug. Comecando por passar tudo para opt e carregar no vimrc. Depois passando aaplugin para dir diferente do prv
+Qui Fev 22 08:49:28 -03 2018
+-----
+mensagens muito longas nao podem ser colocadas pela linha de comando
+Qui Fev 22 08:51:08 -03 2018
+-----
+adicionar funcoes, comandos e mappings para registrar que um shout a mais ou a menos eh requisitado
+Qui Fev 22 08:52:28 -03 2018
+-----
+commitada a reestruturacao, testes
+Qui Fev 22 09:07:12 -03 2018
+-----
+add the wiki directory for the files searched for with gf
+Qui Fev 22 09:12:47 -03 2018
+-----
+add session start time ":Todo
+Qui Fev 22 09:19:00 -03 2018
+-----
+a fisica lida com conceitos antigos de ordem e desordem, de energia, materia, tempo etc
+Qui Fev 22 09:24:51 -03 2018
+-----
+comecando a sentir q tah fumegando este esquema das notas com o aa
+Qui Fev 22 09:31:24 -03 2018
+-----
+put range in insert chars. make append chars right.
+-----
+make spell on and of and change the language between en_us, pt_br, pt, python and the like.
+-----
+"ttm-convention shouts without time take the time of the next one.
+Qui Fev 22 09:37:43 -03 2018
+-----
+make commands specific for shouts.txt, like to insert date line
+or separator. Maybe add buffer specific registers for filetype=aashouts
+Qui Fev 22 09:38:52 -03 2018
+-----
+add functions to mine shouts.txt.
+Start from there.
+Qui Fev 22 09:41:38 -03 2018
+-----
+arrumada funcao para receber or querer shouts on demand.
+"ttm-achievements a
+Qui Fev 22 10:00:15 -03 2018
+-----
+make voice slow for espeak. make session start time be registered in g:aa.cursession or g:aa.events...
+Qui Fev 22 10:20:46 -03 2018
+-----
+refactor pattern of strftime and localtime in aa.vim to a function that returns both in a list or dict
+Qui Fev 22 10:26:41 -03 2018
+-----
+arrumando sessions no aa info
+Qui Fev 22 10:38:44 -03 2018
+-----
+aa sessions parece estar mantendo o tempo certinho.
+talvez escrever no sessions os timestamps de cada
+shout e o de cada request para poder ter uma ideia
+de como que a coisa tah indo..
+Qui Fev 22 10:43:25 -03 2018
+-----
+a-s-a tem tudo apertado, entao o outro mapeamento mais parecido com ele
+eh tudo apertado, tipo a-s-t
+mas, como a mao fica presa para teclar,
+e o normal dela ficar solta,
+a-s-a t eh mais simples que a-s-a a-s-t.
+depois tem os soltos e presos
+a-t e s-t, ambos equivalentes pois a- e s-
+estam ambos em maos pelo a-s-a e
+livram o resto da mao para regioes semelhantes
+do teclado.
+Qui Fev 22 10:45:22 -03 2018
+-----
+is there a command to wait for an event just once,
+as there is autocommand, that waits always and forever for an event.
+Qui Fev 22 10:51:00 -03 2018
+-----
+is there a way to run a command in Vim just when
+he/she is not editing, as some other Vim functionalities work?
+Vim has no parallel processing in VimL,
+but this kind of techinque is already employed and might be easy to use.
+Is there a ways?
+Qui Fev 22 10:53:04 -03 2018
+-----
+$$$$$
+
+
+make an alphabetical list for aa mappings, commands and functions.
+Qui Fev 22 11:57:07 -03 2018
+-----

@@ -78,10 +78,10 @@ PRVLeader r aa
 
 " COMMANDS: {{{1
 " -- MAIN: {{{3
-com! -nargs=1 -complete=tag_listfiles A call AAShout(<q-args>)
+com! -nargs=1 -complete=tag_listfiles A cal AAShout(<q-args>)
 " com! -nargs=1 -complete=customlist,AAAutoComplete A call AAShout(<q-args>)
-com! -nargs=+ S call AAStartSession(<f-args>)
-com! -nargs=* Ac call AAClear(<q-args>)
+com! -nargs=+ S cal AAStartSession(<f-args>)
+com! -nargs=* Ac cal AAClear(<q-args>)
 com! Ai ec AAInfo()
 com! AI call AAInit()
 " -- UTILS: {{{3
@@ -115,7 +115,6 @@ endf
 fu! AAStartSession(...) " {{{3
   " default duration = 15, ntimes = 8
   " message = 'Ding Dong Ding Dong'
-  let g:asd = a:
   if !AAIsInitialized()
     cal AAInit()
   en

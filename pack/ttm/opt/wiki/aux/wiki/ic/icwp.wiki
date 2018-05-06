@@ -1,0 +1,234 @@
+:am:ic:ml:ci:
+
+
+= vocabulário =
+Termos relacionados:
+ib, iid, linearidade, invariância no tempo, slit, polinomial,
+
+artigo de AM:
+tipos básicos: supervisionado e não-supervisionado,
+o resto pode, em geral, ser conceituado a partir destes:
+* Semi-supervisionado usa os dois (ideal)
+* Reforço: supervisionado, online
+* tipos de AS: classificacao, regressao e rankeamento.
+* tipos de ANS: classificacao, regressao e rankeamento.
+* 
+
+O ANS pode servir como pré-processamento ao AS,
+o que constitui um tipo especial de aprendizado
+semi-supervisionado.
+
+
+================================
+TTPorg/wiki/Machine_learning
+* https://en.wikipedia.org/wiki/Learning_sciences
+* https://en.wikipedia.org/wiki/Meta_learning_(computer_science)
+* https://en.wikipedia.org/wiki/Teaching_method
+* https://en.wikipedia.org/wiki/Computational_learning_theory
+* https://en.wikipedia.org/wiki/Outline_of_machine_learning
+* https://en.wikipedia.org/wiki/Active_learning_(machine_learning)
+* https://en.wikipedia.org/wiki/Deep_learning
+* https://en.wikipedia.org/wiki/Backpropagation
+* https://en.wikipedia.org/wiki/Bootstrap_aggregating
+* https://en.wikipedia.org/wiki/Logic_learning_machine
+* https://en.wikipedia.org/wiki/Radial_basis_function_network
+* https://en.wikipedia.org/wiki/Soft_computing
+
+
+* https://en.wikipedia.org/wiki/Computational_intelligence
+* https://pt.wikipedia.org/wiki/Computa%C3%A7%C3%A3o_natural
+* https://pt.wikipedia.org/wiki/Intelig%C3%AAncia_computacional
+* https://pt.wikipedia.org/wiki/Algoritmos_de_estima%C3%A7%C3%A3o_de_distribui%C3%A7%C3%A3o
+
+===========
+
+* [[Entropia de Tsallis]] e termodinâmica associada <ref>Tsallis, Constantino. Introduction to nonextensive statistical mechanics: approaching a complex world. Springer Science & Business Media, 2009.</ref>
+* [[Teoria dos padrões]] (Pattern theory<ref>Mumford, David, and Agnès Desolneux. Pattern theory: the stochastic analysis of real-world signals. CRC Press, 2010.</ref>
+* [[Automato celular]], [[sistema L]] (L-systems), [[fractal]]
+* [[Teoria das evidências]] (de Dempster-Shafer, de funçÕes de crença), [[Medidas monotônicas]] (monotone measures), crença, plausibilidade, possibilidade, necessidade<ref name="fuzzy" />.
+* Generalizações da lógica fuzzy<ref>Zhao, Yan-cai, et al. "Generalized Fuzzy Sets and Fuzzy Relations." International Conference on Oriental Thinking and Fuzzy Logic. Springer, Cham, 2016.</ref>
+* [[Não-linearidade]], [[lei de potência]], [[exponencial]], [[lei de Stevens]], [[lei de Weber-Fechner]].
+
+== Criatividade computacional ==
+O espaço de exploração da arte (sons, imagens, discursos, etc)
+é reconhecidamente amplo.
+Os critérios estéticos são usualmente imprecisos semanticamente.
+Aspectos imateriais e materiais da criação artística
+são então convenientemente tratados pela IC.
+Por exemplo, parâmetros sonoros de estruturas musicais constituem um
+espaço amplo, cuja IC é apta a explorar via ruído ou [[computação evolutiva]].
+Já os critérios de [[estridência]], [[sentimento]], metáfora visual, etc.,
+são adequadamente inseridos no sistema via [[lógica difusa]].
+Tal sistema pode ser adequado para um usuário definir critérios próprios de classificação (fuzzy) e parâmetros sonoros que constituem o [[espaço de busca]].
+
+
+===========
+ Atenção: As definições a seguir são encontradas na literatura com variações. Idealmente, um vocabulário para a IC deve ser revisada e mantida por diversos especialistas, de modo a melhor lidar com os significados pois evoluem ao longo do tempo, não são consensuais, e são carregados de [[polissemia]] e [[sinonímia]].<ref>
+
+aprendizagem humana e computacional
+
+
+'''Inteligência computacional''' (IC) é o ramo da [[inteligência artificial]] (IA) que lida com [[soft computing]] (SC) (i.e. explora a imprecisão do sistema no projeto de algoritmos).
+Uma conceitualização mais cuidadosa é apresentada na próxima sessão deste artigo.
+
+A IC é marcada pela ênfase em algumas técnicas e áreas do conhecimento,
+como explicitado nos 5 princípios da IC, de forma que um sistema de
+IC paradigmático é bio-inspirado, complexo, e explora ruído e imprecisão
+para a resolução de problemas (ou suporte à computação).
+As vantagens oferecidas por estes sistemas incluem (potencialmente):
+a simplicidade de aplicação, a otimização em espaços muito amplos para
+métodos tradicionais (e.g. em problemas [[NP-completos]] e [[NP-duros]]),
+a modelagem de fenômenos reais e imprecisos, e a exploração de [[sistemas complexos]] para fins científicos e estéticos.
+
+
+
+== Base teórica e conceitual ==
+A IC é um conceito (ainda) sem definição consensual, assim como a [[IA]] e a propria [[inteligência]].
+As próprias bases teóricas destas áreas é transdisciplinar e carregada
+de conceitos advindos da [[computação]], [[cognição]], e [[filosofia]],
+além de inspiração recorrente nas ciências naturais e biológicas.
+Desta forma, segue uma apresentação elementar dos principais conceitos atualmente vinculados à IC e suas interrelações.
+
+== IC, Inteligência Artificial, Computação Natural ==
+IC é um quasi-sinônimo de duas áreas: [[soft computing]]
+e [[inteligência artificial]].
+São subáreas da [[computação natural]] (o modelo/paradigma básico é a mente ou o racioncínio humano).<ref name="natComp"/>
+A IC um termo com definição menos consensual que [[soft computing]], sendo esta última simplesmente definida como computação com exploração de soluções inexatas.<ref>Zadeh, Lotfi A., "Fuzzy Logic, Neural Networks, and Soft Computing,"  Communications of the ACM, March 1994, Vol. 37 No. 3, pages 77-84.</ref><ref>D. K. Chaturvedi, "Soft Computing: Techniques and Its Applications in Electrical Engineering", Springer, (2008).</ref>
+
+A IC é considerada subárea da IA ou, conforme alguns trabalhos sugerem,
+oposta à IA pela êxploração da imprecisão (e.g. do erro, aproximação, indefinição semântica),
+e observando a IA como trabalhando sistemas que utilizam também (ou principalmente)
+aspectos booleanos.
+Neste sentido, a IA é aproximada do conceito de [[hard computing|computação dura]] (em que há ênfase no paradigma booleano de verdade absoluta), enquanto a IC é aproximada do conceito de computação macia/[[soft computing]].<ref>{{Cite web|title = Artificial Intelligence, Computational Intelligence, SoftComputing, Natural Computation - what's the difference? - ANDATA|url = http://www.andata.at/en/answer/artificial-intelligence-computational-intelligence-softcomputing-natural-computation-whats-the-difference.html|website = www.andata.at|accessdate = 2015-11-05}}</ref><ref>Bezdek (1994)</ref>.
+
+O [[aprendizado de máquina]] tem sobreposição mas difere da área de IC:
+um sistema fuzzy nâo necessariamente aprende, e se um systema de IC aprende, em geral ocorre por técnicas bio-inspiradas.
+De forma geral, podemos considerar que o termo IC será usado para designar a área que trata de comportamento inteligente (no sentido metafórico, amplo, quase arbitrário de inteligência) em software; ou com exploração de imprecisão; ou automatizada (caso em que IC se torna sinônimo de IA).
+O termo inteligência é bastante ambíguo e sua aplicação para o comportamento de
+sistemas computacionais geram questões filosóficas severas<ref name="anthComp">https://arxiv.org/abs/1712.06933</ref><ref name="anthPhy">https://www.academia.edu/10356773/What_are_you_and_I_anthropological_physics_fundamentals_</ref><ref name="IA"></ref>.
+
+Alguns autores argumentam pelo termo ''inteligência sintética''<ref ="Poole et al" />.
+Por extensão dos resultantes (potenciais) sinônimos IC, IA, e inteligência sintética, em alguns contextos também podem ser usadas variantes como
+inteligência mecânica, automatizada, ou programada.
+
+=== 5 (principais) princípios da IC ===
+A literatura reporta 5 princípios historicamente estabelecidos na IC<ref name="Siddique & Adeli">{{Cite book|title = Computational Intelligence: Synergies of Fuzzy Logic, Neural Networks and Evolutionary Computing|last = Siddique |first = Nazmul |last2=Adeli |first2=Hojjat |publisher = John Wiley & Sons|year = 2013|isbn = 978-1-118-53481-6|location = |pages = }}</ref><ref>{{Cite web|url = http://ethw.org/IEEE_Computational_Intelligence_Society_History|title = IEEE Computational Intelligence Society History|date = July 22, 2014|accessdate = 2015-10-30|website = Engineering and Technology history Wiki|publisher = |last = |first = }}</ref>:
+* [[Lógica difusa]]/fuzzy (LD): para lidar com imprecisão [[semântica]] (indefinição conceitual).
+* Redes neurais (RN): tradicionalmente fornecem capacidades de processamento distribuídas, cognitivas, bio-inspiradas, de aprendizado, potencialmente úteis para a lidar com dados empíricos/reais, aos sistemas de IC.
+* Computação evolutiva (CE): utiliza o princípio da [[evolução natural]] para derivar métodos computacionais. Um exemplo paradigmático é o dos [[algoritmos geneticos]]. Exemplos menos óbviamente (e consensualmente) relacionados à CE incluem: [[otimização por colônia de formigas]], [[algoritmos imunológicos]], [[inteligência de enxame]].
+* [[Teoria do aprendizado]] (TA): área dedicada à análise e projeto de algoritmos de aprendizado de máquina.
+* [[Probabilidade e estatística]] (PE): para a lida com imprecisão de ocorrência (verdadeiro/falso, existência), chamada incerteza [[crispy]] no linguajar da lógica difusa.
+
+==== Reflexão sobre os 5 princípios da IC ====
+Note que esta classificação em 5 princípios pode ter itens colapsados:
+a CE e RN estão dentro da [[computação natural]], ou [[bio-inspirada]],
+conceito que abriga com maior coerência e consenso a utilização de [[algorítmos imunológicos]]
+ou de [[inteligência de enxame]]<ref name="natComp"/>, por exemplo.
+Lógica crispy (probabilidade) e difusa são também coerentemente colapsados em um ítem único para lidar com imprecisão/ignorância
+<ref>https://www.edx.org/course/ignorance-wu-zhi-anux-igno101x</ref><ref name="fuzzy2"/>.
+
+Por outro lado, a prática da IC sugere que dois princípios sejam adicionados à lista principal:
+[[mineração de dados]], e a [[inteligência artificial]],
+e os cinco princípios podem ser descritos da seguinte forma<ref>{{Cite web|title = Fuzzy Sets and Pattern Recognition|url = http://www.cs.princeton.edu/courses/archive/fall07/cos436/HIDDEN/Knapp/fuzzy002.htm|website = www.cs.princeton.edu|accessdate = 2015-11-05}}</ref><ref name="fuzzy2">ROSS, R. J. Fuzzy Logic with Engineering Applications, 4ª edição. Wiley, 2017.</ref><ref name="natural">CASTRO, L. N. Fundamentals of Natural Computing: Basic Concepts, Algorithms, and Applications, CRC Press, 2006.</ref><ref name="IA">RUSSEL, S.; NORVIG, P. Artificial Intelligence: A Modern Approach. 3ª edição. Pearson, 2009.</ref>:
+* Imprecisão difusa e probabilística: com os devidos tratamentos para ignorância ou imprecisão inerente à semântica e ocorrências, para modelagem, análise, otimização e aprendizado em geral.
+* Computação natural, ou bio-inspirada: reunindo RN e CE, principalmente para realização de aprendizado e inspiração de modelos.
+* Teoria do aprendizado.
+* Mineração de dados: para a lida com armazenamento de dados, relatoria, e ferramentas em software, por exemplo.
+* Inteligência artificial: um quasi-sonônimo de IC (veja [[inteligência computacional#CI, IA, CN|a apresentação terminológica]]), fornece contexto e base teórica, filosófica e histórica.
+
+Esta organização é desenvolvida nos próximos itens.
+
+=== Imprecisão: incerteza, ignorância, indefinição, tolerância, etc ===
+lógica fuzzy vs crispy
+probabilidade vs indefinição
+aprendizado estatístico e por regras
+que houve debate mas parece ter sido estabelecido que há sim um poder expressivo,
+e possibilidades técnicas, na lógica fuzzy que a diferenciam da probabilidade e estatística.
+Exemplo de uma saída de 0.8 em uma RN: pode ser considerado 0.8 percentence a uma imagem 'azul',
+é uma interpretação fundamentalmente fuzzy, em que há pertencimento parcial do elemento ao conceito/conjunto
+(a imagem tem 0.8 de pertencimento à classe das imagens azuis).
+
+exemplo de saida de rede neural: usualmente crispy mas pode ser interpretada como fuzzy tb.
+saida > .8 -> frango, ou .8 de participacao no conjunto dos frangos.
+
+=== Computação natural (ou bio-inspirada) ===
+=== Teoria do aprendizado ===
+=== Mineração de dados ===
+=== Inteligência artificial ===
+
+=== Aplicação dos 5 princípios ===
+As principais aplicações da IC são encontradas nas áreas
+
+=== Demais questões conceituais ===
+navalha de occam vs ruidos vs sistemas complexos (bio-inspirados ou nao)
+
+| algoritmos bio-inspirados
+| derivados da matematica/ sistemas formais
+
+sistemas complexos
+ruido vs sistemas formais / de regras
+
+reconhecimento de padrões
+
+hard computing (ênfase na exatidão e verdade absoluta)
+vs
+soft comuting (explora a tolerância pela imprecisão/
+
+noção primitiva, teoria ingênua (Paul Almos), conceitos mal definidos (fuzzy),
+noções metafóricas ([[POO]]), e até mesmo a probabilidade frequencial ou bayesiana [[crispy]],
+são formas de lidar com a indefinição.
+Cantor morreu louco pensando sobre infinitos e vazios, conceitos mal definidos e dependentes de convenções
+(um [[teoria dos conjuntos|conjunto]] vazio pode ser elemento de outro conjunto? É representado como \vazio ou \{ vazio \} ou são equivalentes?,
+Um infinito pode ser maior que outro? (veja [[limite]].
+Ruidos e metodos de otimizacao poderosos sao usados na IC para lidar com esta indefinição inerente à realidade e à cognição.
+
+== Nota histórica ==
+contexto histórico contribuiu para a divisão atual da área.
+
+== métodos constituintes da IC ==
+Dada a mal definicao do termo IC, a área também é compreendida como a utilização de uma coleção de metodos.
+princípios norteadores: navalha de occam, complexidade/emergencia/não linearidade, inteligência/aprendizado/cognição, imprecisão/logica difusa, inspiração nas ciências biológicas e naturais/computação natural, transdisciplinaridade, otimização/classificação/regressão/clusterização, 
+
+== Métodos de aprendizado ==
+Um 'método de aprendizado' é inerente a um sistema que aprende, i.e. capaz de realizar [[aprendizado]].
+Este sistema pode ser considerado uma máquina, capaz de receber e computar informação,
+caso da [[aprendizado de máquina]], atualmente concentra-se no estudo de software através de [[algoritmos]] e [[sensores]].
+O sistema pode também ser uma [[pessoa]], veja [[pedagogia]].
+Pode-se dizer que o caso mais geral é o do [[sistema complexo]],
+concebidos e estudados há décadas<ref>Santa fe institute</ref> como sistemas (compostos de diversas partes)
+capazes de aprender, se reproduzir, adaptação, integração com outros sistemas complexos, processar informação, etc.
+
+cruzamento entre métodos de aprendizagem nos três campos acima:
+https://pt.wikipedia.org/wiki/Sistema_de_Gest%C3%A3o_da_Aprendizagem
+para inspirar algoritmo de aprendizagem e diretrizes para.
+Reverberação da perturbação, medidas que tratam da integração do sistema (consciência).
+
+Modelagem do sistema humano para aprendizado, diferença com as telecomunicacoes e transporte atual.
+
+
+=============
+
+
+=========
+
+== Sobre o texto que está lá, para aproveitar ==
+
+melhorar parte da inteligencia humana racional e do computador.
+
+logica fuzzy: colocar as refs legais (livro e as outras iniciais historicas).
+Dar exemplo: se uma comida está boa ou não, exeplo da peça do livro.
+
+Parágrafo inicial com td: prog natural: evolucionária (algs geneticos), redes neurais, imunologicos, aco pso, inspirados na cognincao (neste sentido quase toda a IC ), incertezas, fuzzy, ruido.
+Propriedades emergentes
+
+aplicabilidade: desenvolver com econofísica, estudo de materiais, estruturas sociais<ref>physicaA</ref>, 
+
+fuzzy logic: nao tem capacidades de aprendizado? Consultar livro.
+
+
+
+
+
+
+
+
