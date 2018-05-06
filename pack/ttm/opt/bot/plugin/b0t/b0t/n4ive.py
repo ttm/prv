@@ -249,9 +249,9 @@ class Universe:
 if __name__ == '__main__':
     r = SimplestMarkovReality('reality1')
     w = SimplestWorld('world1', r)
-    # c = Corpus("/home/renato/repos/joyce/corpus/1john.txt", '1john')
+    # c = Corpus("~/repos/joyce/corpus/1john.txt", '1john')
     # c = SimplestCorpus("../corpus/butlerPreciado2.txt", '1john')
-    c = SimplestCorpus("/home/renato/.vim/pack/ttm/opt/aa/aux/aashouts.txt", 'shouts')
+    c = SimplestCorpus("~/.vim/pack/ttm/opt/aa/aux/aashouts.txt", 'shouts')
     w.addCorpus(c)
     b = SimplestBot('Srila')
     w.addBot(b)
