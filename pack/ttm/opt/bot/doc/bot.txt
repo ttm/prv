@@ -137,7 +137,8 @@ characteristics:
                                                                  *bot-ambient*
 Corpus / statics / culture envisioned:
 * canon: Bible and Shakespeare.
-* gender: Haraway, Butler, Preciado, Buck-Morss, Beauvoir, Vandana Shiva, Silvia Federici.
+* gender: Haraway (6 set, manifesto ciborgue), Butler (24, fev, 11 tiros), Preciado (manifesto contrassexual), Buck-Morss, Beauvoir, Vandana Shiva, Silvia Federici.
+    - 
 * hakin bay, chomsky, tarde, zizek, bauman, 
 * mid-XX century literature: Pound, Joyce, Cage
 * filosofia antiga: plato+aristotle, pré-socráticos
@@ -277,4 +278,4 @@ olimpus.
 
 
 
- vim:ma:noro:tw=78:ts=8:ft=help:sua+=.txt:norl:sts=4:sw=4:et:
+ vim:ma:noro:tw=78:ts=8:ft=help:sua+=.txt:norl:sts=4:nu:rnu:sw=4:et:
