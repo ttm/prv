@@ -102,7 +102,29 @@ fu! PRVReinitializeAll() " {{{2
     " TODO TTM
   en
 endf " }}}
+fu! Undoline() " {{{  --- make mapping for this fu! TTM
+  let pos = getpos(".")
+  let current = getline(pos[1])
+  let chg = changenr()
+  wh changenr() > 0 && current ==# getline(pos[1])
+    sil exe 'u'
+  endw
+  let old = getline(pos[1])
 
+  wh changenr() < chg
+    sil exe 'redo'
+  endw
+  " undo if we jumped over a gap
+  if changenr() > chg
+    sil exe 'u'
+  en
+  cal setpos('.', pos)
+  if old ==# current
+    ec 'no change found'
+  el
+    cal setline(pos[1], old)
+  en
+endf " }}}
 " Aux / Temp {{{1
 nn mn /^=====<CR>zt<C-E>
 nn mp ?^=====<CR>nzt<C-E>

@@ -1,0 +1,49 @@
+http://www.munsellcolourscienceforpainters.com/ColourSciencePapers/ReviewOfColorForTheSciences.pdf
+aims to introduce :colorimetry: to scientists
+
+mostly through motivations and equations,
+but neat definitions are given
+
+summarizes the many ways by which scientists
+arrive at colorimetry
+
+exercises are mostly invitations to elaborate on
+concepts
+
+emphasis on geometric thinking
+
+earlier, presumably good, book "Solid Shape"
+
+chromaticity diagram and spectrum cone.
+
+optimal colours, complementary colours
+
+Ostwald's color instruments
+
+Schopenhauer's interpretation of colors
+
+Schrödinger's  isochromes
+
+Color Perception, 2003
+
+object-color solid (OBS)
+Rõsch-MacAdam solid
+Luther-Nyberg solid
+neutral axis, semichrome "equator"
+polytope
+optimal colors calculate the vertexes of OBS
+
+Wyszecki and Stiles' tome, 1982
+
+lots of math
+
+color science
+
+
+
+
+
+
+
+
+

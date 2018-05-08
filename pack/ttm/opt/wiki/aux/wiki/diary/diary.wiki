@@ -65,6 +65,14 @@ aula maio 11.
 
 revisão JBCS, maio 17
 
+- escrever artigo Vírus, dia 8
+- terminar aula
+- revisar artigo alan
+- finalizar vim e tp
+- finalizar artigos pendentes
+- fazer devs
+
+
 = Diary =
 :Diary:diary:diário:Diário:
 
