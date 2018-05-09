@@ -1,4 +1,8 @@
+
 http://www.munsellcolourscienceforpainters.com/ColourSciencePapers/ReviewOfColorForTheSciences.pdf
+(read first paragraph)
+
+summary:
 aims to introduce :colorimetry: to scientists
 
 mostly through motivations and equations,

@@ -40,7 +40,7 @@ am	ic/am.wiki	1;"	vimwiki:ic/am\tic/am
 am	ic/icwp.wiki	1;"	vimwiki:ic/icwp\tic/icwp
 ame	ic/am.wiki	35;"	vimwiki:ic/am\tic/am#aprendizado de maquina estatístico
 ann	ic/rn.wiki	1;"	vimwiki:ic/rn\tic/rn
-art	datavis/colorAtelier.wiki	76;"	vimwiki:datavis/colorAtelier\tdatavis/colorAtelier#art
+art	datavis/colorAtelier.wiki	78;"	vimwiki:datavis/colorAtelier\tdatavis/colorAtelier#art
 baits	index.wiki	23;"	vimwiki:index\tindex#baits
 bare-vim-wiki	Notation.wiki	1;"	vimwiki:Notation\tNotation
 bd	ic/te.wiki	2;"	vimwiki:ic/te\tic/te
@@ -59,7 +59,7 @@ cc	ic/te.wiki	2;"	vimwiki:ic/te\tic/te
 ce	ic/ce.wiki	1;"	vimwiki:ic/ce\tic/ce
 ci	ic/ic.wiki	1;"	vimwiki:ic/ic\tic/ic
 ci	ic/icwp.wiki	1;"	vimwiki:ic/icwp\tic/icwp
-colorimetry	datavis/colorForTheSciences.wiki	2;"	vimwiki:datavis/colorForTheSciences\tdatavis/colorForTheSciences
+colorimetry	datavis/colorForTheSciences.wiki	6;"	vimwiki:datavis/colorForTheSciences\tdatavis/colorForTheSciences#colorimetry
 complexidade	ic/complexidade.wiki	1;"	vimwiki:ic/complexidade\tic/complexidade
 complexity	ic/complexidade.wiki	1;"	vimwiki:ic/complexidade\tic/complexidade
 conspiracao	various/conspiracy.wiki	1;"	vimwiki:various/conspiracy\tvarious/conspiracy
@@ -92,6 +92,7 @@ et	ic/te.wiki	1;"	vimwiki:ic/te\tic/te
 ex	datavis/colorAtelier.wiki	14;"	vimwiki:datavis/colorAtelier\tdatavis/colorAtelier#ex
 ex	datavis/colorAtelier.wiki	32;"	vimwiki:datavis/colorAtelier\tdatavis/colorAtelier#ex
 ex	datavis/colorAtelier.wiki	38;"	vimwiki:datavis/colorAtelier\tdatavis/colorAtelier#ex
+ex	datavis/munzner.wiki	22;"	vimwiki:datavis/munzner\tdatavis/munzner#ex
 feito	Achievements.wiki	1;"	vimwiki:Achievements\tAchievements
 fuzzy	ic/fuzzy.wiki	1;"	vimwiki:ic/fuzzy\tic/fuzzy
 fuzzy-logic	ic/fuzzy.wiki	1;"	vimwiki:ic/fuzzy\tic/fuzzy

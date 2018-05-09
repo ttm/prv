@@ -1,0 +1,134 @@
+  ~ Calibra monitor / datashow / projetor ~
+         (calibra projeção de luz)
+     
+     arrumar:
+match Constant /\v\~.*\~/
+hi Normal guibg=red guifg=green
+
+" tenta C-\i C-\c (j n y, rgb etc)
+" tenta amarelo ou verde, ou realcolors:
+cal ApplyCS(g:ccs.yellow1, 'c')
+cal ApplyCS(g:ccs.green2, 'c')
+" ['yellow1', 'redblackl', 'passivepink1', 'green1', 'green2', 'red1', 'red2', 'red3', 'red4', 'red5', 'blue1', 'blue2', 'red1b', 'red1c', 'mith1']
+
+setl so=0
+
+
+
+(capa)
+
+
+
+             ~ Aula-atelier sobre cor ~
+    
+    
+           Pesquisador Dr. Renato Fabbri,
+               renato.fabbri@gmail.com
+           
+       ICMC/USP, FAPESP (projeto 2017/05838-3)
+   Profa. Dra. Maria Cristina Ferreira de Oliveira
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+==========================
+(0)
+
+                 ~ roteiro ~
+                 
+    motivação e introdução
+    
+    cores
+    
+    cores na visualização de dados
+    
+    ferramentas e exercícios
+      
+      
+      
+
+
+
+
+
+==========================
+(1)
+
+            ~ motivação ~
+            
+    ./colorForTheSciences
+    
+    optical illusion
+    
+    color as the primary cue for sight
+    
+    books on color
+    
+    
+==========================
+(1.1)
+
+            ~ introdução ~
+            
+    o que é cor?
+      espectro visível
+      células sensoras e respostas em frequência
+      processamento neural
+    
+    como ela é utilizada em visualização de dados?
+    
+    nas artes em geral?
+      passar Gombrich
+      
+    
+    
+==========================
+(2)
+
+            ~ cores ~
+            
+  Cores complementares, ótimas, etc
+  
+  escalas de cinza, cores mais distantes
+    
+    
+    
+==========================
+(3)
+
+            ~ cores na visualização de dados ~
+    
+  Texto: realce de sintáxe
+  
+  Redes: medidas nos vértices e arestas
+  
+  Tradicionais: gráfico de dispersão, linha do tempo, histograma
+            
+    
+==========================
+(4)
+
+            ~ ferramentas e exercícios ~
+            
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

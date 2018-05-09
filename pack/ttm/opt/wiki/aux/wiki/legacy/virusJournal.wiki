@@ -1,0 +1,64 @@
+= title =
+Self-dismantling in social experiments: anthropological physics and technoxamanic heys (ebós)
+
+== abstract ==
+Both mythological and hacker histories have recognized roles for self-dismantling:
+it protects the messenger, allows the detachment of the self from self image,
+is an artistic technique, etc.
+Brazil has a pronounced role in this context, for it yields religious freedom since
+the colonization and beforehand, and holds a renowned and visceral hacker behavior:
+the kludge culture (aka. 'cultura da gambiarra').
+This article exposes this legacy by two means: the description of social experiments
+made by many participants at once, memorials of images, videos, texts, music, webpages, groups,
+avatars/nicks/pseudonyms, presentations, etc.
+This text is itself an experiment, and will be fed back to the community for comments before publishing,
+as usual with any \emph{anthropological physics} experiment.
+The materials herein are no secret, and are usually not unpublished, although most of it have not been
+bind to a DOI or an ISBN.
+Further directions are given as seminal ideas because next steps will be given
+by the community upon diverse interests and context stonework.
+
+== keywords ==
+anthropological physics, technoxamanism, memorial, complex networks, data mining
+
+== outline ==
+  motivation
+    anthropological physics
+      complex networks
+      SNA
+      text mining
+      linked data
+      results
+        extreme stability in human social networks
+        social participation ontologies and vocabularies
+        benchmarks (email, information, directed and weighted networks)
+        baselines (bigrams, adjacency bots)
+  social, tecnoxamanic experiments
+    continuous example: 3 cicles leading to doctorate, SGPR and ONU, GSoC, Researcher at ICMC and TT5:
+      the cow of the end of the world
+    ephemeral example:
+      discrepant betweenness and degree centralities (error?)
+  galleries / memorial
+    avatars/nicks/pseudonyms/heteronyms/fake names
+    images
+    videos
+    texts
+    webpages
+    gadgets
+      bots:
+        bot pdf from 2013
+        legends:
+          fb scrapper bot
+          lalenia
+          adjacency bots
+    data
+      twitter, fb, email, irc, participaBR, cidade democrática, AA
+      
+= motivation =
+
+= social, tecnoxamanic experiments =
+      
+= galleries / memorial =
+
+= todo =
+self-dismantling? : despersonificação
