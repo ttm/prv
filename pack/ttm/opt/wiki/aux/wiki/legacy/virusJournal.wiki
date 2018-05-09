@@ -30,30 +30,6 @@ vincular ao tema:
 
 = by whom? =
 
-
-= title =
-Memory and self-dismantling in social experiments: anthropological physics and technoxamanic heys (ebós)
-
-== abstract ==
-Both mythological and hacker histories have recognized roles for self-dismantling:
-it protects the messenger, allows the detachment of the self from self image,
-is an artistic technique, etc.
-Brazil has a pronounced role in this context, for it yields religious freedom since
-the colonization and beforehand, and holds a renowned and visceral hacker behavior:
-the kludge culture (aka. 'cultura da gambiarra').
-This article exposes this legacy by two means: the description of social experiments
-made by many participants at once, memorials of images, videos, texts, music, webpages, groups,
-avatars/nicks/pseudonyms, presentations, etc.
-This text is itself an experiment, and will be fed back to the community for comments before publishing,
-as usual with any \emph{anthropological physics} experiment.
-The materials herein are no secret, and are usually not unpublished, although most of it have not been
-bind to a DOI or an ISBN.
-Further directions are given as seminal ideas because next steps will be given
-by the community upon diverse interests and context stonework.
-
-== keywords ==
-anthropological physics, technoxamanism, memorial, complex networks, data mining
-
 == outline ==
   motivation
     anthropological physics
@@ -86,18 +62,62 @@ anthropological physics, technoxamanism, memorial, complex networks, data mining
           adjacency bots
     data
       twitter, fb, email, irc, participaBR, cidade democrática, AA
+
+= title =
+Memory and self-dismantling in social experiments: anthropological physics and technoxamanic heys (ebós)
+
+== abstract ==
+Both mythological and hacker histories have recognized roles for self-dismantling:
+it protects the messenger, allows the detachment of the self from self image,
+is an artistic technique, etc.
+Brazil has a pronounced role in this context, for it yields religious freedom since
+the colonization and beforehand, and holds a renowned and visceral hacker behavior:
+the kludge culture (aka. 'cultura da gambiarra').
+This article exposes this legacy by two means: the description of social experiments
+made by many participants at once, memorials of images, videos, texts, music, webpages, groups,
+avatars/nicks/pseudonyms, presentations, etc.
+This text is itself an experiment, and will be fed back to the community for comments before publishing,
+as usual with any \emph{anthropological physics} experiment.
+The materials herein are no secret, and are usually not unpublished, although most of it have not been
+bind to a DOI or an ISBN.
+Further directions are given as seminal ideas because next steps will be given
+by the community upon diverse interests and context stonework.
+
+== keywords ==
+anthropological physics, technoxamanism, memorial, complex networks, data mining
+
       
 = What? Or motivation =
 The main motivation of what is described here was and is to enable members/participants to take action in their networks by means of scientific knowledge.
 Such networks are complex and social networks, topological structures that are embedded in, and embed, other complex systems.
 The ethic issues that arise when experimenting with other humans were ameliorated with the rise of the \emph{anthropological physics}~\cite{anPhy,anPhy2,thesis}:
-researchers or activists should keep the processes as open as possible (texts, software, data, processes, outcomes, people involved, etc) while studying and experimenting in their own networks.
+researchers or activists should keep the processes as open as possible (texts, software, data, processes, outcomes, people involved, etc) while studying and experimenting in their own networks; a trace inherited from ethnography and similar to the technique/strategy of writing diaries.
 
-= How? Or social, tecnoxamanic experiments =
+= How? Or social, technoxamanic experiments =
+Many experiments were carried out by diverse human agents,
+either directly or through a second/fake/pseudonym/avatar/nick profile,
+i.e. people, for various reasons, made conscious efforts in order
+to interact with their networks to achieve specific goals or inspect the outcome.
+Two examples are very efficient in exposing the procedures and potentials:
+one that is continuous within few months, one that is ephemeral and occurs in only a few hours or less.
+In such a diversity-rich setting, these experimental procedures were called
+\emph{technoxamanic} experiments (or 'yeys' for Brazilian Portuguese '{\bf ebós}').
+
+== The Cow of the End of the World (continuous experiment) ==
+
+== Betweenness VS strength (ephemeral experiment) ==
+
+== Massive tagging (semi-ephemeral experiment) ==
+
+== Video-conferences, Etherpads, websites, gadgets, and whatnot ==
+
       
-= What and how? Or the outcomes =
+= So what and how? Or the outcomes =
 
 = By whom? Or galleries / memorial =
+posts with many people marked.
+limits on marking people, citing them in comments,
+private messages.
 
 = What shall we remember? Or memory and narrative =
 
