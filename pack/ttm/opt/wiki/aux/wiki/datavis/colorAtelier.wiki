@@ -1,0 +1,104 @@
+
+= atelier =
+in English?
+find the colors we want to use. (as in the ic videos)
+software to install:
+- ipython3
+- pil
+- realcolors
+- Vim compiled with python3 support from latest git version :vim:
+  - clone prv repo to executable directory
+  - start vim with ./vim
+  - test this! and give the recipe
+
+exercises: :ex:
+- create colors
+- color schemes
+- palletes
+- free image design
+  - use templates created in the class
+  - see the procedures and explanations on the video version of the class
+- enhance ptbr article on PIL:
+  - https://pt.wikipedia.org/wiki/Python_Imaging_Library
+  - use:
+    - https://en.wikipedia.org/wiki/Python_Imaging_Library
+    - https://pillow.readthedocs.io/en
+
+parts:
+- motivation: color variation yields images and vision in general.
+  - stereoscopy
+    - magic eye
+    - 3d movies, animations (make with pil)
+    - 3d pictures of class mates :ex:
+      - same class mates, different angles
+      - different classmates, same faces (e.g. laughing)
+    - 3d video conference (with ric)
+    - 3d live art, enhanced telepresence
+  - syntax highlighting
+    - realcolors :ex: maybe put online with vimjs
+    - toki pona
+    - aa
+  - art (gombrich)
+  - data visualization
+  - books on colors in dataviz, philosofy, physics, etc.
+- one color: what is a color, one color picture.
+- two colors: two colors: contrast, threshold of differentiation, tests
+- three colors
+- four colors
+- five colors
+- beyond
+- programming for colors:
+  - PIL:
+    - color space conversion
+    - affine transforms
+    - statistical analysis
+    - effects: contrast enhancements, filtering (convolution kernels), point operations, saturation (see image magick menu when Image.show(), details).
+    - make thelema-related symbols (salt, sulfur, mercury, 5 elements, etc)
+- color and sound:
+  - correspondence by frequency in audible and visible spectrum:
+    - animation in linear progression
+    - exponential progression
+    - logarithmic progression
+    - power law
+  - artistic pieces:
+    - with my own will, with sync and without sync of sound and colors
+    - visualize: https://soundcloud.com/bernardobarros/sets/surface-of-inscription/s-AhsCH
+    - REM movement, psicoactive experiment
+    - versinus++: ppl asked to write versinus, and then versinus++
+
+== todo ==
+- read articles
+- read books:
+  - ./munzner
+- make realcolors ok
+- write class
+- make stereoscopic 3d animations
+- Ask Cristina to write students and ask them to install
+realcolors and cheese or similar software.
+- make artistic pieces :art:
+
+= slides =
+slidesAtelier
+
+= notes =
+White, gray and black are colors.
+At the same time, one might say
+that white, gray and black have no color.
+This second sense is called chromaticity
+in color science (and VD).
+When the 'color' of white, gray and black
+is none, absent, zero or nonsense,
+one is talking about chromaticity.
+
+chromaticity is a dimension/attribute/channel of color.
+It might be embedded in all three dimensions, such as in RGB.
+There are infinite pairs of two other attributes beyond chromaticity.
+
+cor é sinestésica, usar o exemplo da ilusao ótica,
+e argumentar pela visao ser fruto da variação de cor.
+
+ask not if one likes music or color, it makes little sense
+to ask something you know it is true.
+
+
+

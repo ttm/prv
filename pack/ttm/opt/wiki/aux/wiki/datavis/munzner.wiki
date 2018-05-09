@@ -1,0 +1,46 @@
+Visualization Analysis & Design, 2014
+
+====
+cap 10 - map color and other channels
+
+10.1
+color is best understood as luminance, hue, saturation.
+
+distinguish categories or encode ordering (sequential, diverging).
+(identities, equivalece)    (magnitude)
+
+bivariate colormaps
+
+= 10.3 color vision = 
+bastonetes para quando h[a pouca luz:
+visão em cinza e baixa resolução,
+pouca ou nenhuma importância para a VD
+
+3 tipos de cones para cores, cada um com
+uma resposta em frequência diferente.
+
+:ex: como usar os bastonetes para a VD?
+Escultura?
+
+sistema visual recebe estes sinais e obtém
+3 novos sinais, agora em cores opostas:
+vermelho ao verde (cromático),
+azul ao amarelo (cromático),
+preto ao branco (luminância).
+
+o sinal/canal de luminância provê
+alta resolução (e.g. bordas).
+Os dois cromáticos são de resolução mais baixa.
+
+Daltonismo mais comum: 8% da população masculina
+diferencia pouco ou nada o verde e o vermelho,
+mas preserva o canal azul-amarelo.
+
+== 10.2.2 ==
+
+
+
+
+
+
+
