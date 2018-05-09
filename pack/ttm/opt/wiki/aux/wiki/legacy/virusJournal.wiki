@@ -1,5 +1,38 @@
+instr:
+entre 1-3k palavras
+
+experimentos realizados em estruturas de redes sociais e como isso pode relacionar-se com a construção da memória coletiva na contemporaneidadeo
+
+enviar ao menos as imagens da vaca e os arquivos de dados como um .zip
+
+tapete: texto curto de autor convidado
+
+formato livre
+  talvez screenshot do texto,
+  talvez enviar só o .wiki/.txt
+  idealmente: pdf no overleaf, mando p arXiv
+
+vincular ao tema:
+  a construção da memória
+  pensar 'memória e narrativa', como valorizada pela ação griô
+  acusar que na SGPR e nos movimentos sociais a VDFDM foi por vezes vinculada ao fundúncio político de 2013-agora
+  que o trampo com a SGPR está encostado
+  mas todos estes esforçós vigam diariamente nas atividades de milhares de avatares que se libertam da prisão de si
+  histórico/contrib para a participação social / controle social, democracia participativa.
+  pontos de cultura
+  = do que iremos nos lembrar =
+  de que maneira estas memórias vem sendo construídas e por quem?
+  
+  
+= what? =
+
+= how? =
+
+= by whom? =
+
+
 = title =
-Self-dismantling in social experiments: anthropological physics and technoxamanic heys (ebós)
+Memory and self-dismantling in social experiments: anthropological physics and technoxamanic heys (ebós)
 
 == abstract ==
 Both mythological and hacker histories have recognized roles for self-dismantling:
@@ -54,11 +87,19 @@ anthropological physics, technoxamanism, memorial, complex networks, data mining
     data
       twitter, fb, email, irc, participaBR, cidade democrática, AA
       
-= motivation =
+= What? Or motivation =
+The main motivation of what is described here was and is to enable members/participants to take action in their networks by means of scientific knowledge.
+Such networks are complex and social networks, topological structures that are embedded in, and embed, other complex systems.
+The ethic issues that arise when experimenting with other humans were ameliorated with the rise of the \emph{anthropological physics}~\cite{anPhy,anPhy2,thesis}:
+researchers or activists should keep the processes as open as possible (texts, software, data, processes, outcomes, people involved, etc) while studying and experimenting in their own networks.
 
-= social, tecnoxamanic experiments =
+= How? Or social, tecnoxamanic experiments =
       
-= galleries / memorial =
+= What and how? Or the outcomes =
+
+= By whom? Or galleries / memorial =
+
+= What shall we remember? Or memory and narrative =
 
 = todo =
 self-dismantling? : despersonificação
