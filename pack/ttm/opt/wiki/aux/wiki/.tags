@@ -25,12 +25,12 @@ Music	Music.wiki	1;"	vimwiki:Music\tMusic
 Notes	blergh.wiki	1;"	vimwiki:blergh\tblergh
 Notes	home/renato/.vim/pack/ttm/opt/wiki/aux/wiki/blergh.wiki	1;"	vimwiki:home/renato/.vim/pack/ttm/opt/wiki/aux/wiki/blergh\thome/renato/.vim/pack/ttm/opt/wiki/aux/wiki/blergh
 OK	Achievements.wiki	1;"	vimwiki:Achievements\tAchievements
-Stones	todo.wiki	22;"	vimwiki:todo\ttodo#lightyearstones
-TASK	todo.wiki	178;"	vimwiki:todo\ttodo#migrado do Tasks.vim
-TASKS	todo.wiki	178;"	vimwiki:todo\ttodo#migrado do Tasks.vim
+Stones	todo.wiki	23;"	vimwiki:todo\ttodo#lightyearstones
+TASK	todo.wiki	179;"	vimwiki:todo\ttodo#migrado do Tasks.vim
+TASKS	todo.wiki	179;"	vimwiki:todo\ttodo#migrado do Tasks.vim
 TODO	todo.wiki	1;"	vimwiki:todo\ttodo
-Task	todo.wiki	178;"	vimwiki:todo\ttodo#migrado do Tasks.vim
-Tasks	todo.wiki	178;"	vimwiki:todo\ttodo#migrado do Tasks.vim
+Task	todo.wiki	179;"	vimwiki:todo\ttodo#migrado do Tasks.vim
+Tasks	todo.wiki	179;"	vimwiki:todo\ttodo#migrado do Tasks.vim
 ToDo	todo.wiki	1;"	vimwiki:todo\ttodo
 Todo	todo.wiki	1;"	vimwiki:todo\ttodo
 Vim	prv/vim.wiki	1;"	vimwiki:prv/vim\tprv/vim
@@ -70,7 +70,7 @@ data-structure	ic/ed.wiki	1;"	vimwiki:ic/ed\tic/ed
 data-structures	ic/ed.wiki	1;"	vimwiki:ic/ed\tic/ed
 datavis	datavis/datavis.wiki	1;"	vimwiki:datavis/datavis\tdatavis/datavis
 dataviz	datavis/datavis.wiki	1;"	vimwiki:datavis/datavis\tdatavis/datavis
-definition	todo.wiki	180;"	vimwiki:todo\ttodo#definition
+definition	todo.wiki	181;"	vimwiki:todo\ttodo#definition
 diary	diary/diary.wiki	88;"	vimwiki:diary/diary\tdiary/diary#Diary
 diary	home/renato/.vim/pack/ttm/opt/wiki/aux/wiki/diary/diary.wiki	87;"	vimwiki:home/renato/.vim/pack/ttm/opt/wiki/aux/wiki/diary/diary\thome/renato/.vim/pack/ttm/opt/wiki/aux/wiki/diary/diary#Diary
 digraphs	Notation.wiki	4;"	vimwiki:Notation\tNotation#digraphs
@@ -166,12 +166,12 @@ soft-computing	ic/sc.wiki	1;"	vimwiki:ic/sc\tic/sc
 sp	ic/pe.wiki	1;"	vimwiki:ic/pe\tic/pe
 spirituality	various/spirituality.wiki	1;"	vimwiki:various/spirituality\tvarious/spirituality
 statistics	ic/probabilidade.wiki	1;"	vimwiki:ic/probabilidade\tic/probabilidade
-stones	todo.wiki	22;"	vimwiki:todo\ttodo#lightyearstones
+stones	todo.wiki	23;"	vimwiki:todo\ttodo#lightyearstones
 structured-programming	ic/pe.wiki	1;"	vimwiki:ic/pe\tic/pe
 swarm	ic/ie.wiki	1;"	vimwiki:ic/ie\tic/ie
 ta	ic/ta.wiki	1;"	vimwiki:ic/ta\tic/ta
-task	todo.wiki	178;"	vimwiki:todo\ttodo#migrado do Tasks.vim
-tasks	todo.wiki	178;"	vimwiki:todo\ttodo#migrado do Tasks.vim
+task	todo.wiki	179;"	vimwiki:todo\ttodo#migrado do Tasks.vim
+tasks	todo.wiki	179;"	vimwiki:todo\ttodo#migrado do Tasks.vim
 te	ic/te.wiki	1;"	vimwiki:ic/te\tic/te
 teoria-do-aprendizado	ic/ta.wiki	1;"	vimwiki:ic/ta\tic/ta
 todo	Notation.wiki	3;"	vimwiki:Notation\tNotation#todo
@@ -181,7 +181,7 @@ todo	ic/ic.wiki	52;"	vimwiki:ic/ic\tic/ic#andamentos#código
 todo	ic/pe.wiki	3;"	vimwiki:ic/pe\tic/pe#todo
 todo	index.wiki	19;"	vimwiki:index\tindex#todo
 todo	todo.wiki	1;"	vimwiki:todo\ttodo
-todo	todo.wiki	180;"	vimwiki:todo\ttodo#todo
+todo	todo.wiki	181;"	vimwiki:todo\ttodo#todo
 tópico-emergente	ic/te.wiki	1;"	vimwiki:ic/te\tic/te
 vim	datavis/colorAtelier.wiki	9;"	vimwiki:datavis/colorAtelier\tdatavis/colorAtelier#vim
 vim	prv/vim.wiki	1;"	vimwiki:prv/vim\tprv/vim

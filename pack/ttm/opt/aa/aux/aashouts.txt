@@ -2409,3 +2409,12 @@ Qui Mai 10 15:57:54 -03 2018
 terminando fichamento com dautonismo
 Qui Mai 10 16:12:14 -03 2018
 -----
+comecando o livro do ware
+Qui Mai 10 16:27:14 -03 2018
+-----
+achei + para syntax highlighting
+Qui Mai 10 16:43:26 -03 2018
+-----
+$$$$$
+
+

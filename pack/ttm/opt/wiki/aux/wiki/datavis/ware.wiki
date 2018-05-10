@@ -1,0 +1,46 @@
+perception for design, third ed.
+
+==========
+cap 5
+
+color blindness
+∴ superfluous in modern life
+extremely useful in data visualization
+camouflage antithesis:
+  Fig 4.1
+  hunter-gatherers
+
+ecology -> information display / VD
+  color as attribute rather than primary characteristic
+  pref. labeling categorization
+  unpref. shape, detail, spatial layout
+
+= Trichromacy Theory =
+3 cones in retina active at normal light levels
+rods, for low light levels, ignored in color perception
+3 cones -> 3 dimensions in human color vision space (aka. color space)
+
+liquid crystal: RGB
+primary paint: R Yellow B
+minimal three inks: Cyan Magenta Yellow
+
+chicken: 12 color-sensitive cels
+
+'cone sensitivity functions'
+Fig 4.2
+S/blue less sensitive:
+reason (besides chromatic aberration, discussed in Chap 2)
+not to show detailed info (such as text) in pure blue in a black background.
+
+mix only three colors, aka. primaries, to get any 'particular patch',
+∴ any color,
+∴ only the response of the receptors matter, the spectrum may be any.
+
+== color blindness ==
+~10% male, 1% female have color vision deficiency.
+protanopia, deuteranopia, 
+
+2-dimensional color spaces in common color deficiencies
+
+= Color Measurement =
+
