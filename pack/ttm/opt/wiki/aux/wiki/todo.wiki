@@ -1,9 +1,21 @@
-<<<<<<< HEAD:pack/ttm/opt/prv/aux/vimwiki/todo.wiki
+:Todo:todo:TODO:ToDo:
+=================
+
+fichar livro da munzner, 2h
+- Qui Mai 10 14:21:17 -03 2018
+livro perception for design, 4h
+3 artigos cristina. 6h
+Bombar apresentação/aula, ensaiar, gravar screencast 4h
+fazer segunda parte: exercícios e software (Pillow) 5h
+
+total: 21h, sobram 3h para comer, banho, me deslocar, etc.
+
+
+
 notas:
 - os bots são oráculos, meio-termos entre algoritmos e embaralhamento.
 - 
 =======
-:Todo:todo:TODO:ToDo:
 
 >>>>>>> 87d550160b9266fd306433c0de4c027e25a2d4ba:pack/ttm/opt/wiki/aux/wiki/todo.wiki
 = lightyearstones =

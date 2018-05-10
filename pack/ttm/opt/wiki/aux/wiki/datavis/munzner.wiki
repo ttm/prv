@@ -11,8 +11,8 @@ distinguish categories or encode ordering (sequential, diverging).
 
 bivariate colormaps
 
-= 10.3 color vision = 
-bastonetes para quando h[a pouca luz:
+= 10.2.1 color vision = 
+bastonetes para quando há pouca luz:
 visão em cinza e baixa resolução,
 pouca ou nenhuma importância para a VD
 
@@ -35,11 +35,225 @@ Os dois cromáticos são de resolução mais baixa.
 Daltonismo mais comum: 8% da população masculina
 diferencia pouco ou nada o verde e o vermelho,
 mas preserva o canal azul-amarelo.
+(deuteranopia, protanopia)
+(+ variações, + tritanopia)
 
-= 10.2.2 =
+= 10.2.2 color spaces =
+three dimensional for humans.
+Infinite representation possibilities,
+special basis for computer manipulation
+(which ??)
+or human vision
+(which ??).
 
 
+RGB, computationally convenient,
+not how we see.
+Not particularly useful as separate channels,
+Munzner leaves it aside.
+
+HSL: hue, saturation, lightness
+hue: chromaticity
+saturation: amount of white
+lightness: amount of black
+
+HSL disc: white center, hue around, lightness in a separate slider.
+(color picker)
+
+HSV, V is grayscale Value, lin to L
+
+HSL is pseudoperceptual:
+hue is isolated,
+but lightness L != luminance
+Fig 10.3
+'true luminance', perceptually linear luminance L*
+
+:ex: how to measure luminance?
+It should be possible to calculate an approximation
+using psychophysics (Weber-Fechner or Steven's laws)
+or empirical curves.
+use 'spetral sensitivity'?
+Fig 10.4
+
+Perceptually uniform/linear color spaces:
+Lab (or L*a*b*): L* black-white luminance,
+a*, b* are color/chromatic axes.
+L* follows Steven's with alpha=0.5 with respect
+to brightness.
+:ex: how to calculate brightness?
+
+Lab space is good interpolation, differences,
+and other calculations that should not be executed
+in the perceptually non linear spaces (e.g. RGB, HSL).
 
 
+luminance: physical property of a material
+brightness: perceptual quantity (e.g. loudness)
+Lightness: the amount of black in a color
+grayscale Value: linearly related to L
+Saturation: the amout of white in a color
+Hue: the chromatic channel/dimension of a color
+R,G,B
 
+Munzner:
+luminance: black-white channel/dimension.
+saturation and hue are the other two chromatic channels.
+Such definitions are not used elsewhere.
+Fig 10.5
 
+== 10.2.3 Luminance, Saturation and Hue ==
+luminance and saturation: magnitude channels
+hue: identity channel
+
+luminance: 2-4 bins, specially in nonuniform background.
+low accuracy in noncontiguous regions.
+Fine detail, crisp edges.
+Text is not readable without luminance contrast,
+10:1 recommended, 3:1 minimum.
+
+saturation also ok for ordered data: ~3 bins.
+also low accuracy when noncontiguous.
+smaller size objects yield lower resolution of saturation: use 2 bins
+saturation and hue are separable only with large resolution
+saturation and hue does not provide detectable edges.
+
+hue:
+  by region size, same problem as saturation, same noncontiguous low resolution:
+    small: use bright and saturated colors to make colors distinguishable
+    large: low-saturation colors, i.e. pastels
+  effective for categorical data and groupings, second only to position
+  6-7 bins in small separated regions.
+  no (strong) implicit perceptual ordering (VS luminance and saturation).
+  Higher level orderind (not pure perception):
+    trafic lights
+    rainbow
+    
+== 10.2.4 Transparency ==
+encode information by using the
+channel opaque - see-through.
+
+interacts strongly with other channles,
+should be used in coordination with them:
+  not in conjunction with luminance and saturation
+  may b e used with hue with few steps
+is used mostly to create layers, e.g. background and foreground
+frequently redundant: encoding in transparency and another channel
+
+= 10.3 colormaps (CMs) =
+mapping between colors and data values
+(visual enconding with color)
+(aka. pseudocoloring, color ramp)
+has pitfalls
+
+CM:
+  categorical
+    segmented CMs
+      aka. quantized, stepped, binned, discretized, discrete CM
+    used for categorical and ordinal attributes
+  ordered
+    continuous CMs
+    type:
+      sequential
+      diverging
+    use luminance and saturation
+    used for quantitative and ordinal attributes
+  bivariate:
+    encodes two attributes simultaneously
+    pref. second attribute binary
+
+should follow the expressiveness principle (sec 5.4.1):
+  match colormap to data characteristics
+    
+== 10.3.1 categorical colomaps ==
+(aka. qualitative colormaps)
+encode categories (and groupings?)
+normally segmented
+next best for categorical data after position
+
+typically uses all three channels for a single attribute
+small uncontiguous regions: 6-12 bins (include blackground color and other colors)
+black, white, gray and other usual colors are often already taken.
+pref. nameable colors, e.g. fully saturated easily nameble (red-green, blue-yellow); orange, brown, pink, magenta, purple, cyan.
+
+care with:
+  luminance
+    contrast, major issue:
+      pref. same luminance (same salience):
+        yellow and green less luminance in white then red and blue
+      pref. diff luminance:
+        for black-white img
+  saturation
+    size:
+      small regions (e.g. line) -> use high saturation
+      large regions -> use low saturation
+
+∴ CM depend on mark/glyph type
+
+create CM: http://www.colorbrewer2.org
+Fig 10.7
+Fig 10.8
+Fig 10.9
+
+== 10.3.2 ordered colormaps ==
+for ordinal or quantitative attributes,
+
+magnitude channel?
+
+sequential
+  min to max val
+  only luminance -> garyscale ramp
+  if using hue:
+    one end saturated
+    other end:
+      if saturation: pale or white
+      if luminance: dark or black
+  to use saturation, hue is needed
+diverging
+  one hue at each endpoint
+  neutral color at midpoint, e.g.:
+    white, gray, black;
+    yellow / high luminance
+
+continuous
+  how many hues? depend on level of structure to emphasize
+  Fig 10.11
+
+rainbow CM:
+  easily nomeable subranges (advantage)
+  default in many software
+  three drawbacks:
+    hue indicates order but is an identity channel without ordering
+    not a perceptually linear progression
+    fine detail in hue, not luminance (good for details, edges)
+
+∴ monotonically increasing luminance CMs:
+  order hues by luminance (high and low level structures)
+  Fig 10.12(b)
+  Fig 10.13
+  
+raibow CM ok sometimes, e.g. segmented: Fig 13(c)
+
+seg CM (quant data) => (datatype quant -> ordered)
+  less is more
+    
+== 10.3.3 bivariate CMs==
+pref. univariate
+bivariate: two attributes.
+if one is binary:
+  fix base set of hues and vary their saturation
+  (categorical/diverging - binary)
+if both categorical with d > 2: results are poor
+if both are sequential/diverging, ok, used, difficult to understand sometimes
+
+== 10.3.4 colorbling-safe colormap design ==
+red-green: 8% male, 0.5% femail.
+variants
+
+avoid only hue encoding,
+i.e. use also luminance or saturation.
+
+add luminance to red and green.
+
+color blindness simulator:
+http://www.rehue.net
+and others
