@@ -1,7 +1,7 @@
 perception for design, third ed.
 
 ==========
-cap 5
+cap 4
 
 color blindness
 ∴ superfluous in modern life
@@ -14,6 +14,7 @@ ecology -> information display / VD
   color as attribute rather than primary characteristic
   pref. labeling categorization
   unpref. shape, detail, spatial layout
+
 
 = Trichromacy Theory =
 3 cones in retina active at normal light levels
@@ -32,9 +33,12 @@ S/blue less sensitive:
 reason (besides chromatic aberration, discussed in Chap 2)
 not to show detailed info (such as text) in pure blue in a black background.
 
+:notes:
 mix only three colors, aka. primaries, to get any 'particular patch',
-∴ any color,
+patch is any color-equivalent spectral pattern (i.e. an equivalence class of spectra),
 ∴ only the response of the receptors matter, the spectrum may be any.
+
+three orthogonal spectra define a gamut.
 
 == color blindness ==
 ~10% male, 1% female have color vision deficiency.
@@ -80,10 +84,11 @@ for color specification
 
 CIE system of color standards
 serious color specification
-measurements made prior to 1931. (revision?)
+measurements made prior to 1931.
+:ex: was there any revision thereafter?
 (using class filters derived from the standard observer)
 
-tristimulus calues, abstract receptors XYZ of an abstract observer.
+tristimulus values, abstract receptors XYZ of an abstract observer.
 Y is luminance
 XYZ are mathematically convenient transformations of measured sensitivities
 Appendix B has details on how the system is derived
@@ -96,6 +101,7 @@ surface colors, pigments, illuminant
 
 == chromaticity coordinates ==
 lightness, or luminance, should be treated specially (see Chap 3)
+(Steven's law? Brilliance? Lightness? Weber-Fechner's law?)
 
 chromaticity <--> tristimulus
 
@@ -107,10 +113,12 @@ chromaticity diagram (only CIE?):
   white, illuminants: D65, A
   excitation purity (saturation)
   complementary wavelengths/colors
+  Fig. 4.8
 
 sRGB (vs RGB?)
 
 Eq 4.7 to find the CIE tristimulus values
+Fig. 4.8
 
 calibrate monitor's R, G, B outputs and apply gamma correction
 (see Chap 3).

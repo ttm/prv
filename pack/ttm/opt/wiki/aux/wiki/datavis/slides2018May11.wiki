@@ -1,3 +1,15 @@
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   ~ Calibra monitor / datashow / projetor ~
          (calibra projeção de luz)
 
@@ -5,15 +17,23 @@
 
      arrumar:
 match Constant /\v\~.*\~/
+match VimSynError /\v\~.*\~/
 hi Normal guibg=red guifg=green
 
 " tenta C-\i C-\c (j n y, rgb etc)
 " tenta amarelo ou verde, ou realcolors:
 cal ApplyCS(g:ccs.yellow1, 'c')
 cal ApplyCS(g:ccs.green2, 'c')
-" ['yellow1', 'redblackl', 'passivepink1', 'green1', 'green2', 'red1', 'red2', 'red3', 'red4', 'red5', 'blue1', 'blue2', 'red1b', 'red1c', 'mith1']
+cal ApplyCS(g:ccs.passivepink1, 'c')
+cal ApplyCS(g:ccs.red1, 'c')
+cal ApplyCS(g:ccs.red5, 'c')
+" exu1 _notes yellow1 redblackl
+" passivepink1 green1 green2 red1 red2
+" red3 red4 red5 blue1 blue2 red1b red1c
 
 setl so=0
+" toggle numbering but maintain spacing:
+" <find commands, make function and m mapping>
 
 
 
@@ -47,20 +67,21 @@ setl so=0
 ==========================
 (0)
 
-                 ~ roteiro ~
+               ~ roteiro ~
                  
-    1 - motivação e introdução (propaganda)
+    1 - motivação / introdução (propaganda)
     
-    2 - cores (passagem)
+    2 - cores (☥)
     
-    3 - cores na visualização de dados (passagem)
+    3 - cores na visualização de dados (☨)
     
     4 - (era: ferramentas e exercícios)
         literatura fichada:
           artigos selecionados
           Munzner
           Ware <- até aplicações
-    
+   
+               ~  (☥,☨) contexto, aplicação ~
       
       
       
@@ -72,7 +93,7 @@ setl so=0
 ==========================
 (1)
 
-            ~ motivação ~
+         ~ motivação / introdução ~
             
     color as the primary cue for sight
     
@@ -80,8 +101,9 @@ setl so=0
       file:~/repos/dataVisualization/figs/optIllusion.jpg
     
     books on color
-      Goethe, Schopenhauer, Aristotle, Cage, Runge, Klee, Tricia Guild?
-      Newton
+      Goethe, Schopenhauer, Aristotle,
+      Cage, Runge, Klee, Tricia Guild?,  Newton
+      
     * Klee mesmo, cadê? quem mais?
       Rimbaud? Democritus?
       - Color and Meaning: Art, Science, and Symbolism - Cage
@@ -92,11 +114,12 @@ setl so=0
     
     Gombrich,
       referência quasi-máxima
-      para história da arte
+      história da arte
       (livro em mãos)
     
     ./colorForTheSciences
     
+    :::
     
     
     
@@ -116,28 +139,13 @@ setl so=0
     
     
     
-==========================
-(1.1)
-
-            ~ introdução ~
-            
-            
-    o que é cor?
-      espectro visível
-      células sensoras e respostas em frequência
-      processamento neural
     
-    como ela é utilizada em visualização de dados?
     
-    nas artes em geral?
-      passar Gombrich
-      
-      
-      
-      
-      
-      
-      
+    
+    
+    
+    
+    
       
       
       
@@ -150,9 +158,17 @@ setl so=0
 ==========================
 (2)
 
-            ~ cores ~
+            ~ cores (☥)~
             
-            
+  o que é cor?
+    cor do objeto ou que se vê?
+    espectro visível
+    células sensoras e respostas em frequência
+    processamento neural
+  
+  como ela é utilizada em visualização de dados?
+    e nas artes em geral? (Gombrich)
+      
   Cores complementares, opostas, ótimas, etc.
   
   escalas de cinza, cores mais distantes
@@ -170,14 +186,17 @@ setl so=0
 ==========================
 (3)
 
-            ~ cores na visualização de dados ~
+       ~ cores na visualização de dados (☨) ~
     
     
   Texto: realce de sintáxe
   
   Redes: medidas nos vértices e arestas
   
-  Tradicionais: gráfico de dispersão, linha do tempo, histograma
+  Tradicionais:
+    gráfico de dispersão,
+    linha do tempo,
+    histograma
             
     
     
@@ -195,13 +214,23 @@ setl so=0
     
     
 ==========================
-(4)
+(4.(-1))
 
             ~ era: ferramentas e exercícios ~
             
             
   Pillow e IPython
   talvez Vim, matplotlib, d3, etc
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -221,5 +250,10 @@ setl so=0
   ./munzner (instrumental, técnico VD)
   ./ware (instrumental, técnico perceptual)
     
-  email p vcs com os links
+    
+~ email p vcs com os links: ~
+    https://github.com/ttm/prv/blob/master/pack/ttm/opt/wiki/aux/wiki/datavis/slides2018May11.wiki
+    https://github.com/ttm/prv/tree/master/pack/ttm/opt/wiki/aux/wiki/datavis
+    
+  obrigado.
     

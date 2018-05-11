@@ -95,13 +95,14 @@ ex	datavis/colorAtelier.wiki	38;"	vimwiki:datavis/colorAtelier\tdatavis/colorAte
 ex	datavis/munzner.wiki	22;"	vimwiki:datavis/munzner\tdatavis/munzner#ex
 ex	datavis/munzner.wiki	70;"	vimwiki:datavis/munzner\tdatavis/munzner#ex
 ex	datavis/munzner.wiki	82;"	vimwiki:datavis/munzner\tdatavis/munzner#ex
-ex	datavis/ware.wiki	158;"	vimwiki:datavis/ware\tdatavis/ware#ex
-ex	datavis/ware.wiki	160;"	vimwiki:datavis/ware\tdatavis/ware#ex
-ex	datavis/ware.wiki	165;"	vimwiki:datavis/ware\tdatavis/ware#ex
-ex	datavis/ware.wiki	167;"	vimwiki:datavis/ware\tdatavis/ware#ex
-ex	datavis/ware.wiki	187;"	vimwiki:datavis/ware\tdatavis/ware#ex
-ex	datavis/ware.wiki	190;"	vimwiki:datavis/ware\tdatavis/ware#ex
-ex	datavis/ware.wiki	192;"	vimwiki:datavis/ware\tdatavis/ware#ex
+ex	datavis/ware.wiki	88;"	vimwiki:datavis/ware\tdatavis/ware#ex
+ex	datavis/ware.wiki	166;"	vimwiki:datavis/ware\tdatavis/ware#ex
+ex	datavis/ware.wiki	168;"	vimwiki:datavis/ware\tdatavis/ware#ex
+ex	datavis/ware.wiki	173;"	vimwiki:datavis/ware\tdatavis/ware#ex
+ex	datavis/ware.wiki	175;"	vimwiki:datavis/ware\tdatavis/ware#ex
+ex	datavis/ware.wiki	195;"	vimwiki:datavis/ware\tdatavis/ware#ex
+ex	datavis/ware.wiki	198;"	vimwiki:datavis/ware\tdatavis/ware#ex
+ex	datavis/ware.wiki	200;"	vimwiki:datavis/ware\tdatavis/ware#ex
 feito	Achievements.wiki	1;"	vimwiki:Achievements\tAchievements
 fuzzy	ic/fuzzy.wiki	1;"	vimwiki:ic/fuzzy\tic/fuzzy
 fuzzy-logic	ic/fuzzy.wiki	1;"	vimwiki:ic/fuzzy\tic/fuzzy
@@ -147,6 +148,7 @@ note	home/renato/.vim/pack/ttm/opt/wiki/aux/wiki/diary/diary.wiki	157;"	vimwiki:
 note	index.wiki	19;"	vimwiki:index\tindex#note
 note-types	index.wiki	10;"	vimwiki:index\tindex#note types
 notes	blergh.wiki	1;"	vimwiki:blergh\tblergh
+notes	datavis/ware.wiki	36;"	vimwiki:datavis/ware\tdatavis/ware#notes
 notes	home/renato/.vim/pack/ttm/opt/wiki/aux/wiki/blergh.wiki	1;"	vimwiki:home/renato/.vim/pack/ttm/opt/wiki/aux/wiki/blergh\thome/renato/.vim/pack/ttm/opt/wiki/aux/wiki/blergh
 notes	index.wiki	10;"	vimwiki:index\tindex#note types
 ok	Achievements.wiki	1;"	vimwiki:Achievements\tAchievements
@@ -161,7 +163,7 @@ programação-estruturada	ic/pe.wiki	1;"	vimwiki:ic/pe\tic/pe
 pronto	Achievements.wiki	1;"	vimwiki:Achievements\tAchievements
 prv	prv/prv.wiki	1;"	vimwiki:prv/prv\tprv/prv
 question	Notation.wiki	41;"	vimwiki:Notation\tNotation#question
-rec	datavis/ware.wiki	139;"	vimwiki:datavis/ware\tdatavis/ware#rec
+rec	datavis/ware.wiki	147;"	vimwiki:datavis/ware\tdatavis/ware#rec
 religion	various/spirituality.wiki	1;"	vimwiki:various/spirituality\tvarious/spirituality
 revista-virus	virus.wiki	1;"	vimwiki:virus\tvirus
 revista-vírus	virus.wiki	1;"	vimwiki:virus\tvirus
