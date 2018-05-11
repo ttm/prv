@@ -1,7 +1,9 @@
 :wiki:
 
 = utf8 =
+use utf8 as much as possible
 https://www.w3schools.com/charsets/ref_utf_math.asp
+https://en.wikipedia.org/wiki/Plane_(Unicode)
 2042 ⁂ 
 2234 ∴
 2235 ∵
@@ -22,13 +24,23 @@ https://www.w3schools.com/charsets/ref_utf_math.asp
 2628 ☨
 26fc ⛼
 
+624d 才 (talent)
+8005 者 (doer)
+96c7 雇 (employ)
+771f 真 (true)
+795e 神 (god)
+4eca 今 (now)
 
 
 
 Ԙ ℉
+Ԙ ℱ
 
 check utf16
-understand cyrillic and comptic
+understand cyrillic and coptic
+https://en.wikipedia.org/wiki/Cyrillic_script_in_Unicode
+https://en.wikipedia.org/wiki/Coptic_alphabet
+
 learn to draw boxes and make text-based user interfaces
 
 make i-ching with utf8 trigrams, python poisson coins, and Vim interface

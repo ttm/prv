@@ -520,3 +520,8 @@ ended: Qui Mai 10 20:02:42 -03 2018
 started: Qui Mai 10 20:04:19 -03 2018
 dur: 15.0
 slots: 8
+
+
+started: Sex Mai 11 05:33:08 -03 2018
+dur: 15.0
+slots: 8

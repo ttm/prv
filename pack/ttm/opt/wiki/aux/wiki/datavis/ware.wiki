@@ -139,8 +139,91 @@ Uniform color spaces provide only rough approximations
 :rec: use more saturated colors for small areas;
 use less saturated colors for large areas.
 
-== opponent process theory ==
+== opponent process theory (OPT) ==
+late 19th century, E. Hering:
+  six elementary colors
+  three opponent axes/pairs/dichotomies/binary or dual relations:
+    black-white (luminance), r1
+    red-green, r2
+    yellow-blue, r3
+recent years:
+  OPT supported and cornerstone of color theory/science
+  physiological basis:
+    luminance channel r1 uses all cones
+    red-green r2 uses difference between L and M
+    yellow-blue r3 uses difference between (L + M) and S
+    (PS. L here is long wavelength, not luminance or lightness)
+    
+Fig 4.10
+:ex: cones with varying saturation. Why so? Just a glitch?
 
+:ex: difference between color theory and science
+
+=== naming ===
+OPT ∴ no reddish green or yellowish blue, no opponent mix, they blend into gray axis.
+
+:ex: any more impossible colors?
+
+:ex: what more might OPT predict, corroborate, suggest, etc?
+
+=== cross-cultural naming ===
+neural basis
+∵
+first named colors (1969, Berlin, Kay):
+  2 - black and white         |  OPT
+  3- red                      |  OPT
+  4,5 - green and yellow      |  OPT
+  6 - blue                    |  OPT
+  7 - brown
+  8,9,10,11 - pink, purple, orange, gray
+  12,13,... - ???
+  (Fig 4.11)
+
+∴
+"elementary colors are far more valuable
+in coding data than others".
+
+
+:ex: what might 12,13 be? list possibilities.
+Cyan? More names for white? Dark vs black? White vs bright?
+
+:ex: Berlin and Kay, 1969 have not been revised since?
+
+:ex: consider RGB.
+What elementary color is missing?
+Is magenta and cyan rightfully less well recognized colors?
+(PS. RG0 = yellow, 0GB = cyan/aqua/ice?, R0B = magenta/purple)
+
+
+=== unique hues ===
+unique hues change little when luminance changes (1981)
+supports chromatic and luminance independence hypothesis
+
+yellow accuracy within 2nm (1981, Hurvich)
+
+two unique greens (1967, Richards):
+  ~514nm, 2/3 population
+  ~525nm, 1/3 population
+  turquoise arguing: green or blue?
+  
+=== neurophysiology ===
+"red-green and yellow-blue opponent cells exist"
+(others do not)
+opponency properties in monkey primary visual cortexes
+
+=== categorical colors ===
+evidence of canonical colors (as Plato's forms).
+orange or lime green are not easy to remmember
+
+color confusion by categories
+
+1986, Post, Greene, 210 colors by 2-degree, black surround:
+  8 colors + white ∴ few labels
+  red -> orange, red + _blue -> red
+  white and colored backgrounds -> different results
+  Fig. 4.12
+
+== Properties of Color Channels ==
 
 
 
