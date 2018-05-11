@@ -43,4 +43,110 @@ protanopia, deuteranopia,
 2-dimensional color spaces in common color deficiencies
 
 = Color Measurement =
+the basis of colorimetry:
+one may match any color with no more than three primary lights
+
+colorimetry is essential for specifying and reproducing colors
+
+C ≡ rR + gG + bB
+
+≡ is perceptual match
+
+Fig 4.4
+Fig 4.5
+
+'gamut': the set of colors in the 'color space'
+(either produced or sensed by a system)
+YBP smaller gamut then RGB
+
+negative light (r, g, b values):
+  allows one to say that any color might be matched by three distinct lights
+  is equivalent to adding the light to the reference color. 
+
+'non-physical primaries' ?
+
+== change of primaries ==
+RGB is not special, primaries are arbitrary for color mixture
+
+fundamental is color space conversion,
+change from one set of primaries to another
+
+transformation on color spaces: Appendix A
+
+'abstract primaries'
+for color specification
+
+'standard observer'
+
+CIE system of color standards
+serious color specification
+measurements made prior to 1931. (revision?)
+(using class filters derived from the standard observer)
+
+tristimulus calues, abstract receptors XYZ of an abstract observer.
+Y is luminance
+XYZ are mathematically convenient transformations of measured sensitivities
+Appendix B has details on how the system is derived
+
+XYZ gamut is beyond physically realizable colors
+
+Use CIEtri to convert between primary spaces
+
+surface colors, pigments, illuminant
+
+== chromaticity coordinates ==
+lightness, or luminance, should be treated specially (see Chap 3)
+
+chromaticity <--> tristimulus
+
+chromaticity diagram (only CIE?):
+  mix of two colors lie on the line
+  triangles in the diagram
+  spectrum locus? same as chromaticity coordinate?
+  purple boundary
+  white, illuminants: D65, A
+  excitation purity (saturation)
+  complementary wavelengths/colors
+
+sRGB (vs RGB?)
+
+Eq 4.7 to find the CIE tristimulus values
+
+calibrate monitor's R, G, B outputs and apply gamma correction
+(see Chap 3).
+Monitor then is a linear color creation device with a particular set
+of primaries
+(self-calibrating monitors)
+
+=== color differences and uniform color spaces ===
+color distances match euclidean distance
+(specification of tolerance, of color codes, pseudocolor sequences)
+
+CIE XYZ, CIElab, CIEluv
+
+Eq. 4.8, 4.9, 4.10
+
+UCS diagram (for CIEluv)
+blends of two colors still lie on the line in u', v' diagram
+(luv is a projective transformation of XYZ)
+(mix not in line for CIElab!!)
+
+u*, v* scale u', v' by distance from black to white
+JND in ∆E
+
+Uniform color spaces provide only rough approximations
+
+:rec: use more saturated colors for small areas;
+use less saturated colors for large areas.
+
+== opponent process theory ==
+
+
+
+
+
+
+
+
+
 

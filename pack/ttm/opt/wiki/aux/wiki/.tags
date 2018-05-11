@@ -143,6 +143,7 @@ notes	blergh.wiki	1;"	vimwiki:blergh\tblergh
 notes	home/renato/.vim/pack/ttm/opt/wiki/aux/wiki/blergh.wiki	1;"	vimwiki:home/renato/.vim/pack/ttm/opt/wiki/aux/wiki/blergh\thome/renato/.vim/pack/ttm/opt/wiki/aux/wiki/blergh
 notes	index.wiki	10;"	vimwiki:index\tindex#note types
 ok	Achievements.wiki	1;"	vimwiki:Achievements\tAchievements
+ooo	semanticWeb/ooo.wiki	1;"	vimwiki:semanticWeb/ooo\tsemanticWeb/ooo
 pe	ic/pe.wiki	1;"	vimwiki:ic/pe\tic/pe
 premio	diary/diary.wiki	155;"	vimwiki:diary/diary\tdiary/diary#premio
 premio	home/renato/.vim/pack/ttm/opt/wiki/aux/wiki/diary/diary.wiki	154;"	vimwiki:home/renato/.vim/pack/ttm/opt/wiki/aux/wiki/diary/diary\thome/renato/.vim/pack/ttm/opt/wiki/aux/wiki/diary/diary#premio
@@ -153,6 +154,7 @@ programação-estruturada	ic/pe.wiki	1;"	vimwiki:ic/pe\tic/pe
 pronto	Achievements.wiki	1;"	vimwiki:Achievements\tAchievements
 prv	prv/prv.wiki	1;"	vimwiki:prv/prv\tprv/prv
 question	Notation.wiki	41;"	vimwiki:Notation\tNotation#question
+rec	datavis/ware.wiki	139;"	vimwiki:datavis/ware\tdatavis/ware#rec
 religion	various/spirituality.wiki	1;"	vimwiki:various/spirituality\tvarious/spirituality
 revista-virus	virus.wiki	1;"	vimwiki:virus\tvirus
 revista-vírus	virus.wiki	1;"	vimwiki:virus\tvirus
@@ -190,6 +192,7 @@ virus	virus.wiki	1;"	vimwiki:virus\tvirus
 vírus	virus.wiki	1;"	vimwiki:virus\tvirus
 web-semântica	ic/ws.wiki	1;"	vimwiki:ic/ws\tic/ws
 wiki	index.wiki	1;"	vimwiki:index\tindex
+wiki	prv/wiki.wiki	1;"	vimwiki:prv/wiki\tprv/wiki
 wiki-notation	Notation.wiki	1;"	vimwiki:Notation\tNotation
 writing	writing/writing.wiki	1;"	vimwiki:writing/writing\twriting/writing
 youtube	mass.wiki	52;"	vimwiki:mass\tmass#links do youtube

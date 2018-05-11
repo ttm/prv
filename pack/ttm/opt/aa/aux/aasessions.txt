@@ -507,3 +507,16 @@ slots: 8
 ended: Qui Mai 10 16:43:26 -03 2018
 
 
+
+
+started: Qui Mai 10 18:01:04 -03 2018
+dur: 15.0
+slots: 8
+ended: Qui Mai 10 20:02:42 -03 2018
+
+
+
+
+started: Qui Mai 10 20:04:19 -03 2018
+dur: 15.0
+slots: 8

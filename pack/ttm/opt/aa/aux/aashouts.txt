@@ -2418,3 +2418,48 @@ Qui Mai 10 16:43:26 -03 2018
 $$$$$
 
 
+
+
+$$$$$
+sessao para andar com metade do ware
+Qui Mai 10 18:01:04 -03 2018
+-----
+lendo sobre gamut e colorimetria
+Qui Mai 10 18:16:22 -03 2018
+-----
+change on primaries
+Qui Mai 10 18:44:19 -03 2018
+-----
+abstract primaries and standard observer
+Qui Mai 10 18:46:26 -03 2018
+-----
+coordenadas cromaticas
+Qui Mai 10 19:01:33 -03 2018
+-----
+retomando
+Qui Mai 10 19:33:49 -03 2018
+-----
+diagrama cromático
+Qui Mai 10 19:34:07 -03 2018
+-----
+terminando coordenadas cromáticas
+Qui Mai 10 19:46:43 -03 2018
+-----
+dando conta do CIEluv
+Qui Mai 10 20:02:42 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+segunda sessao para o capitulo do ware
+Qui Mai 10 20:04:19 -03 2018
+-----
+pensando em estudar notacao matematica. O que está na mão com utf8 e o que falta? https://www.w3schools.com/charsets/ref_utf_math.asp
+Sex Mai 11 03:21:43 -03 2018
+-----
+understand Coptic and Cyrillic
+Sex Mai 11 03:38:13 -03 2018
+-----

@@ -1,0 +1,52 @@
+https://en.wikipedia.org/wiki/Ncurses
+
+= que software você quer? =
+Oi Cristina,
+
+você tem algumas tarefas em mente que quer implementado
+no software que nos propomos a entregar?
+
+seguem considerações que me ocorreram para complementar o que já adiantamos:
+
+"""
+a interface prefiro que seja principalmente em texto,
+pois é mais poderoso,
+espaço de controle (padrão de teclas pressionadas)
+explode rápido:
+https://en.wikipedia.org/wiki/Text-based_user_interface
+(não vi em que pé está este artigo,
+mas tem livros que apontam isso com cuidado)
+
+Implementação inicialmente em Python e com imagens (potencialmente estáticas)
+renderizadas pelo Python mesmo, Matplotlib,
+Pillow, usando OpenGL, etc.
+Imagens/interfaces em Javascript, e.g. via d3 e/ou usando WebGL/ccNetViz,
+são fáceis de serem obtidas e integradas ao Python, a negociar.
+
+A orientação ao objeto em Javascript é por protótipos (não por classes)
+que eu me lembre, o que é ok.
+O problema maior é a falta de integração com as rotinas para
+processamento de vetores multidimensionais (e.g. BLAS e LAPACK).
+
+Posso prover uma solução para isso integrando Numpy e Scipy no
+cliente/Javascript via emscripten:
+https://github.com/kripken/emscripten
+e partir para o desenvolvimento Web, que é o mais indicado para o nosso caso.
+Não sei o quão bem esta solução funciona, só testando, não deve ser muito difícil.
+
+Sobre o que tenho em mente, tudo o que conversei com você continua em mãos,
+e o que colocamos no plano de trabalho.
+Acrescento o uso de bots (ao menos alguns) para auxiliar na obtenção de conhecimento,
+na cognição.
+Algoritmos de inteligência computacional são úteis embora hipervalorizados, a grande diferença deles
+por enquanto para nós é que agregam valor por modismo/'glamour' e estão acompanhados
+na literatura a formas poderosas de considerar os dados.
+
+"""
+
+sigo à disposição caso queira discutir este andamento.
+abraço
+r.
+
+
+

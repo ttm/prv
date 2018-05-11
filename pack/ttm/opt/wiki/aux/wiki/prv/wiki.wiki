@@ -1,0 +1,43 @@
+:wiki:
+
+= utf8 =
+https://www.w3schools.com/charsets/ref_utf_math.asp
+2042 ⁂ 
+2234 ∴
+2235 ∵
+0518 Ԙ
+0519 ԙ
+
+2056 ⁖
+20a8 ₨
+2109 ℉
+2131 ℱ
+214e ⅎ
+214f ⅏
+27bf ➿
+2766 ❦
+2026 ☠
+2621 ☡ (caution) 
+2625 ☥
+2628 ☨
+26fc ⛼
+
+
+
+
+Ԙ ℉
+
+check utf16
+understand cyrillic and comptic
+learn to draw boxes and make text-based user interfaces
+
+make i-ching with utf8 trigrams, python poisson coins, and Vim interface
+
+use chess pieces 2654-F
+
+die 2680-2685
+
+25b2-c5 triangles
+(and 25e2-5, 25ec-e)
+
+
