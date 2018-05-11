@@ -1,6 +1,8 @@
   ~ Calibra monitor / datashow / projetor ~
          (calibra projeção de luz)
-     
+
+     iniciar sessao de aa
+
      arrumar:
 match Constant /\v\~.*\~/
 hi Normal guibg=red guifg=green
@@ -47,17 +49,17 @@ setl so=0
 
                  ~ roteiro ~
                  
-    1 - motivação e introdução
+    1 - motivação e introdução (propaganda)
     
-    2 - cores
+    2 - cores (passagem)
     
-    3 - cores na visualização de dados
+    3 - cores na visualização de dados (passagem)
     
     4 - (era: ferramentas e exercícios)
         literatura fichada:
-          Munzner
-          Ware
           artigos selecionados
+          Munzner
+          Ware <- até aplicações
     
       
       
@@ -72,19 +74,53 @@ setl so=0
 
             ~ motivação ~
             
-    ./colorForTheSciences
-    
-    optical illusion
-    
     color as the primary cue for sight
     
+    optical illusion
+      file:~/repos/dataVisualization/figs/optIllusion.jpg
+    
     books on color
+      Goethe, Schopenhauer, Aristotle, Cage, Runge, Klee, Tricia Guild?
+      Newton
+    * Klee mesmo, cadê? quem mais?
+      Rimbaud? Democritus?
+      - Color and Meaning: Art, Science, and Symbolism - Cage
+      - Color and Culture - Cage
+      - Remarks on Colour - Wittgenstein
+      - Shopenhauer with Runge's color sphere in ebook:
+          * /home/renato/Documents/ebooks/On_Vision_and_Colors_n_Color_Sphere_by_Arthur-Schopenhauer.pdf
+    
+    Gombrich,
+      referência quasi-máxima
+      para história da arte
+      (livro em mãos)
+    
+    ./colorForTheSciences
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
 ==========================
 (1.1)
 
             ~ introdução ~
+            
             
     o que é cor?
       espectro visível
@@ -96,6 +132,19 @@ setl so=0
     nas artes em geral?
       passar Gombrich
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     
     
 ==========================
@@ -103,9 +152,18 @@ setl so=0
 
             ~ cores ~
             
+            
   Cores complementares, opostas, ótimas, etc.
   
   escalas de cinza, cores mais distantes
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -114,6 +172,7 @@ setl so=0
 
             ~ cores na visualização de dados ~
     
+    
   Texto: realce de sintáxe
   
   Redes: medidas nos vértices e arestas
@@ -121,10 +180,25 @@ setl so=0
   Tradicionais: gráfico de dispersão, linha do tempo, histograma
             
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 ==========================
 (4)
 
             ~ era: ferramentas e exercícios ~
+            
             
   Pillow e IPython
   talvez Vim, matplotlib, d3, etc
@@ -142,8 +216,10 @@ setl so=0
 
             ~ literatura fichada ~
             
-  munzner
-  ware
-  articles
+            
+  ./articles
+  ./munzner (instrumental, técnico VD)
+  ./ware (instrumental, técnico perceptual)
     
+  email p vcs com os links
     

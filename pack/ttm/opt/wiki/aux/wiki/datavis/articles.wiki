@@ -1,0 +1,13 @@
+= using color in visualization: a survey, 2010 =
+Silva, Santos, Madeira
+
+applied color mappings (and scales)
+though psychophysics and experience
+(anthropological computer science)
+
+timbre -> audição
+cor -> visão
+
+ver pasta de artigos
+
+

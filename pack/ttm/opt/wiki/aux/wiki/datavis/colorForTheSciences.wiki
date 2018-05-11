@@ -1,6 +1,6 @@
 
 http://www.munsellcolourscienceforpainters.com/ColourSciencePapers/ReviewOfColorForTheSciences.pdf
-(read first paragraph)
+(maybe read first paragraph)
 
 summary:
 aims to introduce :colorimetry: to scientists
@@ -15,10 +15,11 @@ exercises are mostly invitations to elaborate on
 concepts
 
 emphasis on geometric thinking
+(in oposition to abstract algebra?)
 
 earlier, presumably good, book "Solid Shape"
 
-chromaticity diagram and spectrum cone.
+chromaticity diagram and spectrum cone (gamut?)
 
 optimal colours, complementary colours
 
@@ -26,7 +27,7 @@ Ostwald's color instruments
 
 Schopenhauer's interpretation of colors
 
-Schrödinger's  isochromes
+Schrödinger's isochromes
 
 Color Perception, 2003
 
@@ -42,6 +43,8 @@ Wyszecki and Stiles' tome, 1982
 lots of math
 
 color science
+
+
 
 
 

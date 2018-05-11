@@ -46,7 +46,6 @@ special basis for computer manipulation
 or human vision
 (which ??).
 
-
 RGB, computationally convenient,
 not how we see.
 Not particularly useful as separate channels,
@@ -58,13 +57,13 @@ saturation: amount of white
 lightness: amount of black
 
 HSL disc: white center, hue around, lightness in a separate slider.
-(color picker)
+(Fig 10.2, color picker)
 
 HSV, V is grayscale Value, lin to L
 
 HSL is pseudoperceptual:
 hue is isolated,
-but lightness L != luminance
+but lightness L != luminance (S also != luminance)
 Fig 10.3
 'true luminance', perceptually linear luminance L*
 
@@ -72,7 +71,7 @@ Fig 10.3
 It should be possible to calculate an approximation
 using psychophysics (Weber-Fechner or Steven's laws)
 or empirical curves.
-use 'spetral sensitivity'?
+use 'spectral sensitivity'?
 Fig 10.4
 
 Perceptually uniform/linear color spaces:
@@ -82,10 +81,12 @@ L* follows Steven's with alpha=0.5 with respect
 to brightness.
 :ex: how to calculate brightness?
 
-Lab space is good interpolation, differences,
+Lab space is good for interpolation, differences,
 and other calculations that should not be executed
-in the perceptually non linear spaces (e.g. RGB, HSL).
+in the perceptually non-linear spaces (e.g. RGB, HSL).
 
+??? ~~~
+Munzner: VD manipulates luminance, not true bightness
 
 luminance: physical property of a material
 brightness: perceptual quantity (e.g. loudness)
@@ -94,14 +95,15 @@ grayscale Value: linearly related to L
 Saturation: the amout of white in a color
 Hue: the chromatic channel/dimension of a color
 R,G,B
+??? ~~~
 
-Munzner:
+== 10.2.3 Luminance, Saturation and Hue ==
+~ Munzner new definitions ~
 luminance: black-white channel/dimension.
 saturation and hue are the other two chromatic channels.
 Such definitions are not used elsewhere.
 Fig 10.5
 
-== 10.2.3 Luminance, Saturation and Hue ==
 luminance and saturation: magnitude channels
 hue: identity channel
 
@@ -129,13 +131,13 @@ hue:
     rainbow
     
 == 10.2.4 Transparency ==
-encode information by using the
+encode information using the
 channel opaque - see-through.
 
-interacts strongly with other channles,
+interacts strongly with other channels,
 should be used in coordination with them:
   not in conjunction with luminance and saturation
-  may b e used with hue with few steps
+  may be used with hue with few steps
 is used mostly to create layers, e.g. background and foreground
 frequently redundant: encoding in transparency and another channel
 
@@ -146,18 +148,18 @@ mapping between colors and data values
 has pitfalls
 
 CM:
-  categorical
+- categorical (qualitative)
     segmented CMs
       aka. quantized, stepped, binned, discretized, discrete CM
     used for categorical and ordinal attributes
-  ordered
-    continuous CMs
+- ordered
+    continuous or segmented CMs
     type:
       sequential
       diverging
     use luminance and saturation
     used for quantitative and ordinal attributes
-  bivariate:
+- bivariate:
     encodes two attributes simultaneously
     pref. second attribute binary
 
