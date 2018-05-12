@@ -1,15 +1,6 @@
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
+
+
   ~ Calibra monitor / datashow / projetor ~
          (calibra projeção de luz)
 
@@ -27,6 +18,8 @@ cal ApplyCS(g:ccs.green2, 'c')
 cal ApplyCS(g:ccs.passivepink1, 'c')
 cal ApplyCS(g:ccs.red1, 'c')
 cal ApplyCS(g:ccs.red5, 'c')
+colo blue
+colo zellner
 " exu1 _notes yellow1 redblackl
 " passivepink1 green1 green2 red1 red2
 " red3 red4 red5 blue1 blue2 red1b red1c
@@ -81,7 +74,7 @@ setl so=0
           Munzner
           Ware <- até aplicações
    
-               ~  (☥,☨) contexto, aplicação ~
+               ~ (☥,☨) contexto, aplicação ~
       
       
       
@@ -93,7 +86,7 @@ setl so=0
 ==========================
 (1)
 
-         ~ motivação / introdução ~
+         ~ motivation / introduction ~
             
     color as the primary cue for sight
     
@@ -189,7 +182,7 @@ setl so=0
        ~ cores na visualização de dados (☨) ~
     
     
-  Texto: realce de sintáxe
+  Texto: realce de sintáxe, BoW com corte de Luhn
   
   Redes: medidas nos vértices e arestas
   
@@ -222,6 +215,7 @@ setl so=0
   Pillow e IPython
   talvez Vim, matplotlib, d3, etc
     
+  talvez seja um video ou outra aula
     
     
     
@@ -246,14 +240,15 @@ setl so=0
             ~ literatura fichada ~
             
             
+            timbre -> audição
+            cor -> visão
+            
   ./articles
   ./munzner (instrumental, técnico VD)
   ./ware (instrumental, técnico perceptual)
     
-    
 ~ email p vcs com os links: ~
     https://github.com/ttm/prv/blob/master/pack/ttm/opt/wiki/aux/wiki/datavis/slides2018May11.wiki
     https://github.com/ttm/prv/tree/master/pack/ttm/opt/wiki/aux/wiki/datavis
-    
-  obrigado.
+  obrigado. :::
     

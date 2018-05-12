@@ -5,9 +5,6 @@ applied color mappings (and scales)
 though psychophysics and experience
 (anthropological computer science)
 
-timbre -> audição
-cor -> visão
-
 ver pasta de artigos
 
 
