@@ -2645,3 +2645,6 @@ Sáb Mai 12 16:44:33 -03 2018
 repassando colorschemes p aux do realcolors.vim
 Sáb Mai 12 16:52:29 -03 2018
 -----
+limpando codigo q passei p realcolors
+Sáb Mai 12 18:07:51 -03 2018
+-----

@@ -1138,3 +1138,7 @@ Srila: migrando wiki : 19 18 14 : browse para pesquisa Qui
 $$$$$ ::: Sáb Mai 12 16:52:29 -03 2018
 repassando colorschemes p aux do realcolors.vim
 Srila: colorschemes Sáb Fev 25 02 : Colorscheme command enclosed in title
+
+$$$$$ ::: Sáb Mai 12 18:07:51 -03 2018
+limpando codigo q passei p realcolors
+Srila: limpando arquivos Qui Mai 10 : \ W eh mta coisa
