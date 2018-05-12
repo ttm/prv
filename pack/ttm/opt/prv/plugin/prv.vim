@@ -19,7 +19,6 @@ let g:prv_dir = expand("<sfile>:p:h:h") . '/'
 fu! PRVInit() " {{{
 " {{{2 variables
   cal PRVDefineSettings()
-  cal PRVSetWiki()
 " {{{2 mappings
   cal PRVDeclareLeader('prv')
   cal PRVMkMappings('ndlLa')
@@ -503,12 +502,6 @@ fu! PRVMkMappings(str) " {{{3
     " {{{5 filesystem navigation
     nn <leader>b :Sex<CR><C-W>T
     nn <leader>B :Vex<CR>
-    " {{{5 Vimwiki
-    cal g:PRVVWFileNMapping("<leader>wA", "achievements.wiki")
-    cal g:PRVVWFileNMapping("<leader>wT", "todo.wiki")
-    cal g:PRVVWFileNMapping("<leader>wD", "daily/tasks.wiki")
-    cal g:PRVVWFileNMapping("<leader>wW", "weekly/wtasks.wiki")
-    cal g:PRVVWFileNMapping("<leader>wN", "blergh.wiki<CR>gg")
     " {{{5 latex
     " make the f mappings usable by using the paths correctly TTM
     nn <leader>f :cal PRVCompileLatex()

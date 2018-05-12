@@ -536,3 +536,24 @@ slots: 8
 ended: Sex Mai 11 13:00:54 -03 2018
 
 
+
+
+started: Sáb Mai 12 12:19:32 -03 2018
+dur: 15.0
+slots: 8
+ended: Sáb Mai 12 14:20:15 -03 2018
+
+
+
+
+started: Sáb Mai 12 14:20:31 -03 2018
+dur: 15.0
+slots: 8
+ended: Sáb Mai 12 16:21:13 -03 2018
+
+
+
+
+started: Sáb Mai 12 16:22:09 -03 2018
+dur: 15.0
+slots: 8

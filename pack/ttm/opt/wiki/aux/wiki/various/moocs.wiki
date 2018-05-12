@@ -1,0 +1,14 @@
+= two specializations =
+== 1) five courses on big data / complexity mining / data science ==
+=== computational intelligence ===
+=== audiovisual analytics ===
+DV and sonification, Pillow and mass
+=== research and development with free and open technologies ===
+=== complex data mining ===
+
+== 2) five courses on complexity science ==
+=== math and logic ===
+=== complex and social networks ===
+=== text mining and generation ===
+=== complex and non-linear systems ===
+=== scientific and audiovisual programming ===

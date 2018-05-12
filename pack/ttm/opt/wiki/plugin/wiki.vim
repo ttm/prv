@@ -1,4 +1,4 @@
-" main file of the prv plugin for Vim {{{1
+" main file of the wiki plugin for Vim {{{1
 " Author: Renato Fabbri
 " Date: 2018/Feb/25 (when I wrote this header)
 " Copyright: Public domain
@@ -33,3 +33,9 @@ fu! WikiMkMappings()
 endf
 
 cal WikiInit()
+" {{{5 Vimwiki, deprecated, notes
+" cal g:PRVVWFileNMapping("<leader>wA", "achievements.wiki")
+" cal g:PRVVWFileNMapping("<leader>wT", "todo.wiki")
+" cal g:PRVVWFileNMapping("<leader>wD", "daily/tasks.wiki")
+" cal g:PRVVWFileNMapping("<leader>wW", "weekly/wtasks.wiki")
+" cal g:PRVVWFileNMapping("<leader>wN", "blergh.wiki<CR>gg")

@@ -1038,3 +1038,103 @@ Srila: revendo reflexao conceitual inicial , moeda bayesiana e opcoes para pesqu
 $$$$$ ::: Sex Mai 11 13:11:47 -03 2018
 revisitados slides da aula
 Srila: slides Seg Fev 26 07 - ver no tranco para desovar
+
+$$$$$ ::: Sáb Mai 12 04:46:18 -03 2018
+todo:
+Srila: | hi Terminal or string hms considerando a good leader in
+
+$$$$$ ::: Sáb Mai 12 12:18:40 -03 2018
+fazer classe que funciona como o d3 com data, x, y, etc, para organizar dados para visualizações em geral
+Srila: o bug mt chato Qui Fev 26 11 09 : h
+
+$$$$$ ::: Sáb Mai 12 12:19:33 -03 2018
+sessao p retomar os afazeres
+Srila: sessao 1 p ic Ter Mar 1 12 Sáb Fev 25
+
+$$$$$ ::: Sáb Mai 12 12:44:39 -03 2018
+retomando dev do realcolors
+Srila: retomando resto Ter Mar 27 - theory - yoga relaxado ,
+
+$$$$$ ::: Sáb Mai 12 12:59:16 -03 2018
+lombrando na aula e td por fazar
+Srila: td Ter Abr 3 09 : integrar com elas Sáb Fev
+
+$$$$$ ::: Sáb Mai 12 13:24:22 -03 2018
+comunicacao no fb
+Srila: fb , propor para pesquisa Ter Abr 3 09 - interdisciplinary
+
+$$$$$ ::: Sáb Mai 12 13:25:10 -03 2018
+bach, haendel, scarlatti nasceram em 1685. Morreram em 1750, 7, 8.
+Srila: em sampa c milena e LEM matchings Sex Mai 10 02
+
+$$$$$ ::: Sáb Mai 12 13:55:15 -03 2018
+ler ic da laila
+Srila: laila cirne pedro otavio etc etc Qui Mar 20 16 01
+
+$$$$$ ::: Sáb Mai 12 14:19:51 -03 2018
+lendo parada da laila
+Srila: da interacao com isso de perna , listamacambira and sessions ,
+
+$$$$$ ::: Sáb Mai 12 14:20:11 -03 2018
+jah encaminhando
+Srila: jah estah feito café , soltar revisão * onde \ W
+
+$$$$$ ::: Sáb Mai 12 14:20:15 -03 2018
+bora
+Srila: bora terminar fuzzy mesmo , funcs , vamos ver como fazer
+
+$$$$$ ::: Sáb Mai 12 14:20:31 -03 2018
+terminar laila, depois realcolors / prv
+Srila: prv : CMask to use set leader proprio Dom Mar 28
+
+$$$$$ ::: Sáb Mai 12 14:35:43 -03 2018
+lendo justificativa
+Srila: lendo help files tell much about build process . ABT para
+
+$$$$$ ::: Sáb Mai 12 14:50:53 -03 2018
+corrigindo ic da laila
+Srila: ic p fred , guardando dialogo geral das notas aa p
+
+$$$$$ ::: Sáb Mai 12 15:09:11 -03 2018
+terminado d ler parada da laila
+Srila: d hj Ter Abr 9 22 15 22 20 00 :
+
+$$$$$ ::: Sáb Mai 12 15:56:11 -03 2018
+fiz comida, comi, comecando nova batelada, cigarro acabando, ficarei só na sálvia
+Srila: comecando a blank line above and - O que match eh
+
+$$$$$ ::: Sáb Mai 12 15:56:34 -03 2018
+repassadas anotacoes p laila
+Srila: anotacoes e arrumando datavis Seg Mai 8 16 00 : mtimer
+
+$$$$$ ::: Sáb Mai 12 15:56:42 -03 2018
+agilizado documento p editar
+Srila: agilizado com reescrita do feriado Sex Abr 10 20 20 :
+
+$$$$$ ::: Sáb Mai 12 16:11:16 -03 2018
+escrito p cristina, escrevendo p bento
+Srila: p soltar aa sessions . Disponibilizar na statusline Sáb Mar 25
+
+$$$$$ ::: Sáb Mai 12 16:21:13 -03 2018
+acho q fiz nd do planejado, revendo todos
+Srila: nd q preste Qui Abr 10 02 - W o andamento
+
+$$$$$ ::: Sáb Mai 12 16:22:09 -03 2018
+sessao retomando prv / realcolors
+Srila: sessao última antes d hj Ter Mai 9 21 17 02
+
+$$$$$ ::: Sáb Mai 12 16:38:10 -03 2018
+passando arquivos do realcolors para arquivo único
+Srila: arquivo e RDF em como um pouco Ter Mar 1 \|
+
+$$$$$ ::: Sáb Mai 12 16:44:16 -03 2018
+revisitando aula
+Srila: aula de AA e retorna a mapping para abrir aa Dom
+
+$$$$$ ::: Sáb Mai 12 16:44:34 -03 2018
+migrando material p realcolors
+Srila: migrando wiki : 19 18 14 : browse para pesquisa Qui
+
+$$$$$ ::: Sáb Mai 12 16:52:29 -03 2018
+repassando colorschemes p aux do realcolors.vim
+Srila: colorschemes Sáb Fev 25 02 : Colorscheme command enclosed in title

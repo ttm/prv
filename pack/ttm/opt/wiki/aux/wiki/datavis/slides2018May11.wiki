@@ -250,5 +250,5 @@ setl so=0
 ~ email p vcs com os links: ~
     https://github.com/ttm/prv/blob/master/pack/ttm/opt/wiki/aux/wiki/datavis/slides2018May11.wiki
     https://github.com/ttm/prv/tree/master/pack/ttm/opt/wiki/aux/wiki/datavis
-  obrigado. :::
+  obrigado.
     

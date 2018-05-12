@@ -2534,3 +2534,114 @@ $$$$$
 revisitados slides da aula
 Sex Mai 11 13:11:47 -03 2018
 -----
+todo:
+- write bait of 10 MOOCs (T)
+- make prv and wiki ok, sane (T)
+
+- make data visualization articles
+- screencast on colors
+- start moocs:
+  - screencasts in Brazilian Portuguese, use Wikipédia-pt
+  - edit English wikipedia, make MOOCs in English using Wikipedia-en
+- articles
+  - alan
+  - before and after doctorate
+  - new documents
+- software development:
+  - audiovisual analytics system
+  - gadgets for articles, algorithmia
+  - gadgets for moocs
+  - ttm and toki pona blogs
+- music and literature:
+  - read stuff Dy, Bianca
+  - bot literature
+  - make music with MASS: trap, religious singing with ecantorix hack on music package, etc
+Sáb Mai 12 04:46:18 -03 2018
+-----
+fazer classe que funciona como o d3 com data, x, y, etc, para organizar dados para visualizações em geral
+Sáb Mai 12 12:18:40 -03 2018
+-----
+
+
+$$$$$
+sessao p retomar os afazeres
+Sáb Mai 12 12:19:33 -03 2018
+-----
+retomando dev do realcolors
+Sáb Mai 12 12:44:39 -03 2018
+-----
+lombrando na aula e td por fazar
+Sáb Mai 12 12:59:15 -03 2018
+-----
+comunicacao no fb
+Sáb Mai 12 13:24:22 -03 2018
+-----
+bach, haendel, scarlatti nasceram em 1685. Morreram em 1750, 7, 9.
+Sáb Mai 12 13:25:09 -03 2018
+-----
+ler ic da laila
+Sáb Mai 12 13:55:15 -03 2018
+-----
+lendo parada da laila
+Sáb Mai 12 14:19:51 -03 2018
+-----
+jah encaminhando
+Sáb Mai 12 14:20:11 -03 2018
+-----
+bora
+Sáb Mai 12 14:20:15 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+terminar laila, depois realcolors / prv
+Sáb Mai 12 14:20:31 -03 2018
+-----
+lendo justificativa
+Sáb Mai 12 14:35:43 -03 2018
+-----
+corrigindo ic da laila
+Sáb Mai 12 14:50:53 -03 2018
+-----
+terminado d ler parada da laila
+Sáb Mai 12 15:09:11 -03 2018
+-----
+fiz comida, comi, comecando nova batelada, cigarro acabando, ficarei só na sálvia
+Sáb Mai 12 15:56:10 -03 2018
+-----
+repassadas anotacoes p laila
+Sáb Mai 12 15:56:33 -03 2018
+-----
+agilizado documento p editar
+Sáb Mai 12 15:56:42 -03 2018
+-----
+escrito p cristina, escrevendo p bento
+Sáb Mai 12 16:11:16 -03 2018
+-----
+acho q fiz nd do planejado, revendo todos
+Sáb Mai 12 16:21:13 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+sessao retomando prv / realcolors
+Sáb Mai 12 16:22:09 -03 2018
+-----
+passando arquivos do realcolors para arquivo único
+Sáb Mai 12 16:38:10 -03 2018
+-----
+revisitando aula
+Sáb Mai 12 16:44:16 -03 2018
+-----
+migrando material p realcolors
+Sáb Mai 12 16:44:33 -03 2018
+-----
+repassando colorschemes p aux do realcolors.vim
+Sáb Mai 12 16:52:29 -03 2018
+-----
