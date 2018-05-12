@@ -1142,3 +1142,7 @@ Srila: colorschemes Sáb Fev 25 02 : Colorscheme command enclosed in title
 $$$$$ ::: Sáb Mai 12 18:07:51 -03 2018
 limpando codigo q passei p realcolors
 Srila: limpando arquivos Qui Mai 10 : \ W eh mta coisa
+
+$$$$$ ::: Sáb Mai 12 18:58:20 -03 2018
+adiantado boa parte da retomada do colors
+Srila: do CIEluv Qui Fev 27 20 02 - mesmo para mostrar
