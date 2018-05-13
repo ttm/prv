@@ -2654,3 +2654,30 @@ Sáb Mai 12 18:58:20 -03 2018
 $$$$$
 
 
+
+
+$$$$$
+sessao p polir o color
+Sáb Mai 12 23:12:14 -03 2018
+-----
+todo color:
+- arrumar random e varredura dos grupos mais usualmente importantes:
+  Normal, SpellBad, LineNr, rLineNr, tabline, statusline, spellrare, commandline
+- adicionar colorschemes mitologicos
+- revisar funcoes migradas p color
+- arrumar color.txt para ficar 100%
+- publicar o plugin quando todo o prv ficar ok
+Sáb Mai 12 23:14:37 -03 2018
+-----
+estudando as cores dos orishas segundo ruiz
+Sáb Mai 12 23:28:08 -03 2018
+-----
+arrumando nomenclatura do color
+Sáb Mai 12 23:43:05 -03 2018
+-----
+entendendo o cleared q dah pau no color change
+Dom Mai 13 00:04:12 -03 2018
+-----
+arrumando funcoes basicas para mudar as cores
+Dom Mai 13 00:13:20 -03 2018
+-----

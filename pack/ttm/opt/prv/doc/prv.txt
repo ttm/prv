@@ -47,14 +47,17 @@ CONTENTS                                                            *prv-index*
                                                                *prv-plugins*
 
 PRV is a package, which currently consists of these plugins:
-* |prv|, the core: naviation strategies of files, tags and Vim interface.
 * |aa|, algorithmic autoregulation: periodic note-taking for dedication
   tracking.
-* |realcolors|, 24 bit true color for Vim: on-the-fly tweak your color scheme,
+* |bot|, provides interfaces for training populations of bots, for defining
+  corpus and criteria of interest, for talking with the bots, and for
+  obtaining texts from the bots (such as poems and articles).
+* |colors|, 24 bit true color for Vim: on-the-fly tweak your color scheme,
   with persistence and facilities to harness your color settings.
+* |prv|, the core: naviation strategies of files, tags and Vim interface.
 * |tokipona|, for the minimalist conlang Toki Pona: analyses and syntheses
   of texts and of the language itself.
-* |bot|, provides interfaces for training populations of bots, for defining corpus and criteria of interest, for talking with the bots, and for obtaining texts from the bots (such as poems and articles).
+* |wiki|, wiki-like strategies for advanced note-taking.
 
 The long-term goal of |PRV| is to feedback computational intelligence into writting of code and articles.  See Vim ouroboros in [1].  See |prv-intelligence|
 
@@ -78,7 +81,7 @@ tokens in the files is faster, cleaner, and isomorphic to the wiki-like links
 (such as [[something]] in Vimwiki default syntax), which can be written as
 something, ./something, ../something, something.wiki, or as convenient for the
 use and meaning intended.  This is not a trivial issue while not expressed as
-in the |wiki| plugin.
+in the |wiki|.
 
 
 ------------------------------------------------------------------------------

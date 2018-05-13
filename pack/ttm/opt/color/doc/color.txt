@@ -1,39 +1,39 @@
-*realcolors.txt*  Create and reuse colorschemes on the fly
+*color.txt*  Create and reuse colorschemes on the fly
 
 ==============================================================================
-CONTENTS                                                    *realcolors-index*
-                           *realcolors*
+CONTENTS                                                    *color-index*
+                           *color*
 
-    1. Intro                                    |realcolors-intro|
-        1.1. Usage                              |realcolors-usage|
-        1.2. |realcolors| help                    |realcolors-help|
+    1. Intro                                    |color-intro|
+        1.1. Usage                              |color-usage|
+        1.2. |color| help                    |color-help|
 
-    2. Install                                  |realcolors-install|
-             |realcolors-install-recommended|  |aa-install-Vimball|
-             |realcolors-install-root|  |realcolors-prv|
+    2. Install                                  |color-install|
+             |color-install-recommended|  |aa-install-Vimball|
+             |color-install-root|  |color-prv|
 
-    3. Options, variables and general settings  |realcolors-settings|
+    3. Options, variables and general settings  |color-settings|
 
-    4. Mappings                                 |realcolors-mappings|
+    4. Mappings                                 |color-mappings|
 
-    5. Commands                                 |realcolors-commands|
-             |realcolors-main-commands|  |aa-util-commands|
+    5. Commands                                 |color-commands|
+             |color-main-commands|  |aa-util-commands|
 
-    6. Functions                                |realcolors-functions|
-             |realcolors-implementation|
+    6. Functions                                |color-functions|
+             |color-implementation|
 
-    7. Files                                    |realcolors-files|
+    7. Files                                    |color-files|
 
-    8. Final words                              |realcolors-final-words|
-        8.1. Further work / Todo                |realcolors-todo|
-        8.2. Disclaimer                         |realcolors-disclaimer|
-        8.3. License                            |realcolors-license|
-        8.4. Acknowledgements                   |realcolors-ack|
-        8.5. Contact                            |realcolors-contact|
+    8. Final words                              |color-final-words|
+        8.1. Further work / Todo                |color-todo|
+        8.2. Disclaimer                         |color-disclaimer|
+        8.3. License                            |color-license|
+        8.4. Acknowledgements                   |color-ack|
+        8.5. Contact                            |color-contact|
 
 
 ==============================================================================
-1. Intro                                                   *realcolors-intro*
+1. Intro                                                   *color-intro*
 
 It is very often the case when programmers and other heavy text-file users
 work daily for many hours. The colors with which text is read and written
@@ -46,90 +46,90 @@ The coloring of text is most represented, in this context, by what is called
 'syntax highlighting'.
 
 ------------------------------------------------------------------------------
-1.1 Usage                                         *realcolors-usage*
+1.1 Usage                                         *color-usage*
 
-There is just a hanfull of functionalities by which |realcolors| is used. A
+There is just a hanfull of functionalities by which |color| is used. A
 complete expositions of the mappings, commands and functions are found in
-|realcolors-mappings|, |realcolors-commands| and |realcolors-functions|.
+|color-mappings|, |color-commands| and |color-functions|.
 
 One may find the syntax group to which the character under the cursor is
-binded wih |realcolors-leader-s|.  The colors (and other visual attributes)
-may be changed with |realcolors-leader-c|.  If the syntax group in 'Normal',
+binded wih |color-leader-s|.  The colors (and other visual attributes)
+may be changed with |color-leader-c|.  If the syntax group in 'Normal',
 the foreground and background colors are the usually the most pervasive in the
-texts. One may also load full |realcolors-colorschemes| with
-|realcolors-leader-C|.  One may copy the settings of a syntax group with
-|realcolors-leader-localleader-C| and apply any of the copied settings with
-|realcolors-leader-localleader-A|.  To save the full settings of current
-colorscheme, use |realcolors-leader-localleader-S|, and load the saved
-settings at any time as any |realcolors-colorschemes|.  To generate a random
-colorscheme, use |realcolors-leader-r|.
+texts. One may also load full |color-colorschemes| with
+|color-leader-C|.  One may copy the settings of a syntax group with
+|color-leader-localleader-C| and apply any of the copied settings with
+|color-leader-localleader-A|.  To save the full settings of current
+colorscheme, use |color-leader-localleader-S|, and load the saved
+settings at any time as any |color-colorschemes|.  To generate a random
+colorscheme, use |color-leader-r|.
 
 There are special colors, colorschemes, strategies for building colorschemes
 and finding potentially useful colors given some of the colors beforehand.
 These are all described in the first hiperlinks if this section (1.1.).
-The |realcolors| plugin is designed to work with 24-bit truecolors.
+The |color| plugin is designed to work with 24-bit truecolors.
 
 " use
 " call CommandColorSchemes()
 " call ApplyCS(g:ccs['green1'], 'c')
 
 ------------------------------------------------------------------------------
-1.2 |realcolors| help                                         *realcolors-help*
+1.2 |color| help                                         *color-help*
 
 Reload this help file (:e<CR> or :e %) to edit it, as specified in the final
-line of this realcolors.txt file (see :h modeline).
-Render the |realcolors| help tags e.g. with
+line of this color.txt file (see :h modeline).
+Render the |color| help tags e.g. with
 
     `:helptags %`
-    (Press TAB and then remove the realcolors.txt at the end)
+    (Press TAB and then remove the color.txt at the end)
 
 Please enhance this documentation within this or another file e.g. by copying
-./realcolors.txt to ./anything.txt as a template.
+./color.txt to ./anything.txt as a template.
 
 See |aa-help-cheatsheet| for further notes on dealing with (|PRV|) help files.
 
 
 ==============================================================================
-2. Install                                                *realcolors-install*
+2. Install                                                *color-install*
 
 Just follow the instructions on |aa-install| (of course, exchange any
-occurence of "aa" for "realcolors".
+occurence of "aa" for "color".
 
 
 ==============================================================================
-3. Settings                                              *realcolors-settings*
+3. Settings                                              *color-settings*
 
 One may set the standard colorscheme to be loaded at startup both with a
-command in vimrc or with |realcolors-leader-p| (preserve, persist). 
+command in vimrc or with |color-leader-p| (preserve, persist). 
 
 ==============================================================================
-4. Mappings                                              *realcolors-mappings*
-
-
-==============================================================================
-5. Commands                                              *realcolors-commands*
+4. Mappings                                              *color-mappings*
 
 
 ==============================================================================
-6. Functions                                           *realcolors-functions*
+5. Commands                                              *color-commands*
 
 
 ==============================================================================
-7. Files                                                 *realcolors-files*
+6. Functions                                           *color-functions*
 
 
 ==============================================================================
-8. Final words                                       *realcolors-final-words*
+7. Files                                                 *color-files*
+
+
+==============================================================================
+8. Final words                                       *color-final-words*
 
 
 ------------------------------------------------------------------------------
-8.1. Todo                                       *realcolors-todo*
+8.1. Todo                                       *color-todo*
 
 ------------------------------------------------------------------------------
-8.2. Disclaimer                                       *realcolors-disclaimer*
+8.2. Disclaimer                                       *color-disclaimer*
 
 ------------------------------------------------------------------------------
-8.3. License                                       *realcolors-license*
+8.3. License                                       *color-license*
 
 Copyright: Public Domain.
 - Vim users and developers
@@ -140,15 +140,15 @@ Copyright: Public Domain.
 
 
 ------------------------------------------------------------------------------
-8.4. Acknowledgements                                       *realcolors-ack*
+8.4. Acknowledgements                                       *color-ack*
 
 ------------------------------------------------------------------------------
-8.5. Contact                                       *realcolors-contact*
+8.5. Contact                                       *color-contact*
 
 You may write me directly at renato [?dot] fabbri [a?t] gmail [dot?] com
 
 Other possibilities are:
-- write to other |realcolors| users at:
+- write to other |color| users at:
   listamacambira [?at] googlegroups [d?ot] com
 - write to the vim_use email list
 - ask around: your friends/colleges which use Vim, any forum, etc.

@@ -12,7 +12,7 @@
 if exists("g:loaded_wikiplugin") && (exists("g:wiki_not_hacking") || exists("g:wiki_not_hacking_all"))
  finish
 endif
-let g:loaded_wikiplugin = "v0.01b"
+let g:loaded_colorplugin = "v0.01b"
 let g:wiki_dir = expand("<sfile>:p:h:h") . '/'
 
 
@@ -26,14 +26,11 @@ let g:loaded_colorsPlugin = 'v01'
 " -- g:realcolors_leader hack, part 1 of 1 {{{3
 " for now: <C-\> is reserved, so it is safe to use it in all modes
 " Initialization and overall status update
-noremap <C-\>I :w<CR>:so %<CR>:call ColorsInit()<CR><CR>
-noremap <C-\>I :w<CR>:runtime **/*.vim<CR>:call ColorsInit()<CR><CR>
-noremap <C-\>i :w<CR>:so %<CR>:call ColorsInit()<CR><CR>
-noremap <C-\>i :cal ColorsInit()
+noremap ci :cal ColorsInit()<CR>
 
 " Utilities
-noremap <C-\>c :call ChgColor()<CR>
-noremap <C-\>s :echo SynStack()<CR>
+noremap cc :call ChgColor()<CR>
+noremap cs :echo SynStack()<CR>
 " make windows with colors
 noremap <C-\>W :call StandardColorsOrig()<CR>
 noremap <C-\>w :call MakeColorsWindow(3)<CR>
@@ -58,7 +55,58 @@ noremap <C-\>r :colo blue<CR>
 noremap <C-\>R :colo gruvbox<CR>
 
 " Luck
-noremap <C-\>l :exec 'hi Normal guibg=#'.(system("echo $RANDOM$RANDOM")[:5])<CR>
+no cl :exe 'hi Normal guifg='.CRandColor()<CR>
+no cL :exe 'hi Normal guibg='.CRandColor()<CR>
+no cl :exe 'hi '.(SynStack()[-1][-1]) .' guifg='.CRandColor()<CR>
+" no cL spellbad, linenr, tab/statusline, hlsearch, fold, colorcolumn, etc
+no cLs :exe 'hi SpellBad guifg='.CRandColor()<CR>
+no cLl :exe 'hi LineNr guifg='.CRandColor()<CR>
+no cLL :exe 'hi LineNr guibg='.CRandColor()<CR>
+no cLl :exe 'hi CursorLineNr guifg='.CRandColor()<CR>
+no cLL :exe 'hi CursorLineNr guibg='.CRandColor()<CR>
+
+no cLt :exe 'hi TabLine guifg='.CRandColor().' guibg='.CRandColor()<CR>
+no cLT :exe 'hi TabLineFill guifg='.CRandColor().' guibg='.CRandColor()<CR>
+no cLT :exe 'hi TabLineSel guifg='.CRandColor().' guibg='.CRandColor()<CR>
+
+" no cLt :exe 'hi Tab? guifg='.CRandColor()<CR>
+
+nn ca apply a saved fg-bg to a group
+" c cursor, 
+" n normal
+" t tab
+" T tabsel
+" t tabfill
+" s spellbad
+" S spellrare
+" s spell uncommon
+nn cl :exe 'hi '.CHiGroup(PGetChar()).' guifg='.CRandColor()<CR>
+nn cL :cal 
+" PGetChar also gets esc if using alt+key
+" CHiGroup translates the chars into the groups as above
+
+" y yank a bg/fg setting
+" a apply a bg/fg setting
+" c change a bg/fg setting
+" l luck in setting a bg/fg setting
+" s stack check the stack of highlighting groups
+" l load a color scheme
+" k keep a color scheme
+
+" m make colorscheme/pallete
+" e explore color or color set
+" what else?
+
+" use luck to change all syntax groups: under cursor, normal, tabline,
+" tabsbar, spellerror, numbercolumn, hlsearch
+"
+" save: normal char setting, undercursor char setting, etc
+" apply to normal or char under cursor: a fg-bg setting
+" decide how to save and load the settings
+"
+" make use of a decent random rgb
+
+
 
 " use <C-\ c> (press control and \, release, press c).
 " to start the color mode.
@@ -94,23 +142,184 @@ PRVLeader d realcolors
 " -- UTILS: {{{3
 " FUNCTIONS: {{{1
 " -- MAIN {{{2
+fu! CInit() " {{{3
+  " Should initialize the whole coloring system.
+  " If not only changing the color under cursor, should be used
+  let s:ground = 'fg'
+  cal StandardColors()
+  " creates the dictionary with colors on foreground and background
+  " default, temporary and buffer in s:dcoulorsd, s:tcolorsd and s:colors
+  let s:colors = {}
+  cal GetColors(0)
+  ec '===> buffer color:' s:colors['buffer']
+  cal GetColors(1)
+  ec ':::> temp color:' s:colors['temp']
+  cal GetColors(2)
+  ec '---> default color:' s:colors['default']
+  " initialize mappings
+  " make named_colors0 and named_colors with the name of the colors:
+  " 0: from documentation :h gui-colors
+  " : from $VIMRUNTIME/rgb.txt
+  let s:cs = {'standard': g:colors_name}
+  let s:timers = []
+  let s:counters = range(10)
+  let s:ncounters = 0
+  let s:patterns = {}
+  let s:mpatterns = {'wave': 'call WavePattern()', 'std': 'call StandardPattern()', 'wobble': 'call Wobble()', 'silence': 'call BypassPattern'}
+  " get all variables to the g:colors_all (new)
+  " and g:colors_all_ (new) global variables
+  cal GetAll()
+  cal StandardColorSchemes()
+  ec "type \\x to change color under cursor"
+  ec " should be integrated to the mode <C-\ c>"
+  let g:color = {'initialized': 1}
+endf 
+fu! CChange() " {{{3
+  " should integrate bold italics and underline (strikeout?) TTM
+  let sid = hlID('Normal')
+  let sfg = synIDattr(synIDtrans(sid), "fg")
+  let sbg = synIDattr(synIDtrans(sid), "bg")
+  let name = map(synstack(line('.'), col('.')), 'synIDattr(synIDtrans(v:val), "name")')
+  if len(name) > 0
+    let name = name[-1]
+    let fg = map(synstack(line('.'), col('.')), 'synIDattr(synIDtrans(v:val), "fg")')[-1]
+    if fg == ''
+      let fg = sfg
+    en
+    let bg = map(synstack(line('.'), col('.')), 'synIDattr(synIDtrans(v:val), "bg")')[-1]
+    if bg == ''
+      let bg = sbg
+    en
+  el
+    let name = 'Normal'
+    let fg = sfg
+    let bg = sbg
+  en
+  if has_key(s:named_colors, tolower(fg))
+    let fg_named = fg
+    let fg = s:named_colors[tolower(fg)]['hex']
+  en
+  if fg[0] != '#'
+    let fg = "#" . fg
+  en
+  let rgb = [fg[1:2], fg[3:4], fg[5:6]]
+  let rgb_ = map(rgb, 'str2nr(v:val, "16")')
+
+  if has_key(s:named_colors, tolower(bg))
+    let bg_named = bg
+    let bg = s:named_colors[tolower(bg)]['hex']
+  en
+  if bg[0] != '#'
+    let bg = "#" . bg
+  en
+  let rgbb = [bg[1:2], bg[3:4], bg[5:6]]
+  let rgbb_ = map(rgbb, 'str2nr(v:val, "16")')
+
+  let [fg_, bg_] = [fg, bg]
+  ec [fg_, bg_]
+  let c = 'foo'
+  let who = 'fg'
+  ec 'initial colors are fg, bs:' fg bg
+  cal getchar(1)
+  let emphn = 0
+  let emph = ['bold', 'underline', 'bold,underline', 'NONE']
+  wh c != 'n'
+      let mex = 1
+			let c = nr2char(getchar())
+      if c == 'j'
+        if who == 'fg'
+          let who = 'bg'
+          let mcmd = 'echo "on the background color"'
+        el
+          let who = 'fg'
+          let mcmd = 'echo "on the background color"'
+        en
+      elsei c == 'h'
+        let [rgb_, rgbb_] = [rgbb_, rgb_]
+        let mcmd = 'echo "colors inverted"'
+        let fg_ = Hex(rgb_[0], rgb_[1], rgb_[2])
+        exe 'hi' name 'guifg=' . fg_
+        let bg_ = Hex(rgbb_[0], rgbb_[1], rgbb_[2])
+        exe 'hi' name 'guibg=' . bg_
+      elsei c == 'p' " power, preeminence, prominance
+        let emphn  = ( emphn + 1 ) % len(emph)
+        exe 'hi' name 'cterm=' . emph[emphn]
+        let mcmd = ''
+      elsei c == 'P' " power, preeminence, prominance
+        let emphn  = ( emphn + 3 ) % len(emph)
+        exe 'hi' name 'cterm=' . emph[emphn]
+        let mcmd = ''
+      elsei who == 'fg'
+        let rgb_ = IncRGB(rgb_, c)
+        let fg_ = Hex(rgb_,0,0)
+        let mcmd = printf('hi %s guifg=%s', name, fg_)
+      elsei who == 'bg'
+        let rgbb_ = IncRGB(rgbb_, c)
+        let bg_ = Hex(rgbb_,0,0)
+        let mcmd = printf('hi %s guibg=%s', name, bg_)
+      el
+        let mex = 0
+      en
+      if mex
+        exe mcmd
+        redr
+        ec fg_ bg_ '(rewqgfdsbvcxhjp to change, n to quit)'
+      en
+      " echo 'hi' name 'guifg=' . fg_
+  endw
+  let s:me = l:
+endf
+fu! CStack() " {{{3
+  " Show syntax highlighting groups for word under cursor
+  " last item should be the group last considered, i.e. the most relevant.
+  " If it is linked to some other group, you might find it with 
+  " synIDtrans
+  if !exists("*synstack")
+    retu
+  en
+  let a = map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+  " intermediaries
+  let b = map(synstack(line('.'), col('.')), 'synIDattr(synIDtrans(v:val), "name")')
+  let c = []
+  let i = 0
+  wh i < len(a)
+    if a[i] != b[i]
+      cal add(c, [a[i], b[i]])
+    el
+      cal add(c, a[i])
+    en
+    let i += 1
+  endw
+  if len(c) == 0
+    let c = ['Normal']
+  en
+  retu c
+endf
 " -- UTILS {{{2
-fu! ColorsIsInitialized() " {{{3
- colors.initialized")
+fu! CIsInitialized() " {{{3
+ if exists("color.initialized")
     retu 1
   el
     retu 0
   en
 endf
-fu! RealcolorsHex(r,g,b) " {{{3
+fu! CHex(...) " {{{3
   " Return RGB in Hex notation: #RRGGBB
   " expects a list [r, g, b] with values in [0, 255]
-  if type(a:r) == 3
-     retu printf("#%02x%02x%02x", a:r[0], a:r[1], a:r[2])
+  " works both Hex(2,3,4) as Hex([2,3,4])
+  let g:asd = a:
+  if type(a:1) == 3
+     retu printf("#%02x%02x%02x", a:1[0], a:1[1], a:1[2])
   el
-     retu printf("#%02x%02x%02x", a:r, a:g, a:b)
+     retu printf("#%02x%02x%02x", a:1, a:2, a:3)
   en
 endf
+fu! CRandColor(...) " {{{3
+  " Return random RGB in Hex notation: #RRGGBB
+  py3 rgb = [r.randint(0,255) for i in range(3)]
+  retu CHex(py3eval("rgb"))
+endf
+
 fu! RealcolorsGrayScale(from,to,ncolors) " {{{3
   " nsteps = ncolors - 1
   let walk = a:to - a:from
@@ -139,32 +348,6 @@ fu! CheckColor(c) " {{{3
       let c[i] = 0
     en
   endfo
-  retu c
-endf
-fu! SynStack() " {{{3
-  " Show syntax highlighting groups for word under cursor
-  " last item should be the group last considered, i.e. the most relevant.
-  " If it is linked to some other group, you might find it with 
-  " synIDtrans
-  if !exists("*synstack")
-    retu
-  en
-  let a = map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
-  " intermediaries
-  let b = map(synstack(line('.'), col('.')), 'synIDattr(synIDtrans(v:val), "name")')
-  let c = []
-  let i = 0
-  wh i < len(a)
-    if a[i] != b[i]
-      cal add(c, [a[i], b[i]])
-    el
-      cal add(c, a[i])
-    en
-    let i += 1
-  endw
-  if len(c) == 0
-    let c = ['Normal']
-  en
   retu c
 endf
 fu! MkBlack() " {{{3
@@ -270,37 +453,6 @@ fu! IncrementColor(c, g) " {{{3
   let s:colors[l:g][l:c] = (colors[l:g][l:c] + 16 ) % 256
   RefreshColors()  " should update the colors of the cursor position
 endf
-fu! ColorsInit() " {{{3
-  " Should initialize the whole coloring system.
-  " If not only changing the color under cursor, should be used
-  let s:ground = 'fg'
-  cal StandardColors()
-  " creates the dictionary with colors on foreground and background
-  " default, temporary and buffer in s:dcoulorsd, s:tcolorsd and s:colors
-  let s:colors = {}
-  cal GetColors(0)
-  ec '===> buffer color:' s:colors['buffer']
-  cal GetColors(1)
-  ec ':::> temp color:' s:colors['temp']
-  cal GetColors(2)
-  ec '---> default color:' s:colors['default']
-  " initialize mappings
-  " make named_colors0 and named_colors with the name of the colors:
-  " 0: from documentation :h gui-colors
-  " : from $VIMRUNTIME/rgb.txt
-  let s:cs = {'standard': g:colors_name}
-  let s:timers = []
-  let s:counters = range(10)
-  let s:ncounters = 0
-  let s:patterns = {}
-  let s:mpatterns = {'wave': 'call WavePattern()', 'std': 'call StandardPattern()', 'wobble': 'call Wobble()', 'silence': 'call BypassPattern'}
-  " get all variables to the g:colors_all (new)
-  " and g:colors_all_ (new) global variables
-  cal GetAll()
-  cal StandardColorSchemes()
-  ec "type \\x to change color under cursor"
-  ec " should be integrated to the mode <C-\ c>"
-endf 
 fu! GetAll() " {{{3
   let g:colors_all = s:
   let g:colors_all_ = []
@@ -403,101 +555,6 @@ fu! IncRGB(co, ch) " {{{3
     let co[1] = (255 + co[1]) % 256
   en
   retu co
-endf
-fu! ChgColor() " {{{3
-  " should integrate bold italics and underline (strikeout?) TTM
-  let sid = hlID('Normal')
-  let sfg = synIDattr(synIDtrans(sid), "fg")
-  let sbg = synIDattr(synIDtrans(sid), "bg")
-  let name = map(synstack(line('.'), col('.')), 'synIDattr(synIDtrans(v:val), "name")')
-  if len(name) > 0
-    let name = name[-1]
-    let fg = map(synstack(line('.'), col('.')), 'synIDattr(synIDtrans(v:val), "fg")')[-1]
-    if fg == ''
-      let fg = sfg
-    en
-    let bg = map(synstack(line('.'), col('.')), 'synIDattr(synIDtrans(v:val), "bg")')[-1]
-    if bg == ''
-      let bg = sbg
-    en
-  el
-    let name = 'Normal'
-    let fg = sfg
-    let bg = sbg
-  en
-  if has_key(s:named_colors, tolower(fg))
-    let fg_named = fg
-    let fg = s:named_colors[tolower(fg)]['hex']
-  en
-  if fg[0] != '#'
-    let fg = "#" . fg
-  en
-  let rgb = [fg[1:2], fg[3:4], fg[5:6]]
-  let rgb_ = map(rgb, 'str2nr(v:val, "16")')
-
-  if has_key(s:named_colors, tolower(bg))
-    let bg_named = bg
-    let bg = s:named_colors[tolower(bg)]['hex']
-  en
-  if bg[0] != '#'
-    let bg = "#" . bg
-  en
-  let rgbb = [bg[1:2], bg[3:4], bg[5:6]]
-  let rgbb_ = map(rgbb, 'str2nr(v:val, "16")')
-
-  let [fg_, bg_] = [fg, bg]
-  ec [fg_, bg_]
-  let c = 'foo'
-  let who = 'fg'
-  ec 'initial colors are fg, bs:' fg bg
-  cal getchar(1)
-  let emphn = 0
-  let emph = ['bold', 'underline', 'bold,underline', 'NONE']
-  wh c != 'n'
-      let mex = 1
-			let c = nr2char(getchar())
-      if c == 'j'
-        if who == 'fg'
-          let who = 'bg'
-          let mcmd = 'echo "on the background color"'
-        el
-          let who = 'fg'
-          let mcmd = 'echo "on the background color"'
-        en
-      elsei c == 'h'
-        let [rgb_, rgbb_] = [rgbb_, rgb_]
-        let mcmd = 'echo "colors inverted"'
-        let fg_ = Hex(rgb_[0], rgb_[1], rgb_[2])
-        exe 'hi' name 'guifg=' . fg_
-        let bg_ = Hex(rgbb_[0], rgbb_[1], rgbb_[2])
-        exe 'hi' name 'guibg=' . bg_
-      elsei c == 'p' " power, preeminence, prominance
-        let emphn  = ( emphn + 1 ) % len(emph)
-        exe 'hi' name 'cterm=' . emph[emphn]
-        let mcmd = ''
-      elsei c == 'P' " power, preeminence, prominance
-        let emphn  = ( emphn + 3 ) % len(emph)
-        exe 'hi' name 'cterm=' . emph[emphn]
-        let mcmd = ''
-      elsei who == 'fg'
-        let rgb_ = IncRGB(rgb_, c)
-        let fg_ = Hex(rgb_,0,0)
-        let mcmd = printf('hi %s guifg=%s', name, fg_)
-      elsei who == 'bg'
-        let rgbb_ = IncRGB(rgbb_, c)
-        let bg_ = Hex(rgbb_,0,0)
-        let mcmd = printf('hi %s guibg=%s', name, bg_)
-      el
-        let mex = 0
-      en
-      if mex
-        exe mcmd
-        redr
-        ec fg_ bg_ '(rewqgfdsbvcxhjp to change, n to quit)'
-      en
-      " echo 'hi' name 'guifg=' . fg_
-  endw
-  let s:me = l:
 endf
 fu! StandardColorsOrig() " {{{3
   "  Shows the named colors available as fg and bg against default fg and bg    
@@ -1061,7 +1118,7 @@ fu! SporkVoice(timerID)
       \ '\nHandler finished' s:counters ' ' a:timerID
 endf
 
-fu! Voice(repeats, duration, patternID)
+fu! Voice(repeats, duration, patternID) " {{{
   " timer is number of subsequent timer onsets
   " duration is period in ms
   " value is simpy not being used
@@ -1076,7 +1133,7 @@ fu! Voice(repeats, duration, patternID)
     let s:patterns[timerID_] = 'call' a:patternID
   en
   call add(s:timers, timerID_)
-endfu
+endfu " }}}
 " let s:pattern = s:MyTimer3
 " -- NOTE {{{2
 " -------- notes {{{3
@@ -1283,7 +1340,7 @@ endfu
 " http://www.crivoice.org/symbols/colorsmeaning.html
 " -- FINAL {{{2
 " -- final commands and file settings {{{3
-if !ColorsIsInitialized()
-  cal ColorsInit()
+if !CIsInitialized()
+  cal CInit()
 en
 " vim:foldlevel=2:
