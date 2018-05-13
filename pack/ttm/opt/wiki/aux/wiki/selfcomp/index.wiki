@@ -1,8 +1,9 @@
-
 ~ Records ~
 
+~~ finished ~~
 ./rec/Gularte
 
+~~ ongoing ~~
 ./rec/Glerm
 
 ./rec/Machado
@@ -11,9 +12,34 @@
 
 ./rec/Otto
 
-./rec/Martigli
-
 ./rec/Basbaum
 
 ./rec/Antunes
+
+./rec/Bez
+
+~~ planned ~~
+./rec/Martigli
+
+./rec/Xavier
+
+./rec/Diósnio
+
+./rec/Robson
+
+./rec/Love
+
+./rec/Laurindo
+
+./rec/Cláudia
+
+./rec/Ydá
+
+~~~ other ~~~
+
+./notes
+
+./about
+
+./readme
 

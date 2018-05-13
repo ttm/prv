@@ -179,6 +179,19 @@ Maybe relevant:
 
 'ofu'
 
+
+                                                       *wiki-variables*
+|b:current_syntax-variable|
+
+                                                       *wiki-html*
+Use |:TOhtml| to make your pages with the color settings you want.
+See |color|
+
+Parsers will be posted here for linking the files and other stuff.
+
+|:TOhtml| does not inherit |:match| commands.
+
+
                                                         *wiki-help-navigation*
 * reuse Vim's capabilities with help files and (parallel help files?) with
   tags and searching (and what more?).

@@ -32,6 +32,67 @@ fu! WikiMkMappings()
   nn Wu :exe '!ctags-exuberant -f '.g:wiki_dir.'aux/wiki/.tags '.g:wiki_dir.'aux/wiki/**/*'<CR> 
 endf
 
+" syntax:
+" if .wiki, ~.*~ is heading marker, Constant
+" if :.*: tag to be parsed (into anything, make a dictionary)
+" ./ ../ etc are paths, to be linked in the resulting HTML file
+" the HTML that results from :TOhtml are parsed to fit a central
+" window, with margins.
+"
+" highlighting:
+" :: ~~ ./ are highlighted when .wiki is the extension
+
+" hi wTitle guifg=red
+
+hi link wTitle Constant
+hi link wSubtitle Boolean
+hi link wSubsububtitle Comment
+hi link wPath Error
+sy match wTitle /\v\~.*\~/
+sy match wSubitle /\v\~\~.*\~\~/
+sy match wSubsubitle /\v\~\~\~.*\~\~\~/
+sy match wPath /\v\..*/
+
+hi link wTitle Constant
+hi link wSubtitle WarningMsg
+hi link wSubsubtitle Comment
+hi link wPath Error
+sy match wTitle /\v\~.*\~/
+sy match wSubtitle /\v\~\~.*\~\~/
+sy match wSubsubtitle /\v\~\~\~.*\~\~\~/
+sy match wPath /\v\..*/
+
+fu! WCenterHTML()
+  norm /<\/style>
+  let @" = '.center { margin: auto; width: 60%; border: 3px solid #73AD21; padding: 10px; }'
+  norm p
+endf
+
+find \v\<\/style\>
+paste before (P):
+.center {
+    margin: auto;
+    width: 60%;
+    border: 3px solid #73AD21;
+    padding: 10px;
+}
+find '\v\<body '
+walk e, paste ' class="center"'
+
+save. centering finished.
+
+linking to other files:
+
+find \.\/
+let tlink = expand("<cfile>")
+let tlink .='.wiki.html'
+paste '<a href="'.tlink.'">'
+move t<
+paste </a>
+
+
+
+
 cal WikiInit()
 " {{{5 Vimwiki, deprecated, notes
 " cal g:PRVVWFileNMapping("<leader>wA", "achievements.wiki")
