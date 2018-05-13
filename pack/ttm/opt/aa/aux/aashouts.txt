@@ -2681,3 +2681,12 @@ Dom Mai 13 00:04:12 -03 2018
 arrumando funcoes basicas para mudar as cores
 Dom Mai 13 00:13:20 -03 2018
 -----
+adiantado design e codigo do color
+Dom Mai 13 00:39:58 -03 2018
+-----
+pensando em como fazer a coisa fumegar
+Dom Mai 13 00:44:14 -03 2018
+-----
+feito planejamento de dev do color
+Dom Mai 13 01:03:16 -03 2018
+-----
