@@ -24,13 +24,47 @@ let g:loaded_colorsPlugin = 'v01'
 
 " MAPPINGS: {{{1
 " -- g:realcolors_leader hack, part 1 of 1 {{{3
-" for now: <C-\> is reserved, so it is safe to use it in all modes
+nn c :cal CColor()<CR>
 " Initialization and overall status update
 " COMMANDS: {{{1
 " -- MAIN: {{{3
 " -- UTILS: {{{3
 " FUNCTIONS: {{{1
 " -- MAIN {{{2
+fu! CColor() " {{{3
+  let c = 'banana'
+  let action = 0
+  wh c != 'q'
+    ec 'type H for help, q to quit, else ciLs is implemented: '
+    let c = nr2char(getchar())
+    if c == 'H'
+      ec 'c is change'
+      ec 'i is init'
+      ec 'L is luck'
+      ec 's is (print) stack of syntax groups'
+    elsei c == 'i'
+      cal CInit()
+    elsei index(['c', 'L', 's'], c) >= 0
+      let action = c
+    en
+    if action != 0
+      while c != 'q'
+        ec 'type H for help, q to quit, else cntslb is implemented: '
+        let c = nr2char(getchar())
+        if c == 'H'
+          ec 'c is cursor'
+          ec 'n is Normal'
+          ec 't is tab'
+          ec 's is spell'
+          ec 'l is status line'
+          ec 'b is number column'
+        elsei c == 'c'
+          let sname = CStack()
+        en
+      endw
+    en
+  endw
+endf
 fu! CInit() " {{{3
   " Should initialize the whole coloring system.
   " If not only changing the color under cursor, should be used
@@ -68,7 +102,7 @@ fu! CChange() " {{{3
   let sid = hlID('Normal')
   let sfg = synIDattr(synIDtrans(sid), "fg")
   let sbg = synIDattr(synIDtrans(sid), "bg")
-  let name = map(synstack(line('.'), col('.')), 'synIDattr(synIDtrans(v:val), "name")')
+  let name = CStack()[-1][-1]
   if len(name) > 0
     let name = name[-1]
     let fg = map(synstack(line('.'), col('.')), 'synIDattr(synIDtrans(v:val), "fg")')[-1]
@@ -180,7 +214,7 @@ fu! CStack() " {{{3
     let i += 1
   endw
   if len(c) == 0
-    let c = ['Normal']
+    let c = [['Normal']]
   en
   retu c
 endf
