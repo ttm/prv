@@ -1,6 +1,19 @@
 :Todo:todo:TODO:ToDo:
 =================
 
+hoje: fechar prv, versao inicial
+amanha: garibar prv, fechar artigos Vim e Tokipona
+terça: retomar dev datavis, Pillow, artigo desigualdade
+quarta: lançar album selfcomp, artigo wikipédia datavis
+quinta: artigo losd, diff em texto, dev dataviz
+sexta: dev dataviz, versinus
+sábado: OPS, retomar outro dev
+domingo: reavaliar tudo
+
+
+==========
+
+
 fichar livro da munzner, 2h
 - Qui Mai 10 14:21:17 -03 2018
 - Qui Mai 10 16:15:29 -03 2018

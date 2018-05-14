@@ -2708,3 +2708,35 @@ Dom Mai 13 11:23:01 -03 2018
 ler o :TOHTML
 Dom Mai 13 12:18:59 -03 2018
 -----
+
+
+$$$$$
+sessao p detarat tudo. TODO:
+* este todo
+* calendario da semana p resolver *
+* color arrumar codigo 2h
+* color arrumar documentacao 2h
+* wiki arrumar codigo 2h
+* wiki arrumar documentacao 2h
+* prv arrumar geral 2h
+* tapa nos bots, garibada geral 2h
+Dom Mai 13 17:03:20 -03 2018
+-----
+debugando script central do color
+Dom Mai 13 17:19:11 -03 2018
+-----
+arrumando opcoes para color
+Dom Mai 13 17:34:04 -03 2018
+-----
+arrumando rotina principal
+Dom Mai 13 17:49:24 -03 2018
+-----
+passando os nomes para dicionario proprio
+Dom Mai 13 18:05:07 -03 2018
+-----
+$$$$$
+
+
+
+Dom Mai 13 19:59:43 -03 2018
+-----

@@ -24,7 +24,9 @@ let g:loaded_colorsPlugin = 'v01'
 
 " MAPPINGS: {{{1
 " -- g:realcolors_leader hack, part 1 of 1 {{{3
-nn c :cal CColor()<CR>
+nn cc :cal CColor()<CR>
+nn cs :ec CStack()<CR>
+nn ci :cal CInit()<CR>
 " Initialization and overall status update
 " COMMANDS: {{{1
 " -- MAIN: {{{3
@@ -32,38 +34,103 @@ nn c :cal CColor()<CR>
 " FUNCTIONS: {{{1
 " -- MAIN {{{2
 fu! CColor() " {{{3
-  let c = 'banana'
-  let action = 0
+  let l:c = 'banana'
+  let g:action = v:none
+  let g:sname = v:none
   wh c != 'q'
     ec 'type H for help, q to quit, else ciLs is implemented: '
-    let c = nr2char(getchar())
-    if c == 'H'
+    let l:c = nr2char(getchar())
+    ec l:c
+    ec index(['c', 'L', 's'], l:c)
+    if l:c == 'H'
       ec 'c is change'
       ec 'i is init'
       ec 'L is luck'
       ec 's is (print) stack of syntax groups'
-    elsei c == 'i'
+    elsei l:c == 'i'
       cal CInit()
-    elsei index(['c', 'L', 's'], c) >= 0
-      let action = c
+    elsei index(['c', 'L', 's'], l:c) >= 0
+      let g:action = l:c
     en
-    if action != 0
-      while c != 'q'
+    if g:action != v:none
+      while l:c != 'q'
         ec 'type H for help, q to quit, else cntslb is implemented: '
-        let c = nr2char(getchar())
-        if c == 'H'
+        let l:c = nr2char(getchar())
+        if l:c == 'H'
           ec 'c is cursor'
           ec 'n is Normal'
           ec 't is tab'
           ec 's is spell'
           ec 'l is status line'
           ec 'b is number column'
-        elsei c == 'c'
-          let sname = CStack()
+        elsei l:c == 'c'
+          let g:sname = CStack()[-1][-1]
+        elsei l:c == 'n'
+          let g:sname = 'Normal'
+        elsei l:c == 't'
+          wh l:c != 'q'
+            ec 'type H for help, q to quit, else tsf is implemented: '
+            let l:c = nr2char(getchar())
+            if l:c == 'H'
+              ec 't is TabLine'
+              ec 's is TabLineSel'
+              ec 'f is TabLineFill'
+            elsei index(['t', 's', 'f'], l:c) >= 0
+              let g:sname = 't'.l:c
+            en
+            if g:sname != v:none
+              let l:c = 'q'
+            en
+          endw
+        elsei l:c == 's'
+          let g:sname = 'SpellBad'
+        elsei l:c == 'l'
+          wh l:c != 'q'
+            ec 'type H for help, q to quit, else sntT is implemented: '
+            let l:c = nr2char(getchar())
+            if l:c == 'H'
+              ec 's is StatusLine'
+              ec 'n is StatusLineNC'
+              ec 't is StatusLineTerm'
+              ec 'T is StatusLineTermNC'
+            elsei index(['s', 'n', 't', 'T'], l:c) >= 0
+              let g:sname = 'l'.l:c
+            en
+            if g:sname != v:none
+              let l:c = 'q'
+            en
+          endw
+        elsei l:c == 'b'  " number column
+          wh l:c != 'q'
+            ec 'type H for help, q to quit, else nN is implemented: '
+            let l:c = nr2char(getchar())
+            if l:c == 'H'
+              ec 'n is LineNr'
+              ec 'N is CursorLineNr'
+            elsei index(['n', 'N'], l:c) >= 0
+              let g:sname = 'b'.l:c
+            en
+            if g:sname != v:none
+              let l:c = 'q'
+            en
+          endw
+        en
+        if g:sname != v:none
+          let l:c = 'q'
         en
       endw
     en
   endw
+  cal CCarryAction(g:action, g:sname)
+endf
+let g:color.actions = {'y': 'yank', 'a': 'apply', 'c': 'change', 'L': 'luck',
+      \ 's': 'stack', 'l': 'load', 'k': 'keep', 'i': 'init', 'h': 'hack', 'H': 'help'}
+let g:color.snames = {'n': 'Normal', 'tt': 'TabLine', 'ts': 'TabLineSel',
+      \ 'tf': 'TabLineFill', 'sb': 'Spellbad', 'sr': 'SpellRare',
+      \ 'nn': 'LineNr', 'nN': 'CursorLineNr', 'ls': 'StatusLine',
+      \ 'ln': 'StatusLineNC', 'lt': 'StatusLineTerm', 'lT': 'StatusLineTermNC'}
+fu! CCarryAction(action, sname)
+  let a = 4
 endf
 fu! CInit() " {{{3
   " Should initialize the whole coloring system.
@@ -83,7 +150,7 @@ fu! CInit() " {{{3
   " make named_colors0 and named_colors with the name of the colors:
   " 0: from documentation :h gui-colors
   " : from $VIMRUNTIME/rgb.txt
-  let s:cs = {'standard': g:colors_name}
+  let s:cs = {}
   let s:timers = []
   let s:counters = range(10)
   let s:ncounters = 0
@@ -617,7 +684,7 @@ fu! StandardColors() " {{{3
       con
     en
     let [r, g, b, name] = [str2nr(@"[0:2]), str2nr(@"[4:6]), str2nr(@"[8:10]), @"[13:-2]]
-    let mhex = Hex(r,g,b)
+    let mhex = CHex(r,g,b)
     " if name =~ 'gray'
     "   echo r g b mhex name
     " endif

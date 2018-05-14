@@ -8,13 +8,17 @@
 
 ./rec/Machado
 
+./rec/Basbaum
+
+./rec/Barros
+
 ./rec/Pataca
 
 ./rec/Otto
 
-./rec/Basbaum
-
 ./rec/Antunes
+
+./rec/Vanazzi
 
 ./rec/Bez
 
@@ -34,6 +38,12 @@
 ./rec/Cláudia
 
 ./rec/Ydá
+
+./rec/Bottas
+
+./rec/Sampaio
+
+./rec/Beto
 
 ~~~ other ~~~
 

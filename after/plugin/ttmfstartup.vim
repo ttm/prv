@@ -3,7 +3,7 @@
 " packadd gruvbox
 " " in pack/ttm/opt/
 pa prv
-pa realcolors
+pa color
 pa aa
 pa bot
 pa wiki

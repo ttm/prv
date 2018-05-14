@@ -1202,3 +1202,23 @@ Srila: wiki lá Ter Mai 7 , varios artigos mais cedo e
 $$$$$ ::: Dom Mai 13 12:18:59 -03 2018
 ler o :TOHTML
 Srila: o gmail . Seg Mai 12 Sáb Fev 24 10 15
+
+$$$$$ ::: Dom Mai 13 17:03:20 -03 2018
+sessao p detarat tudo. TODO:
+Srila: p arquivo e arquivos soltos Seg Mar 18 : 14 :
+
+$$$$$ ::: Dom Mai 13 17:19:12 -03 2018
+debugando script central do color
+Srila: script para arquivo univo Seg Fev 26 - arrumar color scheme
+
+$$$$$ ::: Dom Mai 13 17:34:04 -03 2018
+arrumando opcoes para color
+Srila: para opt e terminando organizacao de baixo solto Dom Mar 18
+
+$$$$$ ::: Dom Mai 13 17:49:24 -03 2018
+arrumando rotina principal
+Srila: principal Seg Mar 28 00 : ts direito , IB ,
+
+$$$$$ ::: Dom Mai 13 18:05:07 -03 2018
+passando os nomes para dicionario proprio
+Srila: os apresentadores e deixando texto Sáb Mai 7 08 - revisar

@@ -1,0 +1,5 @@
+:h syntax.txt
+with 5.5k lines
+
+:h tgsrc.txt
+

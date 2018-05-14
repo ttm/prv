@@ -1,30 +1,30 @@
 ~ Fernando Gularte ~
 
-Selection of tracks of Gularte by Gularte.
+Selection of tracks of Gularte by Gularte
 See ../about for more info
 
 ~~ three tracks ~~
 
-Abounds in reverbs and delays, as ketchup (and mustard).
+Abounds in reverbs and delays, as ketchup (and mustard)
 These three little gems are Webern-like masterpieces of
-sincere exploitation.
+sincere exploitation
 
 The rhythmic crescendo of this trine sequence
-has the climax on 3) with the monstrous and profane binary beat.
+has the climax on 3) with the monstrous and profane binary beat
 
-Enjoy this 3min > piece.
+Enjoy this 3min > piece
 
-1) Intro-Next
+1) <a href="./data/FernandoGularte/Intro-Next.mp3">Intro-Next</a>
 
-2) Second
+2) <a href="./data/FernandoGularte/Second.mp3">Second</a>
 
-3) Dr.Jekyll
+3) <a href="./data/FernandoGularte/Dr.Jekyll.mp3">Dr Jekyll</a>
 
 ~~ About Gularte ~~
 Mathematician and social entrepreneur,
 thinks and acts now around scientific journals,
 personal, community and institutional partnerships,
-and what else he adds here.
+and what else he adds here
 
 ~~ Licence ~~
 Public Domain,

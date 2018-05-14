@@ -44,51 +44,51 @@ endf
 
 " hi wTitle guifg=red
 
-hi link wTitle Constant
-hi link wSubtitle Boolean
-hi link wSubsububtitle Comment
-hi link wPath Error
-sy match wTitle /\v\~.*\~/
-sy match wSubitle /\v\~\~.*\~\~/
-sy match wSubsubitle /\v\~\~\~.*\~\~\~/
-sy match wPath /\v\..*/
-
-hi link wTitle Constant
-hi link wSubtitle WarningMsg
-hi link wSubsubtitle Comment
-hi link wPath Error
-sy match wTitle /\v\~.*\~/
-sy match wSubtitle /\v\~\~.*\~\~/
-sy match wSubsubtitle /\v\~\~\~.*\~\~\~/
-sy match wPath /\v\..*/
-
-fu! WCenterHTML()
-  norm /<\/style>
-  let @" = '.center { margin: auto; width: 60%; border: 3px solid #73AD21; padding: 10px; }'
-  norm p
-endf
-
-find \v\<\/style\>
-paste before (P):
-.center {
-    margin: auto;
-    width: 60%;
-    border: 3px solid #73AD21;
-    padding: 10px;
-}
-find '\v\<body '
-walk e, paste ' class="center"'
-
-save. centering finished.
-
-linking to other files:
-
-find \.\/
-let tlink = expand("<cfile>")
-let tlink .='.wiki.html'
-paste '<a href="'.tlink.'">'
-move t<
-paste </a>
+" hi link wTitle Constant
+" hi link wSubtitle Boolean
+" hi link wSubsububtitle Comment
+" hi link wPath Error
+" sy match wTitle /\v\~.*\~/
+" sy match wSubitle /\v\~\~.*\~\~/
+" sy match wSubsubitle /\v\~\~\~.*\~\~\~/
+" sy match wPath /\v\..*/
+" 
+" hi link wTitle Constant
+" hi link wSubtitle WarningMsg
+" hi link wSubsubtitle Comment
+" hi link wPath Error
+" sy match wTitle /\v\~.*\~/
+" sy match wSubtitle /\v\~\~.*\~\~/
+" sy match wSubsubtitle /\v\~\~\~.*\~\~\~/
+" sy match wPath /\v\.\f{3,}/
+" 
+" fu! WCenterHTML()
+"   norm /<\/style>
+"   let @" = '.center { margin: auto; width: 60%; border: 3px solid #73AD21; padding: 10px; }'
+"   norm p
+" endf
+" 
+" find \v\<\/style\>
+" paste before (P):
+" .center {
+"     margin: auto;
+"     width: 60%;
+"     border: 3px solid #73AD21;
+"     padding: 10px;
+" }
+" find '\v\<body '
+" walk e, paste ' class="center"'
+" 
+" save. centering finished.
+" 
+" linking to other files:
+" 
+" find \.\/
+" let tlink = expand("<cfile>")
+" let tlink .='.wiki.html'
+" paste '<a href="'.tlink.'">'
+" move t<
+" paste </a>
 
 
 
