@@ -190,7 +190,8 @@ See |color|
 Parsers will be posted here for linking the files and other stuff.
 
 |:TOhtml| does not inherit |:match| commands.
-
+    from |:TOhtml|:
+  `vim -E -s -c "let g:html_no_progress=1" -c "syntax on" -c "set ft=c" -c "runtime syntax/2html.vim" -cwqa myfile.c`
 
                                                         *wiki-help-navigation*
 * reuse Vim's capabilities with help files and (parallel help files?) with

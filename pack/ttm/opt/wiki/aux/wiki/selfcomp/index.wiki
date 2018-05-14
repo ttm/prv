@@ -1,10 +1,16 @@
 ~ Records ~
+aivto: audio, image, video, text, other
 
 ~~ finished ~~
 ./rec/Gularte
+a, Seg Mai 14 12:12:54 -03 2018
 
 ~~ ongoing ~~
 ./rec/Glerm
+at,
+
+./rec/Martigli *
+at, 
 
 ./rec/Machado
 
@@ -12,18 +18,23 @@
 
 ./rec/Barros
 
+./rec/Sampaio *
+
+./rec/Vanazzi *
+
+./rec/Bez *
+
 ./rec/Pataca
 
 ./rec/Otto
 
 ./rec/Antunes
 
-./rec/Vanazzi
-
-./rec/Bez
+./rec/Prado
 
 ~~ planned ~~
-./rec/Martigli
+
+./rec/Garcia
 
 ./rec/Xavier
 
@@ -41,9 +52,59 @@
 
 ./rec/Bottas
 
-./rec/Sampaio
-
 ./rec/Beto
+
+./rec/Lobo
+
+./rec/taisLobo
+
+./rec/Jiménez
+
+./rec/Benatti
+
+./rec/Bonatti
+
+./rec/Leubel
+
+./rec/Macruz
+
+./rec/Bento
+
+./rec/Ruiz
+
+./rec/Brazileiro
+
+./rec/Beth
+
+./rec/Stock
+
+./rec/Paraquedas
+
+./rec/GibaGiba
+
+./rec/TC
+
+./rec/Morcego
+
+./rec/Pisani
+
+./rec/Antunes
+
+./rec/Silvério
+
+./rec/Ricardo
+
+./rec/Costa
+at
+
+./rec/Ton
+ti
+
+./rec/Larissa
+tiv
+
+./rec/Priscila
+t
 
 ~~~ other ~~~
 
