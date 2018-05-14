@@ -214,5 +214,101 @@ arrumar post na ABU e comentar no do samadeu. OK
 Qui Abr 19 14:13:30 -03 2018
 
 
+:achievements:done:Done:Achievements:pronto:feito:ok:OK:
 
+(receive items from todo ?)
+
+* Published first half of [[mass]] [[final suite]] v0.01
+* keeping up with tight > 8h dedication schedule to colors, prv, mass,
+  ml
+* Many other things in the notes file
+* [[prv]]
+* notes.md is now [[blergh]].wiki
+* plugin release and other stuff at [[colors]]
+
+search for e.g. :done: or tag or \cdone \cok regex patterns
+
+Ter Fev 20 08:15:24 -03 2018
+* fazer o aa fumegar no prv!
+
+fev 12
+* published tokipona python package at PyPI
+
+Ter Fev 13 04:20:30 -02 2018
+* finished cap 1 of natural computing
+
+Qui Fev 15 15:30:00 -02 2018
+* Using vimtex
+* saw videos from Bram (2007, 2016) taking notes
+
+Sex Fev 16 13:08:45 -02 2018
+- encrypt prv notes in repo and add to git management
+- joined all vim repos and resources (.vim ttm/vim ttm/prv in one
+  repo. Tokipona was left in another repo)
+
+
+= periodic =
+
+== daily ==
+
+* organize Vim files, doubts, commands, etc.
+* upload vimwiki and aa shouts to github. (update prv)
+  - add vimrc file there maybe, or just add these ~/vimwiki/ files to a folder in ttm/vim/vimwiki/*
+* Review aa logs, and compare to plans for the day and for larger timespans (e.g. calendar for ufabc)
+* Write a Wikipedia article
+
+== weekly ==
+
+* write an article and send to arXiv
+* send article to peer review
+* review wiki notes to make them better organized
+* review Vim hacks to make workflow better
+* read at least a chapter on color, and one on dataviz
+* release a new version of a package or a plugin
+* upload wiki, aa and note files to repo or dropbox
+
+= baits =
+:baits:iscas:
+* ./various/moocs
+* miles/lightyear stones
+* jogos c primo
+* parar de fumar
+* estudos mitológicos
+* Livros Mumford Tsallis
+  - disponibilizar implementacoes: github, pypi, algorithmia
+  - gravar videos
+* Implementacoes algorithmia, github, pypi:
+  - setorializacao de erdos
+  - mass
+* Artigos por enviar
+* datavis
+* Wikipedia, revisar artigos, passar notas, fazer novos artigos (de dataviz principalmente)
+* explorar IC, bots, PRV
+  - enxame de almas
+  - bots com melhores parametrizacoes da fala:
+    * com o baseline
+    * utilizando estruturas morfossintaticas (POS tagging).
+    * com deeplearning (tensorflow Seq2Seq):
+      - https://adeshpande3.github.io/How-I-Used-Deep-Learning-to-Train-a-Chatbot-to-Talk-Like-Me
+    * conversa como aprendido em chat de bate papo mas com vocabulário próprio,
+    * digressao apenas pega as ultimas mensagens e monta com o corpus proprio
+  - formalizar paralelismo entre cultura da pessoa e treinamento.
+  - comando para bot mostrar a sua rede de palavras adjacentes
+* rever notas de ideias p artigos
+  - retomar escrita e integracao com blog ttm
+* Acompanhar Nexos
+  - fazer bots com autoras
+* Aproveitar torre na rede com URL pública
+* retomar experimentos em estruturas sociais, percola mundo etc
+
+== current baits ==
+
+* MOOCS
+* Trip to Europe and Uruguay
+* Medicine in 2020
+* articles and gadgets from msc and doc
+
+= current todo =
+Seg Mai 14 20:54:24 -03 2018
+revista virus
 

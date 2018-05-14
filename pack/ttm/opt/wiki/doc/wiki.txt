@@ -93,14 +93,15 @@ The |wiki| usage may be summarized as:
 
                                                                  *wiki-files*
 The |wiki| files (with notes) are in aux/wiki/ (directory added to 'path' by |wiki|):
-* Messages, in private/messages.wiki, marker M
-* TODO, in todo.wiki, marker T
-  - section Accomplishments, marker a (inside todo.wiki)
-* NOTEs, in blergh.wiki, marker N
-* Calendar, in diary/diary.wiki, marker C
-* Diary, also in diary/diary.wiki, marker D
+* Messages, in private/messages, marker M
+* TODO, in todo, marker T
+  - Accomplishments, marker a (inside todo)
+  - Diary, marker d (inside todo)
+  - Calendar, marker c (inside todo)
+  - Baits, marker b (inside todo)
+* NOTEs, in blergh, marker N
 * Final, might be anywhere, current final organization of nexts tasks,
-  marker F
+  usually inside todo or aashouts.txt, marker F
 
                                                        *wiki-file-navigation*
 * use |gf|, |^Wf|, |:find|, |:sfind|, |:tabfind| etc (which other commands?), to follow pages i.e. entries (verbetes/termos para artigos e notas)
