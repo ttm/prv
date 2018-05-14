@@ -576,3 +576,8 @@ slots: 8
 ended: Dom Mai 13 19:50:16 -03 2018
 
 
+
+
+started: Seg Mai 14 20:17:30 -03 2018
+dur: 5.0
+slots: 8

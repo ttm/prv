@@ -150,7 +150,7 @@ tags:
 
 (also: 'tagst')
 
-                                                       *wiki-settings*
+                                                       *wiki-settings2*
 for display:
 'isp'
 'kp'
