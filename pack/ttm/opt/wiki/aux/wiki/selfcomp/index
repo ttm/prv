@@ -1,4 +1,4 @@
-~ Records ~
+~ Records v001.1b ~
 
 aivtos: audio, image, video, text, quasi/semi-fnished (ok), other
 
@@ -9,6 +9,7 @@ h++: highlight, hear this
 
 ~~ (semi-)finished ~~
 
+release 001:
 ./rec/Gularte a, Seg Mai 14 12:12:54 -03 2018 
 
 ./rec/Martigli ats
@@ -21,9 +22,9 @@ h++: highlight, hear this
 
 ./rec/Antunes as, Ter Mai 15 14:50:02 -03 2018
 
-
 ~~ ongoing ~~
 
+release 002-3:
 ./rec/Barros
 
 ./rec/Otto
@@ -32,13 +33,19 @@ h++: highlight, hear this
 
 ./rec/Sampaio
 
-./rec/Vanazzi
-
 ./rec/Bez
 
 ./rec/Prado
 
 ./rec/TPPL
+
+./rec/Vanazzi
+
+./rec/Amiantus
+
+./rec/Skárnio
+
+./rec/Valdivieso
 
 
 ~~ planned ~~
@@ -46,6 +53,8 @@ h++: highlight, hear this
 ./rec/Coelho (le)
 
 ./rec/Guimarães (felipe)
+
+./rec/Mantovani
 
 ./rec/deborahAntunes *
 
@@ -119,7 +128,7 @@ h++: highlight, hear this
 
 ./rec/Silvério
 
-./rec/Ricardo
+./rec/ricardoFabbri
 
 ./rec/Costa at
 
@@ -133,15 +142,9 @@ h++: highlight, hear this
 
 ./rec/Boaro
 
-./rec/Amiantus
-
 ./rec/xname
 
 ./rec/Svab
-
-./rec/Skárnio
-
-./rec/Valdivieso
 
 ./rec/Manuelle
 
