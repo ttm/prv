@@ -2911,3 +2911,18 @@ Ter Mai 15 17:28:59 -03 2018
 soltar todos os html agora?
 Ter Mai 15 17:33:17 -03 2018
 -----
+hackeando syntax
+Ter Mai 15 17:39:14 -03 2018
+-----
+
+
+$$$$$
+para soltar o selfcomp
+Ter Mai 15 17:50:51 -03 2018
+-----
+checking small commands (one letter commands)
+Ter Mai 15 18:22:43 -03 2018
+-----
+check Vim {address} that appears in :t :m etc
+Ter Mai 15 18:24:53 -03 2018
+-----

@@ -1,3 +1,5 @@
+hi Normal guibg=white guifg=black
+
 hi link wTitle Constant
 hi link wSubtitle WarningMsg
 hi link wSubsubtitle Comment

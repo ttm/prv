@@ -1422,3 +1422,19 @@ Srila: músicas diversas Dom Abr 18 18 : 15 03 - publicar
 $$$$$ ::: Ter Mai 15 17:33:18 -03 2018
 soltar todos os html agora?
 Srila: todos batucam , menos sem querer , soltar aa POO ,
+
+$$$$$ ::: Ter Mai 15 17:39:14 -03 2018
+hackeando syntax
+Srila: syntax files in a paletta da virus Qui Mar 19 :
+
+$$$$$ ::: Ter Mai 15 17:50:51 -03 2018
+para soltar o selfcomp
+Srila: o fzf e opcoes para plugin pre - before Dom Mar
+
+$$$$$ ::: Ter Mai 15 18:22:43 -03 2018
+checking small commands (one letter commands)
+Srila: commands and standard observer Qui Fev 24 23 11 11 10
+
+$$$$$ ::: Ter Mai 15 18:24:53 -03 2018
+check Vim {address} that appears in :t :m etc
+Srila: that I can redir the terminal window is not how they
