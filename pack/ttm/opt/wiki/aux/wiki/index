@@ -19,40 +19,6 @@ Use lowercase markers for inside files.
 * tags usadas :todo: :note: :mass: etc
 
 
-= baits =
-:baits:iscas:
-* ./various/moocs
-* miles/lightyear stones
-* jogos c primo
-* parar de fumar
-* estudos mitológicos
-* Livros Mumford Tsallis
-  - disponibilizar implementacoes: github, pypi, algorithmia
-  - gravar videos
-* Implementacoes algorithmia, github, pypi:
-  - setorializacao de erdos
-  - mass
-* Artigos por enviar
-* datavis
-* Wikipedia, revisar artigos, passar notas, fazer novos artigos (de dataviz principalmente)
-* explorar IC, bots, PRV
-  - enxame de almas
-  - bots com melhores parametrizacoes da fala:
-    * com o baseline
-    * utilizando estruturas morfossintaticas (POS tagging).
-    * com deeplearning (tensorflow Seq2Seq):
-      - https://adeshpande3.github.io/How-I-Used-Deep-Learning-to-Train-a-Chatbot-to-Talk-Like-Me
-    * conversa como aprendido em chat de bate papo mas com vocabulário próprio,
-    * digressao apenas pega as ultimas mensagens e monta com o corpus proprio
-  - formalizar paralelismo entre cultura da pessoa e treinamento.
-  - comando para bot mostrar a sua rede de palavras adjacentes
-* rever notas de ideias p artigos
-  - retomar escrita e integracao com blog ttm
-* Acompanhar Nexos
-  - fazer bots com autoras
-* Aproveitar torre na rede com URL pública
-* retomar experimentos em estruturas sociais, percola mundo etc
-
 = conteúdos principais =
 ic complexidade
 prv [[prv/|vim]] [[prv/python]] [[prv/rdf]]

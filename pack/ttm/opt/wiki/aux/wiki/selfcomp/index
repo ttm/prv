@@ -1,48 +1,75 @@
 ~ Records ~
-aivto: audio, image, video, text, other
 
-~~ finished ~~
-./rec/Gularte
-a, Seg Mai 14 12:12:54 -03 2018
+aivtos: audio, image, video, text, quasi/semi-fnished (ok), other
+
+r++: remix this, please, pearl found, is there a high quality audio?
+
+h++: highlight, hear this
+
+
+~~ (semi-)finished ~~
+
+./rec/Gularte a, Seg Mai 14 12:12:54 -03 2018 
+
+./rec/Martigli ats
+
+./rec/Glerm ats
+
+./rec/Basbaum as
+
+./rec/Machado as, Ter Mai 15 15:36:17 -03 2018
+
+./rec/Antunes as, Ter Mai 15 14:50:02 -03 2018
+
 
 ~~ ongoing ~~
-./rec/Glerm
-at,
-
-./rec/Martigli *
-at, 
-
-./rec/Machado
-
-./rec/Basbaum
 
 ./rec/Barros
 
-./rec/Sampaio *
-
-./rec/Vanazzi *
-
-./rec/Bez *
+./rec/Otto
 
 ./rec/Pataca
 
-./rec/Otto
+./rec/Sampaio
 
-./rec/Antunes
+./rec/Vanazzi
+
+./rec/Bez
 
 ./rec/Prado
 
+./rec/TPPL
+
+
 ~~ planned ~~
 
-./rec/Garcia
+./rec/Coelho (le)
 
-./rec/Xavier
+./rec/Guimarães (felipe)
+
+./rec/deborahAntunes *
+
+./rec/Hemp (mv)
+
+./rec/Chacal (caio)
+
+./rec/Krekmun (netuno borum)
+
+./rec/Borges (paulo espeto)
+
+./ref/danielBorges
+
+./ref/Francisco (joao joca)
+
+./rec/Garcia (lhg)
+
+./rec/Xavier (luis henrique)
 
 ./rec/Diósnio
 
-./rec/Robson
+./rec/Robson (maestro)
 
-./rec/Love
+./rec/Love (letter exe)
 
 ./rec/Laurindo
 
@@ -52,31 +79,33 @@ at,
 
 ./rec/Bottas
 
-./rec/Beto
+./rec/Beto (betuba)
 
-./rec/Lobo
+./rec/Lobo (carlos)
 
 ./rec/taisLobo
 
 ./rec/Jiménez
 
-./rec/Benatti
+./rec/Benatti (nayara)
 
 ./rec/Bonatti
 
-./rec/Leubel
+./rec/Cardaci
+
+./rec/Leubel (avô ou descendentes)
 
 ./rec/Macruz
 
-./rec/Bento
+./rec/Bento (dias da silva)
 
-./rec/Ruiz
+./rec/Ruiz (ricardo, norma)
 
 ./rec/Brazileiro
 
-./rec/Beth
+./rec/Beth (de oxum)
 
-./rec/Stock
+./rec/Stock (ana paula)
 
 ./rec/Paraquedas
 
@@ -88,23 +117,33 @@ at,
 
 ./rec/Pisani
 
-./rec/Antunes
-
 ./rec/Silvério
 
 ./rec/Ricardo
 
-./rec/Costa
-at
+./rec/Costa at
 
-./rec/Ton
-ti
+./rec/Ton ti
 
-./rec/Larissa
-tiv
+./rec/Larissa tiv
 
-./rec/Priscila
-t
+./rec/Priscila t
+
+./rec/Davisaum i
+
+./rec/Boaro
+
+./rec/Amiantus
+
+./rec/xname
+
+./rec/Svab
+
+./rec/Skárnio
+
+./rec/Valdivieso
+
+./rec/Manuelle
 
 ~~~ other ~~~
 
@@ -114,3 +153,14 @@ t
 
 ./readme
 
+./index
+
+./releases
+
+
+~~~ Licence ~~~
+Public Domain,
+Dom Mai 13 12:11:03 -03 2018
+
+
+:::   .   ) ( oOo ) (   .

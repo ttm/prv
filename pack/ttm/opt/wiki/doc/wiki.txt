@@ -96,9 +96,9 @@ The |wiki| files (with notes) are in aux/wiki/ (directory added to 'path' by |wi
 * Messages, in private/messages, marker M
 * TODO, in todo, marker T
   - Accomplishments, marker a (inside todo)
-  - Diary, marker d (inside todo)
-  - Calendar, marker c (inside todo)
   - Baits, marker b (inside todo)
+  - Calendar, marker c (inside todo)
+  - Diary, marker d (inside todo)
 * NOTEs, in blergh, marker N
 * Final, might be anywhere, current final organization of nexts tasks,
   usually inside todo or aashouts.txt, marker F

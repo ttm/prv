@@ -1,4 +1,14 @@
-these files / pages
-and are written in a wiki-like format in Vim.
-and translated with |:toHTML|
+~ readme ~
 
+these files / pages
+and are written in a wiki-like format in Vim,
+and translated to HTML with the :TOhtml command
+
+then some regular expressions are run
+to render the webpage as is
+
+see:
+  https://github.com/selfcomp/selfcomp.github.io
+  ./about
+
+:::
