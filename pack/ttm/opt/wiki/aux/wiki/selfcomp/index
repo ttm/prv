@@ -1,6 +1,6 @@
 ~ Records v001.1b ~
 
-:ativos: Audio, Text, Image, Video, quasi/semi-fnished (Ok), Surprise/other
+:ativos: Audio, Text, Image, Video, quasi/semi-finished (Ok), Surprise/other
 
 :r++: remix this, please, pearl/diamond found, is there a high quality audio?
 
@@ -19,13 +19,14 @@ Ter Mai 15 22:01:26 -03 2018
 
 ./rec/Basbaum as, h++, r++
 
-./rec/Machado as, r++
+./rec/Machado as, r++, h++
 
 ./rec/Antunes as, h++
 
+
 ~~ ongoing ~~
 
-release ? 002-3:
+:release ? 002-3:
 ./rec/Barros
 
 ./rec/Otto
@@ -42,6 +43,14 @@ release ? 002-3:
 
 ./rec/Moisés
 
+./rec/Mantovani
+
+./rec/deborahAntunes
+
+./rec/Cardaci
+
+./rec/Ruiz
+
 
 ~~ planned ~~
 
@@ -56,10 +65,6 @@ release ? 002-3:
 ./rec/Coelho (le)
 
 ./rec/Guimarães (felipe)
-
-./rec/Mantovani
-
-./rec/deborahAntunes
 
 ./rec/Hemp (mv)
 
@@ -87,6 +92,8 @@ release ? 002-3:
 
 ./rec/Cláudia
 
+./rec/Carvalho (carlos, plásticas)
+
 ./rec/Ydá
 
 ./rec/Bottas
@@ -103,17 +110,15 @@ release ? 002-3:
 
 ./rec/Bonatti
 
-./rec/Cardaci
-
 ./rec/Leubel (avô ou descendentes)
 
 ./rec/Macruz
 
 ./rec/Bento (dias da silva)
 
-./rec/Ruiz (ricardo, norma)
-
 ./rec/Brazileiro
+
+./rec/Grilo (vitor)
 
 ./rec/Bagé
 
@@ -151,6 +156,8 @@ release ? 002-3:
 
 ./rec/Svab
 
+./rec/Zampronha
+
 ./rec/Manuelle
 
 ~~~ other ~~~
@@ -161,13 +168,11 @@ release ? 002-3:
 
 ./readme
 
-./index
-
 ./releases
 
 
 ~~~ Licence ~~~
-Public Domain,
+:Public Domain:,
 Dom Mai 13 12:11:03 -03 2018
 
 

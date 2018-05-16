@@ -17,7 +17,7 @@ hi link wHTTP WildMenu
 sy match wHTTP /\vhttps{0,1}\:\/\/.*/
 
 hi link wPath Error
-sy match wPath /\v\.\/\f{3,}/
+sy match wPath /\v\.+\/[a-zA-Z0-9\/]{2,}/
 
 hi link wSubsubtitle VisualNOS
 sy match wSubsubtitle /\v\~\~\~.*\~\~\~/

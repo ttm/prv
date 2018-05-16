@@ -7,7 +7,7 @@
 " cal ApplyCS(g:ccs.red1c, 'c')
 
 let g:reldir = expand("<sfile>:p:h:h") . '/'
-let g:auxfile = g:rel_dir . 'aux/wikisyn.vim'
+let g:auxfile = g:reldir . 'aux/wikisyn.vim'
 exe 'so '.g:auxfile
 
 cal ApplyCS(g:ccs.red1c_, 'c')

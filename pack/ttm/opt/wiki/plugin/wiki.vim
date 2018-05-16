@@ -34,11 +34,12 @@ endf
 " {{{1 html
 fu! WHTMLok() " {{{3
   TOhtml
-  %s/\v\.\/(\f+)/\<a href\=\"\.\/\1\.html\"\>\1\<\/a\>/g
+  %s/\v(\.+\/[a-zA-Z0-9\/]{2,})/\<a href\=\"\1\.html\"\>\1\<\/a\>/g
   %s/\v\<body /\<body class\=\"center\" /g 
   %s/\v\<\/style\>/.center { margin: auto; width: 60%; border: 3px solid #73AD21; padding: 10px; }\r\<\/style\>/g
   w
-  exe '!google-chrome ' . expand("%")
+  q
+  q
   " %s$\vIntro\-Next$\<a href\=\"\.\/data\/FernandoGularte\/Intro-Next\.mp3\"\>Intro-Next\<\/a\>$g
   " %s$\vSecond$\<a href\=\"\.\/data\/FernandoGularte\/Second\.mp3\"\>Second\<\/a\>$g
   " %s$\vDr Jekyll$\<a href\=\"\.\/data\/FernandoGularte\/Dr\.Jekyll\.mp3\"\>Dr Jekyll\<\/a\>$g

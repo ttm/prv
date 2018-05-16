@@ -2983,3 +2983,51 @@ todo:
 - publish
 Qua Mai 16 01:17:31 -03 2018
 -----
+
+
+$$$$$
+sessao p publicar selfcomp
+Qua Mai 16 01:52:20 -03 2018
+-----
+ruiz
+Qua Mai 16 02:09:12 -03 2018
+-----
+ainda arrumando formatacao
+Qua Mai 16 02:22:34 -03 2018
+-----
+renderizando htmls finalmente
+Qua Mai 16 02:37:57 -03 2018
+-----
+versao nova upada
+Qua Mai 16 03:10:02 -03 2018
+-----
+melhorado realce de itens numerados no wikirec
+Qua Mai 16 03:23:44 -03 2018
+-----
+finalmente soltando o selfcomp, mandando para autores
+Qua Mai 16 03:38:06 -03 2018
+-----
+arrumando ../
+Qua Mai 16 03:56:33 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+sessao p corrigir textos laila e virus
+Qua Mai 16 04:13:25 -03 2018
+-----
+fazendo links no release
+Qua Mai 16 04:29:19 -03 2018
+-----
+melhorando identificador de nome de arquivo
+Qua Mai 16 04:44:03 -03 2018
+-----
+fiz cáca com o regex
+Qua Mai 16 04:58:56 -03 2018
+-----
+arrumando setas do release
+Qua Mai 16 05:16:14 -03 2018
+-----
