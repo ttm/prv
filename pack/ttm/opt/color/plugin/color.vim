@@ -285,6 +285,20 @@ fu! CStack() " {{{3
   en
   retu c
 endf
+fu! ApplyCS(pallete, method) " {{{3
+  " Apply a CS which should relate colors to groups
+  " if a:method == 'commands'
+    " let coms = a:cs_pallete.commands
+  if a:method =~ "^c.*"
+    let l:coms = a:pallete
+    if type(a:pallete) == 0
+      let l:coms = ['colo blue', 'hi Normal  guifg=#0fffe0 guibg=#03800b']
+    en
+    for c in l:coms
+      exe c
+    endfo
+  en
+endf
 " -- UTILS {{{2
 fu! CIsInitialized() " {{{3
  if exists("color.initialized")
@@ -707,10 +721,10 @@ fu! StandardColors() " {{{3
 endf
 fu! SpecialColors() " {{{3
   " blood reds, blues, etcsss
-  let snamed_colors = {}
   " from https://en.wikipedia.org/wiki/Blood_red
-  let snamed_colors['blood'] = ['#660000', '#aa0000', '#af111c', '#830303', '#7e3517']
+  let blood = ['#660000', '#aa0000', '#af111c', '#830303', '#7e3517']
   let most10 = ['#3f5d7d', '#279b61', '#008ab8', '#993333', '#a3e496', '#95cae4', '#cc3333', '#ffcc33', '#ffff7a', '#cc6699']
+  let g:color_named = l:
 endf
 " -- AUX {{{2
 fu! ParseOrixas() " {{{
@@ -791,61 +805,34 @@ endfu " }}}
 fu! MkCS(pallete) " {{{
   " Return a CS relating each basic group to a color
 endfu " }}}
-fu! ApplyCS(cs_pallete, method) " {{{
-  " Apply a CS which should relate colors to groups
-  " if a:method == 'commands'
-    " let coms = a:cs_pallete.commands
-  if a:method =~ "^c.*"
-    let coms = a:cs_pallete
-    if type(a:cs_pallete) == 0
-      let coms = ['colo blue', 'hi Normal  guifg=#0fffe0 guibg=#03800b']
-    endif
-    for c in coms
-      exec c
-    endfor
-  endif
-endfu " }}}
 fu! CommandColorSchemes() " {{{
   let cs = {}
   let cs.green1 = ['colo blue', 'hi Normal  guifg=#0fffe0 guibg=#03800b']
-  let cs.green2 = ['colo torte', 'highlight Normal guifg=white  guibg=darkGreen',
-        \'hi Folded guifg=darkgreen']
+  let cs.green2 = ['colo torte', 'highlight Normal guifg=white  guibg=darkGreen', 'hi Folded guifg=darkgreen']
   
-  let cs.yellow1 = ['colo morning', 'hi Normal guibg=#ffff00',
-        \ 'hi Constant cterm=bold guifg=#a0a010 guibg=NONE',
-        \ 'hi Search guibg=lightblue']
+  let cs.yellow1 = ['colo morning', 'hi Normal guibg=#ffff00', 'hi Constant cterm=bold guifg=#a0a010 guibg=NONE', 'hi Search guibg=lightblue']
 
   let cs.red1 = ['colo koehler', 'hi Normal guibg=#800000']
-  let cs.red1c = ['colo koehler', 'hi Normal guibg=#800000', 'hi Folded guifg=cyan guibg=#bb0000']
-  let cs.red1b = ['colo koehler', 'hi Normal guibg=#900000']
-  let cs.red2 = ['colo koehler', 'hi Normal guibg=#ff0000']
+  let cs.red1c = ['colo koehler', 'hi Normal guibg=#800000', 'hi Folded guifg=cyan guibg=#bb0000', 'hi Visual guibg=darkyellow cterm=bold']
+  let cs.red1c_ = ['colo koehler', 'hi Normal guifg=lightgreen guibg=#660000', 'hi Folded guifg=cyan guibg=#bb0000', 'hi Visual guibg=yellow guibg=darkyellow cterm=bold']
+  let cs.red1b = ['colo koehler', 'hi Normal guibg=#900000', 'hi Visual guibg=darkred']
+  let cs.red1b_ = ['colo koehler', 'hi Normal guibg=#830303', 'hi Visual guibg=darkred']
+  let cs.red2 = ['colo koehler', 'hi Normal guibg=#ff0000', 'hi Visual guibg=darkred']
   let cs.red3 = ['colo koehler', 'hi Normal guibg=#ff8833']
-  let cs.red4 = ['colo koehler', 
-        \ 'highlight Normal guifg=black guibg=red', 
-        \ 'highlight Comment guifg=black guibg=red gui=bold']
-  let cs.red4 = ['colo koehler', 
-        \ 'highlight Normal guifg=black guibg=red', 
-        \ 'highlight Comment guifg=black guibg=red gui=bold',
-        \ 'hi Constant guifg=#004444 cterm=NONE',
-        \ 'hi Constant cterm=bold guifg=#900000',
-        \ 'hi Comment cterm=bold guifg=#606000',
-        \ 'hi Type guifg=#600060']
-  let cs.red5 = ['colo torte',
-        \ 'hi Folded guibg=#702020 guifg=#000000 cterm=bold',
-        \ 'hi Comment ctermfg=12 guifg=#d0808f',
-        \ 'hi Constant guifg=#ff0000',
-        \ 'hi Identifier cterm=bold guifg=#e00f4f',
-        \ 'hi Normal guifg=#ac3c3c guibg=Black',
-        \ 'hi vimIsCommand cterm=bold guifg=#9c3c00',
-        \ 'hi vimFunction guifg=#bcbc0c',
-        \ 'hi vimOperParen cterm=bold guifg=#fc2c2c']
+  let cs.red4 = ['colo koehler', 'highlight Normal guifg=black guibg=red', 'highlight Comment guifg=black guibg=red gui=bold']
+  let cs.red4 = ['colo koehler', 'highlight Normal guifg=black guibg=red', 'highlight Comment guifg=black guibg=red gui=bold', 'hi Constant guifg=#004444 cterm=NONE', 'hi Constant cterm=bold guifg=#900000', 'hi Comment cterm=bold guifg=#606000', 'hi Type guifg=#600060']
+  let cs.red5 = ['colo torte', 'hi Folded guibg=#702020 guifg=#000000 cterm=bold', 'hi Comment ctermfg=12 guifg=#d0808f', 'hi Constant guifg=#ff0000', 'hi Identifier cterm=bold guifg=#e00f4f', 'hi Normal guifg=#ac3c3c guibg=Black', 'hi vimIsCommand cterm=bold guifg=#9c3c00', 'hi vimFunction guifg=#bcbc0c', 'hi vimOperParen cterm=bold guifg=#fc2c2c']
   let cs.redblackl = ['colo koehler', 'hi Normal guibg=#800000']
-  let cs.passivepink1 = ['colo koehler', 'hi Normal guibg=#ff91af',
-        \'hi Comment guifg=#888888', 'hi Identifier guifg=#bb7777', 'hi Constant guifg=#ffcccc',
-        \'hi PreProc guifg=#888088', 'hi Special guifg=#8f3580', 'hi Type guifg=#508f60']
+  let cs.passivepink1 = ['colo koehler', 'hi Normal guibg=#ff91af', 'hi Comment guifg=#888888', 'hi Identifier guifg=#bb7777', 'hi Constant guifg=#ffcccc', 'hi PreProc guifg=#888088', 'hi Special guifg=#8f3580', 'hi Type guifg=#508f60']
   
   
   let cs.exu1 = cs.red4
+  " exuX is for now starting with blood red:
+  " https://en.wikipedia.org/wiki/Blood_red
+  " g:color_named.blood
+  " and then adding many other stuff.
+
+
 
   " Holy spirit: (many colors, each with a specific simbolism, look for them)
 

@@ -1438,3 +1438,55 @@ Srila: commands and standard observer Qui Fev 24 23 11 11 10
 $$$$$ ::: Ter Mai 15 18:24:53 -03 2018
 check Vim {address} that appears in :t :m etc
 Srila: that I can redir the terminal window is not how they
+
+$$$$$ ::: Ter Mai 15 19:40:22 -03 2018
+para liberar selfcomp r001
+Srila: liberar o q delicia Seg Fev 25 17 02 : diversidade
+
+$$$$$ ::: Ter Mai 15 19:42:11 -03 2018
+what is the number of mappings one may define in Vim without implying in delayes, in lattency? Make testes and relate number mappings to performance delays in some tasks
+Srila: to access them . OK Qui Mar 25 16 09 -
+
+$$$$$ ::: Ter Mai 15 19:56:10 -03 2018
+lapidando primeira pagina, wikirec
+Srila: lapidando enxame de livros * prv packs ; audiovisual analytics system
+
+$$$$$ ::: Ter Mai 15 20:07:13 -03 2018
+primeira séria exploração do Vim aaP/S (as a platform or service): making of selfcomp site
+Srila: do aa ou esticados , LineNr , acho q indo bonito
+
+$$$$$ ::: Ter Mai 15 20:10:43 -03 2018
+fazendo as cores certas para a publicacao: syntax highlighting mitológico
+Srila: syntax file into PDF in English using Wikipedia , {-> execute
+
+$$$$$ ::: Ter Mai 15 20:26:05 -03 2018
+arrumando 100% wikirec
+Srila: arrumando datavis Seg Mar 17 03 : 41 - unsup )
+
+$$$$$ ::: Ter Mai 15 20:40:57 -03 2018
+repassando publicandos
+Srila: repassando diario p wp Ter Abr 6 05 - notes Ter
+
+$$$$$ ::: Ter Mai 15 20:56:36 -03 2018
+lapidando wikiindex
+Srila: lapidando enxame de comandos q fiz Dom Fev 22 06 :
+
+$$$$$ ::: Ter Mai 15 21:11:28 -03 2018
+dominando syntax highlighting. Andando com muito preciosismo
+Srila: muito funcionais .. Sáb Mai 11 09 : 35 : mtimer2
+
+$$$$$ ::: Ter Mai 15 21:37:46 -03 2018
+selfcomp ficando bom!
+Srila: selfcomp record label Dom Mar 19 22 08 - edit wiki
+
+$$$$$ ::: Ter Mai 15 21:41:17 -03 2018
+deixando melhor o sh
+Srila: o enxame de fichar a leader in realcolors learn to vim_use
+
+$$$$$ ::: Qua Mai 16 00:25:42 -03 2018
+how to get the true color rgb that I am using in Vim, into HTML? Hack :TOhtml?
+Srila: into PDF in English wikipedia de abordagem multinivel Sex Mar 1
+
+$$$$$ ::: Qua Mai 16 00:58:42 -03 2018
+agora sim, sessao p soltar o site
+Srila: soltar revisão * rever anotacoes no PRV : fin path to

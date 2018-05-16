@@ -1,6 +1,6 @@
 hi Normal guibg=white guifg=black
 
-hi link wTitle Constant
+hi link wTitle DiffText
 hi link wSubtitle WarningMsg
 hi link wSubsubtitle Comment
 hi link wPath Error
@@ -12,3 +12,4 @@ sy match wSubsubtitle /\v\~\~\~.*\~\~\~/
 sy match wPath /\v\.\/\f{3,}/
 
 sy match wEnd /\v^:::/
+hi LineNr guifg=red

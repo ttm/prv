@@ -2926,3 +2926,51 @@ Ter Mai 15 18:22:43 -03 2018
 check Vim {address} that appears in :t :m etc
 Ter Mai 15 18:24:53 -03 2018
 -----
+
+
+$$$$$
+para liberar selfcomp r001
+Ter Mai 15 19:40:22 -03 2018
+-----
+what is the number of mappings one may define in Vim without implying in delayes, in lattency? Make testes and relate number mappings to performance delays in some tasks
+Ter Mai 15 19:42:11 -03 2018
+-----
+lapidando primeira pagina, wikirec
+Ter Mai 15 19:56:09 -03 2018
+-----
+primeira séria exploração do Vim aaP/S (as a platform or service): making of selfcomp site
+Ter Mai 15 20:07:12 -03 2018
+-----
+fazendo as cores certas para a publicacao: syntax highlighting mitológico
+Ter Mai 15 20:10:43 -03 2018
+-----
+arrumando 100% wikirec
+Ter Mai 15 20:26:05 -03 2018
+-----
+repassando publicandos
+Ter Mai 15 20:40:57 -03 2018
+-----
+lapidando wikiindex
+Ter Mai 15 20:56:36 -03 2018
+-----
+dominando syntax highlighting. Andando com muito preciosismo
+Ter Mai 15 21:11:28 -03 2018
+-----
+selfcomp ficando bom!
+Ter Mai 15 21:37:46 -03 2018
+-----
+deixando melhor o sh
+Ter Mai 15 21:41:17 -03 2018
+-----
+$$$$$
+
+
+how to get the true color rgb that I am using in Vim, into HTML? Hack :TOhtml?
+Qua Mai 16 00:25:42 -03 2018
+-----
+
+
+$$$$$
+agora sim, sessao p soltar o site
+Qua Mai 16 00:58:42 -03 2018
+-----

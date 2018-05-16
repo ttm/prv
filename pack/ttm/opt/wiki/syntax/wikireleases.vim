@@ -1,3 +1,7 @@
+let g:reldir = expand("<sfile>:p:h:h") . '/'
+let g:auxfile = g:rel_dir . 'aux/wikisyn.vim'
+exe 'so '.g:auxfile
+
 hi Normal guibg=darkgreen guifg=black
 
 hi link wTitle Constant

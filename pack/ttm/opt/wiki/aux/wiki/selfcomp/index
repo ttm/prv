@@ -1,46 +1,51 @@
 ~ Records v001.1b ~
 
-aivtos: audio, image, video, text, quasi/semi-fnished (ok), other
+:ativos: Audio, Text, Image, Video, quasi/semi-fnished (Ok), Surprise/other
 
-r++: remix this, please, pearl found, is there a high quality audio?
+:r++: remix this, please, pearl/diamond found, is there a high quality audio?
 
-h++: highlight, hear this
-a
+:h++: highlight, hear this
 
 
 ~~ (semi-)finished ~~
 
-release 001:
-./rec/Gularte a, Seg Mai 14 12:12:54 -03 2018 
+:release ./rel/001:
+Ter Mai 15 22:01:26 -03 2018
+./rec/Gularte a
 
-./rec/Martigli ats
+./rec/Martigli atos, r++
 
-./rec/Glerm ats
+./rec/Glerm atos, h++
 
-./rec/Basbaum as
+./rec/Basbaum as, h++, r++
 
-./rec/Machado as, Ter Mai 15 15:36:17 -03 2018
+./rec/Machado as, r++
 
-./rec/Antunes as, Ter Mai 15 14:50:02 -03 2018
+./rec/Antunes as, h++
 
 ~~ ongoing ~~
 
-release 002-3:
+release ? 002-3:
 ./rec/Barros
 
 ./rec/Otto
-
-./rec/Pataca
 
 ./rec/Sampaio
 
 ./rec/Bez
 
+./rec/Pataca
+
 ./rec/Prado
 
-./rec/TPPL
-
 ./rec/Vanazzi
+
+./rec/Moisés
+
+
+~~ planned ~~
+
+./rec/TPPL
 
 ./rec/Amiantus
 
@@ -48,16 +53,13 @@ release 002-3:
 
 ./rec/Valdivieso
 
-
-~~ planned ~~
-
 ./rec/Coelho (le)
 
 ./rec/Guimarães (felipe)
 
 ./rec/Mantovani
 
-./rec/deborahAntunes *
+./rec/deborahAntunes
 
 ./rec/Hemp (mv)
 
@@ -112,6 +114,8 @@ release 002-3:
 ./rec/Ruiz (ricardo, norma)
 
 ./rec/Brazileiro
+
+./rec/Bagé
 
 ./rec/Beth (de oxum)
 
