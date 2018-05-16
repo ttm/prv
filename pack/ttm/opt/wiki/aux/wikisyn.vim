@@ -1,8 +1,8 @@
-" {{{
-
+" {{{1 header
 " put in header for a selfcomp wiki file
 " see ./../syntax/wikirel.vim
 cal ApplyCS(g:ccs.red1b_, 'c')
+" {{{1 wiki template
 
 hi link wComment VisualNOS
 sy match wComment /\v\s{6}.*/
@@ -28,6 +28,7 @@ sy match wSubtitle /\v\~\~.*\~\~/
 hi link wTitle IncSearch
 sy match wTitle /\v\~.*\~/
 
+" {{{1 vim template
 hi SpellBad guifg=white
 
 hi LineNr guifg=red

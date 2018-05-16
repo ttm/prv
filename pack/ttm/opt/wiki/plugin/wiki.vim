@@ -1,4 +1,4 @@
-" main file of the wiki plugin for Vim {{{1
+" main file of the wiki plugin for Vim {{{3
 " Author: Renato Fabbri
 " Date: 2018/Feb/25 (when I wrote this header)
 " Copyright: Public domain
@@ -8,7 +8,7 @@
 " FAPESP (project 2017/05838-3)
 " Ricardo Fabbri (PhD, IPRJ/UERJ)
 
-" Load Once: {{{1
+" Load Once: {{{3
 if exists("g:loaded_wikiplugin") && (exists("g:wiki_not_hacking") || exists("g:wiki_not_hacking_all"))
  finish
 endif
@@ -31,7 +31,21 @@ endf
 fu! WikiMkMappings()
   nn Wu :exe '!ctags-exuberant -f '.g:wiki_dir.'aux/wiki/.tags '.g:wiki_dir.'aux/wiki/**/*'<CR> 
 endf
+" {{{1 html
+fu! WHTMLok() " {{{3
+  TOhtml
+  %s/\v\.\/(\f+)/\<a href\=\"\.\/\1\.html\"\>\1\<\/a\>/g
+  %s/\v\<body /\<body class\=\"center\" /g 
+  %s/\v\<\/style\>/.center { margin: auto; width: 60%; border: 3px solid #73AD21; padding: 10px; }\r\<\/style\>/g
+  w
+  exe '!google-chrome ' . expand("%")
+  " %s$\vIntro\-Next$\<a href\=\"\.\/data\/FernandoGularte\/Intro-Next\.mp3\"\>Intro-Next\<\/a\>$g
+  " %s$\vSecond$\<a href\=\"\.\/data\/FernandoGularte\/Second\.mp3\"\>Second\<\/a\>$g
+  " %s$\vDr Jekyll$\<a href\=\"\.\/data\/FernandoGularte\/Dr\.Jekyll\.mp3\"\>Dr Jekyll\<\/a\>$g
+endf
 
+" {{{1 notes
+" {{{3 notes
 " syntax:
 " if .wiki, ~.*~ is heading marker, Constant
 " if :.*: tag to be parsed (into anything, make a dictionary)
@@ -90,13 +104,12 @@ endf
 " move t<
 " paste </a>
 
-
-
-
-cal WikiInit()
-" {{{5 Vimwiki, deprecated, notes
+" {{{3 Vimwiki, deprecated, notes
 " cal g:PRVVWFileNMapping("<leader>wA", "achievements.wiki")
 " cal g:PRVVWFileNMapping("<leader>wT", "todo.wiki")
 " cal g:PRVVWFileNMapping("<leader>wD", "daily/tasks.wiki")
 " cal g:PRVVWFileNMapping("<leader>wW", "weekly/wtasks.wiki")
 " cal g:PRVVWFileNMapping("<leader>wN", "blergh.wiki<CR>gg")
+" {{{1 last commands
+cal WikiInit()
+" vim:foldlevel=2:

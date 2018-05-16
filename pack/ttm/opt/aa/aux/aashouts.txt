@@ -2974,3 +2974,12 @@ $$$$$
 agora sim, sessao p soltar o site
 Qua Mai 16 00:58:42 -03 2018
 -----
+todo:
+- find commands/function that made html files ok
+- render htmls
+- upload
+- tell authors
+- do other stuff
+- publish
+Qua Mai 16 01:17:31 -03 2018
+-----
