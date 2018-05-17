@@ -43,15 +43,6 @@ sy match wEnd /\v^:::/
 
 
 
-hi link wTag Error
-sy match tag /\v\:.*\:/
-hi link wTag2 DiffChange
-sy match wTag2 /\v \zs[ativos]{1,6}/
-hi link wTag3 Constant
-sy match wTag3 /\v r\+\+/
-hi link wTag4 Type
-sy match wTag4 /\v h\+\+/
-
 hi link wHTTP WildMenu
 sy match wHTTP /\vhttp.\:\/\/.*/
 

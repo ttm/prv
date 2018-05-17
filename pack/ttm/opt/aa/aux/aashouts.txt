@@ -3031,3 +3031,75 @@ Qua Mai 16 04:58:56 -03 2018
 arrumando setas do release
 Qua Mai 16 05:16:14 -03 2018
 -----
+retomando
+Qua Mai 16 06:21:37 -03 2018
+-----
+$$$$$
+
+
+selfcomp publicado
+Qua Mai 16 08:35:26 -03 2018
+-----
+
+
+$$$$$
+sessao p correcao do texto da laila e virus e encaminhamento
+Qua Mai 16 08:36:02 -03 2018
+-----
+intro
+Qua Mai 16 08:41:12 -03 2018
+-----
+seg par
+Qua Mai 16 08:46:29 -03 2018
+-----
+ainda intro acho, comunicando também de leve
+Qua Mai 16 08:56:26 -03 2018
+-----
+justificativa
+Qua Mai 16 09:02:14 -03 2018
+-----
+perdendo o trilho, selfcomp puxando mto
+Qua Mai 16 09:13:08 -03 2018
+-----
+revisando release
+Qua Mai 16 09:27:08 -03 2018
+-----
+revisando release
+Qua Mai 16 09:32:40 -03 2018
+-----
+install kubuntu?
+Qui Mai 17 09:09:30 -03 2018
+-----
+pensando em Vim recommendations (usage guidelines), e.g. 'T todo 'M messages 'D diary; wiki with files without extensions; tagging system and help files; etc; prv
+Qui Mai 17 13:34:27 -03 2018
+-----
+
+
+$$$$$
+sessao para garibar o selfperm (glerm, antunes, outras pessoas), fazer o video, planejar resto do dia
+Qui Mai 17 13:50:11 -03 2018
+-----
+learn snd, okular, read articles, ware, develop color schemes, make slides 100%, meet esmerindo
+Qui Mai 17 13:59:11 -03 2018
+-----
+tentando descobrir como pular para arquivo em certa linha
+Qui Mai 17 14:05:57 -03 2018
+-----
+migrate the CommandColorSchemes to color/ directory
+Qui Mai 17 14:20:48 -03 2018
+-----
+emails para técnicos do VICG
+Qui Mai 17 14:39:51 -03 2018
+-----
+explorando os tabs, layouts úteis. Quais os outros usuários utilizam? Aqui apareceu já esse: esqueda o código/dado/pagina, direita dividida em help (acima), abaixo codigo auxiliar/console/ipython
+Qui Mai 17 14:53:21 -03 2018
+-----
+arrumando r001
+Qui Mai 17 15:20:23 -03 2018
+-----
+feito selfcomp 002 do antunes
+Qui Mai 17 15:20:47 -03 2018
+-----
+$$$$$
+
+

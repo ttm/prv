@@ -21,7 +21,7 @@ Ter Mai 15 22:01:26 -03 2018
 
 ./rec/Machado as, r++, h++
 
-./rec/Antunes as, h++
+./rec/Antunes as, h++ (first compilation)
 
 
 ~~ ongoing ~~
@@ -29,7 +29,7 @@ Ter Mai 15 22:01:26 -03 2018
 :release ? 002-3:
 ./rec/Barros
 
-./rec/Otto
+./rec/Antunes (second compilation)
 
 ./rec/Sampaio
 
@@ -48,6 +48,8 @@ Ter Mai 15 22:01:26 -03 2018
 ./rec/deborahAntunes
 
 ./rec/Cardaci
+
+./rec/Otto
 
 ./rec/Ruiz
 
@@ -160,6 +162,7 @@ Ter Mai 15 22:01:26 -03 2018
 
 ./rec/Manuelle
 
+
 ~~~ other ~~~
 
 ./notes
@@ -167,6 +170,8 @@ Ter Mai 15 22:01:26 -03 2018
 ./about
 
 ./readme
+
+./screencast
 
 ./releases
 

@@ -1,0 +1,10 @@
+based on kpdf but with features such as:
+- improved presentation support (which?)
+- annotation support (which?)
+- overview mode (which?)
+
+supports from Markdown, Fax and EPub to PS and PDF.
+https://okular.kde.org/formats.php
+
+
+

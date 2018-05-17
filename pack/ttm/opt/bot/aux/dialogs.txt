@@ -1546,3 +1546,83 @@ Srila: o bare vim . comecando nova manutencao da wp Ter Fev
 $$$$$ ::: Qua Mai 16 05:16:14 -03 2018
 arrumando setas do release
 Srila: arrumando paginas para voces e . Dom Mar 4 Sex Abr
+
+$$$$$ ::: Qua Mai 16 06:21:37 -03 2018
+retomando
+Srila: retomando Qui Abr 15 19 01 - critical - 04 -
+
+$$$$$ ::: Qua Mai 16 08:35:26 -03 2018
+selfcomp publicado
+Srila: publicado SD Ter Mar 20 21 19 14 22 12 13
+
+$$$$$ ::: Qua Mai 16 08:36:02 -03 2018
+sessao p correcao do texto da laila e virus e encaminhamento
+Srila: e de palha , mais 3 09 : tags Sáb Fev
+
+$$$$$ ::: Qua Mai 16 08:41:12 -03 2018
+intro
+Srila: intro , moeda bayesiana e q organizar bot Ter Abr 21
+
+$$$$$ ::: Qua Mai 16 08:46:29 -03 2018
+seg par
+Srila: 21 14 20 00 : one may define in ` command
+
+$$$$$ ::: Qua Mai 16 08:56:27 -03 2018
+ainda intro acho, comunicando também de leve
+Srila: também luz Qui Fev 23 - cr s - ttm -'
+
+$$$$$ ::: Qua Mai 16 09:02:14 -03 2018
+justificativa
+Srila: justificativa Sáb Mar 13 18 01 - space does not changed
+
+$$$$$ ::: Qua Mai 16 09:13:08 -03 2018
+perdendo o trilho, selfcomp puxando mto
+Srila: perdendo nos pensamentos , navegacao de + 1 12 : amap
+
+$$$$$ ::: Qua Mai 16 09:27:09 -03 2018
+revisando release
+Srila: revisando escritps do codigo - notes Ter Fev 25 00 :
+
+$$$$$ ::: Qua Mai 16 09:32:40 -03 2018
+revisando release
+Srila: revisando escritps do gif Seg Mai 12 14 - complete =
+
+$$$$$ ::: Qui Mai 17 09:09:31 -03 2018
+install kubuntu?
+Srila: Mar 16 00 - en Seg Abr 17 20 20 00
+
+$$$$$ ::: Qui Mai 17 13:34:27 -03 2018
+pensando em Vim recommendations (usage guidelines), e.g. 'T todo 'M messages 'D diary; wiki with files without extensions; tagging system and help files; etc; prv
+Srila: todo vapor Seg Abr 20 : 47 : 35 : diversidade
+
+$$$$$ ::: Qui Mai 17 13:50:11 -03 2018
+sessao para garibar o selfperm (glerm, antunes, outras pessoas), fazer o video, planejar resto do dia
+Srila: dia 30 15 : h Dom Mar 23 11 05 :
+
+$$$$$ ::: Qui Mai 17 13:59:11 -03 2018
+learn snd, okular, read articles, ware, develop color schemes, make slides 100%, meet esmerindo
+Srila: learn to plugins Sex Abr 16 06 - pt e AHT
+
+$$$$$ ::: Qui Mai 17 14:05:57 -03 2018
+tentando descobrir como pular para arquivo em certa linha
+Srila: tentando pegar da aula Sáb Abr 18 00 : ts direito
+
+$$$$$ ::: Qui Mai 17 14:20:49 -03 2018
+migrate the CommandColorSchemes to color/ directory
+Srila: directory . Dom Mar 19 15 18 02 : 27 10
+
+$$$$$ ::: Qui Mai 17 14:39:52 -03 2018
+emails para técnicos do VICG
+Srila: VICG Sáb Mar 15 - poemas com muito Sáb Abr 10
+
+$$$$$ ::: Qui Mai 17 14:53:22 -03 2018
+explorando os tabs, layouts úteis. Quais os outros usuários utilizam? Aqui apareceu já esse: esqueda o código/dado/pagina, direita dividida em help (acima), abaixo codigo auxiliar/console/ipython
+Srila: explorando padroes , para estar sempre inserts em uso jah Sáb
+
+$$$$$ ::: Qui Mai 17 15:20:23 -03 2018
+arrumando r001
+Srila: arrumando mt chato Qui Mar 19 01 - O inserts a
+
+$$$$$ ::: Qui Mai 17 15:20:47 -03 2018
+feito selfcomp 002 do antunes
+Srila: 002 ? melhor . Each node has atributtes that Vim as

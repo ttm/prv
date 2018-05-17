@@ -10,20 +10,18 @@
 :notes:note-types:
 Use uppercase markers for main files.
 Use lowercase markers for inside files.
-* Calendário, Calendar, calendar
-* Diary, diário
-* Notes, private/blergh
-* Todo
-* Wiki, wiki
+* ./todo: tasks, baits, calendar
+* ./private/blergh: sketches, caotic notes
+* wiki files: every file here is a wiki file
 * ../../../aa/aux/aashouts.txt, AA shouts
-* tags usadas :todo: :note: :mass: etc
+* tags usadas :todo: :note: :mass: etc, ainda nao decidi como fazer
 
 
 = conteúdos principais =
 ic complexidade
-prv [[prv/|vim]] [[prv/python]] [[prv/rdf]]
-[[massa/massa]]
-[[audiovis/audiovis]]
+./prv
+./music
+./dataav (data audiovisualization)
 [[on/process]] [[on/todo]] [[on/achievements]]
 
 

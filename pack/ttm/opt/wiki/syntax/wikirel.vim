@@ -6,7 +6,7 @@ exe 'so '.g:auxfile
 colo blue
 hi Normal guibg=lightgreen guifg=darkred
 
-hi wArrow guifg=red guibg=black
+hi link wArrow IncSearch
 sy match wArrow /[↪↣↝↬↺⇶]/
 
 " hi link wComment VisualNOS

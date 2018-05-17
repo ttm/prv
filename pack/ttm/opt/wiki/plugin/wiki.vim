@@ -47,6 +47,11 @@ endf
 
 " {{{1 notes
 " {{{3 notes
+"   :map <F11>  :sp tags<CR>:%s/^\([^ :]*:\)\=\([^  ]*\).*/syntax keyword Tag
+"   \2/<CR>:wq! tags.vim<CR>/^<CR><F12>
+"   :map <F12>  :so tags.vim<CR>
+"       from :h tag-highlight
+"
 " syntax:
 " if .wiki, ~.*~ is heading marker, Constant
 " if :.*: tag to be parsed (into anything, make a dictionary)
