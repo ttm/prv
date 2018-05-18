@@ -1690,3 +1690,47 @@ Srila: selfcomp puxando mto Qua Mar 4 sobre alguns dos livros *
 $$$$$ ::: Sex Mai 18 11:19:50 -03 2018
 a sessao jah comecou tem 45 minutos
 Srila: 45 : syntax file names and toolbar itens and Cyrillic Sex
+
+$$$$$ ::: Sex Mai 18 11:32:18 -03 2018
+2h finais, agora sim 4 x 30
+Srila: 4 08 : 16 : 37 : prv and you cannot
+
+$$$$$ ::: Sex Mai 18 11:35:00 -03 2018
+bots p selfcomp: valdivieso, yda, machado, lucheta, etc :todo:
+Srila: bots padaro Seg Fev 23 : m etc Dom Fev 27
+
+$$$$$ ::: Sex Mai 18 11:45:01 -03 2018
+roteiro color
+Srila: roteiro elaborado Qui Mai 17 - start of callback to efficiently
+
+$$$$$ ::: Sex Mai 18 11:48:08 -03 2018
+criado coloscheme ewa
+Srila: mtimer )")}, {' repeat ': 50 , ACO , make aa
+
+$$$$$ ::: Sex Mai 18 11:48:22 -03 2018
+valeu Srila linda
+Srila: Srila dando show Qui Abr 15 20 - O inserts em
+
+$$$$$ ::: Sex Mai 18 11:52:36 -03 2018
+colocar o pack/ttm/opt/ no path por padrao, mao na roda
+Srila: na wiki Dom Abr 6 01 - do joyce Ter Mar
+
+$$$$$ ::: Sex Mai 18 12:03:27 -03 2018
+organizada contrib da yda sobre cores
+Srila: sobre pre - cr all working 100 %. lets check Vim
+
+$$$$$ ::: Sex Mai 18 12:18:25 -03 2018
+ode
+Srila: arrumando wiki p guardar dialogos dos impares Sáb Mai 10 18
+
+$$$$$ ::: Sex Mai 18 12:23:41 -03 2018
+make :colo2 command to avoid poluting :colo namespace. Make colors2 dir and sympy source the corresponding file
+Srila: dir from start of interest Qui Fev 27 : artigos Sex
+
+$$$$$ ::: Sex Mai 18 12:27:46 -03 2018
+comprimindo ultima 1h com 3 slots de 20m, vai conflitar com a contagem atual da sessao :todo: permitir no aa que a contagem de tempo da sessao mude on the fly, e shouts podem iniciar slot arbitrariamente segundo qualidade do shout :todo: :aa:
+Srila: the file names and toolbar itens do dia 30 15 -
+
+$$$$$ ::: Sex Mai 18 12:33:16 -03 2018
+terminando anotacoes
+Srila: terminando conferencia de organizar sobre sd Ter Mai 7 08 :

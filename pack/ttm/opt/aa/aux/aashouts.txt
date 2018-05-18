@@ -3163,3 +3163,46 @@ Sex Mai 18 11:18:59 -03 2018
 a sessao jah comecou tem 45 minutos
 Sex Mai 18 11:19:50 -03 2018
 -----
+$$$$$
+
+
+
+
+$$$$$
+2h finais, agora sim 4 x 30
+Sex Mai 18 11:32:18 -03 2018
+-----
+bots p selfcomp: valdivieso, yda, machado, lucheta, etc :todo:
+Sex Mai 18 11:35:00 -03 2018
+-----
+roteiro color:
+- colocar syn no color/colors/ewa.vim, testar
+- colocar os outros segundo Ydá Pires no mesmo dir
+- commitar
+
+Sex Mai 18 11:45:01 -03 2018
+-----
+criado coloscheme ewa
+Sex Mai 18 11:48:08 -03 2018
+-----
+valeu Srila linda
+Sex Mai 18 11:48:22 -03 2018
+-----
+colocar o pack/ttm/opt/ no path por padrao, mao na roda
+Sex Mai 18 11:52:36 -03 2018
+-----
+organizada contrib da yda sobre cores
+Sex Mai 18 12:03:27 -03 2018
+-----
+ode
+Sex Mai 18 12:18:25 -03 2018
+-----
+make :colo2 command to avoid poluting :colo namespace. Make colors2 dir and sympy source the corresponding file
+Sex Mai 18 12:23:41 -03 2018
+-----
+comprimindo ultima 1h com 3 slots de 20m, vai conflitar com a contagem atual da sessao :todo: permitir no aa que a contagem de tempo da sessao mude on the fly, e shouts podem iniciar slot arbitrariamente segundo qualidade do shout :todo: :aa:
+Sex Mai 18 12:27:46 -03 2018
+-----
+terminando anotacoes
+Sex Mai 18 12:33:15 -03 2018
+-----
