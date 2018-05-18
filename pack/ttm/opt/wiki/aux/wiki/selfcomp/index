@@ -1,4 +1,4 @@
-~ Records v001.1b ~
+~ Records v001.2b ~
 
 :ativos: Audio, Text, Image, Video, quasi/semi-finished (Ok), Surprise/other
 
@@ -21,19 +21,20 @@ Ter Mai 15 22:01:26 -03 2018
 
 ./rec/Machado as, r++, h++
 
-./rec/Antunes as, h++ (first compilation)
+./rec/Antunes as, h++ (:first: compilation)
 
 
 ~~ ongoing ~~
 
 :release ? 002-3:
+date: ??
 ./rec/Barros
-
-./rec/Antunes (second compilation)
 
 ./rec/Sampaio
 
 ./rec/Bez
+
+./rec/Antunes (:second: compilation)
 
 ./rec/Pataca
 
@@ -52,6 +53,8 @@ Ter Mai 15 22:01:26 -03 2018
 ./rec/Otto
 
 ./rec/Ruiz
+
+./rec/Zal
 
 
 ~~ planned ~~

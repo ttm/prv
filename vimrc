@@ -9,7 +9,7 @@
 se nocp
 se sts=2 sw=2 tw=0 bs=2 et ai nu rnu
 se so=9999
-se so=0
+se so=2
 se sj=-80
 se hi=10000  " remember more commands and search history
 se wig=*.swp,*.bak,*.pyc,*.class

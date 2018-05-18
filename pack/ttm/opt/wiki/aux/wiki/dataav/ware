@@ -221,7 +221,7 @@ opponency properties in monkey primary visual cortexes
 
 === categorical colors ===
 evidence of canonical colors (as Plato's forms).
-orange or lime green are not easy to remmember
+orange or lime green are not easy to remember
 
 color confusion by categories
 
@@ -232,6 +232,154 @@ color confusion by categories
   Fig. 4.12
 
 == Properties of Color Channels ==
+prop of col chan have profound implications for DV
+
+luminance is most different
+chromatic channels are obviously different
+
+two basic cases:
+  vary only luminance from black to white through grays
+  isoluminant/equiluminous: vary only hue in red-green or yellow-blue
+
+=== spatial sensitivity ===
+chromatic channels have ~1/3 the resolution of luminance
+
+:text: syntax highlighting: is fit to have a threshold of luminance
+or/and hue channels between bg and any other color in body
+(not when element has own bg or in case of UI assets/widgets).
+
+Fig 4.13: not equiluminous bg, error in text.
+
+:rec: bg colored diversely -> ensure luminance contrast
+
+=== stereoscopic depth ===
+dependent heavily on luminance
+
+=== motion sensitivity ===
+also dependent heavily on luminance
+equiluminous target appears to move slower
+
+=== form ===
+appears to be processed mainly through the luminance channel
+shading?
+shape vs form?
+
+:rec: curved surface -> ensure adequate luminance variation
+
+luminance-contrast in a border of the shape -> 
+             -> better perception of shape and color
+
+:rec: use the borders
+
+=== summary ===
+
+chromatic channels are inferior
+irrelevant or second method for the rest
+pure chromatic diffs should never be used for:
+  shape
+  motion
+  details (e.g. text)
+
+but are usually the best choice for categories
+  why? look beyond the basics seen so far
+
+= color appearance =
+does not help in shape
+(shape vs layout?)
+
+"no help for the hunter to aim accurately"
+
+no shape vs shade -> yields shapeless bodies
+
+no stereoscopy to grab or dodge stuff
+
+but it helps to distinguish berries (and bugs and other (camouflaged) animals)
+
+color is/creates a visual attribute of objects
+colors are (used as) adjectives
+
+coding od information? (ware)
+(too generic!)
+
+=== monitor surrounds ===
+surroundings impacts very much on color
+
+standardize colors:
+  monitor: whites
+  paper: lamp
+  paint & fabric: booths with illumination
+
+=== color constancy ===
+lightness constancy, see Chap 3,
+also applies to color constancy
+
+color constancy:
+  chromatic adaptation
+  chromatic contrast
+
+colored illumination:
+  remove/ameliorate illumination noise
+
+color adaptation:
+  evidence: no awareness of yellowness of tungsten lamps
+  consequence: no absolute colors in perception, only against a background
+
+=== color contrast ===
+chromatic contrast 
+  ~ lightness contrast (Chap 3)
+  purpose: see surface colors, fg VS bg
+
+relative color > absolute color
+(as with pitch in sound)
+photograph example
+
+Fig 4.15 I had to move the head to see the color
+difference. Walk if necessary.
+
+=== saturation ===
+adjectives/qualifiers of colors
+  (colors are used as adjectives/attributes/qualifiers)
+
+saturation == vivid, bright, intense.
+
+low saturation is close to white-gray-black (luminance?) axis
+
+high saturation is strong signal/value in one or both
+chromatic (red-green and yellow-blue) channels
+
+:ex: if high saturation is high chrom, it is low
+luminance?
+
+Equal-saturation contours in CIE chromaticity diagram
+(equal loudness curves for audio)
+HSV disparity for equal saturation
+
+Fig 4.16
+
+:ex: why is yellow, cyan and purple impaired?
+Is it ok?
+
+:rec: greater saturation for greater values.
+
+:rec: avoid saturation sequences with more than 3 values.
+
+=== brown ===
+misterious, dark yellow.
+
+orange and yellow darkened -> brown and olive green
+
+requires white to be perceived
+
+!= orange yellow
+
+might appear as a glitch in palettes ehat have yellow
+
+
+
+
+
+
+
 
 
 
