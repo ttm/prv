@@ -1,0 +1,57 @@
+(capa)
+
+
+
+                ~ Segunda aula sobre cor ~
+    
+    
+       Renato Fabbri, renato.fabbri@gmail.com
+           
+       ICMC/USP, FAPESP (projeto 2017/05838-3)
+   Profa. Dra. Maria Cristina Ferreira de Oliveira
+
+
+
+
+
+
+
+  ~ Calibra monitor / datashow / projetor ~
+         (calibra projeção de luz)
+
+     iniciar sessao de AA
+S 15 8 iniciando segunda aula sobre cor
+
+     arrumar:
+colo ogun
+colo ogunI
+colo ogun2
+colo ogun2I
+
+colo ode
+colo odeI
+
+" Ýdà Pires Ña-dãn, 05/2018
+
+match Constant /\v\~.*\~/
+match VimSynError /\v\~.*\~/
+
+cal ApplyCS(g:ccs.yellow1, 'c')
+cal ApplyCS(g:ccs.green2, 'c')
+cal ApplyCS(g:ccs.passivepink1, 'c')
+cal ApplyCS(g:ccs.red1, 'c')
+cal ApplyCS(g:ccs.red5, 'c')
+cal ApplyCS(g:ccs.exu1, 'c')
+pu=string(keys(ccs))
+
+colo blue
+colo zellner
+hi Normal guibg=red guifg=green
+
+setl so=0
+" toggle numbering but maintain spacing:
+" <find commands, make function and m mapping>
+
+
+
+
