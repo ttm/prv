@@ -1,4 +1,4 @@
-~ Records v001.2b ~
+~ Records v001.3b ~
 
 :ativos: Audio, Text, Image, Video, quasi/semi-finished (Ok), Surprise/other
 
@@ -55,6 +55,12 @@ date: ??
 ./rec/Ruiz
 
 ./rec/Zal
+
+./rec/Parrachia
+
+./rec/Tygel
+
+./rec/Digiandomenico
 
 
 ~~ planned ~~
@@ -168,7 +174,7 @@ date: ??
 
 ~~~ other ~~~
 
-./notes
+./notes (with todo and more)
 
 ./about
 

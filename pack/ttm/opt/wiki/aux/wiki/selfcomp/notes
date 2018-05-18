@@ -10,6 +10,15 @@ check comics, drawings, images and videos from Edson, Ricardo, Antônio, Larissa
 make visitor count,
 make funny visitor count that makes the counting in the page be high and increase rapidly.
 
+make :WTOhtml command:
+  make CSS more controlled, ./rel/001 has a very sloppy html, render html
+  regex-processing the raw text (wiki) files
+    ./rec/Parrachia volunteered to think the CSS
+
+  make fluffy version of selfcomp
+  which replaces ~~xxx~~ by HTML h elements and so on
+
+
 
 ~~ achievements ~~
 
