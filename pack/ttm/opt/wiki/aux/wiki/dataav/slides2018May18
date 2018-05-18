@@ -2,7 +2,7 @@
 
 
 
-                ~ Segunda aula sobre cor ~
+            ~ Segunda aula sobre cor ~
     
     
        Renato Fabbri, renato.fabbri@gmail.com
@@ -16,42 +16,75 @@
 
 
 
-  ~ Calibra monitor / datashow / projetor ~
-         (calibra projeção de luz)
-
-     iniciar sessao de AA
-S 15 8 iniciando segunda aula sobre cor
-
-     arrumar:
-colo ogun
-colo ogunI
-colo ogun2
-colo ogun2I
-
-colo ode
-colo odeI
-
-" Ýdà Pires Ña-dãn, 05/2018
-
-match Constant /\v\~.*\~/
-match VimSynError /\v\~.*\~/
-
-cal ApplyCS(g:ccs.yellow1, 'c')
-cal ApplyCS(g:ccs.green2, 'c')
-cal ApplyCS(g:ccs.passivepink1, 'c')
-cal ApplyCS(g:ccs.red1, 'c')
-cal ApplyCS(g:ccs.red5, 'c')
-cal ApplyCS(g:ccs.exu1, 'c')
-pu=string(keys(ccs))
-
-colo blue
-colo zellner
-hi Normal guibg=red guifg=green
-
-setl so=0
-" toggle numbering but maintain spacing:
-" <find commands, make function and m mapping>
 
 
 
+
+
+
+
+
+
+
+
+
+
+==========================
+(0.1)
+
+               ~ roteiro ~
+                 
+    1 - pendências e retomada da primeira aula
+    
+    2 - literatura
+      ./slides2018May11 @ 255
+      
+
+
+
+
+
+
+
+
+
+      
+
+
+
+
+
+
+==========================
+(1)
+
+      ~ pendências e retomada da primeira aula ~
+
+  color schemes for syntax highlighting:
+    ./calibrateMonitor
+
+  PDF pode usar, temos acesso ao original c os colegas,
+    é uma forma de nao incomodar
+    citar: ritual juridico anual dos advogados que comem e não pagam
+
+  artigo: como fazer leitura rápida
+    explicar novamente o que está sendo passado de mão em mão
+    questionar
+
+  goethe (1749 , 1832) (Frankfurt am Main , Weimar)
+    geral sobre ele, 1 min
+    https://pt.wikipedia.org/wiki/Johann_Wolfgang_von_Goethe
+
+  okular: 200MB p quem tinha nada do KDE, suave
+    konsole aceita true colors?
+    kubuntu 18.04?
+
+  revisão da aula anterior:
+    sobre cor, literatura, o que é, aplicacao, métodos
+    munzner até definição dela
+    ./slides2018May11 @ 255
+
+
+==========================
+(2)
 

@@ -1,0 +1,52 @@
+  ~ Calibra monitor / datashow / projetor ~
+         (calibra projeção de luz)
+
+" nota p aula:
+     iniciar sessao de AA
+S 15 8 iniciando segunda aula sobre cor
+
+" por Ýdà Pires Ña-dãn, 05/2018:
+colo ogun
+colo ogunI
+colo ogun2
+colo ogun2I
+
+colo ode
+colo odeI
+
+" auxiliares:
+match Constant /\v\~.*\~/
+match VimSynError /\v\~.*\~/
+cal ApplyCS(g:ccs.yellow1, 'c')
+cal ApplyCS(g:ccs.green2, 'c')
+cal ApplyCS(g:ccs.passivepink1, 'c')
+cal ApplyCS(g:ccs.red1, 'c')
+cal ApplyCS(g:ccs.red5, 'c')
+cal ApplyCS(g:ccs.exu1, 'c')
+pu=string(keys(ccs))
+
+colo blue
+colo zellner
+hi Normal guibg=red guifg=green
+
+setl so=0
+" toggle numbering but maintain spacing:
+" <find commands, make function and m mapping>
+" :todo:
+
+
+" notas p aula:
+"   iniciar com colorschemes de todos os orixás e de outras entidades:
+"     jesus
+"     judaísmo
+"     gregos e romanos
+"     egípcios
+"     hindus
+"     indigena americano (brasileiro, mexicano, estadunidense)
+"     aborígene australiano
+"     budismo/xintoísmo/lao tse, etc.
+"     telema, magicka
+
+
+
+
