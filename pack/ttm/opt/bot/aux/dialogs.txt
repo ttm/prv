@@ -1742,3 +1742,15 @@ Srila: slides Seg Mar 18 03 2018 ----- mantovani Ter Mar 30
 $$$$$ ::: Sex Mai 18 13:02:48 -03 2018
 arrumando slides
 Srila: arrumando tudo da virus e diálogos de BRM Sex Mar 22
+
+$$$$$ ::: Sex Mai 18 13:20:23 -03 2018
+melhorados slides
+Srila: slides terminar aa sem redundancia , sonata , terminar esse :
+
+$$$$$ ::: Sex Mai 18 13:26:02 -03 2018
+BAAN    *baan.vim* *baan-syntax*
+Srila: terminar texto Ter Abr 15 21 - bot falar Qua Mar
+
+$$$$$ ::: Sex Mai 18 13:32:38 -03 2018
+terminado
+Srila: terminado indice Qua Abr 19 17 13 19 23 17 09

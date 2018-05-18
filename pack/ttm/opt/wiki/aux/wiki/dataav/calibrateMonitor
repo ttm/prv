@@ -30,9 +30,14 @@ colo zellner
 hi Normal guibg=red guifg=green
 
 setl so=0
+fdc=0
+se nu rnu
+se nonu nornu
 " toggle numbering but maintain spacing:
 " <find commands, make function and m mapping>
 " :todo:
+
+ mvim:fdc=3:nonu:nornu:
 
 
 " notas p aula:
@@ -46,7 +51,3 @@ setl so=0
 "     aborígene australiano
 "     budismo/xintoísmo/lao tse, etc.
 "     telema, magicka
-
-
-
-

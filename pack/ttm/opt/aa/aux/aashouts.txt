@@ -3212,3 +3212,15 @@ Sex Mai 18 12:48:47 -03 2018
 arrumando slides
 Sex Mai 18 13:02:48 -03 2018
 -----
+melhorados slides
+Sex Mai 18 13:20:23 -03 2018
+-----
+BAAN    *baan.vim* *baan-syntax*
+Sex Mai 18 13:26:02 -03 2018
+-----
+terminado
+Sex Mai 18 13:32:38 -03 2018
+-----
+$$$$$
+
+
