@@ -1,5 +1,4 @@
 
-
                            *prv-after-after*
                     (auxiliary help file for |prv|)
 
@@ -21,3 +20,4 @@ pack/ttm/opt/someplugin/after is added to &rtp, but files there are not sourced
 See |prv-paths| and |prv-templates|
 
  vim:modifiable:noreadonly:tw=0:ts=8:ft=help:suffixesadd+=.txt:norl:softtabstop=4:shiftwidth=4:textwidth=0:expandtab:
+

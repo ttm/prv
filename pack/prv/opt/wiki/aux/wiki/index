@@ -6,10 +6,10 @@
 ./pack/ttm/opt
 
 ~ marks ~
-A for achievements
-B for baits
-C for calenar
-D for diary
+A
+B
+C
+D
 E for espirituality
     F* for final (current list of tasks)
 G
@@ -26,6 +26,11 @@ Q
 R Ruiz
     S* for selfcomp
     T* for TODO
+        a for achievements
+        b for baits
+        c for calenar
+        d for diary
+        n for tasks that are out of the emphasis
 U
     V* for vimrc
     W* for wiki
