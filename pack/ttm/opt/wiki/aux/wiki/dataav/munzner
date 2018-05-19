@@ -105,7 +105,7 @@ Such definitions are not used elsewhere.
 Fig 10.5
 
 luminance and saturation: magnitude channels
-hue: identity channel
+hue: identity channel (categorias, Cristina)
 
 luminance: 2-4 bins, specially in nonuniform background.
 low accuracy in noncontiguous regions.
@@ -121,8 +121,8 @@ saturation and hue does not provide detectable edges.
 
 hue:
   by region size, same problem as saturation, same noncontiguous low resolution:
-    small: use bright and saturated colors to make colors distinguishable
-    large: low-saturation colors, i.e. pastels
+    small: use bright and saturated colors to make colors distinguishable :rec:
+    large: low-saturation colors, i.e. pastels :rec:
   effective for categorical data and groupings, second only to position
   6-7 bins in small separated regions.
   no (strong) implicit perceptual ordering (VS luminance and saturation).

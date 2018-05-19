@@ -60,3 +60,7 @@ linha de comando
 numeros de linha
 arquivos de referencia, vimrc, plugins proprios e dos outros.
 
+= notes to organize =
+you might not be able to define functions
+starting with lower case letters, but you
+can define dictionaries, and use FunRefs

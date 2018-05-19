@@ -3224,3 +3224,39 @@ Sex Mai 18 13:32:38 -03 2018
 $$$$$
 
 
+
+
+$$$$$
+iniciando segunda aula sobre cor
+Sex Mai 18 14:31:28 -03 2018
+-----
+okular
+Sex Mai 18 14:46:45 -03 2018
+-----
+pulamos p trasp
+Sex Mai 18 15:02:37 -03 2018
+-----
+hue
+Sex Mai 18 15:17:37 -03 2018
+-----
+mostrado colorschemes mitologicos p Maju
+Sex Mai 18 18:41:04 -03 2018
+-----
+$$$$$
+
+
+procurando tarefas para esta noite
+Sex Mai 18 23:12:49 -03 2018
+-----
+todo @ 310:
+- color schemes da yda
+- color: voltar a deixar funcoes basicas operacionais
+- tgsrch
+- statusline (colored, with better info)
+- conversao wiki -> html
+- prv review: shortcuts, config
+Sex Mai 18 23:13:26 -03 2018
+-----
+difference between colors/ and syntax/ directories
+Sex Mai 18 23:37:02 -03 2018
+-----

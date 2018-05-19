@@ -1,4 +1,5 @@
-" My minimal vimrc (elaborate functionalities are in pavk/ttm/opt/prv/) {{{1
+" My minimal vimrc
+" (elaborated functionalities are in pack/prv/opt/) {{{1
 " Author: Renato Fabbri (renato.fabbri@gmail.com)
 " Notes: Plugins are placed inside pack/ttm/opt/ and loaded with :pa
 " This is a very minimal vimrc, see PRV Vim plugin (Private) for 

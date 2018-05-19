@@ -39,7 +39,7 @@ hi link wPath Error
 sy match wPath /\v\.\/\f{3,}/
 hi link wEnd CursorLineNr
 sy match wEnd /\v^:::/
-
+/home/renato/.vim/pack/ttm/opt/wiki/syntax/
 
 
 
