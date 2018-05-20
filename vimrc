@@ -34,7 +34,7 @@ let g:aa_user = 'rfabbri'
 let g:prv = {'leaders': {}, 'paths': {}}
 " add items to this list to find out the order in which files are sourced
 
-g:prv.order = ['vimrc']
+let g:prv.order = ['vimrc']
 
 let g:prv.paths.vim = expand("<sfile>:h") . '/'
 let g:prv.leaders.default = ['', "<space>", "<cr>", "<tab>", "<bs>", '_', '\']

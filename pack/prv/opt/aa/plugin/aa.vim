@@ -13,16 +13,16 @@
 if exists("g:loaded_aaplugin") && (exists("g:aa_not_hacking") || exists("g:prv_not_hacking_all"))
  fini
 en
-let g:loaded_aaplugin = "v0.01b"
+let g:loaded_aaplugin = "v0.02b"
 let g:aa_dir = expand("<sfile>:p:h:h") . '/'
 " let g:aa_default_leader = '<Space>'
 " options:
 " aux/ dir?
 " aa_leader and aa_localleader
 " say and saytime
-if !exists("g:loaded_prvplugin")
-  exe 'so ' . g:aa_dir . 'aux/prvdependence.vim'
-en
+" if !exists("g:loaded_prvplugin")
+"   exe 'so ' . g:aa_dir . 'aux/prvdependence.vim'
+" en
 
 let g:aa_default_leader = ' a'
 

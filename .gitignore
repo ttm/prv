@@ -1,3 +1,6 @@
 *.html
 *.swp
 *BACK
+.netrwhist
+tags
+pack/prv/opt/wiki/aux/wiki/private/

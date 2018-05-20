@@ -9,24 +9,22 @@
 " Dr. Ricardo Fabbri (IPRJ/UERJ)
 
 " Load Once: {{{3
-if exists("g:loaded_wikiplugin") && (exists("g:wiki_not_hacking") || exists("g:wiki_not_hacking_all"))
+if exists("g:loaded_colorplugin") && (exists("g:color_not_hacking") || exists("g:prv_not_hacking_all"))
  finish
 endif
-let g:loaded_colorplugin = "v0.01b"
-let g:wiki_dir = expand("<sfile>:p:h:h") . '/'
+let g:loaded_colorplugin = "v0.02b"
+let g:color_dir = expand("<sfile>:p:h:h") . '/'
 
-
-
-hi SpellBad cterm=undercurl
-
-let g:loaded_colorsPlugin = 'v01'
-" GetLatestVimScripts: 5650 1 :AutoInstall: Realcolors
+au ColorScheme * hi SpellBad cterm=undercurl
 
 " MAPPINGS: {{{1
 " -- g:realcolors_leader hack, part 1 of 1 {{{3
-nn cc :cal CColor()<CR>
-nn cs :ec CStack()<CR>
-nn ci :cal CInit()<CR>
+let g:mapleader = " "
+nn <leader>cc :cal CChange()<CR>
+nn <leader>cs :ec CStack()<CR>
+nn <leader>ci :cal CInit()<CR>
+nn <leader>c<leader>c :cal CColor()<CR>
+
 " Initialization and overall status update
 " COMMANDS: {{{1
 " -- MAIN: {{{3
@@ -34,7 +32,8 @@ nn ci :cal CInit()<CR>
 " FUNCTIONS: {{{1
 " -- MAIN {{{2
 fu! CColor() " {{{3
-  let l:c = 'banana'
+  ec 'Sketch. Nothing useful implemented in CColor() for an end-user'
+  let l:c = 'char_placeholder'
   let g:action = v:none
   let g:sname = v:none
   wh c != 'q'
@@ -124,11 +123,11 @@ fu! CColor() " {{{3
   cal CCarryAction(g:action, g:sname)
 endf
 let g:color.actions = {'y': 'yank', 'a': 'apply', 'c': 'change', 'L': 'luck',
-      \ 's': 'stack', 'l': 'load', 'k': 'keep', 'i': 'init', 'h': 'hack', 'H': 'help'}
+      \'s': 'stack', 'l': 'load', 'k': 'keep', 'i': 'init', 'h': 'hack', 'H': 'help'}
 let g:color.snames = {'n': 'Normal', 'tt': 'TabLine', 'ts': 'TabLineSel',
-      \ 'tf': 'TabLineFill', 'sb': 'Spellbad', 'sr': 'SpellRare',
-      \ 'nn': 'LineNr', 'nN': 'CursorLineNr', 'ls': 'StatusLine',
-      \ 'ln': 'StatusLineNC', 'lt': 'StatusLineTerm', 'lT': 'StatusLineTermNC'}
+      \'tf': 'TabLineFill', 'sb': 'Spellbad', 'sr': 'SpellRare',
+      \'nn': 'LineNr', 'nN': 'CursorLineNr', 'ls': 'StatusLine',
+      \'ln': 'StatusLineNC', 'lt': 'StatusLineTerm', 'lT': 'StatusLineTermNC'}
 fu! CCarryAction(action, sname)
   let a = 4
 endf
@@ -170,8 +169,8 @@ fu! CChange() " {{{3
   let sfg = synIDattr(synIDtrans(sid), "fg")
   let sbg = synIDattr(synIDtrans(sid), "bg")
   let name = CStack()[-1][-1]
+  let g:asdasd = l:name
   if len(name) > 0
-    let name = name[-1]
     let fg = map(synstack(line('.'), col('.')), 'synIDattr(synIDtrans(v:val), "fg")')[-1]
     if fg == ''
       let fg = sfg
@@ -205,31 +204,33 @@ fu! CChange() " {{{3
   let rgbb = [bg[1:2], bg[3:4], bg[5:6]]
   let rgbb_ = map(rgbb, 'str2nr(v:val, "16")')
 
+  let color = {'fg':[l:rgb, l:rgb_, l:fg], 'bg':[l:rgbb, l:rgbb_, l:bg]}
+
   let [fg_, bg_] = [fg, bg]
   ec [fg_, bg_]
-  let c = 'foo'
+  let c = 'char_placeholder'
   let who = 'fg'
   ec 'initial colors are fg, bs:' fg bg
   cal getchar(1)
   let emphn = 0
   let emph = ['bold', 'underline', 'bold,underline', 'NONE']
   wh c != 'n'
-      let mex = 1
-			let c = nr2char(getchar())
-      if c == 'j'
+      let mex = 1  " chosen key Makes for an EXecution ?
+      let c = nr2char(getchar())
+      if c == 't'
         if who == 'fg'
           let who = 'bg'
           let mcmd = 'echo "on the background color"'
         el
           let who = 'fg'
-          let mcmd = 'echo "on the background color"'
+          let mcmd = 'echo "on the foreground color"'
         en
-      elsei c == 'h'
+      elsei c == 'i'
         let [rgb_, rgbb_] = [rgbb_, rgb_]
         let mcmd = 'echo "colors inverted"'
-        let fg_ = Hex(rgb_[0], rgb_[1], rgb_[2])
+        let fg_ = CHex(rgb_[0], rgb_[1], rgb_[2])
         exe 'hi' name 'guifg=' . fg_
-        let bg_ = Hex(rgbb_[0], rgbb_[1], rgbb_[2])
+        let bg_ = CHex(rgbb_[0], rgbb_[1], rgbb_[2])
         exe 'hi' name 'guibg=' . bg_
       elsei c == 'p' " power, preeminence, prominance
         let emphn  = ( emphn + 1 ) % len(emph)
@@ -239,13 +240,17 @@ fu! CChange() " {{{3
         let emphn  = ( emphn + 3 ) % len(emph)
         exe 'hi' name 'cterm=' . emph[emphn]
         let mcmd = ''
+      elsei c == "h"
+        ec "('~ help ~\n\nrewq gfds bvcx' to swap color space (see :help color);\n'i p t ' to Invert fg-bg, change emPhasis, toggle fg/bg;\n'h n' for Help quit/Next)."
+        cal getchar()
+        let mcmd = ''
       elsei who == 'fg'
         let rgb_ = IncRGB(rgb_, c)
-        let fg_ = Hex(rgb_,0,0)
+        let fg_ = CHex(rgb_,0,0)
         let mcmd = printf('hi %s guifg=%s', name, fg_)
       elsei who == 'bg'
         let rgbb_ = IncRGB(rgbb_, c)
-        let bg_ = Hex(rgbb_,0,0)
+        let bg_ = CHex(rgbb_,0,0)
         let mcmd = printf('hi %s guibg=%s', name, bg_)
       el
         let mex = 0
@@ -253,11 +258,11 @@ fu! CChange() " {{{3
       if mex
         exe mcmd
         redr
-        ec fg_ bg_ '(rewqgfdsbvcxhjp to change, n to quit)'
+        ec fg_ bg_ "| Command (h): "
       en
-      " echo 'hi' name 'guifg=' . fg_
   endw
-  let s:me = l:
+  let g:me = l:
+  let g:mi = a:
 endf
 fu! CStack() " {{{3
   " Show syntax highlighting groups for word under cursor
