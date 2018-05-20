@@ -30,12 +30,20 @@ se tgc
 " cal system('xmodmap ~/.Xmodmap')
 
 " {{{1 PRV 
+let g:aa_user = 'rfabbri'
 let g:prv = {'leaders': {}, 'paths': {}}
 " add items to this list to find out the order in which files are sourced
 g:prv.order = ['vimrc']
 
-let g:prv.paths.vimrc = expand("<sfile>:h") . '/'
+let g:prv.paths.vim = expand("<sfile>:h") . '/'
 let g:prv.leaders.default = ['', ' ', "<CR>", "<BS>", '_', '\']
+let g:prv.leaders.other = ["<c-h>", "<c-j>", "<c-k>"]
+
+" created with $ xmodmap -pke > aux/PXmodmap
+" and swapping colon with semicolon
+nn <silent> <space>p; :cal system('xmodmap '.g:prv.paths.vim.'aux/PXmodmap')<cr>
+" nm <c- > :ec 'banana'
+nn <space>p<space> :ec 'banana'<cr>
 
 " {{{1 final commands
 colo blue
@@ -54,4 +62,4 @@ colo blue
 " nos dedos. Nao vale mais a pena sair dos standards do Vim.
 " :todo: write to vim_use about sticking to standards, no plugins
 
-
+" :A fumegando mapping p trocar : por ;.
