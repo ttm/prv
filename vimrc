@@ -33,17 +33,18 @@ se tgc
 let g:aa_user = 'rfabbri'
 let g:prv = {'leaders': {}, 'paths': {}}
 " add items to this list to find out the order in which files are sourced
+
 g:prv.order = ['vimrc']
 
 let g:prv.paths.vim = expand("<sfile>:h") . '/'
-let g:prv.leaders.default = ['', ' ', "<CR>", "<BS>", '_', '\']
+let g:prv.leaders.default = ['', "<space>", "<cr>", "<tab>", "<bs>", '_', '\']
 let g:prv.leaders.other = ["<c-h>", "<c-j>", "<c-k>"]
 
 " created with $ xmodmap -pke > aux/PXmodmap
 " and swapping colon with semicolon
 nn <silent> <space>p; :cal system('xmodmap '.g:prv.paths.vim.'aux/PXmodmap')<cr>
-" nm <c- > :ec 'banana'
-nn <space>p<space> :ec 'banana'<cr>
+
+pa aa
 
 " {{{1 final commands
 colo blue

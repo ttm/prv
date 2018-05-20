@@ -1,3 +1,7 @@
+py3 import random
+fu! PRand()
+  retu py3eval('random.random()')
+endf
 fu! PRVReinitializeAll() " {{{3
   if exists("g:loaded_prvplugin")
     exe 'so '.g:prv_dir.'plugin/prv.vim' 

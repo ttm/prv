@@ -28,8 +28,8 @@ let g:aa_default_leader = ' a'
 
 " MAPPINGS: {{{1
 " -- g:aa_leader hack, part 1 of 2 {{{3
-let tleader = g:mapleader
-let tlocalleader = g:mapleader
+" let tleader = g:mapleader
+" let tlocalleader = g:mapleader
 let g:mapleader = ' a'
 let g:maplocalleader = ' '
 " -- for shouts {{{3
@@ -68,8 +68,8 @@ nn <leader>h<localleader><localleader> :PRVRedir v ec g:aa
 " thus we use:
 nn <leader>m :exe 'PRVRedir v :map '.g:prv.leaders.aa[0]<CR>:sort />A\zs/<CR>
 " -- general {{{3
-nn <leader>i :cal AInfo()<CR>
-nn <leader> :cal AInfo()<CR>
+nn <leader>i :ec AInfo()<CR>
+nn <leader> :ec AInfo()<CR>
 nn <leader><localleader>i :cal AInit()<CR>
 nn <leader>I :cal Ainit('force')<CR>
 nn <leader>c :cal AClear()<CR>
@@ -95,7 +95,7 @@ fu! AShout(msg) " {{{3
   cal writefile(mlines, g:aa.paths.shouts, 'as')
   cal ASessionReceiveMsg()
   let g:aa.events.shouts_count += 1
-  if g:aa.set.bot:
+  if g:aa.set.bot
     ec a:msg.' || '.BTalk(a:msg)
   el
     ec a:msg
@@ -128,12 +128,14 @@ fu! AStartSession(...) " {{{3
                         \ 'dur: '.string(l:dur), 'slots: '.l:nslots],
                \ g:aa.paths.sessions, 'as')
 
+  let g:rand = string(PRand())
+  let g:aa.events.session.voices = [g:aa.set.voices[g:rand[2]], g:aa.set.voices[g:rand[3]]]
   cal AExpectMsg("notimerbind")
+  let g:aa.events.session.on = 1
   if a:0 > 2
     let aamsg = join(a:000[2:], ' ')
     exe 'A '.l:aamsg
   en
-  let g:aa.events.session.on = 1
 endf
 fu! AInit(...) " {{{3
   cal AInitVars()
@@ -145,14 +147,14 @@ fu! AInfo() " {{{3
 endf " }}}
 " -- UTILS {{{2
 fu! AIsInitialized() " {{{3
-  if exists("g:aa.initialized")
+  if exists("g:aa.events.on")
     retu 1
   el
     retu 0
   en
 endf
 fu! AIsSessionOn() " {{{3
-  if exists("g:aa.session_on")
+  if exists("g:aa.events.session.on") && g:aa.events.session.on == 1
     retu 1
   el
     retu 0
@@ -176,7 +178,7 @@ fu! AUnInit() " {{{3
     cal AUpdateColorColumns()
 endf
 fu! ATimeLeftInSlot() " {{{3
-  let at = g:aa.cursession.dur*60 - (localtime() - g:aa.events.last_shout.request_seconds)
+  let at = g:aa.events.session.dur*60 - (localtime() - g:aa.events.last_shout.request_seconds)
   retu ASecondsToTimestring(string(l:at))
 endf
 fu! ATimeSpentInSlot() " {{{3
@@ -209,16 +211,16 @@ fu! ASessionRegisterShoutWanted() " {{{3
 endf
 " -- AUX {{{2
 fu! AInfoLines() " {{{3
-  let mlines = ['== Info about AA ==']
+  let mlines = ['~~ Info about (AA) Algorithmic Autoregulation ~~']
   cal AInit()
   cal add(l:mlines, '')
   cal add(l:mlines, 'initialized: '.g:aa.events.on)
-  cal add(l:mlines, 'initialized time: '.g:aa.events.initialized[0])
+  cal add(l:mlines, 'initialized time: '.g:aa.events.started[0])
   cal add(l:mlines, 'time since initialized: '.ASecondsToTimestring(localtime() - g:aa.events.started[1]))
-  cal add(l:mlines, '| using speech: '.string(g:aa.set.voices))
-  cal add(l:mlines, '| using speech to say time: '.g:aa.saytime)
+  cal add(l:mlines, '| using speech: '.string(g:aa.set.say))
+  cal add(l:mlines, '| using speech to say time: '.g:aa.set.saytime)
   cal add(l:mlines, 'user: '.g:aa.set.user)
-  cal add(l:mlines, 'paths: '.string(g:aa.paths))
+  cal add(l:mlines, "\npaths: ".string(g:aa.paths))
 
   cal add(l:mlines, '')
   cal add(l:mlines, 'shouts sent since init: '.g:aa.events.shouts_count)
@@ -258,7 +260,7 @@ fu! ARunInAllWindows(acmd) " {{{3
   cal win_gotoid(l:wi)
 endf " }}}
 fu! AUpdateColorColumns() " {{{
-  if !exists("g:aa.cursession") || g:aa.cursession.shouts_expected <= 0
+  if !exists("g:aa.events.session") || g:aa.events.session.shouts_expected <= 0
     setg colorcolumn=
     se colorcolumn<
     let acommand = 'setg colorcolumn='.&colorcolumn.' | set colorcolumn<'
@@ -266,7 +268,7 @@ fu! AUpdateColorColumns() " {{{
   el
     let ref = 20
     exe 'setg colorcolumn=' . ref
-    for i in range(g:aa.cursession.shouts_expected - 1)
+    for i in range(g:aa.events.session.shouts_expected - 1)
       let g:aa.cccommand_ = 'setg colorcolumn+=' . (ref + (i+1)*2)
       exe g:aa.cccommand_
     endfo
@@ -277,26 +279,28 @@ fu! AUpdateColorColumns() " {{{
   en
 endf
 fu! AInitVars(...) " {{{3
-  if a:0 > 0 || !exists(g:aa)
-    let g:aa = { 'set': {'say': 1, 'saytime': 0, 'bot': 1},
-    'timers': [], 'paths': {}, 'events': {} }
+  if a:0 > 0 || !exists('g:aa')
+    let g:aa = { 'set': {'say': 1, 'saytime': 0, 'bot': 0},
+          \'timers': [], 'paths': {}, 'events': {} }
     let g:aa.note = 'AA stuff should be kept in files. Keep this dictionary minimal.'
 
     let g:aa.set.sep = '-----'
     let g:aa.set.ssep = '$$$$$'
     let g:aa.set.voices = ['croak', 'f1', 'f2', 'f3', 'f4', 'f5', 'klatt', 'klatt2', 'klatt3', 'klatt4', 'm1', 'm2', 'm3', 'm4', 'm5', 'm6', 'm7', 'whisper', 'whisperf']
     if exists("g:aa_user")
-      let g:aa.set.user = aa_user
+      let g:aa.set.user = g:aa_user
     el
       let g:aa.set.user = 'anon-' . system("echo $RANDOM$RANDOM$RANDOM")
     en
 
     let g:aa.paths.aa_dir = g:aa_dir
+    let g:aa.paths.aux = g:aa.paths.aa_dir . 'aux/'
     let g:aa.paths.shouts = g:aa.paths.aux . 'aashouts'
+    cal system('touch '.g:aa.paths.shouts)
     let g:aa.paths.sessions = g:aa.paths.aux . 'aasessions'
+    cal system('touch '.g:aa.paths.sessions)
     let g:aa.paths.aascript = g:aa.paths.aa_dir . 'plugin/aa.vim'
     let g:aa.paths.aadoc = g:aa.paths.aa_dir . 'doc/aa.txt'
-    let g:aa.paths.aux = g:aa.paths.aa_dir . 'aux/'
     if !isdirectory(g:aa.paths.aux)
       let mkd = input("make directory " . g:aa.paths.aux . " ? (y/N)")
       if l:mkd ==? 'y'
@@ -329,20 +333,20 @@ fu! ASecondsToTimestring(secs) " {{{3
   retu l:durline
 endf
 fu! AExpectMsg(timer) " {{{3
-  let g:aa.cursession.shouts_requested += 1
-  let g:aa.cursession.shouts_expected += 1
+  let g:aa.events.session.shouts_requested += 1
+  let g:aa.events.session.shouts_expected += 1
   cal AUpdateColorColumns()
   cal ASay()
   let g:aa.events.last_shout.request_time = strftime("%c")
   let g:aa.events.last_shout.request_seconds = localtime()
 endf " }}}
 fu! ASay() " {{{3
-  if g:aa.say == 1
+  if g:aa.set.say == 1
     let pmsg = []
-    cal add(l:pmsg, 'A.A.: finished slot: ' . (g:aa.cursession.shouts_requested-1)
-          \ . 'of ' . g:aa.cursession.nslots)
-    cal add(l:pmsg, 'A.A.: 1 more shout expected. Total of ' . g:aa.cursession.shouts_expected)
-    if g:aa.saytime == 1
+    cal add(l:pmsg, 'A.A.: finished slot: ' . (g:aa.events.session.shouts_requested-1)
+          \ . 'of ' . g:aa.events.session.nslots)
+    cal add(l:pmsg, 'A.A.: 1 more shout expected. Total of ' . g:aa.events.session.shouts_expected)
+    if g:aa.set.saytime == 1
       cal add(l:pmsg, 'A.A.: current time and day is: ' . strftime("%T, %B, %d"))
     en
     let voices = []
@@ -357,17 +361,17 @@ fu! ASay() " {{{3
   en
 endf
 fu! AMkVoice() " {{{3
-    let voice = g:aa.set.voices[reltime()[1]%len(g:aa.voices)]
+    let voice = g:aa.events.session.voices[reltime()[1]%len(g:aa.events.session.voices)]
     let epk = 'espeak -v' . l:voice
   retu l:epk
 endf
 fu! ASessionReceiveMsg() " {{{3
-  if exists("g:aa.session_on") && g:aa.cursession.shouts_expected > 0
+  if exists("g:aa.events.session.on") && g:aa.events.session.shouts_expected > 0
     let g:aa.events.session.shouts_expected -= 1
     let g:aa.events.session.shouts_sent += 1
     cal AUpdateColorColumns()
     if (g:aa.events.session.nslots + 1 == g:aa.events.session.shouts_requested) && (g:aa.events.session.shouts_expected == 0)
-      unl g:aa.events.session.on
+      let g:aa.events.session.on = 0
       cal writefile([g:aa.set.ssep, '', ''], g:aa.paths.shouts, 'as')
       cal writefile(['ended: '.system("date")[:-2], '', ''], g:aa.paths.sessions, 'as')
     en
