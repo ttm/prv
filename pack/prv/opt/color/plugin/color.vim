@@ -1117,6 +1117,9 @@ fu! Voice(repeats, duration, patternID) " {{{
   call add(s:timers, timerID_)
 endfu " }}}
 " let s:pattern = s:MyTimer3
+" -- VARIABLES {{{2
+" original, claro, escuro, dessaturado, saturado, tomate
+let g:colors.colors.terracotta  = ['#e2725b'. '#edab9e'. '#ca4023'. '#d17d6b'. '#f2664a'. '#ff6347']
 " -- NOTE {{{2
 " -------- notes {{{3
 "  TODO:

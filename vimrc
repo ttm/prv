@@ -43,6 +43,8 @@ let g:prv.leaders.other = ["<c-h>", "<c-j>", "<c-k>"]
 " created with $ xmodmap -pke > aux/PXmodmap
 " and swapping colon with semicolon
 nn <silent> <space>p; :cal system('xmodmap '.g:prv.paths.vim.'aux/PXmodmap')<cr>
+nn <silent> <space>p: :cal system('xmodmap '.g:prv.paths.vim.'aux/PXmodmap2')<cr>
+" can I leave only the chars needed to swap? e.g. only ; with :?
 
 pa aa
 
