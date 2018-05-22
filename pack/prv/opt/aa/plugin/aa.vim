@@ -37,12 +37,12 @@ let g:maplocalleader = ' '
 nn <leader>a :A 
 nn <leader>A :exec "vs " . g:aa.paths.shouts<CR>Go<ESC>o<ESC>:.!date<CR>:put=g:aa.set.sep<CR>kki
 " for accessing the aashouts.txt:
-nn <leader>e :exec "e " . g:aa.paths.shouts<CR>
+nn <leader>e :exec "e " . g:aa.paths.shouts<CR>G
 nn <leader>v :exec "vs " . g:aa.paths.shouts<CR>G
-nn <leader>t :exec "tabe " . g:aa.paths.shouts<CR>
+nn <leader>t :exec "tabe " . g:aa.paths.shouts<CR>G
 " for the time since last shout:
+nn <leader>t :ec system('date')[:-2]<CR>
 nn <leader><localleader>t :ec 'minutes since last shout: ' . ATimeSinceLastShout()<CR>
-nn <leader>T :ec system('date')[:-2]<CR>
 " -- for sessions {{{3
 " starting a session:
 nn <leader>s :S 15 8
@@ -58,15 +58,14 @@ nn <leader>r :cal ASessionRegisterShoutGiven()<CR>
 nn <leader>R :cal ASessionRegisterShoutWanted()<CR>
 nn <leader>u :cal AUpdateColorColumns()<CR>
 " -- hacking {{{3
-nn <leader>h :exec 'vs ' . g:aa.paths.aux<CR>
-nn <leader>H :help aa<CR>`"
-nn <leader><localleader>H :exec 'vs ' . g:aa.paths.aascript<CR>
-nn <leader><localleader>h :exec 'vs ' . g:aa.paths.aaiscript<CR>
-nn <leader>h<localleader><localleader> :PRVRedir v ec g:aa
+nn <leader>H :exec 'vs ' . g:aa.paths.aux<CR>
+nn <leader>h :exec 'vs ' . g:aa.paths.aascript<CR>
+nn <leader><localleader> :PRedir v ec g:aa
 " this command does not find tags from other help files:
 " nn <leader>H :exec 'vs ' . g:aa.paths.aadoc<CR>
 " thus we use:
-nn <leader>m :exe 'PRVRedir v :map '.g:prv.leaders.aa[0]<CR>:sort />A\zs/<CR>
+" NOT WORKING TTM :todo:
+nn <leader>m :exe "vnew :map \<Space>a"<CR>:sort />A\zs/<CR>
 " -- general {{{3
 nn <leader>i :ec AInfo()<CR>
 nn <leader> :ec AInfo()<CR>
@@ -104,6 +103,13 @@ endf
 fu! AStartSession(...) " {{{3
   " default duration = 15, ntimes = 8
   " message = 'Ding Dong Ding Dong'
+  if AIsSessionOn()
+    cal timer_stopall()
+    let g:aa.events.session.shouts_expected = 0
+    let g:aa.events.session.shouts_requested = 1
+    let g:aa.events.session.nslots = 0
+    ASessionReceiveMsg()
+  en
   cal AInit()
   if a:0 > 0
     let dur = str2float(a:.1)
@@ -115,7 +121,6 @@ fu! AStartSession(...) " {{{3
   el
     let nslots = 15
   en
-
   let l:started = strftime("%c")
   let l:started_seconds = localtime()
   let g:aa.events.session = {'dur': l:dur, 'nslots': l:nslots, 'shouts_requested': 0, 'shouts_expected': 0, 'shouts_sent': 0, 'last_shout': {}, 'started': [l:started, l:started_seconds]}
@@ -366,7 +371,7 @@ fu! AMkVoice() " {{{3
   retu l:epk
 endf
 fu! ASessionReceiveMsg() " {{{3
-  if exists("g:aa.events.session.on") && g:aa.events.session.shouts_expected > 0
+  if AIsSessionOn() && g:aa.events.session.shouts_expected > 0
     let g:aa.events.session.shouts_expected -= 1
     let g:aa.events.session.shouts_sent += 1
     cal AUpdateColorColumns()

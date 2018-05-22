@@ -21,7 +21,7 @@ Ter Mai 15 22:01:26 -03 2018
 
 ./rec/Machado as, r++, h++
 
-./rec/Antunes as, h++ (:first: compilation)
+./rec/Antunes as, h++ (:first: self-selfcompilation)
 
 
 ~~ ongoing ~~
@@ -34,7 +34,9 @@ date: ??
 
 ./rec/Bez
 
-./rec/Antunes (:second: compilation)
+./rec/Antunes (:second: self-compilation)
+
+./rec/Glerm (:second: self-compilation)
 
 ./rec/Pataca
 
