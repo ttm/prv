@@ -47,6 +47,7 @@ nn <leader><localleader>t :ec 'minutes since last shout: ' . ATimeSinceLastShout
 " starting a session:
 nn <leader>s :S 15 8
 nn <leader>S :S 5 24
+nn <leader><localleader>s :S 30 4
 " accessing aasessions.txt:
 nn <leader>V :exec "vs " . g:aa.paths.sessions<CR>G
 " for info on the session (time and left in the slot, іs session on): 
