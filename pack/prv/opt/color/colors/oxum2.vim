@@ -6,7 +6,7 @@ hi clear
 if exists("syntax_on")
   syntax reset
 endif
-let g:colors_name = "oxum"
+let g:colors_name = "oxum2"
 
 hi Normal         guibg=#a81b19         guifg=#ffd700
 hi NonText        guibg=#a81b19         guifg=#e6b7cb
@@ -38,7 +38,7 @@ hi StatusLineNC   guibg=#a81b19         guifg=#e6b7cb
 hi StatusLine     guibg=#a81b19         guifg=#e6b7cb
 hi VertSplit      guibg=#a81b19         guifg=#e6b7cb
 
-hi Visual         guibg=#a81b19        guifg=#e6b7cb
+hi Visual         guibg=blue        guifg=#e6b7cb
 
 hi DiffChange     guibg=#a81b19         guifg=#e6b7cb
 hi DiffText       guibg=#a81b19         guifg=#e6b7cb

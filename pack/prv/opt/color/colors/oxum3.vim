@@ -6,7 +6,7 @@ hi clear
 if exists("syntax_on")
   syntax reset
 endif
-let g:colors_name = "oxum"
+let g:colors_name = "oxum3"
 
 hi Normal         guibg=#ffd700         guifg=#a81b19
 hi NonText        guibg=#ffd700         guifg=#e6b7cb
