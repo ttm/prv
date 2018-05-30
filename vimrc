@@ -46,6 +46,8 @@ nn <silent> <space>p: :cal system('xmodmap '.g:prv.paths.vim.'aux/PXmodmap2')<cr
 " i should make this through the system.
 
 pa aa
+pa wiki
+pa color
 
 " {{{1 final commands
 colo blue
