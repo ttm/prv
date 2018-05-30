@@ -351,7 +351,7 @@ fu! ASay() " {{{3
     let pmsg = []
     cal add(l:pmsg, 'A.A.: finished slot: ' . (g:aa.events.session.shouts_requested-1)
           \ . 'of ' . g:aa.events.session.nslots)
-    cal add(l:pmsg, 'A.A.: 1 more shout expected. Total of ' . g:aa.events.session.shouts_expected)
+    cal add(l:pmsg, 'A.A.: ' . g:aa.events.session.shouts_expected . ' shouts expected')
     if g:aa.set.saytime == 1
       cal add(l:pmsg, 'A.A.: current time and day is: ' . strftime("%T, %B, %d"))
     en

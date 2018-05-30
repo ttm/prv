@@ -17,6 +17,34 @@ questions:
     see Vim.js
   - emscripten (droped for now):
     
+
+~~ flask guide ~~
+
+install with pip
+
+export the mode (auto-reload and debug) and app:
+$ export FLASK_APP=hello.py
+$ export FLASK_ENV=development
+
+and start the server with
+$ flask run
+
+a minimalistic hello.py is in
+  repos/aavo/www/mflask.py
+
+-- host=0.0.0.0 to make it available to the network
+
+Jinja: http://jinja.pocoo.org/docs/2.10/templates/
+
+ request, session and g [1] objects as well as the get_flashed_messages() functions? :todo:
+
+ template inheritance: http://flask.pocoo.org/docs/1.0/patterns/templateinheritance/#template-inheritance :todo:
+
+ make my homepage with flask (upload to icmc machine, maybe also to heroku)
+    pages have humbering as in selfcomp,
+      and a widget to regulate syntax highlighting
+      using jColor in the background
+
     
 
 
