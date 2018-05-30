@@ -1,0 +1,23 @@
+Analítica Audiovisual
+
+aavo
+
+~ aaw: software web ~
+
+repos/aavo/www
+
+inicial:
+  drop down menu que abrem canvas
+    d3, ccnetviz, data, notes
+
+questions:
+  - every canvas should have a sonify menu
+  - every canvas should have a drop down menu
+  - how integrated to Vim should (droped):
+    see Vim.js
+  - emscripten (droped for now):
+    
+    
+
+
+
