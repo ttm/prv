@@ -1,5 +1,167 @@
 Visualization Analysis & Design, 2014
 
+~ preface ~
+
+several ways to crosscut vis material:
+- cog sciences, from which re draw techniques
+- hci for user studies and centered design
+- problem domain (biology, soft eng, etc)
+- techniques: focus+contex, overview/detail, volume rendering, stat graphics.
+- evaluation
+
+~~ existing books ~~
+tufte: static printed images for presentation
+last 20 years: interactivity and exploration of the unknown
+'envisioning information': favorite of munzner
+
+ware: thorough vis from lens of perception
+discusses design, but no synthesis of vis
+
+Wilkinson's Grammar of Graphics (05)
+Few's Show me the Numbers (more newba)
+
+Ward (data visualization): bottom up from algorithms,
+opposed to munzer's top down
+Telea: also algorithms focus.
+
+~~ audience ~~
+
+focus on principles and design choices rather than algorithms.
+
+unifies infovis, scivis, vis analytics,
+interleaving data transf and analysis with interactive visual exploration
+
+~~ who's who ~~
+I, you, they, we, vis.
+
+~~ structure ~~
+
+~~ what's not in this book ~~
+has not: the domain situation and algorithm levels
+
+has: 'design space of possible idioms'
+
+~~ ack ~~
+
+============
+
+cap 1 - what's vis, and why do it?
+
+~ 1.1 the big picture ~
+
+visualization - (provides) -> visual representation - (data) -> dataset
+                                (purpose) -> task performance
+
+space of vis idiom
+what is a vis idiom?
+
+limitations and potentialities of:
+  computer, human, display
+
+~ 1.2 why have a human in the loop ~
+vis systems for augmenting human capabilities
+
+transitional uses
+
+long-term uses:
+to obtain, verify, and present hypotheses
+
+~~ 1.3 why have a computer in the loop ~~
+large datasets drawings are not feasible by hand
+
+~~ 1.4 why use an external representation ~~
+external representations augment human capacity (internal cognition and memory)
+aka external memory
+offloads internal cognition and memory to the perceptual syste.
+
+~~ 1.5 why depend of vision ~~
+vis -> visual system for comunication
+vis is well charachterized and suitable for transmitting info
+
+preconcious and concious processes
+
+critic to sound is not solid: harmony is an instantaneous process which might be compared
+to visualization of images.
+melody, music, or time-changing sounds might be compared to animation.
+:errata:
+
+~~ 1.6 why show the data in detail ~~
+(stat) summarization is often misleading
+
+~~ 1.7 why use interactivity ~~
+complexity
+connecting alternative, multilevel views of the data
+
+~~ 1.8 why is the vis idiom design space huge ~~
+vis idiom -> a distinct approach to creating and manipulating vis representations.
+:def:
+
+design space of pictures is augmented with interaction
+
+~~ 1.9 why focus on tasks ~~
+they demmand specific visualizations
+
+their abstraction yields patterns, e.g.
+presentation, discovery, enjoyment, produce more data.
+generate, confirm, present hypotheses.
+
+~~ 1.10 why focus on effectiveness ~~
+corollary to the definition of vis as having the goal of  supporting tasks.
+
+effective, not only beautiful
+
+choices on what to emphasize
+
+~~ 1.11 why are most designs ineffective ~~
+primeiro paragrafo: vira modelar com fuzzy
+e os criterios de cor, tamanho etc para um caso especifico.
+:todo:
+
+satisfy rather than optimize
+
+trade-offs in the design space
+
+~~ 1.12 why is validation difficult ~~
+many ways to approach a goal being met.
+
+benchmark data
+
+~~ 1.13 why are there resource limitations ~~
+comp, human cog and perc, display capacities
+
+processing time and memory management
+
+memory and attention extremely limited
+preattentive processing power and limitations
+change blindness
+
+information, graphic density
+aka data-ink ratio:
+  - the amout information encoded VS unused space
+
+balance in the info dens continuum is the goal
+of idiom design choices
+
+~~ 1.14 why analyse ~~
+the book imposes structure in the design space 
+
+       | why - task
+vis    | what - data
+       | how - idiom
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ====
 cap 10 - map color and other channels
 
