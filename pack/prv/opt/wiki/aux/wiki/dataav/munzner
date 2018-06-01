@@ -145,10 +145,53 @@ of idiom design choices
 ~~ 1.14 why analyse ~~
 the book imposes structure in the design space 
 
-       | why - task
+       | why - task (ends)
 vis    | what - data
-       | how - idiom
+       | how - idiom (means)
 
+'instance' of analysis trios (why, what, how)
+
+instance vs chained instances (expresses dependencies) of analysis of vis tools
+(simple  ,  complex       tools)
+
+vis tool has input data
+vis tool might have output data
+
+~~ 1.15 further reading ~~
+
+external representations in problem solving
+
+Why a diagram is (sometimes) worth ten thousand words
+(Larking and Simon 87)
+
+show the data in detail: Ascombre quartet 73, Cleveland, McGill 84.
+
+vis design space -> based on Munzner paper on methodology of design studies,
+  addresses progressing from a loose/fuzzy to a crisp(y) understanding
+  of the user's requirements
+
+resource limitations: Ware, change blindness (Simons 00),
+information density (Bertin 67), data-ink ratio (tufte 83)
+
+
+=================
+
+cap 2 - what: data abstraction
+
+
+
+
+
+tasks (means/idiom, ends/task):
+  - sort
+  - take measures
+  - detect outliers
+  - clusterize / detect communities
+  - train CI
+  - apply CI (attribute values/classes to items, create items/data)
+  - quantify differences
+  - fit curve / distribution
+  - audiovisualize (map data to audiovisual cues)
 
 
 
