@@ -306,11 +306,32 @@ Sex Fev 16 13:08:45 -02 2018
 ./various/daily stuff
 
 == now ==
+- selfcomp
+- Caio
+- Yda
+- MMN
+- EMN (alan, alneu, cristina)
+- bots
+- prv
+- data audiovis
+- communications OK
+- explorar ssh via Vim p fazer + coisa no servidor da USP.
+  * Mirror selfcomp: ICMC, github.io, heroku, tudo flask
+  * arrumar formatacao e cores, com jquerycolor, pillow, e flask
+    - comecar por traducao do arquivo txt p html simples com linhas
+    - adicionar cor
+    - adicionar widgets p mudar entre colorschemes diferentes
+  - release wiki/selfcomp/rel/002 and screenscast selfcomp
+
+== now ==
+
+== now ==
 * msg bento
 * colorschemes
 * release and screenscast selfcomp
-* communications
+* communications OK
 * rest of prv
+* revisao nuvem
 
 * artigo alan
 * soundscape
