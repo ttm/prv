@@ -2,6 +2,20 @@
 
 ~~ tracks ~~
 
+~~ of the :second: self-compilation ~~
+
+https://pjreddie.com/darknet/yolo
+  $ git clone https://github.com/pjreddie/darknet
+  $ cd darknet
+  $ make
+  $ wget https://pjreddie.com/media/files/yolov3.weights
+
+  $ wget https://scontent.fqsc1-1.fna.fbcdn.net/v/t1.0-9/14202587_10154591976194430_5667988242322618668_n.jpg?_nc_cat=0&_nc_eui2=AeHExAwMv6fCHrdGpbZ0WnapNvoCSN3uZR4ZwA70-Af14as7Km08QTZh6Vg0GkQG-dmyfQkcqIdN6BUOxG8IAB123EohlccHyu-W3NtQ0cyTGQ&oh=4265de9cfdc50d1bb566ce32ea6d3339&oe=5B846BEB data/img.jpg
+  $ ./darknet detect cfg/yolov3.cfg yolov3.weights data/dog.jpg
+  $ ./darknet detect cfg/yolov3.cfg yolov3.weights data/img.jpg
+  $ wget http://s2.glbimg.com/RYs9wpk7XtUjqLz5dhtINWfBRJ0=/smart/e.glbimg.com/og/ed/f/original/2017/06/30/banco3.jpg
+
+
 ~~~ of the :first: self-compilation ~~~
 
 h++:
@@ -31,19 +45,6 @@ h++:
 
 need to hear again and comment 6) and 7).
 
-
-~~ of the :second: self-compilation ~~
-
-https://pjreddie.com/darknet/yolo
-  $ git clone https://github.com/pjreddie/darknet
-  $ cd darknet
-  $ make
-  $ wget https://pjreddie.com/media/files/yolov3.weights
-
-  $ wget https://scontent.fqsc1-1.fna.fbcdn.net/v/t1.0-9/14202587_10154591976194430_5667988242322618668_n.jpg?_nc_cat=0&_nc_eui2=AeHExAwMv6fCHrdGpbZ0WnapNvoCSN3uZR4ZwA70-Af14as7Km08QTZh6Vg0GkQG-dmyfQkcqIdN6BUOxG8IAB123EohlccHyu-W3NtQ0cyTGQ&oh=4265de9cfdc50d1bb566ce32ea6d3339&oe=5B846BEB data/img.jpg
-  $ ./darknet detect cfg/yolov3.cfg yolov3.weights data/dog.jpg
-  $ ./darknet detect cfg/yolov3.cfg yolov3.weights data/img.jpg
-  $ wget http://s2.glbimg.com/RYs9wpk7XtUjqLz5dhtINWfBRJ0=/smart/e.glbimg.com/og/ed/f/original/2017/06/30/banco3.jpg
 
 ~~ about Glerm ~~
 

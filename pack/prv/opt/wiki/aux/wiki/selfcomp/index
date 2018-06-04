@@ -1,4 +1,4 @@
-~ Records v001.4b ~
+~ selfcomp v002.1b ~
 
 :ativos: Audio, Text, Image, Video, quasi/semi-finished (Ok), Surprise/other
 
@@ -9,36 +9,45 @@
 
 ~~ (semi-)finished ~~
 
+:release ./rel/002:
+Dom Jun  3 23:17:20 -03 2018
+./rec/Barros
+
+./rec/Antunes (:second: self-compilation)
+
+./rec/Glerm (:second: self-compilation)
+
+./rec/Bueno
+
+./rec/Bagé
+
+./rec/Manuelle
+
+
 :release ./rel/001:
 Ter Mai 15 22:01:26 -03 2018
-./rec/Gularte a
+./rec/Gularte a,
 
-./rec/Martigli atos, r++
+./rec/Martigli atos, r++,
 
-./rec/Glerm atos, h++
+./rec/Glerm atos, h++,
 
-./rec/Basbaum as, h++, r++
+./rec/Basbaum as, h++, r++,
 
-./rec/Machado as, r++, h++
+./rec/Machado as, r++, h++,
 
-./rec/Antunes as, h++ (:first: self-selfcompilation)
+./rec/Antunes as, h++, (:first: self-compilation)
 
 
 ~~ ongoing ~~
 
 :release ? ./rel/002 -3:
 date: ??
-./rec/Barros
-
 ./rec/Sue
 
 ./rec/Sampaio
 
 ./rec/Bez
-
-./rec/Antunes (:second: self-compilation)
-
-./rec/Glerm (:second: self-compilation)
 
 ./rec/Pataca
 
@@ -70,9 +79,8 @@ date: ??
 
 ./rec/Oliveira
 
-./rec/Bueno
-
 ./rec/Dinha
+
 
 ~~ planned ~~
 
@@ -176,6 +184,10 @@ date: ??
 
 ./rec/Davisaum i
 
+./rec/Markun (pedro)
+
+./rec/Satyan (aline)
+
 ./rec/Boaro
 
 ./rec/Gabriel
@@ -187,12 +199,6 @@ date: ??
 ./rec/Lappicy
 
 ./rec/Zampronha
-
-./rec/Markun (pedro)
-
-./rec/Satyan (aline)
-
-./rec/Manuelle
 
 
 ~~~ other ~~~
@@ -211,6 +217,7 @@ date: ??
 
 
 ~~~ Licence ~~~
+
 :Public Domain:,
 Dom Mai 13 12:11:03 -03 2018
 
