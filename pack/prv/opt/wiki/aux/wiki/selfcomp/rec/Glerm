@@ -4,16 +4,27 @@
 
 ~~ of the :second: self-compilation ~~
 
-https://pjreddie.com/darknet/yolo
-  $ git clone https://github.com/pjreddie/darknet
-  $ cd darknet
-  $ make
-  $ wget https://pjreddie.com/media/files/yolov3.weights
+album title:
+    Github - não se venda!
 
-  $ wget https://scontent.fqsc1-1.fna.fbcdn.net/v/t1.0-9/14202587_10154591976194430_5667988242322618668_n.jpg?_nc_cat=0&_nc_eui2=AeHExAwMv6fCHrdGpbZ0WnapNvoCSN3uZR4ZwA70-Af14as7Km08QTZh6Vg0GkQG-dmyfQkcqIdN6BUOxG8IAB123EohlccHyu-W3NtQ0cyTGQ&oh=4265de9cfdc50d1bb566ce32ea6d3339&oe=5B846BEB data/img.jpg
-  $ ./darknet detect cfg/yolov3.cfg yolov3.weights data/dog.jpg
-  $ ./darknet detect cfg/yolov3.cfg yolov3.weights data/img.jpg
-  $ wget http://s2.glbimg.com/RYs9wpk7XtUjqLz5dhtINWfBRJ0=/smart/e.glbimg.com/og/ed/f/original/2017/06/30/banco3.jpg
+1) New Riddle of Induction
+  https://soundcloud.com/organismo/the-new-riddle-of-induction
+    too good to be true.
+    hahaha, i see swans
+
+2) O que vem ao Caso
+  https://soundcloud.com/organismo/o-que-vem-ao-caso-n1
+    16s of nothing to say maybe or
+    beautiful Webern-like simple sonic cristal
+
+3) Mamelucovich e o Subtropicalismo Tardio
+  http://www.estudiolivre.org/repo/6039/mamelucovich.ogg
+    mixed soundscape and traditional music
+    electronic and natural sounds
+    speech against noises or all non-voiced sounds
+    rhythm and fluidity
+    understandable words and not
+    'crime maior q marketing cultural'
 
 
 ~~~ of the :first: self-compilation ~~~
