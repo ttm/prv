@@ -122,6 +122,7 @@ fu! CColor() " {{{3
   endw
   cal CCarryAction(g:action, g:sname)
 endf
+let g:color = {}
 let g:color.actions = {'y': 'yank', 'a': 'apply', 'c': 'change', 'L': 'luck',
       \'s': 'stack', 'l': 'load', 'k': 'keep', 'i': 'init', 'h': 'hack', 'H': 'help'}
 let g:color.snames = {'n': 'Normal', 'tt': 'TabLine', 'ts': 'TabLineSel',
@@ -140,11 +141,11 @@ fu! CInit() " {{{3
   " default, temporary and buffer in s:dcoulorsd, s:tcolorsd and s:colors
   let s:colors = {}
   cal GetColors(0)
-  ec '===> buffer color:' s:colors['buffer']
+  " ec '===> buffer color:' s:colors['buffer']
   cal GetColors(1)
-  ec ':::> temp color:' s:colors['temp']
+  " ec ':::> temp color:' s:colors['temp']
   cal GetColors(2)
-  ec '---> default color:' s:colors['default']
+  " ec '---> default color:' s:colors['default']
   " initialize mappings
   " make named_colors0 and named_colors with the name of the colors:
   " 0: from documentation :h gui-colors
@@ -159,8 +160,8 @@ fu! CInit() " {{{3
   " and g:colors_all_ (new) global variables
   cal GetAll()
   cal StandardColorSchemes()
-  ec "type \\x to change color under cursor"
-  ec " should be integrated to the mode <C-\ c>"
+  " ec "type \\x to change color under cursor"
+  " ec " should be integrated to the mode <C-\ c>"
   let g:color = {'initialized': 1}
 endf 
 fu! CChange() " {{{3
@@ -418,12 +419,12 @@ fu! GetColors(which) " {{{3
   if has_key(s:named_colors, tolower(fg))
     let fg_named = fg
     let fg = s:named_colors[tolower(fg)]['hex']
-    ec fg_named
+    " ec fg_named
   en
   if fg[0] != '#'
     let fg = "#" . fg
   en
-  ec'fg:' fg
+  " ec 'fg:' fg
   let rgb = [fg[1:2], fg[3:4], fg[5:6]]
   let rgb_ = map(rgb, 'str2nr(v:val, "16")')
 
@@ -438,12 +439,12 @@ fu! GetColors(which) " {{{3
   if has_key(s:named_colors, tolower(bg))
     let bg_named = bg
     let bg = s:named_colors[tolower(bg)]['hex']
-    ecbg_named
+    " ec bg_named
   en
   if bg[0] != '#'
     let bg = "#" . bg
   en
-  ec 'bg:' bg
+  " ec 'bg:' bg
   let rgbb = [bg[1:2], bg[3:4], bg[5:6]]
   let rgbb_ = map(rgbb, 'str2nr(v:val, "16")')
   " simple dictionary
@@ -687,7 +688,7 @@ fu! StandardColors() " {{{3
   cal clearmatches()
   new
   setl buftype=nofile bufhidden=hide noswapfile
-  0read $VIMRUNTIME/rgb.txt
+  sil 0read $VIMRUNTIME/rgb.txt
   " - Delete lines where color name is not a single word (duplicates).
   " - Delete "grey" lines (duplicate "gray"; there are a few more "gray").
   "   TTM ??
@@ -1119,7 +1120,7 @@ endfu " }}}
 " let s:pattern = s:MyTimer3
 " -- VARIABLES {{{2
 " original, claro, escuro, dessaturado, saturado, tomate
-let g:colors.colors.terracotta  = ['#e2725b'. '#edab9e'. '#ca4023'. '#d17d6b'. '#f2664a'. '#ff6347']
+let g:color.colors = {'terracotta' : ['#e2725b'. '#edab9e'. '#ca4023'. '#d17d6b'. '#f2664a'. '#ff6347']}
 " -- NOTE {{{2
 " -------- notes {{{3
 "  TODO:

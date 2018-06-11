@@ -1,4 +1,4 @@
-~ selfcomp v002.1b ~
+~ selfcomp v002.3b ~
 
 :ativos: Audio, Text, Image, Video, quasi/semi-finished (Ok), Surprise/other
 
@@ -11,17 +11,17 @@
 
 :release ./rel/002:
 Dom Jun  3 23:17:20 -03 2018
-./rec/Barros
+./rec/Barros as, h++,
 
-./rec/Antunes (:second: self-compilation)
+./rec/Antunes avs, h++, r++, (:second: self-compilation)
 
-./rec/Glerm (:second: self-compilation)
+./rec/Glerm as, h++, r++, (:second: self-compilation)
 
-./rec/Bueno
+./rec/Bueno s, r++,
 
-./rec/Bagé
+./rec/Bagé atis, r++,
 
-./rec/Manuelle
+./rec/Manuelle t, r++, h++,
 
 
 :release ./rel/001:

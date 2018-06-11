@@ -380,29 +380,34 @@ fu! PRVMkMappings(str) " {{{3
   if a:str =~# 'n' " {{{4 mappings in navigation with default keys (C-W navigation)
     " window navigation {{{5
     " normal mode
-    nn <C-H> <C-W><C-H>
-    nn <C-J> <C-W><C-J>
-    nn <C-K> <C-W><C-K>
-    nn <C-L> <C-W><C-L>
-    " insert mode
-    ino <silent> <C-H> <C-[><C-W><C-H><C-W>:exe mode()=='t' ? 'let g:prv.isinsert = 1' : "normal l"<CR><C-W>:star<CR>
-    ino <silent> <C-J> <C-[><C-W><C-J><C-W>:exe mode()=='t' ? 'let g:prv.isinsert = 1' : "normal l"<CR><C-W>:star<CR>
-    ino <silent> <C-K> <C-[><C-W><C-K><C-W>:exe mode()=='t' ? 'let g:prv.isinsert = 1' : "normal l"<CR><C-W>:star<CR>
-    ino <silent> <C-L> <C-[><C-W><C-L><C-W>:exe mode()=='t' ? 'let g:prv.isinsert = 1' : "normal l"<CR><C-W>:star<CR>
-    " command-line mode
-    cno <C-H> <C-E>'<C-B>let tempprv='<CR><C-W><C-H><C-W>:<C-R>=tempprv<CR>
-    cno <C-J> <C-E>'<C-B>let tempprv='<CR><C-W><C-J><C-W>:<C-R>=tempprv<CR>
-    cno <C-K> <C-E>'<C-B>let tempprv='<CR><C-W><C-K><C-W>:<C-R>=tempprv<CR>
-    cno <C-L> <C-E>'<C-B>let tempprv='<CR><C-W><C-L><C-W>:<C-R>=tempprv<CR>
-    " terminal-job mode
-    " tno <C-H> <C-W><C-H><C-W>:exe exists('g:prv.isinsert') ? 'startinsert' : ''<CR><C-O>:exe mode()=='t' ? '' : (exists('g:prv.isinsert') ? 'unl g:prv.isinsert' : '')<CR>
-    " tno <C-J> <C-W><C-J><C-W>:exe exists('g:prv.isinsert') ? 'startinsert' : ''<CR><C-O>:exe mode()=='t' ? '' : (exists('g:prv.isinsert') ? 'unl g:prv.isinsert' : '')<CR>
-    " tno <C-K> <C-W><C-K><C-W>:exe exists('g:prv.isinsert') ? 'startinsert' : ''<CR><C-O>:exe mode()=='t' ? '' : (exists('g:prv.isinsert') ? 'unl g:prv.isinsert' : '')<CR>
-    " tno <C-L> <C-W><C-L><C-W>:exe exists('g:prv.isinsert') ? 'startinsert' : ''<CR><C-O>:exe mode()=='t' ? '' : (exists('g:prv.isinsert') ? 'unl g:prv.isinsert' : '')<CR>
-    tno <silent> <C-H> <C-W>:cal PRVTerminalMove('h')<CR>
-    tno <silent> <C-J> <C-W>:cal PRVTerminalMove('j')<CR>
-    tno <silent> <C-K> <C-W>:cal PRVTerminalMove('k')<CR>
-    tno <silent> <C-L> <C-W>:cal PRVTerminalMove('l')<CR>
+    let g:mapleader = ' ' 
+    " nn <C-H> <C-W><C-H>
+    " nn <C-J> <C-W><C-J>
+    " nn <C-K> <C-W><C-K>
+    " nn <C-L> <C-W><C-L>
+    nn <leader>h <C-W><C-H>
+    nn <leader>j <C-W><C-J>
+    nn <leader>k <C-W><C-K>
+    nn <leader>l <C-W><C-L>
+    " " insert mode
+    " ino <silent> <C-H> <C-[><C-W><C-H><C-W>:exe mode()=='t' ? 'let g:prv.isinsert = 1' : "normal l"<CR><C-W>:star<CR>
+    " ino <silent> <C-J> <C-[><C-W><C-J><C-W>:exe mode()=='t' ? 'let g:prv.isinsert = 1' : "normal l"<CR><C-W>:star<CR>
+    " ino <silent> <C-K> <C-[><C-W><C-K><C-W>:exe mode()=='t' ? 'let g:prv.isinsert = 1' : "normal l"<CR><C-W>:star<CR>
+    " ino <silent> <C-L> <C-[><C-W><C-L><C-W>:exe mode()=='t' ? 'let g:prv.isinsert = 1' : "normal l"<CR><C-W>:star<CR>
+    " " command-line mode
+    " cno <C-H> <C-E>'<C-B>let tempprv='<CR><C-W><C-H><C-W>:<C-R>=tempprv<CR>
+    " cno <C-J> <C-E>'<C-B>let tempprv='<CR><C-W><C-J><C-W>:<C-R>=tempprv<CR>
+    " cno <C-K> <C-E>'<C-B>let tempprv='<CR><C-W><C-K><C-W>:<C-R>=tempprv<CR>
+    " cno <C-L> <C-E>'<C-B>let tempprv='<CR><C-W><C-L><C-W>:<C-R>=tempprv<CR>
+    " " terminal-job mode
+    " " tno <C-H> <C-W><C-H><C-W>:exe exists('g:prv.isinsert') ? 'startinsert' : ''<CR><C-O>:exe mode()=='t' ? '' : (exists('g:prv.isinsert') ? 'unl g:prv.isinsert' : '')<CR>
+    " " tno <C-J> <C-W><C-J><C-W>:exe exists('g:prv.isinsert') ? 'startinsert' : ''<CR><C-O>:exe mode()=='t' ? '' : (exists('g:prv.isinsert') ? 'unl g:prv.isinsert' : '')<CR>
+    " " tno <C-K> <C-W><C-K><C-W>:exe exists('g:prv.isinsert') ? 'startinsert' : ''<CR><C-O>:exe mode()=='t' ? '' : (exists('g:prv.isinsert') ? 'unl g:prv.isinsert' : '')<CR>
+    " " tno <C-L> <C-W><C-L><C-W>:exe exists('g:prv.isinsert') ? 'startinsert' : ''<CR><C-O>:exe mode()=='t' ? '' : (exists('g:prv.isinsert') ? 'unl g:prv.isinsert' : '')<CR>
+    " tno <silent> <C-H> <C-W>:cal PRVTerminalMove('h')<CR>
+    " tno <silent> <C-J> <C-W>:cal PRVTerminalMove('j')<CR>
+    " tno <silent> <C-K> <C-W>:cal PRVTerminalMove('k')<CR>
+    " tno <silent> <C-L> <C-W>:cal PRVTerminalMove('l')<CR>
     " tab navigation {{{5
     " no <C-N> :PRVMoveToTab('T')
     " no <C-P> :PRVMoveToTab('t')
@@ -651,7 +656,8 @@ fu! PRVMkMappings(str) " {{{3
 
   if a:str =~# 'a' " {{{4 auxleader
     let l:foo = g:mapleader
-    let g:mapleader = g:prvset.leaders.prv[2]
+    let g:mapleader = '\' 
+    " tg:prvset.leaders.prv[2]
     nn <leader>a :exec "normal li".nr2char(getchar())."\e"<CR>
     nn <leader>A  :cal InsertAfterAfter()<CR>
     nn <leader>f  :cal system("wmctrl -ir " . v:windowid . " -b toggle,fullscreen")<CR>

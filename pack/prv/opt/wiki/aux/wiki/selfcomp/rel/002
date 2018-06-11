@@ -5,7 +5,7 @@
 ../rec/Barros, Bernardo ↝↝↝↝↝ with a selection of
       acusmatic or experimental music, sonorities, discourses
 
-../rec/Antunes, Jorge ↪↪↪↪↪ handles us a :second: selfcomp
+../rec/Antunes, Jorge ↪↪↪↪↪ with a :second: selfcomp
       two pieces from 1972 and 1982. Check the piano and violin
 
 ../rec/Bagé, Roger ↣↣↣↣↣ multimedia selfcomp
@@ -14,11 +14,19 @@
 ../rec/Bueno, João ↬↬↬↬↬ scripts for 
       2 hacks in a terminal-matrix and a happy-birthday card
 
-../rec/Glerm Soares ↺↺↺↺↺ matches Antunes' album.
+../rec/Glerm Soares ↺↺↺↺↺ with a :second: selfcomp
       2 very small pieces and a ≈6 minutes one. Suave
 
 ../rec/Manuelle, Laila ⇶⇶⇶⇶⇶ yields philosophy,
-      an activist gradus ad Parnassum
+      an activism gradus ad Parnassum
+
+
+~~~ potential mirrors ~~~
+
+https://selfcomp.herokuapp.com/rel/002
+https://frozen-thicket-26216.herokuapp.com/rel/002
+http://selfcomp.github.io/rel/002
+http://rfabbri.vicg.icmc.usp.br/selfcomp/rel/002
 
 
 ~~ ../about ~~
@@ -30,12 +38,12 @@ i.e. collections of pieces made by the authors themselves
 
 ~~~ about selfcomp ~~~
 
-see ./001 and ../index
+see ../rel/001 and ../index
 
 and ../screencast if you want a video explanation
 
 
-~~~ about release ./002 ~~~
+~~~ about release ../rel/002 ~~~
 
 aka. the 'minimalist release',
 ../rel/002 has multimedia selfcomps:
@@ -63,7 +71,7 @@ given the nice materials sent by selfcompers
 
 ~~ updates ~~
 
-materials sent and being organized for selfcomp ./rel/002
+materials sent and being organized for selfcomp ../rel/002
 Seg Jun  4 02:45:09 -03 2018
 
 reviewing to post second release.

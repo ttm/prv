@@ -38,7 +38,7 @@ bots['pedro'] = b0t.baselineBotFromText(cdir + "pedro1.txt", 'Pedro')
 bots['joao'] = b0t.baselineBotFromText( cdir + "joao1.txt", 'João')
 bots['tiago'] = b0t.baselineBotFromText(cdir + "tiago.txt", 'Tiago')
 
-bots['srila'] = b0t.baselineBotFromText("/home/renato/.vim/pack/ttm/opt/aa/aux/aashouts.txt", 'Srila')
+bots['srila'] = b0t.baselineBotFromText("/home/renato/.vim/pack/prv/opt/aa/aux/aashouts", 'Srila')
 bots['zer@'] = b0t.baselineBotFromText( cdir + "butlerPreciado2.txt", 'Zer@')
 bots['laila'] = b0t.baselineBotFromText(cdir + "laila.txt", 'Laila Kaiabi Manuelle')
 
@@ -177,12 +177,14 @@ com! -nargs=1 -complete=tag_listfiles Bt ec BotTalk(<q-args>)
 
 " MAPPINGS: {{{1
 " -- MAIN {{{2
-nn BT :Bt 
-nn Bc :Bc<CR> 
-nn Bi :cal BotsInitialize()<CR>
-nn Be :exe 'e '.g:bot.paths.dialogs<CR>
-nn Bv :exe 'vs '.g:bot.paths.dialogs<CR>
-nn Bt :exe 'tabe '.g:bot.paths.dialogs<CR>
+let g:mapleader = ' b'
+let g:maplocalleader = ' '
+nn <leader><localleader>t :Bt 
+nn <leader>c :Bc<CR> 
+nn <leader>i :cal BotsInitialize()<CR>
+nn <leader>e :exe 'e '.g:bot.paths.dialogs<CR>
+nn <leader>v :exe 'vs '.g:bot.paths.dialogs<CR>
+nn <leader>t :exe 'tabe '.g:bot.paths.dialogs<CR>
 
 " LAST COMMANDS: {{{1
 " -- STTARTUP {{{2
@@ -190,4 +192,4 @@ if !exists('g:bot')
   cal BotsInitialize()
 en
 " -- MODELINE {{{2
-" vim:foldlevel=1:
+" vim:foldlevel=1:foldmethod=marker:

@@ -96,7 +96,7 @@ fu! AShout(msg) " {{{3
   cal ASessionReceiveMsg()
   let g:aa.events.shouts_count += 1
   if g:aa.set.bot
-    ec a:msg.' || '.BTalk(a:msg)
+    ec a:msg.' || '.BotTalk(a:msg)
   el
     ec a:msg
   en
@@ -286,7 +286,7 @@ fu! AUpdateColorColumns() " {{{
 endf
 fu! AInitVars(...) " {{{3
   if a:0 > 0 || !exists('g:aa')
-    let g:aa = { 'set': {'say': 1, 'saytime': 0, 'bot': 0},
+    let g:aa = { 'set': {'say': 1, 'saytime': 0, 'bot': 1},
           \'timers': [], 'paths': {}, 'events': {} }
     let g:aa.note = 'AA stuff should be kept in files. Keep this dictionary minimal.'
 
@@ -401,4 +401,4 @@ endf
 " Todo look for chatter bot in vim
 " -- final commands and file settings {{{3
 cal AInit()
-" vim:foldlevel=2:
+" vim:foldlevel=2:foldmethod=marker:
