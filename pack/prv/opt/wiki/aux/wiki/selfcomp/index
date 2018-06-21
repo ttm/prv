@@ -41,8 +41,11 @@ Ter Mai 15 22:01:26 -03 2018
 
 ~~ ongoing ~~
 
-:release ? ./rel/002 -3:
+:release ? ./rel/003 -3:
 date: ??
+
+./rec/Tognon
+
 ./rec/Sue
 
 ./rec/Sampaio
@@ -197,6 +200,8 @@ date: ??
 ./rec/Svab
 
 ./rec/Lappicy
+
+./rec/Manse
 
 ./rec/Zampronha
 
