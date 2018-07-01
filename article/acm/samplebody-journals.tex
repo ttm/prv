@@ -2,14 +2,14 @@
 Toki Pona (TP) is a minimalist conlang (constructed language)
 with only 124 words (120 without the synonyms).
 Therefore, the concepts are usually very general and different,
-and, without context, the words are rarely related through
+and, without context, the words are not frequently related through
 meronymy and hyponymy.
 Such a linguistic setting is desired because of the simplicity
-which entails easier e.g. learning and tool making.
+which entails facilitated e.g. learning and tool making.
 Another reason why the minimalist language design is compelling
 is the study and harnessing of the strong and weak forms of
 the Sapir-Whorf hypothesis (linguistic relativity),
-i.e. that language influences or dictates thought
+i.e. that language dictates or at least influences thought
 and world experience~\cite{sapWho}.
 Accordingly, one uses a conlang as a thinking tool (or platform)
 or to make experiments about the influence language has on
@@ -17,36 +17,35 @@ the thoughts of the `speaker' (also writer and reader).
 Toki Pona is often described as a tool to meditate,
 to simplify the thinking processes, and as a way to modify
 the mood and impressions about the world.~\cite{tpLang,kama,tp3,tp4}
-In~\cite{interview}, Sonja Lang (the creator of Toki Pona),
+In~\cite{interview}, Sonja Lang (the creator of TP),
 describes that she has seen the language been used successfully
 in the context of management, creation of texts, legal texts,
 etc.
 
-In this article, we present a conceptual overview of the language,
+This article provides a conceptual overview of the language,
 which is fit both to the newcomer and to the expert
 for being considerably different
-from what we found in the literature~\cite{tpLang,kama,memrise},
-with emphasis on simplicity and flexibility.
-We also present novel software routines for analysis, synthesis,
+from what was found in the literature~\cite{tpLang,kama,memrise},
+here with emphasis on simplicity and flexibility.
+Novel software routines for analysis, synthesis,
 syntax highlighting, and the achievement of a tentative TP
-Wordnet~\cite{wordnet}.
+Wordnet~\cite{wordnet} are also herein presented.
 
 Next subsections hold a description of the general resources available,
 a historical note, and some words about natural and constructed languages.
-Section~\ref{basics} describes TP's phonology and syntax.
+Section~\ref{basics} describes the TP phonology and syntax.
 Section~\ref{hacks} presents the software routines we made available
 and immediate results, such as listings and statistics of words,
 poems and short stories, coloring schemes, and preliminary TP Wordnet
 versions.
 Conclusions and further work are in Section~\ref{conc}.
-Appendix~\ref{mytoki} holds considerations about my usage of Toki Pona,
+Appendix~\ref{mytoki} holds considerations about the author's
+usage of Toki Pona,
 with thoughts about rule breaking and potentially new conlangs.
 Appendix~\ref{ftp} holds final words in Toki Pona.
 
-% definition, historic, status (groups, speakers, etc).
-
 \subsection{Resources on Toki Pona}
-One might organize current resources for the Toki Pona
+One might categorize current resources for the Toki Pona
 language in: references and learning material, corpus,
 websites, interaction groups
 (where users talk a post texts and comments), and software gadgets.
@@ -139,7 +138,8 @@ There are standard guidelines for pronunciation,
 but the language allows for considerable allophonic
 variation.
 For example, /p t k s l/ might be pronounced
-[p t k s l] or [b d g z \textipa{\!R}].
+% [p t k s l] or [b d g z !R].
+[p t k s l] or [b d g z \textipa{\!R}].% ſ].
 Especially for poetry, one might consider
 j and w to be vowels
 (e.g. j as 'i' and w as 'u').
@@ -534,17 +534,17 @@ and by employing stylistic outlines for poems.
   \end{subfigure}\\\vspace{0.3cm}
   \begin{subfigure}{.9\textwidth}
     \centering
-        \includegraphics[width=1.2\linewidth]{figs/sentence_}\vspace{-0.15cm}
+        \includegraphics[width=1\linewidth]{figs/sentence_}\vspace{-0.15cm}
           \caption{Synthesized sentence.}
             \label{fig:sfig2}
   \end{subfigure}\\\vspace{0.3cm}
   \begin{subfigure}{.8\textwidth}
     \centering
-        \includegraphics[width=1.2\linewidth]{figs/paragraph_}\vspace{-0.15cm}
+        \includegraphics[width=\linewidth]{figs/paragraph_}\vspace{-0.15cm}
           \caption{Synthesized paragraph.}
             \label{fig:sfig2}
   \end{subfigure}\\\vspace{0.3cm}
-  \begin{subfigure}{.7\textwidth}
+  \begin{subfigure}{.6\textwidth}
     \centering
         \includegraphics[width=.8\linewidth]{figs/poem_}\vspace{-0.15cm}
           \caption{Synthesized poem.}

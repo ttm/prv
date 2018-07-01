@@ -42,18 +42,18 @@ A minimalist constructed language (conlang)
 is useful for experiments and comfortable for making tools.
 The Toki Pona (TP) conlang is minimalist both in the vocabulary
 (with only 14 letters and 124 words)
-and in the $\approx10$ syntax rules.
+and in the about 10 syntax rules.
 The language is useful for being a used and somewhat established
 minimalist conlang with at least hundreds of fluent speakers.
-In this article, we describe current concepts and resources
+This document exposes current concepts and resources
 for TP,
-and make available Python scripted routines for
+and makes available Python scripted routines for
 the analysis of the language,
 the synthesis of texts, the specification of syntax highlighting
 schemes, and the achievement of a preliminary TP
-Wordnet~\cite{wordnet}.
-We focus on the analysis of the basic vocabulary,
-as corpus analyses were found~\cite{corpus}.
+Wordnet.
+Focus is on the analysis of the basic vocabulary,
+as corpus analyses were found.
 The synthesis is based on sentence templates,
 relates to context by keeping track of used words,
 and renders larger texts by using a fixed number of phonemes (e.g. for poems)
@@ -61,9 +61,9 @@ and number of sentences, words and letters (e.g. for paragraphs).
 Syntax highlighting 
 reflects morphosyntactic classes given in the official dictionary
 and different solutions are described and implemented
-in the well-established Vim text editor~\cite{vim}.
+in the well-established Vim text editor.
 The tentative TP Wordnet is made available in three forms that
-reflect the choices of the synsets related to each word.
+  of relations between synsets and word lemmas.
 In summary, this text holds potentially novel conceptualizations about,
 and tools and results in analyzing, synthesizing and syntax highlighting the
 TP language.
@@ -76,14 +76,14 @@ TP language.
 Toki Pona (TP) is a minimalist conlang (constructed language)
 with only 124 words (120 without the synonyms).
 Therefore, the concepts are usually very general and different,
-and, without context, the words are rarely related through
+and, without context, the words are not frequently related through
 meronymy and hyponymy.
 Such a linguistic setting is desired because of the simplicity
-which entails easier e.g. learning and tool making.
+which entails facilitated e.g. learning and tool making.
 Another reason why the minimalist language design is compelling
 is the study and harnessing of the strong and weak forms of
 the Sapir-Whorf hypothesis (linguistic relativity),
-i.e. that language influences or dictates thought
+i.e. that language dictates or at least influences thought
 and world experience~\cite{sapWho}.
 Accordingly, one uses a conlang as a thinking tool (or platform)
 or to make experiments about the influence language has on
@@ -91,36 +91,35 @@ the thoughts of the `speaker' (also writer and reader).
 Toki Pona is often described as a tool to meditate,
 to simplify the thinking processes, and as a way to modify
 the mood and impressions about the world.~\cite{tpLang,kama,tp3,tp4}
-In~\cite{interview}, Sonja Lang (the creator of Toki Pona),
+In~\cite{interview}, Sonja Lang (the creator of TP),
 describes that she has seen the language been used successfully
 in the context of management, creation of texts, legal texts,
 etc.
 
-In this article, we present a conceptual overview of the language,
+This article provides a conceptual overview of the language,
 which is fit both to the newcomer and to the expert
 for being considerably different
-from what we found in the literature~\cite{tpLang,kama,memrise},
-with emphasis on simplicity and flexibility.
-We also present novel software routines for analysis, synthesis,
+from what was found in the literature~\cite{tpLang,kama,memrise},
+here with emphasis on simplicity and flexibility.
+Novel software routines for analysis, synthesis,
 syntax highlighting, and the achievement of a tentative TP
-Wordnet~\cite{wordnet}.
+Wordnet~\cite{wordnet} are also herein presented.
 
 Next subsections hold a description of the general resources available,
 a historical note, and some words about natural and constructed languages.
-Section~\ref{basics} describes TP's phonology and syntax.
+Section~\ref{basics} describes the TP phonology and syntax.
 Section~\ref{hacks} presents the software routines we made available
 and immediate results, such as listings and statistics of words,
 poems and short stories, coloring schemes, and preliminary TP Wordnet
 versions.
 Conclusions and further work are in Section~\ref{conc}.
-Appendix~\ref{mytoki} holds considerations about my usage of Toki Pona,
+Appendix~\ref{mytoki} holds considerations about the author's
+usage of Toki Pona,
 with thoughts about rule breaking and potentially new conlangs.
 Appendix~\ref{ftp} holds final words in Toki Pona.
 
-% definition, historic, status (groups, speakers, etc).
-
 \subsection{Resources on Toki Pona}
-One might organize current resources for the Toki Pona
+One might categorize current resources for the Toki Pona
 language in: references and learning material, corpus,
 websites, interaction groups
 (where users talk a post texts and comments), and software gadgets.
