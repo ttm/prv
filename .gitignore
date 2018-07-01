@@ -17,3 +17,5 @@ tokipona/__pycache__/
 *.zip
 article/acm/acmart-master/
 *.pdf
+*.bbl
+*.blg
