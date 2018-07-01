@@ -5,3 +5,15 @@
 *.log
 *.out
 *.aux
+*.vmb
+build/
+dist/
+**/tempo/
+bib/
+texts/
+tokipona.egg-info/
+tokipona/__pycache__/
+*.cut
+*.zip
+article/acm/acmart-master/
+*.pdf
