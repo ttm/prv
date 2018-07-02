@@ -386,27 +386,25 @@ In this section,
 we describe software, statistic, natural language processing,
 and visualization results:
 1)
-the analysis of the Toki Pona language through statistics
+the analysis of the Toki Pona (TP) language through statistics
 of the vocabulary obtained by processing the official dictionary;
 2)
 the synthesis of sentences, poems and paragraphs (e.g. short stories)
-in Toki Pona;
+in TP;
 3)
-syntax highlighting for Toki Pona,
+syntax highlighting for TP,
 including fine-tuning and theoretical
 considerations;
 4)
 an initial Wordnet~\cite{wordnet} of
-Toki Pona words.
+TP words.
 Corpus analysis was already found in~\cite{corpus}.
-The Python scripts (or the toolbox)
-for obtaining all the results in this sections,
+The Python scripts (i.e. the toolbox)
+for obtaining all the results in this section,
 and more, is publicly available in~\cite{tokipona},
 to facilitate both the inspection of the results and the
 generation of derivatives by other interested parties.
-Such scripts were made very friendly for one to understand and alter
-at will.
-
+Such scripts are friendly to understand and alter.
 
 \subsection{Statistics of the vocabulary}\label{sec:stat}
 This section focuses on the statistics of the vocabulary
@@ -419,8 +417,8 @@ The script \tttt{makeStatistics.py}
 was used to obtain all the measurements and tables
 discussed herein,
 and hold further measurements and sets of words
-regarded as less suitable for this exposition,
-but is useful for a deeper investigation.
+regarded as less suitable for this exposition than
+for a deeper investigation.
 
 As described in Section~\ref{basics},
 there are only 14 letters,
@@ -443,7 +441,7 @@ have only one syllable,
 and 13 (10.48\%) have three syllables.
 No official word has four or more syllables.
 In all the 124 tokens, there are 235 syllables (68 different),
-and Table~\ref{tab:freqsy} exhibits the 10 most frequent
+and Table~\ref{tab:freqSyl} exhibits the 10 most frequent
 syllables in the first, last, middle and all positions.
 Middle-word syllables only occur 13 times,
 and are all different, with the exception of 'la'

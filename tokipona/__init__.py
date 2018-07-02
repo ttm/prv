@@ -1,4 +1,4 @@
-from . import utils
+from . import utils, statistics
 def stats():
     from . import makeStatistics as stats
     return stats

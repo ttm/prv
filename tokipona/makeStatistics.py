@@ -168,14 +168,14 @@ p.mediaRendering.tables.writeTex(
             p.mediaRendering.tables.makeTabular(
                 ["POS"]+labels+["total"], 
                 [["All", "Chosen"]] + list(zip(pos.values(), pos_.values())) + [[sum(pos.values()),120]]),
-            """"POS tags incident and chosen.
+            """"POS tags incident and chosen as preferential e.g. in text synthesis.
             The official dictionary often relates tokens
             to more than one POS tag.
             For the text highlighting Plugin, for example,
             a token has to have an established tag to have
             a defined color.
             On the Chosen column, the tokens were regarded only once
-            by choosing the first classification in the dictionary in """+str(precedence)+"."),
+            by choosing the first occurrence of """+str(precedence)+" in the official dictionary."),
         "../article/pos.tex")
 
 
@@ -342,12 +342,12 @@ p.mediaRendering.tables.writeTex(
             """Frequency of syllables in Toki Pona
             considering all 235 syllables of the 124 tokens,
             only the first or last syllables or only the middle
-            syllable.
+            syllables.
             In parenthesis are the count and percentage of the
             corresponding syllable. For more information and a
             complete list of syllables, see Section~\\ref{sec:stat}.
             """,
-            'freqSyl'),
+            'tab:freqSyl'),
         "../article/syls.tex")
 
 p.mediaRendering.tables.doubleLines("../article/syls.tex",
