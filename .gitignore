@@ -1,6 +1,5 @@
 *.html
 *.swp
-*BACK
 .netrwhist
 tags
 pack/prv/opt/wiki/aux/wiki/private/
@@ -10,7 +9,7 @@ spell/
 **/tempo/
 **/b0t.egg-info/
 **/aux/prvviminfo
-*BACK*
+**/acmart-master/
 *.swp
 *.swo
 *.xlsx
