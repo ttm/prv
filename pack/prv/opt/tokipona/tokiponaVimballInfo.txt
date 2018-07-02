@@ -1,0 +1,169 @@
+./syntax/tokipona.vim
+./plugin/ftdetect/tokipona.vim
+./plugin/ftplugin/tokipona/folding.vim
+./plugin/ftplugin/tokipona/basic.vim
+
+function! MkTokiponaVimball() " {{{
+  " Load this function by visually selecting it, then
+  " :@*<CR>
+  " Then run it while in this buffer with:
+  " :call MkRealcolorsVimball()
+  " to create the vimball
+  1,4MkVimball! tokipona
+  echo 'Vimball for the Toki Pona plugin has been written at current directory'
+endfu " }}}
+
+===========
+
+" texts for uploading plugin to vim.org
+
+version 0.01b
+
+script name:
+Toki Pona
+
+symmary:
+syntax coloring, filetype detection and settings for the Toki Pona minimalist conlang (a planned language)
+
+detailed description:
+A syntax highlighting utilities for the minimalist conlang (a.k.a. planned language,
+such as Esperanto). [1]
+This plugin also performs a filetype detection and sets
+the file with reasonable settings.
+
+
+== Usage ==
+Open or create a file with a .tokipona or .tp extension.
+
+Write in toki pona, i.e. using toki pona words.
+E.g. mi wile pana e ilo tawa sina.
+The words should be colored according to the
+classes prescribed in the official dictionary
+and the (configurable) criteria described in [1].
+
+You might change and tweak the color schemes
+applied to the Toki Pona texts using commands
+such as
+:colo zellner
+or using Realcolors [2] to fine-tune individual colors,
+load experimental and cognitive color schemes,
+scrutinize Vim's syntax association to token at window cursor,
+and more.
+
+
+== A minimalistic template for Vim plugins ==
+
+Also, the plugin is proposed as a very simple model for plugins.
+
+The template is in fact a complete filetype plugin,
+which is a very general template.
+Thus, variations and simpler plugin architectures
+(e.g. for general search or indentation)
+are obtained with relative ease.
+
+The functionalities included, which might be associated to the main
+components of a plugin, are:
+- Filetype detection (in plugin/ftdetect/tokipona.vim)
+- Filetype settings (in
+  plugin/ftplugin/tokipona/[basic,folding].vim)
+- Filetype syntax (in syntax/tokipona.vim)
+
+The syntax file is rendered by a Python script
+though analysis of the official
+Toki Pona dictionary in [3], and according to configurable routines
+described in [1].
+The workings of Vim syntax highlighting and color schemes
+might be promptly grasped by consulting [4].
+
+
+== Tweaking ==
+
+One might obtain other syntax highlighting schemes
+for Toki Pona by:
+
+1. editing the file ~/.vim/syntax/tokipona.vim to change token
+   membership to syntax classes, association of syntax classes to visual
+   cues, and the comment format and visual characteristics.
+   (reloading a *.tokipona file with :e<cr> will apply the changes written)
+2. Changing the configurations or routines
+   in the Python script tokipona/makeVimSyntax.py
+   found in https://github.com/ttm/tokipona
+3. Tweaking the colorschemes might more what you are looking for.
+   Take a look at Realcolors [2]. 
+
+
+== TODO ==
+
+- Include POS tagging to achieve highlighting schemes that are
+  adequate to each sentence.
+- Include a Fuzzy mode in which a token is colored
+with respect to their fuzzy set membership ratios.
+  * Each POS tag might have a membership function.
+  * One trivial case is when the membership ratios to each of the tokens
+    are equal and proportional to the number of classes. 
+    E.g. let 'ale' have membership 1/3 1/3 1/3 in the classes of adjective, noun
+    and number. If adjectives are associated with one color, nouns and
+    numbers with other two colors, the membership ratios yield
+    sound syntax coloring schemes in this very trivial sense.
+    It is a baseline.
+- Shape the tokipona Python package in
+  https://github.com/ttm/tokipona
+  into a package and integrate the
+  routines to be used (set, run, update files, update syntax and color
+  scheme being applied, etc) within Vim as functions, commands and
+  mappings.
+  * This might require integration with Realcolors [2]. 
+- Inclusion of non-official words and corpus statistics into the
+  syntax and coloring schemes.
+- Include usage within Vim of the other resource in [1]: toki pona
+  wordnets, statistics obtained from the official vocabulary,
+  synthesis of texts (poems, sentences, etc).
+- Better relate this Vim plugin, the Python package, Realcolors
+  plugin, PRV and related endeavors.
+
+
+Acknowledgements
+----------------
+This work is sponsored by FAPESP (project 2017/05838-3) in a project lead by 
+Profa. Dra. Maria Cristina Ferreira de Oliveira at VICG/ICMC/USP, São Carlos, Brazil.
+
+
+[1]: Basic concepts and tools for the Toki Pona minimalist and
+constructed language: description of the language and main issues;
+Wordnet synsets; analysis of the vocabulary; synthesis and syntax
+highlighting of texts.
+https://arxiv.org/abs/1712.09359
+
+[2]: Realcolors: Utilities for tweaking and creating 24-bit true color
+schemes for Vim at runtime.
+http://www.vim.org/scripts/script.php?script_id=5650
+
+[3]: Lang, Sonja. Toki Pona: The language of good. 2014.
+
+[4]: An anthropological account of the Vim text editor:
+features and tweaks after 10 years of ouroboros.
+https://arxiv.org/abs/1712.06933
+
+
+** install details **
+Download the Vimball.
+
+Install with:
+$ vim tokipona.vmb
+or
+:source tokipona.vmb
+if inside Vim.
+
+(it will place the files e.g. in .vim/plugins/
+I am not shure if and when 
+you shout restart Vim)
+
+You might also install Toki Pona syntax by visiting
+https://github.com/ttm/tokipona
+and copying these files:
+syntax/tokipona.vim
+plugin/ftdetect/tokipona.vim
+plugin/ftplugin/tokipona/folding.vim
+plugin/ftplugin/tokipona/basic.vim
+
+to your .vim/ or anywhere in you runtimepath.
