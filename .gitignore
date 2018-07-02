@@ -23,6 +23,7 @@ dist/
 bib/
 texts/
 tokipona.egg-info/
+t0kipona.egg-info/
 tokipona/__pycache__/
 *.cut
 *.zip
