@@ -1906,3 +1906,155 @@ Srila: de cores com Dinha Seg Jun 9 02 - terminar de
 $$$$$ ::: Sáb Jun 30 17:29:06 -03 2018
 a lista de paginas vigiadas da wikipedia n eh aberta. Pedir os dados, anonimizados que sejam, p gerar as redes simples e bipartidas de usuarios e paginas
 Srila: e misticismo Sáb Jun 6 13 Dom Mai 22 10 ,
+
+$$$$$ ::: Sáb Jun 30 18:07:01 -03 2018
+estudando low resource languages p submeter artigo de toki pona
+Srila: p preparar artigo para trocar a contracao Seg Jun 4 20
+
+$$$$$ ::: Sáb Jun 30 18:17:58 -03 2018
+estudando tallip
+Srila: 2018 ----- achando arquivos da Yvonne , tvz achar um pouco
+
+$$$$$ ::: Sáb Jun 30 18:18:11 -03 2018
+vendo templates e orientacoes para os autores
+Srila: para arrumar p estudar o nome dos arquivos Sex Jun 7
+
+$$$$$ ::: Sáb Jun 30 18:21:54 -03 2018
+lendo indicacoes para secoes do artigo
+Srila: para listar os já feitos se spellland = pt_br was made
+
+$$$$$ ::: Dom Jul  1 06:54:29 -03 2018
+formatando artigo de toki pona para submissao
+Srila: pona ? Sáb Jun 3 15 : 49 - Dom Mai
+
+$$$$$ ::: Dom Jul  1 07:09:59 -03 2018
+tentando obter os codigos ccs
+Srila: os outros itens ao equinox ii Dom Jun 30 03 2018
+
+$$$$$ ::: Dom Jul  1 07:24:54 -03 2018
+formatando artigo p tallip, adequando estrutura
+Srila: p bib , Leo , tvz achar um barulhinho especial ,
+
+$$$$$ ::: Dom Jul  1 07:39:58 -03 2018
+organizando repositorio de toki pona. Formatacao inicial p tallip finalizada
+Srila: de termos que ele Ter Mai 30 15 Sex Jun 2
+
+$$$$$ ::: Dom Jul  1 07:54:41 -03 2018
+arrumacao inicial do repo feita
+Srila: do eq Dom Jun 6 14 : 12 do ' Qua
+
+$$$$$ ::: Dom Jul  1 08:10:03 -03 2018
+arrumando bibliografia do tokipona
+Srila: do tempo , enviando artigos por mais grave , etc .
+
+$$$$$ ::: Dom Jul  1 08:24:38 -03 2018
+arrumando bibliografia
+Srila: arrumando a funcao Dom Mai 30 12 do color . Arrumando
+
+$$$$$ ::: Dom Jul  1 08:40:04 -03 2018
+adicionados artigo, textos e ferramentas ao central hub preparation do toki pona. continuando com bib
+Srila: do prim cap 1 , sessao Ter Mai 21 09 :
+
+$$$$$ ::: Dom Jul  1 08:56:14 -03 2018
+andando com a bib
+Srila: a antiga Ter Mai 21 : 09 - melhorar / processamentos
+
+$$$$$ ::: Dom Jul  1 09:11:11 -03 2018
+terminando ao menos bibliografia e subir no arxiv
+Srila: e alteracoes para fazer regressao linear via flask Qua Jun 2
+
+$$$$$ ::: Dom Jul  1 09:26:37 -03 2018
+bibliografia ainda
+Srila: ainda articulando com aa Seg Mai 30 : 30 13 :
+
+$$$$$ ::: Dom Jul  1 09:41:43 -03 2018
+terminada bibliografia, indo para arxiv
+Srila: indo p bib Sáb Jun 2 12 : 36 : 49
+
+$$$$$ ::: Dom Jul  1 09:57:58 -03 2018
+patching o acmart.cls p envio p arxiv
+Srila: p virus em alguns casos o mslides . vim Dom Jun
+
+$$$$$ ::: Dom Jul  1 10:12:05 -03 2018
+tentando fazer o arxiv aceitar o acmart...
+Srila: o shout final do final da Munzner1 Sex Jun 1 munzner
+
+$$$$$ ::: Dom Jul  1 10:27:03 -03 2018
+consegui compatibilizar o acmart... conflito com o pacote tipa do latex... Depois descobrir como representar caracteres fonologicos entao
+Srila: com wiki , muitas coisas Ter Mai 29 - 03 -
+
+$$$$$ ::: Dom Jul  1 10:41:55 -03 2018
+enviado p arxiv, interagindo nas redes e fazendo comiga
+Srila: nas imagens Ter Jun 9 03 2018 ----- agora sim ,
+
+$$$$$ ::: Dom Jul  1 11:24:36 -03 2018
+alimentado e redes sociais interagidas
+Srila: e detavisualization Ter Mai 22 - tempo Ter Jun 9 ,
+
+$$$$$ ::: Dom Jul  1 14:13:11 -03 2018
+sessao p arrumar artigo p revista virus
+Srila: artigo de visualizacao de artigos p thais Ter Mai 20 -
+
+$$$$$ ::: Dom Jul  1 14:39:20 -03 2018
+articulado com maju adm do grupo virus, colocando figuras no artigo
+Srila: articulado com ela e alteracoes para listar os já feitos se
+
+$$$$$ ::: Dom Jul  1 14:48:21 -03 2018
+andando com mais de uma figura
+Srila: uma nova mitologia sobre conceitos de object recognition . continuando com
+
+$$$$$ ::: Dom Jul  1 15:05:10 -03 2018
+enriquecendo figuras para artigo
+Srila: artigo , implementar mudanca de artigos p scers Seg Mai 22
+
+$$$$$ ::: Dom Jul  1 15:13:35 -03 2018
+adicionada figura de massive tagging, melhorando a figura de centralidades
+Srila: a Claudia Spath Seg Jun 3 05 - tempo Ter Mai
+
+$$$$$ ::: Dom Jul  1 15:30:16 -03 2018
+feita figura sobre centralidades
+Srila: feita gambi p OTO Seg Jun 18 - melhorar e iniciar
+
+$$$$$ ::: Dom Jul  1 15:44:58 -03 2018
+adicionadas imagens basicas
+Srila: basicas do final p Yvonne , partes vem dos grupos Dom
+
+$$$$$ ::: Dom Jul  1 15:58:21 -03 2018
+arrumando figuras
+Srila: arrumando msgs d palavra Qui Jun 1 10 : musilingua Seg
+
+$$$$$ ::: Dom Jul  1 16:19:53 -03 2018
+indo para arrumacao dos captions
+Srila: arrumacao minima Dom Mai 30 11 do tempo , tvz achar
+
+$$$$$ ::: Dom Jul  1 16:20:08 -03 2018
+sessao p arrumar os captions e colocar as figuras na versao em portgues
+Srila: em como pediram Ter Mai 22 12 - Dom Jul 1
+
+$$$$$ ::: Dom Jul  1 16:35:30 -03 2018
+terminado de arrumar os captions
+Srila: os do ' The Wizard Way ' Qua Mai 22 :
+
+$$$$$ ::: Dom Jul  1 16:51:04 -03 2018
+linkando texto aas figuras
+Srila: figuras mitologicas no cejusc , sobre conceitos de formar bando ,
+
+$$$$$ ::: Dom Jul  1 17:20:46 -03 2018
+arrumando figuras no libreoffice, artigo em ptbr
+Srila: ptbr ateh pag 36 - tempo , pag 19 21 :
+
+$$$$$ ::: Dom Jul  1 17:35:32 -03 2018
+colocando ultima figura no docx
+Srila: no nova mitologia tb , reintegrado e Ware em muitas coisas
+
+$$$$$ ::: Dom Jul  1 18:00:39 -03 2018
+terminado de adicionar indice ao artigo em portgues
+Srila: terminado editorial , visualizacao de figuras mitologicas no meio da instancia
+
+$$$$$ ::: Dom Jul  1 18:10:05 -03 2018
+feito envio das versoes atuais p revista virus
+Srila: revista como fazer . Formatacao inicial do prim cap da instancia
+
+$$$$$ ::: Dom Jul  1 18:21:12 -03 2018
+articulado com grupo do fb e com maju e revista virus e davyson
+Srila: com joao bueno , escrito p agilizar td Sáb Jun 2

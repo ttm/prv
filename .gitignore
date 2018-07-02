@@ -5,3 +5,8 @@
 tags
 pack/prv/opt/wiki/aux/wiki/private/
 spell/
+**/__pycache__/
+**/aux/undo/
+**/tempo/
+**/b0t.egg-info/
+**/aux/prvviminfo
