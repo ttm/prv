@@ -52,11 +52,16 @@ bots['morss'] = b0t.baselineBotFromText(cdir + "buckMorss.txt", 'Susan Buck-Mors
 # bots['haraway'] = b0t.baselineBotFromText(cdir + "buckMorss.txt", 'Donna Haraway')
 # bots['shiva'] = b0t.baselineBotFromText(cdir + "buckMorss.txt", 'Susan Buck-Morss')
 
+bots['fabbri'] = b0t.baselineBotFromText(cdir + "fabbri.txt", 'Renato Fabbri')
+bots['zal'] = b0t.baselineBotFromText(cdir + "zal.txt", 'Edu Zal')
+bots['doria'] = b0t.baselineBotFromText(cdir + "doria.txt", 'João Dória')
+bots['bolsonaro'] = b0t.baselineBotFromText(cdir + "bolsonaro.txt", 'Jair Bolsonaro')
 # achar autores africanos e orientais TTM
 
 b = bots['srila']
 # dbots = ['srila', 'tiago', 'joao', 'pedro', 'zer@']
-dbots = ['pedro', 'joao', 'tiago', 'srila', 'zer@']
+# dbots = ['pedro', 'joao', 'tiago', 'srila', 'zer@']
+dbots = ['fabbri', 'zal', 'doria', 'bolsonaro']
 # dbots = ['srila', 'tiago', 'joao', 'pedro', 'zer@', 'preciado', 'butler', 'bock mors', 'etc', 'shakespeare', 'lula']
 EOF
 endf " }}}
@@ -91,7 +96,7 @@ fu! BotSetDefault(botname) " {{{
   py3 b = bots[vim.eval('a:botname')]
 endf " }}}
 " -- AUX CONFEFERENCE {{{2
-fu! BotConferenceAuto(...)
+fu! BotConferenceAuto(...) " {{{
   if a:0 == 0
     let smsg = ''
   el
@@ -119,7 +124,7 @@ fu! BotConferenceAuto(...)
   new
   PRVbuf
   pu = l:foo
-endf
+endf " }}}
 fu! BotConferenceUserAsks() " {{{
   cal BotConferenceGetUserMsg()
   ec "\n\n"
