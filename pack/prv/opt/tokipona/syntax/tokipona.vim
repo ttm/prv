@@ -1,48 +1,35 @@
 " Vim syntax file
-" Language:     toki pona
-" Maintainer:   Renato Fabbri <renato.fabbri@gmail.com>
-" Last Change:  2018 Fev 11
-" URL:          https://github.com/ttm/tokipona
-" Remark:       toki pona is a conlang, not a programming language
+" Language:	toki pona
+" Maintainer:	Renato Fabbri <fabbri@usp.br>
+" Last Change:	2016 Apr 30
+" Remark:	toki pona is a conlang, not a programming language
 
 if exists("b:current_syntax")
     finish
 endif
-
-" define here so loaded files might test for it (unlet at the end)
-if !exists("main_syntax")
-  let main_syntax = 'tokipona'
-endif
+let b:current_syntax = "tokipona"
 
 syntax clear
 syntax case ignore
 
 
-syntax keyword tokiponaPARTICLE e kin nanpa pi taso anu seme li la o en mu a
-highlight link tokiponaPARTICLE Statement
-
-syntax keyword tokiponaPREPOSITION sama tawa tan lon kepeken
-highlight link tokiponaPREPOSITION Type
-
-syntax keyword tokiponaNUMBER luka ale wan ali tu
+syntax keyword tokiponaNUMBER tu wan ali ale luka
 highlight link tokiponaNUMBER Identifier
 
-syntax keyword tokiponaADJECTIVE lape tawa walo taso moli pu anpa ken sike loje ale laso ali jaki musi kule lili weka awen pini pakala sewi lete pimeja namako wile wawa mute kama wan ala pona sin ante pilin sama ike ni suli suwi seli jelo nasa
+syntax keyword tokiponaADJECTIVE pilin ale lili pu namako pimeja ni jelo loje sewi suwi seli wawa mute awen kama sin ante ala lete moli ken pakala taso pona walo ali ike weka wan suli nasa sama sike tawa anpa musi pini laso jaki kule lape
 highlight link tokiponaADJECTIVE Comment
 
-syntax keyword tokiponaPRE lukin oko wile sona awen ken kama
+syntax keyword tokiponaPARTICLE nanpa e li a kin la anu mu o en pi taso seme
+highlight link tokiponaPARTICLE Statement
+
+syntax keyword tokiponaPRE sona lukin kama oko wile ken awen
 highlight link tokiponaPRE PreProc
 
-syntax keyword tokiponaVERB moku unpa lukin olin oko alasa open lawa sona utala jo pali kute kalama toki pana
-highlight link tokiponaVERB Special
-
-syntax keyword tokiponaNOUN mi sina lukin nanpa ma lawa mama meli sinpin sike kala nasin akesi waso ale ali tenpo luka lipu uta lupa telo kili sewi kute kon selo mute pipi ijo kasi kulupu mani esun nena suno pan mun poka tomo sitelen soweli nimi sijelo supa oko monsi poki linja kiwen ona noka pilin len ko mije palisa jan ilo insa
+syntax keyword tokiponaNOUN mije pilin ale kute lukin noka suno kala insa sina tomo kiwen ijo ma telo waso sewi ilo soweli uta sijelo lipu kon mani ko monsi mute nasin pan tenpo supa kili poki linja pipi mi kulupu lawa sitelen ona ali nanpa jan nimi lupa selo oko akesi poka mama palisa sinpin nena len luka meli mun sike kasi esun
 highlight link tokiponaNOUN Constant
 
-syntax match tokiponaComment /#.*$/
-highlight link tokiponaComment StatusLine
+syntax keyword tokiponaPREPOSITION kepeken lon sama tawa tan
+highlight link tokiponaPREPOSITION Type
 
-let b:current_syntax = "tokipona"
-if main_syntax == 'tokipona'
-  unlet main_syntax
-endif
+syntax keyword tokiponaVERB olin sona kute lukin utala oko alasa lawa unpa pana pali kalama open moku jo toki
+highlight link tokiponaVERB Special
