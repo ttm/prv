@@ -14,6 +14,18 @@ although:
 - the Vim plugin, among other things, is proposed to also bring the
   tokipona Python package into the Vim editor.
 
+### notes for arXiv submission
+
+  $ cd article/acm/
+
+comment tipa package loading.
+Swap line on pronunciation.
+
+  $ zip -r arxiv.zip sample-acmlarge.tex sample-acmlarge.bbl samplebody-journals.tex pos.tex syls.tex vowels.tex acmart.cls ACM-Reference-Format.bst figs/
+
+upload arxiv.zip.
+
+
 ### Table of Contents
 Items / Sections / Headers:
   * [Overall description and installation](#overall-description-and-installation)
