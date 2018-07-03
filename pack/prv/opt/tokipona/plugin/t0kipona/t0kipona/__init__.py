@@ -1,17 +1,9 @@
-from . import utils, statistics, texts
-def stats():
-    from . import makeStatistics as stats
-    return stats
-def synthesis():
-    from . import makeTexts as synthesis
-    return synthesis
-def syntax():
-    from . import makeVimSyntax as syntax
-    return syntax
-def wordnet():
-    from . import makeWordnet as wordnet
-    return wordnet
-# del makeStatistics, makeTexts, makeVimSyntax, makeWordnet
+from .corpus import TPCorpus
+from .texts import TPTextBasic
+from .statistics import TPStats
+from .synth import TPSynth, TPTabFig
+
+from . import utils
 
 __doc__ = """The main modules of this tokipona package are:
 - stats: for statistics of the official vocabulary.
