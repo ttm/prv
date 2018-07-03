@@ -1,3 +1,7 @@
+import os
+tdir = os.path.dirname(os.path.abspath(__file__))
+import pandas as pd, numpy as n
+
 class TPCorpus:
     def __init__(self):
         self._initAuxVars()

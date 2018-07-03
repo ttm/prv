@@ -1,10 +1,10 @@
 from . import statistics
 # from .synth import TPTabFig
-from .statistics import TPStats
+from .statistics import TPStats, tdir
 
 class TPTextBasic(TPStats):
     def __init__(self):
-        TP.__init__(self)
+        TPStats.__init__(self)
         self.tpwords = list(self.word_classes.keys())
         self.vowels = 'aeiou'
         self.consonants = 'jklmnpstw'

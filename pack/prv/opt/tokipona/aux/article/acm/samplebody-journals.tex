@@ -664,12 +664,7 @@ in summary, through the following actions:
 \end{itemize}
 
 \noindent Such procedures are exemplified in \tttt{basic/syntaxhighlighting.py}.
-
-The syntax file has an association of TP
-tokens with highlighting groups (HIGs).
-It also holds associations of these HIGs to other HIGs 
-to use their color settings.
-Thus, one may change: associations of tokens to HIGs;
+One may change: associations of tokens to HIGs;
 associations of regex patterns to HIGs;
 associations of HIGs to other HIGs;
 whole color schemes or just sections of it.
@@ -679,7 +674,6 @@ supplied by the color plugin of the PRV framework~\cite{vim}.
 The other tasks are more easily performed by
 scripting Vim, Python import and package source code,
 depending on the user ability and intended tasks.
-
 The use of different color schemes within the same syntax
 file is exemplified in Figure~\ref{fig:syn}.
 By copying only the \tttt{syntax/tokipona.vim} and \tttt{ftdetect/tokipona.vim} files,
@@ -710,25 +704,23 @@ Therefore, we considered current data visualization
 theory~\cite{dv1,dv2,dv3,dv4} to glimpse at the potential guidelines:
 \begin{itemize}
   \item The use of blue and other high frequency colors (such as
-    violet) for the background.
-  \item The avoidance of blue and other high frequency
-  colors to fill small objects, such as letters and words.
-  \item Explore simplicity and elegance through the use of discrete
-  coloring schemes. Most tokens should be preferably of
-  the same color.
-    One might use only a small number of colors to achieve a clean
+    violet) for the background and the avoidance of their use
+  to fill small objects, such as letters and words.
+  \item Explore simplicity and elegance in the  coloring schemes.
+    Most tokens should be preferably of the same color, i.e.
+    a small number of colors might be explored to achieve a clean
     visualization of texts.
-  Also, a power-law distribution of tokens among colors might be
+  \item A power-law distribution of tokens among colors might be
     well-suited to mimic natural occurring phenomena.
-    (Unfortunately, the TP dictionary classification of words are not in a
-    power-law distribution and might be better described by a half-normal or by
-overlapping normal distributions over the three peaks: $\sim35-58,
-12-18, 1-5$ occurrences).
+    The TP dictionary morphosyntactic classification of words
+    resemble a long-tailed distribution: as shown in Table~\ref{foobar},
+    few classes hold the vast majority of words.
   \item Physical stimuli might be related to perceptual stimuli both 
     through a power-law or an exponential law (respectively known
     as Steven's law and Weber-Fechner's law).
     This might be useful e.g. for coloring sets of tokens
-    considering their similarity.
+    considering their similarity, or correctly choosing values
+    for e.g. the hue or luminosity channels.
   \item One usually wishes to maximize contrast,
   although taste and less wearing combinations might
   also dictate the coloring choices.
@@ -736,29 +728,28 @@ overlapping normal distributions over the three peaks: $\sim35-58,
   Wavelength or frequency is an obvious axis given the considerations
     previously exposed, but they are not perceptually uniform.
     Considering perceptually uniform color spaces in making
-    choices may be relevant.
-  \item One might consider two types of color schemes: those with a dark background,
-  which are more comfortable at first; and those with a light background,
+    choices may be relevant, such as CIElab and CIEluv.
+  \item Consider two types of color schemes: of those with a dark background,
+  which are more comfortable at first; and of those with a light background,
   which are usually impressive (and even annoying) at first,
-  but the eye gets used to it and it keeps you more stimulated.
+  but the eye adapts in a few minutes, keeps you more stimulated,
+    and is suitable for bright contexts (e.g. in daylight) .
 \item The blue color is specially related to physiological
   stimulation of the body~\cite{blue,blue2},
     and programmers often report that a blue background keeps them
-    awake and more concentrated (I also notice such effect,
-    and I have programmed daily for more than 10 years).
+    awake and more concentrated (the author also notices such effect).
   \item Colors have been associated to enhancements in specific tasks,
     e.g. blue and red are respectively associated to enhanced
     creativity and detail-oriented tasks in~\cite{blue}.
-  \item It is important to consider that the user might 
-    stay many hours
-  at a text editor (and we very often do),
+  \item It is important to consider that \emph{a text editor user} might 
+    stay many hours using the tool (and they very often do),
     and that the colors and formats involved are
-  prone to entail a considerable effect in the body and mental
-    activity and thus in the quality of life and work of a writer
+  thus prone to entail a considerable effect in the body and mental
+    activity, the quality of life, and work results of a writer
     (e.g. a programmer).
   \item Ideally, one should have facilities for tuning 
     the syntax highlighting (e.g. through keyboard shortcuts)
-  as envisioned in~\cite{vim}.
+  as envisioned and implemented in~\cite{vim}.
 \end{itemize}
 
 The considerable irrelevance of the morphosyntactic classes as

@@ -1,4 +1,4 @@
-from .texts import TPTextBasic
+from .texts import TPTextBasic, tdir
 import numpy as n
 np = n
 

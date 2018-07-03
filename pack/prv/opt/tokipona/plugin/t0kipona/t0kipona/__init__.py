@@ -2,6 +2,7 @@ from .corpus import TPCorpus
 from .texts import TPTextBasic
 from .statistics import TPStats
 from .synth import TPSynth, TPTabFig
+from .syntax import TPSynHigh
 
 from . import utils
 

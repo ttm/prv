@@ -1,7 +1,6 @@
 # import ezodf
 from .corpus import TPCorpus
 # from .synth import TPTabFig
-import pandas as pd, numpy as n
 import os
 tdir = os.path.dirname(os.path.abspath(__file__))
 

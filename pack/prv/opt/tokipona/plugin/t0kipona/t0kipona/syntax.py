@@ -1,6 +1,6 @@
-from .corpus import TP
+from .corpus import TPCorpus, tdir
 
-class TPSynHigh(TP):
+class TPSynHigh(TPCorpus):
     """
     Syntax highlighting for Toki Pona in Vim
 
@@ -13,7 +13,7 @@ class TPSynHigh(TP):
 
     """
     def __init__(self):
-        TP.__init__(self)
+        TPCorpus.__init__(self)
         self._linkClassSyn()
         print(self.__doc__)
 
