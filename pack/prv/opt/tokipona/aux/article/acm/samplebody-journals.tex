@@ -846,34 +846,35 @@ the language in Section~\ref{hacks}.
 As a minimalist conlang, TP is very convenient for cognitive
 experiments
 through linguistic semantics and
-for devising tools for analysis, creation and visualization.
+for devising tools for analysis, creation and visualization,
+a fact to which this document is evidence.
 Other conlangs, and even non-planned languages might benefit from
-TP and the content presented here in many ways, e.g. one might
+TP and this content in many ways, e.g. one might
 synthesize TP texts and translate them as convenient,
 adapt the routines to obtain statistics of the vocabulary,
 or take advantage of the language description to devise new conlangs
-or stilistic guidelines for any language.
+or stylistic guidelines for any language.
 
-Possible next steps are numerous:
+Some of the many potential next steps should be highlighted:
 \begin{itemize}
-  \item Further develop the text synthesis facilities described in
+  \item The text synthesis facilities described in
     Section~\ref{synth} might be enhanced by further employing e.g.
     rhythm, meter, rhyme and form techniques~\cite{wikiPoetry}.
-  \item Make a syntax highlighting that colors the tokens with respect
-    to the syntatic position and function, and not in a fixed manner
-    as is implemented and exposed in Section~\ref{shigh}.
-    This might be implemented by using n-grams and
-    further techniques from Natural Language Processing
-  \item Enhance and study the TP Wordnet described in Section~\ref{wn}:
-    implement a NLTK-like Wordnet interface; check if each synset
+  \item Syntax highlighting that colors the tokens with respect
+    to the syntactic positions and functions, and not in a fixed manner
+    as is implemented and exposed in Section~\ref{shigh},
+    may be implemented by using n-grams and
+    other techniques from Natural Language Processing.
+  \item The TP Wordnet(s) described in Section~\ref{wn} should be may
+    be enhanced:
+    implement a NLTK-like Wordnet interface; double-check if each synset
     is correctly associated to the TP words; seek further synsets
     that were not found by the English lemmas in the official
     dictionary; implement the most restricted version described in
     Section~\ref{wn}, which relates each TP word only to the synsets
     that are related to all the English words not separated by a
-    semicolon; find out the neighborhood of the synsets of the TP
-    Wordnet in the English Wordnet; explore the possibilities for
-    devising new conlangs by means of criteria related to Wordnet.
+    semicolon; scrutinize the neighborhood of the synsets of the TP
+    Wordnet in the English Wordnet.
 %   \item Translators.
 %    This Toki Pona Wordnet would be useful e.g. for naive translators
 %    of words and text.
@@ -882,47 +883,39 @@ Possible next steps are numerous:
 %    An efficiency of Toki Pona can be studied in terms of the coverage of
 %    the Wordnet cloud.
   \item Conlanging: use Wordnet for making new conlangs;
-    use insights derived from TP.
-    Maybe create conlangs for specific uses:
+    use insights derived from TP Wordnet.
+    Create conlangs for specific uses:
     describing data, programs,
     scientific writings, creative writing
     (exploring the thinking process).
-    A conlang might have different modes that might 
-    be specified by a section header or tag. 
-  \item Understand how the corpus was gathered in \url{tokipona.net}.
-  \item Know about previously existing words that were used for TP
+    A conlang might have different modes that are
+    specified by section headers or tags. 
+  \item Explore TP relation to other languages
     (e.g. suno and suwi might come from sun and sweet),
-    and about the reasons that led Sonja (and maybe other people)
+    and the reasons that led Sonja (and maybe other people)
     to choose the 14 letters and the syllable structure.
     This might require a dedicated communication with the
     speaker community and the documentation keepers.
+  \item Understand how the corpus was gathered in \url{tokipona.net}.
   \item Corpus-based analysis.
   \item Publication of original TP texts and translations.
-  \item Make an article written in TP
+  \item Write academic articles in TP
     (extending Section~\ref{ftp} which might be the
     first section of a scientific document written in TP).
     The outline might be:
     a summary in both English and Toki Pona, for
-    facilitating the acquisition of context,
-    and a article in a canonical structure
-    (introduction and related work, materials and methods,
+    facilitated acquisition of context,
+    and an article in a canonical structure
+    (e.g. introduction and related work, materials and methods,
     results and discussion, conclusions and further work),
     with an Appendix explaining the content and context in English.
-    I first conceived something around complexity, statistics, physics, or computer science.
-    But one possibility is to write about linguistics, philosophy, literature
-    or psychology with the partners I write in English.
-    I can start a draft,
-    they might learn the language in a few hours or weeks
-    (with or without my help),
-    to contribute, and we can write a short paper.
-  \item Enhance the synthesis of text to yield better contextualized text
-    and stylistic traces.
-    Give the user the ability to choose the sentences:
-    generate a sentence randomly according to
-    previously written or given text,
-    to some rules input by the user,
-    to the package and the language guidelines.
-    Should output to the screen and asks to keep and discard.
+    Maybe something about complexity, statistics, physics,
+    or computer science;
+    or linguistics, philosophy, literature
+    or psychology.
+    Partners may learn the language in a few hours or weeks
+    (with or without help).
+    This is a very challenging step.
   \item Make TP variations where each TP word is replaced by a word in
     a language with a large speaker population. 
 For example,
@@ -931,14 +924,12 @@ and sol in a Portuguese variant.
 A naive version might be obtained through
 choosing the first word in the description of
 an official vocabulary, as they already exist in English and French.
-  \item We are particularly interested in software tools,
-    and one possibility is to use a conlang to describe software
+  \item Explore a minimalistic conlang to describe software
     routines.
-    In this sense, it seems profitable
+    In this sense, it seems advantageous
     to understand what `non-ambiguous' means in Lojban,
     and in what sense one is able to compile and parse Lojban.
-    Such study will probably entail considerations about
-    parsing TP.
+    Consider the possibilities of and reasons for parsing TP.
 %  \item The plugin comes with the :TokiStation command, which opens a
     %  window with the files: ijositelen.tokipona, makevimSyntax.py,
     %  Highlight Test (created by hitest.vim above),
@@ -950,41 +941,45 @@ an official vocabulary, as they already exist in English and French.
 \end{itemize}
 
 \appendix
-\section{My usage of Toki Pona}\label{mytoki}
-I use the standard sounds, but often use [z] for s.
-I often translate texts to Toki Pona (e.g. biblical excepts)
-and create new texts as poems and short stories.
-Most of them are in~\cite{tokisona}
+\section{Current usage of Toki Pona by the author}\label{mytoki}
+Disclaimer: this whole section holds personal views and usages of
+the Toki Pona (TP) language.
+It is reasonable to use the standard sounds, but often [z] instead of s
+is more comfortable.
+Translation into Toki Pona (e.g. of biblical excepts),
+and the creation of new texts as poems and short stories,
+is both challenging and pleasant.
+Texts are shared e.g. in~\cite{tokisona}
 and/or published in the TP Facebook groups.
-I omit the li particle after subjects sina and mi,
+The li particle is most often not used after subjects sina and mi,
 in accordance with the norm,
-but sometimes I use them when there are many predicates.
+but, even so, they are useful when there are many predicates.
 E.g. sina li wawa li pimeja li lukin pona li moku e kasi mute.
 In such cases, the first li is sometimes omitted.
-Also, sometimes I use li after mi and sina where I find
+Also, li is found after mi and sina where one finds
 that there is unwanted ambiguity, e.g.
 sina moku pona 
 which 
 might be 'sina li moku pona' or 'sina moku pona (li jo e sike)'.
 
 Names are by default transliterated,
-but I advocate that, as in other languages,
+but one should notice that, as in other languages,
 names might be used as they are in the
 correspondent mother tongue.
 E.g. the name Erdös is used in
 English and Portuguese although the standard
 alphabet does not contain ö in such languages.
-I also tend to legitimate the use of English (or German) words
-in TP texts if it is the case,
+The use of e.g. English (or German) words
+in TP texts is found when needed,
 as happens often in scientific writing
 (kernel is a German word used in English,
 webpage and software are English words used in Portuguese).
 
 Proposed notations for numbers seem numerous.
-I tend to think that one might indicate if two numbers
+E.g. one might indicate if two numbers
 are being multiplied (pi) or are in different scales
-(such as in decimal or binary notations).
-For example, luka (pi) two might mean 52.
+(such as in decimal or binary notations):
+luka (pi) two mean 52.
 Most importantly,
 52 is a reasonable notation for a simple language.
 E.g.
@@ -993,90 +988,85 @@ or
 'ona li lon e soweli 27'.
 
 Avoiding needless words...
-I've been avoiding e ni: and using only :.
-I've been omitting the subject (sometimes also the li)
+'e ni:' may most often be written as ':'.
+Subject phrase may be omitted (sometimes also the li)
 if it is the
 same as in the last sentence.
-I tend to group these words:
+One may vary TP by grouping e.g. these words:
 noka and anpa; luka, suno, sike and lawa; pali and pana.
-These clusters of meaning hint me that an even simpler
-language is possible and maybe more optimized to the
-core goals of TP.
 
 Also, ambiguities introduced by omission of li
 and absence of a token to denote preposition,
-suggest to me the possibility of a syntax that is always uniquely
+suggest the possibility of a syntax that is always uniquely
 parsed (or at least less ambiguous).
 
-I have been inclined to conceive a language with the same syntax of TP:
-'sentence' la 'sentence = subject + predicate + object (each term with
-a possible preposition complement).
+It is tempting to conceive a language with the same syntax of TP:
+'sentence' la 'sentence = subject + predicate + object' (each term with
+a possible prepositional complement),
 but always using particles to bound the sentence sections,
 repeating them when the function is performed in the smallest scale:
 'toki pi toki pona pi jan sona' meaning
 language in toki pona and of intellectuals vs
 'toki pi toki pona pi pi jan sona'
 meaning language in [toki pona of intelectuals].
-About the keyword for initiating a preposition complement 
+The keyword for initiating a preposition complement 
 might be 'a', but it is already taken in TP.
-Maybe use 'a' before a preposition and use 'ha' or 'he'
+One possibility is to use 'a' before a preposition and use 'ha' or 'he'
 instead of TP a.
 In such a setting,
-one might enable pi li e a (concept-qualifier, subject-predicate,
+one might enable pi, li, e, a (concept-qualifier, subject-predicate,
 predicate-object, concept-preposition)
-in any slot of the template:
-'sentence' la 'sentence = subject + predicate + object (each term with
-a possible preposition complement)'
-Between sentences one would use:
+in any slot of the syntax template.
+Between sentences one may use:
 la pi, la li, la e, la a, and la la.
 This is a very fractal conlang proposal.
 Maybe also have a way to discern between a noun,
 a qualifier (adjectives/adverbs) and a verb,
 and accept any of them for the subject, predicate, object, preposition,
-slots. Or assume a part of speech as default for a slot or for the
+slots. Or assume a part-of-speech as default for a slot or for the
 first word in a slot.
 
 \section{Final words in Toki Pona}\label{ftp}
-toki li nasin e lawa.
+toki li nasin e lawa.\\
 li nasin tawa (pi) toki insa.
 
-% jan li ken toki li ken pali pona e toki pona.
-toki pona li pona e nasin tan ni:
-ona li jo e nimi nanpa lili.
-ona li pona.
+% jan li ken toki li ken pali pona e toki pona.\\
+toki pona li pona e nasin tan ni:\\
+ona li jo e nimi nanpa lili.\\
+ona li pona.\\
 pona kepeken weka 'p' li ona, a.
 
-o taso la toki pona li kalama li lukin pona.
-sitelen en nasin li open e sitelen
-suli~\cite{tpLang,kama,akesiWawa,gdoc,tokisona,Wikipesija}.
+o taso la toki pona li kalama li lukin pona.\\
+sitelen en nasin li open e sitelen\\
+suli~\cite{tpLang,kama,akesiWawa,gdoc,tokisona,Wikipesija}.\\
 li sona. li nasin e toki e sona e lawa e lon.
 
-toki ni li wawa tawa jan mute nasin en toki.
-wawa tawa toki pi jan sona.
-pi ilo nanpa en nanpa nasin.
-taso tawa toki sona a.
+toki ni li wawa tawa jan mute nasin en toki.\\
+wawa tawa toki pi jan sona.\\
+pi ilo nanpa en nanpa nasin.\\
+taso tawa toki sona a.\\
 sitelen sona, sitelen musi.
 
-ilo lon Poki~\ref{hacks} li pana e sitelen
-e sona tan sitelen,
-en nasin.
-Poki~\ref{basics} li pana e nasin pi toki pona.
+ilo lon Poki~\ref{hacks} li pana e sitelen\\
+e sona tan sitelen,\\
+en nasin.\\
+Poki~\ref{basics} li pana e nasin pi toki pona.\\
 e sitelen tawa kama sona.
 
-mi wile pali e sitelen lon toki pona.
-sitelen lon nasin, sitelen sona,
-sitelen musi.
-ante e toki pona
-la ona li nasa.
-taso nasa li pona mute.
-li pona mute tawa lawa,
-tawa kama sona, tawa sitelen e toki.
-ante la toki pona o.
-toki e toki pona tawa sina.
+mi wile pali e sitelen lon toki pona.\\
+sitelen lon nasin, sitelen sona,\\
+sitelen musi.\\
+ante e toki pona\\
+la ona li nasa.\\
+taso nasa li pona mute.\\
+li pona mute tawa lawa,\\
+tawa kama sona, tawa sitelen e toki.\\
+ante la toki pona o.\\
+toki e toki pona tawa sina.\\
 kama sona e toki pona sina.
 
-o pona tawa jan pi toki pona.
-tawa jan Sonja, Birns-Sprage, Kipo, Pije,
+o pona tawa jan pi toki pona.\\
+tawa jan Sonja, Birns-Sprage, Kipo, Pije,\\
 Siwejo, Malija, Tepan, jan kulupu mute.
 
 \begin{acks}
