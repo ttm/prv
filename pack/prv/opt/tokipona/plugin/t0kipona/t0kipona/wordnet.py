@@ -2,6 +2,23 @@
 from .corpus import TPCorpus
 
 class TPWordnet(TPCorpus):
+    """
+    Toki Pona (hacky) wordnet.
+
+    After initialization, the most important attributes are three
+    dictionaries relating Toki Pona words to Princeton Wordnet:
+        wordnet, relates each word to all synsets with the same lemma
+        wordnet_, prepositions are excluded
+        wordnet__, only synsets of the same morphosyntactic class as
+            in the official Toki Pona dictionary
+
+    TODO
+    ----
+    - make a better mask to Wordnet, as made in NLTK for Portuguese.
+    - remove/enhance relarions yield by compound terms
+        (e.g. 'have information on')
+    """
+
     def __init__(self):
         TPCorpus.__init__(self)
         self._mkDataStr()
@@ -86,4 +103,3 @@ class TPWordnet(TPCorpus):
         # TODO:
         # total number of synsets
         # total number of synsets counting neighbors
-
