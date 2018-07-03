@@ -323,6 +323,7 @@ enviar artigo para arXiv e tallip:
   - put sh class in an independent file
     - enhance file, syntax -> sy, tokipona -> tp
   - make tp comments, titles
+  - remove make* scripts from the manuscript, update the paths.
 
 == now ==
 conta yda OK

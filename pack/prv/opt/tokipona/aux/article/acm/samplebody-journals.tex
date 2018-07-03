@@ -786,15 +786,16 @@ A first Toki Pona Wordnet was constructed
 relating each of the TP words in the dictionary
 to English Wordnet synsets~\cite{wordnet}
 through the English lemmas.
-The most canonical (i.e. Princeton) Wordnet only contains nouns,
+The canonical (i.e. Princeton) Wordnet only contains nouns,
 adjectives, verbs, and adverbs.
-Thus, particles and prepositions were not considered.
+Thus, particles were not considered.
 Numbers were considered adjectives.
 Words presented as adjectives in the dictionary
-were considered both as adjectives and adverbs.~\cite{wordnet}
+were considered both as adjectives and adverbs.
+Prepositions were considered in all classes.~\cite{wordnet}
 
-The \tttt{makeWordnet.py} script, available in~\cite{tokipona},
-makes available such tentative TP Wordnets in the simplest form:
+The \tttt{TPWordnet} class~\cite{tokipona},
+provides such tentative TP Wordnets in their simplest form:
 the TP words are keys in a dictionary that returns the
 corresponding synsets.
 Three of such dictionaries are implemented:
@@ -822,7 +823,7 @@ possible).
 % Total number of synsets counting neighbors is Y. TTM
 % Depth of TP synsets is .
 
-It is worth mentioning that TP words are very general
+TP words are very general
 and each of them might mean many things.
 Thus, the words are not very easily related e.g. by hyponymy
 or meronymy.
@@ -834,7 +835,9 @@ There is at least one caveat:
 if a particular meaning of each word is chosen,
 then there might be many other of such relations,
 e.g. 
-luka (as hand) is a meronym of sijelo (as body).
+  lawa, luka, noka, sinpin, monsi, lukin, mute, kute, palisa, and lupa
+  might be considered meronyms of sijelo.
+  Antonyms are also specially useful in TP: suno and mun, pona and jaki or ike, sinpin and munsi, lawa and noka, mije and meli, sike and palisa, pana and kama jo, pimeja and walo, weka and poka, sama and ante, ali and ala, anu and e, selo and insa. 
 
 \section{Conclusions and further work}\label{conc}
 This document presented a potentially novel description of Toki Pona (TP)
