@@ -169,8 +169,52 @@ syntax case ignore\n\n'''
         with open(dpath, 'w') as f:
             f.write(header+coloring)
 
+class TPTextBasic(TP):
+    def __init__(self):
+        TP.__init__(self)
+        self.tpwords = list(self.word_classes.keys())
+        self.vowels = 'aeiou'
+        self.consonants = 'jklmnpstw'
 
-class TPTabFig(TP):
+    def _firstSyllable(self, token):
+        if len(token) <= 2:
+            sy = token
+            tk = ''
+        elif token[0] in self.vowels:
+            if token[1] == 'n':
+                if token[2] in self.vowels:
+                    sy = token[0]
+                    tk = token[1:]
+                else:
+                    sy = token[:2]
+                    tk = token[2:]
+            else:
+                sy = token[0]
+                tk = token[1:]
+        else:
+            if token[2] == 'n':
+                if len(token) == 3 or token[3] in self.consonants:
+                    sy = token[:3]
+                    tk = token[3:]
+                else:
+                    sy = token[:2]
+                    tk = token[2:]
+            else:
+                sy = token[:2]
+                tk = token[2:]
+        return sy, tk
+
+    def _getSyllables(self, token):
+        tk = token
+        syl = []
+        while tk:
+            sy, tk = self._firstSyllable(tk)
+            syl.append(sy)
+        return syl
+
+
+
+class TPTabFig(TPTextBasic):
     """
     TP tables and figures.
 
@@ -184,10 +228,7 @@ class TPTabFig(TP):
 
     """
     def __init__(self):
-        TP.__init__(self)
-        self.tpwords = list(self.word_classes.keys())
-        self.vowels = 'aeiou'
-        self.consonants = 'jklmnpstw'
+        TPTextBasic.__init__(self)
         print(self.__doc__)
 
     def mkPosTable(self):
@@ -345,42 +386,6 @@ class TPTabFig(TP):
         p.mediaRendering.tables.doubleLines(fpath,
                 hlines=[], vlines=[], hlines_=[0,2,3,4,5,6,7,8,9,10,11],
                 vlines_=[0,2,3,4,5])
-
-    def _firstSyllable(self, token):
-        if len(token) <= 2:
-            sy = token
-            tk = ''
-        elif token[0] in self.vowels:
-            if token[1] == 'n':
-                if token[2] in self.vowels:
-                    sy = token[0]
-                    tk = token[1:]
-                else:
-                    sy = token[:2]
-                    tk = token[2:]
-            else:
-                sy = token[0]
-                tk = token[1:]
-        else:
-            if token[2] == 'n':
-                if len(token) == 3 or token[3] in self.consonants:
-                    sy = token[:3]
-                    tk = token[3:]
-                else:
-                    sy = token[:2]
-                    tk = token[2:]
-            else:
-                sy = token[:2]
-                tk = token[2:]
-        return sy, tk
-
-    def _getSyllables(self, token):
-        tk = token
-        syl = []
-        while tk:
-            sy, tk = self._firstSyllable(tk)
-            syl.append(sy)
-        return syl
 
     def _aformat(self, syl):
         syl_ = '{} ({}, {:.2f}\\%)'.format(syl[0], syl[2], syl[1])
