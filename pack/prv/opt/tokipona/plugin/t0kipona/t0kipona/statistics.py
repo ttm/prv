@@ -268,7 +268,7 @@ class TPTabFig(TP):
                         ["letter"]+[i for i in vowels]+[i for i in consonants], 
                         ll,
                         True),
-                    """Frequency of letters in Toki Pona.
+                    """Frequency of letters in Toki Pona. Columns
                     freq, freq\\_I, freq\\_L and freq\\_M are
                     the frequencies of the letters in any, initial, last and middle
                     positions.
@@ -284,7 +284,7 @@ class TPTabFig(TP):
                     almost 20\\% of the words end with 'n'.
                     On the initial position, 's' is the most frequent consonant,
                     while in middle position 'l' is the most frequent consonant.
-                    Many other conclusions can be drawn from this table and are
+                    Many other conclusions may be drawn from this table and are
                     useful e.g. for exploring sonorities in poems.""",
                     'freqLet'),
                 fpath)
@@ -311,9 +311,9 @@ class TPTabFig(TP):
         hsyls = [self._histSyl(i) for i in syls]
 
         lsyl = [len(i) for i in syllables]
-        hlsyl = [100*lsyl.count(i)/len(lsyl) for i in (1, 2, 3)]
+        self.hsyl = hlsyl = [100*lsyl.count(i)/len(lsyl) for i in (1, 2, 3)]
         hlsyl_ = [lsyl.count(i) for i in (1, 2, 3)]
-        hlsyl__ = [[w for w in self.tpwords if len(self._getSyllables(w)) == i] for i in (1, 2, 3)]
+        self.hsyl__ = hlsyl__ = [[w for w in self.tpwords if len(self._getSyllables(w)) == i] for i in (1, 2, 3)]
         [i.sort() for i in hlsyl__]
         [i.sort(key=len) for i in hlsyl__]
 
@@ -445,4 +445,8 @@ class TPTabFig(TP):
         nwords = [len(i) for i in (words1, words2, words3)]
         return nwords
 
+    def mkAll(self):
+        self.mkPosTable()
+        self.mkSyllables()
+        self.mkLetters()
 

@@ -447,27 +447,27 @@ Middle-word syllables only occur 13 times,
 and are all different, with the exception of 'la'
 which occurs twice.
 A complete list of the syllables and their frequencies (in different
-positions) is in the \tttt{hsyls} variable of the \tttt{makeStatistics.py}
+positions) is in the \tttt{tf.hsyls} variable after executing the \tttt{basic/stardardAll.py}
 script.
 A list of all words, grouped by their size in syllables,
 and ordered alphabetically and by the number of letters,
-is in the \tttt{hlsyl\_\_} variable.
+is in the \tttt{tf.hlsyl\_\_} variable.
 
 \input{syls}
 
 Vowel and consonant frequencies,
 and comparisons of vowels against consonants,
 are as shown in Table~\ref{freqLet}
-for start, end and internal position.
+for start, end and internal positions.
 The limited number of consonants favors
-the naturalness of the language prosody
+the language prosody to appear natural
 as it resembles babbling.
 
 \input{vowels}
 
-Given the rules in Section~\ref{phonology}
+Within the rules exposed in Section~\ref{phonology}
 (of 14 letters, 5 vowels, (C)V(n) phonemes,
-forbidden ji, wu, wo, ti, nn, nm),
+forbidden ji, wu, wo, ti, nn, nm syllables),
 96 words are possible with 1 syllable,
 8256 with 2 syllables, 710016 with 3 syllables.
 In the incident words of the official dictionary,
@@ -480,9 +480,9 @@ also as something else
 (i.e. li, e, la, pi, a, o, anu, en, seme, mu)
 and the prepositions that are not classified also as something
 else (i.e. kepeken, lon, tan).
-This yields $120-13=107 words$.
+This yields $120-13=107$ words.
 As discussed in Section~\ref{syntax},
-I advocate that, although such words are classified in the dictionary,
+the author advocates that, although words have specific classes in the dictionary,
 they might be used indistinctly as nouns, adjectives,
 verbs and adverbs.
 Thus, one has 107 possibilities of noun and verb phrases with
@@ -495,7 +495,7 @@ one might quantify the possibilities using the formula:
 $\delta = 107^n\times 107^v\times 10^o \times 5\times 107^p$,
 where $5$ stands for the possible prepositions.
 To account for the particles, one possibility is
-to assume for simplicity that one might use none or one particle
+to assume for simplicity the use of at most one particle
 (not li, e, la, pi, resulting in $8$ particles and $9$ possibilities)
 at each phrase, yielding:
 $\delta = 107^n\times 107^v\times 107^o \times 5\times 107^p\times 9^4$.
@@ -506,9 +506,7 @@ i.e. more then 4 trillion possible
 sentences with single word phrases (i.e. no adjectives or adverbs),
 while allowing only one particle per phrase
 and only one predicate phrase
-(e.g. 'ona li moku e soweli lon supa').
-The general case is implemented as a function
-in the script \tttt{makeStatistics.py}~\cite{tokipona}.
+(e.g. 'ona li moku e soweli lon supa').~\cite{tokipona}.
 
 \subsection{Synthesis of text}\label{synth}
 Such counting exercises are also useful
