@@ -101,7 +101,7 @@ or simply \emph{conlang}.
 The construction of languages is called glossopoeia.
 TP is engineered for experiments, meditation and philosophy;
 and useful at least as an auxiliary international language and
-as an artistic language.~\cite{conlanWikip,artlanWikip}
+as an artistic language.~\cite{conlanWikip,wikiArtLang}
 % taxonomy, vocabulary, ontology, terminology, 
 
 % conlangs, natural langs, programming langs, Lojban as an
@@ -413,7 +413,7 @@ the letters, phonemes, word sizes,
 possible combinations for words and sentences.
 % The statistics are in Appendix~\cite{listings},
 % and the next paragraph is an overview. TTM
-The class \tttt{TPTabFig}
+The \tttt{TPTabFig} Python class 
 was used to obtain all the measurements and tables
 discussed herein,
 and hold further measurements and sets of words
@@ -447,8 +447,7 @@ Middle-word syllables only occur 13 times,
 and are all different, with the exception of 'la'
 which occurs twice.
 A complete list of the syllables and their frequencies (in different
-positions) is in the \tttt{tf.hsyls} variable after executing the \tttt{basic/stardardAll.py}
-script.
+positions) is in the \tttt{tf.hsyls} variable after executing the \tttt{basic/tbBasic.py} script.
 A list of all words, grouped by their size in syllables,
 and ordered alphabetically and by the number of letters,
 is in the \tttt{tf.hlsyl\_\_} variable.
@@ -554,8 +553,7 @@ and by employing stylistic outlines for poems.
           \caption{Synthesized poem.}
             \label{fig:sfig2}
   \end{subfigure}
-  \caption{Toki Pona texts synthesized by the \tttt{makeTexts.py} script
-  in~\cite{tokipona}: (a) a phrase, (b) a sentence, (c) a paragraph,
+  \caption{Toki Pona texts synthesized by an instantiated \tttt{TPSynth} Python class~\cite{tokipona}: (a) a phrase, (b) a sentence, (c) a paragraph,
   and (d) a poem.
   The unusual word combinations are convenient for exploring semantic
   possibilities.
@@ -571,7 +569,7 @@ Figure~\ref{fig:syn} holds some synthesized texts
 with different color schemes for the syntax highlighting,
 as presented in the next section.
 The textual synthesis described here,
-and implemented in \tttt{makeTexts.py},
+and implemented in the \tttt{TPSynth} class,
 might be enhanced in countless ways,
 e.g. as described in Section~\ref{conc}.
 
@@ -630,10 +628,10 @@ vowels) or joined (e.g. distinguishing only particles against rest,
 or particles and prepositions against the rest).
 The colors are also promptly changed according to~\cite{vim}
 and exemplified in the package documentation,
-specially the \tttt{tokipona/syntax/tokipona.vim} syntax file
+specially the \tttt{syntax/tokipona.vim} syntax file
 
 Currently, the Python package synthesizes the
-syntax file through the\\ \tttt{syntax.TPSynHigh} class.
+syntax file through the\\ \tttt{TPSynHigh} class.
 The user has control of class precedence,
 merging and further details through tweaking such routine.
 The choice of precise coloring schemes
@@ -646,7 +644,7 @@ in summary, through the following actions:
   \item Installation of the plugin, so that
     syntax highlighting of TP texts will be performed in any \tttt{*.tp} or \tttt{*.tokipona} file.
   \item Tweaking of the syntax file by hand. Or
-  \item Instantiating the \tttt{syntax.TPSynHigh} class and then executing the \tttt{mkSynHighFile()} method
+  \item Instantiating the \tttt{TPSynHigh} class and then executing the \tttt{mkSynHighFile()} method
     of the resulting object.
     This generates a new \tttt{tokipona.vim} syntax file, at the right location in Vim folders,
     according to object settings.
@@ -659,11 +657,11 @@ in summary, through the following actions:
     Change the coloring of a set of terms by associating
     a used group (e.g. \tttt{tpADJECTIVE}) to an existing group (e.g.
     Visual) such as in \tttt{:highlight link tpADJECTIVE Visual}.
-    This may also be achieved changing \tttt{syntax.TPSynHigh().colors}
-    attribute and then executing \tttt{mkSynHighFile()}.
+    This may also be achieved changing \tttt{TPSynHigh().colors}
+    attribute before executing \tttt{mkSynHighFile()}.
 \end{itemize}
 
-\noindent Such procedures are exemplified in \tttt{basic/syntaxhighlighting.py}.
+\noindent Such procedures are facilitated by the \tttt{basic/tpBasic.py}.
 One may change: associations of tokens to HIGs;
 associations of regex patterns to HIGs;
 associations of HIGs to other HIGs;
@@ -1083,4 +1081,5 @@ from the usage of Toki Pona for chatting.
 
 % Bibliography
 \bibliographystyle{ACM-Reference-Format}
+\bibliographystyle{unsrt}
 \bibliography{sample-bibliography}
