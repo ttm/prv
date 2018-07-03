@@ -318,6 +318,11 @@ enviar artigo para arXiv e tallip:
   - assert that functionalities match descriptions (e.g. from abstract)
   - definition, historic, status (groups, speakers, etc).
   - syntax highlighting divided by particles li and e.
+  - mask for Vim to insert poems, paragraphs, and sentences, or just display them as messages.
+  - mask for a toki pona bot (translates the words into toki pona, makes the sentence or paragraph)
+  - put sh class in an independent file
+    - enhance file, syntax -> sy, tokipona -> tp
+  - make tp comments, titles
 
 == now ==
 conta yda OK

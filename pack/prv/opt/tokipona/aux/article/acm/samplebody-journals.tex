@@ -606,12 +606,12 @@ them normally or use the synthesized texts as raw material.
 \subsection{Syntax highlighting}\label{shigh}
 The same package~\cite{tokipona}
 has a Vim~\cite{vim} syntax highlighting plugin
-for Toki Pona,
+for Toki Pona.
+The Python scripts hold
 routines to arrange the coloring schemes
-(i.e. to yield the text files with the specifications for which tokens
-to relate to which coloring groups),
-and instructions for installing and using
-the resulting syntax highlighting for Toki Pona texts~\cite{tokipona}.
+(i.e. to specify which tokens
+are related to which coloring groups)
+which are stored in the \tttt{syntax/tokipona.vim} file.
 An online syntax highlighting gadget is found at~\cite{tpNetSH},
 and the solution here described presents a number of enhancements:
 it is capable of coloring all morphosyntactic classes;
@@ -625,50 +625,66 @@ Basically, the resulting syntax highlighting
 distinguishes the words among the morphosyntactic
 classes according to the official dictionary as given in
 Table~\ref{foobar}.
-A word often belongs to more than one class,
-thus precedence might be set by the user.
-Also, some classes might be further refined (e.g. words beginning with
-vowels) or joined (e.g. distinguishing only particles and the rest,
-or particles and prepositions and the rest).
+Also, some classes might be further defined (e.g. words beginning with
+vowels) or joined (e.g. distinguishing only particles against rest,
+or particles and prepositions against the rest).
 The colors are also promptly changed according to~\cite{vim}
-and exemplified in the package documentation.
+and exemplified in the package documentation,
+specially the \tttt{tokipona/syntax/tokipona.vim} syntax file
 
 Currently, the Python package synthesizes the
-syntax file through the\\ \tttt{makeVimSyntax.py} script.
-The user has control of class precedence and
+syntax file through the\\ \tttt{syntax.TPSynHigh} class.
+The user has control of class precedence,
 merging and further details through tweaking such routine.
 The choice of precise coloring schemes
 involves fine tuning the color scheme being
 used in Vim (such as 'blue', 'elflord' and 'gruvbox'),
 and Vim's highlighting schemes as described in~\cite{vim}.
-In summary,
-the usage of the package and plugin might be performed
-through the following actions:
+The usage of the package and plugin might be performed,
+in summary, through the following actions:
 \begin{itemize}
-  \item Installation of the plugin.
-  \item Tweaking of the syntax file by hand.
-  \item Running the \tttt{makeVimSyntax.py}
-    Python script to generate a new \tttt{tokipona.vim} syntax file
-    according to other settings.
+  \item Installation of the plugin, so that
+    syntax highlighting of TP texts will be performed in any \tttt{*.tp} or \tttt{*.tokipona} file.
+  \item Tweaking of the syntax file by hand. Or
+  \item Instantiating the \tttt{syntax.TPSynHigh} class and then executing the \tttt{mkSynHighFile()} method
+    of the resulting object.
+    This generates a new \tttt{tokipona.vim} syntax file, at the right location in Vim folders,
+    according to object settings.
   \item Write a file with the \tttt{.tokipona} or \tttt{.tp} extension
     (inside Vim) using Toki Pona words.
     Reload the highlighting scheme using \tttt{:e} whenever you
-    change the syntax file by hand or through the Python script.
+    change the syntax file by hand or through the Python routines.
   \item Access the used highlighted groups with \tttt{:syntax}.
-    Access all the highlighting groups with \tttt{:so
-    \$VIMRUNTIME/syntax/hitest.vim} or \tttt{:hi}.
+    Access all the highlighting groups with \tttt{:so \$VIMRUNTIME/syntax/hitest.vim} or \tttt{:hi}.
     Change the coloring of a set of terms by associating
-    a used group (e.g. tokiponaADJECTIVE) to an existing group (e.g.
-    Visual) such as in \tttt{:highlight link tokiponaADJECTIVE Visual}.
+    a used group (e.g. \tttt{tpADJECTIVE}) to an existing group (e.g.
+    Visual) such as in \tttt{:highlight link tpADJECTIVE Visual}.
+    This may also be achieved changing \tttt{syntax.TPSynHigh().colors}
+    attribute and then executing \tttt{mkSynHighFile()}.
 \end{itemize}
 
+\noindent Such procedures are exemplified in \tttt{basic/syntaxhighlighting.py}.
+
 The syntax file has an association of TP
-words with highlighting groups.
-It also holds associations of these groups to other groups
+tokens with highlighting groups (HIGs).
+It also holds associations of these HIGs to other HIGs 
 to use their color settings.
-Therefore, one is able to use various color schemes
-in syntax-highlighted TP texts, such as in Figure~\ref{fig:syn}.
-A Vim user might run e.g. \tttt{:colorscheme blue},
+Thus, one may change: associations of tokens to HIGs;
+associations of regex patterns to HIGs;
+associations of HIGs to other HIGs;
+whole color schemes or just sections of it.
+The last of these tasks is promptly performed using 
+the \tttt{space-c-s} and \tttt{space-c-c} normal Vim commands
+supplied by the color plugin of the PRV framework~\cite{vim}.
+The other tasks are more easily performed by
+scripting Vim, Python import and package source code,
+depending on the user ability and intended tasks.
+
+The use of different color schemes within the same syntax
+file is exemplified in Figure~\ref{fig:syn}.
+By copying only the \tttt{syntax/tokipona.vim} and \tttt{ftdetect/tokipona.vim} files,
+a user might benefit from the standard Vim commands.
+E.g. \tttt{:colorscheme blue},
 \tttt{:colorscheme solarize}, \tttt{:colorscheme gruvbox} or
 \tttt{:colorscheme elflord} to see the same text colored
 with different color schemes (association of colors to sets of tokens).
@@ -678,8 +694,6 @@ will change the standard foreground (text) color to pure black
 and background to pure blue.
 See \tttt{:h gui-colors} and \tttt{:h highlight}
 for the way you might edit colors directly.
-Useful commands are given as commented lines
-in the end of the syntax file. % TTM
 One might obtain an HTML file with the colored TP text
 using the \tttt{:TOhtml} command.
 
