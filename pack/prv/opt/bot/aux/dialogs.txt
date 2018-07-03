@@ -2474,3 +2474,19 @@ Srila: wordnet Sáb Jun 11 do Vim e o codigo - 03
 $$$$$ ::: Ter Jul  3 14:40:09 -03 2018
 acrescentados antonimos
 Srila: : 48 : 56 : 56 : 57 : 51 -
+
+$$$$$ ::: Ter Jul  3 14:55:55 -03 2018
+tentando entender a treta com a classe de tp wordnet
+Srila: de ontem essa sessao d interacao com Cristina ao selfcomp e
+
+$$$$$ ::: Ter Jul  3 15:10:53 -03 2018
+arrumando estruturas de dados da classe de wordnet
+Srila: de tokipona Seg Mai 22 - 03 - Dom Jun 2
+
+$$$$$ ::: Ter Jul  3 15:40:08 -03 2018
+apanhando p deixar o wordnet melhor
+Srila: o bento Seg Jun 6 12 do aa office Seg Jul
+
+$$$$$ ::: Ter Jul  3 15:40:25 -03 2018
+parando um pouco talvez para reabastecer
+Srila: um barulhinho especial , implementar mudanca de abertura d aa Qua

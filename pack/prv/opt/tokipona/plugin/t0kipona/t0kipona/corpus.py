@@ -5,7 +5,6 @@ import pandas as pd, numpy as n
 class TPCorpus:
     def __init__(self):
         self._initAuxVars()
-        self._initDicts()
         self._loadDictionary()
         self._getClasses()
 
@@ -34,14 +33,4 @@ class TPCorpus:
     def _initAuxVars(self):
         self.precedence = ['PRE', 'VERB', 'PREPOSITION', 'PARTICLE', 'ADJECTIVE', 'NOUN', 'NUMBER']
         self.synonyms = 0
-
-    def _initDicts(self):
-        self.words = {}
-        for class_ in self.precedence:
-            self.words[class_] = set()
-        self.words_all = self.words.copy()
-
-        self.class_count = dict.fromkeys(self.precedence, 0)
-        self.class_count_ = dict.fromkeys(self.precedence, 0)
-
 

@@ -14,6 +14,7 @@ class TPStats(TPCorpus):
     """
     def __init__(self):
         TPCorpus.__init__(self)
+        self._initDicts()
         self._analyseLemmas()
         self._posStats()
 
@@ -78,3 +79,14 @@ class TPStats(TPCorpus):
             if "PRE" in self.word_classes[i]:
                 if "VERB" in self.word_classes[i]:
                     self.word_classes[i].remove("VERB")
+
+    def _initDicts(self):
+        self.words = {}
+        for class_ in self.precedence:
+            self.words[class_] = set()
+        self.words_all = self.words.copy()
+
+        self.class_count = dict.fromkeys(self.precedence, 0)
+        self.class_count_ = dict.fromkeys(self.precedence, 0)
+
+
