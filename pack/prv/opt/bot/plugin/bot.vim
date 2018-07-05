@@ -26,8 +26,14 @@ fu! BotsInitialize() " {{{
   let g:bot.sentlen = '2-35'
   let g:bot.nmsgs = 6.7
   let g:bot.paths.corpus = g:bot_dir . 'plugin/b0t/corpus/'
+  let g:bot.tploaded = v:false
   py3 cdir = vim.eval('g:bot.paths.corpus')
 python3 << EOF
+import sys
+keys=tuple(sys.modules.keys())
+for key in keys:
+    if "b0t" in key:
+        del sys.modules[key]
 import b0t, random
 bots = {}
 bots['peter'] = b0t.baselineBotFromText("/home/renato/repos/joyce/corpus/1peter.txt", 'Peter')
@@ -70,6 +76,19 @@ fu! BotTalk(string) " {{{
   py3 b.lastmsg = b.id + ': ' + eval(vim.eval('l:cmd'))
   cal BotDialogAdd(a:string, py3eval('b.lastmsg'))
   retu py3eval('b.lastmsg')
+endf " }}}
+fu! TPBotTalk(string) " {{{
+  if g:bot.tploaded == v:false
+    cal TPLoad()
+  en
+  let cmd = 'tpbot.tpTalk("'.a:string.'")'
+  py3 tpbot.lastmsg = tpbot.id + ': ' + eval(vim.eval('l:cmd'))
+  cal BotDialogAdd(a:string, py3eval('b.lastmsg'))
+  retu py3eval('tpbot.lastmsg')
+endf " }}}
+fu! TPLoad() " {{{
+  py3 tpbot = b0t.TPBot()
+  py3 tpbot.id = 'Lena'
 endf " }}}
 fu! BotConference(...) " {{{
   let g:bot.confmsgs = []

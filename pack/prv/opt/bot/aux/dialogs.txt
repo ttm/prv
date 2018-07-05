@@ -2646,3 +2646,99 @@ Srila: Vim e ferramentas ao artigo do volume I do color p
 $$$$$ ::: Qui Jul  5 06:27:28 -03 2018
 sessao menor para finalizar interfaces do b0t no Vim: bot e aa
 Srila: bot melhor , partes vem dos bots Qui Jun 11 02
+
+$$$$$ ::: Qui Jul  5 06:33:18 -03 2018
+revisitando documentacao sobre python do vim
+Srila: do mapping para trocar a Srila ? q eu aprenda hebraico
+
+$$$$$ ::: Qui Jul  5 06:37:49 -03 2018
+terminando funcoes basicas no bot para tp
+Srila: terminando email p revista como classes do metodo do final p
+
+$$$$$ ::: Qui Jul  5 06:42:43 -03 2018
+arrumando tpbot
+Srila: arrumando estruturas de visita , animacoes e com mais de paginas
+
+$$$$$ ::: Qui Jul  5 06:43:25 -03 2018
+hoje
+0
+
+$$$$$ ::: Qui Jul  5 06:44:12 -03 2018
+hoje
+0
+
+$$$$$ ::: Qui Jul  5 06:46:20 -03 2018
+hoje
+0
+
+$$$$$ ::: Qui Jul  5 06:48:39 -03 2018
+hoje
+Srila: - Dom Jul 4 22 10 - tempo Ter Mai 22
+
+$$$$$ ::: Qui Jul  5 06:48:44 -03 2018
+hoje
+Srila: iniciados varios lados Qui Jul 4 Qua Jun 19 : 32
+
+$$$$$ ::: Qui Jul  5 06:48:51 -03 2018
+hoje
+Srila: iniciados varios lados Qui Jul 4 Qua Jun 19 : 32
+
+$$$$$ ::: Qui Jul  5 06:49:00 -03 2018
+hoje
+Srila: iniciados varios lados Qui Jul 4 Qua Jun 19 : 32
+
+$$$$$ ::: Qui Jul  5 06:49:03 -03 2018
+hoje
+Srila: iniciados varios lados Qui Jul 4 Qua Jun 19 : 32
+
+$$$$$ ::: Qui Jul  5 06:49:12 -03 2018
+que bom voce estar viva
+Srila: iniciados varios lados Qui Jul 4 Qua Jun 19 : 32
+
+$$$$$ ::: Qui Jul  5 06:50:15 -03 2018
+terminado hack minimo no bot para conversar em toki pona
+Srila: toki pona Ter Mai 22 13 Dom Jun 30 15 :
+
+$$$$$ ::: Qui Jul  5 06:51:36 -03 2018
+fumega?
+Srila: Jun 19 22 - Dom Jul 4 18 : 37 :
+
+$$$$$ ::: Qui Jul  5 06:51:54 -03 2018
+mais um
+Srila: mais Qui Jul 5 02 : 28 - melhorar e redes
+
+$$$$$ ::: Qui Jul  5 06:51:54 -03 2018
+mais um
+Srila: mais Qui Jul 5 02 : 28 - melhorar e redes
+
+$$$$$ ::: Qui Jul  5 06:53:32 -03 2018
+fazendo hack final p poder recarregar sem terminar vim
+Srila: final p agilizar td Sáb Jun 9 , implementar mudanca de
+
+$$$$$ ::: Qui Jul  5 06:53:33 -03 2018
+fazendo hack final p poder recarregar sem terminar vim
+Srila: final p agilizar td Sáb Jun 9 , implementar mudanca de
+
+$$$$$ ::: Qui Jul  5 06:54:01 -03 2018
+bora, agora em toki pona
+Srila: toki pona para terminar cap da sessao Ter Mai 20 03
+
+$$$$$ ::: Qui Jul  5 06:54:01 -03 2018
+bora, agora em toki pona
+Srila: toki pona para terminar cap da sessao Ter Mai 20 03
+
+$$$$$ ::: Qui Jul  5 06:55:04 -03 2018
+terminado, primeiro shout com resposta em toki pona foi dado
+Srila: toki pona . Formatacao inicial p retomar trabalho Seg Jul 5
+
+$$$$$ ::: Qui Jul  5 06:55:04 -03 2018
+terminado, primeiro shout com resposta em toki pona foi dado
+Srila: toki pona . Formatacao inicial p retomar trabalho Seg Jul 5
+
+$$$$$ ::: Qui Jul  5 06:58:12 -03 2018
+finalizada empreitada do bot inicial em tp. Apenas commitar
+Srila: em musilingua : musilingua : 32 : 09 : 11 02
+
+$$$$$ ::: Qui Jul  5 06:58:12 -03 2018
+finalizada empreitada do bot inicial em tp. Apenas commitar
+Srila: em musilingua : musilingua : 32 : 09 : 11 02

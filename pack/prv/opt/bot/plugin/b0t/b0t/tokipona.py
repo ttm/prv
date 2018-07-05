@@ -28,7 +28,7 @@ class TPBot:
         print(tpw)
         tpw_ = list(set(tpw))
         w_ = random.choice(tpw_)
-        self.dd = locals()
+        # self.dd = locals()
         return self.s.createParagraph(1, [w_])
         # percorrer hiperonimos p achar os synsets do toki pona
 
