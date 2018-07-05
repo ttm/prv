@@ -1,0 +1,24 @@
+Dear Editor,
+
+the manuscript reports novel tools and conceptualizations
+about a minimal constructed language called Toki Pona.
+The topic is therefore both generic and specialized,
+and may be of interest for researchers in many fields.
+I also highlight important results that arouse from this study:
+
+- the language is described in-depth, both considering the official
+  norms and the usage practices.
+- Meaningful and basic statistics are exposed and contextualized.
+- Syntax highlighting in provided and a routine to specify arbitrary schemes.
+- Toki Pona text synthesis routines are provided, ranging from simple
+  phrases to decasyllable poems.
+- Three preliminary Toki Pona wordnets are provided.
+
+Finally, the methods employed (including the software developed) will
+be useful for researcher dealing with constructed languages, Toki
+Pona, text synthesis, and other subjects.
+
+Yours sincerely,
+
+Renato Fabbri
+

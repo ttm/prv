@@ -306,24 +306,30 @@ Sex Fev 16 13:08:45 -02 2018
 ./various/daily stuff
 
 == next ==
+2 sessions:
+- one to advance multilevel
+- another to make tallip formatting
+  - the rest of the session for the toki pona bot
+
+== next ==
 13/06 -> artigo plos one OK
 14-15/06 -> Bueno OK
 17/06 -> relatório Helder, Hoje OK
 20/06 -> artigo com Cristina, outro com a Marilia, Marcelo Lisboa OK
 22, 23, 24/06 -> festa rochedo, ok
-revista virus
-enviar artigo para arXiv e tallip:
+revista virus OK
+enviar artigo para arXiv e tallip: OK
   - keep track of used words
   - relate words by antonyms (and meronyms? [lawa, luka, noka, sinpin, monsi, lukin, mute, kute, palisa, lupa] mero sijelo)
   - assert that functionalities match descriptions (e.g. from abstract)
   - definition, historic, status (groups, speakers, etc).
   - syntax highlighting divided by particles li and e.
-  - mask for Vim to insert poems, paragraphs, and sentences, or just display them as messages.
-  - mask for a toki pona bot (translates the words into toki pona, makes the sentence or paragraph)
   - put sh class in an independent file
     - enhance file, syntax -> sy, tokipona -> tp
-  - make tp comments, titles
   - remove make* scripts from the manuscript, update the paths.
+  - mask for Vim to insert poems, paragraphs, and sentences, or just display them as messages.
+  - mask for a toki pona bot (translates the words into toki pona, makes the sentence or paragraph)
+  - make tp comments, titles
 
 == now ==
 conta yda OK
