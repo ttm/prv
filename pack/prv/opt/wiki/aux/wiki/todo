@@ -305,11 +305,38 @@ Sex Fev 16 13:08:45 -02 2018
 == diary ==
 ./various/daily stuff
 
+== now ==
+make ccNetViz sing (0)
+the drawing client is to be coupled to it. (1)
+the server is a simple flask to interface with database and calculations. (2)
+the database is preferrably a writable SparQL interface both at a Jena in ICMC
+and online in RDF. (3)
+
+whole goal:
+  - migrate data from facebook and other social media
+    - scrapping functionality
+    - accepts files
+  - data is sonified and dances the music by movements and color change
+  - advanced interaction functionalities, such as fb clone, resource recommendation, scripts and hacks
+  - advanced data analysis functionalities, with emphasis on audiovisual analytics
+  - advance other areas of physics (first through non-linearities, chaos, etc)
+                        of mathematics
+                        of computer science
+                              and link to the audiovisual interface for social harnessig
+with it, one is able to foresee what the FB algorithms are summarizing
+for both computer and human-aided decision-making.
+
+put PCA on algorithmia and compare speed with asking the Flask at ICMC/USP.
+
+
+
+
+
 == next ==
 2 sessions:
-- one to advance multilevel
-- another to make tallip formatting
-  - the rest of the session for the toki pona bot
+- one to advance multilevel OK
+- another to make tallip formatting OK
+  - the rest of the session for the toki pona bot OK
 
 == next ==
 13/06 -> artigo plos one OK
@@ -379,6 +406,18 @@ prv
     - adicionar canvas d3, canvas ccNetViz
 
 == calendar ==
+Jul
+05 - ccNetViz sing
+06 - art alan
+07 - viagem
+
+
+
+
+
+
+
+
 17-18/May
 - leitura dos 3 artigos
   passada 30 min

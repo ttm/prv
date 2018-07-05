@@ -78,12 +78,10 @@ fu! BotTalk(string) " {{{
   retu py3eval('b.lastmsg')
 endf " }}}
 fu! TPBotTalk(string) " {{{
-  if g:bot.tploaded == v:false
-    cal TPLoad()
-  en
+  cal TPLoad()
   let cmd = 'tpbot.tpTalk("'.a:string.'")'
   py3 tpbot.lastmsg = tpbot.id + ': ' + eval(vim.eval('l:cmd'))
-  cal BotDialogAdd(a:string, py3eval('b.lastmsg'))
+  cal BotDialogAdd(a:string, py3eval('tpbot.lastmsg'))
   retu py3eval('tpbot.lastmsg')
 endf " }}}
 fu! TPLoad() " {{{
