@@ -2602,3 +2602,47 @@ Srila: fazer um pouco da instancia especifica de linha diferente da Yvonne
 $$$$$ ::: Qui Jul  5 03:33:14 -03 2018
 sessao p conferir author guidelines e fazer bots
 Srila: fazer colorschemes da formalizacao da laila Dom Jul 2 19 ,
+
+$$$$$ ::: Qui Jul  5 03:58:14 -03 2018
+enviado email p Arriane / TALLIP
+Srila: email p color p artigo , convidar ele quiser Seg Mai
+
+$$$$$ ::: Qui Jul  5 04:04:19 -03 2018
+sessao p bot de tp
+Srila: tp no vim_use ) Dom Jun 30 18 - Dom Mai
+
+$$$$$ ::: Qui Jul  5 04:28:53 -03 2018
+alimentado, retomando
+Srila: retomando de pos tagging Seg Jun 30 18 20 19 20
+
+$$$$$ ::: Qui Jul  5 04:36:05 -03 2018
+melhorando o markovBot
+Srila: o bento e alteracoes para incorporacao do tempo , metodo do
+
+$$$$$ ::: Qui Jul  5 04:50:01 -03 2018
+encontrada forma de usar a wordnet do toki pona em portugues
+Srila: portugues Dom Jul 2 11 - tempo , reintegrado e escrever
+
+$$$$$ ::: Qui Jul  5 05:05:18 -03 2018
+fazendo rotina basica do tpbot no b0t
+Srila: do plugin de cor Dom Jul 4 e alteracoes para arrumar
+
+$$$$$ ::: Qui Jul  5 05:20:07 -03 2018
+iniciando testes, importou!
+Srila: iniciando leitura do bento Seg Mai 21 08 - tempo ,
+
+$$$$$ ::: Qui Jul  5 05:37:07 -03 2018
+implementando talk em TP!!
+Srila: em musilingua Seg Jun 30 17 - terminar primeira sessao de
+
+$$$$$ ::: Qui Jul  5 05:50:21 -03 2018
+tentando entender quais synths de tp usam palavras dadas de antemao e como
+Srila: tp wordnet Sáb Jun 30 03 - Dom Mai 29 -
+
+$$$$$ ::: Qui Jul  5 06:15:58 -03 2018
+b0t funcionando, falta a mascara no Vim
+Srila: Vim e ferramentas ao artigo do volume I do color p
+
+$$$$$ ::: Qui Jul  5 06:27:28 -03 2018
+sessao menor para finalizar interfaces do b0t no Vim: bot e aa
+Srila: bot melhor , partes vem dos bots Qui Jun 11 02

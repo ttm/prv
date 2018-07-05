@@ -1,4 +1,4 @@
-import os, types, random
+import os, types, random, string
 import nltk as k, networkx as x
 from collections import Counter
 
@@ -118,7 +118,8 @@ class SimplestMarkovReality(Reality):
         # choose a random bigram or trigram
         # choose a word to begin sentence
         # concatenate bi/tri until the phrase is complete
-        words_ = words.split(' ')
+        words_ =  k.wordpunct_tokenize(words)
+        words_ = [i for i in words_ if i not in string.punctuation]
         if len(words_) > 0:
             word = random.choice(words_)
             while word not in self.vocab:

@@ -66,7 +66,6 @@ dbots = ['fabbri', 'zal', 'doria', 'bolsonaro']
 EOF
 endf " }}}
 fu! BotTalk(string) " {{{
-  let tokens = split(a:string, ' ')
   let cmd = 'b.markovTalk("'.a:string.'")'
   py3 b.lastmsg = b.id + ': ' + eval(vim.eval('l:cmd'))
   cal BotDialogAdd(a:string, py3eval('b.lastmsg'))

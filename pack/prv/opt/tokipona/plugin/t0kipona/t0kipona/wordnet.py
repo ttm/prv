@@ -103,3 +103,14 @@ class TPWordnet(TPCorpus):
         # TODO:
         # total number of synsets
         # total number of synsets counting neighbors
+
+class TPWordnetPP(TPWordnet):
+    def __init__(self):
+        TPWordnet.__init__(self)
+        self._mkSSMask()
+
+    def _mkSSMask(self):
+        self.wnss = {}
+        for w in self.wordnet:
+            for ss in self.wordnet[w]:
+                self.wnss[ss] = w

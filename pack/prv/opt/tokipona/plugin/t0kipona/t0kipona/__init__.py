@@ -3,7 +3,7 @@ from .texts import TPTextBasic
 from .statistics import TPStats
 from .synth import TPSynth, TPTabFig
 from .syntax import TPSynHigh
-from .wordnet import TPWordnet
+from .wordnet import TPWordnet, TPWordnetPP
 
 from . import utils
 

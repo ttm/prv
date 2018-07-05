@@ -71,6 +71,8 @@ class TPSynth(TPTextBasic):
         """
         phrase = ''
         if nwords:
+            if nsy == 0:
+                nsy = n.random.randint(1,7)
             for i in range(nwords):
                 w = n.random.choice(self.plain_words)
                 phrase += w + ' '
@@ -113,6 +115,7 @@ class TPSynth(TPTextBasic):
                             elif self._countSyllables(' '.join(p_)) > nsy:
                                 chosen = n.random.randint(0, len(p_))
                                 while p_[chosen] == 'pi':
+
                                     chosen = n.random.randint(0, len(p_))
                                 p_.pop(chosen)
                         else:
