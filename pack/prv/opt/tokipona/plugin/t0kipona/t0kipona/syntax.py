@@ -1,6 +1,6 @@
-from .corpus import TPCorpus, tdir
+from .statistics import TPStats, tdir
 
-class TPSynHigh(TPCorpus):
+class TPSynHigh(TPStats):
     """
     Syntax highlighting for Toki Pona in Vim
 
@@ -13,7 +13,7 @@ class TPSynHigh(TPCorpus):
 
     """
     def __init__(self):
-        TPCorpus.__init__(self)
+        TPStats.__init__(self)
         self._linkClassSyn()
         print(self.__doc__)
 

@@ -1,0 +1,21 @@
+https://webgl2fundamentals.org
+
+WebGL runs on the GPU on your computer. As such you need to provide the code
+that runs on that GPU. You provide that code in the form of pairs of functions.
+Those 2 functions are called a vertex shader and a fragment shader and they are
+each written in a very strictly typed C/C++ like language called GLSL. (GL
+Shader Language).
+
+For each thing you want to draw you setup a bunch of state then execute a pair
+of functions by calling gl.drawArrays or gl.drawElements which executes your
+shaders on the GPU.
+
+1) attributes, buffers, and vertex arrays
+2) uniforms
+3) textures
+4) varyings
+
+WebGL only cares about 2 things. Clipspace coordinates and colors. Your job as a programmer using WebGL is to provide WebGL with those 2 things. You provide your 2 "shaders" to do this. A Vertex shader which provides the clipspace coordinates and a fragment shader that provides the color.
+
+Clipspace coordinates always go from -1 to +1 no matter what size your canvas is. 
+

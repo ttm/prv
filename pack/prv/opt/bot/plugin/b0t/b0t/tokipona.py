@@ -1,4 +1,4 @@
-import string, random
+import string
 import nltk as k
 from t0kipona import TPWordnetPP, TPSynth
 
@@ -27,7 +27,10 @@ class TPBot:
             i += 1
         print(tpw)
         tpw_ = list(set(tpw))
-        w_ = random.choice(tpw_)
+        if tpw_:
+            w_ = self.s.randWord(tpw_)
+        else:
+            w_ = self.s.randWord()
         # self.dd = locals()
         return self.s.createParagraph(1, [w_])
         # percorrer hiperonimos p achar os synsets do toki pona

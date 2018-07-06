@@ -1,5 +1,5 @@
 from .texts import TPTextBasic, tdir
-import numpy as n
+import numpy as n, random
 np = n
 
 class TPSynth(TPTextBasic):
@@ -99,7 +99,7 @@ class TPSynth(TPTextBasic):
         nsy_ = sum([len(self._getSyllables(i)) for i in p_])
         if len(p_) > 2 and nsy_ > 4:
             if n.random.random() < .2:  # use pi in 1/5 of sentences
-                print('\n', p, self._countSyllables(p))
+                # print('\n', p, self._countSyllables(p))
                 where = n.random.randint(len(p_)-2)
                 p_.insert(where+1, 'pi')
                 if p_[where+2][0] not in self.vowels or (p_[where+2][0] in self.vowels and p_[where][-1] in self.vowels):
@@ -125,7 +125,7 @@ class TPSynth(TPTextBasic):
                             w = n.random.choice(self.words_nsy[size-2])
                             p_[chosen] = w
                             p__ = ' '.join(p_)
-                print(' '.join(p_), self._countSyllables(' '.join(p_)))
+                # print(' '.join(p_), self._countSyllables(' '.join(p_)))
         pp = ' '.join(p_)
 
         return pp
@@ -291,6 +291,11 @@ class TPSynth(TPTextBasic):
                     w_.remove(w)
         paragraph = ". ".join(s1+s2)
         return paragraph
+
+    def randWord(self, words=[]):
+        if not words:
+            words = self.plain_words
+        return random.choice(words)
 
 
 class TPTabFig(TPTextBasic):

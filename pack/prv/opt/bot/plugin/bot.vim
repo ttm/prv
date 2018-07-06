@@ -32,7 +32,7 @@ python3 << EOF
 import sys
 keys=tuple(sys.modules.keys())
 for key in keys:
-    if "b0t" in key:
+    if ("b0t" in key) or ("t0kipona" in key):
         del sys.modules[key]
 import b0t, random
 bots = {}

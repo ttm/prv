@@ -96,7 +96,8 @@ fu! AShout(msg) " {{{3
   cal ASessionReceiveMsg()
   let g:aa.events.shouts_count += 1
   if g:aa.set.bot
-    ec a:msg.' || '.BotTalk(a:msg)."\n".TPBotTalk(a:msg)
+    ec a:msg."\n-> ".BotTalk(a:msg)
+    " ec "-> ".TPBotTalk(a:msg)
   el
     ec a:msg
   en
