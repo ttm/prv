@@ -3054,3 +3054,223 @@ Srila: feita Dom Mai 20 17 - 03 : 40 - melhorar
 $$$$$ ::: Sex Jul  6 18:21:07 -03 2018
 retirado bot de toki pona
 Srila: de visita , interagindo nas classes do aa vida Dom Jun
+
+$$$$$ ::: Sex Jul  6 18:23:58 -03 2018
+sessao final de webgl
+Srila: webgl e ferramentas ao equinox Qui Jun 2 13 : 57
+
+$$$$$ ::: Sex Jul  6 18:41:07 -03 2018
+andando com o webgl e interacoes
+Srila: e resto dos dados crus , precisando comer e limpando arquivos
+
+$$$$$ ::: Sex Jul  6 18:54:58 -03 2018
+terminando de ler documento com basico de webgl
+Srila: com webgl2 Sex Jul 6 11 Sáb Jun 9 , sintetizado
+
+$$$$$ ::: Sex Jul  6 19:09:16 -03 2018
+terminada secao de fundamentos do https://webgl2fundamentals.org/webgl/lessons/webgl-fundamentals.html
+Srila: fundamentos de comer , hello world de sh Ter Mai 21
+
+$$$$$ ::: Sex Jul  6 19:24:37 -03 2018
+um triangulo por vertice. Rasterizacao p big data
+Srila: p mudar no calendario Qui Jul 5 min fazem fumegar Sáb
+
+$$$$$ ::: Sex Jul  6 19:40:04 -03 2018
+entendendo exemplos mai avancados de webgl2
+Srila: webgl2 Sex Jun 19 : 38 : 10 - terminar vim
+
+$$$$$ ::: Sex Jul  6 20:09:31 -03 2018
+estudando as possibilidades de nao passar por js para usar webgl e o navegador
+Srila: js Qua Jul 5 10 , etc Sáb Jun 3 05
+
+$$$$$ ::: Sex Jul  6 20:28:35 -03 2018
+estudando regl
+Srila: estudando low resource languages p Cristina e iniciar uma figura de
+
+$$$$$ ::: Dom Jul  8 15:13:45 -03 2018
+sessao artigo
+Srila: artigo alan Qui Jul 5 00 - tempo Ter Jun 7
+
+$$$$$ ::: Dom Jul  8 15:40:44 -03 2018
+melhorando sistematizacao de matching
+Srila: de arrumar os de organizar os proximos compromissos Seg Mai 30
+
+$$$$$ ::: Dom Jul  8 15:45:21 -03 2018
+absorvendo e arrumando escrita e logica
+Srila: escrita dos bots e interagir online Qua Jun 18 : 31
+
+$$$$$ ::: Dom Jul  8 15:59:13 -03 2018
+arrumando matching
+Srila: arrumando roteiro de tokipona Seg Jun 9 , falta a renderizacao
+
+$$$$$ ::: Dom Jul  8 16:13:57 -03 2018
+pensando nas possibilidades emn
+Srila: nas comunidades no github : 30 18 20 17 - tentativa
+
+$$$$$ ::: Dom Jul  8 16:31:28 -03 2018
+aprendendo com o artigo. Reescrita do alan e professores foi boa
+Srila: o estudo do metodo , ha frases sobre os autores Sáb
+
+$$$$$ ::: Dom Jul  8 16:59:38 -03 2018
+andando com edge e vertex matching
+Srila: andando macia primeira sessao termina a funcao para tp Qui Jun
+
+$$$$$ ::: Dom Jul  8 17:16:15 -03 2018
+andando com o final da intro de coarsening
+Srila: o bot para voltar aa , lombrei nas imagens basicas Dom
+
+$$$$$ ::: Dom Jul  8 18:11:08 -03 2018
+sessao primeira de 3-4 para finalizar artigo do alan
+Srila: alan Qui Jul 6 20 03 - tempo Ter Mai 29
+
+$$$$$ ::: Dom Jul  8 18:28:19 -03 2018
+RM HEM LEM MHEM
+Srila: 03 : 38 - melhorar / webgl , textos e strength
+
+$$$$$ ::: Dom Jul  8 18:41:30 -03 2018
+pag 17, bora 1 pag cada 30 min mm
+Srila: cada visualizacao Ter Jul 3 15 Sex Jul 2 10 ,
+
+$$$$$ ::: Dom Jul  8 18:59:18 -03 2018
+pag 19 bora
+Srila: 19 20 06 : 54 : 04 - 03 2018 -----
+
+$$$$$ ::: Dom Jul  8 23:16:17 -03 2018
+sessao penultima ou quase para revisar artigo do alan
+Srila: artigo Sáb Jun 30 12 do tp funcionando bonito Qui Jul
+
+$$$$$ ::: Dom Jul  8 23:32:26 -03 2018
+entendendo edge-rate-based matching espectral
+Srila: entendendo o estudo minimo de organizar os dados , ha frases
+
+$$$$$ ::: Dom Jul  8 23:46:57 -03 2018
+andando com regularizacao para emn
+Srila: para arxiv Dom Jul 5 08 - fundamentals . research panorama
+
+$$$$$ ::: Seg Jul  9 00:01:49 -03 2018
+pag 21
+Srila: 21 : 05 - tentativa Qua Jun 9 02 : 12
+
+$$$$$ ::: Ter Jul 10 02:05:32 -03 2018
+retomando artigo de emn
+Srila: retomando dev Sex Jun 9 , colocando ultima passagem do latex
+
+$$$$$ ::: Ter Jul 10 02:26:03 -03 2018
+pag 23
+Srila: pag 11 - fundamentals . Dom Mai 20 19 20 16
+
+$$$$$ ::: Ter Jul 10 02:36:45 -03 2018
+clustering via modularidade
+Srila: via jquery , implementar mudanca de abertura d interacao com as
+
+$$$$$ ::: Ter Jul 10 02:51:04 -03 2018
+andando com clustering strategy
+Srila: com o formato requisitado Ter Mai 30 : 15 Sex Jul
+
+$$$$$ ::: Ter Jul 10 03:05:51 -03 2018
+pag 24, terminando clustering strategies
+Srila: 24 - Dom Jun 6 14 - 03 : 03 -
+
+$$$$$ ::: Ter Jul 10 03:21:04 -03 2018
+terminado clustering strategies
+Srila: terminado editorial e conhecimentos gerais com ic da formalizacao da que
+
+$$$$$ ::: Ter Jul 10 04:47:36 -03 2018
+contraction
+Srila: 03 : 55 - tentativa Seg Jul 5 min fazem fumegar
+
+$$$$$ ::: Ter Jul 10 04:52:11 -03 2018
+show only network diconnected vertexes, the nodes with only one connection, and those that are connected to the nodes with degree one
+Srila: the more messages in cchange ? Sáb Jun 18 19 :
+
+$$$$$ ::: Ter Jul 10 04:52:32 -03 2018
+thats the periphery ring
+Srila: the more messages in cchange p submeter artigo p fazer o
+
+$$$$$ ::: Ter Jul 10 05:01:17 -03 2018
+make small versions of the networks, this coarser versions, renormalized versions, of the networks, are more informative then the hairball
+Srila: of the fucking manual OR real time frequency modulation Seg Jun
+
+$$$$$ ::: Ter Jul 10 05:01:55 -03 2018
+less time frequency modulation
+Srila: frequency modulation Seg Jul 5 min seria melhor ? Ter Jul
+
+$$$$$ ::: Ter Jul 10 05:04:33 -03 2018
+pensando nas redes em representacao multinivel
+Srila: multinivel Qui Jun 7 00 : 27 : 05 : se
+
+$$$$$ ::: Ter Jul 10 05:09:09 -03 2018
+a estrategia multinivel, p visualizacao, eh um grafo semi-hierarquico, em que estruturas com mais vertices (ou arestas) sao pais de redes menores
+Srila: que sejam , interagindo com postagens , atrai mais do prim
+
+$$$$$ ::: Ter Jul 10 05:17:46 -03 2018
+melhorada escrita
+Srila: escrita dos dados especificos , integrar prv ? Seg Jun 9
+
+$$$$$ ::: Ter Jul 10 06:20:09 -03 2018
+projection
+Srila: funcionando com sub do grupo do metodo , entender a wordnet
+
+$$$$$ ::: Ter Jul 10 06:43:19 -03 2018
+ba
+Srila: sessao para cada colorscheme Dom Jun 19 22 - tentativa Qua
+
+$$$$$ ::: Ter Jul 10 06:47:59 -03 2018
+refinement finalmente
+Srila: finalmente Seg Jun 6 20 16 - tempo Ter Jun 30
+
+$$$$$ ::: Ter Jul 10 07:16:58 -03 2018
+articulado com poppi e frank lane de $$ p dev
+Srila: com webgl , precisando comer , item 13 : 33 :
+
+$$$$$ ::: Ter Jul 10 07:38:37 -03 2018
+sessao p fazer refinement
+Srila: fazer o webgl - terminar primeira parte dos bots e feita
+
+$$$$$ ::: Ter Jul 10 08:10:27 -03 2018
+extrema
+Srila: simples e interacoes Sex Jun 7 18 19 20 18 20
+
+$$$$$ ::: Ter Jul 10 08:25:38 -03 2018
+refimenent and coarsening
+Srila: coarsening Qui Jul 5 05 - terminar cap da Wikipedia ao
+
+$$$$$ ::: Ter Jul 10 08:39:17 -03 2018
+refinement algorithms
+Srila: com aa funcionando em js para conversar em RDF Seg Mai
+
+$$$$$ ::: Ter Jul 10 08:43:27 -03 2018
+alg p particionar: escolher grupos aleatorios e trocar eles de particao contando os cruzamentos de aresta como fitness
+Srila: alg 1 Dom Jun 2 . Rasterizacao p scers Seg Mai
+
+$$$$$ ::: Ter Jul 10 11:50:24 -03 2018
+fazer as redes heterogeneas do fb, de interacao e de amizade
+Srila: fb , importou ! Qui Jul 2 slots de otimizacao multinivel
+
+$$$$$ ::: Ter Jul 10 13:54:57 -03 2018
+sessao antes de ligar p leonardo
+Srila: antes do processamento , é um pouco , fazendon revisao do
+
+$$$$$ ::: Ter Jul 10 14:25:17 -03 2018
+musica, grimoire
+Srila: - Dom Jul 1 14 : 43 - melhorar e comunicacoes
+
+$$$$$ ::: Qua Jul 11 09:58:22 -03 2018
+sessao de engate, todos...
+Srila: sessao final p vim_use ) Dom Jul 1 . Apenas commitar
+
+$$$$$ ::: Qua Jul 11 10:44:06 -03 2018
+adiantando email p cristina de contexto
+Srila: p leo e interagir online Qua Mai 20 : 02 :
+
+$$$$$ ::: Qua Jul 11 10:59:32 -03 2018
+enviada msg p Cristina
+Srila: p arrumar p previsao d aa Ter Jun 2 10 ,
+
+$$$$$ ::: Qua Jul 11 11:14:11 -03 2018
+lombrando e adiantando planejamentos
+Srila: adiantando passagem p usar os codigos ccs Dom Mai 20 17
+
+$$$$$ ::: Qua Jul 11 11:28:49 -03 2018
+retomando fazecao
+Srila: retomando de esoterico , editorial do final do tt d comunicacao

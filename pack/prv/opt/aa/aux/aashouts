@@ -1292,3 +1292,219 @@ Sex Jul  6 18:15:45 -03 2018
 retirado bot de toki pona
 Sex Jul  6 18:21:07 -03 2018
 -----
+
+
+$$$$$
+sessao final de webgl
+Sex Jul  6 18:23:58 -03 2018
+-----
+andando com o webgl e interacoes
+Sex Jul  6 18:41:07 -03 2018
+-----
+terminando de ler documento com basico de webgl
+Sex Jul  6 18:54:58 -03 2018
+-----
+terminada secao de fundamentos do https://webgl2fundamentals.org/webgl/lessons/webgl-fundamentals.html
+Sex Jul  6 19:09:16 -03 2018
+-----
+um triangulo por vertice. Rasterizacao p big data
+Sex Jul  6 19:24:37 -03 2018
+-----
+entendendo exemplos mai avancados de webgl2
+Sex Jul  6 19:40:04 -03 2018
+-----
+estudando as possibilidades de nao passar por js para usar webgl e o navegador
+Sex Jul  6 20:09:31 -03 2018
+-----
+estudando regl
+Sex Jul  6 20:28:35 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+sessao artigo
+Dom Jul  8 15:13:45 -03 2018
+-----
+melhorando sistematizacao de matching
+Dom Jul  8 15:40:44 -03 2018
+-----
+absorvendo e arrumando escrita e logica
+Dom Jul  8 15:45:21 -03 2018
+-----
+arrumando matching
+Dom Jul  8 15:59:13 -03 2018
+-----
+pensando nas possibilidades emn
+Dom Jul  8 16:13:57 -03 2018
+-----
+aprendendo com o artigo. Reescrita do alan e professores foi boa
+Dom Jul  8 16:31:28 -03 2018
+-----
+andando com edge e vertex matching
+Dom Jul  8 16:59:38 -03 2018
+-----
+andando com o final da intro de coarsening
+Dom Jul  8 17:16:15 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+sessao primeira de 3-4 para finalizar artigo do alan
+Dom Jul  8 18:11:07 -03 2018
+-----
+RM HEM LEM MHEM
+Dom Jul  8 18:28:19 -03 2018
+-----
+pag 17, bora 1 pag cada 30 min mm
+Dom Jul  8 18:41:30 -03 2018
+-----
+pag 19 bora
+Dom Jul  8 18:59:17 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+sessao penultima ou quase para revisar artigo do alan
+Dom Jul  8 23:16:17 -03 2018
+-----
+entendendo edge-rate-based matching espectral
+Dom Jul  8 23:32:26 -03 2018
+-----
+andando com regularizacao para emn
+Dom Jul  8 23:46:57 -03 2018
+-----
+pag 21
+Seg Jul  9 00:01:49 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+retomando artigo de emn
+Ter Jul 10 02:05:32 -03 2018
+-----
+pag 23
+Ter Jul 10 02:26:03 -03 2018
+-----
+clustering via modularidade
+Ter Jul 10 02:36:45 -03 2018
+-----
+andando com clustering strategy
+Ter Jul 10 02:51:04 -03 2018
+-----
+pag 24, terminando clustering strategies
+Ter Jul 10 03:05:51 -03 2018
+-----
+terminado clustering strategies
+Ter Jul 10 03:21:04 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+contraction
+Ter Jul 10 04:47:36 -03 2018
+-----
+show only network diconnected vertexes, the nodes with only one connection, and those that are connected to the nodes with degree one
+Ter Jul 10 04:52:10 -03 2018
+-----
+thats the periphery ring
+Ter Jul 10 04:52:32 -03 2018
+-----
+make small versions of the networks, this coarser versions, renormalized versions, of the networks, are more informative then the hairball
+Ter Jul 10 05:01:17 -03 2018
+-----
+less time frequency modulation
+Ter Jul 10 05:01:55 -03 2018
+-----
+pensando nas redes em representacao multinivel
+Ter Jul 10 05:04:33 -03 2018
+-----
+a estrategia multinivel, p visualizacao, eh um grafo semi-hierarquico, em que estruturas com mais vertices (ou arestas) sao pais de redes menores
+Ter Jul 10 05:09:09 -03 2018
+-----
+melhorada escrita
+Ter Jul 10 05:17:46 -03 2018
+-----
+projection
+Ter Jul 10 06:20:09 -03 2018
+-----
+ba
+Ter Jul 10 06:43:19 -03 2018
+-----
+refinement finalmente
+Ter Jul 10 06:47:59 -03 2018
+-----
+$$$$$
+
+
+articulado com poppi e frank lane de $$ p dev
+Ter Jul 10 07:16:58 -03 2018
+-----
+
+
+$$$$$
+sessao p fazer refinement
+Ter Jul 10 07:38:37 -03 2018
+-----
+extrema
+Ter Jul 10 08:10:27 -03 2018
+-----
+refimenent and coarsening
+Ter Jul 10 08:25:37 -03 2018
+-----
+refinement algorithms
+Ter Jul 10 08:39:17 -03 2018
+-----
+alg p particionar: escolher grupos aleatorios e trocar eles de particao contando os cruzamentos de aresta como fitness
+Ter Jul 10 08:43:27 -03 2018
+-----
+$$$$$
+
+
+fazer as redes heterogeneas do fb, de interacao e de amizade
+Ter Jul 10 11:50:24 -03 2018
+-----
+
+
+$$$$$
+sessao antes de ligar p leonardo
+Ter Jul 10 13:54:56 -03 2018
+-----
+musica, grimoire
+Ter Jul 10 14:25:17 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+sessao de engate, todos...
+Qua Jul 11 09:58:22 -03 2018
+-----
+adiantando email p cristina de contexto
+Qua Jul 11 10:44:06 -03 2018
+-----
+enviada msg p Cristina
+Qua Jul 11 10:59:32 -03 2018
+-----
+lombrando e adiantando planejamentos
+Qua Jul 11 11:14:11 -03 2018
+-----
+retomando fazecao
+Qua Jul 11 11:28:49 -03 2018
+-----

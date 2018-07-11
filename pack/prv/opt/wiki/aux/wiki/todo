@@ -10,6 +10,26 @@ sexta: dev dataviz, versinus
 sábado: OPS, retomar outro dev
 domingo: reavaliar tudo
 
+math:
+- optimization (linear, nonlinear, combinatorial)
+- graph
+physics:
+- complex networks (newman, other, classes)
+- relativity, quantum, solid-state / materials
+- information, maxell's deamon
+- crystoalography
+- classical mechanics, symmetries, Suskind
+computer science:
+- cloud framework for social harnessing
+  - rdf
+  - works offline
+  - works in sync with others
+    - one is clock
+    - long loops assert that each user navigates the same time-dependent structures
+  - yield visual and sonic discourse
+
+
+
 
 ==========
 
@@ -34,7 +54,7 @@ notas:
 >>>>>>> 87d550160b9266fd306433c0de4c027e25a2d4ba:pack/ttm/opt/wiki/aux/wiki/todo.wiki
 = lightyearstones =
 :stones:Stones:
-* finish about computer science and physics this year and the next.
+* finish about computer science and physics and maths this year and the next.
 * start medicine school in 2020
 * handle humanities in general as possible (philosophy and anthropology)
 
@@ -306,6 +326,34 @@ Sex Fev 16 13:08:45 -02 2018
 ./various/daily stuff
 
 == now ==
+- finish mls OK
+- tallip
+- ff-ubatuba
+- edital ufabc:
+  - nexos -> bots raspadores
+  - jardin -> www audiovisual
+  - chico+banto ->
+  - analitica audiovisual -> ccNetViz? Babylon+Grimoire? 
+- ttm2, abstract, trb fut, conclusoes , art ala
+  - visto com Alan que sim, p fazer
+- escrever Leonardo OK
+- art vim
+- dev aa:
+  - terminar de ler babylon
+  - hacks iniciais babylon
+  - hacks iniciais flask
+  - implementacoes multinivel iniciais
+- leitura paisagem sonora
+- escrito p Cristina OK
+- bento
+
+
+
+=== long-term goal ==
+finish 
+
+
+=== medium-term goal ==
 make ccNetViz sing (0)
 the drawing client is to be coupled to it. (1)
 the server is a simple flask to interface with database and calculations. (2)
@@ -411,6 +459,11 @@ Jul
 06 - art alan
 07 - viagem
 
+08 - artigo alan
+08-09 - email cristina: andamento alan e regl
+    - se um dia antes tivermos o prototipo,
+    tivermos conversado sobre paisagens sonoras e feito avancos,
+    mando o projeto
 
 
 
