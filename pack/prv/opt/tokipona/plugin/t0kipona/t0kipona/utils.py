@@ -1,5 +1,5 @@
 import nltk as k, os
-from percolation.rdf import c
+# from percolation.rdf import c
 
 __doc__ = """Utilitiy variables and functions"""
 
@@ -118,13 +118,13 @@ def allTokiPonaExistentWords():
     return stats
 
 if __name__ == '__main__':
-    c('vowels:', vowels)
-    c('\n', 'consonants:', consonants)
-    c('\n', 'invalid_syllables (4):', invalid_syllables)
+    print('vowels:', vowels)
+    print('\n', 'consonants:', consonants)
+    print('\n', 'invalid_syllables (4):', invalid_syllables)
     all_syllables = allConsonantSyllables()
-    c('\n', 'valid syllables ({}):'.format(len(all_syllables)),
+    print('\n', 'valid syllables ({}):'.format(len(all_syllables)),
             all_syllables)
     all_possible_words = allTokiPonaPossibleWords()
-    c('\n', 'all tokipona possible words with 3 syllables',
+    print('\n', 'all tokipona possible words with 3 syllables',
             '({})'.format(len(all_possible_words)),
             all_possible_words)

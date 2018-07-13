@@ -3274,3 +3274,195 @@ Srila: adiantando passagem p usar os codigos ccs Dom Mai 20 17
 $$$$$ ::: Qua Jul 11 11:28:49 -03 2018
 retomando fazecao
 Srila: retomando de esoterico , editorial do final do tt d comunicacao
+
+$$$$$ ::: Qua Jul 11 11:55:03 -03 2018
+enviado artigo p tallip no formato q querem
+Srila: formato requisitado Ter Mai 22 11 02 - Dom Jul 2
+
+$$$$$ ::: Qua Jul 11 12:12:41 -03 2018
+escrito p ff e ninho
+Srila: escrito no relatorio fapesp tt5 , animacoes e fazendo cadastro Ter
+
+$$$$$ ::: Qua Jul 11 12:36:01 -03 2018
+sessao voltando a fumegar no babylon
+Srila: no calendario Qui Jun 4 e algumas pessoas ou grupos Dom
+
+$$$$$ ::: Qua Jul 11 13:22:36 -03 2018
+estudando documentacao geral do babylon
+Srila: estudando low resource languages p soltar selfcomp ao flask e subir
+
+$$$$$ ::: Qua Jul 11 13:36:26 -03 2018
+explorando babylon melhor
+Srila: melhor Ter Jul 3 14 : - Dom Jul 5 Qua
+
+$$$$$ ::: Qua Jul 11 13:53:36 -03 2018
+testes iniciais, articulacoes em rede
+Srila: testes , editorial do Leadbeater , melhorando a Marilia Pisani e
+
+$$$$$ ::: Qua Jul 11 14:06:51 -03 2018
+pensando em como implementar da melhor forma
+Srila: pensando em js para os autores Sáb Jun 1 17 :
+
+$$$$$ ::: Qua Jul 11 14:36:49 -03 2018
+terminado cameras, lendo iluminacao
+Srila: lendo indicacoes para voltar ao rel Sáb Jun 19 : 27
+
+$$$$$ ::: Qui Jul 12 00:13:08 -03 2018
+sessao p absorver babylon
+Srila: p nuvem Ter Mai 30 : o software tp funcionando bonito
+
+$$$$$ ::: Qui Jul 12 00:28:58 -03 2018
+entendendo animacao no babylon
+Srila: no tranco p cristina Sex Jul 3 18 19 - tentativa
+
+$$$$$ ::: Qui Jul 12 00:47:34 -03 2018
+terminado basico de animacao
+Srila: basico de massive tagging , atrai mais Qui Jul 2 20
+
+$$$$$ ::: Qui Jul 12 01:01:42 -03 2018
+helper de animacao
+Srila: de tokipona Dom Mai 20 19 21 : 24 : 21
+
+$$$$$ ::: Qui Jul 12 01:22:47 -03 2018
+cansado de babylon, pensando em pausa para continuar depois, exercicios, outras atividades
+Srila: para fazer um barulhinho especial , importou ! Qui Jul 6
+
+$$$$$ ::: Qui Jul 12 06:57:48 -03 2018
+sessao p planejar o dia
+Srila: p thais Ter Jun 30 : 02 - melhorar / processamentos
+
+$$$$$ ::: Qui Jul 12 07:13:03 -03 2018
+escrevendo conclusoes, adiantado todo
+Srila: todo Ter Mai 29 : Seg Mai 21 09 - tentativa
+
+$$$$$ ::: Qui Jul 12 07:28:50 -03 2018
+feita conclusao, revisando perspectivas futuras
+Srila: revisando syn high , segunda tentativa Qua Mai 22 04 :
+
+$$$$$ ::: Qui Jul 12 07:43:15 -03 2018
+terminado de revisar trab futuros
+Srila: terminado , Leo , pag 9 02 : 01 - tentativa
+
+$$$$$ ::: Qui Jul 12 08:07:56 -03 2018
+terminado animacao
+Srila: terminado hack minimo no prv q eu aprenda hebraico Dom Mai
+
+$$$$$ ::: Qui Jul 12 08:21:21 -03 2018
+escrita msg p nexos
+Srila: escrita dos dados crus , avaliando andamento Seg Mai 21 -
+
+$$$$$ ::: Qui Jul 12 08:34:52 -03 2018
+enviada msg p nexos
+Srila: enviada msg p isso Ter Jul 1 16 : 50 -
+
+$$$$$ ::: Qui Jul 12 08:50:51 -03 2018
+terminado basico de colisao
+Srila: terminado , nova home no diretorio certo Seg Jul 6 12
+
+$$$$$ ::: Qui Jul 12 08:58:37 -03 2018
+detectando colisoes
+Srila: melhorando a bib Sáb Jun 2 slots de antemao e prv
+
+$$$$$ ::: Qui Jul 12 09:18:16 -03 2018
+primeira sessao completa soh sobre babylon, vai essa e mais uma acho para terminar o 101
+Srila: uma nova home no rel Sáb Jun 6 10 - fundamentals
+
+$$$$$ ::: Qui Jul 12 09:26:07 -03 2018
+FakeTruque: your social networking Fourier Transform
+Srila: : pjreddie Ter Jun 3 10 : todo Seg Jun 2
+
+$$$$$ ::: Qui Jul 12 09:34:22 -03 2018
+raycasts
+Srila: pegar no tranco p rdf Sex Jul 4 17 : 31
+
+$$$$$ ::: Qui Jul 12 09:58:38 -03 2018
+sprites
+Srila: Jun 30 15 : 58 - Dom Jul 4 15 :
+
+$$$$$ ::: Qui Jul 12 10:11:39 -03 2018
+terminado sprites
+Srila: terminado editorial e VI , funcionando com a maju e pouco
+
+$$$$$ ::: Qui Jul 12 10:35:54 -03 2018
+pausa, voltando
+Srila: voltando depois acrescentar artigo Sáb Jun 30 : 27 - melhorar
+
+$$$$$ ::: Qui Jul 12 10:53:53 -03 2018
+sequelando na net
+Srila: na ontologia do bot inicial Qui Jul 2 19 20 :
+
+$$$$$ ::: Qui Jul 12 11:08:38 -03 2018
+andando com as particulas. Gradientes de tamanho
+Srila: andando macia primeira parte do github . Pele maior , parte
+
+$$$$$ ::: Qui Jul 12 11:20:27 -03 2018
+ainda em particulas, rotacoes, cores, etc
+Srila: etc . Arrumando o webgl , etc Sáb Jun 30 13
+
+$$$$$ ::: Qui Jul 12 11:24:29 -03 2018
+segunda sessao de babylon, acabando?
+Srila: sessao faio ... Indo atras da sessao . Arrumando o color
+
+$$$$$ ::: Qui Jul 12 12:49:38 -03 2018
+segunda sessao babylon, speed
+Srila: sessao ( ser ): ona li como Qui Jun 3 Sáb
+
+$$$$$ ::: Qui Jul 12 13:35:45 -03 2018
+terminado particulas
+Srila: terminado editorial do d3 Qua Jul 1 18 : 53 :
+
+$$$$$ ::: Qui Jul 12 13:54:14 -03 2018
+height map
+Srila: 2018 ----- feito mais grave , comunidades q mais gente ,
+
+$$$$$ ::: Qui Jul 12 17:46:23 -03 2018
+terminada leitura do tutorial de babylon, sessao de dev
+Srila: sessao primeira parte das rotinas em como melhorar / TALLIP Qui
+
+$$$$$ ::: Qui Jul 12 18:05:12 -03 2018
+escrito roteiro de dev inicial
+Srila: escrito p deixar o color voltar ao CChange () Dom Mai
+
+$$$$$ ::: Qui Jul 12 19:29:21 -03 2018
+retomado dev, ateh 5k esferas fumegando no lap com iluminacao e navegavel
+Srila: com maju adm do pau Sex Jul 6 17 - fazer
+
+$$$$$ ::: Qui Jul 12 19:45:07 -03 2018
+feita gambi em flask, indo p http request
+Srila: gambi p previsao d interacao com grupo virus Dom Jul 10
+
+$$$$$ ::: Qui Jul 12 20:00:42 -03 2018
+precisando passar o html p servidor
+Srila: precisando comer e VI , interagindo nas classes Seg Mai 21
+
+$$$$$ ::: Qui Jul 12 20:20:37 -03 2018
+terminada gambi inicial
+Srila: gambi p recuperar resto dos arquivos da folha 3 18 :
+
+$$$$$ ::: Sex Jul 13 10:16:35 -03 2018
+sessao p ver o quanto consigo fazer, foco no dev do multilevel
+Srila: fazer regressao linear via flask e logica Dom Jun 6 14
+
+$$$$$ ::: Sex Jul 13 10:45:31 -03 2018
+feita gambi fumegar, pensando em layouts baratos
+Srila: gambi em RDF Seg Mai 29 : 09 - plotar -
+
+$$$$$ ::: Sex Jul 13 11:04:23 -03 2018
+escrito p cristina com noticias
+Srila: com postagens , melhorando o proprio texto p absorver babylon ,
+
+$$$$$ ::: Sex Jul 13 11:05:18 -03 2018
+matutado sobre layouts
+Srila: sobre cores com artigo c yda - 03 - based matching
+
+$$$$$ ::: Sex Jul 13 11:16:51 -03 2018
+marcando toca, interagindo no nexos, atualizando v!rus
+Srila: interagindo nas redes Qui Jun 3 11 14 - 03 2018
+
+$$$$$ ::: Sex Jul 13 11:43:48 -03 2018
+estudando formas de calcular distancia
+Srila: de cor Dom Mai 21 : pensando em alguns casos o
+
+$$$$$ ::: Sex Jul 13 11:49:53 -03 2018
+commitando tudo p dist upgrade
+Srila: p http request Qui Jun 6 19 20 05 : 17

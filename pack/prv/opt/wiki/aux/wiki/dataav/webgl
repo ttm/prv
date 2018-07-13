@@ -1,3 +1,21 @@
+= dev with babylon and grimoire =
+
+- make minimal 3d implementation using spheres and lines
+- make light on and off and dimmer (and maybe types of light)
+- make spectral graph theory exhibitions to validate regular graphs
+- explore the spotLight.projectionTexture, make lighting shows with multiple animated colored lights
+  https://doc.babylonjs.com/babylon101/lights
+- make animation cycles between layout positions in small networks
+  (try on larger networks)
+- make particle system as in:
+  https://doc.babylonjs.com/babylon101/particles
+  https://www.babylonjs-playground.com/#TUNZFH
+  https://www.babylonjs-playground.com/#TUNZFH#1
+    to account for the user experience in using the MLS platform.
+  adapt particle systems to network/complex systems
+
+= webgl notes =
+
 https://webgl2fundamentals.org
 
 WebGL runs on the GPU on your computer. As such you need to provide the code
