@@ -1702,3 +1702,135 @@ Sex Jul 13 11:43:47 -03 2018
 commitando tudo p dist upgrade
 Sex Jul 13 11:49:53 -03 2018
 -----
+
+
+$$$$$
+sessao p implementar layout basico de distancias
+Sex Jul 13 12:18:40 -03 2018
+-----
+$$$$$
+
+
+sessao engate, comecando com aa
+Sáb Jul 14 08:14:15 -03 2018
+-----
+
+
+$$$$$
+aa, todo
+Sáb Jul 14 08:15:38 -03 2018
+-----
+lido acho q metade do magic glasses
+Sáb Jul 14 10:16:32 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+sessao de comunicacao geral
+Sáb Jul 14 10:38:07 -03 2018
+-----
+escrevendo p cristina
+Sáb Jul 14 10:53:28 -03 2018
+-----
+enviada msg p cristina
+Sáb Jul 14 11:10:53 -03 2018
+-----
+fazendo rota via url para carregar as interface com configuracoes diferentes
+Sáb Jul 14 11:24:17 -03 2018
+-----
+implementando rotas
+Sáb Jul 14 11:39:13 -03 2018
+-----
+fazendo layouts em dimensoes diferentes, com e sem aresta
+Sáb Jul 14 12:08:56 -03 2018
+-----
+desenvolvido todo ateh segunda-feira or so
+Sáb Jul 14 12:25:56 -03 2018
+-----
+burilado com as funcoes para calculo de centro e periferia em redes
+Sáb Jul 14 12:40:17 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+sessao p implementacao ao menos das primeiras estrategias multinivel
+Sáb Jul 14 19:01:52 -03 2018
+-----
+pensando na estapa de contracting, para as superarestas
+Sáb Jul 14 19:17:29 -03 2018
+-----
+adentrando dev do modulo
+Sáb Jul 14 19:57:10 -03 2018
+-----
+pensando classe para mls
+Sáb Jul 14 20:12:55 -03 2018
+-----
+fazendo com calma o esquema basico multinivel
+Sáb Jul 14 20:18:12 -03 2018
+-----
+calculando os centroides
+Sáb Jul 14 20:32:36 -03 2018
+-----
+rascunhando classe ml1
+Sáb Jul 14 20:47:31 -03 2018
+-----
+estudando possibilidades de lidar com as subredes, seus nucleos, e meta-arestas entre os metavertices
+Sáb Jul 14 21:06:30 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+primeira sessao, retomando todo e dev
+Dom Jul 15 09:06:17 -03 2018
+-----
+web, comunicacoes, contextualizando
+Dom Jul 15 09:23:43 -03 2018
+-----
+arrumando classe multilevel strategy 1
+Dom Jul 15 09:37:19 -03 2018
+-----
+implementando a sintese da metarede
+Dom Jul 15 09:51:44 -03 2018
+-----
+collapse
+Dom Jul 15 10:28:51 -03 2018
+-----
+entendendo melhor mandeira de lidar com dicionarios de multiplas chaves e mesmo valor, (e.g. nos e metanos)
+Dom Jul 15 10:45:46 -03 2018
+-----
+terminado collapso inicial, acho que tudo agora fumega, testes
+Dom Jul 15 11:00:06 -03 2018
+-----
+debugada classe, indo para centro e periferia
+Dom Jul 15 11:09:39 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+iniciando batelada de sessoes para deixar o prototipo do multinivel adiantado
+Dom Jul 15 21:53:57 -03 2018
+-----
+retomado dev, analisando estado do codigo, me virando com Vim
+Dom Jul 15 22:09:34 -03 2018
+-----
+feitas operacoes basicas, pensando em arrumar parte de cores para poder labutar bem nessa maratona
+Dom Jul 15 22:24:23 -03 2018
+-----
+debugado color, tinha quebrado arrumacoes usuais
+Dom Jul 15 22:32:38 -03 2018
+-----
+arrumada alternancia do grupo normal ou escolhido
+Dom Jul 15 22:39:56 -03 2018
+-----

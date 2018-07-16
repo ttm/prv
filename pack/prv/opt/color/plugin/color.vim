@@ -6,7 +6,6 @@
 " vim_use email list (discussion forum)
 " Dra. Cristina Ferreira de Oliveira (VICG/ICMC/USP),
 " FAPESP (project 2017/05838-3)
-" Dr. Ricardo Fabbri (IPRJ/UERJ)
 
 " Load Once: {{{3
 if exists("g:loaded_colorplugin") && (exists("g:color_not_hacking") || exists("g:prv_not_hacking_all"))
@@ -171,7 +170,7 @@ fu! CChange() " {{{3
   let sbg = synIDattr(synIDtrans(sid), "bg")
   let name = CStack()[-1][-1]
   let g:asdasd = l:name
-  if len(name) > 0
+  if (len(name) > 0) && (name != 'Normal')
     let fg = map(synstack(line('.'), col('.')), 'synIDattr(synIDtrans(v:val), "fg")')[-1]
     if fg == ''
       let fg = sfg
@@ -215,6 +214,7 @@ fu! CChange() " {{{3
   cal getchar(1)
   let emphn = 0
   let emph = ['bold', 'underline', 'bold,underline', 'NONE']
+  let name_ = name
   wh c != 'n'
       let mex = 1  " chosen key Makes for an EXecution ?
       let c = nr2char(getchar())
@@ -226,6 +226,14 @@ fu! CChange() " {{{3
           let who = 'fg'
           let mcmd = 'echo "on the foreground color"'
         en
+      elsei c == 'N'
+        if name == 'Normal'
+          let name = name_
+        el
+          let name_ = name
+          let name = 'Normal'
+        en
+        let mcmd = 'ec "toggled selected and Normal highlighting group"'
       elsei c == 'i'
         let [rgb_, rgbb_] = [rgbb_, rgb_]
         let mcmd = 'echo "colors inverted"'
@@ -242,7 +250,7 @@ fu! CChange() " {{{3
         exe 'hi' name 'cterm=' . emph[emphn]
         let mcmd = ''
       elsei c == "h"
-        ec "('~ help ~\n\nrewq gfds bvcx' to swap color space (see :help color);\n'i p t ' to Invert fg-bg, change emPhasis, toggle fg/bg;\n'h n' for Help quit/Next)."
+        ec "~ help ~\n\nrewq gfds bvcx' to sweep color space (see :help color);\n'i p t' to Invert fg-bg, change emPhasis, toggle fg/bg;\n'N' to toggle selected and Normal groups;\n'h n' for Help quit/_next.\n(press any key)"
         cal getchar()
         let mcmd = ''
       elsei who == 'fg'

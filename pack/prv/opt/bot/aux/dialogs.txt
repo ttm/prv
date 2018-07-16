@@ -3466,3 +3466,135 @@ Srila: de cor Dom Mai 21 : pensando em alguns casos o
 $$$$$ ::: Sex Jul 13 11:49:53 -03 2018
 commitando tudo p dist upgrade
 Srila: p http request Qui Jun 6 19 20 05 : 17
+
+$$$$$ ::: Sex Jul 13 12:18:40 -03 2018
+sessao p implementar layout basico de distancias
+Srila: de linha diferente da solucao inicial do mundo Qui Jun 3
+
+$$$$$ ::: Sáb Jul 14 08:14:16 -03 2018
+sessao engate, comecando com aa
+Srila: comecando sessao antes de 3 - based matching espectral Dom Mai
+
+$$$$$ ::: Sáb Jul 14 08:15:38 -03 2018
+aa, todo
+Srila: todo Ter Jun 9 02 : 32 - based matching espectral
+
+$$$$$ ::: Sáb Jul 14 10:16:32 -03 2018
+lido acho q metade do magic glasses
+Srila: q acontece com Yda Seg Jun 1 10 08 - carregar
+
+$$$$$ ::: Sáb Jul 14 10:38:07 -03 2018
+sessao de comunicacao geral
+Srila: de nomes Qua Jul 4 e d3 Qua Jun 3 05
+
+$$$$$ ::: Sáb Jul 14 10:53:28 -03 2018
+escrevendo p cristina
+Srila: escrevendo termos da folha 3 10 07 - terminar colorschemes da
+
+$$$$$ ::: Sáb Jul 14 11:10:53 -03 2018
+enviada msg p cristina
+Srila: msg p mudar passo do glerm Ter Mai 30 min seria
+
+$$$$$ ::: Sáb Jul 14 11:24:17 -03 2018
+fazendo rota via url para carregar as interface com configuracoes diferentes
+Srila: as bibliotecas Sex Jun 19 22 10 14 : 21 09
+
+$$$$$ ::: Sáb Jul 14 11:39:13 -03 2018
+implementando rotas
+Srila: implementando talk em contato com noticias Sex Jul 11 02 :
+
+$$$$$ ::: Sáb Jul 14 12:08:56 -03 2018
+fazendo layouts em dimensoes diferentes, com e sem aresta
+Srila: layouts Sex Jul 1 15 - based matching Dom Jun 6
+
+$$$$$ ::: Sáb Jul 14 12:25:57 -03 2018
+desenvolvido todo ateh segunda-feira or so
+Srila: segunda sessao com basico de calcular distancia Sex Jul 11 Sáb
+
+$$$$$ ::: Sáb Jul 14 12:40:17 -03 2018
+burilado com as funcoes para calculo de centro e periferia em redes
+Srila: com valores randomicos - plotar - fazer servidorzinho flask q retorna
+
+$$$$$ ::: Sáb Jul 14 19:01:52 -03 2018
+sessao p implementacao ao menos das primeiras estrategias multinivel
+Srila: multinivel Ter Mai 29 - fundamentals . Rasterizacao p continuar no
+
+$$$$$ ::: Sáb Jul 14 19:17:29 -03 2018
+pensando na estapa de contracting, para as superarestas
+Srila: as esferas nelas - fundamentals . io https :// rhomepage .
+
+$$$$$ ::: Sáb Jul 14 19:57:10 -03 2018
+adentrando dev do modulo
+Srila: do prv q querem Qua Jun 1 10 04 - Dom
+
+$$$$$ ::: Sáb Jul 14 20:12:55 -03 2018
+pensando classe para mls
+Srila: pensando , ateh coarsening , grimoire Ter Jun 19 , cores
+
+$$$$$ ::: Sáb Jul 14 20:18:12 -03 2018
+fazendo com calma o esquema basico multinivel
+Srila: fazendo hack minimo no diretorio certo Seg Jul 4 18 20
+
+$$$$$ ::: Sáb Jul 14 20:32:36 -03 2018
+calculando os centroides
+Srila: os outros itens ao central hub preparation do Vim e yvonne
+
+$$$$$ ::: Sáb Jul 14 20:47:31 -03 2018
+rascunhando classe ml1
+Srila: classe certinho da outra sessao faio ... Depois descobrir como fitness
+
+$$$$$ ::: Sáb Jul 14 21:06:30 -03 2018
+estudando possibilidades de lidar com as subredes, seus nucleos, e meta-arestas entre os metavertices
+Srila: estudando tallip e resto do primeiro shout Sex Jul 4 para
+
+$$$$$ ::: Dom Jul 15 09:06:17 -03 2018
+primeira sessao, retomando todo e dev
+Srila: sessao artigo para arrumacao do tt d fim do Leadbeater ,
+
+$$$$$ ::: Dom Jul 15 09:23:43 -03 2018
+web, comunicacoes, contextualizando
+Srila: comunicacoes Ter Jun 6 11 Sáb Jun 9 00 - plotar
+
+$$$$$ ::: Dom Jul 15 09:37:19 -03 2018
+arrumando classe multilevel strategy 1
+Srila: 1 09 - Dom Jul 8 15 - tempo Ter Mai
+
+$$$$$ ::: Dom Jul 15 09:51:44 -03 2018
+implementando a sintese da metarede
+Srila: da base Qua Jul 2 20 05 : 14 - Dom
+
+$$$$$ ::: Dom Jul 15 10:28:51 -03 2018
+collapse
+Srila: 31 : 19 21 09 - 4 15 - carregar uma
+
+$$$$$ ::: Dom Jul 15 10:45:46 -03 2018
+entendendo melhor mandeira de lidar com dicionarios de multiplas chaves e mesmo valor, (e.g. nos e metanos)
+Srila: e como classes do mundo é juntar almas Seg Jul 12
+
+$$$$$ ::: Dom Jul 15 11:00:06 -03 2018
+terminado collapso inicial, acho que tudo agora fumega, testes
+Srila: terminado cameras , indo formatar p usar a mascara no art
+
+$$$$$ ::: Dom Jul 15 11:09:39 -03 2018
+debugada classe, indo para centro e periferia
+Srila: indo me ajudar para trocar a Claudia Spath Seg Jul 10
+
+$$$$$ ::: Dom Jul 15 21:53:57 -03 2018
+iniciando batelada de sessoes para deixar o prototipo do multinivel adiantado
+Srila: o sistema de 5 05 : 48 - plotar o webgl
+
+$$$$$ ::: Dom Jul 15 22:09:34 -03 2018
+retomado dev, analisando estado do codigo, me virando com Vim
+Srila: com detalhes da pag 24 , talvez alternar com importacao em
+
+$$$$$ ::: Dom Jul 15 22:24:23 -03 2018
+feitas operacoes basicas, pensando em arrumar parte de cores para poder labutar bem nessa maratona
+Srila: de sh Ter Jul 12 08 - fazer colorschemes mitologicos Seg
+
+$$$$$ ::: Dom Jul 15 22:32:38 -03 2018
+debugado color, tinha quebrado arrumacoes usuais
+Srila: tinha com regularizacao para andar com mitologia , bora Dom Jul
+
+$$$$$ ::: Dom Jul 15 22:39:56 -03 2018
+arrumada alternancia do grupo normal ou escolhido
+Srila: do tempo Ter Jul 5 min fazem fumegar Sáb Jun 3

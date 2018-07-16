@@ -326,6 +326,63 @@ Sex Fev 16 13:08:45 -02 2018
 ./various/daily stuff
 
 == now ==
+- artigo vim
+- prototipo ml
+- msg nexos
+- msg cristina: layouts via GPU, geometricos-fractais, inicial 3d sim para testar os limites. A interface pode ser 3d e o layout ser 2d normal. Ideal (para mim) eh um triangulo por vertice, arestas apenas sob demanda, para maximizar a possibilidade de visualizacao de redes grandes. Fiz um pouco das rotinas em WebGL cru, na unha, acho que mais rapido que isso eh dificil, soh repassando nas listas/foruns e vendo se alguem faz melhor. Talvez varie com a placa grafica a melhor implementacao, realmente nao sei.
+- redes do bento no babylon
+- layout com projecao multidimensional de medidas topologicas dos vertices
+- ml++:
+  pela URL:
+    escolhe a rede (adicionar umas 5 opcoes) OK
+    escolhe em quantas dimensoes OK
+    escolhe o layout (dentre os jah implementados no networkx) OK
+    com e sem as arestas OK
+  ++:
+    escolhe o nivel
+    escolhe o tipo de super-vertice: centro/periferia/resto, modularidade padrao, etc
+  ++2:
+    layouts baseados em medidas topologicas:
+      clust x grau
+      com e sem log em cada eixo
+      varias outras medidas
+      medidas combinadas para as duas componentes principais
+      medida isolada vs componente principal em medidas arbitrarias
+  ++3:
+    interatividade:
+      label propagation, vc escolhe por onde comecam os clusters
+      tunando navegacao, com pontos de referencia marcados pelo usuario e padrao
+      clica e abre ou fecha o supervertice correspondente
+  ++4:
+    otimizacao:
+      usando esqueleto e caminhos p fazer as arestas mais rapido
+      GPU p calculos matriciais
+  ++5:
+    expandindo:
+      acrescimo de texto nas visualizacoes
+      raspagem de dados
+      estatisticas
+      aprofundamento das estrategias multinivel
+      sugestoes de analise e atuacao nas redes
+  ++6:
+    interacao com comunidade:
+      repasse para alan, diego e vicg
+      ver junto com gabriel e parrachia (reunioes online com yda)
+      ver com rede nexos
+      guzz e jardim, com dados do guzz
+      repasse para galera do babylon
+      ler artigo de paisagem sonora, fazer reuniao com a cristina
+      etc
+  ++7:
+    infra:
+      dados ligados
+      ontologias
+      acervos online e navegacao
+      alteracao do acervo pelos usuarios
+
+
+
+
 - finish mls OK
 - tallip OK
 - ff-ubatuba OK
