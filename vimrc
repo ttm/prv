@@ -23,8 +23,8 @@ se nohls
 se showcmd
 se tgc
 " to enable true colors inside Byoby/Tmux, leave this lines:
-" let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-" let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 " {{{1 PRV 
 let g:aa_user = 'rfabbri'
