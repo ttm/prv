@@ -3598,3 +3598,1087 @@ Srila: tinha com regularizacao para andar com mitologia , bora Dom Jul
 $$$$$ ::: Dom Jul 15 22:39:56 -03 2018
 arrumada alternancia do grupo normal ou escolhido
 Srila: do tempo Ter Jul 5 min fazem fumegar Sáb Jun 3
+
+$$$$$ ::: Dom Jul 15 22:54:24 -03 2018
+sucesso ao arrumar os esquemas de cores
+Srila: de socorro , convidar ele Ter Jul 13 11 10 11
+
+$$$$$ ::: Dom Jul 15 23:09:54 -03 2018
+understanding how to deal with metanodes without children
+Srila: with degree one Ter Jul 10 11 09 - hierarquico ,
+
+$$$$$ ::: Dom Jul 15 23:25:50 -03 2018
+achando algs interessantes para multinivel, mas nao funcionam bem os de deteccao de comunidades
+Srila: comunidades q eh o estudo do toki pona Ter Jul 1
+
+$$$$$ ::: Dom Jul 15 23:40:23 -03 2018
+pensando em como lidar com os particionamentos imperfeitos: sobreposicao e vertices soltos
+Srila: em js Qua Jul 1 08 - plotar - tempo Ter
+
+$$$$$ ::: Dom Jul 15 23:54:30 -03 2018
+explorando outros algs de deteccao de comunidade
+Srila: explorando babylon Qua Mai 30 18 20 : 51 - gerar
+
+$$$$$ ::: Ter Jul 17 08:23:05 -03 2018
+sessao p pegar um pouco de contexto sobre mitologia contemporanea
+Srila: sobre conceitos de dar passos comprometedores Ter Jul 10 04 :
+
+$$$$$ ::: Ter Jul 17 08:53:00 -03 2018
+lombrando na rede, retomando leitura sananda
+Srila: rede qualquer , em RDF Seg Mai 29 - fundamentals .
+
+$$$$$ ::: Ter Jul 17 08:53:17 -03 2018
+lendo
+Srila: lendo o problema principal de fb , adequando estrutura Dom Jun
+
+$$$$$ ::: Ter Jul 17 09:18:41 -03 2018
+cap 5
+Srila: cap 1 Dom Jul 12 18 - rate - plotar -
+
+$$$$$ ::: Qui Jul 19 10:17:26 -03 2018
+sessao engate, comecando pelas redes sociais
+Srila: sessao Seg Mai 22 04 - terminar vim Qui Jul 8
+
+$$$$$ ::: Qui Jul 19 10:33:18 -03 2018
+terminadas msgs basicas do fb e email. Fazendo manutencao e avanco dos avatares
+Srila: e forca Qua Jun 30 - rate - tentativa Qua Mai
+
+$$$$$ ::: Qui Jul 19 13:56:36 -03 2018
+estudando WebID e Databus
+Srila: e subir no aa : 38 : 18 19 20 18
+
+$$$$$ ::: Qui Jul 19 13:57:55 -03 2018
+oi
+Srila: oi Srtila Qui Jul 6 Qua Mai 30 11 14 -
+
+$$$$$ ::: Qui Jul 19 13:58:21 -03 2018
+oi
+Srila: oi Srtila Qui Jul 10 07 - plotar - fundamentals .
+
+$$$$$ ::: Qui Jul 19 14:01:49 -03 2018
+boa
+Srila: boa conversa com maju adm do d3 Ter Mai 21 08
+
+$$$$$ ::: Qui Jul 19 14:15:18 -03 2018
+estudando webid, pensando em criar dos pseudonimos mais importantes
+Srila: pensando , e as hipoteses . org / processamentos , voltando
+
+$$$$$ ::: Qui Jul 19 14:16:50 -03 2018
+oi
+Srila: oi Srtila Qui Jul 11 Sáb Jun 2 slots mais longos
+
+$$$$$ ::: Qui Jul 19 14:17:51 -03 2018
+oi
+Srila: oi Srtila Qui Jul 12 : 55 : todo Seg Jun
+
+$$$$$ ::: Qui Jul 19 14:18:41 -03 2018
+oi
+Srila: oi Srtila Qui Jun 2 13 10 06 - 4 22
+
+$$$$$ ::: Qui Jul 19 14:20:08 -03 2018
+oi
+Srila: oi Srtila Qui Jun 19 : 00 : 44 : -
+
+$$$$$ ::: Qui Jul 19 14:21:31 -03 2018
+oi
+Srila: oi Srtila Qui Jul 12 10 02 - plotar o markovBot
+
+$$$$$ ::: Qui Jul 19 14:27:13 -03 2018
+oi
+Srila: oi Srtila Qui Jun 6 19 20 03 : 17 -
+
+$$$$$ ::: Qui Jul 19 14:28:24 -03 2018
+oi
+Srila: oi Srtila Qui Jul 10 03 2018 ----- primeira sessao .
+
+$$$$$ ::: Qui Jul 19 14:29:52 -03 2018
+sessao p estabelecer webid meu
+Srila: p dist upgrade Sex Jun 19 20 19 20 17 -
+
+$$$$$ ::: Qui Jul 19 14:45:21 -03 2018
+andando com webid
+Srila: com noticias Sex Jun 6 12 10 02 - implementar mudanca
+
+$$$$$ ::: Qui Jul 19 15:08:31 -03 2018
+terminado de ler o tutorial de webid
+Srila: de degree e resto do b0t Qui Jul 5 05 -
+
+$$$$$ ::: Qui Jul 19 15:59:59 -03 2018
+manutencao nas redes, rango, retomando
+Srila: redes Qua Jun 18 : 37 - implementar arestas - tentativa
+
+$$$$$ ::: Qui Jul 19 16:15:23 -03 2018
+estudando webid ontology, feita versao inicial do meu webid
+Srila: estudando tallip e redes Qua Jul 5 03 - terminar primeira
+
+$$$$$ ::: Qui Jul 19 16:30:41 -03 2018
+pensando novamente na necessidade de escrever os programas em rdf e ter um servidor responsavel por se virar
+Srila: escrever certinho as funcoes basicas no color jah fumegantes Dom Mai
+
+$$$$$ ::: Qui Jul 19 17:36:03 -03 2018
+webid com certificado no browser, testado via curl e rapper, disponibilizado em: https://webids.github.io/rf/webid.ttl#this
+Srila: via bots Qui Jul 4 04 : musilingua Seg Jun 9
+
+$$$$$ ::: Dom Jul 22 11:44:32 -03 2018
+sessao equinox
+Srila: sessao do percolation p terminar cap 1 09 : Seg Jul
+
+$$$$$ ::: Seg Jul 23 07:58:10 -03 2018
+sessao inicial, escolhendo musica, indo para redes sociais e recuperando afazeres
+Srila: para multinivel , pensando nos tambores quer dizer acesso aos animais
+
+$$$$$ ::: Seg Jul 23 08:15:19 -03 2018
+pensando, organizando entendimentos, articulando nas redes
+Srila: articulando investidores Sex Jun 11 13 Dom Jun 4 para trocar
+
+$$$$$ ::: Seg Jul 23 08:29:30 -03 2018
+aprendendo a pegar os contatos das pessoas
+Srila: os proximos compromissos Seg Mai 29 : 30 : - tentativa
+
+$$$$$ ::: Seg Jul 23 09:24:23 -03 2018
+escrevendo emails p cristina e felipe
+Srila: p renderizar a sintese da base Qua Jul 14 12 10
+
+$$$$$ ::: Seg Jul 23 13:16:36 -03 2018
+sessao p retomar dev
+Srila: dev do prim cap 5 10 - tentativa Seg Jun 4
+
+$$$$$ ::: Seg Jul 23 13:32:31 -03 2018
+implementando www ml
+Srila: implementando a treta com Laila , sintetizado com davyson clauber no
+
+$$$$$ ::: Seg Jul 23 13:56:11 -03 2018
+feito laco inicial do plotlevel
+Srila: inicial p deixar o artigo , voltando aa Seg Mai 21
+
+$$$$$ ::: Seg Jul 23 14:29:52 -03 2018
+interacoes com as redes
+Srila: com Dinha Seg Mai 20 03 : 24 , atualizando v
+
+$$$$$ ::: Seg Jul 23 14:30:05 -03 2018
+retomando ml
+Srila: retomando artigo , escrevi p debugar , visualizacao de gangues c
+
+$$$$$ ::: Seg Jul 23 14:39:14 -03 2018
+debugando e apanhando
+Srila: debugando propriedades registradas como um servidor responsavel por garibar e detavisualization
+
+$$$$$ ::: Seg Jul 23 20:02:06 -03 2018
+retomando dev, debugagem master
+Srila: dev , foco no github . g . Rasterizacao p arrumar
+
+$$$$$ ::: Seg Jul 23 20:48:34 -03 2018
+testado mais a interface, pensando em fazer multinivel mais com o layout kamada
+Srila: mais grave , acho q retorna json fofo , me arrumar
+
+$$$$$ ::: Seg Jul 23 21:27:55 -03 2018
+fazendo multinivel multicamandas
+Srila: fazendo indice de webgl2 Sex Jul 12 08 : 23 -
+
+$$$$$ ::: Seg Jul 23 21:32:35 -03 2018
+implementadas localizacoes e arestas para mandar ao babylon
+Srila: mandar mensagem p previsao d interacao com importacao em muitas coisas
+
+$$$$$ ::: Seg Jul 23 21:52:13 -03 2018
+terminando hack inicial multinivel multicamanda
+Srila: hack final p renderizar a Claudia Spath Seg Jul 23 -
+
+$$$$$ ::: Seg Jul 23 22:02:58 -03 2018
+debugando mlevel and mlayer
+Srila: and those that are more messages in cchange Dom Jul 14
+
+$$$$$ ::: Seg Jul 30 08:01:48 -03 2018
+fazer esquema de pausar
+Srila: esquema basico de amizade Ter Jul 6 10 07 - Dom
+
+$$$$$ ::: Seg Jul 30 09:30:19 -03 2018
+comecando sessao, indo ver stack da jardim
+Srila: ver o bib Sáb Jun 19 21 - fazer . research
+
+$$$$$ ::: Seg Jul 30 09:45:56 -03 2018
+visitando trello
+Srila: 13 - carregar uma figura no art alan e o apropriado
+
+$$$$$ ::: Seg Jul 30 10:00:51 -03 2018
+iniciando clonagem dos boilerplates
+Srila: iniciando macio Sex Jun 30 17 , entender a sintese da
+
+$$$$$ ::: Seg Jul 30 10:20:52 -03 2018
+apanhando p clonar gitlab
+Srila: p poder labutar bem os já feitos se bem nessa maratona
+
+$$$$$ ::: Seg Jul 30 10:37:36 -03 2018
+atualizados node e npm, caminhando com documentacao do vue
+Srila: vue p gerar posicoes randomicas e strength Qua Jul 4 04
+
+$$$$$ ::: Seg Jul 30 11:00:56 -03 2018
+instalado e iniciado o nuxt, fazendo na unha
+Srila: fazendo layouts Sex Jun 9 , exercicios , agilizando capitalizacao ,
+
+$$$$$ ::: Seg Jul 30 11:16:20 -03 2018
+nuxt fumegando, tinha dado pala no template. Indo p mais infos do nuxt, diretorios e assets
+Srila: dado Qui Jul 6 10 14 - 4 04 : 46
+
+$$$$$ ::: Seg Jul 30 11:34:57 -03 2018
+andando com o nuxt getting started
+Srila: com detalhes da pag cada visualizacao de particao como classes Seg
+
+$$$$$ ::: Seg Jul 30 11:35:32 -03 2018
+segunda sessao, andando com o nuxt getting started
+Srila: sessao faio ... Qua Jul 3 10 07 - rate -
+
+$$$$$ ::: Seg Jul 30 12:13:20 -03 2018
+assets
+Srila: Sáb Jun 18 19 , tinha quebrado arrumacoes usuais Dom Mai
+
+$$$$$ ::: Seg Jul 30 12:27:00 -03 2018
+andando com plugins
+Srila: com jquery , sintetizado com valores randomicos - melhorar e Databus
+
+$$$$$ ::: Seg Jul 30 12:42:58 -03 2018
+mudules
+Srila: Dom Jul 12 - arestas para as possibilidades de escrever os
+
+$$$$$ ::: Seg Jul 30 13:04:33 -03 2018
+navegando o nuxt boilerplate
+Srila: o dia Qui Jun 6 11 09 - arestas - carregar
+
+$$$$$ ::: Seg Jul 30 13:05:48 -03 2018
+entendendo o boiler do nuxt
+Srila: do Antunes , item 13 - implementar da Yvonne e alg
+
+$$$$$ ::: Seg Jul 30 13:30:10 -03 2018
+apanhando p instalar o node 8
+Srila: p antonio Sáb Jun 1 10 13 12 19 22 01
+
+$$$$$ ::: Seg Jul 30 13:37:56 -03 2018
+instalado nvm para lidar com as versoes de node pois falhei em instalar o node 8 por cima do ndoe 10. Deu erro ainda assim p levantar o boilerplate do nuxt
+Srila: versoes atuais p planejar o html Sex Jul 13 Dom Jun
+
+$$$$$ ::: Ter Jul 31 10:26:28 -03 2018
+feita, terminada aula com yda
+Srila: yda sobre leituras Seg Mai 29 - carregar as possibilidades emn
+
+$$$$$ ::: Ter Jul 31 10:37:42 -03 2018
+testanto toki pona bot com yda
+Srila: yda - gerar as possibilidades de teclado Ter Jun 18 19
+
+$$$$$ ::: Ter Jul 31 10:37:49 -03 2018
+testanto toki pona bot com yda
+Lena: unpa li kala mute e pu ma lon jaki pi pini mun
+
+$$$$$ ::: Ter Jul 31 10:41:11 -03 2018
+bunda branca gostosa
+Srila: 03 2018 ----- deixando soh sobre as interface , com aa
+
+$$$$$ ::: Ter Jul 31 10:41:11 -03 2018
+bunda branca gostosa
+Lena: kala namako walo li seli e kule wan kule
+
+$$$$$ ::: Ter Jul 31 10:42:31 -03 2018
+o que vamos comer hoje ?
+Srila: comer e colocar as figuras para tp . cls p pegar
+
+$$$$$ ::: Ter Jul 31 10:42:31 -03 2018
+o que vamos comer hoje ?
+Lena: sike li sewi weka e lawa pu wawa
+
+$$$$$ ::: Ter Jul 31 10:46:25 -03 2018
+terminando sessao com os bots e yda
+Srila: com maju e ferramentas ao equinox Qui Jun 19 16 -
+
+$$$$$ ::: Ter Jul 31 10:46:25 -03 2018
+terminando sessao com os bots e yda
+Lena: lukin tawa nasa pana li pimeja weka pona e weka sinpin tawa tomo pali lili
+
+$$$$$ ::: Ter Jul 31 14:24:53 -03 2018
+sessao jardim, iniciando com promises
+Srila: com yda Seg Jul 13 : 33 : 35 - plotar
+
+$$$$$ ::: Ter Jul 31 14:24:54 -03 2018
+sessao jardim, iniciando com promises
+Lena: musi moku ni utala li wawa pali sewi suno e lupa mute
+
+$$$$$ ::: Ter Jul 31 16:00:45 -03 2018
+alimentado, retomando anotacoes
+Srila: retomando fazecao Qua Mai 29 : 01 - gerar as possibilidades
+
+$$$$$ ::: Ter Jul 31 16:00:45 -03 2018
+alimentado, retomando anotacoes
+Lena: oko ken alasa walo li tawa nena e laso noka kule unpa
+
+$$$$$ ::: Ter Jul 31 17:02:06 -03 2018
+adiantando articulacoes online
+Srila: online Qua Jul 10 14 10 11 03 : 44 :
+
+$$$$$ ::: Ter Jul 31 21:45:10 -03 2018
+boa noite menina
+Srila: boa Qui Jun 19 bora Dom Jul 23 - tentativa Seg
+
+$$$$$ ::: Ter Jul 31 21:46:38 -03 2018
+boa noite
+Srila: noite menina Ter Jun 11 Sáb Jul 13 : 55 -
+
+$$$$$ ::: Ter Jul 31 21:46:43 -03 2018
+boa noite
+Lena: laso wawa pu li jan poka lili kiwen e pona musi lete
+
+$$$$$ ::: Ter Jul 31 21:50:15 -03 2018
+entendi, obrigada
+Srila: 01 : 41 - rate - 4 17 , sintetizado com
+
+$$$$$ ::: Ter Jul 31 21:50:16 -03 2018
+entendi, obrigada
+Lena: lape li mani luka len e kon musi pi len pu
+
+$$$$$ ::: Ter Jul 31 21:54:40 -03 2018
+vou cozinhar ou ele cozinha
+Srila: ele para o problema principal de comunidades , and mlayer Seg
+
+$$$$$ ::: Ter Jul 31 21:54:40 -03 2018
+vou cozinhar ou ele cozinha
+Lena: sewi monsi mun mama li pilin nasin e anpa sama open pi jan sona
+
+$$$$$ ::: Ter Jul 31 21:57:54 -03 2018
+tchau
+Srila: descricao de webgl2 Sex Jun 18 : 25 : pensando nas
+
+$$$$$ ::: Ter Jul 31 21:57:54 -03 2018
+tchau
+Lena: telo toki li kalama sina esun tawa e sike kepeken meli
+
+$$$$$ ::: Qua Ago  1 11:27:54 -03 2018
+sessao de manutencao online
+Srila: sessao menor para trocar eles de centro e como e comunicacoes
+
+$$$$$ ::: Qua Ago  1 11:27:58 -03 2018
+sessao de manutencao online
+Lena: lawa pi monsi moku li pu e kalama tawa ala nanpa
+
+$$$$$ ::: Qua Ago  1 11:47:38 -03 2018
+encaminhada manutencao basica v!rus
+Srila: manutencao nas comunidades no diretorio certo Seg Mai 29 18 20
+
+$$$$$ ::: Qua Ago  1 11:47:38 -03 2018
+encaminhada manutencao basica v!rus
+Lena: wan kiwen insa lili li supa kin kin e ona luka nasa tan loje pi anpa tu luka
+
+$$$$$ ::: Qua Ago  1 12:45:50 -03 2018
+retomando alimentado, indo p burocras diversas, comunicacoes
+Srila: indo ver stack da laila Dom Mai 30 15 - fundamentals
+
+$$$$$ ::: Qua Ago  1 18:02:47 -03 2018
+sessao retomando jardim
+Srila: sessao iniciada , colocando ultima passagem p tallip no bot melhor
+
+$$$$$ ::: Qua Ago  1 18:26:03 -03 2018
+apanhando do feathers
+Srila: do plotlevel Seg Jun 19 , disponibilizado em arrumar os cruzamentos
+
+$$$$$ ::: Qua Ago  1 18:48:04 -03 2018
+levantado feathers, indo testar com o nuxt
+Srila: o final da folha 3 10 08 : 29 : 04
+
+$$$$$ ::: Qua Ago  1 19:14:20 -03 2018
+explorando instancia do nuxt
+Srila: explorando babylon Qui Jun 11 03 - fundamentals . 2 19
+
+$$$$$ ::: Qua Ago  1 19:27:44 -03 2018
+levantado feathers com usuario superadmin, usando o robomongo
+Srila: o codigo - fazer regressao linear via curl e assets Seg
+
+$$$$$ ::: Qua Ago  1 20:12:12 -03 2018
+dando um tempo. Conquistado esquema p jah ir ajudando no dev a partir de amanha. Documentacao tb do Feathersjs
+Srila: tempo Ter Jun 19 16 : o node pois falhei em
+
+$$$$$ ::: Sex Ago  3 09:56:25 -03 2018
+sessao p implementar BD jardim
+Srila: implementar arestas entre os codigos ccs Dom Mai 30 18 :
+
+$$$$$ ::: Sex Ago  3 10:13:10 -03 2018
+lombrando, recuper passo nesse slot
+Srila: passo do blue . io https :// webids . 2 19
+
+$$$$$ ::: Sex Ago  3 10:26:43 -03 2018
+fazendo modelo dos projetos, feito das necessidades
+Srila: das mensagens dos captions Dom Mai 30 min fazem fumegar ,
+
+$$$$$ ::: Sex Ago  3 10:42:07 -03 2018
+terminado modelo do projeto
+Srila: terminado sprites Qui Jun 7 00 - tratar cada particao como
+
+$$$$$ ::: Sex Ago  3 10:57:16 -03 2018
+incrementando modelo de usuarios
+Srila: de juntar gente , exoterico , escrevi p mudar passo Ter
+
+$$$$$ ::: Sex Ago  3 11:11:46 -03 2018
+terminado model do user
+Srila: do visualizacao de adicionar interacao e bipartidas de uso Ter Mai
+
+$$$$$ ::: Sex Ago  3 11:26:48 -03 2018
+implementando modelo compartir
+Srila: implementando talk em muitas coisas p arrumar p bot de contexto
+
+$$$$$ ::: Sex Ago  3 11:42:57 -03 2018
+trocando figurinha com guzz sobre modelos, fazendo o compartir
+Srila: com Yda Seg Jun 30 12 07 - implementar layout espectral
+
+$$$$$ ::: Sex Ago  3 11:57:05 -03 2018
+soh ha um local em que endereco eh chamado local, talvez rever
+Srila: eh o arxiv aceitar o html , seus nucleos , terminada
+
+$$$$$ ::: Sex Ago  3 11:58:03 -03 2018
+sessao p caminhar com os bds do compartir
+Srila: caminhar com sub do fb via modularidade e ter um pouco
+
+$$$$$ ::: Sex Ago  3 12:14:16 -03 2018
+terminados modelos principais. Indo para editais
+Srila: para desativar sessao de comunicacao e rapper , indo para mls
+
+$$$$$ ::: Sex Ago  3 12:28:24 -03 2018
+feito model de editais, fazendo de inscricoes
+Srila: feito mais com dicionarios de pos Seg Jul 15 21 -
+
+$$$$$ ::: Sex Ago  3 12:44:20 -03 2018
+fazendo modelo de premiacao, feito de avaliacao
+Srila: fazendo rota via url para redes em software do fb via
+
+$$$$$ ::: Sex Ago  3 13:35:55 -03 2018
+pensando em mongothon para definir schemas do multilevel
+Srila: do tpbot Qui Jul 19 22 04 - implementar arestas entre
+
+$$$$$ ::: Sex Ago  3 14:41:38 -03 2018
+sessao p continuar aprendendo feathers. Instancia levantada, aprendendo sobre os services
+Srila: sobre layouts em rede Qua Ago 1 19 20 19 21
+
+$$$$$ ::: Sex Ago  3 15:46:49 -03 2018
+feito coisas na rede. Lido sobre services no heathers
+Srila: rede Qua Jul 9 02 - based matching espectral Dom Mai
+
+$$$$$ ::: Dom Ago  5 12:23:52 -03 2018
+estudando pymodm para fazer os modelos de dados em mongo
+Srila: em alguns casos o shout Sex Jun 4 para carregar as
+
+$$$$$ ::: Dom Ago  5 13:10:10 -03 2018
+lido getting started do pymodm ateh o advanced
+Srila: ateh segunda sessao o artigo Qua Mai 21 09 : 12
+
+$$$$$ ::: Dom Ago  5 13:24:10 -03 2018
+terminado getting started, pensando nos modelos necessarios
+Srila: started Seg Jun 1 19 14 19 : 10 - rate
+
+$$$$$ ::: Dom Ago  5 13:39:59 -03 2018
+concebendo estruturas basicas, pensando na serializacao dos objetos
+Srila: pensando classe para voltar ao rel Sáb Jun 9 02 -
+
+$$$$$ ::: Dom Ago  5 14:31:46 -03 2018
+pensando no io dos arquivos em disco
+Srila: io https :// rhomepage . Tomar café e forca Qua Mai
+
+$$$$$ ::: Dom Ago  5 15:14:48 -03 2018
+pensando nas primeiras gambis. Comecando por popular mongo com redes em disco
+Srila: redes Sáb Jul 10 - gerar as figuras mitologicas no diretorio
+
+$$$$$ ::: Dom Ago  5 15:42:23 -03 2018
+pensando na melhor estrategia de armazenamento e levantamento da instancia
+Srila: da classe , terminando cap 5 00 - melhorar / fazer
+
+$$$$$ ::: Dom Ago  5 15:59:45 -03 2018
+migrando os dados do fb para o servidor
+Srila: fb via url para submissao Dom Jun 3 09 - carregar
+
+$$$$$ ::: Dom Ago  5 15:59:59 -03 2018
+pensando na melhor maneira de acessar tudo
+Srila: melhor o Bento Ter Jul 2 09 : 48 - melhorar
+
+$$$$$ ::: Seg Ago  6 13:06:04 -03 2018
+sessao retomando, comecando pelos artigos do marcelo
+Srila: sessao jardim Seg Mai 30 17 : 06 - arestas entre
+
+$$$$$ ::: Seg Ago  6 13:21:21 -03 2018
+adiantado dos artigos cereus
+Srila: artigos p thais Ter Mai 22 02 - melhorar e cores
+
+$$$$$ ::: Seg Ago  6 14:34:58 -03 2018
+caminhado com indicacao p procedimentos formais
+Srila: caminhado com Guzz : o markovBot Qui Jun 9 02 -
+
+$$$$$ ::: Seg Ago  6 14:45:34 -03 2018
+retornando aos afazeres depois de pausa e andamentos gerais
+Srila: aos animais maiores . Apenas commitar Qui Jul 31 16 :
+
+$$$$$ ::: Seg Ago  6 14:52:21 -03 2018
+fazendo servico avaliacao
+Srila: fazendo com webgl2 Sex Jul 30 : 22 : pjreddie Ter
+
+$$$$$ ::: Seg Ago  6 15:15:07 -03 2018
+fazendo resto dos servicos p ver os hooks com o guzz depois
+Srila: fazendo com valores randomicos - tentativa Qua Jun 9 03 2018
+
+$$$$$ ::: Seg Ago  6 16:21:15 -03 2018
+sessao p estudo do feathers, o resto acompanho Guzz ou desenvolvo multinivel
+Srila: sessao Ter Mai 22 04 : 18 19 21 08 :
+
+$$$$$ ::: Seg Ago  6 18:41:48 -03 2018
+feathers
+Srila: feathers . Reescrita do bot melhor mandeira de babylon melhor mandeira
+
+$$$$$ ::: Seg Ago  6 18:57:03 -03 2018
+passando user p users...
+Srila: passando ontologia p Bento Seg Jun 18 20 16 : o
+
+$$$$$ ::: Seg Ago  6 19:23:37 -03 2018
+estudando api rest
+Srila: estudando tallip e 5 08 : pjreddie Ter Jun 3 18
+
+$$$$$ ::: Seg Ago  6 19:55:50 -03 2018
+estudando api de tempo real
+Srila: tempo , tinha quebrado arrumacoes usuais Dom Mai 21 09 -
+
+$$$$$ ::: Qui Ago  9 10:39:53 -03 2018
+andar com compartir, cadastro
+Srila: andar com Guzz : 06 : 40 : 17 , iniciando
+
+$$$$$ ::: Qui Ago  9 20:52:06 -03 2018
+em reunicao com guzz
+Srila: com ic da Wikipedia ao selfcomp e os bds do multinivel
+
+$$$$$ ::: Sex Ago 10 11:15:39 -03 2018
+retomando compartir
+Srila: compartir , colocando ultima passagem p levantar o color schemes do
+
+$$$$$ ::: Sex Ago 10 11:32:32 -03 2018
+tentando habilitar o dashboard
+Srila: tentando renderizar a pegar no dev Dom Ago 1 , cadastro
+
+$$$$$ ::: Sex Ago 10 13:40:26 -03 2018
+finalizada reuniao com guzz
+Srila: reuniao com noticias Sex Ago 1 15 21 : 10 .
+
+$$$$$ ::: Seg Ago 13 20:11:31 -03 2018
+varios assuntos, pegando no tranco. No momento: Miguel de Molinos
+Srila: tranco p renderizar a contracao Seg Jun 19 15 22 :
+
+$$$$$ ::: Seg Ago 13 20:27:03 -03 2018
+lendo o e-guide
+Srila: o prototipo do magic glasses Sáb Jul 30 09 : your
+
+$$$$$ ::: Seg Ago 13 20:43:01 -03 2018
+p10 quasi-prefacio
+Srila: : 22 12 17 , the nodes with metanodes without children
+
+$$$$$ ::: Seg Ago 13 21:00:26 -03 2018
+dando pala
+Srila: dando o wordnet Ter Mai 30 08 : 44 - plotar
+
+$$$$$ ::: Seg Ago 13 21:13:38 -03 2018
+indo para servicos do feathers
+Srila: servicos p poder labutar bem que o que topamos Ter Jul
+
+$$$$$ ::: Ter Ago 14 11:24:31 -03 2018
+bloco de dedicacao antes de sair
+Srila: de engate , ateh 5k esferas nelas - tentativa Qua Ago
+
+$$$$$ ::: Ter Ago 14 18:07:13 -03 2018
+projetos editais e compartirs
+Srila: projetos , caminhando com basico multinivel multicamandas Seg Mai 29 -
+
+$$$$$ ::: Ter Ago 14 18:24:24 -03 2018
+tentando pegar no tranco
+Srila: no docx Dom Mai 30 : nova home no final de
+
+$$$$$ ::: Ter Ago 14 18:57:03 -03 2018
+entendendo acrescimos do guzz
+Srila: acrescimos no art alan Dom Jul 1 19 , entendendo algumas
+
+$$$$$ ::: Ter Ago 14 19:07:32 -03 2018
+entendeno o store
+Srila: o centroide Qui Ago 1 Dom Jun 1 09 : 16
+
+$$$$$ ::: Qua Ago 15 14:18:54 -03 2018
+adiantando paginas de projeto e edital
+Srila: projeto Sex Ago 3 Qua Jun 19 13 10 11 do
+
+$$$$$ ::: Qua Ago 15 14:34:18 -03 2018
+sacando com guzz a sistematica das pagians
+Srila: sacando nomes de grau e adiantando planejamentos Qua Ago 3 Sáb
+
+$$$$$ ::: Seg Ago 20 16:05:15 -03 2018
+sessao vue p mapas e recomendacao de recursos
+Srila: p poppi articular Sex Ago 3 05 : 57 : 52
+
+$$$$$ ::: Seg Ago 20 16:10:23 -03 2018
+sessao de recomendacao de recursos e de mapas
+Srila: de cor Dom Jun 3 Sáb Jul 19 22 23 14
+
+$$$$$ ::: Seg Ago 20 16:29:07 -03 2018
+fazendo pagina do highcharts no vue
+Srila: fazendo o e iniciar uma acho q eu aprenda hebraico Dom
+
+$$$$$ ::: Seg Ago 20 16:41:44 -03 2018
+tentando fazer fumegar
+Srila: fazer esquema basico multinivel , melhorando o navegador Sex Jun 11
+
+$$$$$ ::: Seg Ago 20 16:55:29 -03 2018
+ainda tentando fazer fumegar
+Srila: fazer . Dom Mai 29 : 00 : pensando em que
+
+$$$$$ ::: Seg Ago 20 17:12:27 -03 2018
+vendo com guzz o q tah rolando
+Srila: q metade do color operante novamente Dom Jun 3 12 17
+
+$$$$$ ::: Seg Ago 20 17:25:39 -03 2018
+levantado highmaps
+Srila: levantado feathers com clustering strategy Ter Mai 22 - fazer multinivel
+
+$$$$$ ::: Seg Ago 20 17:54:58 -03 2018
+rec de recursos
+Srila: recursos Seg Mai 20 16 : 09 : pensando , retomando
+
+$$$$$ ::: Seg Ago 20 17:55:53 -03 2018
+visitado produto 4 PNUD, escrevendo os paragrafos
+Srila: escrevendo p ver stack da cristina de passar por mais darknet
+
+$$$$$ ::: Qua Ago 29 14:06:12 -03 2018
+retomada do compartir
+Srila: compartir Sex Jun 18 19 14 10 08 : nova Ter
+
+$$$$$ ::: Qua Ago 29 14:23:29 -03 2018
+advogada e organizacao dos afazeres
+Srila: afazeres depois Seg Mai 21 : 38 : 57 - tentativa
+
+$$$$$ ::: Qua Ago 29 14:36:27 -03 2018
+tentando arrumar o layout do pagina inicial, experimentos com o vue
+Srila: arrumar o segredo eh chamado local , é tomado por se
+
+$$$$$ ::: Qua Ago 29 14:52:06 -03 2018
+fazendo as queries e adaptacoes no usercontrols para retornar todas as ids das orgs e projetos do usuario
+Srila: no github . No momento : se spellland = pt_br was
+
+$$$$$ ::: Qua Ago 29 15:31:13 -03 2018
++ burocra, unimed, cardinalli, entendendo as estruturas de dados para fazer as buscas certas
+Srila: para poder recarregar sem terminar colorschemes mitologicos Seg Mai 21 16
+
+$$$$$ ::: Qua Ago 29 16:10:16 -03 2018
+manutencao do espaco, reativando net
+Srila: net Qui Ago 1 15 10 06 : 13 11 02
+
+$$$$$ ::: Qua Ago 29 16:11:16 -03 2018
+indo p mais uma sessao, burocras fora do caminho
+Srila: mais darknet do tp . ttl # this Qui Jul 22
+
+$$$$$ ::: Qua Ago 29 16:39:02 -03 2018
+adiantando comunicadores
+Srila: adiantando passagem p bento e conversando com basico multinivel Sáb Jun
+
+$$$$$ ::: Qua Ago 29 16:41:31 -03 2018
+decidido fazer um por um das relacoes p notificacoes
+Srila: por garibar e as figuras para de toki pona Qui Jun
+
+$$$$$ ::: Qua Ago 29 16:56:51 -03 2018
+fazendo os loops dos cards personalizados para notificacao
+Srila: fazendo modelo do marcelo Seg Jun 2 11 Sáb Jun 19
+
+$$$$$ ::: Qua Ago 29 17:14:43 -03 2018
+bug no pre-desenvolvimento
+Srila: no dev do artigo , revisando basico de node pois falhei
+
+$$$$$ ::: Qua Ago 29 17:27:15 -03 2018
+sambando com o bug de template faltando
+Srila: template . io / TALLIP Qui Jun 2 20 06 :
+
+$$$$$ ::: Qua Ago 29 17:41:57 -03 2018
+tentando ainda resolver bug
+Srila: ainda lombrando em ptbr ateh 5k esferas nelas - tempo ,
+
+$$$$$ ::: Qua Ago 29 17:56:40 -03 2018
+resolvido bug, back to dev
+Srila: to deal with degree one connection , caminhando com prv e
+
+$$$$$ ::: Qua Ago 29 18:26:40 -03 2018
+arrumando queries
+Srila: arrumando rotina basica do codigo , vai essa e alg p
+
+$$$$$ ::: Dom Set  2 02:10:29 -03 2018
+lendo relatorio previo da Cristina e adiantando contrib minha
+Srila: da Wikipedia ao selfcomp ao arrumar p bot melhor forma Qua
+
+$$$$$ ::: Dom Set  2 02:11:28 -03 2018
+p8/18, cintilacoes ionosfericas
+Srila: 18 19 10 : 24 , é juntar gente , caminhando
+
+$$$$$ ::: Dom Set  2 02:28:55 -03 2018
+lendo sobre paisagem sonora
+Srila: lendo indicacoes para continuar no github . research panorama Qua Jul
+
+$$$$$ ::: Dom Set  2 02:57:10 -03 2018
+terminado landscape, entrando em mapas de similaridade
+Srila: em mongothon para usar webgl / rf / fazer regressao linear
+
+$$$$$ ::: Seg Set  3 02:04:02 -03 2018
+difusao de informacao, ativismo
+Srila: de slot Sex Jun 9 20 03 - fazer multinivel ,
+
+$$$$$ ::: Ter Set  4 14:19:53 -03 2018
+sessao p recuperacao da bib de audio PLCA
+Srila: sessao artigo c td Sáb Jul 6 Qua Ago 5 04
+
+$$$$$ ::: Ter Set  4 16:05:45 -03 2018
+recuperado os codigos do bregman studio, nao consegui aproveitar o pull request, volto a isso mais tarde
+Srila: do helikar Qui Jun 11 10 - desenvolvimento Qua Mai 20
+
+$$$$$ ::: Ter Set  4 16:20:24 -03 2018
+terminada sessao, voltando p sardim
+Srila: voltando Qui Ago 6 10 03 : 49 : 21 Seg
+
+$$$$$ ::: Qui Set 13 01:11:48 -03 2018
+sessao p adiantar feathers e nuxt
+Srila: sessao Seg Jun 30 : escolher grupos aleatorios e npm ,
+
+$$$$$ ::: Qui Set 13 01:37:07 -03 2018
+feathers e nuxt
+Srila: feathers com com indicacao p estabelecer webid meu webid meu webid
+
+$$$$$ ::: Qui Set 13 01:52:16 -03 2018
+feita gambi no feathers
+Srila: feita documentacao sobre paisagem sonora Dom Jun 11 02 : 24
+
+$$$$$ ::: Qui Set 13 02:16:11 -03 2018
+pensando nas requisicoes do feed
+Srila: nas classes do github : 17 08 : 29 15 -
+
+$$$$$ ::: Qui Set 13 02:22:49 -03 2018
+pensando nas solucoes cabiveis
+Srila: pensando em como fazer os services Sex Jun 3 02 :
+
+$$$$$ ::: Qui Set 13 02:38:40 -03 2018
+fazendo alg de priorizacao dos recursos
+Srila: de massive tagging , ha frases sobre babylon , o final
+
+$$$$$ ::: Sex Set 14 16:35:36 -03 2018
+4 afazeres p compartir: proporcoes, centro do alvo, retornar soh ids p feed e integrar editais
+Srila: compartir Sex Ago 10 - terminar o boiler do mapping para
+
+$$$$$ ::: Sex Set 14 16:51:15 -03 2018
+entendendo o meus interesses p atualizar e limpar o codigo
+Srila: o the more informative then the networks , nova mitologia ,
+
+$$$$$ ::: Sex Set 14 17:06:49 -03 2018
+lidando com as tretas de self e this em js
+Srila: com detalhes da formalizacao da pag 24 , lendo o q
+
+$$$$$ ::: Sex Set 14 17:21:00 -03 2018
+arrumado para proporcoes o init, arrumando update
+Srila: arrumando roteiro de contracting , obrigada Ter Jul 31 10 13
+
+$$$$$ ::: Sex Set 14 17:39:25 -03 2018
+arrumado esquema p proporcoes do meusInteresses, configurado nuxt p se conectar ao feathers local, indo p retornar somente as ids
+Srila: p arxiv aceitar o artigo Dom Set 3 02 : 44
+
+$$$$$ ::: Sex Set 14 17:52:28 -03 2018
+dado pala ao editar o feed.class.js, refazendo todo o trabalho de apenas retonar as ids e os createdAts
+Srila: o node e adaptacoes no dev , segunda tentativa Seg Mai
+
+$$$$$ ::: Sex Set 14 18:06:40 -03 2018
+arrumando feed.class e achando bugs
+Srila: achando algs de cor Dom Jul 1 10 07 - arestas
+
+$$$$$ ::: Sex Set 14 18:20:57 -03 2018
+terminando de deixar as queries mais leves p servidor
+Srila: queries e subir no texto aas figuras para centro e frank
+
+$$$$$ ::: Sex Set 14 18:37:18 -03 2018
+debugando balcao
+Srila: debugando mlevel and mlayer Seg Jun 3 12 11 - tentativa
+
+$$$$$ ::: Sex Set 14 18:37:59 -03 2018
+segunda leva d finalizacao do compartir: debug do balcao, arrumando algo, colocando editais nos feeds
+Srila: segunda tentativa Seg Set 4 22 : - hierarquico , andado
+
+$$$$$ ::: Sex Set 14 18:53:41 -03 2018
+arrumando centro do alvo
+Srila: centro e fazendo a fumegar : 24 : https :// rhomepage
+
+$$$$$ ::: Sex Set 14 19:10:19 -03 2018
+bug nos meus interesses
+Srila: nos proximos passos comprometedores Ter Ago 5 01 - 4 19
+
+$$$$$ ::: Sex Set 14 19:24:51 -03 2018
+arrumado e debugado p caber interesses no centro
+Srila: debugado color . nos arquivos em mapas de yoga de deteccao
+
+$$$$$ ::: Sex Set 14 19:38:44 -03 2018
+sacando editais com guzz
+Srila: editais Sex Ago 5 Ter Mai 21 Seg Set 4 14
+
+$$$$$ ::: Sex Set 14 19:54:53 -03 2018
+integrando editais nos feeds
+Srila: nos proximos passos p coletar infos do bot e organizacao dos
+
+$$$$$ ::: Sex Set 14 20:13:59 -03 2018
+fazendo query p editais com insc aberta
+Srila: editais e cores para coisas p continuar depois de esoterico ,
+
+$$$$$ ::: Sex Set 14 20:23:15 -03 2018
+feita alteracao no nuxt p mostrar os cards de edital
+Srila: no browser , grimoire Ter Ago 3 11 10 06 -
+
+$$$$$ ::: Sex Set 14 20:38:08 -03 2018
+debugando card de edital
+Srila: debugando propriedades registradas como melhorar / processamentos , Srila Qui Set
+
+$$$$$ ::: Sex Set 14 21:44:33 -03 2018
+5h se passaram, comecando do meio da terceira sessao, bugs e implementacoes. Comecando pelo balcao q n recarrega
+Srila: da intro de informacao , pensando , fazendon revisao final do
+
+$$$$$ ::: Sex Set 14 22:01:16 -03 2018
+resolvidos bugs, criados os servicos, agora arrumar eles
+Srila: os paragrafos Seg Ago 1 14 19 : 40 : 57
+
+$$$$$ ::: Sex Set 14 22:15:39 -03 2018
+criando paginas p servicos de home e pagina, debugando edital/card...
+Srila: debugando cchange ? Sáb Jul 11 do tt d fim do
+
+$$$$$ ::: Sex Set 14 22:29:59 -03 2018
+fazendo a pagina do dash p pagina
+Srila: fazendo multinivel mais gente , disponibilizado em VimL Sex Jul 23
+
+$$$$$ ::: Sex Set 14 22:45:02 -03 2018
+fazendo pag do dash de paginas
+Srila: fazendo com configuracoes diferentes Sáb Jun 9 , acho que comeco
+
+$$$$$ ::: Sex Set 14 22:59:56 -03 2018
+tentando deixar a pagina de paginas do dash fumegando
+Srila: deixar o tutorial de gangues c toki pona ? Ter Jul
+
+$$$$$ ::: Sex Set 14 23:14:45 -03 2018
+debugando pagina de paginas do dash
+Srila: do grupo do https :// rhomepage . Conquistado esquema basico de
+
+$$$$$ ::: Sex Set 14 23:29:48 -03 2018
+pagina de fazer paginas quase pronta
+Srila: quase para trocar eles de recomendacao de sair Ter Set 13
+
+$$$$$ ::: Sex Set 14 23:45:21 -03 2018
+fazendo form de criacao de recursos da home
+Srila: da metarede Dom Set 2 . Arrumando o boiler do ndoe
+
+$$$$$ ::: Sáb Set 15 00:51:32 -03 2018
++ 1 compartir, arrumando mapa
+Srila: arrumando queries e pouco sobre movimentos esotericos e escrevendo p particionar
+
+$$$$$ ::: Sáb Set 15 01:13:10 -03 2018
+procurando moocs enquanto comunicacao com guzz n fluia, arranjado novas tarefas
+Srila: procurando bases de armazenamento e como lidar com ic da solucao
+
+$$$$$ ::: Sáb Set 15 01:21:58 -03 2018
+nao encontrando coerencia nos esquemas de notificacao
+Srila: nao passar o bot inicial em layouts Sex Jul 2 19
+
+$$$$$ ::: Sáb Set 15 01:37:22 -03 2018
+fazendo esquema p mostrar notificacoes vistas
+Srila: p OTO Seg Set 4 14 18 : 03 2018 -----
+
+$$$$$ ::: Sáb Set 15 01:53:04 -03 2018
+arrumando redirecionamento p mostrar todas as notificacoes
+Srila: todas as versoes de passar o problema principal de sh Ter
+
+$$$$$ ::: Sáb Set 15 02:07:20 -03 2018
+pensando no list mixin p pagina de notificacoes
+Srila: pagina 11 03 - tempo , pensando no final p soltar
+
+$$$$$ ::: Sáb Set 15 02:23:07 -03 2018
+enviada pagina provisoria com as notificacoes
+Srila: as versoes de música ou arestas - terminar cap 1 10
+
+$$$$$ ::: Sáb Set 15 02:40:11 -03 2018
+arrumando cards de notificacao
+Srila: arrumando escrita dos projetos , de visita , sintetizado com basico
+
+$$$$$ ::: Sáb Set 15 02:52:05 -03 2018
+feita arrumacao dos redirecionamentos
+Srila: dos afazeres Seg Set 4 Qua Jul 14 19 bora Dom
+
+$$$$$ ::: Sáb Set 15 04:10:00 -03 2018
+sessao lombrando mais livre no app
+Srila: no b0t no pre - tentativa Qua Jul 12 06 -
+
+$$$$$ ::: Sáb Set 15 04:33:32 -03 2018
+arrumando detalhes e anotando bugs da interface
+Srila: e comunicacoes para me ajudar para lidar com guzz o artigo
+
+$$$$$ ::: Sáb Set 15 04:41:23 -03 2018
+anotando bugs, resolvendo coisa pouca
+Srila: anotando cchange p mapas e arestas para editais Sex Ago 14
+
+$$$$$ ::: Sáb Set 15 04:55:28 -03 2018
+resolvendo treta de sair sem salvar
+Srila: treta com wiki , mas as versoes de termos que tudo
+
+$$$$$ ::: Sáb Set 15 05:10:22 -03 2018
+primeiro bug + bruto do compartir, chrome comendo memoria?
+Srila: compartir Sex Ago 13 21 Seg Jun 1 , entender a
+
+$$$$$ ::: Sáb Set 15 06:11:35 -03 2018
+terminando hack
+Srila: terminando cap da instancia especifica de fb de template . Acho
+
+$$$$$ ::: Dom Out  7 15:20:13 -03 2018
+terminando apresentacao lappis
+Srila: terminando ao flask , articulacoes em rede Qua Ago 3 11
+
+$$$$$ ::: Seg Out  8 18:58:45 -03 2018
+fazendo apresentacao p lappis
+Srila: p tallip finalizada Dom Ago 15 00 - feira or so
+
+$$$$$ ::: Seg Out  8 18:59:13 -03 2018
+terminando a apresentacao
+Srila: terminando hack Sáb Jun 18 : 41 : 01 - fazer
+
+$$$$$ ::: Seg Out  8 18:59:32 -03 2018
+uma mais brilhante, por favor, Srila
+Srila: por vertice . Deu erro em alguns retornos em mais livre
+
+$$$$$ ::: Ter Out 30 14:26:52 -03 2018
+arrumando esquema de parametrizar a analise
+Srila: de escrever os esquemas de tempo , feita nova home Sex
+
+$$$$$ ::: Ter Out 30 14:43:54 -03 2018
+arrumada selecao de redes na parametrizacao da analise
+Srila: de Molinos Seg Mai 22 01 - 03 2018 ----- resolvidos
+
+$$$$$ ::: Ter Out 30 14:57:19 -03 2018
+fazendo rota de escrita dos dados
+Srila: rota via jquery Qua Jul 2 09 - Dom Ago 29
+
+$$$$$ ::: Ter Out 30 15:12:11 -03 2018
+arrumando modelo da parametrizacao da analise
+Srila: da instancia especifica de audio PLCA Ter Mai 29 17 08
+
+$$$$$ ::: Ter Out 30 15:32:39 -03 2018
+pensando em como adicionar novos nomes aos settings
+Srila: nomes de cores , articulacoes em disco Dom Ago 5 08
+
+$$$$$ ::: Ter Out 30 15:42:59 -03 2018
+pensando em como fazer o carregamento dos settings diferentes
+Srila: em que topamos Ter Ago 20 19 - fundamentals . Arrumando
+
+$$$$$ ::: Ter Out 30 15:44:31 -03 2018
+retomando sessao para fazer o carregamento dos settings
+Srila: dos recursos Seg Mai 20 18 - hierarquico , terminada sessao
+
+$$$$$ ::: Ter Out 30 16:08:22 -03 2018
+lutando com o esquema de achar os settings
+Srila: esquema p Yvonne , tinha dado pala Seg Set 2 11
+
+$$$$$ ::: Ter Out 30 16:19:07 -03 2018
+sambando p pegar os settings
+Srila: sambando com redes Qua Jul 5 Ter Jul 17 - tentativa
+
+$$$$$ ::: Ter Out 30 16:30:22 -03 2018
+fazendo gambis finais p settings novos
+Srila: gambis . Pele maior , segunda - 4 afazeres p depois
+
+$$$$$ ::: Qui Nov  1 18:41:54 -03 2018
+dev do aplicativo de analise de redes e texto
+Srila: texto p http request Qui Jul 10 02 : 02 :
+
+$$$$$ ::: Qui Nov  1 19:13:49 -03 2018
+pensando nos proximos passos
+Srila: passos de tp Qui Set 4 20 03 2018 ----- terminada
+
+$$$$$ ::: Qui Nov  1 19:30:26 -03 2018
+integrado inicialmente o componente
+Srila: o bokeh Ter Mai 29 18 - 03 : feather e
+
+$$$$$ ::: Dom Nov 25 21:10:22 -02 2018
+sessao p econometria
+Srila: sessao obrigatoria de tokipona Dom Jul 10 14 08 - prefacio
+
+$$$$$ ::: Dom Nov 25 21:26:53 -02 2018
+feito cadastro no bitmex, pesquisando
+Srila: cadastro Ter Jul 3 13 21 08 - feira or so
+
+$$$$$ ::: Sáb Jan 26 20:04:22 -02 2019
+primeira sessao ja para deixar ok o software p reuniao.
+Srila: reuniao com maju Dom Jun 3 02 : 57 : 21
+
+$$$$$ ::: Sáb Jan 26 20:04:46 -02 2019
+sistematizadas as tarefas, comecando por efetivar a escrita e recuperacao das estruturas de dados
+Srila: dados crus , bugs da sessao voltando aa , metodo do
+
+$$$$$ ::: Sáb Jan 26 20:19:34 -02 2019
+fazendo rotina basica
+Srila: basica p adicionar Normal , colocando a Claudia Spath Seg Set
+
+$$$$$ ::: Sáb Jan 26 20:35:07 -02 2019
+desenhando interface com bd
+Srila: interface com webid com clustering via url para calculo de artigos
+
+$$$$$ ::: Sáb Jan 26 20:49:42 -02 2019
+arrumando bd no feathers/mongoose para as estruturas corretas
+Srila: arrumando matching espectral Dom Jun 18 20 06 - fundamentals .
+
+$$$$$ ::: Sáb Jan 26 21:04:35 -02 2019
+adequando nuxt ao bd do feathers p upload correto
+Srila: nuxt Qui Set 14 08 - tentativa Qua Jul 1 15
+
+$$$$$ ::: Sáb Jan 26 21:21:42 -02 2019
+adaptado upload ao novo bd
+Srila: novo shout com documentacao geral e metanos ) sao pais de
+
+$$$$$ ::: Sáb Jan 26 21:35:55 -02 2019
+adaptando analise ao novo bd
+Srila: novo shout com webid Qui Jul 11 do dash Sex Jun
+
+$$$$$ ::: Sáb Jan 26 21:50:23 -02 2019
+arrumando enderecamento aa uncoarsened network
+Srila: arrumando cards de nao consegui compatibilizar o meus interesses p adiantar
+
+$$$$$ ::: Sáb Jan 26 21:56:13 -02 2019
+pausa p comer. sessao quase acabando de qqr forma...
+Srila: sessao ( ou ele cozinha Ter Set 14 - 4 17
+
+$$$$$ ::: Sáb Jan 26 23:42:36 -02 2019
+retomando para terminar migracao do bd com reaproveitamento
+Srila: terminar o html p varios chats com joao bueno de tp
+
+$$$$$ ::: Dom Jan 27 00:04:10 -02 2019
+otimizando lida com dados
+Srila: com basico multinivel multicamanda Seg Out 30 12 11 02 -
+
+$$$$$ ::: Dom Jan 27 02:32:41 -02 2019
+sessao ultima para implementar o reuso dos dados
+Srila: dos boilerplates Seg Mai 20 : 10 02 2018 ----- mandando
+
+$$$$$ ::: Dom Jan 27 02:48:25 -02 2019
+reescrevendo rotina de criacao das redes e layouts
+Srila: de colisao Qui Nov 25 21 09 - tentativa Seg Out
+
+$$$$$ ::: Dom Jan 27 03:03:01 -02 2019
+fazendo rotinas enxutas para os processos de leitura e escrita de rede e layout
+Srila: rede qualquer , organizando repositorio de analise Ter Jul 17 08
+
+$$$$$ ::: Dom Jan 27 03:18:33 -02 2019
+escritas rotinas de alto nivel, indo para as basais
+Srila: para listar os metavertices Sáb Jun 7 18 , mas nao
+
+$$$$$ ::: Dom Jan 27 03:32:58 -02 2019
+implementando e debugando
+Srila: implementando a figura de self e alteracoes para tp no libreoffice
+
+$$$$$ ::: Dom Jan 27 03:48:08 -02 2019
+adaptando heranca das posicoes anteriores
+Srila: posicoes randomicas e pouco , aa e implementacoes . Instancia levantada
+
+$$$$$ ::: Dom Jan 27 04:03:23 -02 2019
+implementando estruturas e rotinas de layouts
+Srila: rotinas em mais vertices ( criacao de figuras para definir schemas
+
+$$$$$ ::: Dom Jan 27 04:18:19 -02 2019
+adaptando colapso
+Srila: funcoes basicas , atrai mais , sintetizado com a Marilia Pisani
+
+$$$$$ ::: Dom Jan 27 04:33:04 -02 2019
+conseguindo fazer repasse inicial dos dados ao cliente
+Srila: ao flask Qua Jun 1 Qui Jul 17 , eh a

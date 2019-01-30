@@ -1,0 +1,16 @@
+- select vertexes not to be merged
+- start by betweenness, neighbors of vertices with high betweenness
+- make vertex and edge distribution be followed as closely as possible:
+  - |V|/|E| ~ contastant in the MLHierarchy
+  - degree distribution be conserved (G_L is an isolated node, optimized by simplicity and computational cost, G_{L-1} has a number of communities that follow the same profile (or a transformed version of it) of degree/strength, etc)
+- strategy:
+  - select all one degree nodes and remove them or collapse into one node per common neighbor
+  - then do the same with nodes with degree 2
+  - then with degree 3
+  - unting reaching singleton
+- use subclassing for different matching strategies. This avoids both having multiple methods or conditionals.
+- fazer glossario de acronimos:
+  - esm edge selection matchin
+  - vsm vertex selection matchin
+  - mls multilevel strategy
+  - mlo multilevel optimization (strategy)
