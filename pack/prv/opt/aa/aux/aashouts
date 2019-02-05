@@ -1834,6 +1834,1021 @@ Dom Jul 15 22:32:38 -03 2018
 arrumada alternancia do grupo normal ou escolhido
 Dom Jul 15 22:39:56 -03 2018
 -----
-um unico shout remoto
-Mon Jul 23 22:57:51 -03 2018
+sucesso ao arrumar os esquemas de cores
+Dom Jul 15 22:54:24 -03 2018
 -----
+understanding how to deal with metanodes without children
+Dom Jul 15 23:09:54 -03 2018
+-----
+achando algs interessantes para multinivel, mas nao funcionam bem os de deteccao de comunidades
+Dom Jul 15 23:25:50 -03 2018
+-----
+pensando em como lidar com os particionamentos imperfeitos: sobreposicao e vertices soltos
+Dom Jul 15 23:40:23 -03 2018
+-----
+explorando outros algs de deteccao de comunidade
+Dom Jul 15 23:54:30 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+sessao p pegar um pouco de contexto sobre mitologia contemporanea
+Ter Jul 17 08:23:05 -03 2018
+-----
+lombrando na rede, retomando leitura sananda
+Ter Jul 17 08:53:00 -03 2018
+-----
+lendo
+Ter Jul 17 08:53:17 -03 2018
+-----
+cap 5
+Ter Jul 17 09:18:41 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+sessao engate, comecando pelas redes sociais
+Qui Jul 19 10:17:26 -03 2018
+-----
+terminadas msgs basicas do fb e email. Fazendo manutencao e avanco dos avatares
+Qui Jul 19 10:33:18 -03 2018
+-----
+$$$$$
+
+
+estudando WebID e Databus
+Qui Jul 19 13:56:36 -03 2018
+-----
+boa
+Qui Jul 19 14:01:49 -03 2018
+-----
+estudando webid, pensando em criar dos pseudonimos mais importantes
+Qui Jul 19 14:15:18 -03 2018
+-----
+
+
+$$$$$
+sessao p estabelecer webid meu
+Qui Jul 19 14:29:52 -03 2018
+-----
+andando com webid
+Qui Jul 19 14:45:21 -03 2018
+-----
+terminado de ler o tutorial de webid
+Qui Jul 19 15:08:31 -03 2018
+-----
+manutencao nas redes, rango, retomando
+Qui Jul 19 15:59:59 -03 2018
+-----
+estudando webid ontology, feita versao inicial do meu webid
+Qui Jul 19 16:15:22 -03 2018
+-----
+pensando novamente na necessidade de escrever os programas em rdf e ter um servidor responsavel por se virar
+Qui Jul 19 16:30:41 -03 2018
+-----
+$$$$$
+
+
+webid com certificado no browser, testado via curl e rapper, disponibilizado em: https://webids.github.io/rf/webid.ttl#this
+Qui Jul 19 17:36:03 -03 2018
+-----
+
+
+$$$$$
+sessao equinox
+Dom Jul 22 11:44:32 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+sessao inicial, escolhendo musica, indo para redes sociais e recuperando afazeres
+Seg Jul 23 07:58:10 -03 2018
+-----
+pensando, organizando entendimentos, articulando nas redes
+Seg Jul 23 08:15:19 -03 2018
+-----
+aprendendo a pegar os contatos das pessoas
+Seg Jul 23 08:29:30 -03 2018
+-----
+escrevendo emails p cristina e felipe
+Seg Jul 23 09:24:23 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+sessao p retomar dev
+Seg Jul 23 13:16:36 -03 2018
+-----
+implementando www ml
+Seg Jul 23 13:32:31 -03 2018
+-----
+feito laco inicial do plotlevel
+Seg Jul 23 13:56:11 -03 2018
+-----
+interacoes com as redes
+Seg Jul 23 14:29:52 -03 2018
+-----
+retomando ml
+Seg Jul 23 14:30:05 -03 2018
+-----
+debugando e apanhando
+Seg Jul 23 14:39:14 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+retomando dev, debugagem master
+Seg Jul 23 20:02:06 -03 2018
+-----
+testado mais a interface, pensando em fazer multinivel mais com o layout kamada
+Seg Jul 23 20:48:34 -03 2018
+-----
+fazendo multinivel multicamandas
+Seg Jul 23 21:27:55 -03 2018
+-----
+implementadas localizacoes e arestas para mandar ao babylon
+Seg Jul 23 21:32:35 -03 2018
+-----
+terminando hack inicial multinivel multicamanda
+Seg Jul 23 21:52:12 -03 2018
+-----
+debugando mlevel and mlayer
+Seg Jul 23 22:02:58 -03 2018
+-----
+$$$$$
+
+
+fazer esquema de pausar
+Seg Jul 30 08:01:48 -03 2018
+-----
+
+
+$$$$$
+comecando sessao, indo ver stack da jardim
+Seg Jul 30 09:30:19 -03 2018
+-----
+visitando trello
+Seg Jul 30 09:45:56 -03 2018
+-----
+iniciando clonagem dos boilerplates
+Seg Jul 30 10:00:51 -03 2018
+-----
+apanhando p clonar gitlab
+Seg Jul 30 10:20:52 -03 2018
+-----
+atualizados node e npm, caminhando com documentacao do vue
+Seg Jul 30 10:37:36 -03 2018
+-----
+instalado e iniciado o nuxt, fazendo na unha
+Seg Jul 30 11:00:56 -03 2018
+-----
+nuxt fumegando, tinha dado pala no template. Indo p mais infos do nuxt, diretorios e assets
+Seg Jul 30 11:16:20 -03 2018
+-----
+andando com o nuxt getting started
+Seg Jul 30 11:34:57 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+segunda sessao, andando com o nuxt getting started
+Seg Jul 30 11:35:32 -03 2018
+-----
+assets
+Seg Jul 30 12:13:20 -03 2018
+-----
+andando com plugins
+Seg Jul 30 12:27:00 -03 2018
+-----
+mudules
+Seg Jul 30 12:42:58 -03 2018
+-----
+navegando o nuxt boilerplate
+Seg Jul 30 13:04:33 -03 2018
+-----
+entendendo o boiler do nuxt
+Seg Jul 30 13:05:48 -03 2018
+-----
+apanhando p instalar o node 8
+Seg Jul 30 13:30:10 -03 2018
+-----
+instalado nvm para lidar com as versoes de node pois falhei em instalar o node 8 por cima do ndoe 10. Deu erro ainda assim p levantar o boilerplate do nuxt
+Seg Jul 30 13:37:56 -03 2018
+-----
+$$$$$
+
+
+feita, terminada aula com yda
+Ter Jul 31 10:26:28 -03 2018
+-----
+testanto toki pona bot com yda
+Ter Jul 31 10:37:42 -03 2018
+-----
+bunda branca gostosa
+Ter Jul 31 10:41:11 -03 2018
+-----
+o que vamos comer hoje ?
+Ter Jul 31 10:42:31 -03 2018
+-----
+terminando sessao com os bots e yda
+Ter Jul 31 10:46:25 -03 2018
+-----
+
+
+$$$$$
+sessao jardim, iniciando com promises
+Ter Jul 31 14:24:53 -03 2018
+-----
+alimentado, retomando anotacoes
+Ter Jul 31 16:00:45 -03 2018
+-----
+adiantando articulacoes online
+Ter Jul 31 17:02:06 -03 2018
+-----
+$$$$$
+
+
+boa noite menina
+Ter Jul 31 21:45:10 -03 2018
+-----
+boa noite
+Ter Jul 31 21:46:38 -03 2018
+-----
+entendi, obrigada
+Ter Jul 31 21:50:15 -03 2018
+-----
+vou cozinhar ou ele cozinha
+Ter Jul 31 21:54:40 -03 2018
+-----
+tchau
+Ter Jul 31 21:57:54 -03 2018
+-----
+
+
+$$$$$
+sessao de manutencao online
+Qua Ago  1 11:27:54 -03 2018
+-----
+encaminhada manutencao basica v!rus
+Qua Ago  1 11:47:38 -03 2018
+-----
+retomando alimentado, indo p burocras diversas, comunicacoes
+Qua Ago  1 12:45:50 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+sessao retomando jardim
+Qua Ago  1 18:02:47 -03 2018
+-----
+apanhando do feathers
+Qua Ago  1 18:26:03 -03 2018
+-----
+levantado feathers, indo testar com o nuxt
+Qua Ago  1 18:48:04 -03 2018
+-----
+explorando instancia do nuxt
+Qua Ago  1 19:14:20 -03 2018
+-----
+levantado feathers com usuario superadmin, usando o robomongo
+Qua Ago  1 19:27:44 -03 2018
+-----
+dando um tempo. Conquistado esquema p jah ir ajudando no dev a partir de amanha. Documentacao tb do Feathersjs
+Qua Ago  1 20:12:12 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+sessao p implementar BD jardim
+Sex Ago  3 09:56:25 -03 2018
+-----
+lombrando, recuper passo nesse slot
+Sex Ago  3 10:13:09 -03 2018
+-----
+fazendo modelo dos projetos, feito das necessidades
+Sex Ago  3 10:26:43 -03 2018
+-----
+terminado modelo do projeto
+Sex Ago  3 10:42:07 -03 2018
+-----
+incrementando modelo de usuarios
+Sex Ago  3 10:57:16 -03 2018
+-----
+terminado model do user
+Sex Ago  3 11:11:46 -03 2018
+-----
+implementando modelo compartir
+Sex Ago  3 11:26:48 -03 2018
+-----
+trocando figurinha com guzz sobre modelos, fazendo o compartir
+Sex Ago  3 11:42:57 -03 2018
+-----
+soh ha um local em que endereco eh chamado local, talvez rever
+Sex Ago  3 11:57:05 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+sessao p caminhar com os bds do compartir
+Sex Ago  3 11:58:03 -03 2018
+-----
+terminados modelos principais. Indo para editais
+Sex Ago  3 12:14:15 -03 2018
+-----
+feito model de editais, fazendo de inscricoes
+Sex Ago  3 12:28:24 -03 2018
+-----
+fazendo modelo de premiacao, feito de avaliacao
+Sex Ago  3 12:44:20 -03 2018
+-----
+pensando em mongothon para definir schemas do multilevel
+Sex Ago  3 13:35:55 -03 2018
+-----
+
+
+$$$$$
+sessao p continuar aprendendo feathers. Instancia levantada, aprendendo sobre os services
+Sex Ago  3 14:41:38 -03 2018
+-----
+feito coisas na rede. Lido sobre services no heathers
+Sex Ago  3 15:46:49 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+estudando pymodm para fazer os modelos de dados em mongo
+Dom Ago  5 12:23:52 -03 2018
+-----
+lido getting started do pymodm ateh o advanced
+Dom Ago  5 13:10:10 -03 2018
+-----
+terminado getting started, pensando nos modelos necessarios
+Dom Ago  5 13:24:10 -03 2018
+-----
+concebendo estruturas basicas, pensando na serializacao dos objetos
+Dom Ago  5 13:39:59 -03 2018
+-----
+pensando no io dos arquivos em disco
+Dom Ago  5 14:31:46 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+pensando nas primeiras gambis. Comecando por popular mongo com redes em disco
+Dom Ago  5 15:14:48 -03 2018
+-----
+pensando na melhor estrategia de armazenamento e levantamento da instancia
+Dom Ago  5 15:42:22 -03 2018
+-----
+migrando os dados do fb para o servidor
+Dom Ago  5 15:59:45 -03 2018
+-----
+pensando na melhor maneira de acessar tudo
+Dom Ago  5 15:59:59 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+sessao retomando, comecando pelos artigos do marcelo
+Seg Ago  6 13:06:04 -03 2018
+-----
+adiantado dos artigos cereus
+Seg Ago  6 13:21:21 -03 2018
+-----
+caminhado com indicacao p procedimentos formais
+Seg Ago  6 14:34:58 -03 2018
+-----
+retornando aos afazeres depois de pausa e andamentos gerais
+Seg Ago  6 14:45:34 -03 2018
+-----
+fazendo servico avaliacao
+Seg Ago  6 14:52:21 -03 2018
+-----
+fazendo resto dos servicos p ver os hooks com o guzz depois
+Seg Ago  6 15:15:07 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+sessao p estudo do feathers, o resto acompanho Guzz ou desenvolvo multinivel
+Seg Ago  6 16:21:15 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+feathers
+Seg Ago  6 18:41:48 -03 2018
+-----
+passando user p users...
+Seg Ago  6 18:57:02 -03 2018
+-----
+estudando api rest
+Seg Ago  6 19:23:37 -03 2018
+-----
+estudando api de tempo real
+Seg Ago  6 19:55:49 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+andar com compartir, cadastro
+Qui Ago  9 10:39:53 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+em reunicao com guzz
+Qui Ago  9 20:52:06 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+retomando compartir
+Sex Ago 10 11:15:39 -03 2018
+-----
+tentando habilitar o dashboard
+Sex Ago 10 11:32:32 -03 2018
+-----
+finalizada reuniao com guzz
+Sex Ago 10 13:40:26 -03 2018
+-----
+
+
+$$$$$
+varios assuntos, pegando no tranco. No momento: Miguel de Molinos
+Seg Ago 13 20:11:31 -03 2018
+-----
+lendo o e-guide
+Seg Ago 13 20:27:03 -03 2018
+-----
+p10 quasi-prefacio
+Seg Ago 13 20:43:00 -03 2018
+-----
+dando pala
+Seg Ago 13 21:00:26 -03 2018
+-----
+indo para servicos do feathers
+Seg Ago 13 21:13:38 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+bloco de dedicacao antes de sair
+Ter Ago 14 11:24:31 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+projetos editais e compartirs
+Ter Ago 14 18:07:13 -03 2018
+-----
+tentando pegar no tranco
+Ter Ago 14 18:24:24 -03 2018
+-----
+entendendo acrescimos do guzz
+Ter Ago 14 18:57:03 -03 2018
+-----
+entendeno o store
+Ter Ago 14 19:07:32 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+adiantando paginas de projeto e edital
+Qua Ago 15 14:18:54 -03 2018
+-----
+sacando com guzz a sistematica das pagians
+Qua Ago 15 14:34:18 -03 2018
+-----
+$$$$$
+
+
+sessao vue p mapas e recomendacao de recursos
+Seg Ago 20 16:05:15 -03 2018
+-----
+
+
+$$$$$
+sessao de recomendacao de recursos e de mapas
+Seg Ago 20 16:10:23 -03 2018
+-----
+fazendo pagina do highcharts no vue
+Seg Ago 20 16:29:07 -03 2018
+-----
+tentando fazer fumegar
+Seg Ago 20 16:41:44 -03 2018
+-----
+ainda tentando fazer fumegar
+Seg Ago 20 16:55:29 -03 2018
+-----
+vendo com guzz o q tah rolando
+Seg Ago 20 17:12:26 -03 2018
+-----
+levantado highmaps
+Seg Ago 20 17:25:39 -03 2018
+-----
+rec de recursos
+Seg Ago 20 17:54:58 -03 2018
+-----
+visitado produto 4 PNUD, escrevendo os paragrafos
+Seg Ago 20 17:55:53 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+retomada do compartir
+Qua Ago 29 14:06:12 -03 2018
+-----
+advogada e organizacao dos afazeres
+Qua Ago 29 14:23:29 -03 2018
+-----
+tentando arrumar o layout do pagina inicial, experimentos com o vue
+Qua Ago 29 14:36:27 -03 2018
+-----
+fazendo as queries e adaptacoes no usercontrols para retornar todas as ids das orgs e projetos do usuario
+Qua Ago 29 14:52:06 -03 2018
+-----
++ burocra, unimed, cardinalli, entendendo as estruturas de dados para fazer as buscas certas
+Qua Ago 29 15:31:12 -03 2018
+-----
+manutencao do espaco, reativando net
+Qua Ago 29 16:10:16 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+indo p mais uma sessao, burocras fora do caminho
+Qua Ago 29 16:11:16 -03 2018
+-----
+adiantando comunicadores
+Qua Ago 29 16:39:02 -03 2018
+-----
+decidido fazer um por um das relacoes p notificacoes
+Qua Ago 29 16:41:31 -03 2018
+-----
+fazendo os loops dos cards personalizados para notificacao
+Qua Ago 29 16:56:50 -03 2018
+-----
+bug no pre-desenvolvimento
+Qua Ago 29 17:14:43 -03 2018
+-----
+sambando com o bug de template faltando
+Qua Ago 29 17:27:15 -03 2018
+-----
+tentando ainda resolver bug
+Qua Ago 29 17:41:57 -03 2018
+-----
+resolvido bug, back to dev
+Qua Ago 29 17:56:39 -03 2018
+-----
+arrumando queries
+Qua Ago 29 18:26:40 -03 2018
+-----
+$$$$$
+
+
+lendo relatorio previo da Cristina e adiantando contrib minha
+Dom Set  2 02:10:29 -03 2018
+-----
+
+
+$$$$$
+p8/18, cintilacoes ionosfericas
+Dom Set  2 02:11:28 -03 2018
+-----
+lendo sobre paisagem sonora
+Dom Set  2 02:28:55 -03 2018
+-----
+terminado landscape, entrando em mapas de similaridade
+Dom Set  2 02:57:10 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+difusao de informacao, ativismo
+Seg Set  3 02:04:02 -03 2018
+-----
+
+
+$$$$$
+sessao p recuperacao da bib de audio PLCA
+Ter Set  4 14:19:53 -03 2018
+-----
+recuperado os codigos do bregman studio, nao consegui aproveitar o pull request, volto a isso mais tarde
+Ter Set  4 16:05:45 -03 2018
+-----
+terminada sessao, voltando p jardim
+Ter Set  4 16:20:24 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+sessao p adiantar feathers e nuxt
+Qui Set 13 01:11:47 -03 2018
+-----
+
+
+$$$$$
+feathers e nuxt
+Qui Set 13 01:37:06 -03 2018
+-----
+feita gambi no feathers
+Qui Set 13 01:52:16 -03 2018
+-----
+pensando nas requisicoes do feed
+Qui Set 13 02:16:10 -03 2018
+-----
+pensando nas solucoes cabiveis
+Qui Set 13 02:22:49 -03 2018
+-----
+fazendo alg de priorizacao dos recursos
+Qui Set 13 02:38:40 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+4 afazeres p compartir: proporcoes, centro do alvo, retornar soh ids p feed e integrar editais
+Sex Set 14 16:35:36 -03 2018
+-----
+entendendo o meus interesses p atualizar e limpar o codigo
+Sex Set 14 16:51:15 -03 2018
+-----
+lidando com as tretas de self e this em js
+Sex Set 14 17:06:49 -03 2018
+-----
+arrumado para proporcoes o init, arrumando update
+Sex Set 14 17:21:00 -03 2018
+-----
+arrumado esquema p proporcoes do meusInteresses, configurado nuxt p se conectar ao feathers local, indo p retornar somente as ids
+Sex Set 14 17:39:25 -03 2018
+-----
+dado pala ao editar o feed.class.js, refazendo todo o trabalho de apenas retonar as ids e os createdAts
+Sex Set 14 17:52:28 -03 2018
+-----
+arrumando feed.class e achando bugs
+Sex Set 14 18:06:40 -03 2018
+-----
+terminando de deixar as queries mais leves p servidor
+Sex Set 14 18:20:57 -03 2018
+-----
+debugando balcao
+Sex Set 14 18:37:18 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+segunda leva d finalizacao do compartir: debug do balcao, arrumando algo, colocando editais nos feeds
+Sex Set 14 18:37:59 -03 2018
+-----
+arrumando centro do alvo
+Sex Set 14 18:53:41 -03 2018
+-----
+bug nos meus interesses
+Sex Set 14 19:10:18 -03 2018
+-----
+arrumado e debugado p caber interesses no centro
+Sex Set 14 19:24:51 -03 2018
+-----
+sacando editais com guzz
+Sex Set 14 19:38:44 -03 2018
+-----
+integrando editais nos feeds
+Sex Set 14 19:54:53 -03 2018
+-----
+fazendo query p editais com insc aberta
+Sex Set 14 20:13:59 -03 2018
+-----
+feita alteracao no nuxt p mostrar os cards de edital
+Sex Set 14 20:23:15 -03 2018
+-----
+debugando card de edital
+Sex Set 14 20:38:08 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+5h se passaram, comecando do meio da terceira sessao, bugs e implementacoes. Comecando pelo balcao q n recarrega
+Sex Set 14 21:44:33 -03 2018
+-----
+resolvidos bugs, criados os servicos, agora arrumar eles
+Sex Set 14 22:01:16 -03 2018
+-----
+criando paginas p servicos de home e pagina, debugando edital/card...
+Sex Set 14 22:15:39 -03 2018
+-----
+fazendo a pagina do dash p pagina
+Sex Set 14 22:29:59 -03 2018
+-----
+fazendo pag do dash de paginas
+Sex Set 14 22:45:02 -03 2018
+-----
+tentando deixar a pagina de paginas do dash fumegando
+Sex Set 14 22:59:56 -03 2018
+-----
+debugando pagina de paginas do dash
+Sex Set 14 23:14:45 -03 2018
+-----
+pagina de fazer paginas quase pronta
+Sex Set 14 23:29:48 -03 2018
+-----
+fazendo form de criacao de recursos da home
+Sex Set 14 23:45:21 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
++ 1 compartir, arrumando mapa
+Sáb Set 15 00:51:32 -03 2018
+-----
+procurando moocs enquanto comunicacao com guzz n fluia, arranjado novas tarefas
+Sáb Set 15 01:13:10 -03 2018
+-----
+nao encontrando coerencia nos esquemas de notificacao
+Sáb Set 15 01:21:58 -03 2018
+-----
+fazendo esquema p mostrar notificacoes vistas
+Sáb Set 15 01:37:22 -03 2018
+-----
+arrumando redirecionamento p mostrar todas as notificacoes
+Sáb Set 15 01:53:04 -03 2018
+-----
+pensando no list mixin p pagina de notificacoes
+Sáb Set 15 02:07:20 -03 2018
+-----
+enviada pagina provisoria com as notificacoes
+Sáb Set 15 02:23:07 -03 2018
+-----
+arrumando cards de notificacao
+Sáb Set 15 02:40:11 -03 2018
+-----
+feita arrumacao dos redirecionamentos
+Sáb Set 15 02:52:05 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+sessao lombrando mais livre no app
+Sáb Set 15 04:10:00 -03 2018
+-----
+arrumando detalhes e anotando bugs da interface
+Sáb Set 15 04:33:32 -03 2018
+-----
+anotando bugs, resolvendo coisa pouca
+Sáb Set 15 04:41:23 -03 2018
+-----
+resolvendo treta de sair sem salvar
+Sáb Set 15 04:55:28 -03 2018
+-----
+primeiro bug + bruto do compartir, chrome comendo memoria?
+Sáb Set 15 05:10:21 -03 2018
+-----
+terminando hack
+Sáb Set 15 06:11:35 -03 2018
+-----
+$$$$$
+
+
+terminando apresentacao lappis
+Dom Out  7 15:20:13 -03 2018
+-----
+fazendo apresentacao p lappis
+Seg Out  8 18:58:45 -03 2018
+-----
+terminando a apresentacao
+Seg Out  8 18:59:13 -03 2018
+-----
+uma mais brilhante, por favor, Srila
+Seg Out  8 18:59:32 -03 2018
+-----
+
+
+$$$$$
+arrumando esquema de parametrizar a analise
+Ter Out 30 14:26:52 -03 2018
+-----
+arrumada selecao de redes na parametrizacao da analise
+Ter Out 30 14:43:54 -03 2018
+-----
+fazendo rota de escrita dos dados
+Ter Out 30 14:57:19 -03 2018
+-----
+arrumando modelo da parametrizacao da analise
+Ter Out 30 15:12:11 -03 2018
+-----
+pensando em como adicionar novos nomes aos settings
+Ter Out 30 15:32:39 -03 2018
+-----
+pensando em como fazer o carregamento dos settings diferentes
+Ter Out 30 15:42:59 -03 2018
+-----
+
+
+$$$$$
+retomando sessao para fazer o carregamento dos settings
+Ter Out 30 15:44:31 -03 2018
+-----
+lutando com o esquema de achar os settings
+Ter Out 30 16:08:22 -03 2018
+-----
+sambando p pegar os settings
+Ter Out 30 16:19:07 -03 2018
+-----
+fazendo gambis finais p settings novos
+Ter Out 30 16:30:22 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+dev do aplicativo de analise de redes e texto
+Qui Nov  1 18:41:54 -03 2018
+-----
+pensando nos proximos passos
+Qui Nov  1 19:13:49 -03 2018
+-----
+integrado inicialmente o componente
+Qui Nov  1 19:30:26 -03 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+sessao p econometria
+Dom Nov 25 21:10:22 -02 2018
+-----
+feito cadastro no bitmex, pesquisando
+Dom Nov 25 21:26:53 -02 2018
+-----
+$$$$$
+
+
+
+
+$$$$$
+primeira sessao ja para deixar ok o software p reuniao.
+Sáb Jan 26 20:04:22 -02 2019
+-----
+sistematizadas as tarefas, comecando por efetivar a escrita e recuperacao das estruturas de dados
+Sáb Jan 26 20:04:46 -02 2019
+-----
+fazendo rotina basica
+Sáb Jan 26 20:19:34 -02 2019
+-----
+desenhando interface com bd
+Sáb Jan 26 20:35:07 -02 2019
+-----
+arrumando bd no feathers/mongoose para as estruturas corretas
+Sáb Jan 26 20:49:42 -02 2019
+-----
+adequando nuxt ao bd do feathers p upload correto
+Sáb Jan 26 21:04:34 -02 2019
+-----
+adaptado upload ao novo bd
+Sáb Jan 26 21:21:42 -02 2019
+-----
+adaptando analise ao novo bd
+Sáb Jan 26 21:35:55 -02 2019
+-----
+arrumando enderecamento aa uncoarsened network
+Sáb Jan 26 21:50:23 -02 2019
+-----
+pausa p comer. sessao quase acabando de qqr forma...
+Sáb Jan 26 21:56:13 -02 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+retomando para terminar migracao do bd com reaproveitamento
+Sáb Jan 26 23:42:36 -02 2019
+-----
+otimizando lida com dados
+Dom Jan 27 00:04:10 -02 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+sessao ultima para implementar o reuso dos dados
+Dom Jan 27 02:32:41 -02 2019
+-----
+reescrevendo rotina de criacao das redes e layouts
+Dom Jan 27 02:48:24 -02 2019
+-----
+fazendo rotinas enxutas para os processos de leitura e escrita de rede e layout
+Dom Jan 27 03:03:01 -02 2019
+-----
+escritas rotinas de alto nivel, indo para as basais
+Dom Jan 27 03:18:33 -02 2019
+-----
+implementando e debugando
+Dom Jan 27 03:32:58 -02 2019
+-----
+adaptando heranca das posicoes anteriores
+Dom Jan 27 03:48:08 -02 2019
+-----
+implementando estruturas e rotinas de layouts
+Dom Jan 27 04:03:23 -02 2019
+-----
+adaptando colapso
+Dom Jan 27 04:18:19 -02 2019
+-----
+conseguindo fazer repasse inicial dos dados ao cliente
+Dom Jan 27 04:33:04 -02 2019
+-----
+$$$$$

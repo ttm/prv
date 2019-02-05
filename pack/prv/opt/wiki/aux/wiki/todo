@@ -1,6 +1,13 @@
 :Todo:todo:TODO:ToDo:
 =================
 
+GSoC
+email Cristina OK
+dev cristina
+
+
+
+
 hoje: fechar prv, versao inicial
 amanha: garibar prv, fechar artigos Vim e Tokipona
 terça: retomar dev datavis, Pillow, artigo desigualdade
@@ -326,10 +333,55 @@ Sex Fev 16 13:08:45 -02 2018
 ./various/daily stuff
 
 == now ==
+- coisas jardim
+- parada p analise de audio
+- esquema p visualizacao de redes
+
+
+
+== now ==
+unimed / uniodonto sexta cedo
+casa p alugar sexta cedo
+passaporte sexta cedo
+net 05318291916
+responder Cristina
+cpqd
+ligar para Ismalia
+
+
+== now ==
+- servicos feathers
+- experimentos soundscape
+- wordnet bento
+- visualizacao em multinivel (aplicar p wordnet do bento)
+- mensagem para Sara com infos da Ismalia
+- rever necessidades para a Ismalia.
+
+==now ==
+- servicos do feathers, dar um tapa
+- aula com yda, ela faz uma musica comigo.
+- declaracao p defensoria
+- extratos deste mes e outros
+- arquitetura basica de bancos de dados usando mongo no python
+- artigos enmc, Marcelo
+
+== now ==
+- sessao recuperando jardim
+- avaliar resto, tentar + 2-3 sessoes ainda hj
+- agilizar recurso p renda acima do limite deles, agilizar extratos
+
+
+== now ==
+sessao sananda e fraternidade branca OK
+sessao equinox
+
+
+
+== now ==
+- msg nexos OK
+- msg cristina OK
 - artigo vim
 - prototipo ml
-- msg nexos
-- msg cristina: layouts via GPU, geometricos-fractais, inicial 3d sim para testar os limites. A interface pode ser 3d e o layout ser 2d normal. Ideal (para mim) eh um triangulo por vertice, arestas apenas sob demanda, para maximizar a possibilidade de visualizacao de redes grandes. Fiz um pouco das rotinas em WebGL cru, na unha, acho que mais rapido que isso eh dificil, soh repassando nas listas/foruns e vendo se alguem faz melhor. Talvez varie com a placa grafica a melhor implementacao, realmente nao sei.
 - redes do bento no babylon
 - layout com projecao multidimensional de medidas topologicas dos vertices
 - ml++:
@@ -338,9 +390,14 @@ Sex Fev 16 13:08:45 -02 2018
     escolhe em quantas dimensoes OK
     escolhe o layout (dentre os jah implementados no networkx) OK
     com e sem as arestas OK
-  ++:
+  ++, implementado em Python, fazer rota HTML:
     escolhe o nivel
     escolhe o tipo de super-vertice: centro/periferia/resto, modularidade padrao, etc
+  ++1:
+    implementar mais alguns metodos de coarsening/deteccao de comunidade
+    tratar dos vertices isolados
+    talvez tb das comunidades isoladas
+    fazer o plot de um ou varios niveis
   ++2:
     layouts baseados em medidas topologicas:
       clust x grau
@@ -449,6 +506,16 @@ put PCA on algorithmia and compare speed with asking the Flask at ICMC/USP.
   - the rest of the session for the toki pona bot OK
 
 == next ==
+20/07 reunicoes Cristina 9am, Chu, Alan
+21/07 reuniao nexos
+22/07 responder Yvonne, Banto, Chico
+25/07 oficio 15h40
+27/07 envio projetos ufabc
+30/07-01/08 inscricao como orientador de extensao
+
+
+
+
 13/06 -> artigo plos one OK
 14-15/06 -> Bueno OK
 17/06 -> relatório Helder, Hoje OK

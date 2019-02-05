@@ -19,8 +19,8 @@ sy match wHTTP /\vhttps{0,1}\:\/\/.*/
 hi link wArrow IncSearch
 sy match wArrow /[↪↣↝↬↺⇶]/
 
-hi link wComment DiffText
-sy match wComment /\v\s{6}.*/
+" hi link wComment DiffText
+" sy match wComment /\v\s{6}.*/
 
 hi LineNr guifg=red
 hi SpellBad guifg=white
