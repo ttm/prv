@@ -1,0 +1,35 @@
+  - levantar as 3 instancias e o robomongo
+  - o software a permite análises por mais de uma pessoa em tempo real (dados atualizados na interface constantemente)
+  - mantem histórico das análises, com associação aos perfis dos usuários
+  - mostrar o que está implementado
+  - estou tentando levantar nesta primeira versão:
+    * hover associando nodes e metanodes e histogramas (grau, clust, h/i/p)
+        e mostrando metadados dos vértices
+        e dados da rede em cada nível (ao menos número de vértices e arestas)
+    * análises de texto
+        por hora apenas o teste KS
+    * além do painel de settings da análise:
+        botão +- camada
+        slider p separação entre camadas
+    (( * query sparql dbpedia ou OBO p montar as redes ))
+  - questões principais:
+    * quais métodos de redução da rede (coarsening) tem prioridade?
+    * quais métodos de avaliação/análise das reduções tem prioridade? (ver as publicacoes, qualidade das comunidades, mostrar q ajudou o usuario a analisar, metricas, combinar sbj e obj)
+    * que formato de escrita de rede usamos para a rede com texto? (Alan, diego)
+    * alguma análise temporal no momento?
+    * possibilidades são muito grandes. Melhor focar nas necessidades
+    * otimizar renderização com:
+        figuras mais simples (ainda no babylon)
+        1 triângulo por vertice, WebGL cru
+          (teoricamente o mais leve possível para um dado computador?)
+    * interesse para mim de imediato:
+        verificar estabilidade nas redes e diferenciação da linguagem utilizada
+    * interesse para estratégias multinível:
+        priorizo algumas estratégias de coarsening?
+        para avaliar as estratégias de coarsening (aplicada na visualizacao):
+          preservação das distribuições de medidas (?)
+          aplicação de algoritmos: qualidade da resposta, ganho de velocidade (?)
+          QUANTO O USUARIO GOSTOU
+        o que estou pensando para avaliar o coarsening está ok?
+    * elaborar já algumas análises que queremos ser capaz de fazer (ou perguntas que queremos conseguir responder)?
+      SIM
