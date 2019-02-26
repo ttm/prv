@@ -54,8 +54,8 @@ pa bot
 pa tokipona
 " pa prv
 
-nn <silent> <space>p; :cal system('xmodmap '.g:prv.paths.vim . ('aux/PXmodmap' ))<cr>
-nn <silent> <space>p: :cal system('xmodmap '.g:prv.paths.vim . ('aux/PXmodmap2'))<cr>
+" nn <silent> <space>p; :cal system('xmodmap '.g:prv.paths.vim . ('aux/PXmodmap' ))<cr>
+" nn <silent> <space>p: :cal system('xmodmap '.g:prv.paths.vim . ('aux/PXmodmap2'))<cr>
 
 " {{{1 final commands
 colo blue
