@@ -4683,3 +4683,11 @@ $$$$$ ::: Dom Jan 27 04:33:04 -02 2019
 conseguindo fazer repasse inicial dos dados ao cliente
 Srila: ao flask Qua Jun 1 Qui Jul 17 , eh a
 >>>>>>> 22566f3c4fa5f5b171d67b78d2d4dfe457b6d6fa
+
+$$$$$ ::: Sun Mar 17 14:15:34 -03 2019
+retomando devs de visan
+Srila: retomando dev do usuario superadmin , por popular mongo Dom Jul
+
+$$$$$ ::: Sun Mar 17 14:32:10 -03 2019
+respondido no forum do babylon, retomada thread de 13 dias atras
+Srila: de visualizacao de usuarios Sex Jun 18 : 26 : 07
