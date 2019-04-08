@@ -2852,3 +2852,382 @@ conseguindo fazer repasse inicial dos dados ao cliente
 Dom Jan 27 04:33:04 -02 2019
 -----
 $$$$$
+
+
+
+
+$$$$$
+arrumado vim e bash. Retomando vis dados
+seg mar 25 04:38:43 -03 2019
+-----
+arrumando mongo p dar start correto no feathers
+seg mar 25 04:48:17 -03 2019
+-----
+sem bot, certo?
+seg mar 25 04:49:13 -03 2019
+-----
+aparentemente reintaurado ambiente de dev
+seg mar 25 05:03:52 -03 2019
+-----
+adentrado codigo p dev
+seg mar 25 05:18:29 -03 2019
+-----
+arrumando infos sobre o dev atual
+seg mar 25 05:39:21 -03 2019
+-----
+terminado de organizar as notas. Desviando um tanto do trabalho
+seg mar 25 05:49:05 -03 2019
+-----
+procurando como fazer texto no hover p mostrar stats do vertice
+seg mar 25 06:03:53 -03 2019
+-----
+encontrada forma leve de mostrar texto
+seg mar 25 06:18:36 -03 2019
+-----
+terminando pesquisa sobre como fazer o hover
+seg mar 25 06:33:40 -03 2019
+-----
+feito hover. Preciso colocar as infos convenientes e posicionar melhor
+seg mar 25 06:48:40 -03 2019
+-----
+feito hover fumegante. Talvez melhorar em pouco
+seg mar 25 07:01:54 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+comecando por arrumar o tooltip
+seg mar 25 10:49:37 -03 2019
+-----
+procurando como ver se mouse está sobre a mesh
+seg mar 25 11:05:49 -03 2019
+-----
+implementando infos via tecla apertada
+seg mar 25 11:20:07 -03 2019
+-----
+implementando text area para acrescentar conteudo
+seg mar 25 11:38:20 -03 2019
+-----
+feita escrita dos dados na textinfo
+seg mar 25 11:50:01 -03 2019
+-----
+texto é apagado quando textarea é selecionada para editar
+seg mar 25 12:06:33 -03 2019
+-----
+testando textarea padrao
+seg mar 25 12:20:40 -03 2019
+-----
+feito esquema do textarea
+seg mar 25 12:34:56 -03 2019
+-----
+implementados dados gerais da rede
+seg mar 25 12:50:22 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+retomando melhora do textarea e estatisticas gerais
+seg mar 25 20:43:20 -03 2019
+-----
+adentrando codigo do servidor python para gerar as estatisticas
+seg mar 25 20:58:44 -03 2019
+-----
+terminando de calcular as estatisticas
+seg mar 25 21:13:53 -03 2019
+-----
+terminado calculo. Agora incorporar no front
+seg mar 25 21:28:58 -03 2019
+-----
+melhorando estatisticas pela selecao dos elementos nao zero
+seg mar 25 21:43:45 -03 2019
+-----
+terminados stats
+seg mar 25 22:01:34 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+retomando dev. Acho que começando pelas timelines
+ter mar 26 16:28:05 -03 2019
+-----
+iniciando line chart em d3
+ter mar 26 16:45:28 -03 2019
+-----
+transcrevendo o linechart
+ter mar 26 16:58:27 -03 2019
+-----
+chart implementado
+ter mar 26 17:16:46 -03 2019
+-----
+debug
+ter mar 26 17:28:21 -03 2019
+-----
+entendendo o codigo
+ter mar 26 17:43:37 -03 2019
+-----
+fazendo os dados para as timelines
+ter mar 26 17:58:14 -03 2019
+-----
+terminando de colocar as tres timelines
+ter mar 26 18:28:28 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+agora indo p barra vertical que possa ser atualizada
+ter mar 26 19:24:52 -03 2019
+-----
+debugando linha
+ter mar 26 19:40:05 -03 2019
+-----
+barrinha já fumegando yeah
+ter mar 26 19:55:33 -03 2019
+-----
+fumegando o rendering com pause/play
+ter mar 26 20:10:04 -03 2019
+-----
+melhorando plot
+ter mar 26 20:25:46 -03 2019
+-----
+procurando como arrumar label y
+ter mar 26 20:43:15 -03 2019
+-----
+arrumados labels
+ter mar 26 20:55:44 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+continuando lista anotada
+qua mar 27 17:13:50 -03 2019
+-----
+levantados servidores, retomando dev
+qua mar 27 17:33:34 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+melhorando timeline ou hover ou indo p pca
+qui mar 28 12:06:49 -03 2019
+-----
+fazendo esquema para dar highlight nos vertices dada a timeline hover
+qui mar 28 12:22:28 -03 2019
+-----
+feito basico para ressaltar setor no diagrama
+qui mar 28 12:37:15 -03 2019
+-----
+problema no enderecamento dos vertices
+qui mar 28 12:52:28 -03 2019
+-----
+dispersando
+qui mar 28 13:07:21 -03 2019
+-----
+lidando com enderecamento dos vertices
+qui mar 28 14:15:13 -03 2019
+-----
+tentando ainda
+qui mar 28 14:29:49 -03 2019
+-----
+resolvido enderecamento, agora é fazer on off no highlight
+qui mar 28 14:54:46 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+agora fazendo highlight das esferas p timelines
+qui mar 28 15:03:31 -03 2019
+-----
+feito esquema para achar linha correspondente
+qui mar 28 15:20:23 -03 2019
+-----
+feito highlight Mutuo. Melhorando esquema
+qui mar 28 15:37:07 -03 2019
+-----
+debug... os highlights dos nodes não atualizam
+qui mar 28 15:49:08 -03 2019
+-----
+arrumando highlight de linha
+qui mar 28 16:04:02 -03 2019
+-----
+terminados highlights cross widgets. Indo p comandos do player
+qui mar 28 16:22:41 -03 2019
+-----
+coloando icone para botao de navegacao
+qui mar 28 16:34:21 -03 2019
+-----
+achando coordenadas no plot d3
+qui mar 28 16:49:44 -03 2019
+-----
+arrumado esquema
+qui mar 28 17:04:55 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+pca, io-ds, erdos
+dom mar 31 12:18:03 -03 2019
+-----
+achando as rotinas p calculo do pca e outros
+dom mar 31 12:34:42 -03 2019
+-----
+achado no percolation
+dom mar 31 12:48:37 -03 2019
+-----
+adaptando rotinas
+dom mar 31 13:03:11 -03 2019
+-----
+adaptando rotinas
+dom mar 31 13:18:10 -03 2019
+-----
+
+
+$$$$$
+retomando dev
+seg abr  1 18:59:11 -03 2019
+-----
+bot desligado!
+seg abr  1 18:59:40 -03 2019
+-----
+problemas para instalar rdflib (necessária por causa do percolation)
+seg abr  1 19:14:47 -03 2019
+-----
+feita instalacao do percolation, agora verificando a usabilidade das rotinas como estao
+seg abr  1 19:41:03 -03 2019
+-----
+pausa p adicionar novo perfil aas comunidades do facebook
+seg abr  1 19:59:41 -03 2019
+-----
+entendendo a rotina p adaptar
+seg abr  1 20:24:56 -03 2019
+-----
+fazendo a estrutura de dados necessária
+seg abr  1 20:30:06 -03 2019
+-----
+feita rotina basica
+seg abr  1 21:00:23 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+setorializacao incorporada, indo para pca
+seg abr  1 21:08:11 -03 2019
+-----
+decidindo o q fazer para obter as medidas gerais
+seg abr  1 21:38:24 -03 2019
+-----
+arrumando flask para rodar percolation certinho e fazer o pca
+seg abr  1 21:53:59 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+pequena sessao para efetivar o pca
+seg abr  1 23:42:50 -03 2019
+-----
+feito esquema básico para obtenção das estatísticas via pca
+seg abr  1 23:59:05 -03 2019
+-----
+feita integracao com pca e commitado. Parando por hoje acho
+ter abr  2 00:13:07 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+retomando dev, escolhendo musica e abrindo notas
+qua abr  3 18:21:21 -03 2019
+-----
+$$$$$
+
+
+
+$$$$$
+leitura outercol
+dom abr  7 09:16:01 -03 2019
+-----
+pag 66 do eq i. Pensando em fazer epigramas
+dom abr  7 09:31:40 -03 2019
+-----
+p69, oculos do Titian
+dom abr  7 09:46:28 -03 2019
+-----
+p70. Fiz uma alteracao no aa say, mas nao funcionou ainda
+dom abr  7 10:01:37 -03 2019
+-----
+p73. Vendo tb alguns pintores q sao citados no texto
+dom abr  7 10:16:34 -03 2019
+-----
+p 74
+dom abr  7 10:40:41 -03 2019
+-----
+p76
+dom abr  7 10:47:29 -03 2019
+-----
+p78
+dom abr  7 11:01:32 -03 2019
+-----
+p81, depois das 5 estrelas da p80
+dom abr  7 11:16:31 -03 2019
+-----
+$$$$$
+
+
+vendo os plugins com o penalva
+dom abr  7 17:05:00 -03 2019
+-----
+
+
+$$$$$
+para ver os plugins com penalva
+dom abr  7 17:06:30 -03 2019
+-----
+terminei de ver o principal do aa
+dom abr  7 17:13:24 -03 2019
+-----
+terminamos de ver o mais importante
+dom abr  7 17:21:47 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+sessao remota por causa da chuva. Dando push no desk
+dom abr  7 21:46:44 -03 2019
+-----
+
+
+$$$$$

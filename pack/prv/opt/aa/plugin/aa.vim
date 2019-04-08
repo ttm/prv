@@ -287,7 +287,7 @@ fu! AUpdateColorColumns() " {{{
 endf
 fu! AInitVars(...) " {{{3
   if a:0 > 0 || !exists('g:aa')
-    let g:aa = { 'set': {'say': 1, 'saytime': 0, 'bot': 1},
+    let g:aa = { 'set': {'say': 2, 'saytime': 0, 'bot': 0},
           \'timers': [], 'paths': {}, 'events': {} }
     let g:aa.note = 'AA stuff should be kept in files. Keep this dictionary minimal.'
 
@@ -353,6 +353,22 @@ fu! ASay() " {{{3
     cal add(l:pmsg, 'A.A.: finished slot: ' . (g:aa.events.session.shouts_requested-1)
           \ . 'of ' . g:aa.events.session.nslots)
     cal add(l:pmsg, 'A.A.: ' . g:aa.events.session.shouts_expected . ' shouts expected')
+    if g:aa.set.saytime == 1
+      cal add(l:pmsg, 'A.A.: current time and day is: ' . strftime("%T, %B, %d"))
+    en
+    let voices = []
+    for i in l:pmsg
+      cal add(l:voices, AMkVoice() . ' "' . i . '"')
+    endfo
+    let ef = g:aa.paths.aux . 'tempespeak'
+    cal writefile(l:voices, l:ef)
+    cal system('chmod +x ' . l:ef)
+    cal job_start(l:ef)
+    cal system('rm '.l:ef)
+  elsei g:aa.set.say == 2
+    let pmsg = []
+    cal add(l:pmsg, (g:aa.events.session.shouts_requested-1)
+          \ . 'of ' . g:aa.events.session.nslots)
     if g:aa.set.saytime == 1
       cal add(l:pmsg, 'A.A.: current time and day is: ' . strftime("%T, %B, %d"))
     en
