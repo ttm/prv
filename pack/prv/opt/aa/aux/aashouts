@@ -2855,7 +2855,6 @@ $$$$$
 
 
 
-
 $$$$$
 arrumado vim e bash. Retomando vis dados
 seg mar 25 04:38:43 -03 2019
@@ -2925,6 +2924,37 @@ seg mar 25 12:34:56 -03 2019
 -----
 implementados dados gerais da rede
 seg mar 25 12:50:22 -03 2019
+=======
+$$$$$
+retomando devs de visan
+Sun Mar 17 14:15:34 -03 2019
+-----
+respondido no forum do babylon, retomada thread de 13 dias atras
+Sun Mar 17 14:32:10 -03 2019
+-----
+silenciada a Srila
+Sun Mar 17 14:37:57 -03 2019
+-----
+criando marcadores p hubs
+Sun Mar 17 14:46:37 -03 2019
+-----
+melhorado marcador p hubs
+Sun Mar 17 15:02:03 -03 2019
+-----
+arrumando final da aresta para chegar na superficie do poliedro
+Sun Mar 17 15:16:21 -03 2019
+-----
+encontrada maneira de fazer fumegar a aresta ateh a superficie
+Sun Mar 17 15:41:34 -03 2019
+-----
+implementando testes para ver onde ha interseccao
+Sun Mar 17 15:46:40 -03 2019
+-----
+achando forma correta de enderecar aos vertices
+Sun Mar 17 16:01:10 -03 2019
+-----
+o raio nao esta encontrando o mesh, nao sei pq
+Sun Mar 17 16:16:04 -03 2019
 -----
 $$$$$
 
@@ -3048,6 +3078,33 @@ qui mar 28 14:29:49 -03 2019
 -----
 resolvido enderecamento, agora é fazer on off no highlight
 qui mar 28 14:54:46 -03 2019
+=======
+iniciando p resolver interseccao de raio com mesh
+Sun Mar 17 23:28:27 -03 2019
+-----
+interseccao nao fumega n sei pq
+Sun Mar 17 23:43:54 -03 2019
+-----
+varios raios nao intersectam
+Sun Mar 17 23:59:38 -03 2019
+-----
+postado no forum sobre o problema. Parece que é são alguns false que aparecem. Estou chutando que seja sync, i.e. a mesh não está renderizando a tempo
+Mon Mar 18 00:19:51 -03 2019
+-----
+pensando nas formas de resolver
+Mon Mar 18 00:29:32 -03 2019
+-----
+pulando para outros afazeres
+Mon Mar 18 00:44:13 -03 2019
+-----
+colocado marcador para peso de aresta
+Mon Mar 18 00:59:37 -03 2019
+-----
+arrumado zoom exagerado
+Mon Mar 18 01:16:28 -03 2019
+-----
+arrumado zoom e scroll
+Mon Mar 18 01:30:17 -03 2019
 -----
 $$$$$
 
@@ -3081,6 +3138,30 @@ qui mar 28 16:49:44 -03 2019
 -----
 arrumado esquema
 qui mar 28 17:04:55 -03 2019
+=======
+sessao de dev no desk, indo para notas
+Fri Apr  5 23:56:13 -03 2019
+-----
+devaneiando um pouco, suskind
+Sat Apr  6 00:23:41 -03 2019
+-----
+ainda moscando
+Sat Apr  6 00:28:44 -03 2019
+-----
+iniciando dev acrescentando peso e direcao na forca e grau
+Sat Apr  6 00:56:41 -03 2019
+-----
+fazendo rotina p digrafo c peso
+Sat Apr  6 01:11:39 -03 2019
+-----
+pensando na melhor forma de fazer a extracao das medidas
+Sat Apr  6 01:26:46 -03 2019
+-----
+feita rotina para obtencao das medidas
+Sat Apr  6 01:42:14 -03 2019
+-----
+treta de redirecionamento
+Sat Apr  6 01:56:58 -03 2019
 -----
 $$$$$
 
@@ -3129,6 +3210,33 @@ seg abr  1 20:30:06 -03 2019
 -----
 feita rotina basica
 seg abr  1 21:00:23 -03 2019
+=======
+anotacoes sobre evolution, retomando dev dos outros apps
+Sun Apr  7 05:24:34 -03 2019
+-----
+fazendo colocao vermelha
+Sun Apr  7 05:39:57 -03 2019
+-----
+iniciada coloracao amarela
+Sun Apr  7 06:00:12 -03 2019
+-----
+recuperando o app multinivel. Upload de rede ok, mas o python nao faz o coarsening direito
+Sun Apr  7 06:11:01 -03 2019
+-----
+recuperado codigo anterior, decidindo o q fazer
+Sun Apr  7 06:25:23 -03 2019
+-----
+arrumado modeline p vue, color red e resolvido como fazer migracao p app atual
+Sun Apr  7 06:41:51 -03 2019
+-----
+pensando na melhor forma de arrumar os menus
+Sun Apr  7 06:55:25 -03 2019
+-----
+botoes drop down n funcionam mais
+Sun Apr  7 07:09:48 -03 2019
+-----
+iniciada arrumacao no painel de setagem do app
+Sun Apr  7 07:26:04 -03 2019
 -----
 $$$$$
 
@@ -3159,9 +3267,23 @@ seg abr  1 23:59:05 -03 2019
 -----
 feita integracao com pca e commitado. Parando por hoje acho
 ter abr  2 00:13:07 -03 2019
+=======
+1h p arrumar melhor esse painel de setagem
+Sun Apr  7 07:27:29 -03 2019
+-----
+pausa p recreacao, arrumados maineis retrateis. Comecando a copiar o que fiz p evolution
+Sun Apr  7 07:43:09 -03 2019
+-----
+fazendo melhora do layout dos controles
+Sun Apr  7 07:58:04 -03 2019
+-----
+melhorados controles dos settings, agora dos controles das visualizacoes
+Sun Apr  7 08:12:57 -03 2019
+-----
+finalizada adaptacao inicial. Commitado
+Sun Apr  7 08:27:52 -03 2019
 -----
 $$$$$
-
 
 
 
@@ -3231,3 +3353,79 @@ dom abr  7 21:46:44 -03 2019
 
 
 $$$$$
+=======
+lenvantadas as instancias
+dom abr  7 22:52:29 -03 2019
+-----
+melhorado layout, indo integrar o upload
+dom abr  7 23:03:19 -03 2019
+-----
+fazend upload ali mesmo no drop down de escolher a rede
+dom abr  7 23:21:40 -03 2019
+-----
+feito esquema de upload
+dom abr  7 23:36:54 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+retomando leitura eqi
+ter abr  9 02:23:41 -03 2019
+-----
+p83
+ter abr  9 02:40:26 -03 2019
+-----
+terminado the magic glasses. Iniciando The chymical jousting of Brother Perardua with the seven lances that eh brake
+ter abr  9 02:55:38 -03 2019
+-----
+p90
+ter abr  9 03:10:45 -03 2019
+-----
+p91
+ter abr  9 03:26:19 -03 2019
+-----
+p92
+ter abr  9 03:43:43 -03 2019
+-----
+p93, terminando o capitulo
+ter abr  9 03:54:02 -03 2019
+-----
+estudando um pouco da OTO e comecando a ler ultimo texto
+ter abr  9 04:09:23 -03 2019
+-----
+terminado the lonely bride. Chegado na pag101
+ter abr  9 04:24:22 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+para decidir como caminhar com o multinivel
+ter abr  9 05:14:41 -03 2019
+-----
+enrolando principalmente, mas recuperado ao menos o email do Alan e visto que nao tenho anotacoes a mais
+ter abr  9 05:30:02 -03 2019
+-----
+terminando anotacoes
+ter abr  9 05:59:51 -03 2019
+-----
+decidindo o q implementar
+ter abr  9 06:29:51 -03 2019
+-----
+estudando as possibilidades
+ter abr  9 06:44:59 -03 2019
+-----
+tentando fazer o vertice carregar info
+ter abr  9 07:00:25 -03 2019
+-----
+decidido o que fazer nas proximas sessoes p deixar o multinivel 100%
+ter abr  9 07:15:00 -03 2019
+-----
+$$$$$
+
+

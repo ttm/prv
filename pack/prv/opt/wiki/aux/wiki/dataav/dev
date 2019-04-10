@@ -1,0 +1,97 @@
+~ sobre o desenvolvimento em andamento ~
+
+~~ repos ~~
+há três repositórios principais:
+- https://github.com/ttm/netText
+  * no lap, pasta netText
+  * no desk, pasta netText
+- https://gitlab.com/renato.fabbri/nettext-server
+  * no lap, pasta feathers-boilerplate
+- https://gitlab.com/renato.fabbri/nettext-pyserver
+  * no lap, pasta multilevel
+
+~~ apps ~~
+há três apps:
+- multinível
+- evolutive
+- text
+
+~~ current notes ~~
+
+~~~ outros ~~~
+propor p diego de eu fazer a escrita de algum dos artigos q ele relatou (por email) ja ter os resultados.
+
+
+
+~~~ evolution ~~~
+- observacao da preservacao de grau e clust
+- incorporar algs do diego
+- estabelecer quais algs podemos aplicar no nivel coarsest para testar o alg
+- listar e destacar vizinhos, filhos e pais, e infos do vértice clicado
+  * instalar o jsnetworkx para achar rápido os vizinhos, o grau do vértice, etc. ???
+  * reescrever estruturas de dados como dicionarios para garantir enderecamento correto e nome de vertice que nao seja numerico
+  * acrescentar vizinhos do vertice ao escrever as arestas (cada aresta adiciona o vizinho aos dois vertices)
+- etiquetar vértices para guiar o processo de coarsening
+
+
+~~~ evolution ~~~
+- fazer o versinus e o hive plot todo ondulado (regular ondulação com sliders)
+  * arrumar bezier OK
+  * fazer ondulação no eixo z OK
+  * add Messages between snapshots to configs OK
+  * diminuir o tamanho da aresta para chegar até a superfície do sólido (arrumado de outra forma) OK
+  * arestas com cor que reflete o peso ou a grossura? Grossura, implementado. OK
+  * fazer guias para quem são os hubs e os periféricos OK
+  * separado scroll para dentro e fora do canvas. OK
+  * fazer o zoom in/out ficar menos brusco com o mouse wheel OK
+  * choose shapes for h/i/p (v2 user might define the shapes) OK
+  * cor para clusterização (mais clusterizado é o nó, mais vermelho) OK
+  * node attributes OK
+
+  * add stats of total network OK
+  * add stats of current snapshot OK
+
+  * key to print also the stats of the snapshot OK
+  * timelines OK
+  * hover na timeline ou no vértice OK
+  * player timeline e comandos OK
+
+  * pca OK
+  * sectorialization OK
+  * include IO-degree/strength and other measures OK
+  * include such measures in the frontend
+  * attach real networks and other synth networks
+  * download of report
+  * bulk analyses
+  * make mongo IO
+
+
+  * fazer controladores para as variaveis que estao no data
+  * size for degree(io)/strength(io), usar scaling talvez, com min e max size, ajustar tamanhos à posição da câmera
+  * mouse and keyboard interaction (timeline / node marker)
+  * add visual cues for special events or elements
+  * make timelines of percentages of h/i/p, topological measures, and PCA contribution of each measure
+  * histograms (v2?)
+  * use pointer events instead of mouse events for mobiles and tablets (v2?)
+  * ver se tem Babylon arrow para fazer as arestas dirigidas (ou usar degrade de cor para a direcao)
+  * fazer movimentações via botões (dar uma volta mantendo a altura ou a frente e vertical, ou mudar p uma posição randômica, ou colocar o vértice mais conetado no centro, go to home position, etc) (v2?)
+  * put tooltip in all widgets
+  * status window with: number of snapshots, total and current number of links nodes, triangles, average measures, etc
+  * draw curves:
+    - https://doc.babylonjs.com/how_to/how_to_use_curve3 (maybe make arrow with a single curve, let the user parametrize the curves)
+  * make multiple canvas (or canvas partitions), each with a different camera, but all in sync (v2)
+  * avaliar create mesh VS relocate them.
+  * choose light position and other characteristics (v2)
+  * resize the canvas (v2)
+  * choose colors and textures/materials (v2)
+  * choose camera mode (v2)
+  * enable user repositioning the nodes (v2)
+  * enable download of structures (v2)
+  * make distances between nodes get bigger as the nodes are more connected (in the overall network) (v2)
+  * add eye candy such as sky, ground, shadows, etc (v2)
+  * permitir análise com e sem peso, com e sem direção (v2)
+  * show/hide pilot (v2)
+  * measures of the visualization itself: number of sobrepositions/collisions, percentage of canvas that is covered, etc (v2)
+
+~~ further tasks ~~
+- procurar no youtube sobre: nuxt, visual analytics, babylonjs

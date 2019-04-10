@@ -21,10 +21,14 @@ se spelllang=en_us
 se nospell
 se nohls
 se showcmd
+" to enable true color and tab navigation inside Byoby/Tmux
+if !empty($TMUX)
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  nn <ESC>[6;5~ gt
+  nn <ESC>[5;5~ gT
+endif
 se tgc
-" to enable true colors inside Byoby/Tmux, leave this lines:
-let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 se backup
 se backupdir=~/.vim/aux/backupdir//

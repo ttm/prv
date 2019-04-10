@@ -9,7 +9,7 @@ make clean
 # ./configure --disable-gui --enable-python3interp --enable-pythoninterp
 ./configure --enable-python3interp --enable-pythoninterp
 ./configure --enable-python3interp --enable-pythoninterp --enable-browse --enable-fontset
-make config
+# make config
 make
 make install
 

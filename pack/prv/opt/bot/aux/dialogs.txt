@@ -4684,6 +4684,7 @@ conseguindo fazer repasse inicial dos dados ao cliente
 Srila: ao flask Qua Jun 1 Qui Jul 17 , eh a
 >>>>>>> 22566f3c4fa5f5b171d67b78d2d4dfe457b6d6fa
 
+<<<<<<< HEAD
 $$$$$ ::: seg mar 25 04:38:43 -03 2019
 arrumado vim e bash. Retomando vis dados
 Srila: e apanhando do espaco , Leo , funcionando , textos e
@@ -4695,3 +4696,12 @@ Srila: correto Sáb Jun 6 16 - plotar - based matching Dom
 $$$$$ ::: seg abr  1 18:59:11 -03 2019
 retomando dev
 Srila: dev a maju e ateh 2 11 10 06 - arestas
+=======
+$$$$$ ::: Sun Mar 17 14:15:34 -03 2019
+retomando devs de visan
+Srila: retomando dev do usuario superadmin , por popular mongo Dom Jul
+
+$$$$$ ::: Sun Mar 17 14:32:10 -03 2019
+respondido no forum do babylon, retomada thread de 13 dias atras
+Srila: de visualizacao de usuarios Sex Jun 18 : 26 : 07
+>>>>>>> 29af2655dff5726c75f11dd582b6e3262bb90000
