@@ -3429,3 +3429,63 @@ ter abr  9 07:15:00 -03 2019
 $$$$$
 
 
+
+
+$$$$$
+dev para terminar o multinivel
+Wed Apr 10 02:46:55 -03 2019
+-----
+melhorando colorscheme green e encaminhando o dev
+Wed Apr 10 03:03:05 -03 2019
+-----
+arrumando controle de separacao
+Wed Apr 10 03:17:10 -03 2019
+-----
+transcrevendo o multilevel para um unico arquivo
+Wed Apr 10 03:32:22 -03 2019
+-----
+devaneio de leve
+Wed Apr 10 04:04:39 -03 2019
+-----
+repassando rotinas do babylon para o arquivo unico
+Wed Apr 10 04:05:11 -03 2019
+-----
+passando os settings p arquivo unico
+Wed Apr 10 04:18:09 -03 2019
+-----
+pensando na melhor forma de reposicionar as camadas
+Wed Apr 10 04:32:45 -03 2019
+-----
+feita pagina unica. Pensado esquema para atualizar separacao entre camadas
+Wed Apr 10 04:47:19 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+dando um tapa a mais para fazer as camadas separarem via slider em tempo real
+Wed Apr 10 04:49:39 -03 2019
+-----
+vertices atualizando separacao certinho. Indo p arestas
+Wed Apr 10 05:04:54 -03 2019
+-----
+lutando com o babylon p atualizar linha rs
+Wed Apr 10 05:23:52 -03 2019
+-----
+descoberto como atualizar posicoes da linha
+Wed Apr 10 05:34:50 -03 2019
+-----
+commitado e push na atualizacao dos vertices e das arestas com slider
+Wed Apr 10 06:20:04 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+retomando dev: iniciando por fazer um colorscheme orange
+Thu Apr 11 02:47:21 -03 2019
+-----
