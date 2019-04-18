@@ -1118,6 +1118,7 @@ ended: ter abr  9 07:15:00 -03 2019
 
 
 
+<<<<<<< HEAD
 started: qua abr 10 08:06:33 -03 2019
 dur: 15.0
 slots: 8
@@ -1137,10 +1138,28 @@ started: qua abr 17 05:21:23 -03 2019
 dur: 15.0
 slots: 2
 ended: qua abr 17 05:53:02 -03 2019
+=======
+started: Wed Apr 10 02:46:55 -03 2019
+dur: 15.0
+slots: 8
+ended: Wed Apr 10 04:47:19 -03 2019
 
 
 
 
+started: Wed Apr 10 04:49:39 -03 2019
+dur: 15.0
+slots: 4
+ended: Wed Apr 10 06:20:04 -03 2019
+>>>>>>> a7f62e779e89b8c5e240a5621908811afcb33377
+
+
+
+
+<<<<<<< HEAD
 started: qui abr 18 09:14:41 -03 2019
+=======
+started: Thu Apr 11 02:47:20 -03 2019
+>>>>>>> a7f62e779e89b8c5e240a5621908811afcb33377
 dur: 15.0
 slots: 8

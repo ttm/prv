@@ -2924,7 +2924,6 @@ seg mar 25 12:34:56 -03 2019
 -----
 implementados dados gerais da rede
 seg mar 25 12:50:22 -03 2019
-=======
 $$$$$
 retomando devs de visan
 Sun Mar 17 14:15:34 -03 2019
@@ -3078,7 +3077,7 @@ qui mar 28 14:29:49 -03 2019
 -----
 resolvido enderecamento, agora é fazer on off no highlight
 qui mar 28 14:54:46 -03 2019
-=======
+-----
 iniciando p resolver interseccao de raio com mesh
 Sun Mar 17 23:28:27 -03 2019
 -----
@@ -3138,7 +3137,7 @@ qui mar 28 16:49:44 -03 2019
 -----
 arrumado esquema
 qui mar 28 17:04:55 -03 2019
-=======
+-----
 sessao de dev no desk, indo para notas
 Fri Apr  5 23:56:13 -03 2019
 -----
@@ -3210,7 +3209,7 @@ seg abr  1 20:30:06 -03 2019
 -----
 feita rotina basica
 seg abr  1 21:00:23 -03 2019
-=======
+-----
 anotacoes sobre evolution, retomando dev dos outros apps
 Sun Apr  7 05:24:34 -03 2019
 -----
@@ -3267,7 +3266,7 @@ seg abr  1 23:59:05 -03 2019
 -----
 feita integracao com pca e commitado. Parando por hoje acho
 ter abr  2 00:13:07 -03 2019
-=======
+-----
 1h p arrumar melhor esse painel de setagem
 Sun Apr  7 07:27:29 -03 2019
 -----
@@ -3353,7 +3352,6 @@ dom abr  7 21:46:44 -03 2019
 
 
 $$$$$
-=======
 lenvantadas as instancias
 dom abr  7 22:52:29 -03 2019
 -----
@@ -3465,6 +3463,33 @@ qui abr 11 09:12:48 -03 2019
 lido um pouco mais, parado no II, p115, lido depois disso mas deixo p quando retomar
 qui abr 11 09:22:26 -03 2019
 -----
+dev para terminar o multinivel
+Wed Apr 10 02:46:55 -03 2019
+-----
+melhorando colorscheme green e encaminhando o dev
+Wed Apr 10 03:03:05 -03 2019
+-----
+arrumando controle de separacao
+Wed Apr 10 03:17:10 -03 2019
+-----
+transcrevendo o multilevel para um unico arquivo
+Wed Apr 10 03:32:22 -03 2019
+-----
+devaneio de leve
+Wed Apr 10 04:04:39 -03 2019
+-----
+repassando rotinas do babylon para o arquivo unico
+Wed Apr 10 04:05:11 -03 2019
+-----
+passando os settings p arquivo unico
+Wed Apr 10 04:18:09 -03 2019
+-----
+pensando na melhor forma de reposicionar as camadas
+Wed Apr 10 04:32:45 -03 2019
+-----
+feita pagina unica. Pensado esquema para atualizar separacao entre camadas
+Wed Apr 10 04:47:19 -03 2019
+-----
 $$$$$
 
 
@@ -3489,6 +3514,21 @@ qua abr 17 05:40:01 -03 2019
 restaurado prv minimamente
 qua abr 17 05:53:02 -03 2019
 -----
+dando um tapa a mais para fazer as camadas separarem via slider em tempo real
+Wed Apr 10 04:49:39 -03 2019
+-----
+vertices atualizando separacao certinho. Indo p arestas
+Wed Apr 10 05:04:54 -03 2019
+-----
+lutando com o babylon p atualizar linha rs
+Wed Apr 10 05:23:52 -03 2019
+-----
+descoberto como atualizar posicoes da linha
+Wed Apr 10 05:34:50 -03 2019
+-----
+commitado e push na atualizacao dos vertices e das arestas com slider
+Wed Apr 10 06:20:04 -03 2019
+-----
 $$$$$
 
 
@@ -3497,4 +3537,10 @@ $$$$$
 $$$$$
 p dar uma retomada no dev
 qui abr 18 09:14:41 -03 2019
+-----
+retomando dev: iniciando por fazer um colorscheme orange
+Thu Apr 11 02:47:21 -03 2019
+-----
+arrumando merge das notas
+qui abr 18 09:33:06 -03 2019
 -----

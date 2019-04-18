@@ -1,3 +1,8 @@
+aux/backupdir/
+aux/xclip
+backup/pack/ttm/opt/aa/
+backup/pack/ttm/opt/prv/
+pack/plugins/
 *.html
 *.swp
 .netrwhist
