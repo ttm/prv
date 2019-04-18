@@ -54,4 +54,3 @@ hi Folded		guibg=orange		guifg=black		ctermbg=yellow		ctermfg=black
 hi FoldColumn	guibg=gray30		guifg=black	ctermbg=gray		ctermfg=black
 hi cIf0			guifg=gray			ctermfg=gray
 
-

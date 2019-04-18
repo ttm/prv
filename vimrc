@@ -56,7 +56,7 @@ pa wiki
 pa color
 pa bot
 pa tokipona
-" pa prv
+pa prv
 let aa.set.bot = 0
 
 " nn <silent> <space>p; :cal system('xmodmap '.g:prv.paths.vim . ('aux/PXmodmap' ))<cr>
