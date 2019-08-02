@@ -385,7 +385,7 @@ fu! ASay() " {{{3
 endf
 fu! AMkVoice() " {{{3
     let voice = g:aa.events.session.voices[reltime()[1]%len(g:aa.events.session.voices)]
-    let epk = 'espeak -v' . l:voice
+    let epk = 'espeak -a 50 -v' . l:voice
   retu l:epk
 endf
 fu! ASessionReceiveMsg() " {{{3

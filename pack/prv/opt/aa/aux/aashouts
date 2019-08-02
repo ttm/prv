@@ -3544,3 +3544,1485 @@ Thu Apr 11 02:47:21 -03 2019
 arrumando merge das notas
 qui abr 18 09:33:06 -03 2019
 -----
+feito diff
+qui abr 18 09:45:42 -03 2019
+-----
+desvio p contas
+qui abr 18 10:14:55 -03 2019
+-----
+restaurando as analises salvas...
+qui abr 18 10:32:06 -03 2019
+-----
+terminado de recuperar o funcionamento no lap
+qui abr 18 11:00:12 -03 2019
+-----
+descoberto proximo passo: arrumar as estruturas de pais e filhos nos nós
+qui abr 18 11:15:14 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+retomando dev. Indo p melhorias do sistema
+qui abr 18 18:05:58 -03 2019
+-----
+adentrado e testando esquema e children antes montado. Estrutura de dados está errada
+qui abr 18 18:28:26 -03 2019
+-----
+arrumando enderecamento das camadas
+qui abr 18 18:36:10 -03 2019
+-----
+dando conta de problema com enderecamento de camada
+qui abr 18 19:21:15 -03 2019
+-----
+feito esquema de marcar os nós para orientar coarsening
+qui abr 18 19:42:25 -03 2019
+-----
+terminando esquema de coloracao dos vertices
+qui abr 18 19:51:50 -03 2019
+-----
+commitadas contribs da sessao
+qui abr 18 20:12:52 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+indo para histogramas de grau e clust
+qui abr 18 23:05:16 -03 2019
+-----
+achado alg de histograma
+qui abr 18 23:21:55 -03 2019
+-----
+decupando funcionamento do histograma
+qui abr 18 23:39:08 -03 2019
+-----
+implementando histograma
+qui abr 18 23:51:27 -03 2019
+-----
+implementando as partes do histograma
+sex abr 19 00:05:52 -03 2019
+-----
+debugando v0
+sex abr 19 00:20:27 -03 2019
+-----
+histograma aparecendo zuado na tela: debug
+sex abr 19 00:43:27 -03 2019
+-----
+nao entendendo pq o esquema de escala em x n fumega
+sex abr 19 00:59:04 -03 2019
+-----
+hist aparecendo, mas alguns retangulos ficam fora, e as escalas estao zuadas
+sex abr 19 01:13:26 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+arrumando histogramas
+sex abr 19 09:35:40 -03 2019
+-----
+arrumada mostra do histograma
+sex abr 19 09:51:27 -03 2019
+-----
+feito esquema automatizado p grau
+sex abr 19 10:06:45 -03 2019
+-----
+fazendo esquema p hist de clust
+sex abr 19 10:21:06 -03 2019
+-----
+fazendo histogramas p todas as camadas
+sex abr 19 10:36:20 -03 2019
+-----
+fazendo histogramas p todas as camadas
+sex abr 19 10:52:35 -03 2019
+-----
+arrumando gambi q n tava entendendo a treta
+sex abr 19 11:07:05 -03 2019
+-----
+fazendo esquema p esconder os histogramas
+sex abr 19 11:21:48 -03 2019
+-----
+anotados passos finais para app multinivel. Terminado esquema dos histogramas
+sex abr 19 11:36:29 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+ajustes finais p app multinivel
+sex abr 19 13:32:45 -03 2019
+-----
+feito esquema de aumentar e diminuir tamanho dos vertices
+sex abr 19 13:48:19 -03 2019
+-----
+indo para melhorar histogramas: bins, feq ou num, titulos e labels
+sex abr 19 13:50:57 -03 2019
+-----
+texto no label n aparece
+sex abr 19 14:16:19 -03 2019
+-----
+resolvido label q n mostrava
+sex abr 19 14:22:03 -03 2019
+-----
+fazendo esquema p alternar os ticks entre freq e contagem
+sex abr 19 14:36:33 -03 2019
+-----
+nao entendendo pq n fumega
+sex abr 19 14:51:22 -03 2019
+-----
+fazendo esquema p todas as camadas
+sex abr 19 15:06:38 -03 2019
+-----
+indo para mais e menos bins no histograma
+sex abr 19 15:21:14 -03 2019
+-----
+fazendo esquema p atualizar os bins
+sex abr 19 15:38:10 -03 2019
+-----
+$$$$$
+
+
+arrumando bug encontrado entre bins e percentagem/count
+sex abr 19 15:49:45 -03 2019
+-----
+resolvido o bug principal: ao menos os botoes ainda funcionam.
+sex abr 19 16:08:25 -03 2019
+-----
+ainda n entendi pq ele volta aa contagem nos histogramas quando estao no percentage e mudo o numero de bins
+sex abr 19 16:08:59 -03 2019
+-----
+resolvido misterio... this referenciando objeto errado. Arrumado.
+sex abr 19 16:16:20 -03 2019
+-----
+
+
+$$$$$
+titulo nos layers e entao resolvendo o hover highlight
+sex abr 19 21:41:45 -03 2019
+-----
+fazendo esquema p adicionar/remover camandas com keystrokes
+sex abr 19 21:57:02 -03 2019
+-----
+feito titles e add/remove layers com keystrokes, arrumado bug, enrolando um pouco ate ja
+sex abr 19 22:12:21 -03 2019
+-----
+escritas notas dos afazeres
+sex abr 19 22:28:36 -03 2019
+-----
+fazendo esquema p colorir cruzado
+sex abr 19 22:43:05 -03 2019
+-----
+fazendo teste para achar os vertices cabiveis
+sex abr 19 22:57:04 -03 2019
+-----
+fazendo coloracao dar certo
+sex abr 19 23:13:24 -03 2019
+-----
+fazendo esquema p colorir hist a partir da rede
+sex abr 19 23:27:15 -03 2019
+-----
+feita sistematica p colorir de volta, terminando de escrever
+sex abr 19 23:42:56 -03 2019
+-----
+$$$$$
+
+
+resolvendo bug na coloracao do histograma de clustering
+sex abr 19 23:57:44 -03 2019
+-----
+terminado highlight de ambos os lados
+sáb abr 20 00:07:24 -03 2019
+-----
+
+
+$$$$$
+integrando codigos do Alan no multinivel. Comecando por fazer o pacote instalavel
+sáb abr 20 11:04:34 -03 2019
+-----
+tentando usar o software do alan
+sáb abr 20 11:20:51 -03 2019
+-----
+treta p instalar os requisitos
+sáb abr 20 11:34:50 -03 2019
+-----
+instalado esquema do alan
+sáb abr 20 11:49:44 -03 2019
+-----
+fazendo usos dummy do software
+sáb abr 20 12:04:48 -03 2019
+-----
+entendendo o software e decidindo com alan o q fazer
+sáb abr 20 12:20:07 -03 2019
+-----
+arrumando p python3
+sáb abr 20 12:35:11 -03 2019
+-----
+terminando migracao p py3
+sáb abr 20 12:57:26 -03 2019
+-----
+sem condicoes de py3 via linha de comando
+sáb abr 20 13:05:34 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+tentando fazer uso / entender a lib
+sáb abr 20 13:08:00 -03 2019
+-----
+decidindo a melhor forma de caminhar com a implementacao do esquema do alan
+sáb abr 20 13:25:06 -03 2019
+-----
+iniciando experiencias p lidar com o soft do alan
+sáb abr 20 13:38:48 -03 2019
+-----
+feito esquema basico p fumegar via linha de comando
+sáb abr 20 13:55:35 -03 2019
+-----
+tentando entender minimamente os parametros
+sáb abr 20 14:08:47 -03 2019
+-----
+comecando a integracao de fato ao software
+sáb abr 20 14:24:02 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+iniciando implementacao da interface dos settings
+sáb abr 20 16:37:52 -03 2019
+-----
+feito esquema p integrar os coarsening bi
+sáb abr 20 16:54:49 -03 2019
+-----
+dando primeiros passos p implementar os campos p coarsening
+sáb abr 20 17:08:26 -03 2019
+-----
+fazendo esquema p camadas
+sáb abr 20 17:31:38 -03 2019
+-----
+implementando for p reducoes
+sáb abr 20 19:28:50 -03 2019
+-----
+arrumacoes gerais p fazer dar certo
+sáb abr 20 19:43:28 -03 2019
+-----
+andando com arrumacoes no vue
+sáb abr 20 19:58:21 -03 2019
+-----
+entendendo esquema v-for
+sáb abr 20 20:54:23 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+arrumando esquema do layout p camadas diferentes
+dom abr 21 10:20:35 -03 2019
+-----
+escrevendo os drop menus p matchings bipartidos
+dom abr 21 10:36:15 -03 2019
+-----
+arrumando drop down menu
+dom abr 21 11:05:35 -03 2019
+-----
+apanhando p centralizar opcoes matching bi
+dom abr 21 11:24:33 -03 2019
+-----
+centralizado finalmente
+dom abr 21 11:36:03 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+implementando uso do soft do alan a partir das infos coletadas
+dom abr 21 17:09:08 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+iniciando maratona p fechar td p Cris amanha
+qua abr 24 15:12:17 -03 2019
+-----
+arrumandas algumas coisas, lutando p clonar settings
+qua abr 24 15:42:31 -03 2019
+-----
+vencido bug do vuetify (em q n pode mudar o show do elemento clicando nele, ja resolvido mas n distribuida a solucao)
+qua abr 24 16:12:35 -03 2019
+-----
+arrumada clonagem de settings e arrumada mostra dos layers
+qua abr 24 16:13:36 -03 2019
+-----
+feito esquema p bloquear layers a mais do que a analise possui
+qua abr 24 16:42:43 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+segunda sessao p bipartidas: fazendo children fumegar
+qua abr 24 17:16:22 -03 2019
+-----
+feito esquema c varias camadas, filhos e pais
+qua abr 24 17:35:29 -03 2019
+-----
+feito esquema p parsear, carregar e colorir os source
+qua abr 24 18:03:26 -03 2019
+-----
+acrescentado esquema p adicionar o n de vertices iniciais
+qua abr 24 18:35:09 -03 2019
+-----
+melhorado esquema de scrolling
+qua abr 24 19:01:35 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+implementando esquema d visualizacao/navegacao como alan sugeriu
+qua abr 24 21:50:20 -03 2019
+-----
+feito esquema p carregar a ultima camada. Acho que precisando dormir agora
+qui abr 25 00:45:46 -03 2019
+-----
+$$$$$
+
+
+organizando afazeres p hj
+sáb abr 27 18:55:04 -03 2019
+-----
+
+
+$$$$$
+procurando as referencias sobre lei de potencia p fazer secao faltante do artigo
+sáb abr 27 19:59:26 -03 2019
+-----
+estudando o que está já no repo: revisoes dos outros autores e bibliografia no arigo
+sáb abr 27 20:14:47 -03 2019
+-----
+terminando de ler as anotacoes dos revisores
+sáb abr 27 20:30:02 -03 2019
+-----
+abrindo secao p related work
+sáb abr 27 20:45:03 -03 2019
+-----
+iniciando escrita da nova secao
+sáb abr 27 21:01:28 -03 2019
+-----
+inserindo discussao sobre o modelo SOC
+sáb abr 27 21:14:49 -03 2019
+-----
+adicionadas referencias adicionais
+sáb abr 27 21:59:53 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+retomando dev do artigo da massa. Iniciando por organizar os afazeres
+dom abr 28 09:45:11 -03 2019
+-----
+revisando conclusoes
+dom abr 28 10:00:24 -03 2019
+-----
+fazendo revisao de tras p frente. Agora em estruturas ciclicas, 4.7
+dom abr 28 11:00:51 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+retomando revisao de tras p frente a partir do 4.4. - rhythms
+dom abr 28 14:16:57 -03 2019
+-----
+terminado secao 4
+dom abr 28 16:39:59 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+iniciando secao 3. Revisao d tras p frente
+dom abr 28 17:05:11 -03 2019
+-----
+terminada secao 3 e parte da secao 2
+dom abr 28 19:05:29 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+arrumando a mass
+seg abr 29 13:53:43 -03 2019
+-----
+inserindo sobre half suite
+seg abr 29 14:24:11 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+fazendo calendario para as proximas 2 semanas
+qua mai  1 15:55:30 -03 2019
+-----
+caminhando com organizacao do calendario
+qua mai  1 16:56:04 -03 2019
+-----
+terminado calendario, escrito ao Ernesto
+qua mai  1 17:11:31 -03 2019
+-----
+fazendo instalador certinho do percolation
+qua mai  1 17:26:54 -03 2019
+-----
+subida nova versao
+qua mai  1 18:14:02 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+fazendo dev do app de bio
+qua mai  1 19:20:14 -03 2019
+-----
+
+
+$$$$$
+retomando afazeres
+qui mai  2 18:46:52 -03 2019
+-----
+praticamente pronta a adaptacao do artigo p publicacao
+qui mai  2 21:14:03 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+finalmentes dos ajustes p encaminhar p publicacao
+qui mai  2 21:25:11 -03 2019
+-----
+escrevendo abstract de 100 palavras :'-O
+qui mai  2 22:26:48 -03 2019
+-----
+repassado p Chu do CSUR, depois de ter preenchido tudo online.
+qui mai  2 23:38:03 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+retomando finalmentes do artigo de desigualdade
+qui mai  2 23:58:27 -03 2019
+-----
+escrita cover letter e paragrafo sobre lei natural. Indo p site
+sex mai  3 00:44:27 -03 2019
+-----
+encaminhado p Chu a ressubmissao da desigualdade
+sex mai  3 01:52:51 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+retomando dev. Iniciando pelas ?? do artigo de musica
+sex mai  3 13:54:09 -03 2019
+-----
+arrumado artigo de musica os ??, escrito p Chu. Indo p Versinus
+sex mai  3 14:09:32 -03 2019
+-----
+achando a versao atual do artigo sobre o versinus. Comunicado + com Estrada
+sex mai  3 14:25:41 -03 2019
+-----
+criado repo do Versinus, migrando recursos
+sex mai  3 14:39:32 -03 2019
+-----
+feita inspecao do fimDoMundo para achar diferencas que nao estao no repo. Nd encontrado de relevante
+sex mai  3 15:15:18 -03 2019
+-----
+achado dir onde estao wav da sonificacao
+sex mai  3 15:58:14 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+achados os repos p versinus. Instalando p tentar fazer rodar
+sex mai  3 17:11:44 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+retomando artigo do versinus
+ter mai  7 19:33:50 -03 2019
+-----
+
+
+$$$$$
+revisao dos afazeres
+qua mai  8 11:24:41 -03 2019
+-----
+terminada primeira versao do abstract
+qua mai  8 12:55:24 -03 2019
+-----
+estudando a melhor forma de escrever as partes
+qua mai  8 13:24:54 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+andando com os trabalhos relacionados
+qua mai  8 14:10:50 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+retomando para andar com introducao
+qua mai  8 19:07:12 -03 2019
+-----
+escrevendo intro
+qua mai  8 19:22:21 -03 2019
+-----
+encaminhada descricao do posicionamento geral
+qua mai  8 21:08:09 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+finalizacao do artigo sobre o Versinus
+sex mai 10 15:59:31 -03 2019
+-----
+$$$$$
+
+
+terminada revisao do artigo, passado spellcheck, e enviado p Cristina
+sex mai 10 19:22:34 -03 2019
+-----
+enviada tb msg p Cristina a respeito dos proximos escritos
+sex mai 10 19:22:46 -03 2019
+-----
+
+
+$$$$$
+arrumando repo da massa
+sáb mai 11 11:42:37 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+arrumando repo do versinus
+sáb mai 11 16:22:18 -03 2019
+-----
+arrumados repos do gmaneLegacy e musicLegacy por causa do versinus. Publicado eles no PyPI
+sáb mai 11 17:31:50 -03 2019
+-----
+iniciando dev do app online p layout por comunicabilidade
+sáb mai 11 18:18:02 -03 2019
+-----
+fazendo implementacao de comunicabilidade
+sáb mai 11 18:32:59 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+implementando widgets p app online de comunicabilidade
+sáb mai 11 18:33:28 -03 2019
+-----
+entregue ja o layout para o browser
+sáb mai 11 19:19:31 -03 2019
+-----
+levantando instancia no vicg
+sáb mai 11 20:19:23 -03 2019
+-----
+feito esquema p rodar no vicg
+sáb mai 11 21:09:28 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+arrumando esquema com bash p respeitar o ambiente no lap e na maquina do VICG
+sáb mai 11 21:10:26 -03 2019
+-----
+encontrada solucao para o problema do ambiente, implementando nas paginas existentes
+sáb mai 11 21:25:58 -03 2019
+-----
+nuxt, feathers e flask funcionando no desk do vicg
+sáb mai 11 21:41:20 -03 2019
+-----
+experimentando com t-sne
+sáb mai 11 21:55:45 -03 2019
+-----
+terminada implementacao com t-SNE, commitado nos repos do nuxt, comunicabilidade, flask, e enviado p Estrada
+sáb mai 11 22:40:28 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+indo p dev do pixi dentro do que consegui
+dom mai 12 19:41:34 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+iniciando vis multinivel top-down
+seg mai 13 17:55:40 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+implementando colapso de metanodes abertos
+seg mai 13 20:45:46 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+dev talvez final de vis multinivel
+ter mai 14 13:12:58 -03 2019
+-----
+estudados proximos passos e implementando corretamente home e zoom e pan
+ter mai 14 13:28:16 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+caminhando com implementacao do layout on demand
+ter mai 14 15:49:43 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+nova versao ml topdown
+ter mai 14 20:10:00 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+marcador do retangulo de selecao
+qui mai 16 13:18:14 -03 2019
+-----
+fazendo parte final do plot das criancas de monte...
+qui mai 16 15:19:01 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+arrumando posicionamentos de vertices e arestas quando abertos vertices
+qui mai 16 16:19:57 -03 2019
+-----
+
+
+$$$$$
+sessao p resolver bugs, dar deploy e gravar video
+sáb mai 18 16:30:52 -03 2019
+-----
+arrumados os bugs, indo p deploy
+sáb mai 18 17:17:48 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+terminado debug primeiro, indo p deploy e gravando video
+sáb mai 18 19:00:05 -03 2019
+-----
+resolvi melhorar o software antes de repassar
+sáb mai 18 20:12:30 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+arrumacoes finais vis multinivel
+sáb mai 18 21:25:50 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+sessao p fazer dragging de regiao inteira
+sáb mai 18 23:28:04 -03 2019
+-----
+
+
+$$$$$
+sessao p formatar p physica a o artigo de desigualdade e encaminhar submissao
+seg mai 20 01:03:05 -03 2019
+-----
+encaminhada submissao p physica A
+seg mai 20 02:48:10 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+implementando deteccao de comunidades usando comunicabilidade
+qui mai 30 04:23:46 -03 2019
+-----
+mk widgets for choosing nclusters, link visibility. And a text area to show data about the clusters
+qui mai 30 06:10:31 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+relendo memorial
+dom jun  9 00:08:57 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+terminando arrumações no memorial
+dom jun  9 02:27:37 -03 2019
+-----
+terminado memorial
+dom jun  9 04:28:21 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+ajustes finais ao memorial e projeto de pesquisa
+dom jun  9 04:55:24 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+iniciando levantamento dos comprovantes
+dom jun  9 16:47:01 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+arrumando titulos e vinculos academicos
+dom jun  9 22:16:43 -03 2019
+-----
+baixados artigos de congresso, indo p organizacao
+seg jun 10 00:17:16 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+arrumando as apresentacoes de trabalho
+seg jun 10 02:16:35 -03 2019
+-----
+arrumando comprovantes de atividade didatica
+seg jun 10 04:17:14 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+arrumando apendices e finalmentes do artigo de vis ml
+qua jun 12 02:13:23 -03 2019
+-----
+colocando as figuras no artigo
+qua jun 12 04:13:32 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+finalizacao do apendice
+qua jun 12 04:13:42 -03 2019
+-----
+citando os apêndices, escrevendo para os colabs
+qua jun 12 06:14:32 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+fazendo site p venda da casa
+seg jun 17 03:01:00 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+implementando finalmentes da casa
+seg jun 17 05:02:39 -03 2019
+-----
+feito esquema para venda da casa: site, mensagem padrao, email p Thais
+seg jun 17 06:18:20 -03 2019
+-----
+trabalhando na prova de conceito sobre soundscape
+seg jun 17 06:32:58 -03 2019
+-----
+fazendo esquemas p abrir demais audios
+seg jun 17 07:03:10 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+arrumando display dos elementos
+seg jun 17 07:06:16 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+ultima sessao tentando fazer fumegar
+seg jun 17 11:35:11 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+retomando escrita do artigo do losd
+ter jun 18 23:25:01 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+related work
+qua jun 19 01:30:04 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+retocando metodo de sintese de ontologia
+qua jun 19 03:47:38 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+finalizando primeira passada no losd
+qua jun 19 06:07:35 -03 2019
+-----
+explorando o data.world
+qua jun 19 07:11:53 -03 2019
+-----
+atualizando escrito losd
+qui jun 20 04:02:58 -03 2019
+-----
+
+
+$$$$$
+arumada sessao sobre ontologias OWL
+qui jun 20 04:18:25 -03 2019
+-----
+fazendo queries sparql p obtencao das redes e fazendo listings mais interessante
+qui jun 20 06:19:15 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+caminhando
+qui jun 20 06:19:20 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+encaminhando comunicaaco com Cristina e Chu e indo para devs
+sex jun 21 04:35:59 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+implementando export de comunidades p comunicabilidade
+sex jun 21 06:47:31 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+retomando dev ml
+dom jun 23 07:57:04 -03 2019
+-----
+pensando em fazer tabs para acomodar as opcoes de layout
+dom jun 23 08:57:23 -03 2019
+-----
+cafe da manha e fazendo tabs p alternar entre configuracoes pre e de layout
+dom jun 23 09:57:31 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+iniciando implementacao modal dos 4-5 layouts
+dom jun 23 11:20:24 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+terminando layout fruchertman reigold
+dom jun 23 13:21:24 -03 2019
+-----
+pensando na melhor forma de implementar os layouts rapidos
+dom jun 23 15:21:55 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+finalizando layouts
+dom jun 23 15:26:36 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+fazendo arestas hibridas
+dom jun 23 17:30:31 -03 2019
+-----
+iniciada reescrita
+dom jun 23 19:19:58 -03 2019
+-----
+
+
+$$$$$
+tentando reimplementar os links
+seg jun 24 11:55:23 -03 2019
+-----
+feita abertura dos vertices ate nivel 0
+seg jun 24 13:56:48 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+arrumando links atras dos nodes
+seg jun 24 13:57:00 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+arrumando achar parents e children jah plotados
+seg jun 24 16:09:28 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+reiniciando trabalho no ml topdown com layouts
+ter jun 25 08:32:48 -03 2019
+-----
+arrumando uso de todos os vertices
+ter jun 25 10:33:39 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+arrumando layout p todos os nos
+ter jun 25 10:41:50 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+arrumando consideracao por links externos
+ter jun 25 12:44:34 -03 2019
+-----
+arrumando layout otimizado
+ter jun 25 14:44:49 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+melhorando de vez o layout otimizado
+ter jun 25 14:46:54 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+iniciando retomada do data.wold losd
+qua jun 26 13:41:54 -03 2019
+-----
+losd
+qua jun 26 13:47:11 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+tentando ainda descobrir como acessar o endpoint do arquivo
+qua jun 26 15:56:16 -03 2019
+-----
+
+
+$$$$$
+tentando fazer fumegar a interface do data.world via curl em 1 arquivo
+sex jun 28 10:31:49 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+resolvido endpoint para acesso aos dados. Indo para acesso via Python
+sex jun 28 13:10:40 -03 2019
+-----
+estudando artigos de dados ligados
+sex jun 28 14:56:00 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+avaliando artigos na area
+sex jun 28 15:24:12 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+estudando a revista data, escolhida para publicacao
+sex jun 28 19:48:12 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+implementando opcoes para deteccao de comunidades
+dom jun 30 10:19:10 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+methods losd
+dom jun 30 12:57:43 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+standardization losd
+dom jun 30 14:58:26 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+conclusions
+dom jun 30 17:48:58 -03 2019
+-----
+fazendo figura com o Gephi
+dom jun 30 19:34:52 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+terminando revisao escrevendo caption p rede do caleb
+dom jun 30 20:06:34 -03 2019
+-----
+estudando KONECT
+dom jun 30 21:06:50 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+retomando finalizacao do losd
+seg jul  1 20:08:53 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+leitura final
+ter jul  2 17:01:33 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+repassando queries
+ter jul  2 19:09:13 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+revisão completa da ops
+qua jul  3 18:56:22 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+trab relacionados ops
+sex jul  5 01:24:47 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+trabalhando nos trabalhos relacionados da ops
+sex jul  5 03:43:57 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+arrumando bibliografia
+sex jul  5 05:45:02 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+retomando escrita do artigo de diferenciacao textual
+sex jul  5 20:10:41 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+andando com a revisao bibliografica
+sáb jul  6 00:19:28 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+intro
+sáb jul  6 17:52:52 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+results
+sáb jul  6 20:17:55 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+revisando
+dom jul  7 05:03:53 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+intro
+ter jul  9 02:36:42 -03 2019
+-----
+
+
+$$$$$
+terminando metodos
+ter jul  9 04:50:06 -03 2019
+-----
+
+
+$$$$$
+tentando puxar a rotina essencial
+ter jul  9 19:47:59 -03 2019
+-----
+
+
+$$$$$
+vendo template do infovis
+qui jul 11 04:38:23 -03 2019
+-----
+feito script d debugging p communicabilidade
+qui jul 11 06:51:36 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+implementando clusterings
+sáb jul 13 09:42:11 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+arrumando artigo de texto
+ter jul 16 07:17:55 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+indo p arrumacao final
+ter jul 16 10:48:59 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+arrumando primeira figura da descricao da interface de comunicabilidade
+qua jul 17 16:55:41 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+andando com a descricao
+qua jul 17 19:05:27 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+finalizando escrito p SFI
+sex jul 19 13:45:53 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+caminhando com o teste da amazon
+sex jul 19 16:08:44 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+estudando possibilidades de publicacao do livro de audio e musica
+sex jul 19 20:06:59 -03 2019
+-----
+reunidas editoras p mandar o livro de audio e musica
+sex jul 19 22:08:55 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+iniciando escrita do relatorio 2 definitivo
+seg jul 29 12:31:22 -03 2019
+-----
+$$$$$
+
+
