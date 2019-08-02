@@ -42,7 +42,8 @@ fu! PRVLeaderHelper(...)
 endf
 fu! PRVDeclareLeader(plug)
   cal assert_equal(type(a:plug), 1, 'only strings are accepted as arg to PRVDeclareLeader(plug)')
-  let g:prv.leaders[a:plug] = [g:mapleader, g:maplocalleader]
+  " let g:prv.leaders[a:plug] = [g:mapleader, g:maplocalleader]
+  let g:prv.leaders[a:plug] = [' p', ' ']
   " exe 'let g:'.a:plug.'_keepleaders = [g:mapleader, g:maplocalleader]'
   if has_key(g:prvset.leaders, a:plug)
     let g:mapleader = g:prvset.leaders[a:plug][0]
@@ -463,11 +464,11 @@ fu! PRVMkMappings(str) " {{{3
     " visual, Why: TTM
     vn . :norm .<CR>
     " command-line
-    cno <C-J> <S-Left>
-    cno <C-K> <S-Right>
+    "TTM: cno <C-J> <S-Left>
+    "TTM: cno <C-K> <S-Right>
     " terminal
-    tno <C-Y> <C-A>vim --servername $VIM_SERVERNAME --remote
-    tno <C-S-Y> vim --servername $VIM_SERVERNAME --remote 
+    "TTM: tno <C-Y> <C-A>vim --servername $VIM_SERVERNAME --remote
+    "TTM: tno <C-S-Y> vim --servername $VIM_SERVERNAME --remote 
     " tno <C-I> clear<CR>
     " tno <C-K> <C-W>:normal w<CR>
     " tno <C-J> <C-W>:normal b<CR>
@@ -540,9 +541,9 @@ fu! PRVMkMappings(str) " {{{3
   if a:str =~# 'L' " {{{4 localleader
     " interface navigation {{{5
     nn <localleader>a gT
-    ino <localleader>a <ESC><C-W>:tabp<CR>l<C-W>:startinsert<CR>
-    cno <localleader>a <ESC><C-W>:tabp<CR>l<c-w>:
-    tno <localleader>a <C-W>:tabp<CR>
+    "TTM: ino <localleader>a <ESC><C-W>:tabp<CR>l<C-W>:startinsert<CR>
+    "TTM: cno <localleader>a <ESC><C-W>:tabp<CR>l<c-w>:
+    "TTM: tno <localleader>a <C-W>:tabp<CR>
 
     " see |aa-mappings|
     nn <localleader>b :exe 'Le ' . expand("%:h")<CR>:let t:prv_browserid = win_getid()<CR>25<C-W>\|
@@ -550,10 +551,10 @@ fu! PRVMkMappings(str) " {{{3
     "
     " should put fold markers as comments, for now just VimL
     noremap <localleader>c mf?^fuA " {{{<localleader>/^endfA " }}}<localleader>`f 
-    ino <localleader>c <ESC>?^fuA " {{{<localleader>/^endfuA " }}}<localleader>`fa
-    " for gigraphs
-    ino <localleader>C <ESC>a
-    ino <localleader>Ck k<BS>I
+    "TTM: ino <localleader>c <ESC>?^fuA " {{{<localleader>/^endfuA " }}}<localleader>`fa
+    "TTM: " for gigraphs
+    "TTM: ino <localleader>C <ESC>a
+    "TTM: ino <localleader>Ck k<BS>I
     "
     " nn <localleader>d gT
     " ino <localleader>d <ESC><C-W>:tabp<CR>l<C-W>:startinsert<CR>
@@ -561,22 +562,22 @@ fu! PRVMkMappings(str) " {{{3
     " tno <localleader>d <C-W>:tabp<CR>
     "
     nn <localleader>d gt
-    tno <localleader>d <C-W>:tabn<CR>
-    ino <localleader>d <ESC>:tabn<CR>l<C-W>:startinsert<CR>
-    cno <localleader>d <ESC><C-W>:tabn<CR>l<c-w>:
-    ino <localleader>Dk k<BS>I
+    "TTM: tno <localleader>d <C-W>:tabn<CR>
+    "TTM: ino <localleader>d <ESC>:tabn<CR>l<C-W>:startinsert<CR>
+    "TTM: cno <localleader>d <ESC><C-W>:tabn<CR>l<c-w>:
+    "TTM: ino <localleader>Dk k<BS>I
     "
     nmap <silent> <localleader>D :set opfunc=PRVPutCharAround<CR>g@
     vmap <silent> <localleader>D :<C-U>call PRVPutCharAround(visualmode(), 1)<CR>
     "
     nn <localleader>e :e<CR>
-    ino <localleader>e <ESC>:e<CR>a
+    "TTM: ino <localleader>e <ESC>:e<CR>a
     nn <localleader>E <C-L>
-    ino <localleader>E <ESC><C-L>:e<CR>a
+    "TTM: ino <localleader>E <ESC><C-L>:e<CR>a
     "
     " should run functions, for now just VimL
     nn <localleader>f mf?^fu<CR>V/^endf<CR>:@*<CR>`f
-    ino <localleader>f <ESC>mf?^fu<CR>V/^endf<CR>:@*<CR>`fa
+    "TTM: ino <localleader>f <ESC>mf?^fu<CR>V/^endf<CR>:@*<CR>`fa
     "
     " find files
     nn <localleader>FF :Split echo globpath('/home/renato/repos/', "**/rdf*")
@@ -589,29 +590,29 @@ fu! PRVMkMappings(str) " {{{3
     nn <localleader>Fg :lv /\v/ ~/.vim/**<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
     "
     nn <localleader>g :up<CR>:source %<CR>
-    ino <localleader>g <ESC>:up<CR>:source %<CR>
+    "TTM: ino <localleader>g <ESC>:up<CR>:source %<CR>
     "
     nn <localleader>h <C-W><C-H>
     nn <localleader>j <C-W><C-J>
     nn <localleader>k <C-W><C-K>
     nn <localleader>l <C-W><C-L>
-    ino <localleader>h <ESC><C-W><C-H>a
-    ino <localleader>j <ESC><C-W><C-J>a
-    ino <localleader>l <ESC><C-W><C-L>a
-    tno <localleader>h <ESC><C-W><C-H>
-    tno <localleader>j <ESC><C-W><C-J>
-    tno <localleader>k <ESC><C-W><C-K>
-    tno <localleader>l <ESC><C-W><C-L>
-    cno <localleader>h <ESC><C-W><C-H>:
-    cno <localleader>j <ESC><C-W><C-J>:
-    cno <localleader>k <ESC><C-W><C-K>:
-    cno <localleader>l <ESC><C-W><C-L>:
+    "TTM: ino <localleader>h <ESC><C-W><C-H>a
+    "TTM: ino <localleader>j <ESC><C-W><C-J>a
+    "TTM: ino <localleader>l <ESC><C-W><C-L>a
+    "TTM: tno <localleader>h <ESC><C-W><C-H>
+    "TTM: tno <localleader>j <ESC><C-W><C-J>
+    "TTM: tno <localleader>k <ESC><C-W><C-K>
+    "TTM: tno <localleader>l <ESC><C-W><C-L>
+    "TTM: cno <localleader>h <ESC><C-W><C-H>:
+    "TTM: cno <localleader>j <ESC><C-W><C-J>:
+    "TTM: cno <localleader>k <ESC><C-W><C-K>:
+    "TTM: cno <localleader>l <ESC><C-W><C-L>:
     "
-    ino <localleader>o <ESC>
+    "TTM: ino <localleader>o <ESC>
     "
     " put char around word and WORD
     nn <localleader>q :q<CR>
-    ino <localleader>q <ESC>:q<CR>a
+    "TTM: ino <localleader>q <ESC>:q<CR>a
     "
     " Notes mappings
     " nn <localleader>N 
@@ -620,38 +621,38 @@ fu! PRVMkMappings(str) " {{{3
     " tno <localleader>N 
     "
     nn <localleader>p :runtime! plugin/**/*.vim<CR>
-    ino <localleader>p <ESC>:runtime! plugin/**/*.vim<CR>a
+    "TTM: ino <localleader>p <ESC>:runtime! plugin/**/*.vim<CR>a
     "
     " should run the line or the selection, for now just VimL
     nn <localleader>r Y:@"<CR>
-    ino <localleader>r <ESC>Y:@"<CR>a
+    "TTM: ino <localleader>r <ESC>Y:@"<CR>a
     "
     nn <localleader>s :up<CR>:source $MYVIMRC<CR>:runtime! plugin/**/*.vim<CR>
-    ino <localleader>s <ESC>:up<CR>:source %<CR>a
+    "TTM: ino <localleader>s <ESC>:up<CR>:source %<CR>a
     nn <localleader>S :up<CR>:source $MYVIMRC<CR>
-    ino <localleader>S <ESC>:up<CR>:source %<CR>l
+    "TTM: ino <localleader>S <ESC>:up<CR>:source %<CR>l
     "
     nn <localleader>U :cal PushPRV("Auto updating PRV")
     "
     nn <localleader>x :up<CR>
-    ino <localleader>x <ESC>:up<CR>
-    ino <localleader>3 <ESC>:up<CR>
-    ino <localleader>[ <ESC>:up<CR>
+    "TTM: ino <localleader>x <ESC>:up<CR>
+    "TTM: ino <localleader>3 <ESC>:up<CR>
+    "TTM: ino <localleader>[ <ESC>:up<CR>
     "
     nn <localleader>W :w<CR>
-    ino <localleader>W <ESC>:w<CR>a
+    "TTM: ino <localleader>W <ESC>:w<CR>a
     nn <localleader>w :up<CR>
-    ino <localleader>w <ESC>:up<CR>a
+    "TTM: ino <localleader>w <ESC>:up<CR>a
     " substitue all these mappings by one <localleader>e+surroundings.
     " <localleader>E might be previous words, or WORD. TTM
     nn <localleader>" ea"<ESC>hbi"<ESC>lel
     nn <localleader>' ea'<ESC>hbi'<ESC>lel
-    ino <localleader>" <ESC>hhea"<ESC>hbi"<ESC>lelli
-    ino <localleader>' <ESC>hhea'<ESC>hbi'<ESC>lelli
-    cno <localleader>" ea"<ESC>hbi"<ESC>lel<CR>
-    cno <localleader>' ea'<ESC>hbi'<ESC>lel<CR>
-    tno <localleader>" ea"<ESC>hbi"<ESC>lel<CR>
-    tno <localleader>' ea'<ESC>hbi'<ESC>lel<CR>
+    "TTM: ino <localleader>" <ESC>hhea"<ESC>hbi"<ESC>lelli
+    "TTM: ino <localleader>' <ESC>hhea'<ESC>hbi'<ESC>lelli
+    "TTM: cno <localleader>" ea"<ESC>hbi"<ESC>lel<CR>
+    "TTM: cno <localleader>' ea'<ESC>hbi'<ESC>lel<CR>
+    "TTM: tno <localleader>" ea"<ESC>hbi"<ESC>lel<CR>
+    "TTM: tno <localleader>' ea'<ESC>hbi'<ESC>lel<CR>
   en
 
   if a:str =~# 'a' " {{{4 auxleader
@@ -723,16 +724,14 @@ fu! PRVDefineSettings() " {{{3 basic variables/settings
     cal mkdir(g:prv.paths.undo, 'p')
   en
   exe 'se undodir='.g:prv.paths.undo
-  " TTM what is this for:
+  " To create e Vimball:
   let g:prv.paths.plugin_files = A('aux/pluginFiles.txt')
 endf
-" make status lines for filetypes: aashouts.txt, aasessions.txt, prv.vim? (number of :map commands, etc)
-" Vim already makes such parsing to a small extent, for syntax highlighting, so... TTM
+" make status lines for filetypes: aashouts.txt, aasessions.txt, prv.vim? (number of :map commands, etc) TTM
 
 " make mapping to set title to a tab. TTM
 
 " make routines to parsing any file and registering the AA TTM notes (cop and lop?)
-
 
 " {{{2 aux funcs (time, random numbers, etc)
 let g:Curmili = {-> system("date +%s%N | cut -b1-13")[:-2]}
@@ -757,6 +756,7 @@ aug prvfttweaks
   au FileType vim setl fdm=marker sts=2 sw=2 et
   au FileType help setl iskeyword+=-,.,(,)
   au Filetype python setl sts=4 sw=4 tw=0 et ai ff=unix
+  au FileType vue setl suffixesadd+=.vue
 aug END
 
 fu! QuitNetrw() " is this really needed? TTM {{{2

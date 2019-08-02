@@ -1118,6 +1118,27 @@ ended: ter abr  9 07:15:00 -03 2019
 
 
 
+<<<<<<< HEAD
+started: qua abr 10 08:06:33 -03 2019
+dur: 15.0
+slots: 8
+
+
+started: qui abr 11 08:41:00 -03 2019
+dur: 15.0
+slots: 8
+
+
+started: ter abr 16 11:33:45 -03 2019
+dur: 15.0
+slots: 8
+
+
+started: qua abr 17 05:21:23 -03 2019
+dur: 15.0
+slots: 2
+ended: qua abr 17 05:53:02 -03 2019
+=======
 started: Wed Apr 10 02:46:55 -03 2019
 dur: 15.0
 slots: 8
@@ -1130,18 +1151,344 @@ started: Wed Apr 10 04:49:39 -03 2019
 dur: 15.0
 slots: 4
 ended: Wed Apr 10 06:20:04 -03 2019
+>>>>>>> a7f62e779e89b8c5e240a5621908811afcb33377
 
 
 
 
+<<<<<<< HEAD
+started: qui abr 18 09:14:41 -03 2019
+=======
 started: Thu Apr 11 02:47:20 -03 2019
+>>>>>>> a7f62e779e89b8c5e240a5621908811afcb33377
 dur: 15.0
 slots: 8
+ended: qui abr 18 11:15:14 -03 2019
+
+
+
+
+started: qui abr 18 18:05:58 -03 2019
+dur: 15.0
+slots: 8
+ended: qui abr 18 20:12:52 -03 2019
+
+
+
+
+started: qui abr 18 23:05:16 -03 2019
+dur: 15.0
+slots: 8
+ended: sex abr 19 01:13:26 -03 2019
+
+
+
+
+started: sex abr 19 09:35:40 -03 2019
+dur: 15.0
+slots: 8
+ended: sex abr 19 11:36:30 -03 2019
+
+
+
+
+started: sex abr 19 13:32:45 -03 2019
+dur: 15.0
+slots: 8
+
+
+started: sex abr 19 13:48:19 -03 2019
+dur: 15.0
+slots: 8
+
+
+started: sex abr 19 13:50:57 -03 2019
+dur: 15.0
+slots: 7
+ended: sex abr 19 15:38:10 -03 2019
+
+
+
+
+started: sex abr 19 21:41:45 -03 2019
+dur: 15.0
+slots: 8
+ended: sex abr 19 23:42:57 -03 2019
+
+
+
+
+started: sáb abr 20 11:04:34 -03 2019
+dur: 15.0
+slots: 8
+ended: sáb abr 20 13:05:34 -03 2019
+
+
+
+
+started: sáb abr 20 13:08:00 -03 2019
+dur: 15.0
+slots: 8
+ended: sáb abr 20 16:37:17 -03 2019
+
+
+
+
+started: sáb abr 20 16:37:52 -03 2019
+dur: 15.0
+slots: 8
+ended: sáb abr 20 20:54:23 -03 2019
+
+
+
+
+started: dom abr 21 10:20:34 -03 2019
+dur: 15.0
+slots: 8
+ended: dom abr 21 17:08:34 -03 2019
+
+
+
+
+started: dom abr 21 17:09:08 -03 2019
+dur: 15.0
+slots: 8
+ended: dom abr 21 19:10:20 -03 2019
+
+
+
+
+started: qua abr 24 15:12:17 -03 2019
+dur: 15.0
+slots: 8
+ended: qua abr 24 17:12:20 -03 2019
+
+
+
+
+started: qua abr 24 17:16:21 -03 2019
+dur: 15.0
+slots: 8
+ended: qua abr 24 19:16:37 -03 2019
+
+
+
+
+started: qua abr 24 21:50:20 -03 2019
+dur: 15.0
+slots: 8
+ended: qui abr 25 00:45:46 -03 2019
+
+
+
+
+started: sáb abr 27 19:59:26 -03 2019
+dur: 15.0
+slots: 8
+ended: sáb abr 27 21:59:53 -03 2019
+
+
+
+
+started: dom abr 28 09:45:11 -03 2019
+dur: 15.0
+slots: 8
+ended: dom abr 28 11:53:52 -03 2019
+
+
+
+
+started: dom abr 28 14:16:57 -03 2019
+dur: 15.0
+slots: 8
+ended: dom abr 28 16:18:51 -03 2019
+
+
+
+
+started: dom abr 28 17:05:11 -03 2019
+dur: 15.0
+slots: 8
+ended: dom abr 28 19:05:29 -03 2019
+
+
+
+
+started: seg abr 29 13:53:43 -03 2019
+dur: 15.0
+slots: 8
+ended: seg abr 29 19:51:14 -03 2019
+
+
+
+
+started: qua mai  1 15:55:30 -03 2019
+dur: 15.0
+slots: 8
+ended: qua mai  1 18:14:02 -03 2019
+
+
+
+
+started: qua mai  1 19:20:14 -03 2019
+dur: 15.0
+slots: 8
+
+
+started: qui mai  2 18:46:52 -03 2019
+dur: 15.0
+slots: 8
+ended: qui mai  2 21:14:03 -03 2019
+
+
+
+
+started: qui mai  2 21:25:10 -03 2019
+dur: 15.0
+slots: 8
+ended: qui mai  2 23:38:04 -03 2019
+
+
+
+
+started: qui mai  2 23:58:26 -03 2019
+dur: 15.0
+slots: 8
+ended: sex mai  3 02:10:00 -03 2019
+
+
+
+
+started: sex mai  3 13:54:08 -03 2019
+dur: 15.0
+slots: 8
+ended: sex mai  3 15:58:15 -03 2019
+
+
+
+
+started: sex mai  3 17:11:44 -03 2019
+dur: 15.0
+slots: 8
+ended: sex mai  3 20:22:15 -03 2019
+
+
+
+
+started: ter mai  7 19:33:50 -03 2019
+dur: 15.0
+slots: 8
+
+
+started: qua mai  8 11:24:41 -03 2019
+dur: 15.0
+slots: 8
+ended: qua mai  8 13:24:54 -03 2019
+
+
+
+
+started: qua mai  8 14:10:50 -03 2019
+dur: 15.0
+slots: 6
+ended: qua mai  8 19:06:14 -03 2019
+
+
+
+
+started: qua mai  8 19:07:12 -03 2019
+dur: 15.0
+slots: 8
+ended: qua mai  8 21:08:09 -03 2019
+
+
+
+
+started: sex mai 10 15:59:31 -03 2019
+dur: 15.0
+slots: 8
+ended: sex mai 10 18:00:11 -03 2019
+
+
+
+
+started: sáb mai 11 11:42:37 -03 2019
+dur: 15.0
+slots: 8
+ended: sáb mai 11 14:44:33 -03 2019
+
+
+
+
+started: sáb mai 11 16:22:18 -03 2019
+dur: 15.0
+slots: 8
+ended: sáb mai 11 18:32:45 -03 2019
+
+
+
+
+started: sáb mai 11 18:33:27 -03 2019
+dur: 15.0
+slots: 8
+ended: sáb mai 11 21:09:07 -03 2019
+
+
+
+
+started: sáb mai 11 21:10:26 -03 2019
+dur: 15.0
+slots: 8
+ended: dom mai 12 00:24:28 -03 2019
+
+
+
+
+started: dom mai 12 19:41:34 -03 2019
+dur: 15.0
+slots: 6
+ended: dom mai 12 21:11:48 -03 2019
+
+
+
+
+started: seg mai 13 17:55:40 -03 2019
+dur: 15.0
+slots: 8
+ended: seg mai 13 20:40:14 -03 2019
+
+
+
+
+started: seg mai 13 20:45:46 -03 2019
+dur: 15.0
+slots: 8
+ended: ter mai 14 00:44:52 -03 2019
+
+
+
+
+started: ter mai 14 13:12:58 -03 2019
+dur: 15.0
+slots: 8
+ended: ter mai 14 15:13:01 -03 2019
+
+
+
+
+started: ter mai 14 15:49:43 -03 2019
+dur: 15.0
+slots: 8
+<<<<<<< HEAD
 ended: Thu Apr 11 04:47:44 -03 2019
+=======
+ended: ter mai 14 18:09:37 -03 2019
+>>>>>>> 2b4db03d0ab58c9181f262fa9792be537a2c0dfc
 
 
 
 
+<<<<<<< HEAD
 started: Thu Apr 11 05:30:25 -03 2019
 dur: 15.0
 slots: 4
@@ -1151,18 +1498,313 @@ started: Tue Apr 23 02:48:36 -03 2019
 dur: 15.0
 slots: 8
 ended: Tue Apr 23 04:51:17 -03 2019
+=======
+started: ter mai 14 20:10:00 -03 2019
+dur: 15.0
+slots: 8
+ended: ter mai 14 22:10:12 -03 2019
 
 
 
 
+started: qui mai 16 13:18:14 -03 2019
+dur: 15.0
+slots: 8
+ended: qui mai 16 15:19:01 -03 2019
+
+
+
+
+started: qui mai 16 16:19:57 -03 2019
+dur: 15.0
+slots: 8
+
+
+started: sáb mai 18 16:30:52 -03 2019
+dur: 15.0
+slots: 8
+ended: sáb mai 18 18:30:56 -03 2019
+
+
+
+
+started: sáb mai 18 19:00:05 -03 2019
+dur: 15.0
+slots: 8
+ended: sáb mai 18 21:00:07 -03 2019
+
+
+
+
+started: sáb mai 18 21:25:50 -03 2019
+dur: 15.0
+slots: 8
+ended: sáb mai 18 23:27:49 -03 2019
+
+
+
+
+started: sáb mai 18 23:28:04 -03 2019
+dur: 15.0
+slots: 8
+
+
+started: seg mai 20 01:03:05 -03 2019
+dur: 15.0
+slots: 8
+
+
+started: qui mai 30 04:23:46 -03 2019
+dur: 15.0
+slots: 8
+ended: qui mai 30 06:23:50 -03 2019
+
+
+
+
+started: dom jun  9 00:08:57 -03 2019
+dur: 15.0
+slots: 8
+ended: dom jun  9 02:09:01 -03 2019
+
+
+
+
+started: dom jun  9 02:27:37 -03 2019
+dur: 15.0
+slots: 8
+ended: dom jun  9 04:28:21 -03 2019
+
+
+
+
+started: dom jun  9 04:55:24 -03 2019
+dur: 15.0
+slots: 8
+ended: dom jun  9 16:46:39 -03 2019
+
+
+
+
+started: dom jun  9 16:47:01 -03 2019
+dur: 15.0
+slots: 8
+ended: dom jun  9 19:01:01 -03 2019
+
+
+
+
+started: dom jun  9 22:16:42 -03 2019
+dur: 15.0
+slots: 8
+ended: seg jun 10 00:17:16 -03 2019
+
+
+
+
+started: seg jun 10 02:16:35 -03 2019
+dur: 15.0
+slots: 8
+ended: seg jun 10 04:17:15 -03 2019
+
+
+
+
+started: qua jun 12 02:13:23 -03 2019
+dur: 15.0
+slots: 8
+ended: qua jun 12 04:13:32 -03 2019
+
+
+
+
+started: qua jun 12 04:13:42 -03 2019
+dur: 15.0
+slots: 8
+ended: qua jun 12 06:14:32 -03 2019
+
+
+
+
+started: seg jun 17 03:01:00 -03 2019
+dur: 15.0
+slots: 8
+ended: seg jun 17 05:01:46 -03 2019
+
+
+
+
+started: seg jun 17 05:02:17 -03 2019
+dur: 0.0
+slots: 0
+ended: seg jun 17 05:02:17 -03 2019
+
+
+
+
+started: seg jun 17 05:02:39 -03 2019
+dur: 15.0
+slots: 8
+ended: seg jun 17 07:03:10 -03 2019
+
+
+
+
+started: seg jun 17 07:06:16 -03 2019
+dur: 15.0
+slots: 8
+ended: seg jun 17 09:11:49 -03 2019
+
+
+
+
+started: seg jun 17 11:35:11 -03 2019
+dur: 15.0
+slots: 8
+ended: seg jun 17 13:35:55 -03 2019
+
+
+
+
+started: ter jun 18 23:25:01 -03 2019
+dur: 15.0
+slots: 8
+ended: qua jun 19 01:29:26 -03 2019
+
+
+
+
+started: qua jun 19 01:30:04 -03 2019
+dur: 15.0
+slots: 8
+ended: qua jun 19 03:30:26 -03 2019
+
+
+
+
+started: qua jun 19 03:47:38 -03 2019
+dur: 15.0
+slots: 8
+ended: qua jun 19 05:48:20 -03 2019
+
+
+
+
+started: qua jun 19 06:07:35 -03 2019
+dur: 15.0
+slots: 8
+
+
+started: qui jun 20 04:18:25 -03 2019
+dur: 15.0
+slots: 8
+ended: qui jun 20 06:19:15 -03 2019
+
+
+
+
+started: qui jun 20 06:19:20 -03 2019
+dur: 15.0
+slots: 8
+ended: qui jun 20 08:20:29 -03 2019
+
+
+
+
+started: sex jun 21 04:35:59 -03 2019
+dur: 15.0
+slots: 8
+ended: sex jun 21 06:41:18 -03 2019
+
+
+
+
+started: sex jun 21 06:47:31 -03 2019
+dur: 15.0
+slots: 8
+ended: sex jun 21 08:54:14 -03 2019
+
+
+
+
+started: dom jun 23 07:57:04 -03 2019
+dur: 15.0
+slots: 8
+ended: dom jun 23 09:57:31 -03 2019
+
+
+
+
+started: dom jun 23 11:20:24 -03 2019
+dur: 15.0
+slots: 8
+ended: dom jun 23 13:21:13 -03 2019
+
+
+
+
+started: dom jun 23 13:21:24 -03 2019
+dur: 15.0
+slots: 8
+ended: dom jun 23 15:21:55 -03 2019
+
+
+
+
+started: dom jun 23 15:26:36 -03 2019
+dur: 15.0
+slots: 8
+ended: dom jun 23 17:27:15 -03 2019
+
+
+
+
+started: dom jun 23 17:30:31 -03 2019
+dur: 15.0
+slots: 8
+
+
+started: seg jun 24 11:55:23 -03 2019
+dur: 15.0
+slots: 8
+ended: seg jun 24 13:56:48 -03 2019
+
+
+
+
+started: seg jun 24 13:57:00 -03 2019
+dur: 15.0
+slots: 8
+ended: seg jun 24 15:57:42 -03 2019
+
+
+
+
+started: seg jun 24 16:09:28 -03 2019
+dur: 15.0
+slots: 8
+ended: seg jun 24 18:11:32 -03 2019
+>>>>>>> 2b4db03d0ab58c9181f262fa9792be537a2c0dfc
+
+
+
+
+<<<<<<< HEAD
 started: Wed May 22 00:38:55 -03 2019
 dur: 15.0
 slots: 8
 ended: Wed May 22 02:39:00 -03 2019
+=======
+started: ter jun 25 08:32:48 -03 2019
+dur: 15.0
+slots: 8
+ended: ter jun 25 10:33:39 -03 2019
+>>>>>>> 2b4db03d0ab58c9181f262fa9792be537a2c0dfc
 
 
 
 
+<<<<<<< HEAD
 started: Wed May 22 02:47:45 -03 2019
 dur: 15.0
 slots: 8
@@ -1172,10 +1814,263 @@ started: Wed May 22 03:59:45 -03 2019
 dur: 15.0
 slots: 4
 ended: Wed May 22 05:00:03 -03 2019
+=======
+started: ter jun 25 10:41:50 -03 2019
+dur: 15.0
+slots: 8
+ended: ter jun 25 12:42:02 -03 2019
 
 
 
 
+started: ter jun 25 12:44:34 -03 2019
+dur: 15.0
+slots: 8
+ended: ter jun 25 14:44:50 -03 2019
+
+
+
+
+started: ter jun 25 14:46:54 -03 2019
+dur: 15.0
+slots: 8
+ended: ter jun 25 16:47:21 -03 2019
+
+
+
+
+started: qua jun 26 13:41:54 -03 2019
+dur: 15.0
+slots: 8
+
+
+started: qua jun 26 13:47:11 -03 2019
+dur: 15.0
+slots: 8
+ended: qua jun 26 15:55:59 -03 2019
+
+
+
+
+started: qua jun 26 15:56:16 -03 2019
+dur: 15.0
+slots: 8
+
+
+started: sex jun 28 10:31:49 -03 2019
+dur: 15.0
+slots: 8
+ended: sex jun 28 12:56:07 -03 2019
+
+
+
+
+started: sex jun 28 13:10:40 -03 2019
+dur: 15.0
+slots: 8
+ended: sex jun 28 15:23:54 -03 2019
+
+
+
+
+started: sex jun 28 15:24:12 -03 2019
+dur: 15.0
+slots: 8
+ended: sex jun 28 17:50:43 -03 2019
+
+
+
+
+started: sex jun 28 19:48:12 -03 2019
+dur: 15.0
+slots: 8
+ended: sex jun 28 21:57:04 -03 2019
+
+
+
+
+started: dom jun 30 10:19:10 -03 2019
+dur: 15.0
+slots: 8
+ended: dom jun 30 12:19:18 -03 2019
+
+
+
+
+started: dom jun 30 12:57:43 -03 2019
+dur: 15.0
+slots: 8
+ended: dom jun 30 14:58:11 -03 2019
+
+
+
+
+started: dom jun 30 14:58:25 -03 2019
+dur: 15.0
+slots: 8
+ended: dom jun 30 16:59:19 -03 2019
+
+
+
+
+started: dom jun 30 17:48:58 -03 2019
+dur: 15.0
+slots: 8
+ended: dom jun 30 19:50:40 -03 2019
+
+
+
+
+started: dom jun 30 20:06:34 -03 2019
+dur: 15.0
+slots: 8
+ended: dom jun 30 22:13:30 -03 2019
+
+
+
+
+started: seg jul  1 19:14:36 -03 2019
+dur: 15.0
+slots: 8
+
+
+started: seg jul  1 20:08:53 -03 2019
+dur: 15.0
+slots: 8
+ended: seg jul  1 22:09:54 -03 2019
+
+
+
+
+started: ter jul  2 17:01:33 -03 2019
+dur: 15.0
+slots: 8
+ended: ter jul  2 19:01:56 -03 2019
+
+
+
+
+started: ter jul  2 19:09:13 -03 2019
+dur: 15.0
+slots: 8
+ended: ter jul  2 21:14:56 -03 2019
+
+
+
+
+started: qua jul  3 18:56:22 -03 2019
+dur: 15.0
+slots: 8
+ended: qua jul  3 20:56:42 -03 2019
+
+
+
+
+started: sex jul  5 01:24:47 -03 2019
+dur: 15.0
+slots: 8
+ended: sex jul  5 03:31:27 -03 2019
+
+
+
+
+started: sex jul  5 03:43:57 -03 2019
+dur: 15.0
+slots: 8
+ended: sex jul  5 05:44:55 -03 2019
+
+
+
+
+started: sex jul  5 05:45:02 -03 2019
+dur: 15.0
+slots: 8
+ended: sex jul  5 07:45:05 -03 2019
+
+
+
+
+started: sex jul  5 20:10:40 -03 2019
+dur: 15.0
+slots: 8
+ended: sex jul  5 22:17:35 -03 2019
+
+
+
+
+started: sáb jul  6 00:19:27 -03 2019
+dur: 15.0
+slots: 8
+ended: sáb jul  6 02:31:11 -03 2019
+
+
+
+
+started: sáb jul  6 17:52:52 -03 2019
+dur: 15.0
+slots: 8
+ended: sáb jul  6 19:52:57 -03 2019
+
+
+
+
+started: sáb jul  6 20:17:55 -03 2019
+dur: 15.0
+slots: 8
+ended: dom jul  7 02:45:54 -03 2019
+
+
+
+
+started: dom jul  7 05:03:53 -03 2019
+dur: 15.0
+slots: 8
+ended: dom jul  7 07:04:08 -03 2019
+
+
+
+
+started: ter jul  9 02:36:42 -03 2019
+dur: 15.0
+slots: 8
+
+
+started: ter jul  9 04:50:06 -03 2019
+dur: 15.0
+slots: 8
+
+
+started: ter jul  9 19:47:59 -03 2019
+dur: 15.0
+slots: 8
+
+
+started: qui jul 11 04:38:23 -03 2019
+dur: 15.0
+slots: 8
+ended: qui jul 11 06:38:28 -03 2019
+
+
+
+
+started: sáb jul 13 09:42:11 -03 2019
+dur: 15.0
+slots: 8
+ended: sáb jul 13 11:42:28 -03 2019
+
+
+
+
+started: ter jul 16 07:17:55 -03 2019
+dur: 15.0
+slots: 4
+ended: ter jul 16 08:17:57 -03 2019
+>>>>>>> 2b4db03d0ab58c9181f262fa9792be537a2c0dfc
+
+
+
+
+<<<<<<< HEAD
 started: Wed May 22 21:24:05 -03 2019
 dur: 15.0
 slots: 8
@@ -1185,13 +2080,66 @@ started: Thu May 23 01:32:36 -03 2019
 dur: 15.0
 slots: 8
 ended: Thu May 23 03:34:55 -03 2019
+=======
+started: ter jul 16 10:48:59 -03 2019
+dur: 15.0
+slots: 8
+ended: ter jul 16 14:36:45 -03 2019
 
 
 
 
+started: qua jul 17 16:55:41 -03 2019
+dur: 15.0
+slots: 8
+ended: qua jul 17 18:55:54 -03 2019
+
+
+
+
+started: qua jul 17 19:05:27 -03 2019
+dur: 15.0
+slots: 8
+ended: qua jul 17 23:39:01 -03 2019
+
+
+
+
+started: sex jul 19 13:45:53 -03 2019
+dur: 15.0
+slots: 8
+ended: sex jul 19 15:46:10 -03 2019
+
+
+
+
+started: sex jul 19 16:08:43 -03 2019
+dur: 15.0
+slots: 8
+ended: sex jul 19 20:06:40 -03 2019
+
+
+
+
+started: sex jul 19 20:06:58 -03 2019
+dur: 15.0
+slots: 8
+ended: sex jul 19 22:08:55 -03 2019
+>>>>>>> 2b4db03d0ab58c9181f262fa9792be537a2c0dfc
+
+
+
+
+<<<<<<< HEAD
 started: Fri May 24 00:09:53 -03 2019
 dur: 15.0
 slots: 8
 ended: Fri May 24 03:33:33 -03 2019
+=======
+started: seg jul 29 12:31:22 -03 2019
+dur: 15.0
+slots: 8
+ended: seg jul 29 17:17:12 -03 2019
+>>>>>>> 2b4db03d0ab58c9181f262fa9792be537a2c0dfc
 
 

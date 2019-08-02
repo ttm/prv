@@ -20,19 +20,68 @@ há três apps:
 
 ~~~ outros ~~~
 propor p diego de eu fazer a escrita de algum dos artigos q ele relatou (por email) ja ter os resultados.
+retomar com amancio pesq. Tvz sobre biblia e paulo
+art sobre vis de dedicacao: com aa e vis de vocab + horarios + espacamentos entre shouts + dedicacao por dia etc
 
 
+~~~ text ~~~
 
-~~~ evolution ~~~
-- observacao da preservacao de grau e clust
-- incorporar algs do diego
-- estabelecer quais algs podemos aplicar no nivel coarsest para testar o alg
-- listar e destacar vizinhos, filhos e pais, e infos do vértice clicado
-  * instalar o jsnetworkx para achar rápido os vizinhos, o grau do vértice, etc. ???
-  * reescrever estruturas de dados como dicionarios para garantir enderecamento correto e nome de vertice que nao seja numerico
-  * acrescentar vizinhos do vertice ao escrever as arestas (cada aresta adiciona o vizinho aos dois vertices)
-- etiquetar vértices para guiar o processo de coarsening
 
+~~~ multilevel ~~~
+  * layer -> level OK
+  * lier -> layer OK
+  * relacao pai/filho nos arquivos dados pela lib? OK
+  * deixar deitadas as colunas dos tiers OK
+  * faltando metodos que estao no source do alan OK
+
+principalmente:
+  * driven aas requisicoes e uso do pesquisador
+
+contradicoes:
+  * pediu p colorir os vertices source, ao mesmo tempo, pediu p mostrar somente 1 camada por vez
+c alan:
+
+todo:
+  * tamanho/cor ~ grau/força/quantidade de filhos source OK
+  * e grossura/cor ~ peso v2
+  * fazer source tb p redes n bipartidas 
+  * layout 2D, um só nivel por vez, ênfase na navegação, começa pelo último nível
+    - mode: show all / show one
+      * se show one: comeca pelo ultimo nivel, no explode (click?), abre os filhos com formato diferente: triangulo, quadrado
+  * implementar o procedimento p navegação
+  * obter o n de vertices em cada camada? Vou parsear o arquivo p depois enviar p mlpd ou alterar ele OK
+  * clust bip do netx OK
+  * ler e relacionar os pais c filhos OK
+  * carregar original layer0 OK
+  * q formatos de redes implementar leitura? ncol OK
+  * carregar source para cada layer OK
+
+  * force atlas 2 ?
+  * pq branco pequeno no fundo preto fica pior q o contrário
+
+- h for help: shows all commands. Don't implement widgets for all of them. OK
+  * increase-decrease sphere diameter OK
+  * more-less bins in hist OK
+  * hist in numb or freq OK
+  * add/remove layer OK
+- titles (layer number) and axis labels OK
+- observacao da preservacao de grau e clust OK
+  - hover color nodes, nodes color bars
+
+- listar e destacar vizinhos, filhos e pais, e infos do vértice clicado OK
+- acrescentar vizinhos do vertice ao escrever as arestas (cada aresta adiciona o vizinho aos dois vertices) OK
+- etiquetar vértices para guiar o processo de coarsening OK
+
+- instalar o jsnetworkx para achar rápido os vizinhos, o grau do vértice, etc. ???
+- reescrever estruturas de dados como dicionarios para garantir enderecamento correto e nome de vertice que nao seja numerico ???
+
+- incorporar algs do alan <--- OK
+  * disponibilizar os campos para as camadas, ver quantas camadas tem antes a rede. Lidar com esta importacao de rede. (this.ntiers)
+- garantir i/o com DB para deixar mais rapido
+- estabelecer quais algs podemos aplicar no nivel coarsest para testar o alg <---
+- integrar leitura de mais tipos de arquivo?
+- make canvas and svg div resizable?
+- embelezar com acabamento (copyright vicg, help bonitinho)
 
 ~~~ evolution ~~~
 - fazer o versinus e o hive plot todo ondulado (regular ondulação com sliders)
@@ -95,3 +144,26 @@ propor p diego de eu fazer a escrita de algum dos artigos q ele relatou (por ema
 
 ~~ further tasks ~~
 - procurar no youtube sobre: nuxt, visual analytics, babylonjs
+
+
+
+~~ c Cristina 25/Abr ~~
+* multilevel, ver os keystrokes, o clicar no histograma, a navegacao
+
+* evolution: hover nos vertices e nas timelines, keystrokes, clique na timeline p navegacao
+
+* proximos passos:
+  - integrar dados reais no evolution; e bulk analyses
+  - entregar o multilevel p alan e ir arrumando mediante necessidades que ele for elencando. Tvz fazer toolbox
+  - passar o netText a limpo p interface final
+
+arrumar:
+  - player manter certinho o player, clicando e indo p lugar certo na timeline
+  - fazer esquema p explodir o vertice na mesma camada 
+
+graph droawing and network visualization
+(conferencia)
+- layout p cada supervertice, de forca
+- de forca no reticulado
+- ver c estrada sobre layouts de grafos: em especial tvz usando comunicabilidade
+

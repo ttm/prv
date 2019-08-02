@@ -34,7 +34,7 @@ let g:mapleader = ' a'
 let g:maplocalleader = ' '
 " -- for shouts {{{3
 " shouting:
-nn <leader>a :A 
+nn <leader>a :A<space>
 nn <leader>A :exec "vs " . g:aa.paths.shouts<CR>Go<ESC>o<ESC>:.!date<CR>:put=g:aa.set.sep<CR>kki
 " for accessing the aashouts.txt:
 nn <leader>e :exec "e " . g:aa.paths.shouts<CR>G
@@ -45,9 +45,9 @@ nn <leader>t :ec system('date')[:-2]<CR>
 nn <leader><localleader>t :ec 'minutes since last shout: ' . ATimeSinceLastShout()<CR>
 " -- for sessions {{{3
 " starting a session:
-nn <leader>s :S 15 8
-nn <leader>S :S 5 24
-nn <leader><localleader>s :S 30 4
+nn <leader>s :Aa 15 8<space>
+nn <leader>S :Aa 5 24<space>
+nn <leader><localleader>s :Aa 30 4
 " accessing aasessions.txt:
 nn <leader>V :exec "vs " . g:aa.paths.sessions<CR>G
 " for info on the session (time and left in the slot, іs session on): 
@@ -78,7 +78,7 @@ nn <leader>C :cal AClear('force')<CR>
 " COMMANDS: {{{3
 com! -nargs=1 -complete=tag_listfiles A cal AShout(<q-args>)
 " com! -nargs=1 -complete=customlist,AAutoComplete A call AShout(<q-args>)
-com! -nargs=+ S cal AStartSession(<f-args>)
+com! -nargs=+ Aa cal AStartSession(<f-args>)
 " the following are more easely accesses though :Ai
 " FUNCTIONS: {{{1
 " -- MAIN {{{2
@@ -385,7 +385,7 @@ fu! ASay() " {{{3
 endf
 fu! AMkVoice() " {{{3
     let voice = g:aa.events.session.voices[reltime()[1]%len(g:aa.events.session.voices)]
-    let epk = 'espeak -v' . l:voice
+    let epk = 'espeak -a 50 -v' . l:voice
   retu l:epk
 endf
 fu! ASessionReceiveMsg() " {{{3
