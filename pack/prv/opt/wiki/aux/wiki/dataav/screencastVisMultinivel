@@ -1,0 +1,24 @@
+
+           (( dom mai 19 18:22:18 -03 2019 ))
+           
+           apresentacao da interface:
+           - redes, layouts, settings, render
+           
+           apresentacao das ferramentas:
+           - uma por uma do que está no display
+           
+           exemplos de próximos passos:
+           - colorir vizinhos
+           - aumentar ou diminuir tamanho de aresta
+           - prover informações específicas do vértice (sources, neighbors, clutering, etc)
+           - talvez fazer menus específicos para cada conjunto de ferramentas
+           - fazer spring layout em continuamente em tempo real
+           - implementar alguns dos itens implementados na interface 3D
+           - evitar problemas de movimentação, abertura
+           
+           instância no VICG, conexão externa à USP:
+           - demora p carregar
+           - tb demora p entregar o layout
+           
+           :::
+

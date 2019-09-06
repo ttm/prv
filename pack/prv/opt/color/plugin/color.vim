@@ -23,6 +23,8 @@ nn <leader>cc :cal CChange()<CR>
 nn <leader>cs :ec CStack()<CR>
 nn <leader>ci :cal CInit()<CR>
 nn <leader>c<leader>c :cal CColor()<CR>
+nn <leader>cr :cal CRandColorApply()<CR>
+nn <leader>cR :cal CRandColorApply('b')<CR>
 
 " Initialization and overall status update
 " COMMANDS: {{{1
@@ -312,6 +314,11 @@ fu! ApplyCS(pallete, method) " {{{3
       exe c
     endfo
   en
+endf
+let g:qwee = 'asdasd'
+fu! CRandColorApply(...) " {{{3
+  " Change current color randomly
+  let g:asddsa =  a:
 endf
 " -- UTILS {{{2
 fu! CIsInitialized() " {{{3

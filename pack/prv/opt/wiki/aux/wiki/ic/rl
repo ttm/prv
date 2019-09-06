@@ -1,0 +1,36 @@
+
+experimentos e anotações com código:
+    https://github.com/ttm/linearregression
+condições pra OLS, testes, Gauss Markov e como remediar problemas com as hipóteses
+
+https://en.wikipedia.org/wiki/Linear_regression
+https://en.wikipedia.org/wiki/General_linear_model
+https://en.wikipedia.org/wiki/Simple_linear_regression
+
+# regressão linear
+modelinho de brinquedo std x lucro
+script do modelinho, notas no __doc__
+script dos livros
+scripts no pacote (e /scripts/ e usage/ e bib/)
+
+==================
+
+simple, multiple, multivariate
+
+correlação de duas ações com deslocamento (de 1 dia, 1 semana, 1 mês...):
+  brute force
+
+escolha de ações com correlação zero (ou baixa) p diminuir risco
+
+======
+stock vs bond vs share?
+vocabulário SKOS e ontologia OWL
+
+============
+Gauss-Markov
+homocestadiscidade
+ambiased sao os coeficientes nao os resíduos
+aumenta a eficiência: menor variação
+normalidade para o intervalo de confiaça
+p value e significancia
+variance + soma de duas probabilidades
