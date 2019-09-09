@@ -61,7 +61,8 @@ nn <leader>u :cal AUpdateColorColumns()<CR>
 " -- hacking {{{3
 nn <leader>H :exec 'vs ' . g:aa.paths.aux<CR>
 nn <leader>h :exec 'vs ' . g:aa.paths.aascript<CR>
-nn <leader><localleader> :PRedir v ec g:aa
+" nn <leader><localleader> :PRedir v ec g:aa
+nn <leader><localleader> :ec g:aa
 " this command does not find tags from other help files:
 " nn <leader>H :exec 'vs ' . g:aa.paths.aadoc<CR>
 " thus we use:

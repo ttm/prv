@@ -5408,3 +5408,19 @@ $$$$$
 retomando colors, todo
 sex set  6 11:59:58 -03 2019
 -----
+
+
+$$$$$
+sessao p resolver realcolors
+seg set  9 09:41:47 -03 2019
+-----
+- terminar com screencast, vimball, pacote pypi, email p vim_use
+- revisar funções do Vimball e do python
+- tentar ao menos fazer umas utilidades legais do python
+- fazer mais comandos usando as funções
+- fazer colorschemes de interesse
+- revisar documentação
+- soltar na listamacambira por partes:
+  * realcolors revisado, vimball + pypi, email p vim_use
+seg set  9 09:41:57 -03 2019
+-----
