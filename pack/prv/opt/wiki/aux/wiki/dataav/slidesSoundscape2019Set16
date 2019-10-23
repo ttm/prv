@@ -1,0 +1,264 @@
+
+
+
+  ~ Calibra monitor / datashow / projetor ~
+         (calibra projeção de luz)
+
+     iniciar sessao de aa
+
+     arrumar:
+match Constant /\v\~.*\~/
+match VimSynError /\v\~.*\~/
+hi Normal guibg=red guifg=green
+
+" tenta C-\i C-\c (j n y, rgb etc)
+" tenta amarelo ou verde, ou realcolors:
+cal ApplyCS(g:ccs.yellow1, 'c')
+cal ApplyCS(g:ccs.green2, 'c')
+cal ApplyCS(g:ccs.passivepink1, 'c')
+cal ApplyCS(g:ccs.red1, 'c')
+cal ApplyCS(g:ccs.red5, 'c')
+colo blue
+colo zellner
+" exu1 _notes yellow1 redblackl
+" passivepink1 green1 green2 red1 red2
+" red3 red4 red5 blue1 blue2 red1b red1c
+
+setl so=0
+" toggle numbering but maintain spacing:
+" <find commands, make function and m mapping>
+
+
+
+(capa)
+
+
+
+                ~ Aula sobre cor ~
+    
+    
+       Renato Fabbri, renato.fabbri@gmail.com
+           
+       ICMC/USP, FAPESP (projeto 2017/05838-3)
+   Profa. Dra. Maria Cristina Ferreira de Oliveira
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+==========================
+(0)
+
+               ~ roteiro ~
+                 
+    1 - motivação / introdução (propaganda)
+    
+    2 - cores (☥)
+    
+    3 - cores na visualização de dados (☨)
+    
+    4 - (era: ferramentas e exercícios)
+        literatura fichada:
+          artigos selecionados
+          Munzner
+          Ware <- até aplicações
+   
+               ~ (☥,☨) contexto, aplicação ~
+      
+      
+      
+
+
+
+
+
+==========================
+(1)
+
+         ~ motivation / introduction ~
+            
+    color as the primary cue for sight
+    
+    optical illusion
+      file:~/repos/dataVisualization/figs/optIllusion.jpg
+    
+    books on color
+      Goethe, Schopenhauer, Aristotle,
+      Cage, Runge, Klee, Tricia Guild?,  Newton
+      
+    * Klee mesmo, cadê? quem mais?
+      Rimbaud? Democritus?
+      - Color and Meaning: Art, Science, and Symbolism - Cage
+      - Color and Culture - Cage
+      - Remarks on Colour - Wittgenstein
+      - Shopenhauer with Runge's color sphere in ebook:
+          * /home/renato/Documents/ebooks/On_Vision_and_Colors_n_Color_Sphere_by_Arthur-Schopenhauer.pdf
+    
+    Gombrich,
+      referência quasi-máxima
+      história da arte
+      (livro em mãos)
+    
+    ./colorForTheSciences
+    
+    :::
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+==========================
+(2)
+
+            ~ cores (☥)~
+            
+  o que é cor?
+    cor do objeto ou que se vê?
+    espectro visível
+    células sensoras e respostas em frequência
+    processamento neural
+  
+  como ela é utilizada em visualização de dados?
+    e nas artes em geral? (Gombrich)
+      
+  Cores complementares, opostas, ótimas, etc.
+  
+  escalas de cinza, cores mais distantes
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+==========================
+(3)
+
+       ~ cores na visualização de dados (☨) ~
+    
+    
+  Texto: realce de sintáxe, BoW com corte de Luhn
+  
+  Redes: medidas nos vértices e arestas
+  
+  Tradicionais:
+    gráfico de dispersão,
+    linha do tempo,
+    histograma
+            
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+==========================
+(4.(-1))
+
+            ~ era: ferramentas e exercícios ~
+            
+            
+  Pillow e IPython
+  talvez Vim, matplotlib, d3, etc
+    
+  talvez seja um video ou outra aula
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+==========================
+(4)
+
+            ~ literatura fichada ~
+            
+            
+            timbre -> audição
+            cor -> visão
+            
+  ./articles
+  ./munzner (instrumental, técnico VD)
+  ./ware (instrumental, técnico perceptual)
+    
+~ email p vcs com os links: ~
+    https://github.com/ttm/prv/blob/master/pack/ttm/opt/wiki/aux/wiki/datavis/slides2018May11.wiki
+    https://github.com/ttm/prv/tree/master/pack/ttm/opt/wiki/aux/wiki/datavis
+  obrigado.
+    mandar p Cristina
+    
+segunda aula ./slides2018May18:
+    munzner até o final (mínimo ok)
+    ware até aplicações (bom)
+    aplicações ware ou artigos (ótimo)
+    os dois (excelente)
+
+:::
+
+

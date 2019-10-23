@@ -53,7 +53,7 @@ let g:prv.leaders.other = ["<c-h>", "<c-j>", "<c-k>"]
 
 pa aa
 pa wiki
-pa color
+pa c0lor
 pa bot
 pa tokipona
 pa prv
@@ -64,6 +64,24 @@ let aa.set.bot = 0
 
 " {{{1 final commands
 colo blue
+
+" {{{1 syntastic
+
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
+" pa syntastic
+" " se statusline+=%#warningmsg#
+" " se statusline+=%{SyntasticStatuslineFlag()}
+" " se statusline+=%*
+" " g:syntastic_python_checkers = ['flake8', 'python3']
+" let g:syntastic_python_flake8_args = '--ignore=E712,E402'
+" 
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
 
 " {{{1 notes
 " space, enter, backspace, tab, are keys not really used

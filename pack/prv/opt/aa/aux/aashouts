@@ -5424,3 +5424,350 @@ seg set  9 09:41:47 -03 2019
   * realcolors revisado, vimball + pypi, email p vim_use
 seg set  9 09:41:57 -03 2019
 -----
+$$$$$
+
+
+
+
+$$$$$
+sessao p c0lor
+ter set 10 00:49:41 -03 2019
+-----
+
+
+$$$$$
+iniciando MyNSA e MMISSA e CIA
+ter set 17 02:43:02 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+escrevendo as rotinas de algumas paginas
+ter set 17 05:57:40 -03 2019
+-----
+
+
+$$$$$
+colocando texto e plotando n vertices q sao os snapshots de fb e outras proveniencias
+ter set 17 07:45:34 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+pegando mynsa p dar outro tapa
+qui set 19 02:05:37 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+respondendo mensagens e articulando com Ailton e bairesdev
+sex set 20 19:13:46 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+revisando curriculum, arrumando referencias
+seg set 23 22:28:25 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+sessao p fazer o desafio bairesdev
+qui set 26 15:00:06 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+fazendo pacote p traduzir o sql p python
+qui set 26 19:21:45 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+utimas 3 sessoes antes de reuniao
+sex set 27 06:03:18 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+sessao p chegar em uma tabela final p query
+dom set 29 13:39:28 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+tentando unir as partes do A
+dom set 29 15:39:47 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+tentando concertar as ultimas 4 variaveis
+ter out  1 15:52:15 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+ultima sessao para submissao
+qua out  2 06:40:27 -03 2019
+-----
+$$$$$
+
+
+speech synthesis mymsa
+qua out  2 23:07:51 -03 2019
+-----
+
+
+$$$$$
+fazer modelo do gadget
+qua out  2 23:08:24 -03 2019
+-----
+mandar p glitch art. Dawmn, hackearam meu computador, etc...
+qua out  2 23:24:04 -03 2019
+-----
+$$$$$
+
+
+colocar as contagens no canvas. Atualizar pelo esquema de animacao do pixi
+qui out  3 03:10:55 -03 2019
+-----
+
+
+$$$$$
+sessao 1: comecando novo repo para nuxt, indo para versao mais atual de tudo, comecando do zero
+sáb out  5 02:12:55 -03 2019
+-----
+
+
+$$$$$
+sessao p incrementar resposta do desafio
+seg out  7 20:40:08 -03 2019
+-----
+
+
+$$$$$
+sessao p melhorar a apresentacao e fechar
+seg out  7 22:52:00 -03 2019
+-----
+
+
+$$$$$
+timing estudo de js assincrono
+qui out 10 00:46:25 -03 2019
+-----
+15 8 estudando meteor HTTP + js default fetch()
+qui out 10 00:46:29 -03 2019
+-----
+estudando pixi, relendo tutorial p sacar. Sprites, containers, texture atlas,  spacing.
+qui out 10 02:50:39 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+terminando d reler tutorial d pixi. Texto
+qui out 10 03:40:30 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+sessao de inicio do meteor:
+* link to pixi and tone initialization files.
+* make a reactive collection.
+* make a sparql query performer that reaches LOSD.
+* put initialization of pixi and tone in the files.
+qui out 10 18:40:08 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+session: eternalze the self by making gadgets that will make art forever.
+* a gadget that outputs audio/music and images/animation/video.
+* it will be composing until after I (and we) die. I will. ?
+* variations on the gadgets will be making art forever, with their authors.
+* ppl and I can make public and hidden pages about their life or whatever they want,
+to be as part for the "forever land" (posterity undefined).
+* how to make sure it will make art forever, or at least increace the propability
+of it living / working / making art forever? Computer virus? Viral human contract?
+* Max contract: all secrets, all info requested, for ensuring that an instance of MyNSA 
+will be kept online (current version or posterior).
+* Maybe MyNSA will evolve to also be an always existing open, transparent,
+social harnessing/intervention platform.
+* Thus, make the page artistic:
+  - ETs, insects, (gods?) as backgrounds.
+  - nice sprites.
+  - good music, good visuals, and possibility of finetunning.
+  - spread when it is time.
+  - focus on gamified audiovisualization and integration (linked data, uploads, authentication, scrapping).
+  - implant or alter something in your social structures (social self).
+    * instead of collection and diffusion of information and goods.
+sáb out 12 23:01:24 -03 2019
+-----
+primeira sessao completa, arrumado esquema para os dados da sessao, q sao controladores
+dom out 13 01:02:02 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+avancando com os controladores nos textos
+dom out 13 01:02:39 -03 2019
+-----
+feitos textos informativos e para controle do tone e pixi. Iniciando background.
+dom out 13 04:52:15 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+background
+dom out 13 04:53:08 -03 2019
+-----
+feiros backgrounds com particulas e sem.
+dom out 13 12:35:42 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+sessao p passar background p classe do pixi
+dom out 13 12:36:21 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+sessao p deixar com massa, parada rolando. Comecando a conectar pixi e tone
+dom out 13 16:28:44 -03 2019
+-----
+pensando em como resolver do query no LOSD no cliente. Talvez fazer no servidor mesmo e manter consistencia no BD. Pulando p outra coisa por enquanto.
+dom out 13 19:41:52 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+sessao p brainstorm e fazer lidar com as rotas.
+seg out 14 22:44:15 -03 2019
+-----
+mudando atual mynsa p legacy e criando novo repo. Micracao completa dos codigos usando templates meteor.
+seg out 14 23:45:04 -03 2019
+-----
+
+
+$$$$$
+15 8 conseguir dar query no losd e dbpedia, get e put, e montar ao menos umas estruturas legais c ambas
+sáb out 19 08:19:15 -03 2019
+-----
+estruturada parada toda. Arrumando pixi p mapear os dados, ja baixados do LOSD pelo cliente
+sáb out 19 11:40:33 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+coloscheme e retomando mynsa, anotacoes sobre veganismo
+dom out 20 01:00:39 -03 2019
+-----
+refletindo sobre as coisas, planejando na cabeça
+dom out 20 01:17:04 -03 2019
+-----
+feito colorscheme do dia, iniciando mynsa
+dom out 20 01:17:39 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+arrumando as classes do background
+dom out 20 05:45:55 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+organizando afazeres p mynsa
+dom out 20 19:10:47 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+orgnaizado dev até semana que vem e rascunhado além. Retomando desenvolvimento
+seg out 21 03:11:06 -03 2019
+-----
+$$$$$
+
+
+
+
+$$$$$
+burilando a tela inicial
+seg out 21 05:20:28 -03 2019
+-----
+cafe
+seg out 21 06:54:14 -03 2019
+-----
+$$$$$
+
+

@@ -1,0 +1,31 @@
+~ events ~
+interviews
+made curriculum, sent documents
+coding challenge (26/Set/2019)
+
+~~ coding challenge ~~
+qui set 26 13:25:51 -03 2019
+
+Jupyter Python notebooks and a README at:
+/home/renato/Documents/bairesdev/cc/take-home
+
+The challenge consists on translating
+'ams.rules_input.sql'
+(an SQL query) into Python, and achieve an exact replica of
+'ams.sf_cases_input'
+in a pandas DataFrame.
+.
+an exact copy, 
+
+The data is not given, so I will not be able to test
+things before meeting today 14h.
+
+Things to remember:
+  pandas (sqlio, dataframe, etc)
+  
+
+Questions:
+  checkpoints?
+
+
+

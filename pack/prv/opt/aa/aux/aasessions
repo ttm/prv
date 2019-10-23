@@ -2327,3 +2327,262 @@ slots: 4
 started: seg set  9 09:41:47 -03 2019
 dur: 15.0
 slots: 12
+ended: seg set  9 15:21:14 -03 2019
+
+
+
+
+started: ter set 10 00:49:41 -03 2019
+dur: 15.0
+slots: 8
+
+
+started: ter set 17 02:43:02 -03 2019
+dur: 15.0
+slots: 8
+ended: ter set 17 04:43:05 -03 2019
+
+
+
+
+started: ter set 17 05:57:40 -03 2019
+dur: 15.0
+slots: 8
+
+
+started: ter set 17 07:45:34 -03 2019
+dur: 15.0
+slots: 8
+ended: ter set 17 09:57:38 -03 2019
+
+
+
+
+started: qui set 19 02:05:37 -03 2019
+dur: 15.0
+slots: 8
+ended: qui set 19 04:05:54 -03 2019
+
+
+
+
+started: sex set 20 19:13:45 -03 2019
+dur: 15.0
+slots: 8
+ended: sex set 20 21:25:16 -03 2019
+
+
+
+
+started: seg set 23 22:28:25 -03 2019
+dur: 15.0
+slots: 8
+ended: ter set 24 08:58:37 -03 2019
+
+
+
+
+started: qui set 26 15:00:06 -03 2019
+dur: 15.0
+slots: 8
+ended: qui set 26 17:00:43 -03 2019
+
+
+
+
+started: qui set 26 19:21:45 -03 2019
+dur: 15.0
+slots: 8
+ended: sex set 27 00:08:57 -03 2019
+
+
+
+
+started: sex set 27 06:03:18 -03 2019
+dur: 15.0
+slots: 8
+ended: sex set 27 08:03:28 -03 2019
+
+
+
+
+started: dom set 29 13:39:28 -03 2019
+dur: 15.0
+slots: 8
+ended: dom set 29 15:39:31 -03 2019
+
+
+
+
+started: dom set 29 15:39:47 -03 2019
+dur: 15.0
+slots: 8
+ended: dom set 29 17:43:15 -03 2019
+
+
+
+
+started: ter out  1 15:52:15 -03 2019
+dur: 15.0
+slots: 8
+ended: ter out  1 18:28:50 -03 2019
+
+
+
+
+started: qua out  2 06:40:27 -03 2019
+dur: 15.0
+slots: 8
+ended: qua out  2 08:40:36 -03 2019
+
+
+
+
+started: qua out  2 23:08:24 -03 2019
+dur: 15.0
+slots: 8
+ended: qui out  3 01:08:28 -03 2019
+
+
+
+
+started: sáb out  5 02:12:54 -03 2019
+dur: 15.0
+slots: 8
+
+
+started: seg out  7 20:40:08 -03 2019
+dur: 15.0
+slots: 8
+
+
+started: seg out  7 22:52:00 -03 2019
+dur: 15.0
+slots: 8
+
+
+started: qui out 10 00:45:12 -03 2019
+dur: 15.0
+slots: 8
+
+
+started: qui out 10 00:45:40 -03 2019
+dur: 15.0
+slots: 8
+
+
+started: qui out 10 00:46:25 -03 2019
+dur: 15.0
+slots: 8
+ended: qui out 10 02:50:47 -03 2019
+
+
+
+
+started: qui out 10 03:40:30 -03 2019
+dur: 15.0
+slots: 8
+ended: qui out 10 05:52:37 -03 2019
+
+
+
+
+started: qui out 10 18:40:08 -03 2019
+dur: 15.0
+slots: 8
+ended: qui out 10 22:10:17 -03 2019
+
+
+
+
+started: sáb out 12 23:01:24 -03 2019
+dur: 15.0
+slots: 8
+ended: dom out 13 01:02:13 -03 2019
+
+
+
+
+started: dom out 13 01:02:39 -03 2019
+dur: 15.0
+slots: 8
+ended: dom out 13 04:52:15 -03 2019
+
+
+
+
+started: dom out 13 04:53:08 -03 2019
+dur: 15.0
+slots: 8
+ended: dom out 13 12:35:42 -03 2019
+
+
+
+
+started: dom out 13 12:36:21 -03 2019
+dur: 15.0
+slots: 8
+ended: dom out 13 14:36:44 -03 2019
+
+
+
+
+started: dom out 13 16:28:44 -03 2019
+dur: 15.0
+slots: 8
+ended: dom out 13 19:41:52 -03 2019
+
+
+
+
+started: seg out 14 22:44:15 -03 2019
+dur: 15.0
+slots: 8
+
+
+started: sáb out 19 08:19:21 -03 2019
+dur: 15.0
+slots: 8
+ended: sáb out 19 11:40:33 -03 2019
+
+
+
+
+started: dom out 20 01:00:39 -03 2019
+dur: 15.0
+slots: 8
+ended: dom out 20 03:00:54 -03 2019
+
+
+
+
+started: dom out 20 05:45:55 -03 2019
+dur: 15.0
+slots: 8
+ended: dom out 20 07:46:11 -03 2019
+
+
+
+
+started: dom out 20 19:10:47 -03 2019
+dur: 15.0
+slots: 8
+ended: dom out 20 23:35:51 -03 2019
+
+
+
+
+started: seg out 21 03:11:06 -03 2019
+dur: 15.0
+slots: 8
+ended: seg out 21 05:11:26 -03 2019
+
+
+
+
+started: seg out 21 05:20:28 -03 2019
+dur: 15.0
+slots: 8
+ended: seg out 21 07:20:30 -03 2019
+
+
